@@ -4,6 +4,8 @@ on:
     paths:
       - '.github/workflows/mirror-deputy-photos.yml'
       - 'scripts/mirror_deputy_photos.py'
+  schedule:
+    - cron: '15 3 * * 1'
   workflow_dispatch:
 jobs:
   mirror:

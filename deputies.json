@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Справочник профилей для мониторинга всех 16 районов ЮАО. Источники — исторические анкеты и биографии, актуальность проверяется отдельно.",
+  "description": "Справочник профилей для мониторинга всех 16 районов ЮАО. Источники — исторические анкеты и биографии, актуальность проверяется отдельно. Даты рождения требуют сверки с первоисточниками; наличие ссылки не означает завершённую проверку.",
   "deputies": [
     {
       "name": "Ильясов Харис Нябиуллович",
@@ -8,7 +8,9 @@
       "handle": "ilyasov_kn",
       "source": "https://asafov.ru/person/ilyasov-haris-nyabiullovich",
       "birth_date": "1965-07-24",
-      "birth_source": "https://asafov.ru/person/ilyasov-haris-nyabiullovich"
+      "birth_source": "https://asafov.ru/person/ilyasov-haris-nyabiullovich",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Молчанов Павел Викторович",
@@ -16,7 +18,9 @@
       "handle": "molchanovpavel",
       "source": "https://asafov.ru/person/molchanov-pavel-viktorovich",
       "birth_date": "1979-10-01",
-      "birth_source": "https://asafov.ru/person/molchanov-pavel-viktorovich"
+      "birth_source": "https://asafov.ru/person/molchanov-pavel-viktorovich",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Нерсесова Елена Валериевна",
@@ -24,7 +28,9 @@
       "handle": "elenanersesova",
       "source": "https://asafov.ru/person/nersesova-elena-valerievna",
       "birth_date": "1969-05-23",
-      "birth_source": "https://asafov.ru/person/nersesova-elena-valerievna"
+      "birth_source": "https://asafov.ru/person/nersesova-elena-valerievna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Птицына Ксения Кирилловна",
@@ -32,7 +38,9 @@
       "handle": "ptitsynakk",
       "source": "https://asafov.ru/person/pticzyna-kseniya-kirillovna",
       "birth_date": "1987-06-09",
-      "birth_source": "https://asafov.ru/person/pticzyna-kseniya-kirillovna"
+      "birth_source": "https://asafov.ru/person/pticzyna-kseniya-kirillovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Сычева Наталья Владимировна",
@@ -40,7 +48,9 @@
       "handle": "nata_sycheva",
       "source": "https://asafov.ru/person/sycheva-natalya-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Алейникова Юлия Владимировна",
@@ -48,7 +58,9 @@
       "handle": "aleinikovayv",
       "source": "https://asafov.ru/person/alejnikova-yuliya-vladimirovna",
       "birth_date": "1983-08-11",
-      "birth_source": "https://asafov.ru/person/alejnikova-yuliya-vladimirovna"
+      "birth_source": "https://asafov.ru/person/alejnikova-yuliya-vladimirovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Антонова Лариса Петровна",
@@ -56,7 +68,9 @@
       "handle": "antonovalp1",
       "source": "https://asafov.ru/person/antonova-larisa-petrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Голубева Елена Васильевна",
@@ -64,7 +78,9 @@
       "handle": "golubevaev947",
       "source": "https://asafov.ru/person/golubeva-elena-vasilevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кутайсова Наталья Викторовна",
@@ -72,7 +88,9 @@
       "handle": "kutaysovanv",
       "source": "https://asafov.ru/person/kutajsova-natalya-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Рытов Сергей Владимирович",
@@ -80,7 +98,9 @@
       "handle": "rytovsergey",
       "source": "https://asafov.ru/person/rytov-sergej-vladimirovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Бойков Алексей Александрович",
@@ -88,7 +108,9 @@
       "handle": "a.a.boikov",
       "source": "https://asafov.ru/person/bojkov-aleksej-aleksandrovich",
       "birth_date": "1975-11-10",
-      "birth_source": "https://asafov.ru/person/bojkov-aleksej-aleksandrovich"
+      "birth_source": "https://asafov.ru/person/bojkov-aleksej-aleksandrovich",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Есин Александр Борисович",
@@ -96,7 +118,9 @@
       "handle": "e.aleksander88",
       "source": "https://asafov.ru/person/esin-aleksandr-borisovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Конарев Илья Сергеевич",
@@ -104,7 +128,9 @@
       "handle": "iskonarev",
       "source": "https://asafov.ru/person/konarev-ilya-sergeevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Леликова Елена Сергеевна",
@@ -112,7 +138,9 @@
       "handle": "elenasergeevnalelikiva",
       "source": "https://asafov.ru/person/lelikova-elena-sergeevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Терехова Ирина Юрьевна",
@@ -120,7 +148,9 @@
       "handle": "irina_terekhova1969",
       "source": "https://asafov.ru/person/terehova-irina-yurevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Бурых Ярослав Юрьевич",
@@ -128,7 +158,9 @@
       "handle": "yaroslavburykh",
       "source": "https://asafov.ru/person/buryh-yaroslav-yurevich",
       "birth_date": "1991-03-04",
-      "birth_source": "https://asafov.ru/person/buryh-yaroslav-yurevich"
+      "birth_source": "https://asafov.ru/person/buryh-yaroslav-yurevich",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Виноградова Елена Геннадьевна",
@@ -136,7 +168,9 @@
       "handle": "smallraisin",
       "source": "https://asafov.ru/person/vinogradova-elena-gennadevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Жабина Татьяна Викторовна",
@@ -144,7 +178,9 @@
       "handle": "tatyanajabina",
       "source": "https://asafov.ru/person/zhabina-tatyana-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Мартанова Юлия Валентиновна",
@@ -152,7 +188,9 @@
       "handle": "juliamartanova",
       "source": "https://asafov.ru/person/martanova-yuliya-valentinovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Орехов Александр Валентинович",
@@ -160,7 +198,9 @@
       "handle": "orehov_aleksandr",
       "source": "https://asafov.ru/person/orehov-aleksandr-valentinovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Белоусова Ольга Андреевна",
@@ -168,7 +208,9 @@
       "handle": "olga_belousova1998",
       "source": "https://asafov.ru/person/belousova-olga-andreevna",
       "birth_date": "1979-04-01",
-      "birth_source": "https://asafov.ru/person/belousova-olga-andreevna"
+      "birth_source": "https://asafov.ru/person/belousova-olga-andreevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Гонцова Ирина Борисовна",
@@ -176,7 +218,9 @@
       "handle": "gontsova71",
       "source": "https://asafov.ru/person/gonczova-irina-borisovna",
       "birth_date": "1971-04-29",
-      "birth_source": "https://asafov.ru/person/gonczova-irina-borisovna"
+      "birth_source": "https://asafov.ru/person/gonczova-irina-borisovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Коростиленко Елена Алексеевна",
@@ -184,7 +228,9 @@
       "handle": "e.korostilenko",
       "source": "https://asafov.ru/person/korostilenko-elena-alekseevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Уколова Елена Васильевна",
@@ -192,7 +238,9 @@
       "handle": "ykolova_elena_vasilevna",
       "source": "https://asafov.ru/person/ukolova-elena-vasilevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Чинилина Ирина Викторовна",
@@ -200,7 +248,9 @@
       "handle": "chinilina975",
       "source": "https://asafov.ru/person/chinilina-irina-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Власенко Антон Юрьевич",
@@ -208,7 +258,9 @@
       "handle": "vlasenkoau",
       "source": "https://asafov.ru/person/vlasenko-anton-yurevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Волков Дмитрий Александрович",
@@ -216,7 +268,9 @@
       "handle": "dmitry_volkov77",
       "source": "https://asafov.ru/person/volkov-dmitrij-aleksandrovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Вольская Анна Львовна",
@@ -224,7 +278,9 @@
       "handle": "annavolskaya",
       "source": "https://asafov.ru/person/volskaya-anna-lvovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Ильяшенко Александр Викторович",
@@ -232,7 +288,9 @@
       "handle": "ilyashenko_aleksandr",
       "source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Серегин Александр Викторович",
@@ -240,7 +298,9 @@
       "handle": "seregin1963",
       "source": "https://asafov.ru/person/ceregin-aleksandr-viktorovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Аркусов Дмитрий Юрьевич",
@@ -248,7 +308,9 @@
       "handle": "dmitry_ark",
       "source": "https://asafov.ru/person/arkusov-dmitrij-yurevich",
       "birth_date": "1996-08-25",
-      "birth_source": "https://asafov.ru/person/arkusov-dmitrij-yurevich"
+      "birth_source": "https://asafov.ru/person/arkusov-dmitrij-yurevich",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Кирьянова Людмила Николаевна",
@@ -256,7 +318,9 @@
       "handle": "kiryanova_ln",
       "source": "https://asafov.ru/person/kiryanova-lyudmila-nikolaevna",
       "birth_date": "1965-04-01",
-      "birth_source": "https://asafov.ru/person/kiryanova-lyudmila-nikolaevna"
+      "birth_source": "https://asafov.ru/person/kiryanova-lyudmila-nikolaevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Левштанов Дмитрий Николаевич",
@@ -264,7 +328,9 @@
       "handle": "levshtanov86",
       "source": "https://asafov.ru/person/levshtanov-dmitrij-nikolaevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Фадеева Инна Геннадьевна",
@@ -272,7 +338,9 @@
       "handle": "ifadeeva2022",
       "source": "https://asafov.ru/person/fadeeva-inna-gennadevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Иванов Олег Игорьевич",
@@ -280,7 +348,9 @@
       "handle": "ivanov_oi10",
       "source": "https://asafov.ru/person/ivanov-oleg-igorevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Подольская Ольга Вячеславовна",
@@ -288,7 +358,9 @@
       "handle": "olga_podolskay",
       "source": "https://asafov.ru/person/podolskaya-olga-vyacheslavovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Сагаловская Надежда Викторовна",
@@ -296,7 +368,9 @@
       "handle": "sagalovskaya",
       "source": "https://asafov.ru/person/sagalovskaya-nadezhda-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Ситников Иван Иванович",
@@ -304,7 +378,9 @@
       "handle": "sitnikov_danilovskiy",
       "source": "https://asafov.ru/person/sitnikov-ivan-ivanovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Султанов Владислав Геннадьевич",
@@ -312,7 +388,9 @@
       "handle": "vgsultanov",
       "source": "https://asafov.ru/person/sultanov-vladislav-gennadevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Аббасова Наталья Александровна",
@@ -320,7 +398,9 @@
       "handle": "natalia.abbasova",
       "source": "https://asafov.ru/person/abbasova-natalya-aleksandrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Григорьева Людмила Васильевна",
@@ -328,7 +408,9 @@
       "handle": "grigorievalv",
       "source": "https://asafov.ru/person/grigoreva-lyudmila-vasilevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Родионова Татьяна Вячеславовна",
@@ -336,7 +418,9 @@
       "handle": "trodionova2022",
       "source": "https://asafov.ru/person/rodionova-tatyana-vyacheslavovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Граськин Сергей Сергеевич",
@@ -344,7 +428,9 @@
       "handle": "graskinss",
       "source": "https://asafov.ru/person/graskin-sergej-sergeevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Зайковская Галина Викторовна",
@@ -352,7 +438,9 @@
       "handle": "galinazaykovskaya",
       "source": "https://asafov.ru/person/zajkovskaya-galina-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кобцев Павел Николаевич",
@@ -360,7 +448,9 @@
       "handle": "pkobtsev",
       "source": "https://asafov.ru/person/kobczev-pavel-nikolaevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Скорлупкина Лариса Николаевна",
@@ -368,7 +458,9 @@
       "handle": "ln_skorlupkina",
       "source": "https://asafov.ru/person/skorlupkina-larisa-nikolaevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Фурсова Елена Даниловна",
@@ -376,7 +468,9 @@
       "handle": "elena_fursova1",
       "source": "https://asafov.ru/person/fursova-elena-danilovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кабанова Татьяна Викторовна",
@@ -384,7 +478,9 @@
       "handle": "tkabanova2022",
       "source": "https://asafov.ru/person/kabanova-tatyana-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Костюшина Светлана Викторовна",
@@ -392,7 +488,9 @@
       "handle": "svetlanakostyushina",
       "source": "https://asafov.ru/person/kostyushina-svetlana-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Резков Владислав Валерьевич",
@@ -400,7 +498,9 @@
       "handle": "rezkovvlad",
       "source": "https://asafov.ru/person/rezkov-vladislav-valerevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Седачева Юлия Владимировна",
@@ -408,7 +508,9 @@
       "handle": "yulia_sedacheva",
       "source": "https://asafov.ru/person/sedacheva-yuliya-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Шерстюк Элина Сергеевна",
@@ -416,7 +518,9 @@
       "handle": "elina_sherstyuk",
       "source": "https://asafov.ru/person/sherstyuk-elina-sergeevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Анисимова Светлана Геннадьевна",
@@ -424,7 +528,9 @@
       "handle": "anisim_svet",
       "source": "https://moscow.er.ru/media/documents/September2022/0W6RT2sxbyWuXFCYlRJ6.pdf",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Пушкин Павел Павлович",
@@ -432,7 +538,9 @@
       "handle": "pushkinpp",
       "source": "https://asafov.ru/person/pushkin-pavel-pavlovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Рафальская Ирина Владимировна",
@@ -440,7 +548,9 @@
       "handle": "rafalskayairina",
       "source": "https://asafov.ru/person/rafalskaya-irina-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Тиханова Альбина Викторовна",
@@ -448,7 +558,9 @@
       "handle": "tikhanovaalbina",
       "source": "https://asafov.ru/person/tihanova-albina-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Харитонова Алия Гафурджановна",
@@ -456,7 +568,9 @@
       "handle": "haritonova_aliya",
       "source": "https://asafov.ru/person/haritonova-aliya-gafurdzhanovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Воропаева Алла Викторовна",
@@ -464,7 +578,9 @@
       "handle": "allavoropaeva",
       "source": "https://asafov.ru/person/voropaeva-alla-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Каляев Александр Вячеславович",
@@ -472,7 +588,9 @@
       "handle": "kalyaev84",
       "source": "https://asafov.ru/person/kalyaev-aleksandr-vyacheslavovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Рябева Евгения Николаевна",
@@ -480,7 +598,9 @@
       "handle": "ryabevaen",
       "source": "https://asafov.ru/person/ryabeva-evgeniya-nikolaevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Семёнов Дмитрий Витальевич",
@@ -488,7 +608,9 @@
       "handle": "semenovdmitry80",
       "source": "https://asafov.ru/person/semenov-dmitrij-vitalevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Шлякова Елена Николаевна",
@@ -496,7 +618,9 @@
       "handle": "elenashlyakova",
       "source": "https://asafov.ru/person/shlyakova-elena-nikolaevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Алленов Андрей Михайлович",
@@ -504,7 +628,9 @@
       "handle": "allenov__andrey",
       "source": "https://asafov.ru/person/allenov-andrej-mihajlovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Андрианов Михаил Владимирович",
@@ -512,7 +638,9 @@
       "handle": "andrianov001",
       "source": "https://asafov.ru/person/andrianov-mihail-vladimirovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Заусаева Наталья Васильевна",
@@ -520,7 +648,9 @@
       "handle": "nvzausaeva",
       "source": "https://asafov.ru/person/zausaeva-natalya-vasilevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кондрашов Артем Вячеславович",
@@ -528,7 +658,9 @@
       "handle": "av_kondrashov",
       "source": "https://asafov.ru/person/kondrashov-artem-vyacheslavovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Москалев Александр Евгеньевич",
@@ -536,7 +668,9 @@
       "handle": "aleks_moskalev",
       "source": "https://asafov.ru/person/moskalev-aleksandr-evgenevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Абертасов Андрей Алексеевич",
@@ -544,7 +678,9 @@
       "handle": "andrey.abertasov",
       "source": "https://asafov.ru/person/abertasov-andrej-alekseevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Комаха Вячеслав Михайлович",
@@ -552,7 +688,9 @@
       "handle": "vyacheslav_komaha",
       "source": "https://asafov.ru/person/komaha-vyacheslav-mihajlovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кондратьева Екатерина Вадимовна",
@@ -560,7 +698,9 @@
       "handle": "kondratevaekaterina88",
       "source": "https://asafov.ru/person/kondrateva-ekaterina-vadimovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кудинова Марина Феликсовна",
@@ -568,7 +708,9 @@
       "handle": "kudinovamarina",
       "source": "https://asafov.ru/person/kudinova-marina-feliksovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Потёмкин Анатолий Викторович",
@@ -576,7 +718,9 @@
       "handle": "anatoli_viktorovich_potiomkin",
       "source": "https://asafov.ru/person/potyomkin-anatolij-viktorovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Каминский Юрий Викторович",
@@ -584,7 +728,9 @@
       "handle": "deputat_kaminskiy",
       "source": "https://asafov.ru/person/kaminskij-yurij-viktorovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Михарева Наталья Борисовна",
@@ -592,7 +738,9 @@
       "handle": "natalyamikhareva",
       "source": "https://asafov.ru/person/mihareva-natalya-borisovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Сафонова Татьяна Владимировна",
@@ -600,7 +748,9 @@
       "handle": "safonovatatiana85",
       "source": "https://asafov.ru/person/safonova-tatyana-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Тихомиров Алексей Александрович",
@@ -608,7 +758,9 @@
       "handle": "tikhomirovalexey",
       "source": "https://asafov.ru/person/tihomirov-aleksej-aleksandrovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Никольская Анджела Вадимовна",
@@ -616,7 +768,9 @@
       "handle": "nikolskayaav",
       "source": "https://asafov.ru/person/nikolskaya-andzhela-vadimovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Сезёмов Андрей Владимирович",
@@ -624,7 +778,9 @@
       "handle": "andrey.sezemov",
       "source": "https://asafov.ru/person/sezyomov-andrej-vladimirovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Уваров Антон Анатольевич",
@@ -632,7 +788,9 @@
       "handle": "antonuvarov90",
       "source": "https://asafov.ru/person/uvarov-anton-anatolevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Чуганова Азиза Кабыльбековна",
@@ -640,7 +798,9 @@
       "handle": "azizakabulovnachuganova",
       "source": "https://asafov.ru/person/chuganova-aziza-kabylbekovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Головин Михаил Сергеевич",
@@ -648,7 +808,9 @@
       "handle": "golovin_mikhail_sergeevich",
       "source": "https://asafov.ru/person/golovin-mihail-sergeevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Горбунов Станислав Игоревич",
@@ -656,7 +818,9 @@
       "handle": "gorbunovsi",
       "source": "https://asafov.ru/person/gorbunov-stanislav-igorevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Коршунова Наталья Евгеньевна",
@@ -664,7 +828,9 @@
       "handle": "korshunovane",
       "source": "https://asafov.ru/person/korshunova-natalya-evgenevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кундыль Татьяна Евгеньевна",
@@ -672,7 +838,9 @@
       "handle": "kundyltatyana",
       "source": "https://asafov.ru/person/kundyl-tatyana-evgenevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Рузина Лидия Владимировна",
@@ -680,7 +848,9 @@
       "handle": "l.ruzina",
       "source": "https://asafov.ru/person/ruzina-lidiya-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Балыков Дмитрий Евгеньевич",
@@ -688,7 +858,9 @@
       "handle": "balykovde",
       "source": "https://asafov.ru/person/balykov-dmitrij-evgenevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Башлыкова Мария Николаевна",
@@ -696,7 +868,9 @@
       "handle": "bashlykova.mari",
       "source": "https://asafov.ru/person/bashlykova-mariya-nikolaevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Быкова Юлия Валерьевна",
@@ -704,7 +878,9 @@
       "handle": "julia_byckova",
       "source": "https://asafov.ru/person/bykova-yuliya-valerevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Винокуров Роман Евгеньевич",
@@ -712,7 +888,9 @@
       "handle": "romanvinokurov",
       "source": "https://asafov.ru/person/vinokurov-roman-evgenevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Горемыкин Михаил Юрьевич",
@@ -720,7 +898,9 @@
       "handle": "goremykinmy",
       "source": "https://asafov.ru/person/goremykin-mihail-yurevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Введенская Инна Васильевна",
@@ -728,7 +908,9 @@
       "handle": "vvedenskaya_i",
       "source": "https://asafov.ru/person/vvedenskaya-inna-vasilevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Виноградова Елена Михайловна",
@@ -736,7 +918,9 @@
       "handle": "vinogradova_len",
       "source": "https://asafov.ru/person/vinogradova-elena-mihajlovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кульнев Дмитрий Владимирович",
@@ -744,7 +928,9 @@
       "handle": "dkulnev",
       "source": "https://asafov.ru/person/kulnev-dmitrij-vladimirovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Рыгин Алексей Борисович",
@@ -752,7 +938,9 @@
       "handle": "rygin",
       "source": "https://asafov.ru/person/rygin-aleksej-borisovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Шутов Павел Викторович",
@@ -760,7 +948,9 @@
       "handle": "pavel_v_shutov",
       "source": "https://asafov.ru/person/shutov-pavel-viktorovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Бурова Екатерина Николаевна",
@@ -768,7 +958,9 @@
       "handle": "kostina1920",
       "source": "https://asafov.ru/person/burova-ekaterina-nikolaevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Горн Виктор Викторович",
@@ -776,7 +968,9 @@
       "handle": "viktorgorn",
       "source": "https://asafov.ru/person/gorn-viktor-viktorovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Новикова Юлия Ивановна",
@@ -784,7 +978,9 @@
       "handle": "id666378177",
       "source": "https://asafov.ru/person/novikova-yuliya-ivanovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Тарасенко Ольга Вячеславовна",
@@ -792,7 +988,9 @@
       "handle": "o.v.tarasenko",
       "source": "https://asafov.ru/person/tarasenko-olga-vyacheslavovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Филиппова Татьяна Викторовна",
@@ -800,7 +998,9 @@
       "handle": "tatyana_filippova20",
       "source": "https://asafov.ru/person/filippova-tatyana-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Дмитриева Наталия Николаевна",
@@ -808,7 +1008,9 @@
       "handle": "dmitrieva_n_n",
       "source": "https://asafov.ru/person/dmitrieva-nataliya-nikolaevna",
       "birth_date": "1971-07-17",
-      "birth_source": "https://asafov.ru/person/dmitrieva-nataliya-nikolaevna"
+      "birth_source": "https://asafov.ru/person/dmitrieva-nataliya-nikolaevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Коннова Елена Львовна",
@@ -816,7 +1018,9 @@
       "handle": "elena__konnova",
       "source": "https://asafov.ru/person/konnova-elena-lvovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Лапланш Елена Львовна",
@@ -824,7 +1028,9 @@
       "handle": "elena_laplanche",
       "source": "https://asafov.ru/person/laplansh-elena-lvovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Мордовин Андрей Юрьевич",
@@ -832,7 +1038,9 @@
       "handle": "andreymordovin",
       "source": "https://asafov.ru/person/mordovin-andrej-yurevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Баранчикова Наталья Алексеевна",
@@ -840,7 +1048,9 @@
       "handle": "baranchikova_natalia",
       "source": "https://asafov.ru/person/baranchikova-natalya-alekseevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Долгашова Галина Георгиевна",
@@ -848,7 +1058,9 @@
       "handle": "galinadolgashova",
       "source": "https://asafov.ru/person/dolgashova-galina-georgievna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Ежкова Анна Александровна",
@@ -856,7 +1068,9 @@
       "handle": "anna_ezhkova",
       "source": "https://asafov.ru/person/ezhkova-anna-aleksandrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Заплатникова Людмила Викторовна",
@@ -864,7 +1078,9 @@
       "handle": "liudmila_zapl",
       "source": "https://asafov.ru/person/zaplatnikova-lyudmila-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кускова Надежда Юрьевна",
@@ -872,7 +1088,9 @@
       "handle": "nadezhda_kuskova",
       "source": "https://asafov.ru/person/kuskova-nadezhda-yurevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Сысоева Людмила Анатольевна",
@@ -880,7 +1098,9 @@
       "handle": "sysoevala",
       "source": "https://asafov.ru/person/sysoeva-lyudmila-anatolevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Глотова Ирина Борисовна",
@@ -888,7 +1108,9 @@
       "handle": "ib.glotova",
       "source": "https://asafov.ru/person/glotova-irina-borisovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Демченков Максим Леонидович",
@@ -896,7 +1118,9 @@
       "handle": "demchenkov_ml",
       "source": "https://asafov.ru/person/demchenkov-maksim-leonidovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Нефедова Светлана Юрьевна",
@@ -904,7 +1128,9 @@
       "handle": "svetlana_rodnik",
       "source": "https://asafov.ru/person/nefedova-svetlana-yurevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Новосельская Людмила Александровна",
@@ -912,7 +1138,9 @@
       "handle": "novoselskayala",
       "source": "https://asafov.ru/person/novoselskaya-lyudmila-aleksandrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Ткач Ирина Петровна",
@@ -920,7 +1148,9 @@
       "handle": "tkachip",
       "source": "https://asafov.ru/person/tkach-irina-petrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Донская Татьяна Викторовна",
@@ -928,7 +1158,9 @@
       "handle": "tatiyana_donskaya",
       "source": "https://asafov.ru/person/donskaya-tatyana-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Золкина Ирина Вячеславовна",
@@ -936,7 +1168,9 @@
       "handle": "i.v.zolkina",
       "source": "https://asafov.ru/person/zolkina-irina-vyacheslavovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Комиссарова Альбина Анатольевна",
@@ -944,7 +1178,9 @@
       "handle": "albinakomissarova2022",
       "source": "https://asafov.ru/person/komissarova-albina-anatolevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Овчинникова Светлана Юрьевна",
@@ -952,7 +1188,9 @@
       "handle": "sovchinnikova79",
       "source": "https://asafov.ru/person/ovchinnikova-svetlana-yurevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Яшкин Андрей Петрович",
@@ -960,7 +1198,9 @@
       "handle": "ap.yashkin",
       "source": "https://asafov.ru/person/yashkin-andrej-petrovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Булатов Александр Александрович",
@@ -968,7 +1208,9 @@
       "handle": "aabulatov",
       "source": "https://asafov.ru/person/bulatov-aleksandr-aleksandrovich",
       "birth_date": "1986-02-01",
-      "birth_source": "https://asafov.ru/person/bulatov-aleksandr-aleksandrovich"
+      "birth_source": "https://asafov.ru/person/bulatov-aleksandr-aleksandrovich",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Видутина Оксана Вячеславовна",
@@ -976,7 +1218,9 @@
       "handle": "vidutinaov",
       "source": "https://asafov.ru/person/vidutina-oksana-vyacheslavovna",
       "birth_date": "1981-10-04",
-      "birth_source": "https://asafov.ru/person/vidutina-oksana-vyacheslavovna"
+      "birth_source": "https://asafov.ru/person/vidutina-oksana-vyacheslavovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Нуйкина Карина Вячеславовна",
@@ -984,7 +1228,9 @@
       "handle": "nuykinakv",
       "source": "https://asafov.ru/person/nujkina-karina-vyacheslavovna",
       "birth_date": "1985-12-09",
-      "birth_source": "https://asafov.ru/person/nujkina-karina-vyacheslavovna"
+      "birth_source": "https://asafov.ru/person/nujkina-karina-vyacheslavovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Назарова Елена Андреевна",
@@ -992,7 +1238,9 @@
       "handle": "elena.rubtsovanazarova",
       "source": "https://asafov.ru/person/rubczova-elena-andreevna",
       "birth_date": "1978-03-13",
-      "birth_source": "https://asafov.ru/person/rubczova-elena-andreevna"
+      "birth_source": "https://asafov.ru/person/rubczova-elena-andreevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Тишкова Елена Алексеевна",
@@ -1000,7 +1248,9 @@
       "handle": "tishkovaea",
       "source": "https://asafov.ru/person/tishkova-elena-alekseevna",
       "birth_date": "1969-06-28",
-      "birth_source": "https://asafov.ru/person/tishkova-elena-alekseevna"
+      "birth_source": "https://asafov.ru/person/tishkova-elena-alekseevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Гаврилина Мария Сергеевна",
@@ -1008,7 +1258,9 @@
       "handle": "gavrilinams",
       "source": "https://asafov.ru/person/gavrilina-mariya-sergeevna",
       "birth_date": "1985-12-08",
-      "birth_source": "https://asafov.ru/person/gavrilina-mariya-sergeevna"
+      "birth_source": "https://asafov.ru/person/gavrilina-mariya-sergeevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Тютюнникова Екатерина Владимировна",
@@ -1016,7 +1268,9 @@
       "handle": "ekaterina.tyutyunnikova",
       "source": "https://asafov.ru/person/tyutyunnikova-ekaterina-vladimirovna",
       "birth_date": "1983-12-11",
-      "birth_source": "https://asafov.ru/person/tyutyunnikova-ekaterina-vladimirovna"
+      "birth_source": "https://asafov.ru/person/tyutyunnikova-ekaterina-vladimirovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Шабашева Наталья Викторовна",
@@ -1024,7 +1278,9 @@
       "handle": "natalia_shabasheva",
       "source": "https://asafov.ru/person/shabasheva-natalya-viktorovna",
       "birth_date": "1961-06-03",
-      "birth_source": "https://asafov.ru/person/shabasheva-natalya-viktorovna"
+      "birth_source": "https://asafov.ru/person/shabasheva-natalya-viktorovna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Шмакова Ольга Сергеевна",
@@ -1032,7 +1288,9 @@
       "handle": "shmakova_os",
       "source": "https://asafov.ru/person/shmakova-olga-sergeevna",
       "birth_date": "1977-07-29",
-      "birth_source": "https://asafov.ru/person/shmakova-olga-sergeevna"
+      "birth_source": "https://asafov.ru/person/shmakova-olga-sergeevna",
+      "birth_status": "source_linked_review_pending",
+      "birth_last_checked": null
     },
     {
       "name": "Абрамова Елена Ивановна",
@@ -1040,7 +1298,9 @@
       "handle": "abramovaei_chs",
       "source": "https://asafov.ru/person/abramova-elena-ivanovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Горбачёв Антон Сергеевич",
@@ -1048,7 +1308,9 @@
       "handle": "antongorbachev",
       "source": "https://asafov.ru/person/gorbachyov-anton-sergeevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Курапов Пётр Геннадьевич",
@@ -1056,7 +1318,9 @@
       "handle": "petr.kurapov",
       "source": "https://asafov.ru/person/kurapov-petr-gennadevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Морозова Ирина Викторовна",
@@ -1064,7 +1328,9 @@
       "handle": "i_v_morozova",
       "source": "https://asafov.ru/person/morozova-irina-viktorovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Смирнов Валерий Николаевич",
@@ -1072,7 +1338,9 @@
       "handle": "smirnovvalerii",
       "source": "https://asafov.ru/person/smirnov-valerij-nikolaevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Андреева Светлана Александровна",
@@ -1080,7 +1348,9 @@
       "handle": "andreevasvetlanaaleksandrovna",
       "source": "https://asafov.ru/person/andreeva-svetlana-aleksandrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Лукоянов Алексей Александрович",
@@ -1088,7 +1358,9 @@
       "handle": "lukoyanov_chs",
       "source": "https://asafov.ru/person/lukoyanov-aleksej-aleksandrovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Морозов Максим Александрович",
@@ -1096,7 +1368,9 @@
       "handle": "maxsimmorozov",
       "source": "https://asafov.ru/person/morozov-maksim-aleksandrovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Ряхмятуллина Алла Рафековна",
@@ -1104,7 +1378,9 @@
       "handle": "riakhmiatullina",
       "source": "https://asafov.ru/person/ryahmyatullina-alla-rafekovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Тозик Александр Михайлович",
@@ -1112,7 +1388,9 @@
       "handle": "tozikam",
       "source": "https://asafov.ru/person/tozik-aleksandr-mihajlovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Коношенко Богдан Александрович",
@@ -1120,7 +1398,9 @@
       "handle": "bogdan.konoshenko",
       "source": "https://moscow.er.ru/media/documents/September2022/0W6RT2sxbyWuXFCYlRJ6.pdf",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Ларионова Евгения Иосифовна",
@@ -1128,7 +1408,9 @@
       "handle": "eilarionova_556",
       "source": "https://asafov.ru/person/larionova-evgeniya-iosifovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Полозов Сергей Андреевич",
@@ -1136,7 +1418,9 @@
       "handle": "polozovs",
       "source": "https://asafov.ru/person/polozov-sergej-andreevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Родина Ирина Алексеевна",
@@ -1144,7 +1428,9 @@
       "handle": "i_rodina",
       "source": "https://asafov.ru/person/rodina-irina-alekseevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Смитиенко Степан Борисович",
@@ -1152,7 +1438,9 @@
       "handle": "smitsb",
       "source": "https://asafov.ru/person/smitienko-stepan",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Мелешин Василий Владимирович",
@@ -1160,7 +1448,9 @@
       "handle": "vasiliy_meleshin",
       "source": "https://asafov.ru/person/meleshin-vasilij-vladimirovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Миронов Дмитрий Павлович",
@@ -1168,7 +1458,9 @@
       "handle": "mironovdp",
       "source": "https://asafov.ru/person/mironov-dmitrij-pavlovich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Репкина Елена Владимировна",
@@ -1176,7 +1468,9 @@
       "handle": "repkinae",
       "source": "https://asafov.ru/person/repkina-elena-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Рыбакова Евгения Валентиновна",
@@ -1184,7 +1478,9 @@
       "handle": "rybakovaev_1582",
       "source": "https://asafov.ru/person/rybakova-evgeniya-valentinovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Шиндряева Наталья Николаевна",
@@ -1192,7 +1488,9 @@
       "handle": "n_shindryayeva",
       "source": "https://asafov.ru/person/shindryaeva-natalya-nikolaevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Зотова Маргарита Сергеевна",
@@ -1200,7 +1498,9 @@
       "handle": "ms_zotova",
       "source": "https://asafov.ru/person/zotova-margarita-sergeevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кашлев Сергей Николаевич",
@@ -1208,7 +1508,9 @@
       "handle": "sergey_kashlev",
       "source": "https://asafov.ru/person/kashlev-sergej-nikolaevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Кураш Ирина Анатольевна",
@@ -1216,7 +1518,9 @@
       "handle": "ikurash1",
       "source": "https://asafov.ru/person/kurash-irina-anatolevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Новиков Александр Анатольевич",
@@ -1224,7 +1528,9 @@
       "handle": "alexandr_novikov_chu",
       "source": "https://asafov.ru/person/novikov-aleksandr-anatolevich",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Птушкина Наталья Александровна",
@@ -1232,7 +1538,9 @@
       "handle": "n.ptushkina56",
       "source": "https://asafov.ru/person/ptushkina-natalya-aleksandrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Бордовская Ольга Геннадьевна",
@@ -1240,7 +1548,9 @@
       "handle": "bordovskaya_og",
       "source": "https://asafov.ru/person/bordovskaya-olga-gennadevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Гунина Екатерина Алексеевна",
@@ -1248,7 +1558,9 @@
       "handle": "gunina_ea",
       "source": "https://asafov.ru/person/gunina-ekaterina-alekseevna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Леонова Наталья Александровна",
@@ -1256,7 +1568,9 @@
       "handle": "nleonovannnn",
       "source": "https://asafov.ru/person/leonova-natalya-aleksandrovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Маркова Татьяна Владимировна",
@@ -1264,7 +1578,9 @@
       "handle": "markova_tat_vl",
       "source": "https://asafov.ru/person/markova-tatyana-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     },
     {
       "name": "Смирнова Елена Владимировна",
@@ -1272,7 +1588,9 @@
       "handle": "smirnovaev1",
       "source": "https://asafov.ru/person/smirnova-elena-vladimirovna",
       "birth_date": null,
-      "birth_source": null
+      "birth_source": null,
+      "birth_status": "missing",
+      "birth_last_checked": null
     }
   ]
 }

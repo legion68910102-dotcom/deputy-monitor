@@ -1,0 +1,802 @@
+{
+  "schema_version": 1,
+  "generated_at": null,
+  "roster_size": 159,
+  "profiles": {
+    "ilyasov_kn": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ilyasov_kn"
+    },
+    "molchanovpavel": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/molchanovpavel"
+    },
+    "elenanersesova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elenanersesova"
+    },
+    "ptitsynakk": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ptitsynakk"
+    },
+    "nata_sycheva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/nata_sycheva"
+    },
+    "aleinikovayv": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/aleinikovayv"
+    },
+    "antonovalp1": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/antonovalp1"
+    },
+    "golubevaev947": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/golubevaev947"
+    },
+    "kutaysovanv": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kutaysovanv"
+    },
+    "rytovsergey": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/rytovsergey"
+    },
+    "a.a.boikov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/a.a.boikov"
+    },
+    "e.aleksander88": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/e.aleksander88"
+    },
+    "iskonarev": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/iskonarev"
+    },
+    "elenasergeevnalelikiva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elenasergeevnalelikiva"
+    },
+    "irina_terekhova1969": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/irina_terekhova1969"
+    },
+    "yaroslavburykh": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/yaroslavburykh"
+    },
+    "smallraisin": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/smallraisin"
+    },
+    "tatyanajabina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tatyanajabina"
+    },
+    "juliamartanova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/juliamartanova"
+    },
+    "orehov_aleksandr": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/orehov_aleksandr"
+    },
+    "olga_belousova1998": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/olga_belousova1998"
+    },
+    "gontsova71": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/gontsova71"
+    },
+    "e.korostilenko": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/e.korostilenko"
+    },
+    "ykolova_elena_vasilevna": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ykolova_elena_vasilevna"
+    },
+    "chinilina975": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/chinilina975"
+    },
+    "vlasenkoau": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vlasenkoau"
+    },
+    "dmitry_volkov77": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/dmitry_volkov77"
+    },
+    "annavolskaya": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/annavolskaya"
+    },
+    "ilyashenko_aleksandr": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ilyashenko_aleksandr"
+    },
+    "seregin1963": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/seregin1963"
+    },
+    "dmitry_ark": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/dmitry_ark"
+    },
+    "kiryanova_ln": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kiryanova_ln"
+    },
+    "levshtanov86": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/levshtanov86"
+    },
+    "ifadeeva2022": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ifadeeva2022"
+    },
+    "ivanov_oi10": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ivanov_oi10"
+    },
+    "olga_podolskay": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/olga_podolskay"
+    },
+    "sagalovskaya": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/sagalovskaya"
+    },
+    "sitnikov_danilovskiy": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/sitnikov_danilovskiy"
+    },
+    "vgsultanov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vgsultanov"
+    },
+    "natalia.abbasova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/natalia.abbasova"
+    },
+    "grigorievalv": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/grigorievalv"
+    },
+    "trodionova2022": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/trodionova2022"
+    },
+    "graskinss": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/graskinss"
+    },
+    "galinazaykovskaya": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/galinazaykovskaya"
+    },
+    "pkobtsev": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/pkobtsev"
+    },
+    "ln_skorlupkina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ln_skorlupkina"
+    },
+    "elena_fursova1": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elena_fursova1"
+    },
+    "tkabanova2022": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tkabanova2022"
+    },
+    "svetlanakostyushina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/svetlanakostyushina"
+    },
+    "rezkovvlad": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/rezkovvlad"
+    },
+    "yulia_sedacheva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/yulia_sedacheva"
+    },
+    "elina_sherstyuk": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elina_sherstyuk"
+    },
+    "anisim_svet": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/anisim_svet"
+    },
+    "pushkinpp": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/pushkinpp"
+    },
+    "rafalskayairina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/rafalskayairina"
+    },
+    "tikhanovaalbina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tikhanovaalbina"
+    },
+    "haritonova_aliya": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/haritonova_aliya"
+    },
+    "allavoropaeva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/allavoropaeva"
+    },
+    "kalyaev84": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kalyaev84"
+    },
+    "ryabevaen": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ryabevaen"
+    },
+    "semenovdmitry80": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/semenovdmitry80"
+    },
+    "elenashlyakova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elenashlyakova"
+    },
+    "allenov__andrey": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/allenov__andrey"
+    },
+    "andrianov001": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/andrianov001"
+    },
+    "nvzausaeva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/nvzausaeva"
+    },
+    "av_kondrashov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/av_kondrashov"
+    },
+    "aleks_moskalev": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/aleks_moskalev"
+    },
+    "andrey.abertasov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/andrey.abertasov"
+    },
+    "vyacheslav_komaha": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vyacheslav_komaha"
+    },
+    "kondratevaekaterina88": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kondratevaekaterina88"
+    },
+    "kudinovamarina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kudinovamarina"
+    },
+    "anatoli_viktorovich_potiomkin": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/anatoli_viktorovich_potiomkin"
+    },
+    "deputat_kaminskiy": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/deputat_kaminskiy"
+    },
+    "natalyamikhareva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/natalyamikhareva"
+    },
+    "safonovatatiana85": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/safonovatatiana85"
+    },
+    "tikhomirovalexey": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tikhomirovalexey"
+    },
+    "nikolskayaav": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/nikolskayaav"
+    },
+    "andrey.sezemov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/andrey.sezemov"
+    },
+    "antonuvarov90": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/antonuvarov90"
+    },
+    "azizakabulovnachuganova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/azizakabulovnachuganova"
+    },
+    "golovin_mikhail_sergeevich": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/golovin_mikhail_sergeevich"
+    },
+    "gorbunovsi": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/gorbunovsi"
+    },
+    "korshunovane": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/korshunovane"
+    },
+    "kundyltatyana": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kundyltatyana"
+    },
+    "l.ruzina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/l.ruzina"
+    },
+    "balykovde": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/balykovde"
+    },
+    "bashlykova.mari": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/bashlykova.mari"
+    },
+    "julia_byckova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/julia_byckova"
+    },
+    "romanvinokurov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/romanvinokurov"
+    },
+    "goremykinmy": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/goremykinmy"
+    },
+    "vvedenskaya_i": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vvedenskaya_i"
+    },
+    "vinogradova_len": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vinogradova_len"
+    },
+    "dkulnev": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/dkulnev"
+    },
+    "rygin": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/rygin"
+    },
+    "pavel_v_shutov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/pavel_v_shutov"
+    },
+    "kostina1920": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/kostina1920"
+    },
+    "viktorgorn": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/viktorgorn"
+    },
+    "id666378177": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/id666378177"
+    },
+    "o.v.tarasenko": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/o.v.tarasenko"
+    },
+    "tatyana_filippova20": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tatyana_filippova20"
+    },
+    "dmitrieva_n_n": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/dmitrieva_n_n"
+    },
+    "elena__konnova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elena__konnova"
+    },
+    "elena_laplanche": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elena_laplanche"
+    },
+    "andreymordovin": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/andreymordovin"
+    },
+    "baranchikova_natalia": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/baranchikova_natalia"
+    },
+    "galinadolgashova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/galinadolgashova"
+    },
+    "anna_ezhkova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/anna_ezhkova"
+    },
+    "liudmila_zapl": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/liudmila_zapl"
+    },
+    "nadezhda_kuskova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/nadezhda_kuskova"
+    },
+    "sysoevala": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/sysoevala"
+    },
+    "ib.glotova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ib.glotova"
+    },
+    "demchenkov_ml": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/demchenkov_ml"
+    },
+    "svetlana_rodnik": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/svetlana_rodnik"
+    },
+    "novoselskayala": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/novoselskayala"
+    },
+    "tkachip": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tkachip"
+    },
+    "tatiyana_donskaya": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tatiyana_donskaya"
+    },
+    "i.v.zolkina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/i.v.zolkina"
+    },
+    "albinakomissarova2022": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/albinakomissarova2022"
+    },
+    "sovchinnikova79": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/sovchinnikova79"
+    },
+    "ap.yashkin": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ap.yashkin"
+    },
+    "aabulatov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/aabulatov"
+    },
+    "vidutinaov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vidutinaov"
+    },
+    "nuykinakv": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/nuykinakv"
+    },
+    "elena.rubtsovanazarova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/elena.rubtsovanazarova"
+    },
+    "tishkovaea": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tishkovaea"
+    },
+    "gavrilinams": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/gavrilinams"
+    },
+    "ekaterina.tyutyunnikova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ekaterina.tyutyunnikova"
+    },
+    "natalia_shabasheva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/natalia_shabasheva"
+    },
+    "shmakova_os": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/shmakova_os"
+    },
+    "abramovaei_chs": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/abramovaei_chs"
+    },
+    "antongorbachev": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/antongorbachev"
+    },
+    "petr.kurapov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/petr.kurapov"
+    },
+    "i_v_morozova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/i_v_morozova"
+    },
+    "smirnovvalerii": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/smirnovvalerii"
+    },
+    "andreevasvetlanaaleksandrovna": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/andreevasvetlanaaleksandrovna"
+    },
+    "lukoyanov_chs": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/lukoyanov_chs"
+    },
+    "maxsimmorozov": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/maxsimmorozov"
+    },
+    "riakhmiatullina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/riakhmiatullina"
+    },
+    "tozikam": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/tozikam"
+    },
+    "bogdan.konoshenko": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/bogdan.konoshenko"
+    },
+    "eilarionova_556": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/eilarionova_556"
+    },
+    "polozovs": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/polozovs"
+    },
+    "i_rodina": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/i_rodina"
+    },
+    "smitsb": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/smitsb"
+    },
+    "vasiliy_meleshin": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/vasiliy_meleshin"
+    },
+    "mironovdp": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/mironovdp"
+    },
+    "repkinae": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/repkinae"
+    },
+    "rybakovaev_1582": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/rybakovaev_1582"
+    },
+    "n_shindryayeva": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/n_shindryayeva"
+    },
+    "ms_zotova": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ms_zotova"
+    },
+    "sergey_kashlev": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/sergey_kashlev"
+    },
+    "ikurash1": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/ikurash1"
+    },
+    "alexandr_novikov_chu": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/alexandr_novikov_chu"
+    },
+    "n.ptushkina56": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/n.ptushkina56"
+    },
+    "bordovskaya_og": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/bordovskaya_og"
+    },
+    "gunina_ea": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/gunina_ea"
+    },
+    "nleonovannnn": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/nleonovannnn"
+    },
+    "markova_tat_vl": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/markova_tat_vl"
+    },
+    "smirnovaev1": {
+      "status": "needs_token",
+      "photo": null,
+      "source": "https://vk.com/smirnovaev1"
+    }
+  }
+}

@@ -2,69 +2,69 @@
   "generated_on": "2026-11-21",
   "total_profiles": 159,
   "district_count": 16,
-  "with_birth_date": 21,
-  "missing_birth_date": 138,
+  "with_birth_date": 156,
+  "missing_birth_date": 3,
   "note": "Source links are not independent verification; roster membership also requires checking.",
   "districts": {
     "Бирюлёво Восточное": {
       "profiles": 10,
-      "with_birth_date": 5,
-      "missing_birth_date": 5
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Бирюлёво Западное": {
       "profiles": 10,
-      "with_birth_date": 2,
-      "missing_birth_date": 8
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Братеево": {
       "profiles": 10,
-      "with_birth_date": 2,
-      "missing_birth_date": 8
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Даниловский": {
       "profiles": 12,
-      "with_birth_date": 2,
-      "missing_birth_date": 10
+      "with_birth_date": 12,
+      "missing_birth_date": 0
     },
     "Донской": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Зябликово": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 9,
+      "missing_birth_date": 1
     },
     "Москворечье-Сабурово": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Нагатино-Садовники": {
       "profiles": 8,
-      "with_birth_date": 0,
-      "missing_birth_date": 8
+      "with_birth_date": 8,
+      "missing_birth_date": 0
     },
     "Нагатинский Затон": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Нагорный": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Орехово-Борисово Северное": {
       "profiles": 10,
-      "with_birth_date": 1,
-      "missing_birth_date": 9
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Орехово-Борисово Южное": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     },
     "Царицыно": {
       "profiles": 9,
@@ -73,18 +73,18 @@
     },
     "Чертаново Северное": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 9,
+      "missing_birth_date": 1
     },
     "Чертаново Центральное": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 9,
+      "missing_birth_date": 1
     },
     "Чертаново Южное": {
       "profiles": 10,
-      "with_birth_date": 0,
-      "missing_birth_date": 10
+      "with_birth_date": 10,
+      "missing_birth_date": 0
     }
   }
 }

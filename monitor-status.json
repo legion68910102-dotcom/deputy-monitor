@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "generated_at": null,
+  "source": "VK public pages / official API",
+  "profiles": {
+    "natalia_shabasheva": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "shmakova_os": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "ekaterina.tyutyunnikova": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "aabulatov": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "vidutinaov": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "tishkovaea": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "elena.rubtsovanazarova": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "nuykinakv": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    }
+  }
+}

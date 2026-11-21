@@ -8,7 +8,11 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-HANDLES=["natalia_shabasheva","shmakova_os","ekaterina.tyutyunnikova","aabulatov","vidutinaov","tishkovaea","elena.rubtsovanazarova","nuykinakv"]
+# The same roster powers the website, reporting and automated collection.
+roster=json.loads(Path("deputies.json").read_text(encoding="utf-8"))["deputies"]
+HANDLES=list(dict.fromkeys(p["handle"] for p in roster if p.get("handle")))
+if len(HANDLES)!=len(roster):
+    raise ValueError("Every deputy must have a unique VK handle")
 token=os.getenv("VK_TOKEN","").strip()
 now=dt.datetime.now(dt.timezone.utc).isoformat()
 out=Path("vk-posts.json")
@@ -47,7 +51,7 @@ for handle in HANDLES:
         statuses[handle]={"status":"success","checked_at":now,"reason":"Получено публикаций из VK API за проверку: "+str(count),"posts_count":count}
     except (urllib.error.URLError,TimeoutError,ValueError,KeyError,TypeError) as exc:
         statuses[handle]={"status":"checked_unavailable","checked_at":now,"reason":"Не удалось получить публикации: "+type(exc).__name__}
-report={"schema_version":1,"generated_at":now,"source":"Official VK API; no inferred metrics","profiles":statuses}
+report={"schema_version":1,"generated_at":now,"source":"Official VK API; no inferred metrics","roster_size":len(HANDLES),"district_count":len({p["district"] for p in roster}),"profiles":statuses}
 Path("monitor-status.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 out.write_text(json.dumps({"generated_at":now,"source":"VK API","posts":sorted(stored.values(),key=lambda p:p.get("date",""),reverse=True)},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("Checked",len(statuses),"profiles; VK API successes",sum(s["status"]=="success" for s in statuses.values()),"; retained posts",len(stored))

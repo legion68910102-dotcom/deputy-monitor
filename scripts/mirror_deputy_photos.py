@@ -43,8 +43,20 @@ def download(entry):
         target.write_bytes(data)
         return name, str(target)
     except Exception as exc:
-        print("Unavailable:", name, type(exc).__name__)
-        return name, None
+        print("Direct unavailable:", name, type(exc).__name__)
+        try:
+            proxy_url = "https://images.weserv.nl/?url=" + urllib.parse.quote(parsed.hostname + parsed.path, safe="/")
+            proxy_req = urllib.request.Request(proxy_url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(proxy_req, timeout=30) as response:
+                content_type = response.headers.get("Content-Type", "").lower()
+                data = response.read(3_000_001)
+                if not content_type.startswith("image/") or not (2000 < len(data) < 3_000_001):
+                    return name, None
+            target.write_bytes(data)
+            return name, str(target)
+        except Exception as proxy_exc:
+            print("Proxy unavailable:", name, type(proxy_exc).__name__)
+            return name, None
 
 with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
     results = dict(pool.map(download, photos.items()))

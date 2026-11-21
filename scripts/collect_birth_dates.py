@@ -66,7 +66,7 @@ def main():
             continue
         title_match = re.search(r"<h1\b[^>]*>(.*?)</h1>", page, flags=re.I | re.S)
         heading = plain(title_match.group(1)) if title_match else ""
-        if heading.casefold() != p["name"].casefold():
+        if heading.casefold().replace("ё", "е") != p["name"].casefold().replace("ё", "е"):
             errors.append({"name": p["name"], "reason": "name_mismatch", "heading": heading})
             continue
         birth = date_from_page(plain(page))

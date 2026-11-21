@@ -29,7 +29,7 @@ types = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".web
 def valid_image(data):
     if not (1500 < len(data) < 4_000_000):
         return False
-    return (data.startswith(b"\\xff\\xd8\\xff") or data.startswith(b"\\x89PNG\\r\\n\\x1a\\n")
+    return (data.startswith(b"\xff\xd8\xff") or data.startswith(b"\x89PNG\r\n\x1a\n")
             or (data.startswith(b"RIFF") and data[8:12] == b"WEBP"))
 
 def retrieve(url, referer=None):

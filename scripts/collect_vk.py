@@ -37,10 +37,11 @@ for handle in HANDLES:
         count=0
         for post in items:
             if post.get("is_deleted") or post.get("marked_as_ads"): continue
+            if post.get("from_id") != post.get("owner_id"): continue
             owner=post.get("owner_id"); pid=post.get("id")
             if not isinstance(owner,int) or not isinstance(pid,int): continue
             url=f"https://vk.com/wall{owner}_{pid}"
-            record={"profile":handle,"date":dt.datetime.fromtimestamp(post["date"],dt.timezone.utc).date().isoformat(),"url":url,"text":post.get("text",""),"likes":post.get("likes",{}).get("count"),"comments":post.get("comments",{}).get("count"),"reposts":post.get("reposts",{}).get("count"),"views":post.get("views",{}).get("count"),"followers":None,"source":"vk_api"}
+            record={"profile":handle,"date":dt.datetime.fromtimestamp(post["date"],dt.timezone(dt.timedelta(hours=3))).date().isoformat(),"url":url,"text":post.get("text",""),"likes":post.get("likes",{}).get("count"),"comments":post.get("comments",{}).get("count"),"reposts":post.get("reposts",{}).get("count"),"views":post.get("views",{}).get("count"),"followers":None,"source":"vk_api"}
             stored[(handle,url)]=record
             count+=1
         statuses[handle]={"status":"success","checked_at":now,"reason":"Получено публикаций из VK API за проверку: "+str(count),"posts_count":count}

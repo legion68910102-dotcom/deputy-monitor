@@ -35,17 +35,18 @@ for start in range(0,len(handles),100):
         with urllib.request.urlopen(req,timeout=30) as resp: data=json.load(resp)
         if "error" in data:
             raise ValueError(str(data["error"].get("error_msg","VK API error"))[:160])
-        found={}
-        for handle,user in zip(chunk,data.get("response",[])):
-            # The response is ordered like user_ids; keep index association, not name guesses.
-            if user.get("deactivated"):
+        users={}
+        for user in data.get("response",[]):
+            screen=user.get("screen_name","").lower()
+            if screen: users[screen]=user
+            if isinstance(user.get("id"),int): users["id"+str(user["id"])]=user
+        for handle in chunk:
+            user=users.get(handle.lower())
+            if not user or user.get("deactivated"):
                 profiles[handle]={"status":"unavailable","photo":None,"source":"https://vk.com/"+handle}
                 continue
             photo=next((user.get(k) for k in ("photo_200","photo_200_orig","photo_max_orig") if isinstance(user.get(k),str) and user[k].startswith("https://") and "camera_" not in user[k]),None)
             profiles[handle]={"status":"success" if photo else "no_photo","photo":photo,"source":"https://vk.com/"+handle}
-            found[handle]=True
-        for handle in chunk:
-            if handle not in profiles: profiles[handle]={"status":"unavailable","photo":None,"source":"https://vk.com/"+handle}
     except (urllib.error.URLError,TimeoutError,ValueError,KeyError,TypeError) as exc:
         for handle in chunk:
             prev=previous.get(handle,{})

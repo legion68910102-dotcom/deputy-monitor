@@ -16,9 +16,9 @@ def report(status, **details):
     return obj
 
 def call(method, params, token):
-    data = {**params, "access_token": token, "v": VERSION}
+    data = {**params, "v": VERSION}
     url = API + method + "?" + urllib.parse.urlencode(data)
-    req = urllib.request.Request(url, headers={"User-Agent": "DeputyMonitorPilot/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "DeputyMonitorPilot/1.0", "Authorization": "Bearer " + token})
     with urllib.request.urlopen(req, timeout=25) as response:
         result = json.load(response)
     if "error" in result:
@@ -36,15 +36,7 @@ def main():
         report("needs_token", explanation="Add VK_TOKEN as a GitHub Actions repository secret; no request was sent.")
         return 0
     try:
-        user, error = call("users.get", {"user_ids": PROFILE}, token)
-        if error:
-            report("api_error", stage="users.get", error=error)
-            return 0
-        if not isinstance(user, list) or not user or "id" not in user[0]:
-            report("unavailable", stage="users.get", explanation="VK did not resolve the profile")
-            return 0
-        uid = user[0]["id"]
-        response, error = call("wall.get", {"owner_id": uid, "count": 100, "offset": 0, "filter": "owner"}, token)
+        response, error = call("wall.get", {"domain": PROFILE, "count": 100, "offset": 0, "filter": "owner"}, token)
         if error:
             report("api_error", stage="wall.get", error=error)
             return 0
@@ -58,7 +50,7 @@ def main():
             posts.append({
                 "profile": PROFILE,
                 "date": datetime.fromtimestamp(item["date"], timezone.utc).isoformat() if isinstance(item.get("date"), int) else None,
-                "url": f"https://vk.com/wall{uid}_{item['id']}",
+                "url": f"https://vk.com/wall{item['owner_id']}_{item['id']}" if isinstance(item.get("owner_id"), int) else None,
                 "text": item.get("text") if isinstance(item.get("text"), str) else None,
                 "likes": metric(item, "likes"),
                 "comments": metric(item, "comments"),
@@ -66,7 +58,7 @@ def main():
                 "views": metric(item, "views"),
                 "followers": None,
             })
-        report("success", owner_id=uid, returned=len(posts), total_reported=response.get("count"), posts=posts,
+        report("success", returned=len(posts), total_reported=response.get("count"), posts=posts,
                caveat="First 100 accessible owner posts only; not a full annual archive. Metrics may be unavailable.")
     except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as exc:
         report("request_failed", error_type=type(exc).__name__, explanation="Network/API response failure; no data fabricated.")

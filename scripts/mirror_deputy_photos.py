@@ -55,7 +55,7 @@ def download(entry):
             return name, url, "saved"
         return name, None, "local file missing"
     parsed = urllib.parse.urlparse(url)
-    if parsed.scheme != "https" or parsed.hostname not in allowed_hosts:
+    if parsed.scheme not in ("http", "https") or parsed.hostname not in allowed_hosts:
         return name, None, "unsupported source"
     ext = pathlib.PurePosixPath(parsed.path).suffix.lower()
     if ext not in types:
@@ -69,7 +69,8 @@ def download(entry):
     original = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, parsed.query, ""))
     proxied = urllib.parse.quote(original, safe="")
     options = [
-        (original, "https://" + parsed.hostname + "/"),
+        (urllib.parse.urlunsplit(("https", parsed.netloc, parsed.path, parsed.query, "")), "https://" + parsed.hostname + "/"),
+        (original, parsed.scheme + "://" + parsed.hostname + "/"),
         ("https://images.weserv.nl/?url=" + urllib.parse.quote(parsed.hostname + parsed.path, safe="/"), None),
         ("https://wsrv.nl/?url=" + proxied, None),
     ]

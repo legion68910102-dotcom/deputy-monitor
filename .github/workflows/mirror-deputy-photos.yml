@@ -21,7 +21,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html assets/deputy-photos
+          git add index.html assets/deputy-photos photo-import-status.json
           if ! git diff --cached --quiet; then
             git commit -m "Host available deputy photos locally on GitHub Pages"
             git push

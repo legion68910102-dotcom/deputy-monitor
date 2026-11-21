@@ -1,25 +1,607 @@
 {
   "schema_version": 1,
   "generated_at": null,
-  "source": "VK public pages / official API",
+  "source": "Official VK API when configured; missing data is not zero activity",
   "profiles": {
-    "natalia_shabasheva": {
+    "ilyasov_kn": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
     },
-    "shmakova_os": {
+    "molchanovpavel": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
     },
-    "ekaterina.tyutyunnikova": {
+    "elenanersesova": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ptitsynakk": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "nata_sycheva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "aleinikovayv": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "antonovalp1": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "golubevaev947": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kutaysovanv": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "rytovsergey": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "a.a.boikov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "e.aleksander88": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "iskonarev": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "elenasergeevnalelikiva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "irina_terekhova1969": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "yaroslavburykh": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "smallraisin": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tatyanajabina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "juliamartanova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "orehov_aleksandr": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "olga_belousova1998": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "gontsova71": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "e.korostilenko": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ykolova_elena_vasilevna": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "chinilina975": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "vlasenkoau": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "dmitry_volkov77": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "annavolskaya": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ilyashenko_aleksandr": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "seregin1963": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "dmitry_ark": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kiryanova_ln": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "levshtanov86": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ifadeeva2022": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ivanov_oi10": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "olga_podolskay": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "sagalovskaya": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "sitnikov_danilovskiy": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "vgsultanov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "natalia.abbasova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "grigorievalv": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "trodionova2022": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "graskinss": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "galinazaykovskaya": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "pkobtsev": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ln_skorlupkina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "elena_fursova1": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tkabanova2022": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "svetlanakostyushina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "rezkovvlad": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "yulia_sedacheva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "elina_sherstyuk": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "anisim_svet": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "pushkinpp": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "rafalskayairina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tikhanovaalbina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "haritonova_aliya": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "allavoropaeva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kalyaev84": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ryabevaen": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "semenovdmitry80": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "elenashlyakova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "allenov__andrey": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "andrianov001": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "nvzausaeva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "av_kondrashov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "aleks_moskalev": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "andrey.abertasov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "vyacheslav_komaha": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kondratevaekaterina88": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kudinovamarina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "anatoli_viktorovich_potiomkin": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "deputat_kaminskiy": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "natalyamikhareva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "safonovatatiana85": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tikhomirovalexey": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "nikolskayaav": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "andrey.sezemov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "antonuvarov90": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "azizakabulovnachuganova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "golovin_mikhail_sergeevich": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "gorbunovsi": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "korshunovane": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kundyltatyana": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "l.ruzina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "balykovde": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "bashlykova.mari": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "julia_byckova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "romanvinokurov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "goremykinmy": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "vvedenskaya_i": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "vinogradova_len": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "dkulnev": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "rygin": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "pavel_v_shutov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "kostina1920": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "viktorgorn": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "id666378177": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "o.v.tarasenko": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tatyana_filippova20": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "dmitrieva_n_n": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "elena__konnova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "elena_laplanche": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "andreymordovin": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "baranchikova_natalia": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "galinadolgashova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "anna_ezhkova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "liudmila_zapl": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "nadezhda_kuskova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "sysoevala": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ib.glotova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "demchenkov_ml": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "svetlana_rodnik": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "novoselskayala": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tkachip": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tatiyana_donskaya": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "i.v.zolkina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "albinakomissarova2022": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "sovchinnikova79": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ap.yashkin": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
     },
     "aabulatov": {
       "checked_at": null,
@@ -33,7 +615,7 @@
       "posts_count": null,
       "reason": "Автоматическое получение данных пока не подтверждено"
     },
-    "tishkovaea": {
+    "nuykinakv": {
       "checked_at": null,
       "status": "not_checked",
       "posts_count": null,
@@ -45,11 +627,186 @@
       "posts_count": null,
       "reason": "Автоматическое получение данных пока не подтверждено"
     },
-    "nuykinakv": {
+    "tishkovaea": {
       "checked_at": null,
       "status": "not_checked",
       "posts_count": null,
       "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "gavrilinams": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ekaterina.tyutyunnikova": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "natalia_shabasheva": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "shmakova_os": {
+      "checked_at": null,
+      "status": "not_checked",
+      "posts_count": null,
+      "reason": "Автоматическое получение данных пока не подтверждено"
+    },
+    "abramovaei_chs": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "antongorbachev": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "petr.kurapov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "i_v_morozova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "smirnovvalerii": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "andreevasvetlanaaleksandrovna": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "lukoyanov_chs": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "maxsimmorozov": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "riakhmiatullina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "tozikam": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "bogdan.konoshenko": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "eilarionova_556": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "polozovs": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "i_rodina": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "smitsb": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "vasiliy_meleshin": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "mironovdp": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "repkinae": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "rybakovaev_1582": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "n_shindryayeva": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ms_zotova": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "sergey_kashlev": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "ikurash1": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "alexandr_novikov_chu": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "n.ptushkina56": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "bordovskaya_og": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "gunina_ea": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "nleonovannnn": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "markova_tat_vl": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+    },
+    "smirnovaev1": {
+      "status": "needs_token",
+      "checked_at": null,
+      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
     }
-  }
+  },
+  "roster_size": 159,
+  "district_count": 16
 }

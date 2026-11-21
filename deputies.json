@@ -10,7 +10,11 @@
       "birth_date": "1965-07-24",
       "birth_source": "https://asafov.ru/person/ilyasov-haris-nyabiullovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Молчанов Павел Викторович",
@@ -20,7 +24,11 @@
       "birth_date": "1979-10-01",
       "birth_source": "https://asafov.ru/person/molchanov-pavel-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Нерсесова Елена Валериевна",
@@ -30,7 +38,11 @@
       "birth_date": "1969-05-23",
       "birth_source": "https://asafov.ru/person/nersesova-elena-valerievna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Птицына Ксения Кирилловна",
@@ -40,7 +52,11 @@
       "birth_date": "1987-06-09",
       "birth_source": "https://asafov.ru/person/pticzyna-kseniya-kirillovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Сычева Наталья Владимировна",
@@ -50,7 +66,11 @@
       "birth_date": "1974-05-20",
       "birth_source": "https://asafov.ru/person/sycheva-natalya-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Алейникова Юлия Владимировна",
@@ -60,7 +80,11 @@
       "birth_date": "1983-08-11",
       "birth_source": "https://asafov.ru/person/alejnikova-yuliya-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Антонова Лариса Петровна",
@@ -70,7 +94,11 @@
       "birth_date": "1962-01-29",
       "birth_source": "https://asafov.ru/person/antonova-larisa-petrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Голубева Елена Васильевна",
@@ -80,7 +108,11 @@
       "birth_date": "1971-11-29",
       "birth_source": "https://asafov.ru/person/golubeva-elena-vasilevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кутайсова Наталья Викторовна",
@@ -90,7 +122,11 @@
       "birth_date": "1981-09-27",
       "birth_source": "https://asafov.ru/person/kutajsova-natalya-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Рытов Сергей Владимирович",
@@ -100,7 +136,11 @@
       "birth_date": "1966-07-13",
       "birth_source": "https://asafov.ru/person/rytov-sergej-vladimirovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Бойков Алексей Александрович",
@@ -110,7 +150,11 @@
       "birth_date": "1975-11-10",
       "birth_source": "https://asafov.ru/person/bojkov-aleksej-aleksandrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Есин Александр Борисович",
@@ -120,7 +164,11 @@
       "birth_date": "1988-03-12",
       "birth_source": "https://asafov.ru/person/esin-aleksandr-borisovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Конарев Илья Сергеевич",
@@ -130,7 +178,11 @@
       "birth_date": "1991-12-11",
       "birth_source": "https://asafov.ru/person/konarev-ilya-sergeevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Леликова Елена Сергеевна",
@@ -140,7 +192,11 @@
       "birth_date": "1966-07-27",
       "birth_source": "https://asafov.ru/person/lelikova-elena-sergeevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Терехова Ирина Юрьевна",
@@ -150,7 +206,11 @@
       "birth_date": "1969-07-05",
       "birth_source": "https://asafov.ru/person/terehova-irina-yurevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Бурых Ярослав Юрьевич",
@@ -160,7 +220,11 @@
       "birth_date": "1991-03-04",
       "birth_source": "https://asafov.ru/person/buryh-yaroslav-yurevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Виноградова Елена Геннадьевна",
@@ -170,7 +234,11 @@
       "birth_date": "1984-07-28",
       "birth_source": "https://asafov.ru/person/vinogradova-elena-gennadevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Жабина Татьяна Викторовна",
@@ -180,7 +248,11 @@
       "birth_date": "1987-07-04",
       "birth_source": "https://asafov.ru/person/zhabina-tatyana-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Мартанова Юлия Валентиновна",
@@ -190,7 +262,11 @@
       "birth_date": "1961-03-19",
       "birth_source": "https://asafov.ru/person/martanova-yuliya-valentinovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Орехов Александр Валентинович",
@@ -200,7 +276,11 @@
       "birth_date": "1962-12-11",
       "birth_source": "https://asafov.ru/person/orehov-aleksandr-valentinovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Белоусова Ольга Андреевна",
@@ -210,7 +290,11 @@
       "birth_date": "1979-04-01",
       "birth_source": "https://asafov.ru/person/belousova-olga-andreevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Гонцова Ирина Борисовна",
@@ -220,7 +304,11 @@
       "birth_date": "1971-04-29",
       "birth_source": "https://asafov.ru/person/gonczova-irina-borisovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Коростиленко Елена Алексеевна",
@@ -230,7 +318,11 @@
       "birth_date": "1964-06-25",
       "birth_source": "https://asafov.ru/person/korostilenko-elena-alekseevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Уколова Елена Васильевна",
@@ -240,7 +332,11 @@
       "birth_date": "1964-05-10",
       "birth_source": "https://asafov.ru/person/ukolova-elena-vasilevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Чинилина Ирина Викторовна",
@@ -250,7 +346,11 @@
       "birth_date": "1971-04-08",
       "birth_source": "https://asafov.ru/person/chinilina-irina-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Власенко Антон Юрьевич",
@@ -260,7 +360,11 @@
       "birth_date": "1984-04-10",
       "birth_source": "https://asafov.ru/person/vlasenko-anton-yurevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Волков Дмитрий Александрович",
@@ -270,7 +374,11 @@
       "birth_date": "1977-11-19",
       "birth_source": "https://asafov.ru/person/volkov-dmitrij-aleksandrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Вольская Анна Львовна",
@@ -280,7 +388,11 @@
       "birth_date": "1971-08-18",
       "birth_source": "https://asafov.ru/person/volskaya-anna-lvovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Ильяшенко Александр Викторович",
@@ -290,7 +402,11 @@
       "birth_date": "1968-06-10",
       "birth_source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Серегин Александр Викторович",
@@ -300,7 +416,11 @@
       "birth_date": "1963-06-13",
       "birth_source": "https://asafov.ru/person/ceregin-aleksandr-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Аркусов Дмитрий Юрьевич",
@@ -310,7 +430,11 @@
       "birth_date": "1996-08-25",
       "birth_source": "https://asafov.ru/person/arkusov-dmitrij-yurevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кирьянова Людмила Николаевна",
@@ -320,7 +444,11 @@
       "birth_date": "1965-04-01",
       "birth_source": "https://asafov.ru/person/kiryanova-lyudmila-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Левштанов Дмитрий Николаевич",
@@ -330,7 +458,11 @@
       "birth_date": "1986-05-18",
       "birth_source": "https://asafov.ru/person/levshtanov-dmitrij-nikolaevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Фадеева Инна Геннадьевна",
@@ -340,7 +472,11 @@
       "birth_date": "1967-01-18",
       "birth_source": "https://asafov.ru/person/fadeeva-inna-gennadevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Иванов Олег Игорьевич",
@@ -350,7 +486,11 @@
       "birth_date": "1974-10-07",
       "birth_source": "https://asafov.ru/person/ivanov-oleg-igorevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Подольская Ольга Вячеславовна",
@@ -360,7 +500,11 @@
       "birth_date": "1971-01-16",
       "birth_source": "https://asafov.ru/person/podolskaya-olga-vyacheslavovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Сагаловская Надежда Викторовна",
@@ -370,7 +514,11 @@
       "birth_date": "1963-10-07",
       "birth_source": "https://asafov.ru/person/sagalovskaya-nadezhda-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Ситников Иван Иванович",
@@ -380,7 +528,11 @@
       "birth_date": "1985-08-08",
       "birth_source": "https://asafov.ru/person/sitnikov-ivan-ivanovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Султанов Владислав Геннадьевич",
@@ -390,7 +542,11 @@
       "birth_date": "1989-12-17",
       "birth_source": "https://asafov.ru/person/sultanov-vladislav-gennadevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Аббасова Наталья Александровна",
@@ -400,7 +556,11 @@
       "birth_date": "1989-08-30",
       "birth_source": "https://asafov.ru/person/abbasova-natalya-aleksandrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Григорьева Людмила Васильевна",
@@ -410,7 +570,11 @@
       "birth_date": "1957-02-16",
       "birth_source": "https://asafov.ru/person/grigoreva-lyudmila-vasilevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Родионова Татьяна Вячеславовна",
@@ -420,7 +584,11 @@
       "birth_date": "1948-09-14",
       "birth_source": "https://asafov.ru/person/rodionova-tatyana-vyacheslavovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Граськин Сергей Сергеевич",
@@ -430,7 +598,11 @@
       "birth_date": "1958-08-22",
       "birth_source": "https://asafov.ru/person/graskin-sergej-sergeevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Зайковская Галина Викторовна",
@@ -440,7 +612,11 @@
       "birth_date": "1962-04-17",
       "birth_source": "https://asafov.ru/person/zajkovskaya-galina-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кобцев Павел Николаевич",
@@ -450,7 +626,11 @@
       "birth_date": "1981-01-01",
       "birth_source": "https://asafov.ru/person/kobczev-pavel-nikolaevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Скорлупкина Лариса Николаевна",
@@ -460,7 +640,11 @@
       "birth_date": "1962-02-07",
       "birth_source": "https://asafov.ru/person/skorlupkina-larisa-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Фурсова Елена Даниловна",
@@ -470,7 +654,11 @@
       "birth_date": "1962-04-24",
       "birth_source": "https://asafov.ru/person/fursova-elena-danilovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кабанова Татьяна Викторовна",
@@ -480,7 +668,11 @@
       "birth_date": "1958-01-05",
       "birth_source": "https://asafov.ru/person/kabanova-tatyana-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Костюшина Светлана Викторовна",
@@ -490,7 +682,11 @@
       "birth_date": "1978-07-13",
       "birth_source": "https://asafov.ru/person/kostyushina-svetlana-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Резков Владислав Валерьевич",
@@ -500,7 +696,11 @@
       "birth_date": "1972-05-03",
       "birth_source": "https://asafov.ru/person/rezkov-vladislav-valerevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Седачева Юлия Владимировна",
@@ -510,7 +710,11 @@
       "birth_date": "1982-07-26",
       "birth_source": "https://asafov.ru/person/sedacheva-yuliya-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Шерстюк Элина Сергеевна",
@@ -520,7 +724,11 @@
       "birth_date": "1984-04-04",
       "birth_source": "https://asafov.ru/person/sherstyuk-elina-sergeevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Анисимова Светлана Геннадьевна",
@@ -530,7 +738,11 @@
       "birth_date": "1968-06-30",
       "birth_source": "https://elections.istra-da.ru/election/87483/",
       "birth_status": "cross_checked",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Пушкин Павел Павлович",
@@ -540,7 +752,11 @@
       "birth_date": "1987-04-14",
       "birth_source": "https://asafov.ru/person/pushkin-pavel-pavlovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Рафальская Ирина Владимировна",
@@ -550,7 +766,11 @@
       "birth_date": "1983-05-13",
       "birth_source": "https://asafov.ru/person/rafalskaya-irina-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Тиханова Альбина Викторовна",
@@ -560,7 +780,11 @@
       "birth_date": "1975-02-12",
       "birth_source": "https://asafov.ru/person/tihanova-albina-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Харитонова Алия Гафурджановна",
@@ -570,7 +794,11 @@
       "birth_date": "1983-06-26",
       "birth_source": "https://asafov.ru/person/haritonova-aliya-gafurdzhanovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Воропаева Алла Викторовна",
@@ -580,7 +808,11 @@
       "birth_date": "1976-01-25",
       "birth_source": "https://asafov.ru/person/voropaeva-alla-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Каляев Александр Вячеславович",
@@ -590,7 +822,11 @@
       "birth_date": "1984-02-29",
       "birth_source": "https://asafov.ru/person/kalyaev-aleksandr-vyacheslavovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Рябева Евгения Николаевна",
@@ -600,7 +836,11 @@
       "birth_date": "1984-09-27",
       "birth_source": "https://asafov.ru/person/ryabeva-evgeniya-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Семёнов Дмитрий Витальевич",
@@ -610,7 +850,11 @@
       "birth_date": "1980-02-18",
       "birth_source": "https://asafov.ru/person/semenov-dmitrij-vitalevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Шлякова Елена Николаевна",
@@ -620,7 +864,11 @@
       "birth_date": "1967-10-31",
       "birth_source": "https://asafov.ru/person/shlyakova-elena-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Алленов Андрей Михайлович",
@@ -630,7 +878,11 @@
       "birth_date": "1983-03-17",
       "birth_source": "https://asafov.ru/person/allenov-andrej-mihajlovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Андрианов Михаил Владимирович",
@@ -640,7 +892,11 @@
       "birth_date": "1985-05-13",
       "birth_source": "https://asafov.ru/person/andrianov-mihail-vladimirovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Заусаева Наталья Васильевна",
@@ -650,7 +906,11 @@
       "birth_date": "1971-01-26",
       "birth_source": "https://asafov.ru/person/zausaeva-natalya-vasilevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кондрашов Артем Вячеславович",
@@ -660,7 +920,11 @@
       "birth_date": "1978-09-25",
       "birth_source": "https://asafov.ru/person/kondrashov-artem-vyacheslavovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Москалев Александр Евгеньевич",
@@ -670,7 +934,11 @@
       "birth_date": "1986-07-28",
       "birth_source": "https://asafov.ru/person/moskalev-aleksandr-evgenevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Абертасов Андрей Алексеевич",
@@ -680,7 +948,11 @@
       "birth_date": "1958-01-31",
       "birth_source": "https://asafov.ru/person/abertasov-andrej-alekseevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Комаха Вячеслав Михайлович",
@@ -690,7 +962,11 @@
       "birth_date": "1975-04-14",
       "birth_source": "https://asafov.ru/person/komaha-vyacheslav-mihajlovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кондратьева Екатерина Вадимовна",
@@ -700,7 +976,11 @@
       "birth_date": "1988-11-16",
       "birth_source": "https://asafov.ru/person/kondrateva-ekaterina-vadimovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кудинова Марина Феликсовна",
@@ -710,7 +990,11 @@
       "birth_date": "1962-04-20",
       "birth_source": "https://asafov.ru/person/kudinova-marina-feliksovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Потёмкин Анатолий Викторович",
@@ -720,7 +1004,11 @@
       "birth_date": "1964-07-07",
       "birth_source": "https://asafov.ru/person/potyomkin-anatolij-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Каминский Юрий Викторович",
@@ -730,7 +1018,11 @@
       "birth_date": "1968-10-10",
       "birth_source": "https://asafov.ru/person/kaminskij-yurij-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Михарева Наталья Борисовна",
@@ -740,7 +1032,11 @@
       "birth_date": "1967-05-13",
       "birth_source": "https://asafov.ru/person/mihareva-natalya-borisovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Сафонова Татьяна Владимировна",
@@ -750,7 +1046,11 @@
       "birth_date": "1985-07-05",
       "birth_source": "https://asafov.ru/person/safonova-tatyana-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Тихомиров Алексей Александрович",
@@ -760,7 +1060,11 @@
       "birth_date": "1980-01-28",
       "birth_source": "https://asafov.ru/person/tihomirov-aleksej-aleksandrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Никольская Анджела Вадимовна",
@@ -770,7 +1074,11 @@
       "birth_date": "1972-10-10",
       "birth_source": "https://asafov.ru/person/nikolskaya-andzhela-vadimovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Сезёмов Андрей Владимирович",
@@ -780,7 +1088,11 @@
       "birth_date": "1971-03-08",
       "birth_source": "https://asafov.ru/person/sezyomov-andrej-vladimirovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Уваров Антон Анатольевич",
@@ -790,7 +1102,11 @@
       "birth_date": "1990-04-16",
       "birth_source": "https://asafov.ru/person/uvarov-anton-anatolevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Чуганова Азиза Кабыльбековна",
@@ -800,7 +1116,11 @@
       "birth_date": "1968-11-15",
       "birth_source": "https://asafov.ru/person/chuganova-aziza-kabylbekovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Головин Михаил Сергеевич",
@@ -810,7 +1130,11 @@
       "birth_date": "1979-12-17",
       "birth_source": "https://asafov.ru/person/golovin-mihail-sergeevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Горбунов Станислав Игоревич",
@@ -820,7 +1144,11 @@
       "birth_date": "1988-05-19",
       "birth_source": "https://asafov.ru/person/gorbunov-stanislav-igorevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Коршунова Наталья Евгеньевна",
@@ -830,7 +1158,11 @@
       "birth_date": "1988-08-09",
       "birth_source": "https://asafov.ru/person/korshunova-natalya-evgenevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кундыль Татьяна Евгеньевна",
@@ -840,7 +1172,11 @@
       "birth_date": "1980-05-01",
       "birth_source": "https://asafov.ru/person/kundyl-tatyana-evgenevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Рузина Лидия Владимировна",
@@ -850,7 +1186,11 @@
       "birth_date": "1978-06-07",
       "birth_source": "https://asafov.ru/person/ruzina-lidiya-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Балыков Дмитрий Евгеньевич",
@@ -860,7 +1200,11 @@
       "birth_date": "1970-12-11",
       "birth_source": "https://asafov.ru/person/balykov-dmitrij-evgenevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Башлыкова Мария Николаевна",
@@ -870,7 +1214,11 @@
       "birth_date": "1991-05-14",
       "birth_source": "https://asafov.ru/person/bashlykova-mariya-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Быкова Юлия Валерьевна",
@@ -880,7 +1228,11 @@
       "birth_date": "1969-04-07",
       "birth_source": "https://asafov.ru/person/bykova-yuliya-valerevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Винокуров Роман Евгеньевич",
@@ -890,7 +1242,11 @@
       "birth_date": "1989-10-23",
       "birth_source": "https://asafov.ru/person/vinokurov-roman-evgenevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Горемыкин Михаил Юрьевич",
@@ -900,7 +1256,11 @@
       "birth_date": "1965-05-25",
       "birth_source": "https://asafov.ru/person/goremykin-mihail-yurevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Введенская Инна Васильевна",
@@ -910,7 +1270,11 @@
       "birth_date": "1982-04-26",
       "birth_source": "https://asafov.ru/person/vvedenskaya-inna-vasilevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Виноградова Елена Михайловна",
@@ -920,7 +1284,11 @@
       "birth_date": "1974-03-19",
       "birth_source": "https://asafov.ru/person/vinogradova-elena-mihajlovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кульнев Дмитрий Владимирович",
@@ -930,7 +1298,11 @@
       "birth_date": "1986-09-14",
       "birth_source": "https://asafov.ru/person/kulnev-dmitrij-vladimirovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Рыгин Алексей Борисович",
@@ -940,7 +1312,11 @@
       "birth_date": "1992-12-14",
       "birth_source": "https://asafov.ru/person/rygin-aleksej-borisovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Шутов Павел Викторович",
@@ -950,7 +1326,11 @@
       "birth_date": "1977-06-03",
       "birth_source": "https://asafov.ru/person/shutov-pavel-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Бурова Екатерина Николаевна",
@@ -960,7 +1340,11 @@
       "birth_date": "1978-03-27",
       "birth_source": "https://asafov.ru/person/burova-ekaterina-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Горн Виктор Викторович",
@@ -970,7 +1354,11 @@
       "birth_date": "1981-07-04",
       "birth_source": "https://asafov.ru/person/gorn-viktor-viktorovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Новикова Юлия Ивановна",
@@ -980,7 +1368,11 @@
       "birth_date": "1959-11-29",
       "birth_source": "https://asafov.ru/person/novikova-yuliya-ivanovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Тарасенко Ольга Вячеславовна",
@@ -990,7 +1382,11 @@
       "birth_date": "1980-08-20",
       "birth_source": "https://asafov.ru/person/tarasenko-olga-vyacheslavovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Филиппова Татьяна Викторовна",
@@ -1000,7 +1396,11 @@
       "birth_date": "1961-06-20",
       "birth_source": "https://asafov.ru/person/filippova-tatyana-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Дмитриева Наталия Николаевна",
@@ -1010,7 +1410,11 @@
       "birth_date": "1971-07-17",
       "birth_source": "https://asafov.ru/person/dmitrieva-nataliya-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Коннова Елена Львовна",
@@ -1020,7 +1424,11 @@
       "birth_date": "1975-05-06",
       "birth_source": "https://asafov.ru/person/konnova-elena-lvovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Лапланш Елена Львовна",
@@ -1030,7 +1438,11 @@
       "birth_date": "1984-05-24",
       "birth_source": "https://asafov.ru/person/laplansh-elena-lvovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Мордовин Андрей Юрьевич",
@@ -1040,7 +1452,11 @@
       "birth_date": "1992-10-29",
       "birth_source": "https://asafov.ru/person/mordovin-andrej-yurevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Баранчикова Наталья Алексеевна",
@@ -1050,7 +1466,11 @@
       "birth_date": "1980-01-03",
       "birth_source": "https://asafov.ru/person/baranchikova-natalya-alekseevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Долгашова Галина Георгиевна",
@@ -1060,7 +1480,11 @@
       "birth_date": "1955-04-21",
       "birth_source": "https://asafov.ru/person/dolgashova-galina-georgievna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Ежкова Анна Александровна",
@@ -1070,7 +1494,11 @@
       "birth_date": "1977-04-03",
       "birth_source": "https://asafov.ru/person/ezhkova-anna-aleksandrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Заплатникова Людмила Викторовна",
@@ -1080,7 +1508,11 @@
       "birth_date": "1960-08-05",
       "birth_source": "https://asafov.ru/person/zaplatnikova-lyudmila-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кускова Надежда Юрьевна",
@@ -1090,7 +1522,11 @@
       "birth_date": "1966-02-12",
       "birth_source": "https://asafov.ru/person/kuskova-nadezhda-yurevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Сысоева Людмила Анатольевна",
@@ -1100,7 +1536,11 @@
       "birth_date": "1968-02-27",
       "birth_source": "https://asafov.ru/person/sysoeva-lyudmila-anatolevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Глотова Ирина Борисовна",
@@ -1110,7 +1550,11 @@
       "birth_date": "1972-02-05",
       "birth_source": "https://asafov.ru/person/glotova-irina-borisovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Демченков Максим Леонидович",
@@ -1120,7 +1564,11 @@
       "birth_date": "1977-12-05",
       "birth_source": "https://asafov.ru/person/demchenkov-maksim-leonidovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Нефедова Светлана Юрьевна",
@@ -1130,7 +1578,11 @@
       "birth_date": "1972-04-19",
       "birth_source": "https://asafov.ru/person/nefedova-svetlana-yurevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Новосельская Людмила Александровна",
@@ -1140,7 +1592,11 @@
       "birth_date": "1974-04-11",
       "birth_source": "https://asafov.ru/person/novoselskaya-lyudmila-aleksandrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Ткач Ирина Петровна",
@@ -1150,7 +1606,11 @@
       "birth_date": "1972-08-05",
       "birth_source": "https://asafov.ru/person/tkach-irina-petrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Донская Татьяна Викторовна",
@@ -1160,7 +1620,11 @@
       "birth_date": "1986-05-21",
       "birth_source": "https://asafov.ru/person/donskaya-tatyana-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Золкина Ирина Вячеславовна",
@@ -1170,7 +1634,11 @@
       "birth_date": "1961-10-07",
       "birth_source": "https://asafov.ru/person/zolkina-irina-vyacheslavovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Комиссарова Альбина Анатольевна",
@@ -1180,7 +1648,11 @@
       "birth_date": "1963-09-22",
       "birth_source": "https://asafov.ru/person/komissarova-albina-anatolevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Овчинникова Светлана Юрьевна",
@@ -1190,7 +1662,11 @@
       "birth_date": "1979-11-01",
       "birth_source": "https://asafov.ru/person/ovchinnikova-svetlana-yurevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Яшкин Андрей Петрович",
@@ -1200,7 +1676,11 @@
       "birth_date": "1965-02-26",
       "birth_source": "https://asafov.ru/person/yashkin-andrej-petrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Булатов Александр Александрович",
@@ -1210,7 +1690,11 @@
       "birth_date": "1986-02-01",
       "birth_source": "https://asafov.ru/person/bulatov-aleksandr-aleksandrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Видутина Оксана Вячеславовна",
@@ -1220,7 +1704,11 @@
       "birth_date": "1981-10-04",
       "birth_source": "https://asafov.ru/person/vidutina-oksana-vyacheslavovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Нуйкина Карина Вячеславовна",
@@ -1230,7 +1718,11 @@
       "birth_date": "1985-12-09",
       "birth_source": "https://asafov.ru/person/nujkina-karina-vyacheslavovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Назарова Елена Андреевна",
@@ -1240,7 +1732,11 @@
       "birth_date": "1978-03-13",
       "birth_source": "https://asafov.ru/person/rubczova-elena-andreevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Тишкова Елена Алексеевна",
@@ -1250,7 +1746,11 @@
       "birth_date": "1969-06-28",
       "birth_source": "https://asafov.ru/person/tishkova-elena-alekseevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": "ГБОУ города Москвы «Школа № 1466 имени Надежды Рушевой» — старший методист (по официальной биографии)",
+      "workplace_source": "https://mcaricino.ru/tsaritsyno/rukovoditel-vmo-tsaritsyno-v-gorode-moskve/",
+      "workplace_status": "source_linked_review_pending",
+      "workplace_checked_at": null
     },
     {
       "name": "Гаврилина Мария Сергеевна",
@@ -1260,7 +1760,11 @@
       "birth_date": "1985-12-08",
       "birth_source": "https://asafov.ru/person/gavrilina-mariya-sergeevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Тютюнникова Екатерина Владимировна",
@@ -1270,7 +1774,11 @@
       "birth_date": "1983-12-11",
       "birth_source": "https://asafov.ru/person/tyutyunnikova-ekaterina-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Шабашева Наталья Викторовна",
@@ -1280,7 +1788,11 @@
       "birth_date": "1961-06-03",
       "birth_source": "https://asafov.ru/person/shabasheva-natalya-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": "ГКУ «МГС ОПОП» — председатель Совета ОПОП района Царицыно",
+      "workplace_source": "https://ideputat.er.ru/user/120098?page=0%2C0",
+      "workplace_status": "source_linked_review_pending",
+      "workplace_checked_at": null
     },
     {
       "name": "Шмакова Ольга Сергеевна",
@@ -1290,7 +1802,11 @@
       "birth_date": "1977-07-29",
       "birth_source": "https://asafov.ru/person/shmakova-olga-sergeevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": null
+      "birth_last_checked": null,
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Абрамова Елена Ивановна",
@@ -1300,7 +1816,11 @@
       "birth_date": "1956-09-22",
       "birth_source": "https://asafov.ru/person/abramova-elena-ivanovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Горбачёв Антон Сергеевич",
@@ -1310,7 +1830,11 @@
       "birth_date": "1994-08-12",
       "birth_source": "https://asafov.ru/person/gorbachyov-anton-sergeevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Курапов Пётр Геннадьевич",
@@ -1320,7 +1844,11 @@
       "birth_date": "1995-03-09",
       "birth_source": "https://asafov.ru/person/kurapov-petr-gennadevich",
       "birth_status": "cross_checked",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Морозова Ирина Викторовна",
@@ -1330,7 +1858,11 @@
       "birth_date": "1967-11-20",
       "birth_source": "https://asafov.ru/person/morozova-irina-viktorovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Смирнов Валерий Николаевич",
@@ -1340,7 +1872,11 @@
       "birth_date": "1960-07-08",
       "birth_source": "https://asafov.ru/person/smirnov-valerij-nikolaevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Андреева Светлана Александровна",
@@ -1350,7 +1886,11 @@
       "birth_date": "1970-10-29",
       "birth_source": "https://asafov.ru/person/andreeva-svetlana-aleksandrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Лукоянов Алексей Александрович",
@@ -1360,7 +1900,11 @@
       "birth_date": "1995-10-29",
       "birth_source": "https://asafov.ru/person/lukoyanov-aleksej-aleksandrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Морозов Максим Александрович",
@@ -1370,7 +1914,11 @@
       "birth_date": "1986-07-03",
       "birth_source": "https://asafov.ru/person/morozov-maksim-aleksandrovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Ряхмятуллина Алла Рафековна",
@@ -1380,7 +1928,11 @@
       "birth_date": "1989-09-16",
       "birth_source": "https://asafov.ru/person/ryahmyatullina-alla-rafekovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Тозик Александр Михайлович",
@@ -1390,7 +1942,11 @@
       "birth_date": "1960-05-21",
       "birth_source": "https://asafov.ru/person/tozik-aleksandr-mihajlovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Коношенко Богдан Александрович",
@@ -1400,7 +1956,11 @@
       "birth_date": "1970-11-22",
       "birth_source": "https://www.sovet.chertanovocentr.ru/all_deputies/konoshenko_bogdan_aleksandrovich/",
       "birth_status": "cross_checked",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Ларионова Евгения Иосифовна",
@@ -1410,7 +1970,11 @@
       "birth_date": "1966-09-08",
       "birth_source": "https://asafov.ru/person/larionova-evgeniya-iosifovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Полозов Сергей Андреевич",
@@ -1420,7 +1984,11 @@
       "birth_date": "1982-06-03",
       "birth_source": "https://asafov.ru/person/polozov-sergej-andreevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Родина Ирина Алексеевна",
@@ -1430,7 +1998,11 @@
       "birth_date": "1974-07-28",
       "birth_source": "https://asafov.ru/person/rodina-irina-alekseevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Смитиенко Степан Борисович",
@@ -1440,7 +2012,11 @@
       "birth_date": "1984-10-30",
       "birth_source": "https://asafov.ru/person/smitienko-stepan",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Мелешин Василий Владимирович",
@@ -1450,7 +2026,11 @@
       "birth_date": "1977-02-16",
       "birth_source": "https://asafov.ru/person/meleshin-vasilij-vladimirovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Миронов Дмитрий Павлович",
@@ -1460,7 +2040,11 @@
       "birth_date": "1986-07-05",
       "birth_source": "https://asafov.ru/person/mironov-dmitrij-pavlovich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Репкина Елена Владимировна",
@@ -1470,7 +2054,11 @@
       "birth_date": "1971-04-05",
       "birth_source": "https://asafov.ru/person/repkina-elena-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Рыбакова Евгения Валентиновна",
@@ -1480,7 +2068,11 @@
       "birth_date": "1978-05-02",
       "birth_source": "https://asafov.ru/person/rybakova-evgeniya-valentinovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Шиндряева Наталья Николаевна",
@@ -1490,7 +2082,11 @@
       "birth_date": "1976-09-15",
       "birth_source": "https://asafov.ru/person/shindryaeva-natalya-nikolaevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Зотова Маргарита Сергеевна",
@@ -1500,7 +2096,11 @@
       "birth_date": "1989-05-19",
       "birth_source": "https://asafov.ru/person/zotova-margarita-sergeevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кашлев Сергей Николаевич",
@@ -1510,7 +2110,11 @@
       "birth_date": "1971-08-15",
       "birth_source": "https://asafov.ru/person/kashlev-sergej-nikolaevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Кураш Ирина Анатольевна",
@@ -1520,7 +2124,11 @@
       "birth_date": "1960-02-19",
       "birth_source": "https://asafov.ru/person/kurash-irina-anatolevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Новиков Александр Анатольевич",
@@ -1530,7 +2138,11 @@
       "birth_date": "1970-08-21",
       "birth_source": "https://asafov.ru/person/novikov-aleksandr-anatolevich",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Птушкина Наталья Александровна",
@@ -1540,7 +2152,11 @@
       "birth_date": "1956-11-03",
       "birth_source": "https://asafov.ru/person/ptushkina-natalya-aleksandrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Бордовская Ольга Геннадьевна",
@@ -1550,7 +2166,11 @@
       "birth_date": "1966-12-04",
       "birth_source": "https://asafov.ru/person/bordovskaya-olga-gennadevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Гунина Екатерина Алексеевна",
@@ -1560,7 +2180,11 @@
       "birth_date": "1984-10-05",
       "birth_source": "https://asafov.ru/person/gunina-ekaterina-alekseevna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Леонова Наталья Александровна",
@@ -1570,7 +2194,11 @@
       "birth_date": "1968-11-04",
       "birth_source": "https://asafov.ru/person/leonova-natalya-aleksandrovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Маркова Татьяна Владимировна",
@@ -1580,7 +2208,11 @@
       "birth_date": "1986-04-03",
       "birth_source": "https://asafov.ru/person/markova-tatyana-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     },
     {
       "name": "Смирнова Елена Владимировна",
@@ -1590,7 +2222,11 @@
       "birth_date": "1960-09-22",
       "birth_source": "https://asafov.ru/person/smirnova-elena-vladimirovna",
       "birth_status": "source_linked_review_pending",
-      "birth_last_checked": "2026-11-21"
+      "birth_last_checked": "2026-11-21",
+      "workplace": null,
+      "workplace_source": null,
+      "workplace_status": "missing",
+      "workplace_checked_at": null
     }
   ]
 }

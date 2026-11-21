@@ -43,6 +43,29 @@ main,main>section,.panel,.districts,.district-group,.district-group>.people,.per
   .bio-row.bio-work{padding:10px}
   .bio-edit button{max-width:100%;white-space:normal}
 }
+
+/* Mobile fix v2: expanded profiles occupy the full available row. */
+#profiles,#profiles .district-group,#profiles .people,#profiles .deputy-tile,
+#profiles .deputy-details,#profiles .bio-card{box-sizing:border-box;min-width:0;max-width:100%}
+#profiles .people{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+#profiles .deputy-tile{min-width:0}
+#profiles .deputy-tile:has(details[open]){grid-column:1/-1}
+#profiles .deputy-details{overflow-wrap:anywhere}
+#profiles .bio-row{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr)}
+#profiles .bio-row>*{min-width:0;overflow-wrap:anywhere}
+@media(max-width:1100px){
+  #profiles .district-group>.people{grid-template-columns:minmax(0,1fr)!important}
+  #profiles .deputy-tile{grid-column:1/-1!important;width:100%}
+  #profiles .deputy-tile summary{flex-direction:row;text-align:left;min-height:70px}
+  #profiles .deputy-name{font-size:15px}
+  #profiles .deputy-details{padding:0 12px 15px}
+  #profiles .bio-card{width:100%}
+}
+@media(max-width:430px){
+  #profiles .bio-row{grid-template-columns:minmax(0,40%) minmax(0,1fr);gap:8px}
+  #profiles .deputy-details{padding:0 9px 12px}
+  #profiles .bio-card{padding:10px}
+}
 </style></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p>Единая панель наблюдения за открытыми публикациями, активностью и доступностью данных восьми депутатов.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div></div></header>
 <main><section id="overview"><div class="sectionhead"><h2>Обзор мониторинга</h2><small>8 публичных профилей</small></div><div class="kpis"><div class="kpi"><div class="label">Депутатов</div><div class="value">8</div><div class="hint">Под наблюдением</div></div><div class="kpi"><div class="label">Публикаций в данных</div><div class="value" id="total">0</div><div class="hint">VK API и локальный CSV</div></div><div class="kpi"><div class="label">Попыток VK API</div><div class="value" id="checked">—</div><div class="hint">Из восьми профилей</div></div><div class="kpi"><div class="label">Получено через API</div><div class="value" id="api-count">—</div><div class="hint">Не считать за ноль</div></div></div><div class="panel"><div class="notice"><span class="notice-icon">ⓘ</span><div><strong>Данные требуют подтверждения.</strong> Проверка доступности страницы VK не означает, что её публикации получены. Пустые показатели не означают отсутствие работы депутата. Импорт CSV хранится только на вашем устройстве.</div></div></div></section>

@@ -1,6 +1,8 @@
 name: Test free VK collection (one profile)
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
 permissions:
   contents: read
 jobs:
@@ -11,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Collect public VK data
+      - name: Collect public VK data (or explain missing token)
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
         run: python scripts/vk_pilot.py

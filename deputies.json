@@ -527,10 +527,10 @@
       "district": "Зябликово",
       "handle": "anisim_svet",
       "source": "https://moscow.er.ru/media/documents/September2022/0W6RT2sxbyWuXFCYlRJ6.pdf",
-      "birth_date": null,
-      "birth_source": null,
-      "birth_status": "missing",
-      "birth_last_checked": null
+      "birth_date": "1968-06-30",
+      "birth_source": "https://elections.istra-da.ru/election/87483/",
+      "birth_status": "cross_checked",
+      "birth_last_checked": "2026-11-21"
     },
     {
       "name": "Пушкин Павел Павлович",
@@ -1317,10 +1317,10 @@
       "district": "Чертаново Северное",
       "handle": "petr.kurapov",
       "source": "https://asafov.ru/person/kurapov-petr-gennadevich",
-      "birth_date": null,
-      "birth_source": null,
-      "birth_status": "missing",
-      "birth_last_checked": null
+      "birth_date": "1995-03-09",
+      "birth_source": "https://asafov.ru/person/kurapov-petr-gennadevich",
+      "birth_status": "cross_checked",
+      "birth_last_checked": "2026-11-21"
     },
     {
       "name": "Морозова Ирина Викторовна",
@@ -1397,10 +1397,10 @@
       "district": "Чертаново Центральное",
       "handle": "bogdan.konoshenko",
       "source": "https://moscow.er.ru/media/documents/September2022/0W6RT2sxbyWuXFCYlRJ6.pdf",
-      "birth_date": null,
-      "birth_source": null,
-      "birth_status": "missing",
-      "birth_last_checked": null
+      "birth_date": "1970-11-22",
+      "birth_source": "https://www.sovet.chertanovocentr.ru/all_deputies/konoshenko_bogdan_aleksandrovich/",
+      "birth_status": "cross_checked",
+      "birth_last_checked": "2026-11-21"
     },
     {
       "name": "Ларионова Евгения Иосифовна",

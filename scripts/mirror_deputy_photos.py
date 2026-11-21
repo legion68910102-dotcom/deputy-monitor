@@ -21,7 +21,7 @@ def download(entry):
     if url.startswith("assets/deputy-photos/"):
         return name, url
     parsed = urllib.parse.urlparse(url)
-    if parsed.scheme != "https" or parsed.hostname not in ("asafov.ru", "mcaricino.ru"):
+    if parsed.scheme != "https" or parsed.hostname not in ("asafov.ru", "mcaricino.ru", "mo-obu.ru", "mo-obs.ru", "nzaton.ru"):
         return name, None
     ext = pathlib.PurePosixPath(parsed.path).suffix.lower()
     if ext not in (".jpg", ".jpeg", ".png", ".webp"):
@@ -46,7 +46,7 @@ def download(entry):
         print("Unavailable:", name, type(exc).__name__)
         return name, None
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
+with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
     results = dict(pool.map(download, photos.items()))
 count = 0
 for name, local in results.items():
@@ -57,3 +57,4 @@ new_map = json.dumps(photos, ensure_ascii=False, separators=(",", ":"))
 html = html[:match.start(1)] + new_map + html[match.end(1):]
 html_path.write_text(html, encoding="utf-8")
 print("Mirrored", count, "of", len(photos), "deputy images; remaining URLs preserved")
+pathlib.Path("photo-import-status.json").write_text(json.dumps({"total":len(photos),"local":count,"missing":[name for name,local in results.items() if not local]},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

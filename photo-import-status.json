@@ -1,58 +1,7 @@
 {
-  "generated_at": "2026-11-21T23:35:01.268979+00:00",
+  "generated_at": "2026-11-21T23:45:37.813422+00:00",
   "total": 159,
-  "local": 149,
-  "missing_count": 10,
-  "missing": [
-    {
-      "name": "Винокуров Роман Евгеньевич",
-      "url": "http://nzaton.ru/images/Винокуров_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Балыков Дмитрий Евгеньевич",
-      "url": "http://nzaton.ru/images/Балыков_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Башлыкова Мария Николаевна",
-      "url": "http://nzaton.ru/images/Башлыкова_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Быкова Юлия Валерьевна",
-      "url": "http://nzaton.ru/images/Быкова_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Головин Михаил Сергеевич",
-      "url": "http://nzaton.ru/images/Головин_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Горбунов Станислав Игоревич",
-      "url": "http://nzaton.ru/images/Горбунов_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Горемыкин Михаил Юрьевич",
-      "url": "http://nzaton.ru/images/Горемыкин_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Коршунова Наталья Евгеньевна",
-      "url": "http://nzaton.ru/images/Коршунова_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Кундыль Татьяна Евгеньевна",
-      "url": "http://nzaton.ru/images/Кундыль_на_сайт.jpg",
-      "reason": "unsupported source"
-    },
-    {
-      "name": "Рузина Лидия Владимировна",
-      "url": "http://nzaton.ru/images/Рузина_на_сайт.jpg",
-      "reason": "unsupported source"
-    }
-  ]
+  "local": 159,
+  "missing_count": 0,
+  "missing": []
 }

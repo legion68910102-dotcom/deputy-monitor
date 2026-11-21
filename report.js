@@ -25,7 +25,7 @@ function metric(rows,key){let vals=rows.map(r=>r[key]).filter(v=>v!==undefined&&
 const rosterByKey=new Map(roster.map(p=>[p.handle||("roster:"+p.district+":"+p.name),p]));
 const collator=new Intl.Collator("ru",{sensitivity:"base"});
 const ordered=[...handles].sort((a,b)=>collator.compare(names[a]||a,names[b]||b));
-const escHtml=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;":"&quot;"}[c]));
+const escHtml=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const chosenKeys=()=>($("report-person").value==="all"?ordered:[$("report-person").value]);
 const selectedRows=()=>{const a=$("report-from").value,b=$("report-to").value;if(!a||!b||a>b)throw Error("Проверьте даты");const keys=new Set(chosenKeys());return getRows().filter(r=>keys.has(r.profile)&&String(r.date||"").slice(0,10)>=a&&String(r.date||"").slice(0,10)<=b)};
 const summaryRows=()=>{const rows=selectedRows(),start=$("report-from").value,end=$("report-to").value;return [["№","Район","Депутат","Период с","Период по","Публикаций в данных","Лайки","Комментарии","Репосты","Просмотры","Статус","Источник"],...chosenKeys().map((h,i)=>{const p=rows.filter(r=>r.profile===h),person=rosterByKey.get(h)||{};return[i+1,person.district||"Не указан",names[h]||h,start,end,p.length||"Нет данных",metric(p,"likes"),metric(p,"comments"),metric(p,"reposts"),metric(p,"views"),p.length?"Есть загруженные публикации":"Нет загруженных публикаций",person.source||""]})]};

@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const names={"natalia_shabasheva":"Наталья Шабашева","shmakova_os":"О. С. Шмакова","ekaterina.tyutyunnikova":"Екатерина Тютюнникова","aabulatov":"А. А. Булатов","vidutinaov":"О. В. Видутина","tishkovaea":"Е. А. Тишкова","elena.rubtsovanazarova":"Елена Рубцова-Назарова","nuykinakv":"К. В. Нуйкина"};
 const roster=Array.isArray(window.deputyRoster)?window.deputyRoster:[];
 for(const p of roster){if(p.name)names[p.handle||("roster:"+p.district+":"+p.name)]=p.name;}
-const handles=[...new Set([...roster.map(p=>p.handle||("roster:"+p.district+":"+p.name)),...Object.keys(names)])],encoder=new TextEncoder();
+const handles=[...new Set(roster.length?roster.map(p=>p.handle||("roster:"+p.district+":"+p.name)):Object.keys(names))],encoder=new TextEncoder();
 const xml=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&apos;"}[c])).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,"");
 function cell(value,col,row){let ref=colName(col)+row;if(typeof value==="number"&&Number.isFinite(value))return '<c r="'+ref+'"><v>'+value+'</v></c>';return '<c r="'+ref+'" t="inlineStr"><is><t xml:space="preserve">'+xml(value)+'</t></is></c>'}
 function colName(n){let s="";for(n++;n;n=Math.floor((n-1)/26))s=String.fromCharCode(65+(n-1)%26)+s;return s}

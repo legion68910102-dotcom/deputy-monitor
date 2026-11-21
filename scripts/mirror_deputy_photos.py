@@ -97,7 +97,7 @@ missing = [{"name": name, "url": photos[name][0], "reason": status}
 report = {"generated_at": datetime.now(timezone.utc).isoformat(),
           "total": len(photos), "local": len(photos) - len(missing),
           "missing_count": len(missing), "missing": missing}
-(ROOT / "photo-import-status.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+(ROOT / "photo-import-status.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print("Local photo archive:", report["local"], "/", report["total"], "; missing:", len(missing))
 for item in missing[:8]:
     print("Unresolved:", item["name"], item["reason"])

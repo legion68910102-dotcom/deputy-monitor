@@ -8,7 +8,7 @@ import urllib.parse
 
 html_path = pathlib.Path("index.html")
 html = html_path.read_text(encoding="utf-8")
-match = re.search(r"const officialDeputyPhotos=(\\{.*?\\});", html)
+match = re.search(r"const officialDeputyPhotos=({.*?});", html)
 if not match:
     raise SystemExit("Official photo map not found")
 photos = json.loads(match.group(1))

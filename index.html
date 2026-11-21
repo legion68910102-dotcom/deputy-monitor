@@ -19,6 +19,30 @@ main>section.topic-section.collapsed{display:block!important}main>section.topic-
 .public-channels{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0}.public-channels a{font-size:12px;display:inline-block;padding:7px 9px;background:#edf4ff;border:1px solid #d5e5fa;border-radius:9px;text-decoration:none;font-weight:650}
 .deputy-photo-box{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:14px}.deputy-photo{width:130px;height:158px;object-fit:cover;object-position:top;border-radius:12px;border:1px solid #e1e7f0;background:#f2f5fa}.deputy-photo-placeholder{width:130px;height:158px;background:#edf1f7;border:1px dashed #bdc9db;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:36px;color:#8b9ab0}.deputy-photo-placeholder span{font-size:11px}.photo-edit{width:100%;font-size:13px}.photo-edit label{display:block;margin:8px 0}.photo-edit input{width:100%;max-width:450px}.photo-source{font-size:12px}
 .deputy-icon-image{width:34px;height:34px;object-fit:cover;border-radius:50%;display:block}.deputy-icon{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;overflow:hidden;border-radius:50%}
+
+/* Responsive containment: prevent deputy biographies from spilling out on phones. */
+html,body{max-width:100%;overflow-x:clip}
+main,main>section,.panel,.districts,.district-group,.district-group>.people,.person,.bio-card,.bio-row,.bio-edit,.bio-row.bio-work{min-width:0;max-width:100%}
+.district-group>.people,.people{grid-template-columns:repeat(2,minmax(0,1fr))}
+.person,.bio-card{overflow-wrap:anywhere;word-break:normal}
+.bio-row{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);align-items:start;gap:10px}
+.bio-row>span,.bio-row>b{min-width:0;max-width:100%;overflow-wrap:anywhere;white-space:normal}
+.bio-row>b{text-align:right;line-height:1.45}
+.bio-row.bio-work{display:block}
+.bio-row.bio-work>b{text-align:left}
+.bio-card a,.person a,.district-source a,.photo-source{overflow-wrap:anywhere;word-break:break-word}
+.bio-edit input,.photo-edit input{max-width:100%;min-width:0}
+@media(max-width:900px){
+  .district-group>.people,.people{grid-template-columns:minmax(0,1fr)}
+  .person{padding:14px}
+  .bio-card{padding:12px}
+  .district-group>.people{padding:10px}
+}
+@media(max-width:420px){
+  .bio-row{grid-template-columns:minmax(0,40%) minmax(0,1fr);font-size:13px;gap:8px}
+  .bio-row.bio-work{padding:10px}
+  .bio-edit button{max-width:100%;white-space:normal}
+}
 </style></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p>Единая панель наблюдения за открытыми публикациями, активностью и доступностью данных восьми депутатов.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div></div></header>
 <main><section id="overview"><div class="sectionhead"><h2>Обзор мониторинга</h2><small>8 публичных профилей</small></div><div class="kpis"><div class="kpi"><div class="label">Депутатов</div><div class="value">8</div><div class="hint">Под наблюдением</div></div><div class="kpi"><div class="label">Публикаций в данных</div><div class="value" id="total">0</div><div class="hint">VK API и локальный CSV</div></div><div class="kpi"><div class="label">Попыток VK API</div><div class="value" id="checked">—</div><div class="hint">Из восьми профилей</div></div><div class="kpi"><div class="label">Получено через API</div><div class="value" id="api-count">—</div><div class="hint">Не считать за ноль</div></div></div><div class="panel"><div class="notice"><span class="notice-icon">ⓘ</span><div><strong>Данные требуют подтверждения.</strong> Проверка доступности страницы VK не означает, что её публикации получены. Пустые показатели не означают отсутствие работы депутата. Импорт CSV хранится только на вашем устройстве.</div></div></div></section>

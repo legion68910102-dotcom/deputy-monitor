@@ -1,0 +1,90 @@
+{
+  "generated_on": "2026-11-21",
+  "total_profiles": 159,
+  "district_count": 16,
+  "with_birth_date": 21,
+  "missing_birth_date": 138,
+  "note": "Source links are not independent verification; roster membership also requires checking.",
+  "districts": {
+    "Бирюлёво Восточное": {
+      "profiles": 10,
+      "with_birth_date": 5,
+      "missing_birth_date": 5
+    },
+    "Бирюлёво Западное": {
+      "profiles": 10,
+      "with_birth_date": 2,
+      "missing_birth_date": 8
+    },
+    "Братеево": {
+      "profiles": 10,
+      "with_birth_date": 2,
+      "missing_birth_date": 8
+    },
+    "Даниловский": {
+      "profiles": 12,
+      "with_birth_date": 2,
+      "missing_birth_date": 10
+    },
+    "Донской": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Зябликово": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Москворечье-Сабурово": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Нагатино-Садовники": {
+      "profiles": 8,
+      "with_birth_date": 0,
+      "missing_birth_date": 8
+    },
+    "Нагатинский Затон": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Нагорный": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Орехово-Борисово Северное": {
+      "profiles": 10,
+      "with_birth_date": 1,
+      "missing_birth_date": 9
+    },
+    "Орехово-Борисово Южное": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Царицыно": {
+      "profiles": 9,
+      "with_birth_date": 9,
+      "missing_birth_date": 0
+    },
+    "Чертаново Северное": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Чертаново Центральное": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    },
+    "Чертаново Южное": {
+      "profiles": 10,
+      "with_birth_date": 0,
+      "missing_birth_date": 10
+    }
+  }
+}

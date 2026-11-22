@@ -58,6 +58,10 @@ jobs:
             echo "::error::GitHub Actions secret GIGACHAT_AUTH_KEY is not configured. Add it in Settings > Secrets and variables > Actions."
             exit 1
           fi
+      - name: Verify analysis categories and browser script
+        run: |
+          node --check activity-analysis-v129.js
+          node scripts/test-activity-taxonomy.mjs
       - name: Analyze available public texts
         env:
           GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}

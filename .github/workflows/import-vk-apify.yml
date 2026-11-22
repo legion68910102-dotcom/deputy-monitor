@@ -52,5 +52,6 @@ jobs:
           git add vk-posts.json
           if ! git diff --cached --quiet; then
             git commit -m "Update verified VK posts and coverage for 159-profile monitor"
+            git pull --rebase -X theirs origin main
             git push
           fi

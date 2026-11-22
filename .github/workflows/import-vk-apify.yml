@@ -18,6 +18,7 @@ concurrency:
 jobs:
   import:
     runs-on: ubuntu-latest
+    timeout-minutes: 300
     permissions:
       contents: write
     steps:
@@ -41,6 +42,7 @@ jobs:
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           VK_BATCH_INDEX: ${{ inputs.batch_index }}
+          VK_FULL_SWEEP: ${{ github.event_name == 'push' }}
         run: python scripts/import_vk_apify.py
       - name: Commit verified results
         if: steps.config.outputs.configured == 'true'

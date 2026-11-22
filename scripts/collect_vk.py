@@ -214,7 +214,8 @@ def collect(root: Path, token: str, *, start_at: int = 0,
                 "posts_count": None, "reason": error
             }
             if fatal or consecutive_failures >= 8:
-                aborted = ("auth_or_quota_error" if fatal
+                aborted = ("quota_error" if error == "vk_api_error_29"
+                           else "auth_error" if fatal
                            else "too_many_consecutive_failures")
                 break
             continue

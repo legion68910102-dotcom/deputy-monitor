@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  sel.querySelector('option[value="all"]').textContent="Все депутаты ("+roster.length+")";
  for(const h of ordered){const o=document.createElement("option");o.value=h;o.textContent=names[h]||h;sel.appendChild(o)}
  const today=new Date(),iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
- $("report-from").value=iso(new Date(today.getFullYear(),today.getMonth(),1));$("report-to").value=iso(today);
+ $("report-from").value="2026-01-01";$("report-to").value="2026-11-21";
  const status=$("report-status");
  $("report-preview").addEventListener("click",()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}refreshReportPosts().then(()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}})});
  // Excel is a direct static file link; no client-side XLSX generation is required.

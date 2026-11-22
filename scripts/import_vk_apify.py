@@ -1,4 +1,8 @@
-"""Import a bounded pilot of public VK walls; never invent posts or erase history."""
+"""Incremental public VK monitoring for all 159 sourced deputy profiles.
+
+One bounded batch per scheduled run; preserve previously verified posts and status.
+Requires APIFY_TOKEN. A profile without returned posts is NOT marked inactive.
+"""
 import json
 import os
 import pathlib
@@ -6,46 +10,54 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
-TOKEN = os.environ.get("APIFY_TOKEN", "")
-if not TOKEN:
-    raise SystemExit("APIFY_TOKEN secret missing. No data changed.")
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+manifest = json.loads((ROOT / "vk-profiles.json").read_text(encoding="utf-8"))
+profiles = manifest["profiles"]
+assert len(profiles) == 159 and len({p["handle"] for p in profiles}) == 159
+BATCH_SIZE = 10
+batch_count = (len(profiles) + BATCH_SIZE - 1) // BATCH_SIZE
+now = datetime.now(timezone.utc)
+batch_arg = os.environ.get("VK_BATCH_INDEX", "").strip()
+batch_index = int(batch_arg) if batch_arg else (now.date().toordinal() % batch_count)
+if not 0 <= batch_index < batch_count:
+    raise SystemExit("VK_BATCH_INDEX must be between 0 and " + str(batch_count - 1))
+chosen = profiles[batch_index * BATCH_SIZE:(batch_index + 1) * BATCH_SIZE]
+token = os.environ.get("APIFY_TOKEN", "")
+if not token:
+    raise SystemExit("APIFY_TOKEN missing; existing data unchanged")
 
-# These VK handles are sourced in the site's verifiedPersonalVK directory.
-# Keep this pilot deliberately small until each profile has been validated.
-PROFILES = ["aabulatov", "vidutinaov", "nuykinakv"]
-MAX_PER_PROFILE = 20
-ENDPOINT = "https://api.apify.com/v2/acts/hyperbach~vk-posts-scraper/run-sync-get-dataset-items"
-path = pathlib.Path("vk-posts.json")
+path = ROOT / "vk-posts.json"
 old = json.loads(path.read_text(encoding="utf-8"))
 existing = old.get("posts", [])
 combined = {r["profile"] + "|" + r["url"]: r for r in existing
             if isinstance(r, dict) and r.get("profile") and r.get("url")}
 monitored = set(old.get("monitored_profiles", []))
-errors = {}
+statuses = old.get("profile_status", {})
+if not isinstance(statuses, dict):
+    statuses = {}
 counts = {}
-
-for handle in PROFILES:
+errors = {}
+ENDPOINT = "https://api.apify.com/v2/acts/hyperbach~vk-posts-scraper/run-sync-get-dataset-items"
+for person in chosen:
+    handle = person["handle"]
     payload = json.dumps({
         "targets": ["https://vk.ru/" + handle],
-        "maxItems": MAX_PER_PROFILE,
-        "maxItemsPerTarget": MAX_PER_PROFILE,
-        "postFilter": "owner",
-        "includeComments": False,
-        "includeReposts": True,
+        "maxItems": 20, "maxItemsPerTarget": 20,
+        "postFilter": "owner", "includeComments": False,
+        "includeReposts": True
     }).encode()
     req = urllib.request.Request(
         ENDPOINT, data=payload,
-        headers={"Authorization": "Bearer " + TOKEN, "Content-Type": "application/json"},
-        method="POST",
-    )
+        headers={"Authorization": "Bearer " + token, "Content-Type": "application/json"},
+        method="POST")
     try:
         with urllib.request.urlopen(req, timeout=290) as response:
             items = json.load(response)
         if not isinstance(items, list):
-            raise ValueError("Unexpected dataset response")
-        targets = [r for r in items if isinstance(r, dict) and r.get("record_type") == "target"]
-        if any(r.get("status") not in (None, "ok") for r in targets):
-            raise ValueError("VK target status: " + ", ".join(str(r.get("status")) for r in targets))
+            raise ValueError("Unexpected Apify response")
+        targets = [x for x in items if isinstance(x, dict) and x.get("record_type") == "target"]
+        if any(x.get("status") not in (None, "ok") for x in targets):
+            raise ValueError("VK target unavailable")
         new = []
         for row in items:
             if not isinstance(row, dict) or row.get("record_type") != "post":
@@ -60,26 +72,33 @@ for handle in PROFILES:
                 "text": row.get("text") or "",
                 "likes": row.get("likes"), "comments": row.get("comments_count"),
                 "reposts": row.get("reposts"), "views": row.get("views"),
-                "followers": (row.get("owner") or {}).get("followers_count"),
+                "followers": (row.get("owner") or {}).get("followers_count")
             })
         if not new:
-            # No posts is not evidence that a profile has been successfully checked.
-            raise ValueError("No verified posts returned")
+            raise ValueError("No verified posts returned; absence of activity unproven")
         for row in new:
             combined[row["profile"] + "|" + row["url"]] = row
         monitored.add(handle)
         counts[handle] = len(new)
+        statuses[handle] = {"state": "posts_verified", "last_checked": now.isoformat(),
+                            "retrieved": len(new)}
+        print("Verified", handle, len(new))
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError) as exc:
-        errors[handle] = str(exc)[:180]
-        print("Profile unavailable:", handle, errors[handle])
-
-if not counts:
-    raise SystemExit("No profiles yielded verified posts; previous data preserved.")
+        msg = ("HTTP " + str(exc.code)) if isinstance(exc, urllib.error.HTTPError) else str(exc)[:160]
+        errors[handle] = msg
+        statuses[handle] = {"state": "unavailable", "last_checked": now.isoformat(),
+                            "reason": msg}
+        print("Unverified", handle, msg)
 old["posts"] = sorted(combined.values(), key=lambda r: r.get("date", ""), reverse=True)
-old["generated_at"] = datetime.now(timezone.utc).isoformat()
-old["source"] = "Apify VK Posts Scraper; verified pilot profiles"
+old["generated_at"] = now.isoformat()
+old["source"] = "Apify VK Posts Scraper; incremental 159-profile monitoring"
 old["monitored_profiles"] = sorted(monitored)
-old["import_diagnostics"] = {"verified_counts": counts, "unavailable": errors,
-                             "max_items_per_profile": MAX_PER_PROFILE}
+old["profile_status"] = statuses
+old["import_diagnostics"] = {"batch_index": batch_index, "batch_count": batch_count,
+                             "profiles_attempted": [p["handle"] for p in chosen],
+                             "verified_counts": counts, "unavailable": errors,
+                             "max_items_per_profile": 20}
 path.write_text(json.dumps(old, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print("Imported", counts, "; total historical posts", len(old["posts"]))
+print("Completed batch", batch_index + 1, "/", batch_count,
+      "verified", len(counts), "unverified", len(errors),
+      "historical posts", len(old["posts"]))

@@ -1,33 +1,114 @@
-name: Collect VK posts (when API access is available)
+name: Collect public VK posts (official API; 159 profiles)
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'test = offline only; pilot = read 5 VK walls without saving; full = collect all 159'
+        required: true
+        type: choice
+        options:
+          - test
+          - pilot
+          - full
+        default: test
+      confirm_full:
+        description: 'For a manual full run, type YES; otherwise no API calls'
+        required: false
+        type: string
+        default: 'NO'
   schedule:
     - cron: '47 6 * * *'
+  push:
+    paths:
+      - 'scripts/collect_vk.py'
+      - 'tests/test_collect_vk.py'
+      - '.github/workflows/collect-vk.yml'
+
 permissions:
   contents: write
+
 concurrency:
-  group: vk-posts
+  group: official-vk-public-posts
   cancel-in-progress: false
+
 jobs:
-  collect:
+  offline-tests:
+    name: Check lossless merge without any VK credentials or network
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Collect verified posts
+      - name: Python syntax and deterministic VK mocks
+        run: |
+          python -m py_compile scripts/collect_vk.py
+          python -m unittest discover -s tests -p 'test_collect_vk.py' -v
+
+  collect:
+    name: Pilot or full official VK API collection
+    needs: offline-tests
+    if: >-
+      ${{ (github.event_name == 'workflow_dispatch' && inputs.mode != 'test') ||
+          (github.event_name == 'schedule' && vars.VK_COLLECTION_ENABLED == 'true') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check mode and official VK API credential
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_MODE: ${{ github.event_name == 'schedule' && 'full' || inputs.mode }}
+          VK_CONFIRM_FULL: ${{ inputs.confirm_full }}
+        shell: bash
         run: |
-          python scripts/collect_vk.py
-          python scripts/collect_vk_avatars.py
-      - name: Commit published data
+          set -euo pipefail
+          if [ -z "$VK_TOKEN" ]; then
+            echo "::error::VK_TOKEN is missing. No VK requests were made."
+            exit 1
+          fi
+          if [ "$VK_MODE" = full ]; then
+            if [ "$GITHUB_REF" != "refs/heads/main" ]; then
+              echo "::error::Full collection is allowed only on main."
+              exit 1
+            fi
+            if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ] && [ "$VK_CONFIRM_FULL" != YES ]; then
+              echo "::error::Manual full run requires confirm_full=YES."
+              exit 1
+            fi
+          elif [ "$VK_MODE" != pilot ]; then
+            echo "::error::Unknown VK collection mode."
+            exit 1
+          fi
+      - name: Query public VK walls (pilot writes nothing)
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          VK_MODE: ${{ github.event_name == 'schedule' && 'full' || inputs.mode }}
+        shell: bash
         run: |
+          set -euo pipefail
+          if [ "$VK_MODE" = pilot ]; then
+            python scripts/collect_vk.py --max-profiles 5 --dry-run
+            echo "::notice::Pilot finished; no VK data files changed."
+          else
+            python scripts/collect_vk.py
+            python scripts/collect_vk_avatars.py
+          fi
+      - name: Commit verified public VK data without force-push
+        if: ${{ (github.event_name == 'schedule') || (inputs.mode == 'full') }}
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add monitor-status.json vk-posts.json vk-avatars.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update verified VK monitoring data"
-            git push
+          git add vk-posts.json monitor-status.json vk-avatars.json
+          if git diff --cached --quiet; then
+            echo "No verified public VK data changed"
+            exit 0
           fi
+          git commit -m "Update official VK API public posts and coverage"
+          git pull --rebase origin main
+          git push origin HEAD:main

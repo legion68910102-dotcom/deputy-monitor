@@ -95,7 +95,6 @@ jobs:
             echo "::notice::Pilot finished; no VK data files changed."
           else
             python scripts/collect_vk.py
-            python scripts/collect_vk_avatars.py
           fi
       - name: Commit verified public VK data without force-push
         if: ${{ (github.event_name == 'schedule') || (inputs.mode == 'full') }}
@@ -104,7 +103,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add vk-posts.json monitor-status.json vk-avatars.json
+          git add vk-posts.json monitor-status.json
           if git diff --cached --quiet; then
             echo "No verified public VK data changed"
             exit 0

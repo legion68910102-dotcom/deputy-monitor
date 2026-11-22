@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "not_configured",
+  "generated_at": null,
+  "model": null,
+  "source": "vk-posts.json",
+  "total_posts": 0,
+  "classified_posts": 0,
+  "pending_posts": 0,
+  "posts": {}
+}

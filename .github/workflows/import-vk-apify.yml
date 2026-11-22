@@ -1,7 +1,11 @@
 name: Monitor VK posts (159 deputies)
 on:
   schedule:
-    - cron: '20 4 * * *'
+    - cron: '20 4,10,16,22 * * *'
+  push:
+    paths:
+      - 'scripts/import_vk_apify.py'
+      - 'vk-profiles.json'
   workflow_dispatch:
     inputs:
       batch_index:

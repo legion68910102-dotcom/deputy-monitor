@@ -1,8 +1,9 @@
 /* Transparent Russian activity extraction; counts posts with evidence, not confirmed real-world events. */
 (function(){
 "use strict";
-const labels={meet:"Личные встречи",walk:"Обходы территорий",inspect:"Приёмка и контроль работ",event:"Участие в мероприятиях",reception:"Приёмы граждан",appeal:"Работа с обращениями",result:"Решённые вопросы",plan:"Планы и обещания",personal:"Личные",information:"Информационные",announcement:"Публикации-анонсы",repost:"Репосты",uncategorized:"Без темы"};
+const labels={council:"Заседания Совета депутатов",meet:"Личные встречи",walk:"Обходы территорий",inspect:"Приёмка и контроль работ",event:"Участие в мероприятиях",reception:"Приёмы граждан",appeal:"Работа с обращениями",result:"Решённые вопросы",plan:"Планы и обещания",personal:"Личные",information:"Информационные",announcement:"Публикации-анонсы",repost:"Репосты",uncategorized:"Без темы"};
 const rules={
+council:/(?:заседани[а-яё]*\s+(?:[а-яё-]+\s+){0,3}совет[а-яё]*\s+депутат[а-яё]*|совет[а-яё]*\s+депутат[а-яё]*[^.!?\n]{0,75}заседани[а-яё]*)/iu,
 meet:/(?:^|[^а-яёa-z0-9_])(?:встретил(?:ся|ась|ись)|встреч[аиуеой]|пообщал(?:ся|ась|ись)|обсудил[аи]?)(?=$|[^а-яёa-z0-9_])/iu,
 walk:/(?:^|[^а-яёa-z0-9_])(?:обход[а-я]*|обош[её]л|обошли|осмотр[а-я]* территор|прош[её]л по двор|проверил[аи]? двор)(?=$|[^а-яёa-z0-9_])/iu,
 inspect:/(?:^|[^а-яёa-z0-9_])(?:при[её]мк[а-я]*|принял[аи]? работ|контрол[а-я]* (?:ход|качеств)|проверил[аи]? (?:ремонт|работ|благоустрой)|осмотр[а-я]* (?:ремонт|работ))(?=$|[^а-яёa-z0-9_])/iu,
@@ -18,7 +19,26 @@ announcement:/(?:^|[^а-яёa-z0-9_])(?:анонс[а-я]*|приглаша(?:е
 const future=/(?:^|[^а-яёa-z0-9_])(?:планирую|планируем|планируется|состоится|завтра|на следующей неделе|предстоит|будем|приглашаю|приглашаем|запланирован[а-я]*)(?=$|[^а-яёa-z0-9_])/iu;
 const negate=/(?:^|[^а-яёa-z0-9_])(?:не состоял[а-я]*|не проводил[а-я]*|не удалось|отмен[её]н[а-я]*)(?=$|[^а-яёa-z0-9_])/iu;
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function extract(text){const sentences=String(text||"").split(/(?<=[.!?\n])\s+|\n+/u).filter(Boolean);let hits=[];for(const sentence of sentences){const t=sentence.trim();if(!t)continue;const uncertain=future.test(t)||negate.test(t);for(const [key,re] of Object.entries(rules)){if(re.test(t))hits.push({key,evidence:t.slice(0,300),certainty:uncertain?"requires_review":"possible"})}}return hits}
+function extract(text){
+ const sentences=String(text||"").split(/(?<=[.!?\n])\s+|\n+/u).filter(Boolean),hits=[];
+ const residentMeeting=/(?:встретил[а-яё]*ся|встреч[а-яё]*|обсудил[а-яё]*)[^.!?\n]{0,90}(?:с\s+жител|с\s+избирател)|(?:с\s+жител|с\s+избирател)[^.!?\n]{0,90}встреч/iu;
+ const councilCommittee=/заседани[а-яё]*\s+(?:[а-яё-]+\s+){0,3}(?:комисси[а-яё]*|комитет[а-яё]*|рабоч[а-яё]*\s+групп[а-яё]*)/iu;
+ for(const sentence of sentences){
+  const t=sentence.trim();if(!t)continue;
+  const uncertain=future.test(t)||negate.test(t);
+  const councilMention=rules.council.test(t)&&!councilCommittee.test(t);
+  const heldCouncil=councilMention&&!uncertain;
+  for(const [key,re] of Object.entries(rules)){
+   if(key==="council"&&!heldCouncil)continue; // An announcement or cancelled session is not a held session.
+   if(heldCouncil&&(key==="event"||(key==="meet"&&!residentMeeting.test(t))))continue;
+   // «Обсудили» само по себе — не доказательство личной встречи.
+   if(key==="meet"&&/обсудил[аи]?/iu.test(t)&&!residentMeeting.test(t)
+     &&!/(?:встретил(?:ся|ась|ись)|встреч[аиуеой]|пообщал(?:ся|ась|ись))/iu.test(t))continue;
+   if(re.test(t))hits.push({key,evidence:t.slice(0,300),certainty:uncertain?"requires_review":"possible"});
+  }
+ }
+ return hits;
+}
 function rows(){if(typeof window.dmActivityRows==="function"){try{return window.dmActivityRows()}catch(e){}}const map=new Map();for(const [storage,key] of [[sessionStorage,"dm_vk_posts"],[localStorage,"dm_posts"]]){try{for(const r of JSON.parse(storage.getItem(key)||"[]"))map.set(r.profile+"|"+r.url,r)}catch(e){}}return [...map.values()]}
 
 function directoryOptions(){
@@ -36,13 +56,13 @@ function rosterName(profile){
  return entry?.name||names[value]||value;
 }
 
-const icons={meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
+const icons={council:"🏛️",meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
 let manualRuns=0,activeCategory=null,visibleLimit=60;
 let aiDataset=null,aiMessage="Загрузка ИИ…";
 function aiIdentity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function aiSignature(r){let h=2166136261;for(const ch of aiIdentity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
 function getAiResult(r){
- if(!aiDataset||!["ready","partial"].includes(aiDataset.status))return null;
+ if(!aiDataset||aiDataset.taxonomy_version!==2||!["ready","partial"].includes(aiDataset.status))return null;
  const item=aiDataset.posts?.[aiIdentity(r)];
  return item?.signature===aiSignature(r)&&Array.isArray(item.categories)?item:null;
 }
@@ -53,8 +73,9 @@ async function loadAiDataset(){
   const data=await response.json();
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
   aiDataset=data;
-  if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
-  else if(data.status==="partial")aiMessage="ИИ обработал часть публикаций, остальные — по правилам. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
+  if(data.taxonomy_version!==2)aiMessage="ИИ обновляет классификацию по 14 категориям. Пока показываются предварительные правила.";
+  else if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
+  else if(data.status==="partial")aiMessage="ИИ обработал часть публикаций, остальные — по правилам. Категория заседаний Совета депутатов будет пополняться по мере переанализа. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="no_posts")aiMessage="Обработка ИИ настроена, но общей ленте пока нет текстов публикаций.";
   else aiMessage="ИИ ещё не подключён. Нужен секрет GIGACHAT_AUTH_KEY в GitHub. Пока используются правила.";
  }catch(e){aiMessage="Результаты ИИ недоступны; работают правила."}

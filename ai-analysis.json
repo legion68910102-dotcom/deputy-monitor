@@ -1,50 +1,15 @@
 {
   "schema_version": 1,
+  "taxonomy_version": 2,
   "provider": "gigachat",
   "status": "partial",
-  "generated_at": "2026-11-22T22:16:26.551Z",
+  "generated_at": "2026-11-22T22:29:52.399Z",
   "model": "GigaChat-2-Pro",
   "source": "vk-posts.json",
   "total_posts": 1420,
-  "classified_posts": 117,
-  "pending_posts": 779,
+  "classified_posts": 59,
+  "pending_posts": 837,
   "posts": {
-    "aabulatov\u001fhttps://vk.com/wall352446434_1674\u001f2026-11-22": {
-      "signature": "0428eb76",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное сообщение о важности раздельного сбора отходов и правилах обращения с мусором, адресованное жителям муниципального округа.",
-      "evidence": "Чистота нашего района начинается с простых повседневных привычек. Одна из них — правильное обращение с бытовыми отходами.",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2565\u001f2026-11-22": {
-      "signature": "6db739aa",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает об инновационных технологиях и роботизированных системах, используемых в московских парках, без участия депутата или обсуждения вопросов местного значения.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golubevaev947\u001fhttps://vk.com/wall225403364_1199\u001f2026-11-22": {
-      "signature": "935126cb",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о запланированном строительстве детского сада, описывает концепцию здания и благоустройство территории, указывает срок завершения строительства. Нет признаков д",
-      "evidence": "",
-      "method": "ai"
-    },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1673\u001f2026-11-21": {
-      "signature": "4cd9d687",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное руководство по проверке квитанций ЖКХ, советы и рекомендации для жителей.",
-      "evidence": "",
-      "method": "ai"
-    },
     "natalyamikhareva\u001fhttps://vk.com/wall709054480_1083\u001f2026-11-21": {
       "signature": "97334faf",
       "categories": [],
@@ -52,14 +17,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "sysoevala\u001fhttps://vk.com/wall709963598_608\u001f2026-11-21": {
-      "signature": "a366f211",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация посвящена юбилею школы и личным воспоминаниям автора, не содержит информации о депутатской деятельности.",
-      "evidence": "Есть места, куда всегда хочется возвращаться — туда, где ты делал первые шаги в профессии, где научили верить в себя и где до сих пор горит свет в знакомых окнах.",
-      "method": "ai"
     },
     "vidutinaov\u001fhttps://vk.com/wall5848362_939\u001f2026-11-21": {
       "signature": "f2e76d30",
@@ -77,24 +34,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_906\u001f2026-11-21": {
-      "signature": "7ea0f007",
-      "categories": [
-        "walk"
-      ],
-      "confidence": 1,
-      "explanation": "Текст описывает факт проведения территориального обхода с участием депутата и других представителей власти, а также активное взаимодействие с жителями.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1099\u001f2026-11-21": {
-      "signature": "3c05fd96",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о завершении музыкального фестиваля и объявлении победителей, не относясь ни к одной из заданных категорий.",
-      "evidence": "В библиотеке № 140 назвали победителей музыкального фестиваля",
-      "method": "ai"
-    },
     "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2438\u001f2026-11-21": {
       "signature": "dc1d2a9b",
       "categories": [],
@@ -102,14 +41,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "shmakova_os\u001fhttps://vk.com/wall342305442_793\u001f2026-11-21": {
-      "signature": "97bb12fc",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает о помощи, оказанной жителям, но не связана с деятельностью депутата или муниципальной властью.",
-      "evidence": "",
-      "method": "ai"
     },
     "shmakova_os\u001fhttps://vk.com/wall342305442_792\u001f2026-11-21": {
       "signature": "9fed5402",
@@ -126,32 +57,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2563\u001f2026-11-21": {
-      "signature": "6a558d57",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация содержит информационные советы от Госавтоинспекции по безопасному вождению, не связана с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2562\u001f2026-11-21": {
-      "signature": "103db130",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация содержит советы по улучшению кровообращения и самочувствия, ориентирована на широкую аудиторию, не связана с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2561\u001f2026-11-21": {
-      "signature": "00f18f1f",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация посвящена конкурсу и достижениям учеников школы, не связана с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
     },
     "molchanovpavel\u001fhttps://vk.com/wall681822751_410\u001f2026-11-21": {
       "signature": "ad1f8306",
@@ -184,14 +89,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "aleinikovayv\u001fhttps://vk.com/wall5923205_1123\u001f2026-11-21": {
-      "signature": "7c5535f2",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Текст представляет собой поздравление и отчёт о состоявшемся юбилейном концерте, не связанный с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
     },
     "aleinikovayv\u001fhttps://vk.com/wall5923205_1122\u001f2026-11-21": {
       "signature": "a6fe0ac6",
@@ -233,19 +130,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "rytovsergey\u001fhttps://vk.com/wall34433606_1031\u001f2026-11-21": {
-      "signature": "ca3945ce",
-      "categories": [
-        "walk",
-        "inspect",
-        "appeal",
-        "plan"
-      ],
-      "confidence": 1,
-      "explanation": "Депутат участвовал в территориальном обходе, обсуждались вопросы уборки и благоустройства, давались разъяснения по обращениям жителей, упомянут следующий обход.",
-      "evidence": "",
-      "method": "ai"
-    },
     "e.aleksander88\u001fhttps://vk.com/wall522441436_412\u001f2026-11-21": {
       "signature": "c2ec8e03",
       "categories": [],
@@ -253,34 +137,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5997\u001f2026-11-21": {
-      "signature": "ef151543",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение на мероприятие — день открытых дверей для родителей будущих первоклассников.",
-      "evidence": "Приглашаем семьи будущих первоклассников познакомиться со Школой №1998 «Лукоморье» и сделать первый шаг в школьную жизнь ребёнка ✨",
-      "method": "ai"
-    },
-    "gontsova71\u001fhttps://vk.com/wall710412055_1211\u001f2026-11-21": {
-      "signature": "3e8feac5",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает о передаче гуманитарной помощи, но не указывает на личное участие депутата или фактическую деятельность муниципального уровня.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "annavolskaya\u001fhttps://vk.com/wall611229514_2309\u001f2026-11-21": {
-      "signature": "fdf31702",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация описывает завершённое мероприятие — отчётно-выборную конференцию, с перечислением всех этапов и итогов.",
-      "evidence": "",
-      "method": "ai"
     },
     "pkobtsev\u001fhttps://vk.com/wall579062692_363\u001f2026-11-21": {
       "signature": "d2aaa86c",
@@ -290,28 +146,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "tkabanova2022\u001fhttps://vk.com/wall139769280_996\u001f2026-11-21": {
-      "signature": "3294ce7a",
-      "categories": [
-        "information",
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация содержит информацию о ценности географии и приглашение к участию в просветительской акции 'Географический диктант', что соответствует категориям информации и анонса.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "andrianov001\u001fhttps://vk.com/wall58854462_5443\u001f2026-11-21": {
-      "signature": "181608c3",
-      "categories": [
-        "information",
-        "plan"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой отчет о прошедшей конференции и планы на будущее, включает статистические данные и достижения, а также анонс подготовки к будущим выборам.",
-      "evidence": "",
-      "method": "ai"
-    },
     "aabulatov\u001fhttps://vk.com/wall352446434_1672\u001f2026-11-20": {
       "signature": "b95dd0cd",
       "categories": [],
@@ -319,27 +153,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1671\u001f2026-11-20": {
-      "signature": "63150056",
-      "categories": [
-        "information",
-        "plan"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой отчет о прошедшей конференции и планы на будущее, включает статистические данные и информацию о деятельности партии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1670\u001f2026-11-20": {
-      "signature": "21dbe712",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное руководство по предотвращению сырости и плесени в квартирах, с рекомендациями и контактами для обращений.",
-      "evidence": "",
-      "method": "ai"
     },
     "andrey.sezemov\u001fhttps://vk.com/wall701986008_769\u001f2026-11-20": {
       "signature": "aa6400d2",
@@ -365,74 +178,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1445\u001f2026-11-20": {
-      "signature": "bdc1eeb6",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции партии, перечисляет прошедшие мероприятия и планы на будущее.",
-      "evidence": "Принял участие в 38-й отчётно-выборной конференции местного отделения партии «Единая Россия» ЮАО.",
-      "method": "ai"
-    },
-    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1444\u001f2026-11-20": {
-      "signature": "97297503",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение подписаться на личный канал автора, где он делится информацией о своей депутатской деятельности. Нет признаков других категорий.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena_laplanche\u001fhttps://vk.com/wall708827390_1743\u001f2026-11-20": {
-      "signature": "afad0492",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции «ЦифрАтест», которая предлагает жителям России проверить свои цифровые навыки.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "andreymordovin\u001fhttps://vk.com/wall4765626_4835\u001f2026-11-20": {
-      "signature": "47701e2c",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции «ЦифрАтест», которая предлагает жителям России проверить свои цифровые навыки.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "galinadolgashova\u001fhttps://vk.com/wall638282157_1572\u001f2026-11-20": {
-      "signature": "03eedc6e",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции «ЦифрАтест», которая предлагает жителям России проверить свои цифровые навыки.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "anna_ezhkova\u001fhttps://vk.com/wall162151344_503\u001f2026-11-20": {
-      "signature": "3728ff25",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции 'ЦифрАтест', которая предлагает жителям России проверить свои цифровые навыки.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nadezhda_kuskova\u001fhttps://vk.com/wall710102837_1120\u001f2026-11-20": {
-      "signature": "55c78448",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции 'ЦифрАтест', которая предлагает жителям России проверить свои цифровые навыки.",
-      "evidence": "",
-      "method": "ai"
-    },
     "sergey_kashlev\u001fhttps://vk.com/wall406379933_1049\u001f2026-11-20": {
       "signature": "a4c1fa03",
       "categories": [],
@@ -440,68 +185,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "vidutinaov\u001fhttps://vk.com/wall5848362_938\u001f2026-11-20": {
-      "signature": "9dde46fd",
-      "categories": [
-        "event"
-      ],
-      "confidence": 0.9,
-      "explanation": "Депутат делится впечатлениями о прошедшем фестивале, подчёркивая важность мероприятия и благодарит участников.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vidutinaov\u001fhttps://vk.com/wall5848362_937\u001f2026-11-20": {
-      "signature": "d1e105f5",
-      "categories": [
-        "event",
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Текст описывает отчетно-выборную конференцию местного отделения партии 'Единая Россия' в ЮАО, перечисляет достижения и планы, что соответствует категориям event и information.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_905\u001f2026-11-20": {
-      "signature": "3b1c0d98",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация содержит приглашение и подробную информацию о предстоящем мероприятии, включая дату, место, возраст участников и контактные данные.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_904\u001f2026-11-20": {
-      "signature": "40bb1d34",
-      "categories": [
-        "information",
-        "plan"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой отчет о прошедшей конференции и планы на будущее, включает статистические данные и информацию о деятельности партии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_903\u001f2026-11-20": {
-      "signature": "0a5b11d6",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует конкретное мероприятие — концерт, посвящённый Дню матери.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_902\u001f2026-11-20": {
-      "signature": "744ab976",
-      "categories": [
-        "walk"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует территориальный обход района с участием депутата и главы управы, указаны адреса осмотра и приглашение жителям.",
-      "evidence": "",
-      "method": "ai"
     },
     "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_901\u001f2026-11-20": {
       "signature": "0439ab5d",
@@ -519,34 +202,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1097\u001f2026-11-20": {
-      "signature": "65fd491f",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции, перечисляет выступающих, итоги выборов и запланированные мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1096\u001f2026-11-20": {
-      "signature": "2325eb69",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация состоит из одного непонятного предложения, не относящегося ни к одной тематической категории.",
-      "evidence": "Самое главное слово !",
-      "method": "ai"
-    },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1095\u001f2026-11-20": {
-      "signature": "539f201a",
-      "categories": [
-        "information"
-      ],
-      "confidence": 0.9,
-      "explanation": "Депутат делится информацией о взаимодействии с молодежью, рассказывает о мероприятии и приглашает других участвовать.",
-      "evidence": "",
-      "method": "ai"
-    },
     "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2437\u001f2026-11-20": {
       "signature": "31dfa0cb",
       "categories": [],
@@ -563,60 +218,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2435\u001f2026-11-20": {
-      "signature": "d8e721aa",
-      "categories": [
-        "plan"
-      ],
-      "confidence": 1,
-      "explanation": "Текст содержит обсуждение планов на 2027 год, включая борьбу с коррупцией, профилактику терроризма и утверждение поправок к бюджету.",
-      "evidence": "❗️Планы на 2027 год: борьба с коррупцией, меры по профилактике терроризма и экстремизма.",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2560\u001f2026-11-20": {
-      "signature": "2d4951a7",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация информирует о завершении набора в группы подготовки к олимпиадам, не содержит информации о деятельности депутата.",
-      "evidence": "В Москве завершился набор в группы по подготовке к Всероссийской олимпиаде школьников.",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2559\u001f2026-11-20": {
-      "signature": "2eeb423d",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой информационные рекомендации по безопасности дорожного движения для пешеходов.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2558\u001f2026-11-20": {
-      "signature": "73d756fb",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает историю спасения животного на дороге сотрудниками ГИБДД, не связана с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2557\u001f2026-11-20": {
-      "signature": "90b08237",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает об экскурсионном мероприятии для школьников, не связано с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2556\u001f2026-11-20": {
-      "signature": "2435d4bb",
-      "categories": [
-        "event"
-      ],
-      "confidence": 0.9,
-      "explanation": "Депутат сообщает о своём участии в конференции партии 'Единая Россия', где был представлен проект 'Броня веры'. Это факт участия в мероприятии.",
-      "evidence": "Вчера в префектуре Южного административного округа Москвы состоялась конференция партии «Единая Россия», в рамках которой был представлен проект «Броня веры».",
-      "method": "ai"
-    },
     "ptitsynakk\u001fhttps://vk.com/wall980194_2118\u001f2026-11-20": {
       "signature": "14e8347a",
       "categories": [],
@@ -625,52 +226,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "rytovsergey\u001fhttps://vk.com/wall34433606_1030\u001f2026-11-20": {
-      "signature": "b2114dea",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация посвящена церемонии награждения Патриарха Кирилла знаком почетного гражданина Москвы и поздравления с юбилеем, не относится ни к одной из заданных категорий.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5996\u001f2026-11-20": {
-      "signature": "7089aa48",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение на мероприятие для детей, организованное школой, с указанием даты, времени и стоимости.",
-      "evidence": "Школа №1998 «Лукоморье» приглашает ребят на первую «Предновогоднюю субботу» — «ФАБРИКУ НОВОГОДНЕГО НАСТРОЕНИЯ»!",
-      "method": "ai"
-    },
-    "vlasenkoau\u001fhttps://vk.com/wall289588839_2416\u001f2026-11-20": {
-      "signature": "df9a3385",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о проведении отчётно-выборной конференции, выступлениях и итогах голосования, не затрагивая тематики встреч с жителями, территориальных обходов, контроля работ,",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vlasenkoau\u001fhttps://vk.com/wall289588839_2415\u001f2026-11-20": {
-      "signature": "7ddd26dd",
-      "categories": [
-        "meet"
-      ],
-      "confidence": 1,
-      "explanation": "Текст описывает встречу депутата с Советом ветеранов, обсуждение различных вопросов и сбор помощи для бойцов.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "seregin1963\u001fhttps://vk.com/wall710315882_596\u001f2026-11-20": {
-      "signature": "fc538282",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о состоявшемся мероприятии — отчётно-выборной конференции, с перечислением участников и итогов.",
-      "evidence": "19 ноября в Южном административном округе состоялась XXXVIII отчётно-выборная Конференция местного отделения партии «Единая Россия».",
-      "method": "ai"
-    },
     "graskinss\u001fhttps://vk.com/wall708830211_1229\u001f2026-11-20": {
       "signature": "9d77f46e",
       "categories": [],
@@ -678,25 +233,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1052\u001f2026-11-20": {
-      "signature": "6eb381b7",
-      "categories": [
-        "event",
-        "result"
-      ],
-      "confidence": 0.9,
-      "explanation": "Публикация описывает прошедшую конференцию и достигнутые результаты, подтверждая факт участия и итоги работы.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1051\u001f2026-11-20": {
-      "signature": "a8bcd3b8",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает о участии депутата в передаче гуманитарной помощи, но не относится ни к одной из заданных категорий.",
-      "evidence": "Участвовала в рамках благотворительной инициативы: совместно с руководителями социальной службы Южного округа ГБУ «Мой социальный помощник» была организована передача гуманитарной помощи в «Ангар спас",
-      "method": "ai"
     },
     "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1050\u001f2026-11-20": {
       "signature": "6a4cac01",
@@ -714,24 +250,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "elena_fursova1\u001fhttps://vk.com/wall54273651_1420\u001f2026-11-20": {
-      "signature": "f138c454",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой информационную справку об исторической значимости Красной площади, не содержит признаков активности депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena_fursova1\u001fhttps://vk.com/wall54273651_1419\u001f2026-11-20": {
-      "signature": "6f01d7f6",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация описывает факт участия автора в отчетно-выборной конференции 'Единой России', где состоялись выступления, награждения и обсуждение планов.",
-      "evidence": "",
-      "method": "ai"
-    },
     "elena_fursova1\u001fhttps://vk.com/wall54273651_1418\u001f2026-11-20": {
       "signature": "c3419cbf",
       "categories": [],
@@ -739,17 +257,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "tkabanova2022\u001fhttps://vk.com/wall139769280_995\u001f2026-11-20": {
-      "signature": "5c4c0fe3",
-      "categories": [
-        "information",
-        "plan"
-      ],
-      "confidence": 0.9,
-      "explanation": "Публикация содержит информацию о прошедшей конференции и общих направлениях деятельности, а также планы на будущее сотрудничество и работу с населением.",
-      "evidence": "",
-      "method": "ai"
     },
     "tkabanova2022\u001fhttps://vk.com/wall139769280_994\u001f2026-11-20": {
       "signature": "1fabaee9",
@@ -790,26 +297,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1669\u001f2026-11-19": {
-      "signature": "67883b92",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение посетить открытие катка, содержит информацию о датах открытия и начала продажи билетов.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1668\u001f2026-11-19": {
-      "signature": "9e437ef9",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой информационное руководство для жителей по действиям при проблемах с отоплением, не содержит сведений о личных мероприятиях депутата.",
-      "evidence": "",
-      "method": "ai"
     },
     "natalyamikhareva\u001fhttps://vk.com/wall709054480_1082\u001f2026-11-19": {
       "signature": "8176ca15",
@@ -859,45 +346,6 @@
       "evidence": "",
       "method": "metadata"
     },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_900\u001f2026-11-19": {
-      "signature": "b1039b96",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой новогодний совет, не связанный с деятельностью депутата.",
-      "evidence": "Предложите ребенку написать письмо Деду Морозу, да и сами отправьте свое желание)",
-      "method": "ai"
-    },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_899\u001f2026-11-19": {
-      "signature": "923180db",
-      "categories": [
-        "information",
-        "appeal"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация информирует жителей о проблеме с освещением в лифте и даёт рекомендации по подаче заявок, а также сообщает о намерении депутата направить собственный запрос.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1094\u001f2026-11-19": {
-      "signature": "33265aec",
-      "categories": [
-        "walk"
-      ],
-      "confidence": 1,
-      "explanation": "Текст объявляет о запланированном территориальном обходе с участием главы управы, указаны адреса осмотра и приглашение жителей.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "shmakova_os\u001fhttps://vk.com/wall342305442_790\u001f2026-11-19": {
-      "signature": "70074216",
-      "categories": [
-        "plan"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация содержит информацию о планах на будущее: организация праздничных мероприятий, утверждение графика заседаний, обсуждение планов на 2027 год, принятие поправок к бюджету.",
-      "evidence": "",
-      "method": "ai"
-    },
     "ilyasov_kn\u001fhttps://vk.com/wall710351480_2554\u001f2026-11-19": {
       "signature": "1a60a06d",
       "categories": [],
@@ -905,16 +353,6 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2553\u001f2026-11-19": {
-      "signature": "5e5a2167",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение посетить выставку, указывая дату проведения, место и содержание экспозиции.",
-      "evidence": "",
-      "method": "ai"
     },
     "aleinikovayv\u001fhttps://vk.com/wall5923205_1121\u001f2026-11-19": {
       "signature": "b9deeabe",
@@ -4764,569 +4202,573 @@
       "evidence": "",
       "method": "metadata"
     },
-    "ptitsynakk\u001fhttps://vk.com/wall980194_2117\u001f2026-11-19": {
-      "signature": "ba8c17ba",
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2435\u001f2026-11-20": {
+      "signature": "d8e721aa",
       "categories": [
-        "event"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции 'Единой России', описывает происходящее и результаты выборов.",
-      "evidence": "",
+      "explanation": "Текст описывает состоявшееся заседание Совета депутатов с перечислением обсужденных вопросов и принятых решений.",
+      "evidence": "18 ноября 2026 года в 17:00 прошло очередное заседание Совета депутатов района Царицыно.",
       "method": "ai"
     },
-    "ptitsynakk\u001fhttps://vk.com/wall980194_2116\u001f2026-11-19": {
-      "signature": "eb5318a9",
+    "shmakova_os\u001fhttps://vk.com/wall342305442_790\u001f2026-11-19": {
+      "signature": "70074216",
       "categories": [
-        "event"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции 'Единой России', описывает происходящее и результаты выборов.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golubevaev947\u001fhttps://vk.com/wall225403364_1196\u001f2026-11-19": {
-      "signature": "960b3bf8",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции, описывает происходящее и выражает поздравления.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golubevaev947\u001fhttps://vk.com/wall225403364_1195\u001f2026-11-19": {
-      "signature": "3ccbd481",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует выставку, указывает даты проведения и место, перечисляет тематику и экспонаты.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golubevaev947\u001fhttps://vk.com/wall225403364_1194\u001f2026-11-19": {
-      "signature": "731a23bd",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Текст описывает завершённое мероприятие — виртуальную экскурсию и игровую программу, которые уже состоялись.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5995\u001f2026-11-19": {
-      "signature": "97af7bfd",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение воспользоваться услугой домашнего новогоднего представления, с акцентом на срочность бронирования.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2264\u001f2026-11-19": {
-      "signature": "69424142",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация состоит только из эмодзи, не несущих конкретной информации или не относящихся к категориям.",
-      "evidence": "❤️🥰",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов с перечислением рассмотренных вопросов и принятых решений.",
+      "evidence": "18 ноября 2026 года в 17:00 состоялось очередное заседание Совета депутатов района Царицыно.",
       "method": "ai"
     },
     "aabulatov\u001fhttps://vk.com/wall352446434_1667\u001f2026-11-18": {
       "signature": "e2828441",
       "categories": [
-        "plan"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст содержит обсуждение планов на будущее, включая проведение мероприятий, борьбу с коррупцией и профилактику терроризма.",
-      "evidence": "✅Планы на 2027 год: борьба с коррупцией, меры по профилактике терроризма и экстремизма.",
-      "method": "ai"
-    },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1665\u001f2026-11-18": {
-      "signature": "57d84ed0",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует открытие ледового катка на ВДНХ, указывает дату начала, расположение и возможность покупки билетов.",
-      "evidence": "",
+      "explanation": "Текст описывает состоявшееся заседание Совета депутатов с перечислением обсужденных вопросов и принятых решений.",
+      "evidence": "18 ноября 2026 года в 17:00 прошло очередное заседание Совета депутатов района Царицыно.",
       "method": "ai"
     },
     "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1443\u001f2026-11-18": {
       "signature": "9058698b",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о заседании Совета депутатов, где обсуждались и утверждались внутренние нормативные вопросы, без упоминания встреч с гражданами, территориальных обходов, контро",
-      "evidence": "",
-      "method": "ai"
-    },
-    "andreymordovin\u001fhttps://vk.com/wall4765626_4834\u001f2026-11-18": {
-      "signature": "ce9f9418",
       "categories": [
-        "event"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на юбилейный концерт академического хора «Москворечье», указывая дату, место и программу мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "galinadolgashova\u001fhttps://vk.com/wall638282157_1571\u001f2026-11-18": {
-      "signature": "79585920",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на юбилейный концерт академического хора «Москворечье», указывая дату, место проведения и программу мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "anna_ezhkova\u001fhttps://vk.com/wall162151344_501\u001f2026-11-18": {
-      "signature": "47fc85b4",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на юбилейный концерт академического хора «Москворечье», указывая дату, место и программу мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nadezhda_kuskova\u001fhttps://vk.com/wall710102837_1119\u001f2026-11-18": {
-      "signature": "4f1818c7",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на юбилейный концерт академического хора «Москворечье», указывая дату, место и программу мероприятия.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов с перечислением принятых решений, что соответствует категории 'council'.",
+      "evidence": "Сегодня состоялось очередное заседание Совета депутатов.",
       "method": "ai"
     },
     "vidutinaov\u001fhttps://vk.com/wall5848362_936\u001f2026-11-18": {
       "signature": "deafd8e2",
       "categories": [
-        "plan"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Публикация касается планов и решений совета депутатов, включая утверждение перечней мероприятий, дат заседаний и планов на 2027 год.",
+      "explanation": "Публикация полностью посвящена описанию состоявшегося заседания Совета депутатов, перечислению пунктов повестки дня.",
       "evidence": "",
       "method": "ai"
     },
     "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_898\u001f2026-11-18": {
       "signature": "5d4dcd1f",
       "categories": [
-        "plan"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Публикация сообщает о заседании Совета депутатов и обсуждении планов на 2027 год, включая перечень мероприятий, антикоррупционный и антитеррористический планы, изменения в бюджете.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_897\u001f2026-11-18": {
-      "signature": "44ffc2f2",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на мероприятие — мастер-класс по квадрокоптерам, указаны дата, место, время и возраст участников.",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов с перечислением вопросов по повестке дня.",
       "evidence": "",
       "method": "ai"
     },
     "tishkovaea\u001fhttps://vk.com/wall451321637_1093\u001f2026-11-18": {
       "signature": "3b180d6d",
       "categories": [
-        "plan"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст содержит обсуждение планов на будущее, включая проведение мероприятий, борьбу с коррупцией, профилактику терроризма и рассмотрение поправок к бюджету.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1092\u001f2026-11-18": {
-      "signature": "15ce063f",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой информационную справку о двух праздниках, отмечаемых 18 ноября.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "tishkovaea\u001fhttps://vk.com/wall451321637_1091\u001f2026-11-18": {
-      "signature": "40783dff",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о предстоящем юбилейном концерте творческой мастерской 'Осторожно! Дети!' с указанием даты, места и программы мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2434\u001f2026-11-18": {
-      "signature": "ad2695da",
-      "categories": [
-        "information"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация содержит информацию о главной новогодней ёлке России, её характеристиках, традициях выбора и использовании после праздника.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "shmakova_os\u001fhttps://vk.com/wall342305442_789\u001f2026-11-18": {
-      "signature": "b635ba79",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует конкретное мероприятие — юбилейный концерт творческой мастерской, указаны дата, время и место.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2552\u001f2026-11-18": {
-      "signature": "1c335c27",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация рассказывает о встрече студентов с представителями власти в МИФИ, посвященной профилактике экстремизма и наркоугроз. Нет признаков активности депутата, публикации относя",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2551\u001f2026-11-18": {
-      "signature": "9bc49f58",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация информирует о практике целевого обучения студентов колледжей в Москве, не затрагивая деятельность депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "aleinikovayv\u001fhttps://vk.com/wall5923205_1120\u001f2026-11-18": {
-      "signature": "e2be7eac",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение подписаться на личный канал автора, не связанный с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5993\u001f2026-11-18": {
-      "signature": "89e2430b",
-      "categories": [
-        "event",
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Текст содержит информацию о предстоящем юбилейном концерте, включая дату, место и программу мероприятия, а также комментарий местного депутата Антона Власенко.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5992\u001f2026-11-18": {
-      "signature": "733c9a96",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на занятия по настольному теннису, указывая время, место и контактные данные.",
-      "evidence": "",
+      "explanation": "Текст описывает состоявшееся заседание Совета депутатов с перечислением обсужденных вопросов и принятых решений.",
+      "evidence": "18 ноября 2026 года в 17:00 прошло очередное заседание Совета депутатов района Царицыно.",
       "method": "ai"
     },
     "olga_belousova1998\u001fhttps://vk.com/wall645695590_5991\u001f2026-11-18": {
       "signature": "420ce62b",
-      "categories": [],
+      "categories": [
+        "council"
+      ],
       "confidence": 1,
-      "explanation": "Публикация сообщает о заседании Совета депутатов, где обсуждались организационные и нормативные вопросы, утверждение положений комиссий и отмена устаревших правовых актов. Нет приз",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов с перечислением рассмотренных вопросов, что соответствует категории council.",
+      "evidence": "17 ноября состоялось очередное заседание Совета депутатов муниципального округа Братеево.",
       "method": "ai"
     },
     "gontsova71\u001fhttps://vk.com/wall710412055_1210\u001f2026-11-18": {
       "signature": "f0959b5e",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о заседании Совета депутатов, обсуждении и корректировке положений комиссий, а также признании утратившими силу некоторых правовых актов. Нет признаков других к",
-      "evidence": "",
-      "method": "ai"
-    },
-    "gontsova71\u001fhttps://vk.com/wall710412055_1209\u001f2026-11-18": {
-      "signature": "5a90da75",
       "categories": [
-        "event",
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст содержит информацию о предстоящем юбилейном концерте, включая дату, место и программу мероприятия, а также комментарий представителя муниципалитета.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов, повестку дня и принятые решения.",
+      "evidence": "✅17 ноября состоялось очередное заседание Совета депутатов муниципального округа Братеево.",
       "method": "ai"
     },
-    "e.korostilenko\u001fhttps://vk.com/wall710236608_806\u001f2026-11-18": {
-      "signature": "4c49ac13",
+    "vlasenkoau\u001fhttps://vk.com/wall289588839_2413\u001f2026-11-17": {
+      "signature": "9185dace",
       "categories": [
-        "event",
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст содержит информацию о предстоящем юбилейном концерте, включая дату, место и программу мероприятия, а также комментарий местного депутата Антона Власенко.",
-      "evidence": "",
+      "explanation": "Текст сообщает о состоявшемся заседании Совета депутатов, обсуждавшем конкретные вопросы законодательства и комиссий.",
+      "evidence": "✍️17 ноября состоялось очередное заседание Совета депутатов муниципального округа Братеево.",
       "method": "ai"
     },
-    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_1010\u001f2026-11-18": {
-      "signature": "4c1a7183",
+    "annavolskaya\u001fhttps://vk.com/wall611229514_2303\u001f2026-11-17": {
+      "signature": "970a82fd",
       "categories": [
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и информацию о предстоящем юбилейном концерте, указаны дата, место и программа мероприятия.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов, повестку дня и принятые решения.",
+      "evidence": "Сегодня состоялось очередное заседание Совета депутатов муниципального округа Братеево.",
       "method": "ai"
     },
-    "vlasenkoau\u001fhttps://vk.com/wall289588839_2414\u001f2026-11-18": {
-      "signature": "b533570f",
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1074\u001f2026-11-12": {
+      "signature": "55ffeaee",
       "categories": [
-        "event"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Депутат посетил мероприятие по случаю дня рождения ветерана вместе с другими официальными лицами.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов, перечисляет обсуждавшиеся темы и принятые решения.",
+      "evidence": "Состоялось очередное заседание Совета депутатов муниципального округа Нагатино-Садовники.",
       "method": "ai"
     },
-    "dmitry_volkov77\u001fhttps://vk.com/wall709132354_567\u001f2026-11-18": {
-      "signature": "41d925cc",
+    "gontsova71\u001fhttps://vk.com/wall710412055_1194\u001f2026-11-04": {
+      "signature": "17057b66",
       "categories": [
-        "event",
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст содержит информацию о предстоящем юбилейном концерте, включая дату, место и программу мероприятия, а также комментарий местного депутата Антона Власенко.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся внеочередное заседание Совета депутатов, повестку дня и рассмотренные вопросы.",
+      "evidence": "3 ноября состоялось внеочередное заседание Совета депутатов муниципального округа Братеево.",
       "method": "ai"
     },
-    "annavolskaya\u001fhttps://vk.com/wall611229514_2307\u001f2026-11-18": {
-      "signature": "01f6eb9b",
+    "vlasenkoau\u001fhttps://vk.com/wall289588839_2399\u001f2026-11-03": {
+      "signature": "86939ffc",
       "categories": [
-        "event",
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст содержит информацию о предстоящем юбилейном концерте и приглашает жителей посетить мероприятие.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся внеочередное заседание Совета депутатов с указанием рассматриваемых вопросов: согласование дополнительных мероприятий по развитию округа и формиро",
+      "evidence": "🔷03 ноября состоялось внеочередное заседание Совета депутатов муниципального округа Братеево.",
       "method": "ai"
     },
-    "seregin1963\u001fhttps://vk.com/wall710315882_595\u001f2026-11-18": {
-      "signature": "d96b809d",
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1031\u001f2026-10-24": {
+      "signature": "67c43115",
       "categories": [
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на юбилейный концерт академического хора «Москворечье», указывая дату, место, программу и дополнительные детали.",
-      "evidence": "",
+      "explanation": "Прямо указано участие автора в заседании Совета депутатов.",
+      "evidence": "Приняла участие в очередном заседании Совета депутатов муниципального округа Донской в городе Москве.",
       "method": "ai"
     },
-    "ifadeeva2022\u001fhttps://vk.com/wall710292385_1197\u001f2026-11-18": {
-      "signature": "bd118628",
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3715\u001f2026-10-23": {
+      "signature": "77f361e5",
       "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение посетить фестиваль 'Золотая нить', указывая дату и новую номинацию.",
-      "evidence": "Увидеть выступления финалистов можно будет 4 декабря.",
-      "method": "ai"
-    },
-    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1406\u001f2026-11-18": {
-      "signature": "ab08058d",
-      "categories": [
-        "event"
-      ],
-      "confidence": 0.9,
-      "explanation": "Публикация сообщает о предстоящем гала-концерте фестиваля 'Золотая нить', адресованном детям и молодёжи с ОВЗ.",
-      "evidence": "В ЮАО пройдет гала-концерт фестиваля, который с каждым годом привлекает всё больше юных участников.",
-      "method": "ai"
-    },
-    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1049\u001f2026-11-18": {
-      "signature": "b79502fe",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация представляет собой объявление о вакансии социального работника, не относящееся ни к одной из заданных категорий.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "tkabanova2022\u001fhttps://vk.com/wall139769280_992\u001f2026-11-18": {
-      "signature": "a680e692",
-      "categories": [
-        "reception",
+        "council",
         "information"
       ],
       "confidence": 1,
-      "explanation": "Текст описывает фактический приём граждан депутатом, где обсуждались конкретные обращения жителей, даны разъяснения и консультации.",
+      "explanation": "Упоминается состоявшийся годовой отчет депутатов перед избирателями и отчет о деятельности, а также упомянуто заседание Совета депутатов с принятием годовых отчетов директоров обра",
       "evidence": "",
       "method": "ai"
     },
-    "nvzausaeva\u001fhttps://vk.com/wall708798431_1134\u001f2026-11-18": {
-      "signature": "ceffdc90",
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2417\u001f2026-10-22": {
+      "signature": "afd43b7c",
       "categories": [
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение принять участие в будущей акции по донорству крови, указаны дата, время и место мероприятия.",
+      "explanation": "Текст полностью посвящён обсуждению прошедшего заседания Совета депутатов, включая повестку дня и принятые решения.",
       "evidence": "",
       "method": "ai"
     },
-    "andrey.abertasov\u001fhttps://vk.com/wall455808255_605\u001f2026-11-18": {
-      "signature": "a35cfbef",
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_975\u001f2026-10-22": {
+      "signature": "0e415674",
       "categories": [
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Публикация представляет собой приглашение принять участие в будущей акции по сдаче крови и вступлению в регистр доноров костного мозга.",
-      "evidence": "",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов, повестку дня и принятые решения.",
+      "evidence": "✅Сегодня состоялось очередное заседание Совета депутатов.",
       "method": "ai"
     },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1664\u001f2026-11-17": {
-      "signature": "3790b762",
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3647\u001f2026-08-19": {
+      "signature": "f4cf9f04",
       "categories": [
-        "announcement"
+        "council"
       ],
       "confidence": 1,
-      "explanation": "Публикация содержит информацию о предстоящем гала-концерте, включая дату, время, место, программу и условия участия.",
-      "evidence": "4 декабря в 13:00 в концертном зале «ЮгАрт» (Варшавское шоссе, д. 116) состоится гала-концерт городского фестиваля творчества детей и молодёжи с ограниченными возможностями здоровья «Золотая нить».",
+      "explanation": "Публикация описывает состоявшееся заседание Совета депутатов, повестку дня и принятые решения.",
+      "evidence": "Вчера состоялось первое после летнего перерыва очередное заседание Совета депутатов муниципального округа Москворечье-Сабурово.",
       "method": "ai"
     },
-    "aabulatov\u001fhttps://vk.com/wall352446434_1662\u001f2026-11-17": {
-      "signature": "9d9f3570",
-      "categories": [
-        "event",
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует мероприятие 'Лекторий здоровья', организованное депутатом Марии Гаврилиной, с указанием даты, времени, места и программы.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1080\u001f2026-11-17": {
-      "signature": "2bd3a9ca",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует гала-концерт фестиваля, указывает даты, время, место и условия участия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "andrey.sezemov\u001fhttps://vk.com/wall701986008_768\u001f2026-11-17": {
-      "signature": "a9cf04c5",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Ссылка без дополнительного текста не позволяет установить категорию публикации.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "antonuvarov90\u001fhttps://vk.com/wall555917695_434\u001f2026-11-17": {
-      "signature": "24443f0b",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует гала-концерт фестиваля творчества детей и молодежи, указывает дату, место и детали мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1063\u001f2026-11-17": {
-      "signature": "0bce1a88",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует грядущий гала-концерт фестиваля, указывает дату, место и ссылку на подробности.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1442\u001f2026-11-17": {
-      "signature": "dd6ec458",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация описывает прошедшее музыкальное мероприятие с участием различных коллективов, что соответствует категории 'event'.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1441\u001f2026-11-17": {
-      "signature": "74466247",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции, оценивает проделанную работу и поздравляет коллег. Это факт участия в мероприятии.",
-      "evidence": "Принял участие в отчетно-выборной конференции местного отделения партии «ЕДИНАЯ РОССИЯ» в Нагатинском Затоне.",
-      "method": "ai"
-    },
-    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1440\u001f2026-11-17": {
-      "signature": "5f216e84",
-      "categories": [
-        "announcement"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация содержит информацию о предстоящем гала-концерте, включая дату, место проведения и программу мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena_laplanche\u001fhttps://vk.com/wall708827390_1742\u001f2026-11-17": {
-      "signature": "bf595adb",
-      "categories": [
-        "event"
-      ],
-      "confidence": 1,
-      "explanation": "Публикация анонсирует музыкальное мероприятие — концерт 'Нейро-музыка. Музыка радости', указывая дату, время, место и программу.",
-      "evidence": "24 ноября в 18.00 в Концертном зале имени В.Я.Шебалина состоится концерт «Нейро-музыка. Музыка радости».",
-      "method": "ai"
-    },
-    "andreymordovin\u001fhttps://vk.com/wall4765626_4833\u001f2026-11-17": {
-      "signature": "c4e805eb",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о творческом конкурсе для участников разного возраста, но не относится ни к одной из заданных категорий.",
-      "evidence": "Участники в возрасте от пяти до 21 года представят свои таланты в шести творческих номинациях.",
-      "method": "ai"
-    },
-    "anna_ezhkova\u001fhttps://vk.com/wall162151344_500\u001f2026-11-17": {
-      "signature": "8eeb7355",
-      "categories": [],
-      "confidence": 1,
-      "explanation": "Публикация сообщает о творческом конкурсе для участников разного возраста, но не относится ни к одной из заданных категорий.",
-      "evidence": "Участники в возрасте от пяти до 21 года представят свои таланты в шести творческих номинациях.",
-      "method": "ai"
-    },
-    "nadezhda_kuskova\u001fhttps://vk.com/wall710102837_1118\u001f2026-11-17": {
-      "signature": "3ce5433a",
+    "aabulatov\u001fhttps://vk.com/wall352446434_1674\u001f2026-11-22": {
+      "signature": "0428eb76",
       "categories": [
         "information"
       ],
-      "confidence": 0.9,
-      "explanation": "Публикация представляет собой информационное уведомление о творческом конкурсе для участников разного возраста.",
-      "evidence": "Участники в возрасте от пяти до 21 года представят свои таланты в шести творческих номинациях.",
+      "confidence": 1,
+      "explanation": "Публикация представляет собой информационное сообщение о важности раздельного сбора отходов и правилах обращения с мусором, адресованное жителям. Нет признаков других категорий дея",
+      "evidence": "Чистота нашего района начинается с простых повседневных привычек. Одна из них — правильное обращение с бытовыми отходами.",
       "method": "ai"
     },
-    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1048\u001f2026-11-17": {
-      "signature": "992df627",
-      "categories": [
-        "announcement"
-      ],
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2565\u001f2026-11-22": {
+      "signature": "6db739aa",
+      "categories": [],
       "confidence": 1,
-      "explanation": "Публикация содержит информацию о предстоящем гала-концерте фестиваля, место проведения и организатора.",
+      "explanation": "Публикация рассказывает об инновационных технологиях и роботизированных системах, используемых в московских парках, без упоминания деятельности депутата.",
       "evidence": "",
       "method": "ai"
     },
-    "vidutinaov\u001fhttps://vk.com/wall5848362_934\u001f2026-11-17": {
-      "signature": "844331f6",
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1199\u001f2026-11-22": {
+      "signature": "935126cb",
       "categories": [
-        "announcement"
+        "plan"
       ],
       "confidence": 1,
-      "explanation": "Публикация содержит информацию о предстоящем гала-концерте, включая дату, время, место, программу и условия участия.",
-      "evidence": "4 декабря в 13:00 в концертном зале «ЮгАрт» (Варшавское шоссе, д. 116) состоится гала-концерт городского фестиваля творчества детей и молодёжи с ограниченными возможностями здоровья «Золотая нить».",
+      "explanation": "Публикация сообщает о запланированном строительстве детского сада, указаны сроки завершения строительства в 2028 году.",
+      "evidence": "Завершить строительство объекта в соответствии с договором участия планируется в 2028 году.",
       "method": "ai"
     },
-    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_894\u001f2026-11-17": {
-      "signature": "7947e7b4",
+    "aabulatov\u001fhttps://vk.com/wall352446434_1673\u001f2026-11-21": {
+      "signature": "4cd9d687",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное руководство для жителей по проверке квитанций ЖКХ, советы и рекомендации, без упоминания личных действий депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_608\u001f2026-11-21": {
+      "signature": "a366f211",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация посвящена юбилею школы и личным воспоминаниям автора, не содержит информации о деятельности депутата.",
+      "evidence": "Есть места, куда всегда хочется возвращаться — туда, где ты делал первые шаги в профессии, где научили верить в себя и где до сих пор горит свет в знакомых окнах.",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_906\u001f2026-11-21": {
+      "signature": "7ea0f007",
+      "categories": [
+        "walk"
+      ],
+      "confidence": 1,
+      "explanation": "Текст описывает завершившийся совместный обход территории района с участием депутатов и представителей управляющей компании, фиксирование вопросов от жителей и благодарность жителя",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1099\u001f2026-11-21": {
+      "signature": "3c05fd96",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Упоминается факт проведения музыкального фестиваля и объявления победителей, что указывает на участие в общественном мероприятии.",
+      "evidence": "В библиотеке № 140 назвали победителей музыкального фестиваля",
+      "method": "ai"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_793\u001f2026-11-21": {
+      "signature": "97bb12fc",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация посвящена визиту сотрудников организации 'Мой социальный помощник' в 'Ангар спасения', передаче гуманитарной помощи. Нет прямых указаний на личное участие муниципального",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2563\u001f2026-11-21": {
+      "signature": "6a558d57",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой информационное напоминание от Госавтоинспекции о правилах дорожного движения, не связанное с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2562\u001f2026-11-21": {
+      "signature": "103db130",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой советы по поддержанию здоровья и улучшению кровообращения, не связана с деятельностью муниципального депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2561\u001f2026-11-21": {
+      "signature": "00f18f1f",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация сообщает о факте участия школьников в конкурсе и итогах мероприятия, что соответствует категории 'event'.",
+      "evidence": "В библиотеке № 140 состоялся ежегодный окружной конкурс «Голос», в котором наша школа представила сразу три ярких музыкальных номера!",
+      "method": "ai"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1123\u001f2026-11-21": {
+      "signature": "7c5535f2",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Текст сообщает о состоявшемся юбилейном концерте коллектива, что указывает на факт участия в общественном мероприятии.",
+      "evidence": "🎉🎉ЮБИЛЕЙНЫЙ КОНЦЕРТ «ВРЕМЯ ВПЕРЁД!» СОСТОЯЛСЯ!",
+      "method": "ai"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1031\u001f2026-11-21": {
+      "signature": "ca3945ce",
+      "categories": [
+        "walk",
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст описывает фактический обход территории депутатом совместно с другими лицами, обсуждались конкретные вопросы благоустройства и уборки. Упоминается разъяснение по обращениям и ",
+      "evidence": "",
+      "method": "ai"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5997\u001f2026-11-21": {
+      "signature": "ef151543",
       "categories": [
         "announcement"
       ],
       "confidence": 1,
-      "explanation": "Публикация содержит информацию о предстоящем гала-концерте, включая дату, время, место, программу и условия участия.",
-      "evidence": "4 декабря в 13:00 в концертном зале «ЮгАрт» (Варшавское шоссе, д. 116) состоится гала-концерт городского фестиваля творчества детей и молодёжи с ограниченными возможностями здоровья «Золотая нить».",
+      "explanation": "Публикация представляет собой приглашение на мероприятие — день открытых дверей для родителей будущих первоклассников.",
+      "evidence": "Приглашаем семьи будущих первоклассников познакомиться со Школой №1998 «Лукоморье» и сделать первый шаг в школьную жизнь ребёнка ✨",
+      "method": "ai"
+    },
+    "gontsova71\u001fhttps://vk.com/wall710412055_1211\u001f2026-11-21": {
+      "signature": "3e8feac5",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает о передаче гуманитарной помощи, но не указывает на личное участие муниципального депутата или фактическую деятельность в муниципальном управлении.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "annavolskaya\u001fhttps://vk.com/wall611229514_2309\u001f2026-11-21": {
+      "signature": "fdf31702",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация полностью посвящена отчетно-выборной конференции местного отделения партии 'Единая Россия', где обсуждались внутренние партийные вопросы, результаты деятельности и выбор",
+      "evidence": "XXXVIII Отчётно-выборная конференция местного (окружного) отделения партии «Единая Россия» Южного административного округа Москвы.",
+      "method": "ai"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_996\u001f2026-11-21": {
+      "signature": "3294ce7a",
+      "categories": [
+        "information",
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация информирует о просветительской акции 'Географический диктант', призывает участвовать и объясняет значимость географии. Присутствует приглашение посетить мероприятие и сс",
+      "evidence": "",
+      "method": "ai"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5443\u001f2026-11-21": {
+      "signature": "181608c3",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции, перечисляет достижения и планы, не содержит информации о личных действиях депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1671\u001f2026-11-20": {
+      "signature": "63150056",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции, перечисляет достижения и планы, но не указывает на личное участие автора в обсуждаемых событиях.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1670\u001f2026-11-20": {
+      "signature": "21dbe712",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное руководство по борьбе с сыростью и плесенью в квартирах, с рекомендациями и контактами организаций. Нет признаков личного участия, встреч, з",
+      "evidence": "",
+      "method": "ai"
+    },
+    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1445\u001f2026-11-20": {
+      "signature": "bdc1eeb6",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о посещении отчётно-выборной конференции партии 'Единая Россия', где перечислены достижения и планы, без указания личных действий депутата.",
+      "evidence": "Принял участие в 38-й отчётно-выборной конференции местного отделения партии «Единая Россия» ЮАО.",
+      "method": "ai"
+    },
+    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1444\u001f2026-11-20": {
+      "signature": "97297503",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение подписаться на личный канал автора, где он делится информацией о своей деятельности и местных событиях. Это уведомление и призыв к взаимодейств",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena_laplanche\u001fhttps://vk.com/wall708827390_1743\u001f2026-11-20": {
+      "signature": "afad0492",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о всероссийской акции, объясняющее цели, содержание и преимущества тестирования цифровых компетенций.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "andreymordovin\u001fhttps://vk.com/wall4765626_4835\u001f2026-11-20": {
+      "signature": "47701e2c",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о всероссийской акции, объясняющее цели, содержание и преимущества тестирования цифровых компетенций.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "galinadolgashova\u001fhttps://vk.com/wall638282157_1572\u001f2026-11-20": {
+      "signature": "03eedc6e",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о всероссийской акции, объясняющее цели, содержание и преимущества тестирования цифровых компетенций. Нет признаков личной деяте",
+      "evidence": "",
+      "method": "ai"
+    },
+    "anna_ezhkova\u001fhttps://vk.com/wall162151344_503\u001f2026-11-20": {
+      "signature": "3728ff25",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение принять участие во всероссийской акции по проверке цифровых навыков, не связан с деятельностью депутата.",
+      "evidence": "Всероссийская акция «ЦифрАтест»: проверьте свои цифровые навыки!",
+      "method": "ai"
+    },
+    "nadezhda_kuskova\u001fhttps://vk.com/wall710102837_1120\u001f2026-11-20": {
+      "signature": "55c78448",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение принять участие во всероссийской акции по проверке цифровых навыков, не связан с деятельностью депутата.",
+      "evidence": "Всероссийская акция «ЦифрАтест»: проверьте свои цифровые навыки!",
+      "method": "ai"
+    },
+    "vidutinaov\u001fhttps://vk.com/wall5848362_938\u001f2026-11-20": {
+      "signature": "9dde46fd",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат сообщает о факте проведения традиционного фестиваля в школе, выражает благодарность участникам и приглашает подписываться на канал с новостями.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vidutinaov\u001fhttps://vk.com/wall5848362_937\u001f2026-11-20": {
+      "signature": "d1e105f5",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции, перечисляет достижения и планы, не содержит информации о личных действиях депутата или фактах взаимодействия с избирателями.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_905\u001f2026-11-20": {
+      "signature": "3b1c0d98",
+      "categories": [
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой приглашение и информацию о предстоящем мероприятии — спортивных состязаниях на роликовых коньках.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_904\u001f2026-11-20": {
+      "signature": "40bb1d34",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции, перечисляет достижения и планы, но не указывает на личное участие автора в обсуждаемых событиях.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_903\u001f2026-11-20": {
+      "signature": "0a5b11d6",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация анонсирует концерт, посвящённый Дню матери, с указанием даты, места и организаторов.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_902\u001f2026-11-20": {
+      "signature": "744ab976",
+      "categories": [
+        "walk"
+      ],
+      "confidence": 1,
+      "explanation": "Текст сообщает о запланированном обходе территории района с участием депутата и главы управы, указаны адреса осмотра и приглашение жителей.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1097\u001f2026-11-20": {
+      "signature": "65fd491f",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат участвовала в отчётно-выборной конференции, что указывает на фактическое участие в общественном мероприятии.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1096\u001f2026-11-20": {
+      "signature": "2325eb69",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой короткое выражение без какой-либо информации, связанной с деятельностью депутата.",
+      "evidence": "Самое главное слово !",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1095\u001f2026-11-20": {
+      "signature": "539f201a",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат делится информацией о проведённой встрече молодёжи, обсуждаются результаты и планы дальнейших действий, но нет признаков других категорий.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2560\u001f2026-11-20": {
+      "signature": "2d4951a7",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация информирует о завершении набора в группы подготовки к олимпиадам, не содержит сведений о деятельности депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2559\u001f2026-11-20": {
+      "signature": "2eeb423d",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное напоминание Госавтоинспекции о правилах безопасности пешеходов, не содержит упоминания о действиях депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2558\u001f2026-11-20": {
+      "signature": "73d756fb",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает историю спасения животного сотрудниками ГИБДД, не связана с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2557\u001f2026-11-20": {
+      "signature": "90b08237",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат сообщает о факте посещения школьниками Центра кинологической службы, описывает мероприятие и выражает мнение о его значимости.",
+      "evidence": "",
       "method": "ai"
     }
   }

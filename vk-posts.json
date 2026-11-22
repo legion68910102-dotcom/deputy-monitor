@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T10:36:15.588321+00:00",
+  "generated_at": "2026-11-22T10:37:34.828709+00:00",
   "source": "Apify VK Posts Scraper; incremental 159-profile monitoring",
   "posts": [
     {
@@ -15747,9 +15747,9 @@
       "retrieved": 20
     },
     "elena_laplanche": {
-      "state": "posts_verified",
-      "last_checked": "2026-11-22T10:10:04.531130+00:00",
-      "retrieved": 20
+      "state": "unavailable",
+      "last_checked": "2026-11-22T10:37:34.828709+00:00",
+      "reason": "HTTP 403"
     },
     "andreymordovin": {
       "state": "posts_verified",
@@ -16489,15 +16489,15 @@
   },
   "import_diagnostics": {
     "stopped_on_api_limit": true,
-    "full_sweep": true,
+    "full_sweep": false,
     "batch_index": 9,
     "batch_count": 16,
     "profiles_attempted": [
-      "nuykinakv"
+      "elena_laplanche"
     ],
     "verified_counts": {},
     "unavailable": {
-      "nuykinakv": "HTTP 403"
+      "elena_laplanche": "HTTP 403"
     },
     "max_items_per_profile": 20
   }

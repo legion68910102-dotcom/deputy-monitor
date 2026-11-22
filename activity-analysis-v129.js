@@ -81,6 +81,7 @@ function makePost(r,index){
   hits=[...new Set(ai.categories)].filter(k=>k!=="uncategorized"&&Object.prototype.hasOwnProperty.call(labels,k)).map(k=>({
    key:k,evidence:String(ai.evidence||r.text||"").slice(0,300),
    explanation:String(ai.explanation||"").slice(0,180),
+   confidence:Math.max(0,Math.min(1,Number(ai.confidence)||0)),
    certainty:Number(ai.confidence)>=0.7?"ai":"ai_review",method:"ai"
   }));
  }else hits=hasText(r)?extract(r.text):[];
@@ -111,7 +112,7 @@ function render(manual=false){
  const matchedResults=activeCategory==="uncategorized"
   ? selected.map(r=>({key:"uncategorized",certainty:"uncategorized",evidence:hasText(r)?String(r.text).trim().slice(0,300):"Текст публикации не получен",profile:r.profile,url:r.url,date:r.date,_id:r._id,_hasText:hasText(r)}))
   : activeCategory?results.filter(x=>x.key===activeCategory):results;
- const resultHTML=matchedResults.slice(0,150).map(r=>'<tr><td>'+esc(formatDate(r.date))+'</td><td>'+esc(rosterName(r.profile))+'</td><td>'+esc(labels[r.key])+'</td><td>'+esc(r.certainty==="uncategorized"?(r._hasText?"Тема не определена":"Нет текста"):r.certainty==="ai"?"ИИ · предварительно":r.certainty==="ai_review"?"ИИ · проверить":r.certainty==="possible"?"По правилам":"Требует проверки")+'</td><td>'+esc(r.evidence)+(r.explanation?'<div class="activity-ai-explanation">🤖 '+esc(r.explanation)+'</div>':'')+'</td><td>'+(safeUrl(r.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(safeUrl(r.url))+'">Источник ↗</a>':"Нет ссылки")+(personal?' <button type="button" class="activity-open-post" data-activity-open="'+r._id+'">Публикация ↓</button>':"")+'</td></tr>').join("");
+ const resultHTML=matchedResults.slice(0,150).map(r=>'<tr><td>'+esc(formatDate(r.date))+'</td><td>'+esc(rosterName(r.profile))+'</td><td>'+esc(labels[r.key])+'</td><td>'+esc(r.certainty==="uncategorized"?(r._hasText?"Тема не определена":"Нет текста"):r.certainty==="ai"?"ИИ · предварительно":r.certainty==="ai_review"?"ИИ · проверить":r.certainty==="possible"?"По правилам":"Требует проверки")+'</td><td>'+esc(r.evidence)+(r.explanation?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(r.confidence||0)*100)+'% · '+esc(r.explanation)+'</div>':'')+'</td><td>'+(safeUrl(r.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(safeUrl(r.url))+'">Источник ↗</a>':"Нет ссылки")+(personal?' <button type="button" class="activity-open-post" data-activity-open="'+r._id+'">Публикация ↓</button>':"")+'</td></tr>').join("");
  document.getElementById("activity-results").innerHTML=resultHTML||'<tr><td colspan="6" class="empty">Подходящих фраз нет. Это не означает отсутствие депутатской деятельности.</td></tr>';
  const selectedLabel=activeCategory?labels[activeCategory]:"Все категории";
  const selectedInfo=document.getElementById("activity-selected-category");
@@ -130,8 +131,10 @@ function render(manual=false){
     const fullText=String(r.text||"").trim();
     const hits=Array.from(new Set(r._hits.map(h=>h.key)));
     const badge=hits.length?hits.map(k=>'<span class="activity-topic">'+icons[k]+' '+esc(labels[k])+'</span>').join(" "):'<span class="activity-topic">🏷️ Без темы'+(!fullText?" · нет текста":"")+'</span>';
+    const aiHit=r._hits.find(hit=>hit.method==="ai");
+    const aiNote=aiHit?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(aiHit.confidence||0)*100)+'% · '+esc(aiHit.explanation)+'</div>':"";
     const preview=(fullText||"Текст публикации не получен").replace(/\s+/g," ").slice(0,115);
-    return '<details class="activity-post" id="activity-post-'+r._id+'"><summary><span class="activity-post-date">'+esc(formatDate(r.date))+'</span> · '+esc(preview)+(preview.length>=115?"…":"")+'</summary><div class="activity-post-body"><div class="activity-post-tags">'+badge+'</div><p class="activity-post-text">'+esc(fullText||"Текст публикации недоступен. Сведения о её содержании автоматически не получены.")+'</p>'+(url?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Открыть оригинал публикации ↗</a>':'<span class="small">Ссылка на оригинал отсутствует</span>')+'</div></details>';
+    return '<details class="activity-post" id="activity-post-'+r._id+'"><summary><span class="activity-post-date">'+esc(formatDate(r.date))+'</span> · '+esc(preview)+(preview.length>=115?"…":"")+'</summary><div class="activity-post-body"><div class="activity-post-tags">'+badge+'</div>'+aiNote+'<p class="activity-post-text">'+esc(fullText||"Текст публикации недоступен. Сведения о её содержании автоматически не получены.")+'</p>'+(url?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Открыть оригинал публикации ↗</a>':'<span class="small">Ссылка на оригинал отсутствует</span>')+'</div></details>';
    }).join("")||'<p class="small">Публикаций по выбранным параметрам нет. Это не означает отсутствие деятельности.</p>';
    more.hidden=selected.length<=visibleLimit;
  }

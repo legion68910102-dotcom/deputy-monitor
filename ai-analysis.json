@@ -1,11 +1,4768 @@
 {
   "schema_version": 1,
-  "status": "not_configured",
-  "generated_at": null,
-  "model": null,
+  "provider": "gigachat",
+  "status": "partial",
+  "generated_at": "2026-11-22T22:13:02.211Z",
+  "model": "GigaChat-2-Pro",
   "source": "vk-posts.json",
-  "total_posts": 0,
-  "classified_posts": 0,
-  "pending_posts": 0,
-  "posts": {}
+  "total_posts": 1420,
+  "classified_posts": 59,
+  "pending_posts": 837,
+  "posts": {
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1083\u001f2026-11-21": {
+      "signature": "97334faf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vidutinaov\u001fhttps://vk.com/wall5848362_939\u001f2026-11-21": {
+      "signature": "f2e76d30",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_907\u001f2026-11-21": {
+      "signature": "c8cbdb2e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2438\u001f2026-11-21": {
+      "signature": "dc1d2a9b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_792\u001f2026-11-21": {
+      "signature": "9fed5402",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2564\u001f2026-11-21": {
+      "signature": "8470dbcf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_410\u001f2026-11-21": {
+      "signature": "ad1f8306",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elenanersesova\u001fhttps://vk.com/wall707817181_815\u001f2026-11-21": {
+      "signature": "7be68fe7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2119\u001f2026-11-21": {
+      "signature": "0fc327e0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_340\u001f2026-11-21": {
+      "signature": "05d190a4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1122\u001f2026-11-21": {
+      "signature": "a6fe0ac6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonovalp1\u001fhttps://vk.com/wall486801117_934\u001f2026-11-21": {
+      "signature": "d59f78f5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1198\u001f2026-11-21": {
+      "signature": "5dad40e0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_629\u001f2026-11-21": {
+      "signature": "9fdea328",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1032\u001f2026-11-21": {
+      "signature": "cb5248e8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_412\u001f2026-11-21": {
+      "signature": "c2ec8e03",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_363\u001f2026-11-21": {
+      "signature": "d2aaa86c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1672\u001f2026-11-20": {
+      "signature": "b95dd0cd",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_769\u001f2026-11-20": {
+      "signature": "aa6400d2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_437\u001f2026-11-20": {
+      "signature": "ab00b26f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1066\u001f2026-11-20": {
+      "signature": "98ea623d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1049\u001f2026-11-20": {
+      "signature": "a4c1fa03",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_901\u001f2026-11-20": {
+      "signature": "0439ab5d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1098\u001f2026-11-20": {
+      "signature": "07ad27ee",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2437\u001f2026-11-20": {
+      "signature": "31dfa0cb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2436\u001f2026-11-20": {
+      "signature": "a5a099c4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2118\u001f2026-11-20": {
+      "signature": "14e8347a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1229\u001f2026-11-20": {
+      "signature": "9d77f46e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1050\u001f2026-11-20": {
+      "signature": "6a4cac01",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_373\u001f2026-11-20": {
+      "signature": "442c76eb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1418\u001f2026-11-20": {
+      "signature": "c3419cbf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_994\u001f2026-11-20": {
+      "signature": "1fabaee9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1684\u001f2026-11-20": {
+      "signature": "48cc0a3c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_853\u001f2026-11-20": {
+      "signature": "010d333f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_852\u001f2026-11-20": {
+      "signature": "f238b888",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2265\u001f2026-11-20": {
+      "signature": "b617e688",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1082\u001f2026-11-19": {
+      "signature": "8176ca15",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1081\u001f2026-11-19": {
+      "signature": "3a30cd64",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_436\u001f2026-11-19": {
+      "signature": "7ea34008",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_435\u001f2026-11-19": {
+      "signature": "901b9c49",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1065\u001f2026-11-19": {
+      "signature": "be96c81c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1064\u001f2026-11-19": {
+      "signature": "b847645f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2554\u001f2026-11-19": {
+      "signature": "1a60a06d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1121\u001f2026-11-19": {
+      "signature": "b9deeabe",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1197\u001f2026-11-19": {
+      "signature": "b4c4176c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_362\u001f2026-11-19": {
+      "signature": "db8b2d4a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1666\u001f2026-11-18": {
+      "signature": "58ec59c9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anna_ezhkova\u001fhttps://vk.com/wall162151344_502\u001f2026-11-18": {
+      "signature": "d867d9e7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vidutinaov\u001fhttps://vk.com/wall5848362_935\u001f2026-11-18": {
+      "signature": "729f19e4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2433\u001f2026-11-18": {
+      "signature": "e2033b42",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1048\u001f2026-11-18": {
+      "signature": "82760ddd",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_372\u001f2026-11-18": {
+      "signature": "40358d0d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1417\u001f2026-11-18": {
+      "signature": "75bf5fbb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_993\u001f2026-11-18": {
+      "signature": "e04f599d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_851\u001f2026-11-18": {
+      "signature": "998465f0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2263\u001f2026-11-18": {
+      "signature": "ae8ed683",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5442\u001f2026-11-18": {
+      "signature": "56d8c352",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1135\u001f2026-11-18": {
+      "signature": "1521d18b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3743\u001f2026-11-18": {
+      "signature": "7bafea3b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_606\u001f2026-11-18": {
+      "signature": "1f2859f0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1663\u001f2026-11-17": {
+      "signature": "7101209d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_641\u001f2026-11-17": {
+      "signature": "81ed327d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_896\u001f2026-11-17": {
+      "signature": "a2ad7940",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_895\u001f2026-11-17": {
+      "signature": "70f49bd5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5989\u001f2026-11-17": {
+      "signature": "43a157d8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1415\u001f2026-11-17": {
+      "signature": "7ff83fde",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1683\u001f2026-11-17": {
+      "signature": "d9b83acb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5441\u001f2026-11-17": {
+      "signature": "917aaddc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5440\u001f2026-11-17": {
+      "signature": "e6c47183",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1133\u001f2026-11-17": {
+      "signature": "c14d79aa",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3738\u001f2026-11-17": {
+      "signature": "d03cee56",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_604\u001f2026-11-17": {
+      "signature": "5a1c80c1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinadolgashova\u001fhttps://vk.com/wall638282157_1570\u001f2026-11-16": {
+      "signature": "0f69610f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1047\u001f2026-11-16": {
+      "signature": "dfcaba3a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2549\u001f2026-11-16": {
+      "signature": "9fb183bc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1028\u001f2026-11-16": {
+      "signature": "ef9460f5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1027\u001f2026-11-16": {
+      "signature": "eae44fb4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1657\u001f2026-11-13": {
+      "signature": "fe9c5dce",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1077\u001f2026-11-13": {
+      "signature": "22ed85a7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2137\u001f2026-11-13": {
+      "signature": "1606ca0f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_767\u001f2026-11-13": {
+      "signature": "24f8af0a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_433\u001f2026-11-13": {
+      "signature": "ffc2a631",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1061\u001f2026-11-13": {
+      "signature": "202b1846",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1046\u001f2026-11-13": {
+      "signature": "1ab2c998",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_893\u001f2026-11-13": {
+      "signature": "0170242f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1086\u001f2026-11-13": {
+      "signature": "ae3ff69f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1117\u001f2026-11-13": {
+      "signature": "e7d79e69",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5976\u001f2026-11-13": {
+      "signature": "63974b52",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_414\u001f2026-11-13": {
+      "signature": "87e72c5b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1012\u001f2026-11-13": {
+      "signature": "14b0e337",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_596\u001f2026-11-13": {
+      "signature": "d52cadd2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_834\u001f2026-11-13": {
+      "signature": "86ea9940",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1227\u001f2026-11-13": {
+      "signature": "7f8597de",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1046\u001f2026-11-13": {
+      "signature": "67fd1b20",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1414\u001f2026-11-13": {
+      "signature": "32e31629",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_990\u001f2026-11-13": {
+      "signature": "f7bc37db",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_989\u001f2026-11-13": {
+      "signature": "4374c3d5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1681\u001f2026-11-13": {
+      "signature": "ecc48d0d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1680\u001f2026-11-13": {
+      "signature": "88fa6636",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_849\u001f2026-11-13": {
+      "signature": "927deac6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2261\u001f2026-11-13": {
+      "signature": "9733261a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1075\u001f2026-11-12": {
+      "signature": "75f1ede4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_766\u001f2026-11-12": {
+      "signature": "bc87ad48",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_432\u001f2026-11-12": {
+      "signature": "6833a7f3",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1060\u001f2026-11-12": {
+      "signature": "4a9c3b74",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1045\u001f2026-11-12": {
+      "signature": "9aa8513c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2546\u001f2026-11-12": {
+      "signature": "c0f37509",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1116\u001f2026-11-12": {
+      "signature": "74e060eb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5974\u001f2026-11-12": {
+      "signature": "99144495",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5973\u001f2026-11-12": {
+      "signature": "efabc934",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_357\u001f2026-11-12": {
+      "signature": "99124a2f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1656\u001f2026-11-11": {
+      "signature": "67d2dcd3",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1072\u001f2026-11-11": {
+      "signature": "80e249ca",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_762\u001f2026-11-11": {
+      "signature": "7b292903",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_430\u001f2026-11-11": {
+      "signature": "716cddd2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1058\u001f2026-11-11": {
+      "signature": "3cc7c134",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1438\u001f2026-11-11": {
+      "signature": "0485a630",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1085\u001f2026-11-11": {
+      "signature": "e2ea6000",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1115\u001f2026-11-11": {
+      "signature": "447e5355",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_409\u001f2026-11-11": {
+      "signature": "f51bc402",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.korostilenko\u001fhttps://vk.com/wall710236608_803\u001f2026-11-11": {
+      "signature": "97aa3622",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_593\u001f2026-11-11": {
+      "signature": "f6368141",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1226\u001f2026-11-11": {
+      "signature": "6afbb2a3",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1044\u001f2026-11-11": {
+      "signature": "b41d0588",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_370\u001f2026-11-11": {
+      "signature": "89872c92",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1413\u001f2026-11-11": {
+      "signature": "3af943ce",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_988\u001f2026-11-11": {
+      "signature": "c3a23410",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_848\u001f2026-11-11": {
+      "signature": "bcf14c8b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2260\u001f2026-11-11": {
+      "signature": "5b66f8ef",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_640\u001f2026-11-10": {
+      "signature": "7f2d1ded",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_639\u001f2026-11-10": {
+      "signature": "5e35a6e5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2429\u001f2026-11-10": {
+      "signature": "4b6d7d91",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_786\u001f2026-11-10": {
+      "signature": "228e5f13",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_413\u001f2026-11-10": {
+      "signature": "c8770989",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1010\u001f2026-11-10": {
+      "signature": "4fdf4662",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_595\u001f2026-11-10": {
+      "signature": "3692c93c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1405\u001f2026-11-10": {
+      "signature": "69b25e35",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_832\u001f2026-11-10": {
+      "signature": "d18299dd",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5439\u001f2026-11-10": {
+      "signature": "69ca5f8c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5438\u001f2026-11-10": {
+      "signature": "237af753",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5437\u001f2026-11-10": {
+      "signature": "bf2c2eca",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1131\u001f2026-11-10": {
+      "signature": "5b879147",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1130\u001f2026-11-10": {
+      "signature": "309c3c20",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1129\u001f2026-11-10": {
+      "signature": "46635c46",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_603\u001f2026-11-10": {
+      "signature": "303fb00b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_602\u001f2026-11-10": {
+      "signature": "7046b544",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_359\u001f2026-11-09": {
+      "signature": "26e0e8df",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5436\u001f2026-11-09": {
+      "signature": "319ba69f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5435\u001f2026-11-09": {
+      "signature": "e1254992",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_412\u001f2026-11-08": {
+      "signature": "450c7add",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_593\u001f2026-11-08": {
+      "signature": "33851705",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_592\u001f2026-11-08": {
+      "signature": "234c455e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1403\u001f2026-11-08": {
+      "signature": "2402cc3c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_831\u001f2026-11-08": {
+      "signature": "efbeb2ef",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1223\u001f2026-11-08": {
+      "signature": "d4576082",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1042\u001f2026-11-08": {
+      "signature": "909cfc10",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_368\u001f2026-11-08": {
+      "signature": "e450b151",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1411\u001f2026-11-08": {
+      "signature": "3395064e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_986\u001f2026-11-08": {
+      "signature": "70e42540",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1679\u001f2026-11-08": {
+      "signature": "2dfa2ee6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_847\u001f2026-11-08": {
+      "signature": "61582ce8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1070\u001f2026-11-07": {
+      "signature": "f78da2e9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_760\u001f2026-11-07": {
+      "signature": "60646688",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_428\u001f2026-11-07": {
+      "signature": "8c203782",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_890\u001f2026-11-07": {
+      "signature": "9c4ecf2d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1009\u001f2026-11-07": {
+      "signature": "fff37f98",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2250\u001f2026-11-07": {
+      "signature": "0af39e8d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_785\u001f2026-11-06": {
+      "signature": "24611e8b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elenanersesova\u001fhttps://vk.com/wall707817181_812\u001f2026-11-06": {
+      "signature": "fa8e09e7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2113\u001f2026-11-06": {
+      "signature": "3d41d327",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1112\u001f2026-11-06": {
+      "signature": "288e707c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonovalp1\u001fhttps://vk.com/wall486801117_931\u001f2026-11-06": {
+      "signature": "ecf94d57",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1191\u001f2026-11-06": {
+      "signature": "d7fc17f6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_626\u001f2026-11-06": {
+      "signature": "feaed8b8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1024\u001f2026-11-06": {
+      "signature": "5358daea",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_356\u001f2026-11-06": {
+      "signature": "55c4b557",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1650\u001f2026-11-05": {
+      "signature": "d075a18a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1069\u001f2026-11-05": {
+      "signature": "ea06ddf9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_759\u001f2026-11-05": {
+      "signature": "e4fd46c6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_427\u001f2026-11-05": {
+      "signature": "88d197e9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1055\u001f2026-11-05": {
+      "signature": "f05b80e8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2427\u001f2026-11-05": {
+      "signature": "e4909dcd",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_784\u001f2026-11-05": {
+      "signature": "0abd1ff7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_783\u001f2026-11-05": {
+      "signature": "d415454e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_406\u001f2026-11-05": {
+      "signature": "deaff050",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_444\u001f2026-11-05": {
+      "signature": "868fe76f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_411\u001f2026-11-05": {
+      "signature": "9e0f6ce9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1008\u001f2026-11-05": {
+      "signature": "93b8fba9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_591\u001f2026-11-05": {
+      "signature": "798a247e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_400\u001f2026-11-05": {
+      "signature": "1c0ddcd8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1402\u001f2026-11-05": {
+      "signature": "5de61466",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_830\u001f2026-11-05": {
+      "signature": "c27def75",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_367\u001f2026-11-05": {
+      "signature": "a0ebe6a9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1410\u001f2026-11-05": {
+      "signature": "3e5f2e30",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_985\u001f2026-11-05": {
+      "signature": "2f63eec4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_846\u001f2026-11-05": {
+      "signature": "046079da",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2237\u001f2026-11-05": {
+      "signature": "d2e0f714",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1127\u001f2026-11-05": {
+      "signature": "56baf56e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2112\u001f2026-11-04": {
+      "signature": "139e0d4a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1645\u001f2026-11-03": {
+      "signature": "75bbbcce",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1067\u001f2026-11-03": {
+      "signature": "6be1911d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1066\u001f2026-11-03": {
+      "signature": "c9fd1d2e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_758\u001f2026-11-03": {
+      "signature": "f8b8fefb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_757\u001f2026-11-03": {
+      "signature": "bc16445e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_425\u001f2026-11-03": {
+      "signature": "9fc8f919",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_424\u001f2026-11-03": {
+      "signature": "efea179a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1043\u001f2026-11-03": {
+      "signature": "43523678",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_781\u001f2026-11-03": {
+      "signature": "b494cb62",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_404\u001f2026-11-03": {
+      "signature": "be1c7dc4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "gontsova71\u001fhttps://vk.com/wall710412055_1192\u001f2026-11-03": {
+      "signature": "977b8e53",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2229\u001f2026-11-03": {
+      "signature": "95e7c8a9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_volkov77\u001fhttps://vk.com/wall709132354_561\u001f2026-11-02": {
+      "signature": "ec68bd30",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_588\u001f2026-11-02": {
+      "signature": "b081ef31",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_443\u001f2026-11-02": {
+      "signature": "33a06765",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_410\u001f2026-11-02": {
+      "signature": "4a3d89a5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1007\u001f2026-11-02": {
+      "signature": "170f2087",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_590\u001f2026-11-02": {
+      "signature": "fd9c880a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1041\u001f2026-11-02": {
+      "signature": "33615187",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1038\u001f2026-11-02": {
+      "signature": "3ad2f03f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_358\u001f2026-11-02": {
+      "signature": "87df0923",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_357\u001f2026-11-02": {
+      "signature": "055cca16",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_366\u001f2026-11-02": {
+      "signature": "4d1a0365",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1409\u001f2026-11-02": {
+      "signature": "9dc61255",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1408\u001f2026-11-02": {
+      "signature": "6472d442",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_984\u001f2026-11-02": {
+      "signature": "45c3c814",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_982\u001f2026-11-02": {
+      "signature": "0d258c6a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1675\u001f2026-11-02": {
+      "signature": "0563f974",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_845\u001f2026-11-02": {
+      "signature": "2f75fecc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_844\u001f2026-11-02": {
+      "signature": "7bbf2e6f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_843\u001f2026-11-02": {
+      "signature": "5cc376e2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_842\u001f2026-11-02": {
+      "signature": "6b9c8575",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2224\u001f2026-11-02": {
+      "signature": "cb82e597",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2217\u001f2026-11-02": {
+      "signature": "c0084c45",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5434\u001f2026-11-02": {
+      "signature": "6750a732",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1122\u001f2026-11-02": {
+      "signature": "505195b6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_600\u001f2026-11-02": {
+      "signature": "f09b959f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1641\u001f2026-11-01": {
+      "signature": "39f52644",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_636\u001f2026-11-01": {
+      "signature": "b08052e2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1042\u001f2026-11-01": {
+      "signature": "5d681109",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2424\u001f2026-11-01": {
+      "signature": "7f5c8468",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elenanersesova\u001fhttps://vk.com/wall707817181_809\u001f2026-11-01": {
+      "signature": "b0b4a4d8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2110\u001f2026-11-01": {
+      "signature": "8a00b5d5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1110\u001f2026-11-01": {
+      "signature": "1c8033f5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonovalp1\u001fhttps://vk.com/wall486801117_929\u001f2026-11-01": {
+      "signature": "7de83fd1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1189\u001f2026-11-01": {
+      "signature": "41528718",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_624\u001f2026-11-01": {
+      "signature": "dd87ea69",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1021\u001f2026-11-01": {
+      "signature": "d5984aa2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_839\u001f2026-11-01": {
+      "signature": "d5ce100c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1109\u001f2026-10-31": {
+      "signature": "81b14a1d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_402\u001f2026-10-31": {
+      "signature": "622d491e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_355\u001f2026-10-31": {
+      "signature": "9f946061",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_364\u001f2026-10-31": {
+      "signature": "f922ea5a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1406\u001f2026-10-31": {
+      "signature": "f28619f1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_980\u001f2026-10-31": {
+      "signature": "5137aa65",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_838\u001f2026-10-31": {
+      "signature": "4e9d37ad",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1064\u001f2026-10-30": {
+      "signature": "ccc044e9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_756\u001f2026-10-30": {
+      "signature": "cecccb98",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1051\u001f2026-10-30": {
+      "signature": "61f4ea5f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2109\u001f2026-10-30": {
+      "signature": "e9ca7754",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1108\u001f2026-10-30": {
+      "signature": "aa0cd8d3",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonovalp1\u001fhttps://vk.com/wall486801117_928\u001f2026-10-30": {
+      "signature": "112e0679",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1188\u001f2026-10-30": {
+      "signature": "c21bfda0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_623\u001f2026-10-30": {
+      "signature": "28bbb423",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1222\u001f2026-10-30": {
+      "signature": "86eaa68f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_363\u001f2026-10-30": {
+      "signature": "6f0b2b4a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1674\u001f2026-10-30": {
+      "signature": "8370b7f7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elina_sherstyuk\u001fhttps://vk.com/wall3599956_2216\u001f2026-10-30": {
+      "signature": "3ddc44ae",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_635\u001f2026-10-29": {
+      "signature": "7cad6d56",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_634\u001f2026-10-29": {
+      "signature": "7e6aeab1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_408\u001f2026-10-29": {
+      "signature": "1fafef52",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_583\u001f2026-10-29": {
+      "signature": "d7d9a3e0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_582\u001f2026-10-29": {
+      "signature": "3eaade33",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_581\u001f2026-10-29": {
+      "signature": "4ae53666",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_828\u001f2026-10-29": {
+      "signature": "16827985",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5431\u001f2026-10-29": {
+      "signature": "30801c97",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5430\u001f2026-10-29": {
+      "signature": "daf4cdb4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5429\u001f2026-10-29": {
+      "signature": "3f373b12",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_633\u001f2026-10-28": {
+      "signature": "5b5e3465",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalyamikhareva\u001fhttps://vk.com/wall709054480_1063\u001f2026-10-28": {
+      "signature": "6e99e27f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_754\u001f2026-10-28": {
+      "signature": "c812a255",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_753\u001f2026-10-28": {
+      "signature": "91dd3578",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_752\u001f2026-10-28": {
+      "signature": "4a18d4af",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_419\u001f2026-10-28": {
+      "signature": "ab1f70c8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_418\u001f2026-10-28": {
+      "signature": "295cacbf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1050\u001f2026-10-28": {
+      "signature": "4e6ef313",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1049\u001f2026-10-28": {
+      "signature": "70ab2c99",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1048\u001f2026-10-28": {
+      "signature": "643a91da",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2420\u001f2026-10-28": {
+      "signature": "dc5188c0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elenanersesova\u001fhttps://vk.com/wall707817181_807\u001f2026-10-28": {
+      "signature": "346d3ffa",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2108\u001f2026-10-28": {
+      "signature": "7706b150",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1107\u001f2026-10-28": {
+      "signature": "77351625",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonovalp1\u001fhttps://vk.com/wall486801117_927\u001f2026-10-28": {
+      "signature": "cba7a957",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1187\u001f2026-10-28": {
+      "signature": "c50b223a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_622\u001f2026-10-28": {
+      "signature": "82d2d557",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1020\u001f2026-10-28": {
+      "signature": "b10ad1b9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_401\u001f2026-10-28": {
+      "signature": "3e0adeb5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_400\u001f2026-10-28": {
+      "signature": "b92aaa46",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_441\u001f2026-10-28": {
+      "signature": "cc2a0860",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_407\u001f2026-10-28": {
+      "signature": "b91988c2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1005\u001f2026-10-28": {
+      "signature": "11e2bca6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ifadeeva2022\u001fhttps://vk.com/wall710292385_1188\u001f2026-10-28": {
+      "signature": "8faf0394",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_580\u001f2026-10-28": {
+      "signature": "7b014518",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1221\u001f2026-10-28": {
+      "signature": "dc52b9cd",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1033\u001f2026-10-28": {
+      "signature": "3c6b41b5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_353\u001f2026-10-28": {
+      "signature": "d8bd8289",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_362\u001f2026-10-28": {
+      "signature": "d3aa780e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1403\u001f2026-10-28": {
+      "signature": "d1a61ae8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_978\u001f2026-10-28": {
+      "signature": "35471d60",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1672\u001f2026-10-28": {
+      "signature": "a63613ba",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_836\u001f2026-10-28": {
+      "signature": "d8182075",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_751\u001f2026-10-27": {
+      "signature": "564a48c9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1047\u001f2026-10-27": {
+      "signature": "7e4793b0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1032\u001f2026-10-27": {
+      "signature": "b7663c6d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_361\u001f2026-10-27": {
+      "signature": "cbe61bc0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1402\u001f2026-10-27": {
+      "signature": "59b432f4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_977\u001f2026-10-27": {
+      "signature": "3fe17dbe",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_355\u001f2026-10-27": {
+      "signature": "774915da",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1671\u001f2026-10-27": {
+      "signature": "07f9b894",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_835\u001f2026-10-27": {
+      "signature": "28dbfd4f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1669\u001f2026-10-25": {
+      "signature": "090e750f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5428\u001f2026-10-25": {
+      "signature": "88f1fb71",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_632\u001f2026-10-23": {
+      "signature": "889e2579",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_750\u001f2026-10-23": {
+      "signature": "68737726",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.sezemov\u001fhttps://vk.com/wall701986008_749\u001f2026-10-23": {
+      "signature": "54f362e8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_414\u001f2026-10-23": {
+      "signature": "97f06bf4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonuvarov90\u001fhttps://vk.com/wall555917695_413\u001f2026-10-23": {
+      "signature": "df10a395",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "azizakabulovnachuganova\u001fhttps://vk.com/wall206244317_1046\u001f2026-10-23": {
+      "signature": "81b657bb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_440\u001f2026-10-23": {
+      "signature": "293eda58",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_439\u001f2026-10-23": {
+      "signature": "34294098",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_406\u001f2026-10-23": {
+      "signature": "95b4cf6e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_405\u001f2026-10-23": {
+      "signature": "8fdca65f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1004\u001f2026-10-23": {
+      "signature": "630155e2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1003\u001f2026-10-23": {
+      "signature": "ecc70717",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_579\u001f2026-10-23": {
+      "signature": "a1250abf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "olga_podolskay\u001fhttps://vk.com/wall544486561_578\u001f2026-10-23": {
+      "signature": "1eaa5da8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1400\u001f2026-10-23": {
+      "signature": "ecf5528f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1399\u001f2026-10-23": {
+      "signature": "62c8b35c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_827\u001f2026-10-23": {
+      "signature": "05841a56",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1220\u001f2026-10-23": {
+      "signature": "a9a53f51",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1029\u001f2026-10-23": {
+      "signature": "dc323e51",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_360\u001f2026-10-23": {
+      "signature": "d232cdcb",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1401\u001f2026-10-23": {
+      "signature": "0bd0415d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_976\u001f2026-10-23": {
+      "signature": "ee9e13a9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_834\u001f2026-10-23": {
+      "signature": "80ee5c0c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_833\u001f2026-10-23": {
+      "signature": "8d6a3c0d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5427\u001f2026-10-23": {
+      "signature": "b53c1b2e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5426\u001f2026-10-23": {
+      "signature": "98ad3bb5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1120\u001f2026-10-23": {
+      "signature": "d91bf56c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_631\u001f2026-10-22": {
+      "signature": "e0fcd2e5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_630\u001f2026-10-22": {
+      "signature": "e49e6afa",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2169\u001f2026-10-22": {
+      "signature": "28371a3d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2418\u001f2026-10-22": {
+      "signature": "d2af174d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2416\u001f2026-10-22": {
+      "signature": "57743c4f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_779\u001f2026-10-22": {
+      "signature": "978298b1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2107\u001f2026-10-22": {
+      "signature": "2213603b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1106\u001f2026-10-22": {
+      "signature": "e477aa90",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "antonovalp1\u001fhttps://vk.com/wall486801117_925\u001f2026-10-22": {
+      "signature": "e04b7e87",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1185\u001f2026-10-22": {
+      "signature": "68a26f7e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1018\u001f2026-10-22": {
+      "signature": "2b92aa44",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_399\u001f2026-10-22": {
+      "signature": "e818856b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_398\u001f2026-10-22": {
+      "signature": "e32e8d20",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_404\u001f2026-10-22": {
+      "signature": "963cfdf1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1002\u001f2026-10-22": {
+      "signature": "24fb2109",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1398\u001f2026-10-22": {
+      "signature": "ac722a9a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_826\u001f2026-10-22": {
+      "signature": "b8df3f74",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_352\u001f2026-10-22": {
+      "signature": "ff7ad064",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1119\u001f2026-10-22": {
+      "signature": "ca66f829",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1117\u001f2026-10-22": {
+      "signature": "0f06ec83",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anna_ezhkova\u001fhttps://vk.com/wall162151344_490\u001f2026-10-21": {
+      "signature": "095e43a0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "gontsova71\u001fhttps://vk.com/wall710412055_1190\u001f2026-10-21": {
+      "signature": "eefde7be",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_586\u001f2026-10-21": {
+      "signature": "8f2424f9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_1001\u001f2026-10-21": {
+      "signature": "7140819b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1397\u001f2026-10-21": {
+      "signature": "58b94240",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_825\u001f2026-10-21": {
+      "signature": "86cf337e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_359\u001f2026-10-21": {
+      "signature": "43232fb9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1400\u001f2026-10-21": {
+      "signature": "5872dda8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1668\u001f2026-10-21": {
+      "signature": "4a08a310",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "yulia_sedacheva\u001fhttps://vk.com/wall719523301_832\u001f2026-10-21": {
+      "signature": "a6c557d8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5425\u001f2026-10-21": {
+      "signature": "35cbcef6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1116\u001f2026-10-21": {
+      "signature": "648ffccf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1114\u001f2026-10-21": {
+      "signature": "247c677d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_599\u001f2026-10-21": {
+      "signature": "9b9ae9aa",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1219\u001f2026-10-20": {
+      "signature": "58bd3ba6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2164\u001f2026-10-19": {
+      "signature": "cd178830",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1113\u001f2026-10-19": {
+      "signature": "ad573a09",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nvzausaeva\u001fhttps://vk.com/wall708798431_1112\u001f2026-10-19": {
+      "signature": "b83b1a1e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_598\u001f2026-10-19": {
+      "signature": "9842cedc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_595\u001f2026-10-19": {
+      "signature": "4640925b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_629\u001f2026-10-18": {
+      "signature": "bb4db773",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2162\u001f2026-10-18": {
+      "signature": "632e0a3b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_777\u001f2026-10-18": {
+      "signature": "03036d54",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_402\u001f2026-10-18": {
+      "signature": "5177023c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_999\u001f2026-10-18": {
+      "signature": "5e8cc65a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1395\u001f2026-10-18": {
+      "signature": "6b632e92",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5424\u001f2026-10-18": {
+      "signature": "68722941",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_776\u001f2026-10-16": {
+      "signature": "7d4f0521",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.korostilenko\u001fhttps://vk.com/wall710236608_798\u001f2026-10-16": {
+      "signature": "bdef802b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_592\u001f2026-10-16": {
+      "signature": "482f71b9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_628\u001f2026-10-15": {
+      "signature": "0462fa19",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1040\u001f2026-10-15": {
+      "signature": "c5a33ad3",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_775\u001f2026-10-15": {
+      "signature": "f463222b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1104\u001f2026-10-15": {
+      "signature": "b978f680",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.aleksander88\u001fhttps://vk.com/wall522441436_395\u001f2026-10-15": {
+      "signature": "ccab6625",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_437\u001f2026-10-15": {
+      "signature": "e76b4d61",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_401\u001f2026-10-15": {
+      "signature": "3dca7178",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_998\u001f2026-10-15": {
+      "signature": "cc193a5c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1394\u001f2026-10-15": {
+      "signature": "cbd92544",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5423\u001f2026-10-15": {
+      "signature": "b0f1e6c9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_627\u001f2026-10-14": {
+      "signature": "6e6d2fc5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2122\u001f2026-10-14": {
+      "signature": "f8580b5d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2121\u001f2026-10-14": {
+      "signature": "87402a3c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "elena_laplanche\u001fhttps://vk.com/wall708827390_1725\u001f2026-10-14": {
+      "signature": "b124237c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "gontsova71\u001fhttps://vk.com/wall710412055_1187\u001f2026-10-14": {
+      "signature": "cd7ecab6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "e.korostilenko\u001fhttps://vk.com/wall710236608_797\u001f2026-10-14": {
+      "signature": "553d09b8",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ln_skorlupkina\u001fhttps://vk.com/wall728264699_356\u001f2026-10-14": {
+      "signature": "1e526900",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rezkovvlad\u001fhttps://vk.com/wall18915592_1662\u001f2026-10-14": {
+      "signature": "0c4813fe",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_591\u001f2026-10-14": {
+      "signature": "b848643a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_590\u001f2026-10-14": {
+      "signature": "5ebe70c1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_589\u001f2026-10-14": {
+      "signature": "42aac21f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_626\u001f2026-10-13": {
+      "signature": "80c7ed5d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_625\u001f2026-10-13": {
+      "signature": "e63e84f0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_1001\u001f2026-10-13": {
+      "signature": "f8819a5a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_volkov77\u001fhttps://vk.com/wall709132354_556\u001f2026-10-13": {
+      "signature": "cd04fb37",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_399\u001f2026-10-13": {
+      "signature": "51662fb2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_996\u001f2026-10-13": {
+      "signature": "98e0f3a4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ifadeeva2022\u001fhttps://vk.com/wall710292385_1178\u001f2026-10-13": {
+      "signature": "4cc6e3a1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1392\u001f2026-10-13": {
+      "signature": "f1ccb5d4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_822\u001f2026-10-13": {
+      "signature": "ce00e19c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_588\u001f2026-10-13": {
+      "signature": "abbf9c73",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_587\u001f2026-10-13": {
+      "signature": "5485ff5e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_586\u001f2026-10-13": {
+      "signature": "cbe6aa95",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "gontsova71\u001fhttps://vk.com/wall710412055_1186\u001f2026-10-12": {
+      "signature": "560a97c7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_1000\u001f2026-10-12": {
+      "signature": "cc8f6758",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_585\u001f2026-10-12": {
+      "signature": "238cf8be",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ptitsynakk\u001fhttps://vk.com/wall980194_2099\u001f2026-10-07": {
+      "signature": "889952f4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1180\u001f2026-10-07": {
+      "signature": "b0d73552",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_618\u001f2026-10-07": {
+      "signature": "21d03c27",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1013\u001f2026-10-07": {
+      "signature": "558216e6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anna_ezhkova\u001fhttps://vk.com/wall162151344_486\u001f2026-10-06": {
+      "signature": "7126c342",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_624\u001f2026-10-03": {
+      "signature": "a5e86754",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kutaysovanv\u001fhttps://vk.com/wall641568763_617\u001f2026-10-02": {
+      "signature": "547e30a7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1213\u001f2026-09-30": {
+      "signature": "0fdc8465",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1212\u001f2026-09-28": {
+      "signature": "f298f905",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_998\u001f2026-09-27": {
+      "signature": "84a22ff7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2098\u001f2026-09-26": {
+      "signature": "a120a476",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "kiryanova_ln\u001fhttps://vk.com/wall516890540_398\u001f2026-09-25": {
+      "signature": "c90a53d0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_995\u001f2026-09-25": {
+      "signature": "6cf21f88",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "natalia.abbasova\u001fhttps://vk.com/wall25822405_1391\u001f2026-09-25": {
+      "signature": "c26ce438",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_821\u001f2026-09-25": {
+      "signature": "2c0a5990",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "graskinss\u001fhttps://vk.com/wall708830211_1209\u001f2026-09-23": {
+      "signature": "470c888a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andrey.abertasov\u001fhttps://vk.com/wall455808255_584\u001f2026-09-22": {
+      "signature": "e1016415",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anatoli_viktorovich_potiomkin\u001fhttps://vk.com/wall707496242_622\u001f2026-09-19": {
+      "signature": "22a1d55d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_583\u001f2026-09-19": {
+      "signature": "9b801a2d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "dmitry_volkov77\u001fhttps://vk.com/wall709132354_549\u001f2026-09-17": {
+      "signature": "31da3c7d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_582\u001f2026-09-17": {
+      "signature": "4595fecc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_581\u001f2026-09-17": {
+      "signature": "a84dcf49",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2090\u001f2026-09-16": {
+      "signature": "0f89bc9f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_579\u001f2026-09-16": {
+      "signature": "a1e70aa3",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_578\u001f2026-09-15": {
+      "signature": "c53c6c93",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_994\u001f2026-09-14": {
+      "signature": "7b18cff5",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_992\u001f2026-09-06": {
+      "signature": "43c347ae",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_345\u001f2026-09-05": {
+      "signature": "e3074641",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2132\u001f2026-08-30": {
+      "signature": "0ab24025",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2131\u001f2026-08-22": {
+      "signature": "0619cdd1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3654\u001f2026-08-21": {
+      "signature": "73f11e3a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1223\u001f2026-08-14": {
+      "signature": "09fea3d2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1222\u001f2026-08-14": {
+      "signature": "fcb76e95",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_409\u001f2026-08-09": {
+      "signature": "f1fddc1c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_397\u001f2026-08-05": {
+      "signature": "25e35a4c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_408\u001f2026-07-28": {
+      "signature": "9522dc19",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_407\u001f2026-07-28": {
+      "signature": "d021b77c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_406\u001f2026-07-28": {
+      "signature": "05444acf",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1004\u001f2026-07-24": {
+      "signature": "9ee0b38b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1003\u001f2026-07-24": {
+      "signature": "c37d0842",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1002\u001f2026-07-24": {
+      "signature": "644ec55d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_396\u001f2026-07-08": {
+      "signature": "48b135df",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_395\u001f2026-07-08": {
+      "signature": "e2e45532",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_394\u001f2026-07-01": {
+      "signature": "5c895434",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_393\u001f2026-06-30": {
+      "signature": "eadb9512",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_392\u001f2026-06-30": {
+      "signature": "ed755e65",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_391\u001f2026-06-29": {
+      "signature": "e4b8b8e6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andreymordovin\u001fhttps://vk.com/wall4765626_4746\u001f2026-06-28": {
+      "signature": "abb06f27",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_390\u001f2026-06-27": {
+      "signature": "02193bef",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_389\u001f2026-06-27": {
+      "signature": "1256613d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_388\u001f2026-06-27": {
+      "signature": "fd924a5a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "anna_ezhkova\u001fhttps://vk.com/wall162151344_421\u001f2026-06-27": {
+      "signature": "7911e6e1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andreymordovin\u001fhttps://vk.com/wall4765626_4742\u001f2026-06-26": {
+      "signature": "d0ad0c91",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_387\u001f2026-06-24": {
+      "signature": "c4097020",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_386\u001f2026-06-23": {
+      "signature": "8f1c7988",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_385\u001f2026-06-22": {
+      "signature": "892bbaf4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_384\u001f2026-06-18": {
+      "signature": "15672bfc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_383\u001f2026-06-18": {
+      "signature": "90566d61",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_382\u001f2026-06-18": {
+      "signature": "077f29c6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_381\u001f2026-06-16": {
+      "signature": "60ff5089",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_380\u001f2026-06-15": {
+      "signature": "d8a56c05",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_379\u001f2026-06-15": {
+      "signature": "5ab0b4b9",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "baranchikova_natalia\u001fhttps://vk.com/wall708828941_378\u001f2026-06-13": {
+      "signature": "1a5836d0",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2080\u001f2026-06-12": {
+      "signature": "e968be89",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andreymordovin\u001fhttps://vk.com/wall4765626_4730\u001f2026-06-12": {
+      "signature": "59044759",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2077\u001f2026-06-08": {
+      "signature": "a7e4e53a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_518\u001f2026-05-29": {
+      "signature": "b6e8dfa2",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_517\u001f2026-05-29": {
+      "signature": "4435722b",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_332\u001f2026-05-25": {
+      "signature": "e254c220",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_807\u001f2026-03-23": {
+      "signature": "0c39119e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "andreymordovin\u001fhttps://vk.com/wall4765626_4716\u001f2026-03-06": {
+      "signature": "8ea6861d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "ms_zotova\u001fhttps://vk.com/wall837394_2447\u001f2025-08-18": {
+      "signature": "e1990f04",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2690\u001f2025-08-18": {
+      "signature": "607760be",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2678\u001f2024-09-05": {
+      "signature": "9f66983c",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_394\u001f2024-08-17": {
+      "signature": "0e0ad239",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2677\u001f2024-07-11": {
+      "signature": "6dba9a58",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2670\u001f2024-06-07": {
+      "signature": "112b4c07",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2669\u001f2024-05-31": {
+      "signature": "b5913d6f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2665\u001f2024-05-20": {
+      "signature": "68eff37d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2664\u001f2024-05-19": {
+      "signature": "349df312",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_379\u001f2024-05-18": {
+      "signature": "674535cc",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_297\u001f2024-05-11": {
+      "signature": "10454b3d",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2663\u001f2024-05-11": {
+      "signature": "028826c7",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_294\u001f2024-05-07": {
+      "signature": "bce33965",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_358\u001f2023-12-10": {
+      "signature": "a9a35d0a",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "levshtanov86\u001fhttps://vk.com/wall1913400_541\u001f2023-06-24": {
+      "signature": "84705948",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_342\u001f2023-06-12": {
+      "signature": "6a4acc5e",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_331\u001f2023-05-14": {
+      "signature": "b78a5c6f",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "liudmila_zapl\u001fhttps://vk.com/wall708971152_228\u001f2023-04-01": {
+      "signature": "d28222ae",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "liudmila_zapl\u001fhttps://vk.com/wall708971152_222\u001f2023-01-24": {
+      "signature": "70ee21a4",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "Текст не получен.",
+      "evidence": "",
+      "method": "metadata"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1674\u001f2026-11-22": {
+      "signature": "0428eb76",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное сообщение о важности раздельного сбора отходов и правилах обращения с мусором, адресованное жителям муниципального округа.",
+      "evidence": "Чистота нашего района начинается с простых повседневных привычек. Одна из них — правильное обращение с бытовыми отходами.",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2565\u001f2026-11-22": {
+      "signature": "6db739aa",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает об инновационных технологиях и роботизированных системах, используемых в московских парках, без участия депутата или обсуждения вопросов местного значения.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "golubevaev947\u001fhttps://vk.com/wall225403364_1199\u001f2026-11-22": {
+      "signature": "935126cb",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация сообщает о запланированном строительстве детского сада, описывает концепцию здания и благоустройство территории, указывает срок завершения строительства. Нет признаков д",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1673\u001f2026-11-21": {
+      "signature": "4cd9d687",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное руководство по проверке квитанций ЖКХ, советы и рекомендации для жителей.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_608\u001f2026-11-21": {
+      "signature": "a366f211",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация посвящена юбилею школы и личным воспоминаниям автора, не содержит информации о депутатской деятельности.",
+      "evidence": "Есть места, куда всегда хочется возвращаться — туда, где ты делал первые шаги в профессии, где научили верить в себя и где до сих пор горит свет в знакомых окнах.",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_906\u001f2026-11-21": {
+      "signature": "7ea0f007",
+      "categories": [
+        "walk"
+      ],
+      "confidence": 1,
+      "explanation": "Текст описывает факт проведения территориального обхода с участием депутата и других представителей власти, а также активное взаимодействие с жителями.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1099\u001f2026-11-21": {
+      "signature": "3c05fd96",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация сообщает о завершении музыкального фестиваля и объявлении победителей, не относясь ни к одной из заданных категорий.",
+      "evidence": "В библиотеке № 140 назвали победителей музыкального фестиваля",
+      "method": "ai"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_793\u001f2026-11-21": {
+      "signature": "97bb12fc",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает о помощи, оказанной жителям, но не связана с деятельностью депутата или муниципальной властью.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2563\u001f2026-11-21": {
+      "signature": "6a558d57",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация содержит информационные советы от Госавтоинспекции по безопасному вождению, не связана с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2562\u001f2026-11-21": {
+      "signature": "103db130",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация содержит советы по улучшению кровообращения и самочувствия, ориентирована на широкую аудиторию, не связана с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2561\u001f2026-11-21": {
+      "signature": "00f18f1f",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация посвящена конкурсу и достижениям учеников школы, не связана с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aleinikovayv\u001fhttps://vk.com/wall5923205_1123\u001f2026-11-21": {
+      "signature": "7c5535f2",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Текст представляет собой поздравление и отчёт о состоявшемся юбилейном концерте, не связанный с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1031\u001f2026-11-21": {
+      "signature": "ca3945ce",
+      "categories": [
+        "walk",
+        "inspect",
+        "appeal",
+        "plan"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат участвовал в территориальном обходе, обсуждались вопросы уборки и благоустройства, давались разъяснения по обращениям жителей, упомянут следующий обход.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5997\u001f2026-11-21": {
+      "signature": "ef151543",
+      "categories": [
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой приглашение на мероприятие — день открытых дверей для родителей будущих первоклассников.",
+      "evidence": "Приглашаем семьи будущих первоклассников познакомиться со Школой №1998 «Лукоморье» и сделать первый шаг в школьную жизнь ребёнка ✨",
+      "method": "ai"
+    },
+    "gontsova71\u001fhttps://vk.com/wall710412055_1211\u001f2026-11-21": {
+      "signature": "3e8feac5",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает о передаче гуманитарной помощи, но не указывает на личное участие депутата или фактическую деятельность муниципального уровня.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "annavolskaya\u001fhttps://vk.com/wall611229514_2309\u001f2026-11-21": {
+      "signature": "fdf31702",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация описывает завершённое мероприятие — отчётно-выборную конференцию, с перечислением всех этапов и итогов.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_996\u001f2026-11-21": {
+      "signature": "3294ce7a",
+      "categories": [
+        "information",
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация содержит информацию о ценности географии и приглашение к участию в просветительской акции 'Географический диктант', что соответствует категориям информации и анонса.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "andrianov001\u001fhttps://vk.com/wall58854462_5443\u001f2026-11-21": {
+      "signature": "181608c3",
+      "categories": [
+        "information",
+        "plan"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции и планы на будущее, включает статистические данные и достижения, а также анонс подготовки к будущим выборам.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1671\u001f2026-11-20": {
+      "signature": "63150056",
+      "categories": [
+        "information",
+        "plan"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции и планы на будущее, включает статистические данные и информацию о деятельности партии.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1670\u001f2026-11-20": {
+      "signature": "21dbe712",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное руководство по предотвращению сырости и плесени в квартирах, с рекомендациями и контактами для обращений.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1445\u001f2026-11-20": {
+      "signature": "bdc1eeb6",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции партии, перечисляет прошедшие мероприятия и планы на будущее.",
+      "evidence": "Принял участие в 38-й отчётно-выборной конференции местного отделения партии «Единая Россия» ЮАО.",
+      "method": "ai"
+    },
+    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1444\u001f2026-11-20": {
+      "signature": "97297503",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой приглашение подписаться на личный канал автора, где он делится информацией о своей депутатской деятельности. Нет признаков других категорий.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena_laplanche\u001fhttps://vk.com/wall708827390_1743\u001f2026-11-20": {
+      "signature": "afad0492",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции «ЦифрАтест», которая предлагает жителям России проверить свои цифровые навыки.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "andreymordovin\u001fhttps://vk.com/wall4765626_4835\u001f2026-11-20": {
+      "signature": "47701e2c",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции «ЦифрАтест», которая предлагает жителям России проверить свои цифровые навыки.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "galinadolgashova\u001fhttps://vk.com/wall638282157_1572\u001f2026-11-20": {
+      "signature": "03eedc6e",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции «ЦифрАтест», которая предлагает жителям России проверить свои цифровые навыки.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "anna_ezhkova\u001fhttps://vk.com/wall162151344_503\u001f2026-11-20": {
+      "signature": "3728ff25",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции 'ЦифрАтест', которая предлагает жителям России проверить свои цифровые навыки.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nadezhda_kuskova\u001fhttps://vk.com/wall710102837_1120\u001f2026-11-20": {
+      "signature": "55c78448",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о Всероссийской акции 'ЦифрАтест', которая предлагает жителям России проверить свои цифровые навыки.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vidutinaov\u001fhttps://vk.com/wall5848362_938\u001f2026-11-20": {
+      "signature": "9dde46fd",
+      "categories": [
+        "event"
+      ],
+      "confidence": 0.9,
+      "explanation": "Депутат делится впечатлениями о прошедшем фестивале, подчёркивая важность мероприятия и благодарит участников.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vidutinaov\u001fhttps://vk.com/wall5848362_937\u001f2026-11-20": {
+      "signature": "d1e105f5",
+      "categories": [
+        "event",
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Текст описывает отчетно-выборную конференцию местного отделения партии 'Единая Россия' в ЮАО, перечисляет достижения и планы, что соответствует категориям event и information.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_905\u001f2026-11-20": {
+      "signature": "3b1c0d98",
+      "categories": [
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация содержит приглашение и подробную информацию о предстоящем мероприятии, включая дату, место, возраст участников и контактные данные.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_904\u001f2026-11-20": {
+      "signature": "40bb1d34",
+      "categories": [
+        "information",
+        "plan"
+      ],
+      "confidence": 1,
+      "explanation": "Текст представляет собой отчет о прошедшей конференции и планы на будущее, включает статистические данные и информацию о деятельности партии.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_903\u001f2026-11-20": {
+      "signature": "0a5b11d6",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация анонсирует конкретное мероприятие — концерт, посвящённый Дню матери.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_902\u001f2026-11-20": {
+      "signature": "744ab976",
+      "categories": [
+        "walk"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация анонсирует территориальный обход района с участием депутата и главы управы, указаны адреса осмотра и приглашение жителям.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1097\u001f2026-11-20": {
+      "signature": "65fd491f",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Депутат сообщает о своём участии в отчётно-выборной конференции, перечисляет выступающих, итоги выборов и запланированные мероприятия.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1096\u001f2026-11-20": {
+      "signature": "2325eb69",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация состоит из одного непонятного предложения, не относящегося ни к одной тематической категории.",
+      "evidence": "Самое главное слово !",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1095\u001f2026-11-20": {
+      "signature": "539f201a",
+      "categories": [
+        "information"
+      ],
+      "confidence": 0.9,
+      "explanation": "Депутат делится информацией о взаимодействии с молодежью, рассказывает о мероприятии и приглашает других участвовать.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ekaterina.tyutyunnikova\u001fhttps://vk.com/wall24071303_2435\u001f2026-11-20": {
+      "signature": "d8e721aa",
+      "categories": [
+        "plan"
+      ],
+      "confidence": 1,
+      "explanation": "Текст содержит обсуждение планов на 2027 год, включая борьбу с коррупцией, профилактику терроризма и утверждение поправок к бюджету.",
+      "evidence": "❗️Планы на 2027 год: борьба с коррупцией, меры по профилактике терроризма и экстремизма.",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2560\u001f2026-11-20": {
+      "signature": "2d4951a7",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация информирует о завершении набора в группы подготовки к олимпиадам, не содержит информации о деятельности депутата.",
+      "evidence": "В Москве завершился набор в группы по подготовке к Всероссийской олимпиаде школьников.",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2559\u001f2026-11-20": {
+      "signature": "2eeb423d",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой информационные рекомендации по безопасности дорожного движения для пешеходов.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2558\u001f2026-11-20": {
+      "signature": "73d756fb",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает историю спасения животного на дороге сотрудниками ГИБДД, не связана с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2557\u001f2026-11-20": {
+      "signature": "90b08237",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает об экскурсионном мероприятии для школьников, не связано с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2556\u001f2026-11-20": {
+      "signature": "2435d4bb",
+      "categories": [
+        "event"
+      ],
+      "confidence": 0.9,
+      "explanation": "Депутат сообщает о своём участии в конференции партии 'Единая Россия', где был представлен проект 'Броня веры'. Это факт участия в мероприятии.",
+      "evidence": "Вчера в префектуре Южного административного округа Москвы состоялась конференция партии «Единая Россия», в рамках которой был представлен проект «Броня веры».",
+      "method": "ai"
+    },
+    "rytovsergey\u001fhttps://vk.com/wall34433606_1030\u001f2026-11-20": {
+      "signature": "b2114dea",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация посвящена церемонии награждения Патриарха Кирилла знаком почетного гражданина Москвы и поздравления с юбилеем, не относится ни к одной из заданных категорий.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "olga_belousova1998\u001fhttps://vk.com/wall645695590_5996\u001f2026-11-20": {
+      "signature": "7089aa48",
+      "categories": [
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой приглашение на мероприятие для детей, организованное школой, с указанием даты, времени и стоимости.",
+      "evidence": "Школа №1998 «Лукоморье» приглашает ребят на первую «Предновогоднюю субботу» — «ФАБРИКУ НОВОГОДНЕГО НАСТРОЕНИЯ»!",
+      "method": "ai"
+    },
+    "vlasenkoau\u001fhttps://vk.com/wall289588839_2416\u001f2026-11-20": {
+      "signature": "df9a3385",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация сообщает о проведении отчётно-выборной конференции, выступлениях и итогах голосования, не затрагивая тематики встреч с жителями, территориальных обходов, контроля работ,",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vlasenkoau\u001fhttps://vk.com/wall289588839_2415\u001f2026-11-20": {
+      "signature": "7ddd26dd",
+      "categories": [
+        "meet"
+      ],
+      "confidence": 1,
+      "explanation": "Текст описывает встречу депутата с Советом ветеранов, обсуждение различных вопросов и сбор помощи для бойцов.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "seregin1963\u001fhttps://vk.com/wall710315882_596\u001f2026-11-20": {
+      "signature": "fc538282",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация сообщает о состоявшемся мероприятии — отчётно-выборной конференции, с перечислением участников и итогов.",
+      "evidence": "19 ноября в Южном административном округе состоялась XXXVIII отчётно-выборная Конференция местного отделения партии «Единая Россия».",
+      "method": "ai"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1052\u001f2026-11-20": {
+      "signature": "6eb381b7",
+      "categories": [
+        "event",
+        "result"
+      ],
+      "confidence": 0.9,
+      "explanation": "Публикация описывает прошедшую конференцию и достигнутые результаты, подтверждая факт участия и итоги работы.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "galinazaykovskaya\u001fhttps://vk.com/wall468767151_1051\u001f2026-11-20": {
+      "signature": "a8bcd3b8",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация рассказывает о участии депутата в передаче гуманитарной помощи, но не относится ни к одной из заданных категорий.",
+      "evidence": "Участвовала в рамках благотворительной инициативы: совместно с руководителями социальной службы Южного округа ГБУ «Мой социальный помощник» была организована передача гуманитарной помощи в «Ангар спас",
+      "method": "ai"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1420\u001f2026-11-20": {
+      "signature": "f138c454",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой информационную справку об исторической значимости Красной площади, не содержит признаков активности депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena_fursova1\u001fhttps://vk.com/wall54273651_1419\u001f2026-11-20": {
+      "signature": "6f01d7f6",
+      "categories": [
+        "event"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация описывает факт участия автора в отчетно-выборной конференции 'Единой России', где состоялись выступления, награждения и обсуждение планов.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tkabanova2022\u001fhttps://vk.com/wall139769280_995\u001f2026-11-20": {
+      "signature": "5c4c0fe3",
+      "categories": [
+        "information",
+        "plan"
+      ],
+      "confidence": 0.9,
+      "explanation": "Публикация содержит информацию о прошедшей конференции и общих направлениях деятельности, а также планы на будущее сотрудничество и работу с населением.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1669\u001f2026-11-19": {
+      "signature": "67883b92",
+      "categories": [
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой приглашение посетить открытие катка, содержит информацию о датах открытия и начала продажи билетов.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aabulatov\u001fhttps://vk.com/wall352446434_1668\u001f2026-11-19": {
+      "signature": "9e437ef9",
+      "categories": [
+        "information"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой информационное руководство для жителей по действиям при проблемах с отоплением, не содержит сведений о личных мероприятиях депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_900\u001f2026-11-19": {
+      "signature": "b1039b96",
+      "categories": [],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой новогодний совет, не связанный с деятельностью депутата.",
+      "evidence": "Предложите ребенку написать письмо Деду Морозу, да и сами отправьте свое желание)",
+      "method": "ai"
+    },
+    "elena.rubtsovanazarova\u001fhttps://vk.com/wall711997762_899\u001f2026-11-19": {
+      "signature": "923180db",
+      "categories": [
+        "information",
+        "appeal"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация информирует жителей о проблеме с освещением в лифте и даёт рекомендации по подаче заявок, а также сообщает о намерении депутата направить собственный запрос.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "tishkovaea\u001fhttps://vk.com/wall451321637_1094\u001f2026-11-19": {
+      "signature": "33265aec",
+      "categories": [
+        "walk"
+      ],
+      "confidence": 1,
+      "explanation": "Текст объявляет о запланированном территориальном обходе с участием главы управы, указаны адреса осмотра и приглашение жителей.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "shmakova_os\u001fhttps://vk.com/wall342305442_790\u001f2026-11-19": {
+      "signature": "70074216",
+      "categories": [
+        "plan"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация содержит информацию о планах на будущее: организация праздничных мероприятий, утверждение графика заседаний, обсуждение планов на 2027 год, принятие поправок к бюджету.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ilyasov_kn\u001fhttps://vk.com/wall710351480_2553\u001f2026-11-19": {
+      "signature": "5e5a2167",
+      "categories": [
+        "announcement"
+      ],
+      "confidence": 1,
+      "explanation": "Публикация представляет собой приглашение посетить выставку, указывая дату проведения, место и содержание экспозиции.",
+      "evidence": "",
+      "method": "ai"
+    }
+  }
 }

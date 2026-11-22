@@ -71,8 +71,15 @@ async function main(){
  if(!["GIGACHAT_API_PERS","GIGACHAT_API_B2B","GIGACHAT_API_CORP"].includes(SCOPE))throw Error("Invalid GIGACHAT_SCOPE");
  const data=readJSON("vk-posts.json",{posts:[]});
  const source=Array.isArray(data)?data:Array.isArray(data.posts)?data.posts:[];
- // Even with an empty feed, verify GigaChat credentials and TLS before reporting setup as available.
+ // Validate credentials and semantics in review branches without storing synthetic examples in the published cache.
  if(source.length===0)await getAccessToken();
+ if(process.env.GIGACHAT_SMOKE_TEST==="1"){
+  console.log("GigaChat semantic smoke test started (synthetic text only).");
+  const test=await askAI({text:"Сегодня я встретился с жителями дома и обсудил их жалобы на неработающее освещение во дворе. Обращение в управляющую компанию ещё только готовим. Проблема пока не решена.",date:"2026-11-23"});
+  if(!test.categories.includes("meet")||test.categories.includes("result")||!test.explanation)
+   throw Error("GigaChat semantic smoke test failed: expected meeting but not completed result");
+  console.log("GigaChat semantic smoke test passed; meaningful categories and explanation returned.");
+ }
  const previous=readJSON("ai-analysis.json",{posts:{}});
  const old=previous.posts||{};
  const result={},pending=[];

@@ -31,6 +31,9 @@ function extract(text){
   for(const [key,re] of Object.entries(rules)){
    if(key==="council"&&!heldCouncil)continue; // An announcement or cancelled session is not a held session.
    if(heldCouncil&&(key==="event"||(key==="meet"&&!residentMeeting.test(t))))continue;
+   // «Обсудили» само по себе — не доказательство личной встречи.
+   if(key==="meet"&&/обсудил[аи]?/iu.test(t)&&!residentMeeting.test(t)
+     &&!/(?:встретил(?:ся|ась|ись)|встреч[аиуеой]|пообщал(?:ся|ась|ись))/iu.test(t))continue;
    if(re.test(t))hits.push({key,evidence:t.slice(0,300),certainty:uncertain?"requires_review":"possible"});
   }
  }

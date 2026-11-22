@@ -19,7 +19,7 @@ from pathlib import Path
 
 API_VERSION = "5.199"
 MOSCOW = dt.timezone(dt.timedelta(hours=3))
-RETRYABLE_VK_CODES = {6, 9, 29}
+RETRYABLE_VK_CODES = {6, 9}
 QUOTA_CODES = {29}
 FATAL_AUTH_CODES = {5, 27, 111}
 

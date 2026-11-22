@@ -29,10 +29,13 @@ jobs:
           node-version: "22"
       - name: Analyze available public texts
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: "gpt-4.1-mini"
+          GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
+          GIGACHAT_MODEL: "GigaChat-2-Pro"
+          GIGACHAT_SCOPE: "GIGACHAT_API_PERS"
           AI_POST_LIMIT: "60"
-        run: node scripts/classify-activity-ai.mjs
+        run: |
+          node --check scripts/classify-activity-ai.mjs
+          node scripts/classify-activity-ai.mjs
       - name: Publish analysis cache
         run: |
           if git diff --quiet -- ai-analysis.json; then

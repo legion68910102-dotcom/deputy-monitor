@@ -35,7 +35,7 @@ function rosterName(profile){
 
 const icons={meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅"};
 let manualRuns=0,activeCategory=null,visibleLimit=60;
-function safeUrl(url){try{const u=new URL(String(url||""),location.href);return u.protocol==="https:"||u.protocol==="http:"?u.href:""}catch(e){return ""}}
+function safeUrl(url){const raw=String(url||"").trim();if(!/^https?:\/\//i.test(raw))return "";try{const u=new URL(raw);return u.protocol==="https:"||u.protocol==="http:"?u.href:""}catch(e){return ""}}
 function dateOnly(date){return String(date||"").slice(0,10)}
 function formatDate(date){const value=dateOnly(date);const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value);return m?m[3]+"."+m[2]+"."+m[1]:value||"Дата не указана"}
 const hasText=r=>String(r.text||"").trim().length>0;

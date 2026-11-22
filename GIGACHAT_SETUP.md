@@ -6,7 +6,8 @@
 1. Создайте проект GigaChat API в кабинете [Sber Developers](https://developers.sber.ru/docs/ru/gigachat/individuals-quickstart) и скопируйте **Authorization key**.
 2. В репозитории GitHub откройте **Settings → Secrets and variables → Actions → New repository secret**, укажите имя `GIGACHAT_AUTH_KEY`, а в значении — ключ авторизации GigaChat. Не добавляйте префикс `Basic`, если его нет в скопированном значении; скрипт обработает оба варианта.
 3. Откройте **Actions → AI classification of deputy publications → Run workflow**. Запуск по расписанию сохранён: дважды в день. Автоматический запуск происходит также при изменении `vk-posts.json`.
-4. Проверьте `ai-analysis.json`: поля `provider: "gigachat"`, `model`, `status`, `classified_posts`. На сайте откройте вкладку **🧠 Анализ**.
+4. Если GitHub Actions сообщает об ошибке проверки TLS-сертификата, скачайте корневой сертификат Минцифры **из официального источника**, сохраните PEM-текст в дополнительном секрете GitHub Actions `GIGACHAT_CA_PEM` и повторите запуск. Workflow автоматически подключит его через `NODE_EXTRA_CA_CERTS`, **не отключая** TLS-проверку. [Официальная инструкция GigaChat](https://developers.sber.ru/docs/ru/gigachat/certificates).
+5. Проверьте `ai-analysis.json`: поля `provider: "gigachat"`, `model`, `status`, `classified_posts`. На сайте откройте вкладку **🧠 Анализ**.
 
 Модель по умолчанию — `GigaChat-2-Pro`. Для смены модели измените `GIGACHAT_MODEL` в workflow. Для физических лиц по умолчанию применяется `GIGACHAT_API_PERS`; при другом договоре и тарифе используйте `GIGACHAT_API_B2B` или `GIGACHAT_API_CORP` согласно документации.
 
@@ -19,7 +20,7 @@
 ## Ограничения
 - Секрет GitHub Actions не передаётся в GitHub Pages, а личный импорт CSV хранится только в браузере. Эти публикации **не будут** анализироваться GigaChat, пока не появятся в общей серверной базе `vk-posts.json`.
 - **VK API настраивается отдельно.** Если `vk-posts.json` пуст, GigaChat выдаст `no_posts`, и на сайте не появятся выдуманные публикации.
-- Без `GIGACHAT_AUTH_KEY` классификация не запускается. Запросы к GigaChat не выполнялись и должны быть проверены после настройки секрета.
+- Без `GIGACHAT_AUTH_KEY` классификация не запускается. Запросы к GigaChat из этого изменения не выполнялись и должны быть проверены после настройки секрета. Даже при пустой ленте скрипт проверит OAuth-авторизацию.
 - Freemium для физлиц ограничен личным некоммерческим использованием. Для коммерческого использования проверьте действующие [условия GigaChat](https://developers.sber.ru/docs/ru/gigachat/tariffs/commercial).
 - При ошибках API используйте журнал GitHub Actions. Скрипт не публикует ключ и не отключает проверку TLS-сертификатов.
 

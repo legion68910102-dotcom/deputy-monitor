@@ -1,11 +1,7 @@
 name: Monitor VK posts (159 deputies)
 on:
   schedule:
-    - cron: '20 4,10,16,22 * * *'
-  push:
-    paths:
-      - 'scripts/import_vk_apify.py'
-      - 'vk-profiles.json'
+    - cron: '20 4 * * *'
   workflow_dispatch:
     inputs:
       batch_index:
@@ -42,7 +38,7 @@ jobs:
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           VK_BATCH_INDEX: ${{ inputs.batch_index }}
-          VK_FULL_SWEEP: ${{ github.event_name == 'push' }}
+          VK_FULL_SWEEP: 'false'
         run: python scripts/import_vk_apify.py
       - name: Commit verified results
         if: steps.config.outputs.configured == 'true'

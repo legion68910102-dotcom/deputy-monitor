@@ -81,15 +81,6 @@ main>section.topic-section:not(.collapsed)>.topic-body{display:block!important;v
 #ranking table td{padding:11px 9px}
 @media(max-width:650px){#ranking .ranking-groups{grid-template-columns:repeat(2,minmax(0,1fr))}#ranking .ranking-legend{font-size:12px}}
 
-/* Native ranking accordion: independent of JS topic sections on iPhone. */
-#ranking.ranking-independent,#report.ranking-independent{display:block!important;visibility:visible!important;height:auto!important;margin-top:16px}
-#ranking .ranking-native,#report .ranking-native{display:block!important;border:0;overflow:visible}
-#ranking .ranking-native,#report .ranking-native>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 16px;border:1px solid var(--line);border-radius:15px;background:white;box-shadow:0 3px 14px #17274808;cursor:pointer;list-style:none;font-size:17px;font-weight:800;color:var(--ink)}
-#ranking .ranking-native,#report .ranking-native>summary::-webkit-details-marker{display:none}
-#ranking .ranking-native,#report .ranking-native>summary span{color:#5269a2;font-size:24px}
-#ranking .ranking-native,#report .ranking-native:not([open])>summary span{transform:rotate(-90deg)}
-#ranking .ranking-native,#report .ranking-native-body{display:block!important;visibility:visible!important;padding-top:12px}
-#ranking .ranking-native,#report .ranking-native-body>.panel{display:block!important;visibility:visible!important}
 </style><style id="ranking-print-style">@media print{body *{visibility:hidden!important}#ranking,#ranking *{visibility:visible!important}#ranking{position:absolute!important;left:0!important;top:0!important;width:100%!important;margin:0!important;padding:0!important}#ranking .toolbar,#ranking .report-fields{display:none!important}#ranking .tablewrap{overflow:visible!important}#ranking table{width:100%!important;font-size:9pt!important}#ranking tr{break-inside:avoid}#ranking thead{display:table-header-group}@page{size:A4 landscape;margin:12mm}}</style><style id="content-visibility-fix">
 main>section,main>section.topic-section,main>section.topic-section.collapsed{display:block!important;visibility:visible!important}
 main>section.topic-section>.topic-body,main>section.topic-section.collapsed>.topic-body{display:block!important;visibility:visible!important;height:auto!important}
@@ -99,50 +90,59 @@ main>section.topic-section>.sectionhead:after{display:none!important}
 .site-nav a{white-space:normal!important;text-align:center;min-width:0;line-height:1.3;display:flex;justify-content:center;align-items:center;min-height:44px;background:#263958;color:#dce7ff;border:1px solid #415474;border-radius:10px;padding:10px;font-weight:650}
 main>section{scroll-margin-top:12px}
 @media(max-width:600px){.site-nav{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px 12px 14px}.site-nav a{font-size:13px;min-height:42px}}
-</style><style id="mobile-layout-fix-v75">
-/* Mobile-only layout improvements. Data and application scripts unchanged. */
-@media(max-width:600px){
- html,body{width:100%;max-width:100%;overflow-x:clip}
- header,main,main>section,.panel,.shell{min-width:0;max-width:100%}
- main{padding-left:12px!important;padding-right:12px!important}
- .kpis{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
- .kpi{min-width:0!important;width:auto!important;padding:13px!important}
- .kpi .value{font-size:clamp(22px,7vw,32px)!important}
- .toolbar,.report-fields{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important;min-width:0}
- .toolbar>*,.report-fields>*,.report-fields label,.toolbar label{min-width:0!important;max-width:100%!important;width:100%!important;flex:0 1 auto!important}
- .toolbar input,.toolbar select,.toolbar button,.report-fields input,.report-fields select,.report-fields button{box-sizing:border-box;min-width:0!important;max-width:100%!important;width:100%!important}
- .tablewrap{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;overflow-y:visible;-webkit-overflow-scrolling:touch}
- .tablewrap table{width:max-content!important;min-width:100%!important;table-layout:auto!important}
- .tablewrap th,.tablewrap td{white-space:normal!important;overflow-wrap:break-word;word-break:normal;min-width:80px}
- .tablewrap th:nth-child(3),.tablewrap td:nth-child(3){min-width:160px;max-width:280px}
- #profiles .people,#profiles .district-group>.people{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
- #profiles .deputy-tile{grid-column:1/-1!important;min-width:0!important;width:100%!important}
- #profiles .deputy-details,#profiles .bio-card{max-width:100%!important;min-width:0!important}
- #profiles .bio-row{grid-template-columns:minmax(0,40%) minmax(0,1fr)!important}
- #profiles .bio-row b,#profiles .bio-row span{overflow-wrap:anywhere!important;white-space:normal!important}
- .district-group>summary span{white-space:normal!important;text-align:right}
- .site-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+</style><style id="mobile-clean-v77">
+/* Consolidated mobile layout: one rule set, no competing table overrides. */
+#ranking .ranking-native,#report .ranking-native{display:block;width:100%;border:0;box-shadow:none;background:transparent;padding:0;margin:0;overflow:visible}
+#ranking .ranking-native>summary,#report .ranking-native>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:14px;font-weight:800;cursor:pointer;list-style:none}
+#ranking .ranking-native>summary::-webkit-details-marker,#report .ranking-native>summary::-webkit-details-marker{display:none}
+#ranking .ranking-native-body,#report .ranking-native-body{display:block;padding-top:12px}
+@media(max-width:650px){
+ html,body{max-width:100%;overflow-x:clip}
+ main{padding:12px 12px 60px!important}
+ main>section,.panel,.kpi,.district-group{min-width:0;max-width:100%}
+ .panel{padding:13px!important}
+ .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .kpi{padding:12px}
+ .toolbar,.report-fields{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px}
+ .toolbar>*,.report-fields>*,.toolbar label,.report-fields label{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box}
+ .toolbar input:not([type=checkbox]),.toolbar select,.toolbar button,.report-fields input,.report-fields select{width:100%!important;min-width:0!important;max-width:100%!important;box-sizing:border-box}
+ .site-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #profiles .district-group>.people{grid-template-columns:minmax(0,1fr)!important}
+ #profiles .deputy-tile{grid-column:1/-1!important;min-width:0}
+ .tablewrap{display:block!important;width:100%!important;max-width:100%!important;overflow:visible!important;height:auto!important;min-height:0!important}
+ .tablewrap table{display:block!important;width:100%!important;min-width:0!important;max-width:100%!important;table-layout:auto!important;border:0!important}
+ .tablewrap thead{display:none!important}
+ .tablewrap tbody{display:block!important;width:100%!important}
+ .tablewrap tr{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;margin:0 0 10px!important;padding:10px 12px!important;background:#fff;border:1px solid #e0e5ee;border-radius:11px;overflow:hidden}
+ .tablewrap td{display:flex!important;flex-direction:row!important;align-items:flex-start!important;justify-content:space-between!important;gap:12px!important;position:static!important;float:none!important;width:100%!important;max-width:100%!important;min-width:0!important;height:auto!important;min-height:0!important;padding:8px 0!important;margin:0!important;border-bottom:1px solid #eef1f6!important;writing-mode:horizontal-tb!important;text-orientation:mixed!important;transform:none!important;rotate:0deg!important;white-space:normal!important;word-break:normal!important;overflow-wrap:anywhere!important;text-align:right!important;line-height:1.45!important}
+ .tablewrap td:last-child{border-bottom:0!important}
+ .tablewrap td:before{content:attr(data-mobile-label);display:block;flex:0 0 37%;max-width:37%;font-weight:700;color:#586780;text-align:left!important;white-space:normal;writing-mode:horizontal-tb!important}
+ .tablewrap td.empty{display:block!important;text-align:center!important}
+ .tablewrap td.empty:before{display:none}
+ .tablewrap tr[style]{height:auto!important;min-height:0!important}
+ #ranking .ranking-groups{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #ranking .ranking-legend{min-width:0;overflow-wrap:anywhere}
 }
-@media(max-width:360px){.kpis{grid-template-columns:minmax(0,1fr)!important}}
-</style><style id="iphone-table-and-panels-v76">
-/* Correct malformed legacy selectors on report/ranking accordions. */
-#ranking details.ranking-native,#report details.ranking-native{display:block!important;width:100%!important;height:auto!important;min-height:0!important;padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
-#ranking details.ranking-native>summary,#report details.ranking-native>summary{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:16px!important;background:#fff!important;border:1px solid var(--line)!important;border-radius:14px!important;list-style:none!important;cursor:pointer!important}
-#ranking details.ranking-native>summary::-webkit-details-marker,#report details.ranking-native>summary::-webkit-details-marker{display:none}
-#ranking details.ranking-native>.ranking-native-body,#report details.ranking-native>.ranking-native-body{display:block!important;height:auto!important;min-height:0!important;padding-top:12px!important}
-#ranking .ranking-native-body>.panel,#report .ranking-native-body>.panel{display:block!important;height:auto!important;min-height:0!important}
-@media(max-width:600px){
- #report,#ranking,#activity,#activity-analysis{width:100%!important;min-width:0!important;max-width:100%!important;overflow:visible!important}
- #report .panel,#ranking .panel,#activity .panel,#activity-analysis .panel{padding:12px!important;min-width:0!important;max-width:100%!important}
- #report .tablewrap,#ranking .tablewrap,#activity .tablewrap,#activity-analysis .tablewrap{width:100%!important;max-width:100%!important;overflow-x:auto!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch!important}
- #report .tablewrap table,#ranking .tablewrap table,#activity .tablewrap table,#activity-analysis .tablewrap table{display:table!important;table-layout:auto!important;width:max-content!important;min-width:640px!important;max-width:none!important;border-collapse:collapse!important}
- #report .tablewrap thead,#ranking .tablewrap thead,#activity .tablewrap thead,#activity-analysis .tablewrap thead{display:table-header-group!important}
- #report .tablewrap tbody,#ranking .tablewrap tbody,#activity .tablewrap tbody,#activity-analysis .tablewrap tbody{display:table-row-group!important}
- #report .tablewrap tr,#ranking .tablewrap tr,#activity .tablewrap tr,#activity-analysis .tablewrap tr{display:table-row!important;height:auto!important}
- #report .tablewrap th,#report .tablewrap td,#ranking .tablewrap th,#ranking .tablewrap td,#activity .tablewrap th,#activity .tablewrap td,#activity-analysis .tablewrap th,#activity-analysis .tablewrap td{display:table-cell!important;position:static!important;writing-mode:horizontal-tb!important;text-orientation:mixed!important;transform:none!important;rotate:none!important;white-space:normal!important;word-break:normal!important;overflow-wrap:break-word!important;min-width:110px!important;max-width:270px!important;width:auto!important;height:auto!important;min-height:0!important;padding:10px 12px!important;line-height:1.45!important;vertical-align:top!important;text-align:left!important}
- #report .tablewrap th:nth-child(3),#report .tablewrap td:nth-child(3),#ranking .tablewrap th:nth-child(3),#ranking .tablewrap td:nth-child(3){min-width:190px!important}
-}
-</style></head>
+@media(max-width:360px){.kpis{grid-template-columns:1fr}}
+@media print{.tablewrap table{display:table!important}.tablewrap thead{display:table-header-group!important}.tablewrap tbody{display:table-row-group!important}.tablewrap tr{display:table-row!important}.tablewrap td{display:table-cell!important}.tablewrap td:before{display:none!important}}
+</style>
+<script id="mobile-table-labels-v77">
+(function(){
+ function labelTables(){
+  document.querySelectorAll('.tablewrap table').forEach(function(table){
+   var labels=Array.from(table.querySelectorAll('thead th')).map(function(th){return th.textContent.trim()});
+   table.querySelectorAll('tbody tr').forEach(function(tr){
+    Array.from(tr.children).forEach(function(td,i){if(td.tagName==='TD' && labels[i])td.setAttribute('data-mobile-label',labels[i])});
+   });
+  });
+ }
+ document.addEventListener('DOMContentLoaded',function(){
+  labelTables();
+  var observer=new MutationObserver(function(){labelTables()});
+  document.querySelectorAll('.tablewrap').forEach(function(el){observer.observe(el,{childList:true,subtree:true})});
+ });
+})();
+</script></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p>Справочник муниципальных депутатов 16 районов ЮАО и мониторинг доступных открытых публикаций. Данные о действующем составе и активности требуют проверки.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div></div><nav class="site-nav shell" aria-label="Разделы приложения"><a href="#overview">📊 Обзор</a><a href="#deputies">👥 Депутаты</a><a href="#activity">📰 Публикации</a><a href="#report">📑 Отчёты</a><a href="#ranking">🏆 Рейтинг</a><a href="#activity-analysis">🧠 Анализ</a><a href="#sources">🔗 Источники</a><a href="#method">⚖️ Методика</a></nav></header>
 <main><section id="overview"><div class="sectionhead"><h2>Обзор мониторинга</h2><small>159 записей · 16 районов ЮАО</small></div><div class="kpis"><div class="kpi"><div class="label">Депутатов в справочнике</div><div class="value">159</div><div class="hint">Состав требует актуализации</div></div><div class="kpi"><div class="label">Публикаций в данных</div><div class="value" id="total">0</div><div class="hint">VK API и локальный CSV</div></div><div class="kpi"><div class="label">Попыток VK API</div><div class="value" id="checked">—</div><div class="hint">Проверки доступности VK</div></div><div class="kpi"><div class="label">Получено через API</div><div class="value" id="api-count">—</div><div class="hint">Не считать за ноль</div></div></div><div class="panel"><div class="notice"><span class="notice-icon">ⓘ</span><div><strong>Данные требуют подтверждения.</strong> Проверка доступности страницы VK не означает, что её публикации получены. Пустые показатели не означают отсутствие работы депутата. Импорт CSV хранится только на вашем устройстве.</div></div></div></section>
 <section id="deputies"><div class="sectionhead"><h2>Профили депутатов</h2><small id="filter-label">Все 159 профилей · 16 районов</small></div><div class="toolbar" style="margin-bottom:13px"><input class="search" id="search" type="search" placeholder="Поиск по фамилии и имени…" aria-label="Поиск депутата по фамилии и имени"><button class="btn alt" id="refresh-monitor">↻ Обновить статусы</button></div><p class="small">Справочный список депутатов всех 16 районов ЮАО. Состав сверяйте по официальным сайтам советов: справочник может не учитывать досрочное прекращение полномочий. Для всех 159 депутатов добавлены VK-ссылки с источниками; актуальность страниц проверяется отдельно.</p><div id="profiles" class="districts"></div><div class="panel"><h3 style="margin-top:0">Добавить депутата в район</h3><div class="report-fields"><label>Район<select id="new-district"></select></label><label>Имя депутата<input id="new-deputy-name" placeholder="Фамилия Имя Отчество"></label><label>VK-профиль<input id="new-deputy-vk" placeholder="id или короткий адрес"></label></div><div class="toolbar" style="margin-top:12px"><button class="btn" id="new-deputy-add">+ Добавить депутата</button></div><p id="new-deputy-status" class="small" role="status">Добавленные депутаты и привязки к районам сохраняются в этом браузере.</p></div></section>

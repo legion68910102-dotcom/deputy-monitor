@@ -37,7 +37,6 @@ function calculate(){
 const categories=[
  {label:"Отлично",className:"excellent"},
  {label:"Допустимо",className:"acceptable"},
- {label:"Есть над чем работать",className:"improve"},
  {label:"Плохо",className:"poor"}
 ];
 function draw(){
@@ -46,8 +45,8 @@ function draw(){
   const {active,unverified,metric,from,to}=calculate();
   const showUnverified=$("ranking-show-unverified").checked;
   const scores=[...new Set(active.map(p=>p.stats[metric]))].sort((a,b)=>b-a);
-  const bucket=score=>{if(scores.length===1)return 1;const position=scores.indexOf(score);return Math.min(3,Math.floor(position*4/scores.length))};
-  const totals=[0,0,0,0];
+  const bucket=score=>{if(scores.length===1)return 1;const position=scores.indexOf(score);return Math.min(2,Math.floor(position*3/scores.length))};
+  const totals=[0,0,0];
   const rows=active.map((p,i)=>{const group=bucket(p.stats[metric]);totals[group]++;return {rank:i+1,p,value:p.stats[metric],group}});
   groups.innerHTML=categories.map((c,i)=>'<div class="ranking-legend ranking-'+c.className+'"><strong>'+esc(c.label)+'</strong><span>'+totals[i]+' депутатов</span></div>').join("");
   body.innerHTML=rows.map(({rank,p,value,group})=>'<tr class="ranking-'+categories[group].className+'"><td>'+rank+'</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>'+value+'</td><td><span class="ranking-tag">'+categories[group].label+'</span></td></tr>').join("")+

@@ -24,7 +24,7 @@ function getRows(){try{let local=JSON.parse(localStorage.getItem("dm_posts")||"[
 function metric(rows,key){let vals=rows.map(r=>r[key]).filter(v=>v!==undefined&&v!==null&&String(v).trim()!==""&&Number.isFinite(Number(v))).map(Number);return vals.length?vals.reduce((a,b)=>a+b,0):"Нет данных"}
 const rosterByKey=new Map(roster.map(p=>[p.handle||("roster:"+p.district+":"+p.name),p]));
 const collator=new Intl.Collator("ru",{sensitivity:"base"});
-const ordered=[...handles].sort((a,b)=>collator.compare(names[a]||a,names[b]||b));
+const ordered=[...handles].sort((a,b)=>{const da=rosterByKey.get(a)?.district||"Я — район не указан",db=rosterByKey.get(b)?.district||"Я — район не указан";return collator.compare(da,db)||collator.compare(names[a]||a,names[b]||b)});
 const escHtml=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const chosenKeys=()=>($("report-person").value==="all"?ordered:[$("report-person").value]);
 const selectedRows=()=>{const a=$("report-from").value,b=$("report-to").value;if(!a||!b||a>b)throw Error("Проверьте даты");const keys=new Set(chosenKeys());return getRows().filter(r=>keys.has(r.profile)&&String(r.date||"").slice(0,10)>=a&&String(r.date||"").slice(0,10)<=b)};

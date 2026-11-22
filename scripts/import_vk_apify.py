@@ -18,7 +18,7 @@ BATCH_SIZE = 10
 batch_count = (len(profiles) + BATCH_SIZE - 1) // BATCH_SIZE
 now = datetime.now(timezone.utc)
 batch_arg = os.environ.get("VK_BATCH_INDEX", "").strip()
-batch_index = int(batch_arg) if batch_arg else (now.date().toordinal() % batch_count)
+batch_index = int(batch_arg) if batch_arg else ((now.date().toordinal() * 4 + now.hour // 6) % batch_count)
 if not 0 <= batch_index < batch_count:
     raise SystemExit("VK_BATCH_INDEX must be between 0 and " + str(batch_count - 1))
 chosen = profiles[batch_index * BATCH_SIZE:(batch_index + 1) * BATCH_SIZE]

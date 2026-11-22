@@ -173,7 +173,7 @@ class VKCollectionTests(unittest.TestCase):
             return {"error": {"error_code": 29}}
         summary = vk.collect(self.root, "FAKE", fetch=fetch, pause=lambda _: None)
         self.assertEqual(calls, ["alpha", "alpha", "alpha"])
-        self.assertEqual(summary["stopped_reason"], "auth_or_quota_error")
+        self.assertEqual(summary["stopped_reason"], "quota_error")
         self.assertEqual(summary["attempted_profiles"], 1)
         self.assertEqual(len(self.read("vk-posts.json")["posts"]), 4)
 

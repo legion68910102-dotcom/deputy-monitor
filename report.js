@@ -41,7 +41,7 @@ function buildExcel(){const summary=summaryRows(),rows=selectedRows();const post
 if(window.XLSX&&window.XLSX.utils&&window.XLSX.write){const book=window.XLSX.utils.book_new();for(const [name,data] of [["Сводка",summary],["Публикации",posts],["Без данных",missing]]){const ws=window.XLSX.utils.aoa_to_sheet(data);ws["!cols"]=data[0].map((_,i)=>({wch:i===2?32:i===1?22:18}));window.XLSX.utils.book_append_sheet(book,ws,name)}const bytes=window.XLSX.write(book,{bookType:"xlsx",type:"array",compression:true});blob=new Blob([bytes],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"})}else{throw Error("Библиотека Excel не загрузилась. Проверьте интернет и обновите страницу; пока используйте CSV или просмотр на экране.")}
 return {blob,count:summary.length-1,missing:missing.length-1};
 }
-function run(){const result=buildExcel();saveBlob(result.blob,"Депутаты_ЮАО_отчёт.xlsx");$("report-status").textContent="Excel сформирован ("+result.count+" депутатов). Если iPhone не скачал файл, нажмите «Сохранить Excel в Файлы»."}
+function run(){const result=buildExcel();saveBlob(result.blob,"Deputies_YUAO_Report.xlsx");$("report-status").textContent="Excel сформирован ("+result.count+" депутатов). Если iPhone не скачал файл, нажмите «Сохранить Excel в Файлы»."}
 async function shareExcel(){const result=buildExcel(),file=new File([result.blob],"Депутаты_ЮАО_отчёт.xlsx",{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){try{await navigator.share({files:[file],title:"Отчёт по депутатам ЮАО"});$("report-status").textContent="Файл передан в меню iPhone. Выберите «Сохранить в Файлы» или Excel/Numbers.";return}catch(e){if(e.name==="AbortError"){$("report-status").textContent="Сохранение отменено.";return}}}saveBlob(result.blob,file.name);$("report-status").textContent="Попытка скачивания Excel. Если Safari блокирует загрузку, используйте CSV или HTML."}
 async function refreshReportPosts(){try{const response=await fetch("./vk-posts.json?t="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const data=await response.json();if(Array.isArray(data.posts)){sessionStorage.setItem("dm_vk_posts",JSON.stringify(data.posts));if(Array.isArray(data.monitored_profiles))sessionStorage.setItem("dm_vk_monitoring",JSON.stringify(data.monitored_profiles))}}catch(e){console.warn("VK posts refresh unavailable",e)}}
 document.addEventListener("DOMContentLoaded",()=>{
@@ -50,13 +50,9 @@ document.addEventListener("DOMContentLoaded",()=>{
  for(const h of ordered){const o=document.createElement("option");o.value=h;o.textContent=names[h]||h;sel.appendChild(o)}
  const today=new Date(),iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
  $("report-from").value=iso(new Date(today.getFullYear(),today.getMonth(),1));$("report-to").value=iso(today);
- const execute=(fn,label)=>{try{fn()}catch(e){$("report-status").textContent="Ошибка "+label+": "+e.message}};
- // Keep downloads inside the original tap event: iOS Safari may block them after an awaited fetch.
- $("report-csv").addEventListener("click",()=>{execute(csvReport,"CSV");refreshReportPosts()});
- $("report-generate").addEventListener("click",()=>{execute(run,"XLSX");refreshReportPosts()});
- $("report-share").addEventListener("click",()=>{shareExcel().catch(e=>{$("report-status").textContent="Ошибка сохранения Excel: "+e.message});refreshReportPosts()});
- $("report-html").addEventListener("click",()=>{execute(htmlReport,"HTML");refreshReportPosts()});
- $("report-preview").addEventListener("click",()=>{execute(preview,"просмотра");refreshReportPosts().then(()=>execute(preview,"просмотра"))});
+ const status=$("report-status");
+ $("report-preview").addEventListener("click",()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}refreshReportPosts().then(()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}})});
+ $("report-generate").addEventListener("click",()=>{try{run()}catch(e){status.textContent="Не удалось скачать Excel: "+e.message}refreshReportPosts()});
  refreshReportPosts();
 });
 })();

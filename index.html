@@ -99,6 +99,31 @@ main>section.topic-section>.sectionhead:after{display:none!important}
 .site-nav a{white-space:normal!important;text-align:center;min-width:0;line-height:1.3;display:flex;justify-content:center;align-items:center;min-height:44px;background:#263958;color:#dce7ff;border:1px solid #415474;border-radius:10px;padding:10px;font-weight:650}
 main>section{scroll-margin-top:12px}
 @media(max-width:600px){.site-nav{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px 12px 14px}.site-nav a{font-size:13px;min-height:42px}}
+</style><style id="mobile-layout-fix-v75">
+/* Mobile-only layout improvements. Data and application scripts unchanged. */
+@media(max-width:600px){
+ html,body{width:100%;max-width:100%;overflow-x:clip}
+ header,main,main>section,.panel,.shell{min-width:0;max-width:100%}
+ main{padding-left:12px!important;padding-right:12px!important}
+ .kpis{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ .kpi{min-width:0!important;width:auto!important;padding:13px!important}
+ .kpi .value{font-size:clamp(22px,7vw,32px)!important}
+ .toolbar,.report-fields{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important;min-width:0}
+ .toolbar>*,.report-fields>*,.report-fields label,.toolbar label{min-width:0!important;max-width:100%!important;width:100%!important;flex:0 1 auto!important}
+ .toolbar input,.toolbar select,.toolbar button,.report-fields input,.report-fields select,.report-fields button{box-sizing:border-box;min-width:0!important;max-width:100%!important;width:100%!important}
+ .tablewrap{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;overflow-y:visible;-webkit-overflow-scrolling:touch}
+ .tablewrap table{width:max-content!important;min-width:100%!important;table-layout:auto!important}
+ .tablewrap th,.tablewrap td{white-space:normal!important;overflow-wrap:break-word;word-break:normal;min-width:80px}
+ .tablewrap th:nth-child(3),.tablewrap td:nth-child(3){min-width:160px;max-width:280px}
+ #profiles .people,#profiles .district-group>.people{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+ #profiles .deputy-tile{grid-column:1/-1!important;min-width:0!important;width:100%!important}
+ #profiles .deputy-details,#profiles .bio-card{max-width:100%!important;min-width:0!important}
+ #profiles .bio-row{grid-template-columns:minmax(0,40%) minmax(0,1fr)!important}
+ #profiles .bio-row b,#profiles .bio-row span{overflow-wrap:anywhere!important;white-space:normal!important}
+ .district-group>summary span{white-space:normal!important;text-align:right}
+ .site-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:360px){.kpis{grid-template-columns:minmax(0,1fr)!important}}
 </style></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p>Справочник муниципальных депутатов 16 районов ЮАО и мониторинг доступных открытых публикаций. Данные о действующем составе и активности требуют проверки.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div></div><nav class="site-nav shell" aria-label="Разделы приложения"><a href="#overview">📊 Обзор</a><a href="#deputies">👥 Депутаты</a><a href="#activity">📰 Публикации</a><a href="#report">📑 Отчёты</a><a href="#ranking">🏆 Рейтинг</a><a href="#activity-analysis">🧠 Анализ</a><a href="#sources">🔗 Источники</a><a href="#method">⚖️ Методика</a></nav></header>
 <main><section id="overview"><div class="sectionhead"><h2>Обзор мониторинга</h2><small>159 записей · 16 районов ЮАО</small></div><div class="kpis"><div class="kpi"><div class="label">Депутатов в справочнике</div><div class="value">159</div><div class="hint">Состав требует актуализации</div></div><div class="kpi"><div class="label">Публикаций в данных</div><div class="value" id="total">0</div><div class="hint">VK API и локальный CSV</div></div><div class="kpi"><div class="label">Попыток VK API</div><div class="value" id="checked">—</div><div class="hint">Проверки доступности VK</div></div><div class="kpi"><div class="label">Получено через API</div><div class="value" id="api-count">—</div><div class="hint">Не считать за ноль</div></div></div><div class="panel"><div class="notice"><span class="notice-icon">ⓘ</span><div><strong>Данные требуют подтверждения.</strong> Проверка доступности страницы VK не означает, что её публикации получены. Пустые показатели не означают отсутствие работы депутата. Импорт CSV хранится только на вашем устройстве.</div></div></div></section>

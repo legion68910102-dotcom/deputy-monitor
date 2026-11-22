@@ -96,7 +96,21 @@ for person in chosen:
         consecutive_forbidden = 0
         print("Verified", handle, len(new), flush=True)
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError, json.JSONDecodeError) as exc:
-        msg = ("HTTP " + str(exc.code)) if isinstance(exc, urllib.error.HTTPError) else str(exc)[:160]
+        if isinstance(exc, urllib.error.HTTPError):
+            msg = "HTTP " + str(exc.code)
+            retry_after = exc.headers.get("Retry-After", "")
+            if retry_after and retry_after.isdigit():
+                msg += " (Retry-After: " + retry_after + "s)"
+            try:
+                api_error = json.loads(exc.read(4096).decode("utf-8", "replace"))
+                if isinstance(api_error, dict):
+                    kind = api_error.get("error", {}).get("type") if isinstance(api_error.get("error"), dict) else api_error.get("error")
+                    if isinstance(kind, str) and kind.replace("-", "").replace("_", "").isalnum() and len(kind) <= 64:
+                        msg += " [" + kind + "]"
+            except (ValueError, UnicodeError, OSError):
+                pass
+        else:
+            msg = str(exc)[:160]
         if isinstance(exc, urllib.error.HTTPError) and exc.code in (401, 402, 403, 429):
             consecutive_forbidden += 1
             if consecutive_forbidden >= 2 or exc.code in (401, 402, 429):

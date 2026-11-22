@@ -59,5 +59,6 @@ for row in new:
 old["posts"] = sorted(combined.values(), key=lambda r: r.get("date", ""), reverse=True)
 old["generated_at"] = datetime.now(timezone.utc).isoformat()
 old["source"] = "Apify VK Posts Scraper; pilot aabulatov"
+old["monitored_profiles"] = ["aabulatov"]
 path.write_text(json.dumps(old, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print("Imported", len(new), "verified posts; total", len(old["posts"]))

@@ -49,6 +49,7 @@ jobs:
           GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
           GIGACHAT_MODEL: "GigaChat-2-Pro"
           GIGACHAT_SCOPE: "GIGACHAT_API_PERS"
+          GIGACHAT_SMOKE_TEST: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
           AI_POST_LIMIT: "60"
         run: |
           node --check scripts/classify-activity-ai.mjs

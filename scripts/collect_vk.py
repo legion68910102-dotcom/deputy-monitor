@@ -20,6 +20,7 @@ from pathlib import Path
 API_VERSION = "5.199"
 MOSCOW = dt.timezone(dt.timedelta(hours=3))
 RETRYABLE_VK_CODES = {6, 9, 29}
+QUOTA_CODES = {29}
 FATAL_AUTH_CODES = {5, 27, 111}
 
 
@@ -75,7 +76,7 @@ def read_wall(handle: str, token: str, fetch, pause) -> tuple[list | None, str |
                 if code in RETRYABLE_VK_CODES and attempt < 2:
                     pause(1.5 * (attempt + 1))
                     continue
-                return None, "vk_api_error_" + str(code), code in FATAL_AUTH_CODES
+                return None, "vk_api_error_" + str(code), code in (FATAL_AUTH_CODES | QUOTA_CODES)
             result = payload.get("response")
             if not isinstance(result, dict) or not isinstance(result.get("items"), list):
                 raise ValueError("Missing wall.get response.items")
@@ -213,7 +214,8 @@ def collect(root: Path, token: str, *, start_at: int = 0,
                 "posts_count": None, "reason": error
             }
             if fatal or consecutive_failures >= 8:
-                aborted = "auth_error" if fatal else "too_many_failures"
+                aborted = ("auth_or_quota_error" if fatal
+                           else "too_many_consecutive_failures")
                 break
             continue
 

@@ -1,9 +1,12 @@
 name: Monitor VK posts (159 deputies)
 on:
-  schedule:
-    - cron: '20 4 * * *'
   workflow_dispatch:
     inputs:
+      confirm_paid_api:
+        description: 'Type YES to authorize paid Apify API requests; default does not run'
+        required: true
+        default: 'NO'
+        type: string
       batch_index:
         description: 'Batch 0-15; leave empty for daily rotation'
         required: false
@@ -27,7 +30,10 @@ jobs:
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: |
-          if [ -n "$APIFY_TOKEN" ]; then
+          if [ "${{ inputs.confirm_paid_api }}" != "YES" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Apify disabled to preserve free tier; no requests made."
+          elif [ -n "$APIFY_TOKEN" ]; then
             echo "configured=true" >> "$GITHUB_OUTPUT"
           else
             echo "configured=false" >> "$GITHUB_OUTPUT"

@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  $("report-from").value=iso(new Date(today.getFullYear(),today.getMonth(),1));$("report-to").value=iso(today);
  const status=$("report-status");
  $("report-preview").addEventListener("click",()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}refreshReportPosts().then(()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}})});
- $("report-generate").addEventListener("click",()=>{try{run()}catch(e){status.textContent="Не удалось скачать Excel: "+e.message}refreshReportPosts()});
+ // Excel is a direct static file link; no client-side XLSX generation is required.
  refreshReportPosts();
 });
 })();

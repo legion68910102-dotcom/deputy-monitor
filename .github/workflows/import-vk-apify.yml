@@ -1,5 +1,7 @@
 name: Import VK posts (pilot)
 on:
+  schedule:
+    - cron: '20 4 * * *'
   workflow_dispatch:
 jobs:
   import:
@@ -11,11 +13,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check VK importer configuration
+        id: config
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          if [ -n "$APIFY_TOKEN" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::APIFY_TOKEN is missing. Existing VK data preserved; configure repository secret to enable imports."
+          fi
       - name: Fetch recent public VK posts
+        if: steps.config.outputs.configured == 'true'
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python scripts/import_vk_apify.py
       - name: Commit verified results
+        if: steps.config.outputs.configured == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

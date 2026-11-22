@@ -485,4 +485,25 @@ window.addEventListener("load",function(){
   if(all)all.textContent="Все депутаты ("+options.length+")";
 });
 </script>
-</body></html>
+<script id="ranking-open-safeguard-v89">
+(function(){
+ function openRanking(){
+  var section=document.getElementById("ranking");
+  if(!section)return;
+  var details=section.querySelector("details.ranking-native");
+  if(details)details.open=true;
+  section.style.display="block";
+  section.style.visibility="visible";
+  var body=section.querySelector(".ranking-native-body");
+  if(body){body.style.display="block";body.style.visibility="visible"}
+  var status=document.getElementById("ranking-summary");
+  var tbody=document.getElementById("ranking-body");
+  if(status&&tbody&&!tbody.children.length&&!/^Ошибка:/.test(status.textContent)){
+   status.textContent="Рейтинг загружается. Если строки не появились, нажмите «Обновить рейтинг».";
+  }
+ }
+ document.addEventListener("DOMContentLoaded",openRanking);
+ window.addEventListener("hashchange",function(){if(location.hash==="#ranking")openRanking()});
+ document.addEventListener("click",function(e){if(e.target.closest('a[href="#ranking"]'))openRanking()});
+})();
+</script></body></html>

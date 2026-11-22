@@ -77,6 +77,57 @@ for sheet in wb:
             cell.alignment = Alignment(vertical="top")
     sheet.sheet_properties.pageSetUpPr.fitToPage = True
 
+# Printable, standalone ranking export based on the same published dataset as the site.
+rank = Workbook()
+rs = rank.active
+rs.title = "Рейтинг"
+rs.append(["Место", "Район", "Депутат", "Публикаций", "Категория", "Статус данных"])
+ranking = []
+missing_rank = []
+for district, name, profile in roster:
+    handle = profile.get("handle", "")
+    count = len(by_profile.get(handle, [])) if handle else 0
+    (ranking if count else missing_rank).append((district, name, count))
+ranking.sort(key=lambda x: (-x[2], x[1].casefold()))
+missing_rank.sort(key=lambda x: (x[0].casefold(), x[1].casefold()))
+scores = sorted({x[2] for x in ranking}, reverse=True)
+fills = {"Отлично": "D9EAD3", "Допустимо": "FFF2CC", "Плохо": "F4CCCC"}
+for position, (district, name, count) in enumerate(ranking, 1):
+    bucket = 1 if len(scores) == 1 else min(2, (scores.index(count) * 3) // len(scores))
+    category = ["Отлично", "Допустимо", "Плохо"][bucket]
+    rs.append([position, district, name, count, category, "Есть публикации в опубликованной выборке"])
+    for cell in rs[rs.max_row]:
+        cell.fill = PatternFill("solid", fgColor=fills[category])
+for district, name, count in missing_rank:
+    rs.append(["—", district, name, None, "Нет данных", "Нет публикаций в опубликованной выборке"])
+rs.freeze_panes = "A2"
+rs.auto_filter.ref = rs.dimensions
+rs.sheet_view.showGridLines = False
+rs.print_options.horizontalCentered = True
+rs.sheet_properties.pageSetUpPr.fitToPage = True
+rs.page_setup.orientation = "landscape"
+rs.page_setup.paperSize = rs.PAPERSIZE_A4
+rs.page_setup.fitToWidth = 1
+rs.page_setup.fitToHeight = 0
+rs.print_title_rows = "1:1"
+rs.print_area = f"A1:F{rs.max_row}"
+for cell in rs[1]:
+    cell.font = Font(bold=True, color="FFFFFF")
+    cell.fill = PatternFill("solid", fgColor="234A84")
+    cell.alignment = Alignment(wrap_text=True)
+rs.row_dimensions[1].height = 28
+for column, width in {"A": 10, "B": 29, "C": 36, "D": 16, "E": 19, "F": 48}.items():
+    rs.column_dimensions[column].width = width
+for row in rs.iter_rows(min_row=2):
+    for cell in row:
+        cell.alignment = Alignment(vertical="center", wrap_text=True)
+rank_path = ROOT / "Deputies_YUAO_Ranking.xlsx"
+rank.save(rank_path)
+verified_rank = load_workbook(rank_path, read_only=True)
+assert verified_rank["Рейтинг"].max_row == len(roster) + 1
+verified_rank.close()
+print(f"Validated ranking: {len(roster)} deputies, {len(ranking)} with published posts")
+
 target = ROOT / "Deputies_YUAO_Report.xlsx"
 wb.save(target)
 check = load_workbook(target, read_only=True)

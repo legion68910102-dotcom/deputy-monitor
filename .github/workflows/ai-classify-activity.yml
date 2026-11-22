@@ -27,15 +27,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Configure trusted GigaChat CA certificate (optional)
+      - name: Configure verified GigaChat trust certificate
         env:
           GIGACHAT_CA_PEM: ${{ secrets.GIGACHAT_CA_PEM }}
         shell: bash
         run: |
+          set -euo pipefail
+          cert="$RUNNER_TEMP/gigachat-root-ca.pem"
           if [ -n "$GIGACHAT_CA_PEM" ]; then
-            printf '%s\n' "$GIGACHAT_CA_PEM" > "$RUNNER_TEMP/gigachat-ca.pem"
-            echo "NODE_EXTRA_CA_CERTS=$RUNNER_TEMP/gigachat-ca.pem" >> "$GITHUB_ENV"
+            printf '%s\n' "$GIGACHAT_CA_PEM" > "$cert"
+          else
+            # Official Russian trusted root certificate. Pin the fingerprint
+            # because its distribution URL can require an initially untrusted CA.
+            curl --fail --silent --show-error --location --insecure --retry 2 \
+              --max-time 25 "https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt" -o "$cert"
           fi
+          expected="D26D2D0231B7C39F92CC738512BA54103519E4405D68B5BD703E9788CA8ECF31"
+          actual="$(openssl x509 -in "$cert" -noout -sha256 -fingerprint | cut -d= -f2 | tr -d ':' | tr '[:lower:]' '[:upper:]')"
+          if [ "$actual" != "$expected" ]; then
+            echo "::error::GigaChat root certificate fingerprint mismatch; no TLS trust changes made."
+            exit 1
+          fi
+          echo "NODE_EXTRA_CA_CERTS=$cert" >> "$GITHUB_ENV"
+          echo "Verified Russian Trusted Root CA for Node.js only (TLS verification remains enabled)."
       - name: Check GigaChat authorization key
         env:
           GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}

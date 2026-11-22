@@ -34,17 +34,26 @@ function calculate(){
  unverified.sort((a,b)=>coll.compare(a.district,b.district)||coll.compare(a.name,b.name));
  return {active,unverified,metric,from,to};
 }
+const categories=[
+ {label:"Отлично",className:"excellent"},
+ {label:"Допустимо",className:"acceptable"},
+ {label:"Есть над чем работать",className:"improve"},
+ {label:"Плохо",className:"poor"}
+];
 function draw(){
- const body=$("ranking-body"),summary=$("ranking-summary");
+ const body=$("ranking-body"),summary=$("ranking-summary"),groups=$("ranking-groups");
  try{
   const {active,unverified,metric,from,to}=calculate();
   const showUnverified=$("ranking-show-unverified").checked;
-  const rankValue=p=>metric==="posts"?p.stats.posts:p.stats[metric];
-  const rows=active.map((p,i)=>[i+1,p,rankValue(p),true]);
-  if(showUnverified)for(const p of unverified)rows.push(["—",p,"Нет данных",false]);
-  body.innerHTML=rows.map(([rank,p,value,verified])=>'<tr><td>'+rank+'</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>'+esc(value)+'</td><td>'+(verified?"Есть публикации в выборке":"Нет публикаций в загруженной выборке")+'</td></tr>').join("");
-  summary.textContent="Период: "+from+" — "+to+". С данными: "+active.length+" из "+roster.length+" депутатов; без данных за период: "+unverified.length+". Рейтинг отражает только загруженные публикации VK, а не эффективность работы депутата.";
- }catch(e){body.innerHTML="";summary.textContent="Ошибка: "+e.message}
+  const scores=[...new Set(active.map(p=>p.stats[metric]))].sort((a,b)=>b-a);
+  const bucket=score=>{if(scores.length===1)return 1;const position=scores.indexOf(score);return Math.min(3,Math.floor(position*4/scores.length))};
+  const totals=[0,0,0,0];
+  const rows=active.map((p,i)=>{const group=bucket(p.stats[metric]);totals[group]++;return {rank:i+1,p,value:p.stats[metric],group}});
+  groups.innerHTML=categories.map((c,i)=>'<div class="ranking-legend ranking-'+c.className+'"><strong>'+esc(c.label)+'</strong><span>'+totals[i]+' депутатов</span></div>').join("");
+  body.innerHTML=rows.map(({rank,p,value,group})=>'<tr class="ranking-'+categories[group].className+'"><td>'+rank+'</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>'+value+'</td><td><span class="ranking-tag">'+categories[group].label+'</span></td></tr>').join("")+
+   (showUnverified?unverified.map(p=>'<tr class="ranking-no-data"><td>—</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>Нет данных</td><td>Нет данных за период</td></tr>').join(""):"");
+  summary.textContent="Период: "+from+" — "+to+". С публикациями: "+active.length+" из "+roster.length+"; без публикаций в загруженной выборке за период: "+unverified.length+". Категории — относительные группы по разным значениям выбранного показателя; одинаковые значения получают одинаковую категорию. При единственном значении используется «Допустимо». Это не оценка качества депутатской работы.";
+ }catch(e){body.innerHTML="";groups.innerHTML="";summary.textContent="Ошибка: "+e.message}
 }
 document.addEventListener("DOMContentLoaded",()=>{
  const from=$("ranking-from"),to=$("ranking-to");if(!from||!to)return;

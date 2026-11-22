@@ -166,6 +166,30 @@ class VKCollectionTests(unittest.TestCase):
         self.assertEqual(calls, ["alpha", "alpha"])
         self.assertEqual(summary["new_posts"], 1)
 
+    def test_quota_error_stops_after_limited_retries(self):
+        calls = []
+        def fetch(handle, token):
+            calls.append(handle)
+            return {"error": {"error_code": 29}}
+        summary = vk.collect(self.root, "FAKE", fetch=fetch, pause=lambda _: None)
+        self.assertEqual(calls, ["alpha", "alpha", "alpha"])
+        self.assertEqual(summary["stopped_reason"], "auth_or_quota_error")
+        self.assertEqual(summary["attempted_profiles"], 1)
+        self.assertEqual(len(self.read("vk-posts.json")["posts"]), 4)
+
+    def test_post_merge_is_idempotent(self):
+        data = self.post(1, 11, "Updated text", likes={"count": 15})
+        fake = self.fake(alpha={"response": {"items": [data]}})
+        vk.collect(self.root, "FAKE", max_profiles=1,
+                   fetch=fake, pause=lambda _: None)
+        before = self.read("vk-posts.json")["posts"]
+        second = vk.collect(self.root, "FAKE", max_profiles=1,
+                            fetch=fake, pause=lambda _: None)
+        after = self.read("vk-posts.json")["posts"]
+        self.assertEqual(before, after)
+        self.assertEqual(second["new_posts"], 0)
+        self.assertEqual(second["updated_posts"], 0)
+
     def test_all_159_profiles_in_production_roster(self):
         handles, districts = vk.roster_handles(ROOT)
         self.assertEqual(len(handles), 159)

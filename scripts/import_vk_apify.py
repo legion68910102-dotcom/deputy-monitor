@@ -1,6 +1,6 @@
 """Incremental public VK monitoring for all 159 sourced deputy profiles.
 
-One bounded batch per scheduled run; preserve previously verified posts and status.
+One bounded batch per scheduled run, or a one-off full sweep on code push.\nPreserve previously verified posts and status.
 Requires APIFY_TOKEN. A profile without returned posts is NOT marked inactive.
 """
 import json

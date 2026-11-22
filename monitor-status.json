@@ -1,812 +1,804 @@
 {
   "schema_version": 1,
-  "generated_at": null,
-  "source": "Official VK API when configured; missing data is not zero activity",
+  "generated_at": "2026-11-22T07:56:07.136225+00:00",
+  "source": "Official VK API; no inferred metrics",
+  "roster_size": 159,
+  "district_count": 16,
   "profiles": {
     "ilyasov_kn": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "molchanovpavel": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elenanersesova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ptitsynakk": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "nata_sycheva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "aleinikovayv": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "antonovalp1": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "golubevaev947": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kutaysovanv": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "rytovsergey": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "a.a.boikov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "e.aleksander88": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "iskonarev": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elenasergeevnalelikiva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "irina_terekhova1969": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "yaroslavburykh": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "smallraisin": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tatyanajabina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "juliamartanova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "orehov_aleksandr": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "olga_belousova1998": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "gontsova71": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "e.korostilenko": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ykolova_elena_vasilevna": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "chinilina975": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vlasenkoau": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "dmitry_volkov77": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "annavolskaya": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ilyashenko_aleksandr": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "seregin1963": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "dmitry_ark": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kiryanova_ln": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "levshtanov86": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ifadeeva2022": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ivanov_oi10": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "olga_podolskay": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "sagalovskaya": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "sitnikov_danilovskiy": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vgsultanov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "natalia.abbasova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "grigorievalv": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "trodionova2022": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "graskinss": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "galinazaykovskaya": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "pkobtsev": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ln_skorlupkina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elena_fursova1": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tkabanova2022": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "svetlanakostyushina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "rezkovvlad": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "yulia_sedacheva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elina_sherstyuk": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "anisim_svet": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "pushkinpp": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "rafalskayairina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tikhanovaalbina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "haritonova_aliya": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "allavoropaeva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kalyaev84": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ryabevaen": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "semenovdmitry80": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elenashlyakova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "allenov__andrey": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "andrianov001": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "nvzausaeva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "av_kondrashov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "aleks_moskalev": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "andrey.abertasov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vyacheslav_komaha": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kondratevaekaterina88": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kudinovamarina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "anatoli_viktorovich_potiomkin": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "deputat_kaminskiy": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "natalyamikhareva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "safonovatatiana85": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tikhomirovalexey": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "nikolskayaav": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "andrey.sezemov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "antonuvarov90": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "azizakabulovnachuganova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "golovin_mikhail_sergeevich": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "gorbunovsi": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "korshunovane": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kundyltatyana": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "l.ruzina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "balykovde": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "bashlykova.mari": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "julia_byckova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "romanvinokurov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "goremykinmy": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vvedenskaya_i": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vinogradova_len": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "dkulnev": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "rygin": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "pavel_v_shutov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "kostina1920": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "viktorgorn": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "id666378177": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "o.v.tarasenko": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tatyana_filippova20": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "dmitrieva_n_n": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elena__konnova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elena_laplanche": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "andreymordovin": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "baranchikova_natalia": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "galinadolgashova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "anna_ezhkova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "liudmila_zapl": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "nadezhda_kuskova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "sysoevala": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ib.glotova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "demchenkov_ml": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "svetlana_rodnik": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "novoselskayala": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tkachip": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tatiyana_donskaya": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "i.v.zolkina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "albinakomissarova2022": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "sovchinnikova79": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ap.yashkin": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "aabulatov": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vidutinaov": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "nuykinakv": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "elena.rubtsovanazarova": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tishkovaea": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "gavrilinams": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ekaterina.tyutyunnikova": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "natalia_shabasheva": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "shmakova_os": {
+      "status": "needs_token",
       "checked_at": null,
-      "status": "not_checked",
-      "posts_count": null,
-      "reason": "Автоматическое получение данных пока не подтверждено"
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "abramovaei_chs": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "antongorbachev": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "petr.kurapov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "i_v_morozova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "smirnovvalerii": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "andreevasvetlanaaleksandrovna": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "lukoyanov_chs": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "maxsimmorozov": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "riakhmiatullina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "tozikam": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "bogdan.konoshenko": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "eilarionova_556": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "polozovs": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "i_rodina": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "smitsb": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "vasiliy_meleshin": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "mironovdp": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "repkinae": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "rybakovaev_1582": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "n_shindryayeva": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ms_zotova": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "sergey_kashlev": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "ikurash1": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "alexandr_novikov_chu": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "n.ptushkina56": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "bordovskaya_og": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "gunina_ea": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "nleonovannnn": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "markova_tat_vl": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     },
     "smirnovaev1": {
       "status": "needs_token",
       "checked_at": null,
-      "reason": "VK API не подключён; публикации по этому профилю ещё не получены."
+      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
     }
-  },
-  "roster_size": 159,
-  "district_count": 16
+  }
 }

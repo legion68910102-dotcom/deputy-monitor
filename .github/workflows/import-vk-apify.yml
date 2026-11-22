@@ -1,4 +1,4 @@
-name: Import VK posts (pilot)
+name: Import VK posts (3-profile pilot)
 on:
   schedule:
     - cron: '20 4 * * *'
@@ -36,6 +36,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add vk-posts.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update verified VK posts from Apify pilot"
+            git commit -m "Update verified VK posts from bounded multi-profile pilot"
             git push
           fi

@@ -20,5 +20,5 @@ for handle in handles:
         reason="Не удалось проверить доступность страницы ("+type(exc).__name__+")"
     profiles[handle]={"checked_at":now,"status":"checked_unavailable","posts_count":None,"reason":reason}
 report={"schema_version":1,"generated_at":now,"source":"Unauthenticated HTTP reachability; NOT a VK posts collector","profiles":profiles}
-Path("monitor-status.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+Path("profile-reachability.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("Checked",len(profiles),"profiles; no post counts inferred.")

@@ -6,6 +6,7 @@ Requires APIFY_TOKEN. A profile without returned posts is NOT marked inactive.
 import json
 import os
 import pathlib
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -38,6 +39,8 @@ if not isinstance(statuses, dict):
     statuses = {}
 counts = {}
 errors = {}
+rate_limited = False
+consecutive_forbidden = 0
 ENDPOINT = "https://api.apify.com/v2/acts/hyperbach~vk-posts-scraper/run-sync-get-dataset-items"
 for person in chosen:
     handle = person["handle"]
@@ -90,9 +93,20 @@ for person in chosen:
         counts[handle] = len(new)
         statuses[handle] = {"state": "posts_verified", "last_checked": now.isoformat(),
                             "retrieved": len(new)}
+        consecutive_forbidden = 0
         print("Verified", handle, len(new), flush=True)
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError, json.JSONDecodeError) as exc:
         msg = ("HTTP " + str(exc.code)) if isinstance(exc, urllib.error.HTTPError) else str(exc)[:160]
+        if isinstance(exc, urllib.error.HTTPError) and exc.code in (401, 402, 403, 429):
+            consecutive_forbidden += 1
+            if consecutive_forbidden >= 2 or exc.code in (401, 402, 429):
+                rate_limited = True
+                print("Apify authorization/quota limit suspected; stopping this run", flush=True)
+                break
+            print("First HTTP 403; wait before next attempt", flush=True)
+            time.sleep(5)
+        else:
+            consecutive_forbidden = 0
         errors[handle] = msg
         statuses[handle] = {"state": "unavailable", "last_checked": now.isoformat(),
                             "reason": msg}
@@ -102,11 +116,11 @@ old["generated_at"] = now.isoformat()
 old["source"] = "Apify VK Posts Scraper; incremental 159-profile monitoring"
 old["monitored_profiles"] = sorted(monitored)
 old["profile_status"] = statuses
-old["import_diagnostics"] = {"full_sweep": full_sweep, "batch_index": batch_index, "batch_count": batch_count,
-                             "profiles_attempted": [p["handle"] for p in chosen],
+old["import_diagnostics"] = {"stopped_on_api_limit": rate_limited, "full_sweep": full_sweep, "batch_index": batch_index, "batch_count": batch_count,
+                             "profiles_attempted": list(counts) + list(errors),
                              "verified_counts": counts, "unavailable": errors,
                              "max_items_per_profile": 20}
 path.write_text(json.dumps(old, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print("Completed batch", batch_index + 1, "/", batch_count,
-      "verified", len(counts), "unverified", len(errors),
+      "verified", len(counts), "unverified", len(errors), "api_limit", rate_limited,
       "historical posts", len(old["posts"]))

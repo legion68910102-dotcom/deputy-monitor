@@ -286,7 +286,7 @@ const postSelect=el("post-person");handles.forEach(h=>{let o=document.createElem
 el("new-district").innerHTML=districts.map(d=>'<option value="'+esc(d)+'">'+esc(d)+'</option>').join("");
 el("new-deputy-add").onclick=()=>{const name=el("new-deputy-name").value.trim(),raw=el("new-deputy-vk").value.trim(),handle=raw.replace("https://vk.com/","").replace("https://vk.ru/","").replace("https://www.vk.com/","").replace("https://www.vk.ru/","").replace(/^@/,"").split("/")[0];const status=el("new-deputy-status");if(!name||!handle||!/^[a-zA-Z0-9_.]{3,70}$/.test(handle)){status.textContent="Укажите имя и корректный короткий адрес VK.";return}if(handles.includes(handle)){status.textContent="Этот VK-профиль уже добавлен.";return}handles.push(handle);names[handle]=name;districtMap[handle]=el("new-district").value;extraDeputies.push({handle,name});localStorage.setItem("dm_extra_deputies",JSON.stringify(extraDeputies));saveDistricts();el("new-deputy-name").value="";el("new-deputy-vk").value="";status.textContent="Депутат добавлен в "+districtMap[handle]+". Данные хранятся на этом устройстве.";render()};
 el("search").oninput=render;el("refresh-monitor").onclick=refreshMonitor;render();refreshMonitor();
-</script><script src="./report.js?v=20261122-82" defer></script><script src="./ranking-three-categories.js?v=82" defer></script><script src="./activity-analysis.js?v=1" defer></script>
+</script><script src="./report.js?v=20261122-82" defer></script><script src="./ranking-three-categories.js?v=83" defer></script><script src="./activity-analysis.js?v=1" defer></script>
 
 <script>
 /* Keep the report selector alphabetized even if a browser reuses an older report.js. */

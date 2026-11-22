@@ -22,7 +22,7 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 function extract(text){
  const sentences=String(text||"").split(/(?<=[.!?\n])\s+|\n+/u).filter(Boolean),hits=[];
  const residentMeeting=/(?:встретил[а-яё]*ся|встреч[а-яё]*|обсудил[а-яё]*)[^.!?\n]{0,90}(?:с\s+жител|с\s+избирател)|(?:с\s+жител|с\s+избирател)[^.!?\n]{0,90}встреч/iu;
- const councilCommittee=/заседани[а-яё]*\s+(?:[а-яё-]+\s+){0,2}комисси[а-яё]*\s+совет[а-яё]*\s+депутат[а-яё]*/iu;
+ const councilCommittee=/заседани[а-яё]*\s+(?:[а-яё-]+\s+){0,3}(?:комисси[а-яё]*|комитет[а-яё]*|рабоч[а-яё]*\s+групп[а-яё]*)/iu;
  for(const sentence of sentences){
   const t=sentence.trim();if(!t)continue;
   const uncertain=future.test(t)||negate.test(t);
@@ -59,7 +59,7 @@ let aiDataset=null,aiMessage="Загрузка ИИ…";
 function aiIdentity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function aiSignature(r){let h=2166136261;for(const ch of aiIdentity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
 function getAiResult(r){
- if(!aiDataset||!["ready","partial"].includes(aiDataset.status))return null;
+ if(!aiDataset||aiDataset.taxonomy_version!==2||!["ready","partial"].includes(aiDataset.status))return null;
  const item=aiDataset.posts?.[aiIdentity(r)];
  return item?.signature===aiSignature(r)&&Array.isArray(item.categories)?item:null;
 }
@@ -70,7 +70,8 @@ async function loadAiDataset(){
   const data=await response.json();
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
   aiDataset=data;
-  if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
+  if(data.taxonomy_version!==2)aiMessage="ИИ обновляет классификацию по 14 категориям. Пока показываются предварительные правила.";
+  else if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="partial")aiMessage="ИИ обработал часть публикаций, остальные — по правилам. Категория заседаний Совета депутатов будет пополняться по мере переанализа. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="no_posts")aiMessage="Обработка ИИ настроена, но общей ленте пока нет текстов публикаций.";
   else aiMessage="ИИ ещё не подключён. Нужен секрет GIGACHAT_AUTH_KEY в GitHub. Пока используются правила.";

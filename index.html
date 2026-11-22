@@ -397,7 +397,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 })();
 
-</script><script id="ranking-stable-v88">
+</script><script id="ranking-stable-v90">
 /* Public-data ranking: same post dataset and date fields as the Excel report. */
 (function(){
 "use strict";
@@ -409,8 +409,8 @@ const key=p=>p.handle||"roster:"+p.district+":"+p.name;
 const safeNum=v=>(v===null||v===undefined||v===""||!Number.isFinite(Number(v)))?0:Number(v);
 function storedPosts(){
  const map=new Map();
- for(const [storage,field] of [[sessionStorage,"dm_vk_posts"],[localStorage,"dm_posts"]]){
-  try{const arr=JSON.parse(storage.getItem(field)||"[]");if(Array.isArray(arr))for(const p of arr)if(p?.profile&&p?.url)map.set(p.profile+"|"+p.url,p)}catch(e){}
+ for(const [kind,field] of [["sessionStorage","dm_vk_posts"],["localStorage","dm_posts"]]){
+  try{const storage=window[kind];const arr=JSON.parse(storage.getItem(field)||"[]");if(Array.isArray(arr))for(const p of arr)if(p?.profile&&p?.url)map.set(p.profile+"|"+p.url,p)}catch(e){}
  }
  return [...map.values()];
 }
@@ -428,7 +428,8 @@ function calculate(){
   stats.posts++;for(const k of ["likes","comments","reposts","views"])stats[k]+=safeNum(p[k]);
   counts.set(id,stats);
  }
- const entries=roster.map(p=>({name:p.name,district:p.district||"Не указан",handle:key(p),stats:counts.get(key(p))||{posts:0,likes:0,comments:0,reposts:0,views:0}}));
+ const currentRoster=Array.isArray(window.deputyRoster)&&window.deputyRoster.length?window.deputyRoster:roster;
+ const entries=currentRoster.map(p=>({name:p.name,district:p.district||"Не указан",handle:key(p),stats:counts.get(key(p))||{posts:0,likes:0,comments:0,reposts:0,views:0}}));
  const active=entries.filter(p=>p.stats.posts>0),unverified=entries.filter(p=>!p.stats.posts);
  active.sort((a,b)=>b.stats[metric]-a.stats[metric]||b.stats.posts-a.stats.posts||coll.compare(a.name,b.name));
  unverified.sort((a,b)=>coll.compare(a.district,b.district)||coll.compare(a.name,b.name));
@@ -457,7 +458,7 @@ function draw(){
   body.innerHTML=rows.map(({rank,p,value,group})=>'<tr class="ranking-'+categories[group].className+'"><td>'+rank+'</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>'+value+'</td><td><span class="ranking-tag">'+categories[group].label+'</span></td></tr>').join("")+
    (showUnverified?unverified.map(p=>'<tr class="ranking-no-data"><td>—</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>Нет данных</td><td>Нет данных за период</td></tr>').join(""):"");
   summary.textContent="⚠ Данные VK могут быть неполными: автоматический сбор не настроен. Пустые показатели не означают отсутствие работы депутата. Период: "+from+" — "+to+". С публикациями: "+active.length+" из "+roster.length+"; без публикаций в загруженной выборке за период: "+unverified.length+". Категории распределены по местам среди депутатов с данными: 60% — «Отлично», 30% — «Допустимо», 10% — «Плохо» (с округлением до целых строк). При равных показателях порядок определяется дополнительной сортировкой. Депутаты без данных не входят в процентное распределение. Это не оценка качества депутатской работы.";
- }catch(e){body.innerHTML="";groups.innerHTML="";summary.textContent="Ошибка: "+e.message}
+ }catch(e){console.error("Ranking render:",e);summary.textContent="Ошибка загрузки рейтинга: "+e.message+" — попробуйте обновить страницу.";if(!body.children.length){const people=Array.isArray(window.deputyRoster)?window.deputyRoster:roster;body.innerHTML=people.map(p=>"<tr class=\"ranking-no-data\"><td>—</td><td>"+esc(p.district||"Не указан")+"</td><td>"+esc(p.name)+"</td><td>Нет данных</td><td>Нет данных за период</td></tr>").join("")}}
 }
 function initRanking(){
  const from=$("ranking-from"),to=$("ranking-to");if(!from||!to)return;

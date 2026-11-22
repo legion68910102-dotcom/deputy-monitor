@@ -21,7 +21,8 @@ batch_arg = os.environ.get("VK_BATCH_INDEX", "").strip()
 batch_index = int(batch_arg) if batch_arg else ((now.date().toordinal() * 4 + now.hour // 6) % batch_count)
 if not 0 <= batch_index < batch_count:
     raise SystemExit("VK_BATCH_INDEX must be between 0 and " + str(batch_count - 1))
-chosen = profiles[batch_index * BATCH_SIZE:(batch_index + 1) * BATCH_SIZE]
+full_sweep = os.environ.get("VK_FULL_SWEEP", "").lower() == "true"
+chosen = profiles if full_sweep else profiles[batch_index * BATCH_SIZE:(batch_index + 1) * BATCH_SIZE]
 token = os.environ.get("APIFY_TOKEN", "")
 if not token:
     raise SystemExit("APIFY_TOKEN missing; existing data unchanged")
@@ -40,6 +41,9 @@ errors = {}
 ENDPOINT = "https://api.apify.com/v2/acts/hyperbach~vk-posts-scraper/run-sync-get-dataset-items"
 for person in chosen:
     handle = person["handle"]
+    if full_sweep and handle in monitored:
+        print("Already verified, skipping", handle, flush=True)
+        continue
     payload = json.dumps({
         "targets": ["https://vk.ru/" + handle],
         "maxItems": 20, "maxItemsPerTarget": 20,
@@ -86,19 +90,19 @@ for person in chosen:
         counts[handle] = len(new)
         statuses[handle] = {"state": "posts_verified", "last_checked": now.isoformat(),
                             "retrieved": len(new)}
-        print("Verified", handle, len(new))
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError) as exc:
+        print("Verified", handle, len(new), flush=True)
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError, json.JSONDecodeError) as exc:
         msg = ("HTTP " + str(exc.code)) if isinstance(exc, urllib.error.HTTPError) else str(exc)[:160]
         errors[handle] = msg
         statuses[handle] = {"state": "unavailable", "last_checked": now.isoformat(),
                             "reason": msg}
-        print("Unverified", handle, msg)
+        print("Unverified", handle, msg, flush=True)
 old["posts"] = sorted(combined.values(), key=lambda r: r.get("date", ""), reverse=True)
 old["generated_at"] = now.isoformat()
 old["source"] = "Apify VK Posts Scraper; incremental 159-profile monitoring"
 old["monitored_profiles"] = sorted(monitored)
 old["profile_status"] = statuses
-old["import_diagnostics"] = {"batch_index": batch_index, "batch_count": batch_count,
+old["import_diagnostics"] = {"full_sweep": full_sweep, "batch_index": batch_index, "batch_count": batch_count,
                              "profiles_attempted": [p["handle"] for p in chosen],
                              "verified_counts": counts, "unavailable": errors,
                              "max_items_per_profile": 20}

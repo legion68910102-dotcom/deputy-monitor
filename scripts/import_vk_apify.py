@@ -67,6 +67,10 @@ for person in chosen:
                 continue
             if not isinstance(stamp, str) or len(stamp) < 10:
                 continue
+            try:
+                datetime.fromisoformat(stamp[:10])
+            except ValueError:
+                continue
             new.append({
                 "profile": handle, "date": stamp[:10], "url": url,
                 "text": row.get("text") or "",

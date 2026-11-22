@@ -27,6 +27,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Configure trusted GigaChat CA certificate (optional)
+        env:
+          GIGACHAT_CA_PEM: ${{ secrets.GIGACHAT_CA_PEM }}
+        shell: bash
+        run: |
+          if [ -n "$GIGACHAT_CA_PEM" ]; then
+            printf '%s\n' "$GIGACHAT_CA_PEM" > "$RUNNER_TEMP/gigachat-ca.pem"
+            echo "NODE_EXTRA_CA_CERTS=$RUNNER_TEMP/gigachat-ca.pem" >> "$GITHUB_ENV"
+          fi
       - name: Analyze available public texts
         env:
           GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}

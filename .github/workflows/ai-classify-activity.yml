@@ -1,0 +1,46 @@
+name: AI classification of deputy publications
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5,17 * * *"
+  push:
+    paths:
+      - "vk-posts.json"
+      - "scripts/classify-activity-ai.mjs"
+      - ".github/workflows/ai-classify-activity.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-deputy-publications
+  cancel-in-progress: false
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Analyze available public texts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: "gpt-4.1-mini"
+          AI_POST_LIMIT: "60"
+        run: node scripts/classify-activity-ai.mjs
+      - name: Publish analysis cache
+        run: |
+          if git diff --quiet -- ai-analysis.json; then
+            echo "No changes to AI cache"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-analysis.json
+          git commit -m "Update AI activity classifications"
+          git push

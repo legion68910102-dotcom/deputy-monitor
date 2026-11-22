@@ -44,14 +44,19 @@ function draw(){
  try{
   const {active,unverified,metric,from,to}=calculate();
   const showUnverified=$("ranking-show-unverified").checked;
-  const scores=[...new Set(active.map(p=>p.stats[metric]))].sort((a,b)=>b-a);
-  const bucket=score=>{if(scores.length===1)return 1;const position=scores.indexOf(score);return Math.min(2,Math.floor(position*3/scores.length))};
+  // Allocate the ranked, data-backed entries in a 60% / 30% / 10% split.
+  // Largest-remainder rounding keeps the three counts adding up exactly.
+  const n=active.length,weights=[0.6,0.3,0.1];
+  const counts=weights.map(w=>Math.floor(n*w));
+  let remaining=n-counts.reduce((a,b)=>a+b,0);
+  const remainders=weights.map((w,i)=>({i,fraction:n*w-counts[i]})).sort((a,b)=>b.fraction-a.fraction||a.i-b.i);
+  for(let i=0;i<remaining;i++)counts[remainders[i].i]++;
   const totals=[0,0,0];
-  const rows=active.map((p,i)=>{const group=bucket(p.stats[metric]);totals[group]++;return {rank:i+1,p,value:p.stats[metric],group}});
+  const rows=active.map((p,i)=>{const group=i<counts[0]?0:i<counts[0]+counts[1]?1:2;totals[group]++;return {rank:i+1,p,value:p.stats[metric],group}});
   groups.innerHTML=categories.map((c,i)=>'<div class="ranking-legend ranking-'+c.className+'"><strong>'+esc(c.label)+'</strong><span>'+totals[i]+' депутатов</span></div>').join("");
   body.innerHTML=rows.map(({rank,p,value,group})=>'<tr class="ranking-'+categories[group].className+'"><td>'+rank+'</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>'+value+'</td><td><span class="ranking-tag">'+categories[group].label+'</span></td></tr>').join("")+
    (showUnverified?unverified.map(p=>'<tr class="ranking-no-data"><td>—</td><td>'+esc(p.district)+'</td><td>'+esc(p.name)+'</td><td>Нет данных</td><td>Нет данных за период</td></tr>').join(""):"");
-  summary.textContent="⚠ Данные VK могут быть неполными: автоматический сбор не настроен. Пустые показатели не означают отсутствие работы депутата. Период: "+from+" — "+to+". С публикациями: "+active.length+" из "+roster.length+"; без публикаций в загруженной выборке за период: "+unverified.length+". Категории — относительные группы по разным значениям выбранного показателя; одинаковые значения получают одинаковую категорию. При единственном значении используется «Допустимо». Это не оценка качества депутатской работы.";
+  summary.textContent="⚠ Данные VK могут быть неполными: автоматический сбор не настроен. Пустые показатели не означают отсутствие работы депутата. Период: "+from+" — "+to+". С публикациями: "+active.length+" из "+roster.length+"; без публикаций в загруженной выборке за период: "+unverified.length+". Категории распределены по местам среди депутатов с данными: 60% — «Отлично», 30% — «Допустимо», 10% — «Плохо» (с округлением до целых строк). При равных показателях порядок определяется дополнительной сортировкой. Депутаты без данных не входят в процентное распределение. Это не оценка качества депутатской работы.";
  }catch(e){body.innerHTML="";groups.innerHTML="";summary.textContent="Ошибка: "+e.message}
 }
 document.addEventListener("DOMContentLoaded",()=>{

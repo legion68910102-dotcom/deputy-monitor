@@ -36,6 +36,14 @@ jobs:
             printf '%s\n' "$GIGACHAT_CA_PEM" > "$RUNNER_TEMP/gigachat-ca.pem"
             echo "NODE_EXTRA_CA_CERTS=$RUNNER_TEMP/gigachat-ca.pem" >> "$GITHUB_ENV"
           fi
+      - name: Check GigaChat authorization key
+        env:
+          GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
+        run: |
+          if [ -z "$GIGACHAT_AUTH_KEY" ]; then
+            echo "::error::GitHub Actions secret GIGACHAT_AUTH_KEY is not configured. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
       - name: Analyze available public texts
         env:
           GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}

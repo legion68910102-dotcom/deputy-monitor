@@ -195,6 +195,7 @@ def collect(root: Path, token: str, *, start_at: int = 0,
     statuses = dict(report.get("profiles", {}))
     checked_at = dt.datetime.now(dt.timezone.utc).isoformat()
     succeeded = failed = inserted = updated = 0
+    consecutive_failures = 0
     aborted = None
     attempted = 0
 
@@ -205,15 +206,18 @@ def collect(root: Path, token: str, *, start_at: int = 0,
         items, error, fatal = read_wall(handle, token, fetch, pause)
         if error is not None:
             failed += 1
+            # A private wall (VK error 15) is not an API outage; keep checking others.
+            consecutive_failures = 0 if error == "vk_api_error_15" else consecutive_failures + 1
             statuses[handle] = {
                 "status": "checked_unavailable", "checked_at": checked_at,
                 "posts_count": None, "reason": error
             }
-            if fatal or failed >= 8:
+            if fatal or consecutive_failures >= 8:
                 aborted = "auth_error" if fatal else "too_many_failures"
                 break
             continue
 
+        consecutive_failures = 0
         accepted = 0
         for post in items:
             fresh = normalize_post(post, handle)

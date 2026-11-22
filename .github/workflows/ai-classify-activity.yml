@@ -27,12 +27,47 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Configure verified GigaChat trust certificate
+        env:
+          GIGACHAT_CA_PEM: ${{ secrets.GIGACHAT_CA_PEM }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cert="$RUNNER_TEMP/gigachat-root-ca.pem"
+          if [ -n "$GIGACHAT_CA_PEM" ]; then
+            printf '%s\n' "$GIGACHAT_CA_PEM" > "$cert"
+          else
+            # Official Russian trusted root certificate. Pin the fingerprint
+            # because its distribution URL can require an initially untrusted CA.
+            curl --fail --silent --show-error --location --insecure --retry 2 \
+              --max-time 25 "https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt" -o "$cert"
+          fi
+          expected="D26D2D0231B7C39F92CC738512BA54103519E4405D68B5BD703E9788CA8ECF31"
+          actual="$(openssl x509 -in "$cert" -noout -sha256 -fingerprint | cut -d= -f2 | tr -d ':' | tr '[:lower:]' '[:upper:]')"
+          if [ "$actual" != "$expected" ]; then
+            echo "::error::GigaChat root certificate fingerprint mismatch; no TLS trust changes made."
+            exit 1
+          fi
+          echo "NODE_EXTRA_CA_CERTS=$cert" >> "$GITHUB_ENV"
+          echo "Verified Russian Trusted Root CA for Node.js only (TLS verification remains enabled)."
+      - name: Check GigaChat authorization key
+        env:
+          GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
+        run: |
+          if [ -z "$GIGACHAT_AUTH_KEY" ]; then
+            echo "::error::GitHub Actions secret GIGACHAT_AUTH_KEY is not configured. Add it in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
       - name: Analyze available public texts
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: "gpt-4.1-mini"
+          GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
+          GIGACHAT_MODEL: "GigaChat-2-Pro"
+          GIGACHAT_SCOPE: "GIGACHAT_API_PERS"
+          GIGACHAT_SMOKE_TEST: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
           AI_POST_LIMIT: "60"
-        run: node scripts/classify-activity-ai.mjs
+        run: |
+          node --check scripts/classify-activity-ai.mjs
+          node scripts/classify-activity-ai.mjs
       - name: Publish analysis cache
         run: |
           if git diff --quiet -- ai-analysis.json; then

@@ -1,7 +1,29 @@
 /** Server-side semantic classification. Key must only be used in GitHub Actions. */
 import fs from "node:fs";
-const MODEL=process.env.OPENAI_MODEL||"gpt-4.1-mini";
-const TOKEN=process.env.OPENAI_API_KEY||"";
+const MODEL=process.env.GIGACHAT_MODEL||"GigaChat-2-Pro";
+const AUTH_KEY=(process.env.GIGACHAT_AUTH_KEY||"").trim();
+const SCOPE=process.env.GIGACHAT_SCOPE||"GIGACHAT_API_PERS";
+const OAUTH_URL="https://ngw.devices.sberbank.ru:9443/api/v2/oauth";
+const CHAT_URL="https://api.giga.chat/v1/chat/completions";
+let accessToken="",accessTokenExpires=0;
+async function getAccessToken(){
+ if(accessToken&&Date.now()<accessTokenExpires)return accessToken;
+ const response=await fetch(OAUTH_URL,{
+  method:"POST",
+  headers:{"Content-Type":"application/x-www-form-urlencoded","Accept":"application/json",
+   "RqUID":crypto.randomUUID(),
+   "Authorization":/^Basic\s/i.test(AUTH_KEY)?AUTH_KEY:"Basic "+AUTH_KEY},
+  body:new URLSearchParams({scope:SCOPE}).toString(),
+  signal:AbortSignal.timeout(30000)
+ });
+ if(!response.ok)throw Error("GigaChat OAuth HTTP "+response.status);
+ const data=await response.json();
+ if(typeof data.access_token!=="string"||!data.access_token)throw Error("GigaChat OAuth returned no access token");
+ accessToken=data.access_token;
+ // Access tokens typically live 30 minutes. Refresh early; never commit tokens.
+ accessTokenExpires=Date.now()+25*60*1000;
+ return accessToken;
+}
 const LIMIT=Math.min(100,Math.max(1,Number(process.env.AI_POST_LIMIT)||60));
 const CATEGORIES=["meet","walk","inspect","event","reception","appeal","result","plan","personal","information","announcement","repost"];
 const categoriesSet=new Set(CATEGORIES);
@@ -26,10 +48,11 @@ function signature(r){let h=2166136261;for(const ch of identity(r)+"\u001f"+Stri
 function isRepost(r){return r.is_repost===true||r.isRepost===true||r.is_repost===1||r.isRepost===1||r.repost===true||(Array.isArray(r.copy_history)&&r.copy_history.length>0)||(Array.isArray(r.copyHistory)&&r.copyHistory.length>0)||Boolean(r.repost_of||r.repostOf||r.repost_source||r.original_post_url||r.originalPostUrl)||["repost","shared"].includes(String(r.post_type||r.postType||r.type||"").toLowerCase())}
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function askAI(post){
- const body={model:MODEL,temperature:0,messages:[{role:"system",content:system},{role:"user",content:JSON.stringify({text:String(post.text||"").slice(0,8000),repost:isRepost(post),date:post.date})}],response_format:{type:"json_schema",json_schema:{name:"deputy_activity_semantics",strict:true,schema}}};
+ const body={model:MODEL,temperature:0,messages:[{role:"system",content:system},{role:"user",content:JSON.stringify({text:String(post.text||"").slice(0,8000),repost:isRepost(post),date:post.date})}],response_format:{type:"json_schema",schema,strict:true}};
  for(let attempt=0;attempt<3;attempt++){
   let response;
-  try{response=await fetch("https://api.openai.com/v1/chat/completions",{method:"POST",headers:{"Authorization":"Bearer "+TOKEN,"Content-Type":"application/json"},body:JSON.stringify(body),signal:AbortSignal.timeout(45000)})}catch(e){if(attempt<2){await sleep(1200*(attempt+1));continue}throw e}
+  try{response=await fetch(CHAT_URL,{method:"POST",headers:{"Authorization":"Bearer "+await getAccessToken(),"Content-Type":"application/json"},body:JSON.stringify(body),signal:AbortSignal.timeout(45000)})}catch(e){if(attempt<2){await sleep(1200*(attempt+1));continue}throw e}
+  if(response.status===401){accessToken="";accessTokenExpires=0;if(attempt<2)continue}
   if(!response.ok){const message=(await response.text()).slice(0,200);if([429,500,502,503,504].includes(response.status)&&attempt<2){await sleep(2600*(attempt+1));continue}throw Error("Model API HTTP "+response.status+": "+message)}
   const result=await response.json();
   const raw=result.choices?.[0]?.message?.content;
@@ -44,17 +67,28 @@ async function askAI(post){
  throw Error("Retries exhausted");
 }
 async function main(){
- if(!TOKEN){console.log("OPENAI_API_KEY not set. No API calls; existing data unchanged.");return}
+ if(!AUTH_KEY){console.log("GIGACHAT_AUTH_KEY not set. No API calls; existing data unchanged.");return}
+ if(!["GIGACHAT_API_PERS","GIGACHAT_API_B2B","GIGACHAT_API_CORP"].includes(SCOPE))throw Error("Invalid GIGACHAT_SCOPE");
  const data=readJSON("vk-posts.json",{posts:[]});
  const source=Array.isArray(data)?data:Array.isArray(data.posts)?data.posts:[];
- const old=readJSON("ai-analysis.json",{posts:{}}).posts||{};
+ // Validate credentials and semantics in review branches without storing synthetic examples in the published cache.
+ if(source.length===0)await getAccessToken();
+ if(process.env.GIGACHAT_SMOKE_TEST==="1"){
+  console.log("GigaChat semantic smoke test started (synthetic text only).");
+  const test=await askAI({text:"Сегодня я встретился с жителями дома и обсудил их жалобы на неработающее освещение во дворе. Обращение в управляющую компанию ещё только готовим. Проблема пока не решена.",date:"2026-11-23"});
+  if(!test.categories.includes("meet")||test.categories.includes("result")||!test.explanation)
+   throw Error("GigaChat semantic smoke test failed: expected meeting but not completed result");
+  console.log("GigaChat semantic smoke test passed; meaningful categories and explanation returned.");
+ }
+ const previous=readJSON("ai-analysis.json",{posts:{}});
+ const old=previous.posts||{};
  const result={},pending=[];
  for(const r of source){
   if(!r||typeof r!=="object")continue;
   const id=identity(r),sig=signature(r);
   if(!String(r.text||"").trim()){
    result[id]={signature:sig,categories:isRepost(r)?["repost"]:[],confidence:isRepost(r)?1:0,explanation:isRepost(r)?"Подтверждено метаданными источника.":"Текст не получен.",evidence:"",method:"metadata"};
-  }else if(old[id]?.signature===sig&&old[id]?.method==="ai"){result[id]=old[id]}
+  }else if(old[id]?.signature===sig&&old[id]?.method==="ai"&&previous.provider==="gigachat"&&previous.model===MODEL){result[id]=old[id]}
   else pending.push({id,sig,r});
  }
  let completed=0,failures=0;
@@ -64,7 +98,7 @@ async function main(){
   await sleep(200);
  }
  const left=pending.filter(item=>!(item.id in result)).length;
- const output={schema_version:1,status:source.length===0?"no_posts":left?"partial":"ready",generated_at:new Date().toISOString(),model:MODEL,source:"vk-posts.json",total_posts:source.length,classified_posts:Object.values(result).filter(r=>r.method==="ai").length,pending_posts:left,posts:result};
+ const output={schema_version:1,provider:"gigachat",status:source.length===0?"no_posts":left?"partial":"ready",generated_at:new Date().toISOString(),model:MODEL,source:"vk-posts.json",total_posts:source.length,classified_posts:Object.values(result).filter(r=>r.method==="ai").length,pending_posts:left,posts:result};
  fs.writeFileSync("ai-analysis.json",JSON.stringify(output,null,2)+"\n");
  console.log("AI classifications:",{status:output.status,total:source.length,new:completed,pending:left,failures});
  if(failures>0&&completed===0&&source.length>0)process.exitCode=1;

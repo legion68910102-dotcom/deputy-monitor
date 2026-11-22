@@ -53,10 +53,10 @@ async function loadAiDataset(){
   const data=await response.json();
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
   aiDataset=data;
-  if(data.status==="ready")aiMessage="Классификация ИИ доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
+  if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="partial")aiMessage="ИИ обработал часть публикаций, остальные — по правилам. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="no_posts")aiMessage="Обработка ИИ настроена, но общей ленте пока нет текстов публикаций.";
-  else aiMessage="ИИ ещё не подключён. Нужен секрет OPENAI_API_KEY в GitHub. Пока используются правила.";
+  else aiMessage="ИИ ещё не подключён. Нужен секрет GIGACHAT_AUTH_KEY в GitHub. Пока используются правила.";
  }catch(e){aiMessage="Результаты ИИ недоступны; работают правила."}
  render(false);
 }

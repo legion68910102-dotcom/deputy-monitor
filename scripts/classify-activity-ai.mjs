@@ -149,6 +149,15 @@ async function main(){
   }
   else pending.push({id,sig,r,review:false});
  }
+ // After a complete approved reanalysis, avoid rewriting the cache and
+ // triggering GitHub Pages deployments on every scheduled check.
+ // A changed post/signature, metadata, or taxonomy automatically resumes work.
+ if(!pending.length&&previous.status==="ready"&&previous.methodology_version===METHODOLOGY_VERSION
+    &&previous.total_posts===source.length&&previous.pending_posts===0
+    &&previous.legacy_classified_posts===0&&JSON.stringify(result)===JSON.stringify(old)){
+  console.log("All publications are already analyzed under the approved methodology. No update needed.");
+  return;
+ }
  // First re-evaluate previously classified texts under the approved thesis dictionary;
  // prioritize likely false event/walk/personal/humanitarian classifications.
  const focusHint=/(?:субботник|обход|глав[а-яё]*\s+управ|капремонт|капитальн[а-яё]*\s+ремонт|гуманитар|дет[а-яё]*|дач[а-яё]*|музе[а-яё]*|форум|съезд)/iu;

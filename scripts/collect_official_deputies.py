@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "official-deputy-candidates.json"
 SOURCES = {
-    "Бирюлёво Восточное": "https://mrbv.ru/",
+    "Бирюлёво Восточное": "https://mrbv.ru/sovet/",
     "Бирюлёво Западное": "https://www.m-bz.ru/",
     "Братеево": "https://mun-brateevo.ru/",
     "Даниловский": "https://danilovskoe.org/index.php/council-of-deputies",
@@ -43,7 +43,7 @@ def norm(value):
 
 def same_site(url, root):
     a, b = urlparse(url), urlparse(root)
-    return a.scheme == "https" and a.hostname and b.hostname and a.hostname.lstrip("www.") == b.hostname.lstrip("www.")
+    return a.scheme == "https" and a.hostname and b.hostname and a.hostname.removeprefix("www.") == b.hostname.removeprefix("www.")
 
 def download(url, root):
     if not same_site(url, root):
@@ -78,44 +78,82 @@ def candidates_on_page(html, url):
         garbage.decompose()
     title = (soup.title.get_text(" ", strip=True) if soup.title else "")
     heading = " ".join(x.get_text(" ", strip=True) for x in soup.select("h1,h2")[:5])
-    # Avoid unrelated news and event cards that happen to mention a person's name.
+    # This check rejects unrelated news pages containing names of public figures.
     if not COUNCIL.search(title + " " + heading + " " + url):
-        return [], soup
+        return [], soup, []
     people = {}
+    roster = {}
+
+    def get_photo(node):
+        # Portrait and name often live in sibling tags, not one nested anchor.
+        for parent in list(node.parents)[:5]:
+            if parent.name in ("html", "body", "main"):
+                break
+            if len(parent.get_text(" ", strip=True)) > 600:
+                break
+            for img in parent.find_all("img"):
+                raw = img.get("data-src") or img.get("src") or ""
+                photo = urljoin(url, raw)
+                if raw and same_site(photo, url):
+                    return photo
+        return None
+
+    # Explicit roster link names are authoritative candidate identities, even
+    # if a thumbnail has not been extracted. They are NOT automatically added.
+    for tag in soup.select("a[href],h2,h3,h4"):
+        name = re.sub(r"\s+", " ", tag.get_text(" ", strip=True))
+        if not NAME.fullmatch(name):
+            continue
+        anchor = tag if tag.name == "a" else tag.find("a", href=True)
+        source = urljoin(url, anchor.get("href", "")) if anchor else url
+        if not same_site(source, url):
+            source = url
+        item = {"name": name, "source": source}
+        roster.setdefault(norm(name), item)
+        photo = get_photo(tag)
+        if photo:
+            people.setdefault(norm(name), dict(item, photo=photo, page=url))
+
+    # Fallback for layouts using text labels instead of a headline/link.
     for node in soup.select("article,li,section,div"):
+        if len(node.get_text(" ", strip=True)) > 450:
+            continue
         img = node.find("img")
         if not img:
             continue
-        visible = node.get_text(" ", strip=True)
-        if len(visible) > 450 or len(visible) < 12:
-            continue
         names = []
         for tag in node.select("h2,h3,h4,a"):
-            text = re.sub(r"\s+", " ", tag.get_text(" ", strip=True))
-            if NAME.fullmatch(text):
-                names.append((text, tag))
-        if len({norm(n) for n, _ in names}) != 1:
+            name = re.sub(r"\s+", " ", tag.get_text(" ", strip=True))
+            if NAME.fullmatch(name):
+                names.append((name, tag))
+        if len({norm(name) for name, _ in names}) != 1:
             continue
-        name, name_tag = names[0]
-        photo_raw = img.get("src") or img.get("data-src") or ""
+        name, tag = names[0]
+        if norm(name) in people:
+            continue
+        photo_raw = img.get("data-src") or img.get("src") or ""
         photo = urljoin(url, photo_raw)
-        if not photo_raw or not photo.startswith("https://"):
+        if not photo_raw or not same_site(photo, url):
             continue
-        anchor = name_tag if name_tag.name == "a" else name_tag.find("a") or node.find("a", href=True)
-        link = urljoin(url, anchor.get("href", "")) if anchor and anchor.get("href") else url
-        if urlparse(link).scheme != "https":
-            link = url
-        if norm(name) not in people:
-            people[norm(name)] = {"name": name, "photo": photo, "source": link, "page": url}
-    return list(people.values()), soup
+        link = tag if tag.name == "a" else tag.find("a", href=True)
+        source = urljoin(url, link.get("href", "")) if link and link.has_attr("href") else url
+        if not same_site(source, url):
+            source = url
+        people[norm(name)] = {"name": name, "photo": photo, "source": source, "page": url}
+        roster.setdefault(norm(name), {"name": name, "source": source})
+    return list(people.values()), soup, list(roster.values())
 
 def scan(district, root):
     now = dt.datetime.now(dt.timezone.utc).isoformat()
-    output = {"source": root, "checked_at": now, "status": "unavailable", "candidates": []}
+    output = {
+        "source": root, "checked_at": now, "status": "unavailable",
+        "candidates": [], "roster": [], "pages_checked": 0
+    }
     queue = [root]
     seen = set()
     successful = 0
     found = {}
+    listed = {}
     while queue and len(seen) < 5:
         url = queue.pop(0)
         if url in seen:
@@ -124,24 +162,35 @@ def scan(district, root):
         try:
             html, actual = download(url, root)
             successful += 1
-            candidates, soup = candidates_on_page(html, actual)
+            candidates, soup, roster = candidates_on_page(html, actual)
             for person in candidates:
                 found.setdefault(norm(person["name"]), person)
-            if len(seen) == 1:
+            for person in roster:
+                listed.setdefault(norm(person["name"]), person)
+            # On a confirmed roster page with photos, avoid crawling unrelated
+            # council reports and news that may introduce false positives.
+            if len(seen) == 1 and len(candidates) < 5:
                 queue.extend(pages_to_check(soup, actual, root))
         except (requests.RequestException, ValueError) as exc:
             output["error"] = type(exc).__name__
+    output["pages_checked"] = successful
     if successful:
-        output["status"] = "ok" if found else "no_candidates"
+        output["status"] = "ok" if found else "names_only" if listed else "no_candidates"
         output["candidates"] = sorted(found.values(), key=lambda x: norm(x["name"]))[:60]
+        output["roster"] = sorted(listed.values(), key=lambda x: norm(x["name"]))[:60]
         output.pop("error", None)
     return output
 
 def main():
     if "--self-test" in sys.argv:
         sample = '<html><title>Совет депутатов</title><div><a href="/person/1">Иванов Иван Иванович</a><img src="/photo.jpg"></div></html>'
-        cards, _ = candidates_on_page(sample, "https://example.ru/")
+        cards, _, roster = candidates_on_page(sample, "https://example.ru/")
         assert len(cards) == 1 and cards[0]["name"] == "Иванов Иван Иванович"
+        assert len(roster) == 1
+        second = '<html><h1>Совет депутатов</h1><div><img src="/anna.jpg"><p><a href="/person/2">Сидорова Анна Петровна</a></p></div></html>'
+        cards, _, roster = candidates_on_page(second, "https://example.ru/sovet/")
+        assert len(cards) == 1 and cards[0]["photo"] == "https://example.ru/anna.jpg"
+        assert roster[0]["name"] == "Сидорова Анна Петровна"
         assert same_site("https://www.example.ru/a", "https://example.ru/")
         assert not same_site("https://attacker.example.ru/", "https://example.ru/")
         print("self-test passed")
@@ -163,6 +212,7 @@ def main():
         if value["status"] == "unavailable" and old.get(district, {}).get("status") == "ok":
             value["status"] = "stale"
             value["candidates"] = old[district].get("candidates", [])
+            value["roster"] = old[district].get("roster", [])
             value["last_success_at"] = old[district].get("checked_at")
         result["districts"][district] = value
         print(district, value["status"], len(value["candidates"]))

@@ -11,6 +11,7 @@ on:
       - "scripts/test-activity-taxonomy.mjs"
       - "activity-analysis-v129.js"
       - "activity-category-policy-v1.js"
+      - "activity-taxonomy-approved-v1.json"
       - ".github/workflows/ai-classify-activity.yml"
 
 permissions:
@@ -65,6 +66,7 @@ jobs:
         run: |
           node --check activity-analysis-v129.js
           node --check activity-category-policy-v1.js
+          node -e 'const t=require("./activity-taxonomy-approved-v1.json"); if(t.categories.length!==15||t.categories.reduce((n,c)=>n+c.phrases.length,0)<230)process.exit(1); console.log("Approved taxonomy categories: "+t.categories.length)'
           node scripts/test-activity-taxonomy.mjs
       - name: Analyze available public texts
         env:

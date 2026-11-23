@@ -100,6 +100,7 @@ async function askAI(post){
   if(response.status===401){accessToken="";accessTokenExpires=0;if(attempt<2)continue}
   if(!response.ok){const message=(await response.text()).slice(0,200);if([429,500,502,503,504].includes(response.status)&&attempt<2){await sleep(2600*(attempt+1));continue}throw Error("Model API HTTP "+response.status+": "+message)}
   const result=await response.json();
+  if(result.choices?.[0]?.finish_reason==="blacklist"){const e=new Error("GigaChat refused the request (finish_reason=blacklist)");e.code="GIGACHAT_BLACKLIST";throw e}
   const raw=result.choices?.[0]?.message?.content;
   if(typeof raw!=="string")throw Error("Model returned no JSON classification");
   let parsed;
@@ -164,12 +165,14 @@ async function askBatchAI(posts){
     throw Error("Batch API HTTP "+response.status+": "+info);
    }
    const payload=await response.json();
+   if(payload.choices?.[0]?.finish_reason==="blacklist"){const e=new Error("GigaChat refused a batch (finish_reason=blacklist)");e.code="GIGACHAT_BLACKLIST";throw e}
    if(payload.choices?.[0]?.finish_reason==="length")
     throw Error("Batch response was truncated");
    const raw=payload.choices?.[0]?.message?.content;
    if(typeof raw!=="string")throw Error("Batch response has no content");
    return decodeBatch(parseClassificationJSON(raw),posts,options);
   }catch(e){
+   if(e?.code==="GIGACHAT_BLACKLIST")throw e;
    if(attempt===2)throw e;
    await sleep(1500*(attempt+1));
   }
@@ -232,6 +235,7 @@ async function main(){
     explanation:changed?"Уточнены категории по утверждённой методике; ожидается повторная проверка GigaChat.":prior.explanation};
    if(!fresh)pending.push({id,sig,r,review:true});
   }
+  else if(old[id]?.signature===sig&&old[id]?.method==="blocked"&&old[id]?.request_version===1){result[id]=old[id]}
   else pending.push({id,sig,r,review:false});
  }
  // After a complete approved reanalysis, avoid rewriting the cache and
@@ -248,7 +252,7 @@ async function main(){
  const focusHint=/(?:субботник|обход|глав[а-яё]*\s+управ|капремонт|капитальн[а-яё]*\s+ремонт|гуманитар|дет[а-яё]*|дач[а-яё]*|музе[а-яё]*|форум|съезд)/iu;
  pending.sort((a,b)=>Number(Boolean(b.review))-Number(Boolean(a.review))
    ||Number(focusHint.test(String(b.r.text||"")))-Number(focusHint.test(String(a.r.text||""))));
- let completed=0,failures=0,batches=0,batchedPosts=0,fallbacks=0;
+ let completed=0,failures=0,batches=0,batchedPosts=0,fallbacks=0,refusals=0,consecutiveRefusals=0;
  const startedAt=Date.now();
  let batchEnabled=BATCH_SIZE>1;
  const scope=pending.slice(0,LIMIT);
@@ -270,24 +274,38 @@ async function main(){
    }catch(e){
     fallbacks++;
     console.error("Batch classification failed; retrying posts individually:",String(e.message||e).slice(0,200));
+    if(e?.code==="GIGACHAT_BLACKLIST")batchEnabled=false;
     // An unsupported batch schema is not worth retrying for each remaining group.
     if(/HTTP 400|HTTP 422|schema|Invalid or duplicate|Incomplete GigaChat batch response/i.test(String(e.message||e)))batchEnabled=false;
    }
   }
   for(const item of group){
    if(Date.now()-startedAt>=MAX_RUN_MS)break;
-   try{result[item.id]={signature:item.sig,...await askAI(item.r)};completed++}
-   catch(e){failures++;console.error("Unable to classify a publication:",String(e.message||e).slice(0,220));if(failures>=5)break}
+   try{result[item.id]={signature:item.sig,...await askAI(item.r)};completed++;consecutiveRefusals=0}
+   catch(e){
+    if(e?.code==="GIGACHAT_BLACKLIST"){
+     refusals++;consecutiveRefusals++;
+     // Explicit provider refusal is never a successful AI classification.
+     result[item.id]={signature:item.sig,categories:[],confidence:0,explanation:"GigaChat отклонил запрос; ИИ-классификация не выполнена.",evidence:"",method:"blocked",request_version:1};
+     console.warn("GigaChat refused publication; it remains pending.");
+     if(consecutiveRefusals>=5){console.error("Five consecutive refusals; pausing API calls for this run.");break}
+     continue;
+    }
+    failures++;consecutiveRefusals=0;
+    console.error("Unable to classify a publication:",String(e.message||e).slice(0,220));
+    if(failures>=5)break;
+   }
   }
-  if(failures>=5)break;
+  if(failures>=5||consecutiveRefusals>=5)break;
  }
  console.log("Request batching:",{batchSize:BATCH_SIZE,groups:batches,postsBatched:batchedPosts,individualFallbacks:fallbacks});
- const left=pending.filter(item=>result[item.id]?.methodology_version!==METHODOLOGY_VERSION).length;
+ const left=source.filter(item=>item&&String(item.text||"").trim()&&result[identity(item)]?.methodology_version!==METHODOLOGY_VERSION).length;
+ const blockedCount=Object.values(result).filter(r=>r.method==="blocked").length;
  const approvedCount=Object.values(result).filter(r=>r.method==="ai"&&r.methodology_version===METHODOLOGY_VERSION).length;
  const legacyCount=Object.values(result).filter(r=>r.method==="ai"&&r.methodology_version!==METHODOLOGY_VERSION).length;
- const output={schema_version:1,taxonomy_version:TAXONOMY_VERSION,methodology_version:METHODOLOGY_VERSION,methodology_id:approvedTaxonomy.methodology_id,policy_version:eventPolicy.version,provider:"gigachat",status:source.length===0?"no_posts":left?"partial":"ready",generated_at:new Date().toISOString(),model:MODEL,source:"vk-posts.json",total_posts:source.length,classified_posts:approvedCount,legacy_classified_posts:legacyCount,pending_posts:left,posts:result};
+ const output={schema_version:1,taxonomy_version:TAXONOMY_VERSION,methodology_version:METHODOLOGY_VERSION,methodology_id:approvedTaxonomy.methodology_id,policy_version:eventPolicy.version,provider:"gigachat",status:source.length===0?"no_posts":left?"partial":"ready",generated_at:new Date().toISOString(),model:MODEL,source:"vk-posts.json",total_posts:source.length,classified_posts:approvedCount,legacy_classified_posts:legacyCount,pending_posts:left,blocked_posts:blockedCount,posts:result};
  fs.writeFileSync("ai-analysis.json",JSON.stringify(output,null,2)+"\n");
- console.log("AI classifications:",{status:output.status,total:source.length,new:completed,pending:left,failures,batches});
+ console.log("AI classifications:",{status:output.status,total:source.length,new:completed,pending:left,blocked:blockedCount,refusals,failures,batches});
  if(failures>0&&completed===0&&source.length>0)process.exitCode=1;
 }
 await main();

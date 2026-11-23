@@ -87,6 +87,7 @@ async function loadAiDataset(){
    const done=Number(data.classified_posts)||0,waiting=Number(data.pending_posts)||0,prior=Number(data.legacy_classified_posts)||0;
    aiMessage="GigaChat анализирует публикации по утверждённой методике: 15 категорий, 239 тезисов. Заново обработано: "+done+
     "; ожидают переанализа: "+waiting+(prior?"; результаты прежней методики (предварительно): "+prior:"")+
+    (Number(data.blocked_posts)>0?"; отклонены фильтром GigaChat и требуют отдельной проверки: "+Number(data.blocked_posts):"")+
     ". Обновление: "+String(data.generated_at||"нет даты")+".";
   }
   else if(data.status==="ready"||data.status==="partial")aiMessage="ИИ доступен, но ранее созданные результаты постепенно уточняются по новой утверждённой методике из 15 категорий.";

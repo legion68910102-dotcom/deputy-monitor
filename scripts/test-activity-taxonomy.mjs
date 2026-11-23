@@ -43,6 +43,18 @@ const samples=[
  {name:"pets",text:"Мой кот снова шкодит.",yes:["personal"],no:["event"]},
  {name:"children",text:"Наши дети подрастают так быстро.",yes:["personal"],no:["event"]},
  {name:"official childcare issue isn't personal",text:"Провёл встречу с жителями по вопросам строительства детского сада.",yes:["meet"],no:["personal","event"]},
+
+ {name:"humanitarian supplies donated",text:"Передали гуманитарную помощь пострадавшим жителям.",yes:["humanitarian"],no:["event","announcement"]},
+ {name:"gathered humanitarian cargo",text:"Собрали гуманитарный груз для нуждающихся.",yes:["humanitarian"],no:["event"]},
+ {name:"delivered medicines",text:"Передали медикаменты нуждающимся.",yes:["humanitarian"],no:["event"]},
+ {name:"supplies after fire",text:"Собрали продукты для пострадавших от пожара.",yes:["humanitarian"],no:["event"]},
+ {name:"organized collection",text:"Организовали сбор гуманитарной помощи для жителей.",yes:["humanitarian"],no:["event"]},
+ {name:"future charity collection",text:"Завтра начнётся сбор гуманитарной помощи.",yes:["announcement"],no:["humanitarian","event"]},
+ {name:"planned aid not delivered",text:"Планируем собрать гуманитарный груз.",yes:["plan"],no:["humanitarian","event"]},
+ {name:"cleaning volunteer day not humanitarian",text:"Провели субботник во дворе, убрали мусор.",yes:["event"],no:["humanitarian"]},
+ {name:"civic assistance not humanitarian",text:"Провёл приём граждан, помог разобраться с квитанцией.",yes:["reception"],no:["humanitarian","event"]},
+ {name:"topic mention without action",text:"Гуманитарная помощь сейчас очень нужна.",yes:[],no:["humanitarian","event"]},
+
 ];
 for(const sample of samples){
  const keys=[...new Set(sandbox.__testExtract(sample.text).map(x=>x.key))];
@@ -62,6 +74,12 @@ const aiCorrections=[
  {name:"AI missed capital renovation",text:"Проверил ход капитального ремонта.",input:[],expect:["inspect"]},
  {name:"AI missed my pets",text:"Моя собака радуется первому снегу.",input:[],expect:["personal"]},
  {name:"AI missed travel",text:"Посетил музей с семьёй.",input:[],expect:["personal"]},
+
+ {name:"AI missed actual humanitarian distribution",text:"Передали гуманитарную помощь пострадавшим.",input:[],expect:["humanitarian"]},
+ {name:"AI called planned humanitarian delivery completed",text:"Завтра начнётся сбор гуманитарной помощи.",input:["humanitarian","announcement"],expect:["announcement"]},
+ {name:"AI mistaken humanitarian label for public cleanup",text:"Провели субботник и убрали мусор.",input:["humanitarian"],expect:["event"]},
+ {name:"AI mistaken humanitarian label for paperwork help",text:"Помог жителю с оформлением документов.",input:["humanitarian"],expect:[]},
+
 ];
 for(const sample of aiCorrections){
  const actual=policy.normalizeCategories(sample.input,sample.text);

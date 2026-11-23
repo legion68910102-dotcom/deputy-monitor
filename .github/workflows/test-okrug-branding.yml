@@ -1,0 +1,30 @@
+name: Verify district branding and compact header
+
+on:
+  push:
+    paths:
+      - "index-v129.html"
+      - "okrug-branding-v132.js"
+      - "tests/test_okrug_branding.cjs"
+      - ".github/workflows/test-okrug-branding.yml"
+  pull_request:
+    paths:
+      - "index-v129.html"
+      - "okrug-branding-v132.js"
+      - "tests/test_okrug_branding.cjs"
+      - ".github/workflows/test-okrug-branding.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  branding-tests:
+    name: Emblem, mobile header, preserved content and future okrug switch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check okrug-branding-v132.js
+      - run: node --test tests/test_okrug_branding.cjs

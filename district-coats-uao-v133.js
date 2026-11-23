@@ -27,7 +27,7 @@
  function url(district){
   if(!Object.prototype.hasOwnProperty.call(files,district))return "";
   const [hash,filename]=files[district],stem=encodeURIComponent(filename.replaceAll(" ","_"));
-  return "https://upload.wikimedia.org/wikipedia/commons/thumb/"+hash[0]+"/"+hash+"/"+stem+"/96px-"+stem;
+  return "https://upload.wikimedia.org/wikipedia/commons/thumb/"+hash[0]+"/"+hash+"/"+stem+"/120px-"+stem;
  }
  root.dmDistrictCoats=Object.freeze({url:url,districts:Object.freeze(Object.keys(files)),source:"https://commons.wikimedia.org/wiki/Category:Coats_of_arms_of_municipal_divisions_of_Moscow"});
 })(typeof window!=="undefined"?window:globalThis);

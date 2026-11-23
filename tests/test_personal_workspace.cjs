@@ -66,12 +66,24 @@ test("reset clears only personal keys and retains unrelated storage",()=>{
 });
 test("all user-facing tables use the same isolated personal view",()=>{
  const html=fs.readFileSync("index-v129.html","utf8");
- assert.match(html,/<script src="\.\/personal-workspace-v130\.js"><\/script>/);
+ assert.match(html,/<script src="\.\/personal-workspace-v130\.js\?ui=removed-20261123"><\/script>/);
  assert.equal((html.match(/window\.dmPersonalWorkspace\.applyPosts\(list\)/g)||[]).length,3);
  assert.match(html,/window\.dmActivityRows=allRows/);
- assert.ok(html.indexOf('src="./personal-workspace-v130.js"')<html.indexOf("function allRows(){"));
+ assert.ok(html.indexOf('src="./personal-workspace-v130.js?ui=removed-20261123"')<html.indexOf("function allRows(){"));
 });
 test("personal workspace code contains no API calls that change shared server data",()=>{
  assert.doesNotMatch(source,/\b(method|method:)\s*[:=]\s*["'](?:POST|PUT|PATCH|DELETE)/i);
  assert.doesNotMatch(source,/api\.github\.com|GIGACHAT_AUTH_KEY|VK_TOKEN/);
+});
+
+test("standalone personal workspace UI is removed while repost correction remains",()=>{
+ const html=fs.readFileSync("index-v129.html","utf8");
+ assert.doesNotMatch(source,/function mounted\(/);
+ assert.doesNotMatch(source,/document\.querySelector\("main"\)/);
+ assert.doesNotMatch(source,/Личное пространство — изменения видны только вам/);
+ assert.doesNotMatch(source,/id="personal-workspace"/);
+ assert.doesNotMatch(html,/id="personal-workspace"/);
+ assert.match(fs.readFileSync("activity-analysis-v129.js","utf8"),/Это репост \(только у меня\)/);
+ const api=browser(storage());
+ assert.equal(typeof api.markRepost,"function");
 });

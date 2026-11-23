@@ -1007,79 +1007,105 @@ window.addEventListener("load",function(){
  const root=document.getElementById("profiles");if(!root)return;
  const norm=s=>String(s||"").toLocaleLowerCase("ru-RU").replace(/ё/g,"е").replace(/\s+/g," ").trim();
  const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
- function getNames(d){const entry=directoryDeputies[d];const e=editsFor(d);return [...new Set([...(entry?.names||[]),...(e.added||[])])].filter(n=>!(e.removed||[]).some(x=>norm(x)===norm(n))).sort((a,b)=>a.localeCompare(b,"ru"))}
+ function getNames(d){const entry=directoryDeputies[d];const e=editsFor(d);return [...new Map([...(entry?.names||[]),...(e.added||[])].filter(n=>!(e.removed||[]).some(x=>norm(x)===norm(n))).map(n=>[norm(n),n])).values()].sort((a,b)=>a.localeCompare(b,"ru"))}
+ const syncNoticeKey="dm_official_sync_success_v1";
+ let restoredNotice=null;
+ try{restoredNotice=JSON.parse(sessionStorage.getItem(syncNoticeKey)||"null");sessionStorage.removeItem(syncNoticeKey)}catch(e){}
+ function showRestoredNotice(){
+  if(!restoredNotice?.district)return;
+  const d=restoredNotice.district;
+  const section=document.querySelector("#deputies > details");
+  if(section)section.open=true;
+  const group=[...root.querySelectorAll(".district-group")].find(x=>x.dataset.district===d);
+  if(!group)return;
+  group.open=true;
+  const form=group.querySelector(".district-manage > details.manage-add");
+  if(form)form.open=true;
+  const msg=group.querySelector("[data-add-message]");
+  if(msg)msg.textContent=restoredNotice.text||"Список обновлён.";
+ }
  renderDeputyArchive();
  function populateChoices(){root.querySelectorAll("[data-remove-choices]").forEach(box=>{const d=box.dataset.removeChoices;box.innerHTML=getNames(d).map(n=>'<label class="remove-choice"><input type="checkbox" value="'+escapeHtml(n)+'"> '+escapeHtml(n)+'</label>').join("")})}
- populateChoices();const oldRender=render;render=function(){oldRender();populateChoices()};
+ populateChoices();const oldRender=render;render=function(){oldRender();populateChoices();showRestoredNotice()};
+ if(restoredNotice){showRestoredNotice();setTimeout(()=>{const group=[...root.querySelectorAll(".district-group")].find(x=>x.dataset.district===restoredNotice.district);group?.scrollIntoView({block:"start",behavior:"auto"})},250)}
  root.addEventListener("click",async function(ev){
   const add=ev.target.closest("[data-add-check]");
   if(add){
    const d=add.dataset.addCheck,box=add.closest(".manage-body"),
     msg=box.querySelector("[data-add-message]");
    add.disabled=true;
-   msg.textContent="Проверяем опубликованные результаты официальных сайтов…";
+   msg.textContent="Сверяем опубликованный официальный состав и подключаем депутатов к мониторингу…";
    try{
-    // Same-origin JSON published by GitHub Actions; do not fetch municipal sites
-    // from Safari because browser CORS restrictions make that unreliable.
     const response=await fetch("./official-deputy-candidates.json?ts="+Date.now(),{cache:"no-store"});
-    if(!response.ok)throw Error("результаты серверной проверки пока не опубликованы (HTTP "+response.status+")");
+    if(!response.ok)throw Error("серверный результат недоступен (HTTP "+response.status+")");
     const data=await response.json(),district=data?.districts?.[d];
     if(data?.schema_version!==1||!district){
-     msg.textContent="Серверная проверка района ещё не выполнена. Список не изменён. Для новой проверки откройте GitHub Actions по ссылке ниже.";
+     msg.textContent="Серверная проверка ещё не опубликована. Состав не изменён.";
      return;
     }
-    const stamp=district.checked_at?new Date(district.checked_at).toLocaleString("ru-RU"):"дата неизвестна";
-    if(district.status==="unavailable"){
-     msg.textContent="Официальный сайт района не ответил на серверную проверку ("+stamp+"). Список не изменён. Проверьте сайт совета вручную или повторите GitHub Actions.";
+    const stamp=district.checked_at?new Date(district.checked_at).toLocaleString("ru-RU"):"без даты";
+    if(district.status==="unavailable"||district.status==="stale"){
+     msg.textContent="Проверка от "+stamp+": официальный сайт временно недоступен. Старые результаты не используются для добавления. Данные не изменены.";
      return;
     }
-    if(district.status==="stale"){
-     msg.textContent="При последней проверке сайт был недоступен ("+stamp+"). Старые данные не используются для добавления. Список не изменён.";
+    if(!["ok","names_only"].includes(district.status)){
+     msg.textContent="Проверка от "+stamp+": сервер не смог распознать состав совета. Это не означает отсутствие депутатов. Данные не изменены.";
      return;
     }
-    const known=new Set(getNames(d).map(norm));
-    const listed=(Array.isArray(district.roster)?district.roster:[]);
-    const rosterNames=[...new Set(listed.map(p=>String(p?.name||"").trim()).filter(Boolean))];
-    const alreadyListed=rosterNames.filter(name=>known.has(norm(name))).length;
-    const absentNames=rosterNames.filter(name=>!known.has(norm(name)));
-    if(district.status==="no_candidates"){
-     msg.textContent="Проверка от "+stamp+": сервер открыл сайт, но не смог распознать список депутатов. Это НЕ означает, что депутатов там нет. Откройте официальный список по ссылке выше; данные не изменены.";
+    const fullName=/^[А-ЯЁ][а-яё-]+(?:\s+[А-ЯЁ][а-яё-]+){2}$/;
+    const sources=[...(Array.isArray(district.roster)?district.roster:[]),
+      ...(Array.isArray(district.candidates)?district.candidates:[])];
+    const found=new Map();
+    for(const p of sources){
+     const name=String(p?.name||"").trim();
+     if(!fullName.test(name)||!/^https:\/\//.test(p.source||""))continue;
+     const key=norm(name),old=found.get(key);
+     if(!old||(!old.photo&&p.photo&&/^https:\/\//.test(p.photo)))found.set(key,{
+      name,source:p.source,photo:/^https:\/\//.test(p.photo||"")?p.photo:""
+     });
+    }
+    if(!found.size){
+     msg.textContent="Проверка от "+stamp+": подтверждённые фамилии пока не извлечены. Список не изменён.";
      return;
     }
-    const candidates=(Array.isArray(district.candidates)?district.candidates:[])
-     .filter(p=>p&&typeof p.name==="string"&&typeof p.photo==="string"&&typeof p.source==="string")
-     .filter(p=>/^[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+$/.test(p.name.trim()))
-     .filter(p=>/^https:\/\//.test(p.photo)&&/^https:\/\//.test(p.source));
-    const valid=candidates.filter(p=>!known.has(norm(p.name)));
-    if(district.status==="names_only"||!valid.length){
-     msg.textContent="Проверка от "+stamp+": на официальном сайте распознано "+rosterNames.length+" депутатов; уже есть в вашем списке "+alreadyListed+"; отсутствуют "+absentNames.length+
-      (absentNames.length?": "+absentNames.slice(0,5).join(", ")+(absentNames.length>5?" и другие":""):"")+
-      ". Новых карточек с подтверждёнными фотографиями для добавления нет. Список не изменён.";
-     return;
-    }
-    if(district.status!=="ok"){
-     msg.textContent="Проверка от "+stamp+": результат сайта не подтверждён. Список не изменён.";
-     return;
-    }
-    if(!confirm("На официальном сайте распознано "+rosterNames.length+" депутатов (из них "+alreadyListed+" уже в вашем списке). Найдено "+valid.length+" возможных карточек с фото для добавления: "+valid.map(p=>p.name).slice(0,8).join(", ")+". Добавить только в этом браузере? Проверьте ФИО и фото по источнику.")){
-     msg.textContent="Добавление отменено. Список не изменён.";
-     return;
-    }
-    rememberAction(d);
+    const existing=new Set(getNames(d).map(norm));
     const e=editsFor(d);
-    for(const p of valid){
-     deputyOfficialProfiles[d+"|"+p.name]={photo:p.photo,source:p.source,work:""};
-     e.added=[...(e.added||[]),p.name];
-     e.removed=(e.removed||[]).filter(n=>norm(n)!==norm(p.name));
+    let addedCount=0,restoredCount=0,linkedCount=0;
+    rememberAction(d);
+    for(const p of found.values()){
+     const key=norm(p.name),wasRemoved=(e.removed||[]).some(n=>norm(n)===key);
+     if(wasRemoved){
+      e.removed=e.removed.filter(n=>norm(n)!==key);
+      restoredCount++;
+     }
+     if(!existing.has(key)&&!wasRemoved){
+      if(!(directoryDeputies[d]?.names||[]).some(n=>norm(n)===key)&&!(e.added||[]).some(n=>norm(n)===key))
+       e.added.push(p.name);
+      addedCount++;
+     }
+     // The authoritative name and source, not a guessed VK handle, are shared
+     // with reports/rankings when the page rebuilds its roster on reload.
+     const old=deputyOfficialProfiles[d+"|"+p.name]||{};
+     deputyOfficialProfiles[d+"|"+p.name]={
+      ...old,source:p.source,photo:p.photo||old.photo||"",work:old.work||""
+     };
+     if(p.photo)linkedCount++;
     }
-    saveDeputyOfficialProfiles();
+    const archivedBefore=deputyArchive.length;
+    deputyArchive=deputyArchive.filter(p=>!(p.district===d&&found.has(norm(p.name))));
     saveDistrictEdits();
-    refreshDistrict(d,"add");
-    const group=[...document.querySelectorAll("#profiles .district-group")].find(x=>x.dataset.district===d);
-    const note=group?.querySelector("[data-add-message]");
-    if(note)note.textContent="На официальном сайте распознано "+rosterNames.length+" депутатов. Добавлено "+valid.length+" отсутствовавших карточек с фото (проверка "+stamp+"). Изменения только в этом браузере; проверьте карточки и фотографии по источнику.";
+    saveDeputyOfficialProfiles();
+    if(archivedBefore!==deputyArchive.length)saveDeputyArchive();
+    const updated=getNames(d).length;
+    const notice="Проверка "+stamp+": на официальном сайте найдено "+found.size+" депутатов. В списке района теперь "+updated+
+     "; добавлено "+addedCount+", восстановлено "+restoredCount+", карточек с официальным фото "+linkedCount+
+     ". Справочник синхронизирован с доступными вкладками, рейтингами, аналитикой и отчётами. Для VK-сбора необходима подтверждённая страница депутата.";
+    // Reload ensures even modules which snapshot the roster during startup
+    // (Excel, ranking, activity taxonomy) use the same updated deputy list.
+    try{sessionStorage.setItem(syncNoticeKey,JSON.stringify({district:d,text:notice}))}catch(e){}
+    window.location.reload();
    }catch(err){
-    msg.textContent="Не удалось прочитать опубликованный отчёт GitHub Pages: "+err.message+". Список не изменён. Попробуйте обновить страницу позже.";
+    msg.textContent="Ошибка серверной синхронизации: "+err.message+". Состав депутатов не изменён.";
    }finally{add.disabled=false}
    return;
   }

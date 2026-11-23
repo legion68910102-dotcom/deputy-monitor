@@ -82,10 +82,15 @@ async function loadAiDataset(){
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
   aiDataset=data;
   if(data.taxonomy_version!==2)aiMessage="ИИ обновляет классификацию по 15 категориям. Пока показываются предварительные правила.";
-  else if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
-  else if(data.status==="partial")aiMessage="ИИ обработал часть публикаций, остальные — по правилам. Категория заседаний Совета депутатов будет пополняться по мере переанализа. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
-  else if(data.status==="no_posts")aiMessage="Обработка ИИ настроена, но общей ленте пока нет текстов публикаций.";
-  else aiMessage="ИИ ещё не подключён. Нужен секрет GIGACHAT_AUTH_KEY в GitHub. Пока используются правила.";
+  else if(data.status==="no_posts")aiMessage="Методика из 15 категорий утверждена, но текстов общей ленты пока нет.";
+  else if(data.methodology_version===1){
+   const done=Number(data.classified_posts)||0,waiting=Number(data.pending_posts)||0,prior=Number(data.legacy_classified_posts)||0;
+   aiMessage="GigaChat анализирует публикации по утверждённой методике: 15 категорий, 239 тезисов. Заново обработано: "+done+
+    "; ожидают переанализа: "+waiting+(prior?"; результаты прежней методики (предварительно): "+prior:"")+
+    ". Обновление: "+String(data.generated_at||"нет даты")+".";
+  }
+  else if(data.status==="ready"||data.status==="partial")aiMessage="ИИ доступен, но ранее созданные результаты постепенно уточняются по новой утверждённой методике из 15 категорий.";
+  else aiMessage="ИИ ещё не подключён. Для новых классификаций нужен GigaChat в GitHub Actions; пока используются правила.";
  }catch(e){aiMessage="Результаты ИИ недоступны; работают правила."}
  render(false);
 }
@@ -104,9 +109,9 @@ function makePost(r,index){
  if(ai&&ai.method==="ai"){
   hits=[...new Set(activityPolicy?activityPolicy.normalizeCategories(ai.categories,r.text,{repost:isRepost(r)}):ai.categories)].filter(k=>k!=="uncategorized"&&Object.prototype.hasOwnProperty.call(labels,k)).map(k=>({
    key:k,evidence:String(ai.evidence||r.text||"").slice(0,300),
-   explanation:String(ai.explanation||"").slice(0,180),
+   explanation:(ai.methodology_version===1?String(ai.explanation||""):"Ожидается повторный анализ по утверждённой методике. "+String(ai.explanation||"")).slice(0,180),
    confidence:Math.max(0,Math.min(1,Number(ai.confidence)||0)),
-   certainty:Number(ai.confidence)>=0.7?"ai":"ai_review",method:"ai"
+   certainty:ai.methodology_version===1&&Number(ai.confidence)>=0.7?"ai":"ai_review",method:"ai"
   }));
  }else hits=hasText(r)?extract(r.text):[];
  if(isRepost(r)&&!hits.some(hit=>hit.key==="repost"))hits.push({key:"repost",evidence:hasText(r)?String(r.text).slice(0,300):"Репост в метаданных источника",certainty:"possible",method:"metadata"});

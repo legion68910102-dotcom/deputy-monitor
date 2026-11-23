@@ -591,7 +591,7 @@ function districtManager(d,source){
 }
 const deputyUndoKey="dm_undo_v115";let deputyUndo=null;try{deputyUndo=JSON.parse(localStorage.getItem(deputyUndoKey)||"null")}catch(e){}
 function rememberAction(d){deputyUndo={district:d,edits:JSON.parse(JSON.stringify(editsFor(d))),archive:JSON.parse(JSON.stringify(deputyArchive)),profiles:JSON.parse(JSON.stringify(deputyOfficialProfiles))};localStorage.setItem(deputyUndoKey,JSON.stringify(deputyUndo))}
-function refreshDistrict(d){render();renderDeputyArchive();const group=[...document.querySelectorAll("#profiles .district-group")].find(x=>x.dataset.district===d);if(group){group.open=true;const tabs=group.querySelectorAll(".district-manage>details");if(tabs[1])tabs[1].open=true}}
+function refreshDistrict(d,mode="remove"){render();renderDeputyArchive();const group=[...document.querySelectorAll("#profiles .district-group")].find(x=>x.dataset.district===d);if(group){group.open=true;const tabs=group.querySelectorAll(".district-manage>details");const tab=tabs[mode==="add"?0:1];if(tab)tab.open=true}}
 const deputyArchiveKey="dm_deputy_archive_v114";
 let deputyArchive=[];try{deputyArchive=JSON.parse(localStorage.getItem(deputyArchiveKey)||"[]")||[]}catch(e){}
 function saveDeputyArchive(){localStorage.setItem(deputyArchiveKey,JSON.stringify(deputyArchive))}
@@ -1035,7 +1035,7 @@ window.addEventListener("load",function(){
     }
     saveDeputyOfficialProfiles();
     saveDistrictEdits();
-    refreshDistrict(d);
+    refreshDistrict(d,"add");
     const group=[...document.querySelectorAll("#profiles .district-group")].find(x=>x.dataset.district===d);
     const note=group?.querySelector("[data-add-message]");
     if(note)note.textContent="Добавлено "+valid.length+" карточек (проверка "+stamp+"). Изменения только в этом браузере; обязательно сверьте депутатов с официальным источником.";

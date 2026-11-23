@@ -519,6 +519,35 @@ main > #deputy-archive > details.ranking-native > summary:focus-visible{outline:
  border:2px solid #16a34a!important;
  color:#14532d!important;
 }
+</style><style id="district-management-colors-v136">
+/* Administrative actions are visibly distinct; limit colors to their headers only. */
+#profiles .district-manage>details.manage-add>summary{
+ background:#15803d!important;
+ color:#fff!important;
+ border:1px solid #166534!important;
+ border-radius:11px!important;
+}
+#profiles .district-manage>details.manage-add[open]>summary,
+#profiles .district-manage>details.manage-add>summary:hover{
+ background:#166534!important;
+ color:#fff!important;
+}
+#profiles .district-manage>details.manage-remove>summary{
+ background:#dc2626!important;
+ color:#fff!important;
+ border:1px solid #b91c1c!important;
+ border-radius:11px!important;
+}
+#profiles .district-manage>details.manage-remove[open]>summary,
+#profiles .district-manage>details.manage-remove>summary:hover{
+ background:#b91c1c!important;
+ color:#fff!important;
+}
+#profiles .district-manage>details.manage-add>summary:focus-visible,
+#profiles .district-manage>details.manage-remove>summary:focus-visible{
+ outline:3px solid #304d87!important;
+ outline-offset:3px!important;
+}
 </style></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p id="okrug-hero-intro">Справочник муниципальных депутатов 16 районов ЮАО и мониторинг доступных открытых публикаций. Данные о действующем составе и активности требуют проверки.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div><figure id="okrug-branding-panel" class="okrug-branding-panel" aria-label="Символика административного округа">
 <img id="okrug-emblem-image" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/UAO_district_of_Moscow_coa.png" alt="Гербовая эмблема Южного административного округа Москвы" width="600" height="440" decoding="async" fetchpriority="high" referrerpolicy="no-referrer">
@@ -549,7 +578,7 @@ function editsFor(d){return districtEdits[d]||(districtEdits[d]={added:[],remove
 function saveDistrictEdits(){localStorage.setItem(districtEditsKey,JSON.stringify(districtEdits))}
 function districtManager(d,source){
  const e=editsFor(d),official=source||"";
- return '<div class="district-manage"><details><summary>➕ Добавить депутата</summary><div class="manage-body"><p class="manage-note">Нажмите кнопку для поиска новых депутатов на официальном сайте района. Добавляются только найденные карточки с ФИО и фотографией; если сайт запрещает автоматическое чтение, обновление не выполняется.</p><button type="button" class="manage-button" data-add-check="'+esc(d)+'">🔄 Обновить депутатов с официального сайта</button><a href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">Официальный сайт совета ↗</a><div class="manage-note" data-add-message="'+esc(d)+'"></div></div></details><details><summary>➖ Убрать депутата</summary><div class="manage-body"><p class="manage-note">Отметьте депутатов галочками и нажмите «Удалить выбранных». Изменение действует только в этом браузере.</p><div data-remove-choices="'+esc(d)+'"></div><button type="button" class="manage-button danger" data-remove-action="'+esc(d)+'" >Удалить выбранных</button><button type="button" class="manage-button" data-undo-district="'+esc(d)+'">↶ Отменить последнее действие</button><div class="manage-note" data-remove-message="'+esc(d)+'"></div></div></details></div>';
+ return '<div class="district-manage"><details class="manage-add"><summary>➕ Добавить депутата</summary><div class="manage-body"><p class="manage-note">Нажмите кнопку для поиска новых депутатов на официальном сайте района. Добавляются только найденные карточки с ФИО и фотографией; если сайт запрещает автоматическое чтение, обновление не выполняется.</p><button type="button" class="manage-button" data-add-check="'+esc(d)+'">🔄 Обновить депутатов с официального сайта</button><a href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">Официальный сайт совета ↗</a><div class="manage-note" data-add-message="'+esc(d)+'"></div></div></details><details class="manage-remove"><summary>➖ Убрать депутата</summary><div class="manage-body"><p class="manage-note">Отметьте депутатов галочками и нажмите «Удалить выбранных». Изменение действует только в этом браузере.</p><div data-remove-choices="'+esc(d)+'"></div><button type="button" class="manage-button danger" data-remove-action="'+esc(d)+'" >Удалить выбранных</button><button type="button" class="manage-button" data-undo-district="'+esc(d)+'">↶ Отменить последнее действие</button><div class="manage-note" data-remove-message="'+esc(d)+'"></div></div></details></div>';
 }
 const deputyUndoKey="dm_undo_v115";let deputyUndo=null;try{deputyUndo=JSON.parse(localStorage.getItem(deputyUndoKey)||"null")}catch(e){}
 function rememberAction(d){deputyUndo={district:d,edits:JSON.parse(JSON.stringify(editsFor(d))),archive:JSON.parse(JSON.stringify(deputyArchive)),profiles:JSON.parse(JSON.stringify(deputyOfficialProfiles))};localStorage.setItem(deputyUndoKey,JSON.stringify(deputyUndo))}

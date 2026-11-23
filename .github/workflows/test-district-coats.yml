@@ -6,6 +6,7 @@ on:
       - "district-coats-uao-v133.js"
       - "tests/test_district_coats.cjs"
       - "tests/test_deputy_tab_colors.cjs"
+      - "tests/test_deputy_management_colors.cjs"
       - ".github/workflows/test-district-coats.yml"
   pull_request:
     paths:
@@ -13,6 +14,7 @@ on:
       - "district-coats-uao-v133.js"
       - "tests/test_district_coats.cjs"
       - "tests/test_deputy_tab_colors.cjs"
+      - "tests/test_deputy_management_colors.cjs"
       - ".github/workflows/test-district-coats.yml"
 permissions:
   contents: read
@@ -31,4 +33,5 @@ jobs:
         run: |
           node --test tests/test_district_coats.cjs
           node --test tests/test_deputy_tab_colors.cjs
+          node --test tests/test_deputy_management_colors.cjs
           node --test tests/test_okrug_branding.cjs

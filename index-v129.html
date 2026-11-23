@@ -587,7 +587,7 @@ function editsFor(d){return districtEdits[d]||(districtEdits[d]={added:[],remove
 function saveDistrictEdits(){localStorage.setItem(districtEditsKey,JSON.stringify(districtEdits))}
 function districtManager(d,source){
  const e=editsFor(d),official=source||"";
- return '<div class="district-manage"><details class="manage-add"><summary>➕ Добавить депутата</summary><div class="manage-body"><p class="manage-note">Нажмите кнопку для поиска новых депутатов на официальном сайте района. Добавляются только найденные карточки с ФИО и фотографией; если сайт запрещает автоматическое чтение, обновление не выполняется.</p><button type="button" class="manage-button" data-add-check="'+esc(d)+'">🔄 Обновить депутатов с официального сайта</button><a href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">Официальный сайт совета ↗</a><div class="manage-note" data-add-message="'+esc(d)+'"></div></div></details><details class="manage-remove"><summary>➖ Убрать депутата</summary><div class="manage-body"><p class="manage-note">Отметьте депутатов галочками и нажмите «Удалить выбранных». Изменение действует только в этом браузере.</p><div data-remove-choices="'+esc(d)+'"></div><button type="button" class="manage-button danger" data-remove-action="'+esc(d)+'" >Удалить выбранных</button><button type="button" class="manage-button" data-undo-district="'+esc(d)+'">↶ Отменить последнее действие</button><div class="manage-note" data-remove-message="'+esc(d)+'"></div></div></details></div>';
+ return '<div class="district-manage"><details class="manage-add"><summary>➕ Добавить депутата</summary><div class="manage-body"><p class="manage-note">Кнопка использует последнюю серверную проверку официального сайта через GitHub Actions, без прямого обращения с iPhone. Новые карточки с ФИО и фотографией добавляются только после вашего подтверждения и только в этом браузере.</p><button type="button" class="manage-button" data-add-check="'+esc(d)+'">🔄 Обновить депутатов с официального сайта</button><a href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">Официальный сайт совета ↗</a><div class="manage-note"><a href="https://github.com/legion68910102-dotcom/deputy-monitor/actions/workflows/collect-official-deputies.yml" target="_blank" rel="noopener noreferrer">Новая серверная проверка в GitHub Actions ↗</a></div><div class="manage-note" data-add-message="'+esc(d)+'"></div></div></details><details class="manage-remove"><summary>➖ Убрать депутата</summary><div class="manage-body"><p class="manage-note">Отметьте депутатов галочками и нажмите «Удалить выбранных». Изменение действует только в этом браузере.</p><div data-remove-choices="'+esc(d)+'"></div><button type="button" class="manage-button danger" data-remove-action="'+esc(d)+'" >Удалить выбранных</button><button type="button" class="manage-button" data-undo-district="'+esc(d)+'">↶ Отменить последнее действие</button><div class="manage-note" data-remove-message="'+esc(d)+'"></div></div></details></div>';
 }
 const deputyUndoKey="dm_undo_v115";let deputyUndo=null;try{deputyUndo=JSON.parse(localStorage.getItem(deputyUndoKey)||"null")}catch(e){}
 function rememberAction(d){deputyUndo={district:d,edits:JSON.parse(JSON.stringify(editsFor(d))),archive:JSON.parse(JSON.stringify(deputyArchive)),profiles:JSON.parse(JSON.stringify(deputyOfficialProfiles))};localStorage.setItem(deputyUndoKey,JSON.stringify(deputyUndo))}
@@ -984,38 +984,66 @@ window.addEventListener("load",function(){
  populateChoices();const oldRender=render;render=function(){oldRender();populateChoices()};
  root.addEventListener("click",async function(ev){
   const add=ev.target.closest("[data-add-check]");
-  if(add){const d=add.dataset.addCheck,box=add.closest(".manage-body"),msg=box.querySelector("[data-add-message]"),source=officialDistrictSources[d];
-   add.disabled=true;msg.textContent="Проверяем официальный сайт района…";
-   const known=new Set(getNames(d).map(norm));
-   const nameRx=/^[А-ЯЁ][а-яё-]+(?:\\s+[А-ЯЁ][а-яё-]+){2}$/;
-   const parseName=value=>{const m=String(value||"").replace(/\\s+/g," ").trim().match(/[А-ЯЁ][а-яё-]+\\s+[А-ЯЁ][а-яё-]+\\s+[А-ЯЁ][а-яё-]+/);return m&&nameRx.test(m[0])?m[0]:null};
+  if(add){
+   const d=add.dataset.addCheck,box=add.closest(".manage-body"),
+    msg=box.querySelector("[data-add-message]");
+   add.disabled=true;
+   msg.textContent="Проверяем опубликованные результаты официальных сайтов…";
    try{
-    const response=await fetch(source,{mode:"cors",signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error("HTTP "+response.status);
-    const doc=new DOMParser().parseFromString(await response.text(),"text/html");
-    const links=[...doc.querySelectorAll("a[href]")].filter(a=>{const text=(a.textContent||"").toLowerCase();const href=(a.getAttribute("href")||"").toLowerCase();return /депутат|состав совет|совет депутат|deput|sovet/.test(text+" "+href)});
-    const pages=[{doc,url:response.url}];const visited=new Set([response.url]);
-    for(const a of links.slice(0,10)){if(pages.length>=7)break;try{const url=new URL(a.getAttribute("href"),response.url);if(url.origin!==new URL(source).origin||visited.has(url.href))continue;visited.add(url.href);const res=await fetch(url.href,{mode:"cors",signal:AbortSignal.timeout(9000)});if(res.ok)pages.push({doc:new DOMParser().parseFromString(await res.text(),"text/html"),url:res.url})}catch(e){}}
-    const candidates=new Map();
-    for(const page of pages){const nodes=[...page.doc.querySelectorAll("a,article,li,div")].filter(el=>el.children.length<12);
-     for(const el of nodes){const name=parseName(el.querySelector("h2,h3,h4")?.textContent||el.querySelector("a")?.textContent||el.textContent);
-      if(!name||known.has(norm(name))||candidates.has(norm(name)))continue;
-      const img=el.querySelector("img");const raw=img?.getAttribute("src")||img?.getAttribute("data-src");
-      if(!raw)continue;let photo;try{photo=new URL(raw,page.url).href}catch(e){continue}
-      if(!photo.startsWith("https://"))continue;
-      const link=el.closest("a[href]")||el.querySelector("a[href]");let profileUrl=page.url;try{if(link)profileUrl=new URL(link.getAttribute("href"),page.url).href}catch(e){}
-      const work=(el.textContent||"").replace(/\\s+/g," ").trim().slice(0,500);
-      candidates.set(norm(name),{name,photo,work,source:profileUrl});
-     }
+    // Same-origin JSON published by GitHub Actions; do not fetch municipal sites
+    // from Safari because browser CORS restrictions make that unreliable.
+    const response=await fetch("./official-deputy-candidates.json?ts="+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw Error("результаты серверной проверки пока не опубликованы (HTTP "+response.status+")");
+    const data=await response.json(),district=data?.districts?.[d];
+    if(data?.schema_version!==1||!district){
+     msg.textContent="Серверная проверка района ещё не выполнена. Список не изменён. Для новой проверки откройте GitHub Actions по ссылке ниже.";
+     return;
     }
-    const fresh=[...candidates.values()];
-    if(!fresh.length){msg.textContent="Новых подтверждаемых карточек с фото не найдено. Список не изменён. Проверьте официальный сайт по ссылке ниже.";return}
-    rememberAction(d);const e=editsFor(d);
-    for(const p of fresh){deputyOfficialProfiles[d+"|"+p.name]={photo:p.photo,work:p.work,source:p.source};e.added=[...(e.added||[]),p.name];e.removed=(e.removed||[]).filter(n=>norm(n)!==norm(p.name))}
-    saveDeputyOfficialProfiles();saveDistrictEdits();refreshDistrict(d);
+    const stamp=district.checked_at?new Date(district.checked_at).toLocaleString("ru-RU"):"дата неизвестна";
+    if(district.status==="unavailable"){
+     msg.textContent="Официальный сайт района не ответил на серверную проверку ("+stamp+"). Список не изменён. Проверьте сайт совета вручную или повторите GitHub Actions.";
+     return;
+    }
+    if(district.status==="stale"){
+     msg.textContent="При последней проверке сайт был недоступен ("+stamp+"). Старые данные не используются для добавления. Список не изменён.";
+     return;
+    }
+    if(district.status!=="ok"){
+     msg.textContent="Проверка от "+stamp+": новых подтверждаемых карточек с фото не найдено. Список не изменён.";
+     return;
+    }
+    const known=new Set(getNames(d).map(norm));
+    const valid=(Array.isArray(district.candidates)?district.candidates:[])
+     .filter(p=>p&&typeof p.name==="string"&&typeof p.photo==="string"&&typeof p.source==="string")
+     .filter(p=>/^[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+$/.test(p.name.trim()))
+     .filter(p=>/^https:\/\//.test(p.photo)&&/^https:\/\//.test(p.source))
+     .filter(p=>!known.has(norm(p.name)));
+    if(!valid.length){
+     msg.textContent="Проверка от "+stamp+": новых подходящих карточек нет. Действующий список не изменён.";
+     return;
+    }
+    if(!confirm("Проверка от "+stamp+": найдено "+valid.length+" возможных новых карточек на сайте совета. Добавить их только в этом браузере? После добавления проверьте ФИО и фотографии по источникам.")){
+     msg.textContent="Добавление отменено. Список не изменён.";
+     return;
+    }
+    rememberAction(d);
+    const e=editsFor(d);
+    for(const p of valid){
+     deputyOfficialProfiles[d+"|"+p.name]={photo:p.photo,source:p.source,work:""};
+     e.added=[...(e.added||[]),p.name];
+     e.removed=(e.removed||[]).filter(n=>norm(n)!==norm(p.name));
+    }
+    saveDeputyOfficialProfiles();
+    saveDistrictEdits();
+    refreshDistrict(d);
     const group=[...document.querySelectorAll("#profiles .district-group")].find(x=>x.dataset.district===d);
-    const note=group?.querySelector("[data-add-message]");if(note)note.textContent="Добавлено "+fresh.length+" карточек с фотографиями. Проверьте соответствие ФИО и фото официальному источнику.";
-   }catch(err){msg.textContent="Автоматическая проверка недоступна: "+err.message+". Данные не изменены. Сайт может блокировать чтение из браузера."}
-   finally{add.disabled=false}return}
+    const note=group?.querySelector("[data-add-message]");
+    if(note)note.textContent="Добавлено "+valid.length+" карточек (проверка "+stamp+"). Изменения только в этом браузере; обязательно сверьте депутатов с официальным источником.";
+   }catch(err){
+    msg.textContent="Не удалось прочитать опубликованный отчёт GitHub Pages: "+err.message+". Список не изменён. Попробуйте обновить страницу позже.";
+   }finally{add.disabled=false}
+   return;
+  }
   const undo=ev.target.closest("[data-undo-district]");if(undo){const d=undo.dataset.undoDistrict;if(!deputyUndo||deputyUndo.district!==d){undo.closest(".manage-body").querySelector("[data-remove-message]").textContent="Нет последнего действия для отмены в этом районе.";return}districtEdits[d]=deputyUndo.edits;deputyArchive=deputyUndo.archive;deputyOfficialProfiles=deputyUndo.profiles;saveDistrictEdits();saveDeputyArchive();saveDeputyOfficialProfiles();deputyUndo=null;localStorage.removeItem(deputyUndoKey);refreshDistrict(d);return}
   const remove=ev.target.closest("[data-remove-action]");if(remove){const d=remove.dataset.removeAction,box=remove.closest(".manage-body"),selected=[...box.querySelectorAll('[data-remove-choices] input:checked')].map(x=>x.value);if(!selected.length){box.querySelector("[data-remove-message]").textContent="Сначала отметьте депутатов галочками.";return}if(!confirm("Переместить в архив "+selected.length+" депутатов?"))return;rememberAction(d);selected.forEach(name=>{if(!deputyArchive.some(x=>norm(x.name)===norm(name)&&x.district===d))deputyArchive.push(archivedDeputyInfo(name,d))});saveDeputyArchive();const e=editsFor(d);e.removed=[...new Set([...(e.removed||[]),...selected])];e.added=(e.added||[]).filter(n=>!selected.some(x=>norm(x)===norm(n)));saveDistrictEdits();refreshDistrict(d);return}
 

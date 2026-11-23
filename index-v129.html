@@ -1044,11 +1044,17 @@ window.addEventListener("load",function(){
      return;
     }
     const stamp=district.checked_at?new Date(district.checked_at).toLocaleString("ru-RU"):"без даты";
-    if(district.status==="unavailable"||district.status==="stale"){
-     msg.textContent="Проверка от "+stamp+": официальный сайт временно недоступен. Старые результаты не используются для добавления. Данные не изменены.";
+    if(district.status==="unavailable"){
+     msg.textContent="Проверка от "+stamp+": официальный сайт временно недоступен, подтверждённого состава нет. Данные не изменены.";
      return;
     }
-    if(!["ok","names_only"].includes(district.status)){
+    const lastSuccess=Date.parse(district.last_success_at||district.checked_at||"");
+    const recentSuccess=Number.isFinite(lastSuccess)&&Date.now()>=lastSuccess&&Date.now()-lastSuccess<=7*24*60*60*1000;
+    if(district.status==="stale"&&!recentSuccess){
+     msg.textContent="Последний успешный результат старше 7 дней. Для безопасного обновления требуется новая серверная проверка; список сохранён.";
+     return;
+    }
+    if(!["ok","names_only","stale"].includes(district.status)){
      msg.textContent="Проверка от "+stamp+": сервер не смог распознать состав совета. Это не означает отсутствие депутатов. Данные не изменены.";
      return;
     }
@@ -1097,7 +1103,7 @@ window.addEventListener("load",function(){
     saveDeputyOfficialProfiles();
     if(archivedBefore!==deputyArchive.length)saveDeputyArchive();
     const updated=getNames(d).length;
-    const notice="Проверка "+stamp+": на официальном сайте найдено "+found.size+" депутатов. В списке района теперь "+updated+
+    const notice=(district.status==="stale"?"Последний успешный снимок "+new Date(lastSuccess).toLocaleString("ru-RU")+" (сайт сейчас недоступен)": "Проверка "+stamp)+": на официальном сайте подтверждено "+found.size+" депутатов. В списке района теперь "+updated+
      "; добавлено "+addedCount+", восстановлено "+restoredCount+", карточек с официальным фото "+linkedCount+
      ". Справочник синхронизирован с доступными вкладками, рейтингами, аналитикой и отчётами. Для VK-сбора необходима подтверждённая страница депутата.";
     // Reload ensures even modules which snapshot the roster during startup

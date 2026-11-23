@@ -75,7 +75,7 @@ test("primary navigation is pale green while the sixteen district tabs are darke
  assert.ok(page.indexOf('id="uao-accordion-palette-v134"')>page.indexOf('id="district-coats-v133"'),"palette must override the old district grey");
  assert.match(css,/#profiles details\.district-group>summary\{background:#cbd3dd!important;/);
  assert.match(css,/#profiles details\.district-group\[open\]>summary\{background:#b8c4d0!important;/);
- assert.match(css,/#profiles details\.district-group>summary:hover\{background:#b8c4d0!important;/);
+ assert.match(css,/#profiles details\.district-group>summary:hover\{background:#b8c4d0!important[;}]/);
  assert.match(css,/#profiles details\.district-group>summary:focus-visible/);
  for(const id of ["overview","deputies","activity","report","ranking","activity-analysis","sources","method","deputy-archive"]){
   const klass=id==="activity"?"activity-excel-fold":"ranking-native";

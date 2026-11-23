@@ -1,0 +1,31 @@
+name: Verify district emblems and light grey mobile tabs
+on:
+  push:
+    paths:
+      - "index-v129.html"
+      - "district-coats-uao-v133.js"
+      - "tests/test_district_coats.cjs"
+      - ".github/workflows/test-district-coats.yml"
+  pull_request:
+    paths:
+      - "index-v129.html"
+      - "district-coats-uao-v133.js"
+      - "tests/test_district_coats.cjs"
+      - ".github/workflows/test-district-coats.yml"
+permissions:
+  contents: read
+jobs:
+  district-tabs:
+    name: All 16 verified district emblems and grey mobile tabs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate JavaScript
+        run: node --check district-coats-uao-v133.js
+      - name: Offline verification
+        run: |
+          node --test tests/test_district_coats.cjs
+          node --test tests/test_okrug_branding.cjs

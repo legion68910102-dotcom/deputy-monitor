@@ -6,7 +6,7 @@
   "policy_version": 3,
   "provider": "gigachat",
   "status": "partial",
-  "generated_at": "2026-11-23T21:37:12.103Z",
+  "generated_at": "2026-11-23T22:13:06.963Z",
   "model": "GigaChat-2-Pro",
   "source": "vk-posts.json",
   "total_posts": 1420,
@@ -10255,6 +10255,42 @@
       "method": "blocked",
       "request_version": 1
     },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_386\u001f2026-09-15": {
+      "signature": "42293140",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам, связанным с деятельностью муниципального депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "grigorievalv\u001fhttps://vk.com/wall671334115_815\u001f2026-09-15": {
+      "signature": "eb1a4ec0",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам из предложенного списка. Это информационная публикация о возможной инициативе, без описания личной деятельности депутата.",
+      "evidence": "Депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева рассказала об идее устава многоквартирного дома.",
+      "method": "ai"
+    },
+    "pkobtsev\u001fhttps://vk.com/wall579062692_343\u001f2026-09-15": {
+      "signature": "bf5626c6",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "GigaChat отклонил запрос; ИИ-классификация не выполнена.",
+      "evidence": "",
+      "method": "blocked",
+      "request_version": 1
+    },
+    "e.korostilenko\u001fhttps://vk.com/wall710236608_788\u001f2026-09-14": {
+      "signature": "0540dc1f",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой общее утверждение о спорте в городе, не содержит информации о действии, теме или результате, относящихся к деятельности депутата.",
+      "evidence": "Спорт — норма жизни большого мегаполиса.",
+      "method": "ai"
+    },
     "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_994\u001f2026-09-14": {
       "signature": "7b18cff5",
       "categories": [],
@@ -10263,12 +10299,52 @@
       "evidence": "",
       "method": "metadata"
     },
+    "seregin1963\u001fhttps://vk.com/wall710315882_577\u001f2026-09-14": {
+      "signature": "ef2c9045",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационную справку о продукции московских промышленных предприятий и их востребованности в регионах, без упоминания действий депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_385\u001f2026-09-14": {
+      "signature": "c82bc62c",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам, связанным с деятельностью депутата. Это информационная фраза без привязки к личной активности.",
+      "evidence": "Уют вокруг дома создают сами жители — своим трудом и заботой.",
+      "method": "ai"
+    },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_384\u001f2026-09-14": {
+      "signature": "5d11ec85",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст сообщает о личном занятии спортом (пробежка) и хорошем настроении депутата, что относится к личной жизни.",
+      "evidence": "Суббота началась с 5 километров и отличного настроения.",
+      "method": "ai"
+    },
     "aleks_moskalev\u001fhttps://vk.com/wall1186447_3690\u001f2026-09-14": {
       "signature": "22088507",
       "categories": [],
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Сообщение касается публикации статьи в журнале, но не отражает депутатскую деятельность или взаимодействие с жителями.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elenanersesova\u001fhttps://vk.com/wall707817181_796\u001f2026-09-13": {
+      "signature": "e5b1bf78",
+      "categories": [
+        "inspect"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст сообщает о факте осмотра хода благоустройства спортивной площадки депутатом и жителями, что указывает на категорию inspect.",
       "evidence": "",
       "method": "ai"
     },
@@ -10281,6 +10357,42 @@
       "confidence": 1,
       "explanation": "Депутат делится личными эмоциями и фотографией с дачи, рассказывая о ромашках, что относится к личной жизни.",
       "evidence": "Я ждала их всё лето🥰\nМои любимые двухметровые дачные ромашки.",
+      "method": "ai"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_428\u001f2026-09-13": {
+      "signature": "2633329e",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовала в спортивном мероприятии, что подтверждается фразой 'начала депутат Госдума' и ссылкой на источник.",
+      "evidence": "На старт — с хорошим настроением! Утро вместе с бегунами «C95 ЗИЛ» начала депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева.",
+      "method": "ai"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_427\u001f2026-09-13": {
+      "signature": "8712c7e0",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата, теме конкурса или иным категориям.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "dmitry_ark\u001fhttps://vk.com/wall708200369_426\u001f2026-09-13": {
+      "signature": "2496a056",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат встретился с жителями на ярком мероприятии ко Дню города, что указывает на фактическое участие в общественном мероприятии.",
+      "evidence": "На Юге Москвы проходят яркие мероприятия ко Дню города — от концертов до спортивных праздников. С жителями встретилась депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева.",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_348\u001f2026-09-13": {
+      "signature": "df290d8e",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата: просто информация о конкурсе и итогах.",
+      "evidence": "Благодаря конкурсу «Мой дом — моя Москва» даже небольшой участок у дома может стать любимым местом для жителей. Из 100 заявок 50 вышли в финал, а 9 проектов завоевали звание победителей.",
       "method": "ai"
     },
     "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2087\u001f2026-09-12": {
@@ -10323,6 +10435,60 @@
       "evidence": "",
       "method": "ai"
     },
+    "elena_laplanche\u001fhttps://vk.com/wall708827390_1706\u001f2026-09-11": {
+      "signature": "6ba6cf8c",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам, связанным с деятельностью муниципального депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_382\u001f2026-09-11": {
+      "signature": "58579548",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат отметил праздник вместе с москвичами, участвуя в общественном мероприятии.",
+      "evidence": "День города продолжается на Юге Москвы — концерты, спорт и встречи объединяют жителей районов. Вместе с москвичами праздник отметила депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева",
+      "method": "ai"
+    },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_381\u001f2026-09-10": {
+      "signature": "6b870760",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет признаков какой-либо депутатской активности или действий; текст выражает частное мнение и благодарность за сервис.",
+      "evidence": "Каждый раз, когда еду в новых вагонах «Москва-2026», восхищаюсь — тихо, удобно, современно.",
+      "method": "ai"
+    },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_993\u001f2026-09-09": {
+      "signature": "64e30409",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам из методики.",
+      "evidence": "Отличный колледж!",
+      "method": "ai"
+    },
+    "sagalovskaya\u001fhttps://vk.com/wall623536531_380\u001f2026-09-09": {
+      "signature": "4a1498d9",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам из предложенного списка; высказывание носит общий характер.",
+      "evidence": "Бизнес должен развиваться, но не за счёт комфорта жителей.",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_347\u001f2026-09-09": {
+      "signature": "bd898982",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждения личной инициативы или обсуждения депутатом муниципальных проблем коммерческих объектов в МКД; упоминается инициатива депутата ГД, но не муниципальная деятельность",
+      "evidence": "",
+      "method": "ai"
+    },
     "tikhomirovalexey\u001fhttps://vk.com/wall272805045_2085\u001f2026-09-08": {
       "signature": "358c505a",
       "categories": [
@@ -10356,6 +10522,15 @@
       "evidence": "Нашему хору Детский хор “NOVA” выпал уникальный шанс встретиться с удивительной Тутта Ларсен.",
       "method": "ai"
     },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_346\u001f2026-09-07": {
+      "signature": "4432720b",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат посетил праздничные площадки ко Дню города, что указывает на фактическое участие в мероприятии.",
+      "evidence": "Депутат Государственной Думы РФ Светлана Викторовна Разворотнева, посетив площадки, подчеркнула, что Москва меняется к лучшему.",
+      "method": "ai"
+    },
     "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_992\u001f2026-09-06": {
       "signature": "43c347ae",
       "categories": [],
@@ -10384,6 +10559,15 @@
       "evidence": "",
       "method": "ai"
     },
+    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_991\u001f2026-09-05": {
+      "signature": "77601a4f",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам из предложенного списка; высказывание носит оценочный характер.",
+      "evidence": "Достойная кандидатура, имя Н. Серебряникова известно многим жителям нашей страны.",
+      "method": "ai"
+    },
     "svetlanakostyushina\u001fhttps://vk.com/wall708740266_345\u001f2026-09-05": {
       "signature": "e3074641",
       "categories": [],
@@ -10391,6 +10575,35 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_344\u001f2026-09-05": {
+      "signature": "488aebb7",
+      "categories": [
+        "plan"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "В тексте говорится о планируемом улучшении транспортной инфраструктуры и ожидаемом решении, что указывает на категорию 'план'.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_343\u001f2026-09-05": {
+      "signature": "d1a68581",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или темам из предложенного списка; публикация носит информативный характер, без описания личной активности депутата.",
+      "evidence": "В ходе экспертной дискуссии депутат Государственной Думы РФ Светлана Викторовна Разворотнева акцентировала внимание на важности системного подхода к развитию городской среды.",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_342\u001f2026-09-04": {
+      "signature": "b7fe57e2",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений ни одному из ключевых действий или тем: отсутствует информация о личном участии депутата, заседаниях Совета, встречах с избирателями, обходах, контроле работ, мер",
+      "evidence": "",
+      "method": "ai"
     },
     "aleks_moskalev\u001fhttps://vk.com/wall1186447_3675\u001f2026-09-03": {
       "signature": "b815d99d",
@@ -10400,6 +10613,26 @@
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "В публикации сообщается об открытии нового кафе в отремонтированном помещении культурного центра, говорится о программе лояльности и улучшении комфорта для посетителей. Нет признак",
+      "evidence": "",
+      "method": "ai"
+    },
+    "annavolskaya\u001fhttps://vk.com/wall611229514_2249\u001f2026-09-02": {
+      "signature": "4b415086",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений участию депутата или его действиям; просто информационное сообщение о спортивном мероприятии.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_341\u001f2026-09-02": {
+      "signature": "12dac38d",
+      "categories": [
+        "plan"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "В тексте говорится о проработке варианта обустройства пешеходного перехода, что указывает на будущие планы и намерения, а не на совершённое действие.",
       "evidence": "",
       "method": "ai"
     },
@@ -10429,6 +10662,33 @@
       "evidence": "",
       "method": "metadata"
     },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_340\u001f2026-08-30": {
+      "signature": "fda6e714",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовала в спортивном мероприятии, рассказывала о проекте, что указывает на фактическое присутствие и участие.",
+      "evidence": "Депутат Государственной Думы РФ Светлана Викторовна Разворотнева рассказала о возможностях проекта «Мой спортивный район».",
+      "method": "ai"
+    },
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3668\u001f2026-08-30": {
+      "signature": "dfe38e5a",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет признаков депутатской деятельности или обсуждения муниципальных тем; текст посвящён футбольному клубу и историческому событию.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_339\u001f2026-08-29": {
+      "signature": "46b2ab16",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовала в дискуссии, посвящённой Дню российского кино, что является фактическим участием в культурном мероприятии.",
+      "evidence": "Ко Дню российского кино была проведена дискуссия «В фокусе — молодые» —участие в мероприятие приняла депутат Государственной Думы РФ Светлана Викторовна Разворотнева.",
+      "method": "ai"
+    },
     "safonovatatiana85\u001fhttps://vk.com/wall708643134_1228\u001f2026-08-28": {
       "signature": "bb95c93e",
       "categories": [],
@@ -10447,6 +10707,35 @@
       "confidence": 1,
       "explanation": "Текст представляет собой приглашение на встречи литературного клуба Московской музыкальной школы имени Шебалина, указывая дату, время и контактные данные. Нет признаков факта состо",
       "evidence": "Приглашаем детей и взрослых на встречи литературного клуба Московская музыкальная школа  им. В.Я.Шебалина",
+      "method": "ai"
+    },
+    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_338\u001f2026-08-27": {
+      "signature": "430e92f9",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям Светланы Разворотневой, кроме посещения обновленного корпуса школы. Это не относится ни к одной из рабочих категорий.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3659\u001f2026-08-24": {
+      "signature": "6cdd5ad4",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат сообщил о состоявшемся культурном мероприятии, где участвовали артисты двух стран, что подтверждает категорию 'участие в мероприятиях'.",
+      "evidence": "Вчера в Малом зале #ЦКИМеридиан прошел уникальный концерт \"Звуки традиций\".",
+      "method": "ai"
+    },
+    "elena_laplanche\u001fhttps://vk.com/wall708827390_1687\u001f2026-08-23": {
+      "signature": "b4c35878",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Пост посвящён личной теме — выращиванию вишнёвого дерева, упоминается срок '3 года моей вишенки', что указывает на частную историю и увлечение.",
+      "evidence": "🍒3 года моей вишенки 🍒",
       "method": "ai"
     },
     "nikolskayaav\u001fhttps://vk.com/wall712889803_2131\u001f2026-08-22": {
@@ -10561,6 +10850,15 @@
       "evidence": "",
       "method": "ai"
     },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2124\u001f2026-08-08": {
+      "signature": "d4b2dd3d",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Публикация состоит только из непечатаемых символов, отсутствует осмысленный текст.",
+      "evidence": "￼￼￼",
+      "method": "ai"
+    },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_397\u001f2026-08-05": {
       "signature": "25e35a4c",
       "categories": [],
@@ -10568,6 +10866,15 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1011\u001f2026-08-02": {
+      "signature": "1c09ac12",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат принял участие в открытии площадки 'Лето в Москве', что является фактическим участием в культурном мероприятии.",
+      "evidence": "Принял участие в мероприятии открытие площадки «Лето в Москве»",
+      "method": "ai"
     },
     "sergey_kashlev\u001fhttps://vk.com/wall406379933_1010\u001f2026-07-31": {
       "signature": "7c532e81",
@@ -10584,6 +10891,15 @@
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Публикация сообщает о спортивной эстафете, но нет указаний на действия депутата или иные категории.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1008\u001f2026-07-29": {
+      "signature": "481a4461",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат посетил открытие молодёжного штаба и поддержал инициативы ребят, что указывает на фактическое участие в мероприятии.",
       "evidence": "",
       "method": "ai"
     },
@@ -10611,12 +10927,43 @@
       "evidence": "",
       "method": "metadata"
     },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2114\u001f2026-07-27": {
+      "signature": "2b422770",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 0.9,
+      "explanation": "Пост выражает личную эмоцию и отношение к свободному времени, что указывает на категорию 'личные'.",
+      "evidence": "Время для себя ❤",
+      "method": "ai"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1007\u001f2026-07-26": {
+      "signature": "f3ff075f",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат посетил завершающий фестиваль в рамках проекта, что указывает на фактическое участие в общественном мероприятии.",
+      "evidence": "Роман Юрьевич Романенко посетил заключительный в этом сезоне фестиваль в районе Северное Бутово.",
+      "method": "ai"
+    },
     "sergey_kashlev\u001fhttps://vk.com/wall406379933_1006\u001f2026-07-26": {
       "signature": "6115de51",
       "categories": [],
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Сообщение о профилактической акции с участием космонавта, но нет сведений о действиях депутата или иной категории.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1005\u001f2026-07-24": {
+      "signature": "50d9e6e8",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение на будущее мероприятие — мастер-класс по плетению браслетов из бисера, что соответствует определению 'announcement'.",
       "evidence": "",
       "method": "ai"
     },
@@ -10644,6 +10991,17 @@
       "evidence": "",
       "method": "metadata"
     },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2106\u001f2026-07-19": {
+      "signature": "a539fb63",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Эмоциональный пост о выходных указывает на личную сферу отдыха и досуга.",
+      "evidence": "Выходные 🏡 🌺🌼🌤️",
+      "method": "ai"
+    },
     "nikolskayaav\u001fhttps://vk.com/wall712889803_2100\u001f2026-07-16": {
       "signature": "47e68a37",
       "categories": [
@@ -10652,6 +11010,15 @@
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Автор делится личным опытом по улучшению двора, взаимодействует с ГБУ «Жилищник», организовывает посадку цветов с соседями. Однако это не депутатская деятельность, а частная инициа",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2097\u001f2026-07-15": {
+      "signature": "69ac319e",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой объявление о вакансии социального работника, не связанное с деятельностью депутата.",
       "evidence": "",
       "method": "ai"
     },
@@ -10680,6 +11047,24 @@
       "evidence": "",
       "method": "metadata"
     },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2095\u001f2026-07-07": {
+      "signature": "57dc6b49",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Публикация представляет собой поздравительное сообщение без упоминания каких-либо действий, встреч, решений или иных подтвержденных деятельностей депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1218\u001f2026-07-04": {
+      "signature": "3eb11082",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата: статья рассказывает о круглом столе, инициативе жителей по благоустройству и сложностях, без упоминания личной активности автора.",
+      "evidence": "",
+      "method": "ai"
+    },
     "safonovatatiana85\u001fhttps://vk.com/wall708643134_1217\u001f2026-07-03": {
       "signature": "93b90e62",
       "categories": [],
@@ -10706,6 +11091,15 @@
       "evidence": "",
       "method": "metadata"
     },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_404\u001f2026-07-01": {
+      "signature": "3b36aae8",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Поздравление выпускников колледжа не связано с деятельностью депутата, не содержит сведений о рабочих вопросах, встречах, приемах или иной официальной активности.",
+      "evidence": "",
+      "method": "ai"
+    },
     "safonovatatiana85\u001fhttps://vk.com/wall708643134_1215\u001f2026-06-30": {
       "signature": "970e77fa",
       "categories": [],
@@ -10731,6 +11125,33 @@
       "evidence": "",
       "method": "metadata"
     },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_403\u001f2026-06-30": {
+      "signature": "9b1a84a4",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений категориям: отсутствует описание личной инициативы, встреч, приёмов, решений, планов, гуманитарной помощи, информационных сообщений, личных тем или иных действий ",
+      "evidence": "",
+      "method": "ai"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_402\u001f2026-06-30": {
+      "signature": "a113b2b3",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений ни одному из действий или тем: отсутствует информация о заседании, встрече, обходе, контроле, приёме граждан, решении вопросов, личном участии, гуманитарной помощ",
+      "evidence": "",
+      "method": "ai"
+    },
+    "elena_laplanche\u001fhttps://vk.com/wall708827390_1665\u001f2026-06-29": {
+      "signature": "9c77c772",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Публикация представляет собой объявление о вакансии преподавателя по фортепиано, не связанное с деятельностью депутата.",
+      "evidence": "Открыта вакансия в Московская музыкальная школа  им. В.Я.Шебалина преподавателя по фортепиано!",
+      "method": "ai"
+    },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_391\u001f2026-06-29": {
       "signature": "e4b8b8e6",
       "categories": [],
@@ -10755,6 +11176,17 @@
       "confidence": 1,
       "explanation": "В публикации содержится поздравительное обращение Светланы Разворотневой к молодёжи в День молодёжи, без описания каких-либо действий или мероприятий, требующих дополнительной клас",
       "evidence": "В честь Дня молодёжи депутат Светлана Разворотнева обратилась к молодым москвичам с поздравлением, отметив их неоценимый вклад в развитие города.",
+      "method": "ai"
+    },
+    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1213\u001f2026-06-28": {
+      "signature": "3d043a95",
+      "categories": [
+        "event"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Светлана Разворотнева лично посетила выпускные мероприятия в нескольких школах, участвовала в торжественных церемониях и вручила благодарственные письма педагогам.",
+      "evidence": "",
       "method": "ai"
     },
     "nikolskayaav\u001fhttps://vk.com/wall712889803_2094\u001f2026-06-28": {
@@ -10823,6 +11255,15 @@
       "evidence": "",
       "method": "metadata"
     },
+    "sysoevala\u001fhttps://vk.com/wall709963598_548\u001f2026-06-26": {
+      "signature": "4a036156",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Публикация представляет собой поздравление выпускников школы, не содержит сведений о депутатской деятельности, встречах, приемах, решении вопросов или иных подтвержденных действиях",
+      "evidence": "",
+      "method": "ai"
+    },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_387\u001f2026-06-24": {
       "signature": "c4097020",
       "categories": [],
@@ -10830,6 +11271,15 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1212\u001f2026-06-23": {
+      "signature": "c3fe46a4",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовала в торжественном старте автопробега, связанном с памятными мероприятиями, что подтверждает категорию 'event'.",
+      "evidence": "депутат Государственной Думы Светлана Викторовна Разворотнева приняла участие в торжественном старте автопробега «Города-герои — города Героев».",
+      "method": "ai"
     },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_386\u001f2026-06-23": {
       "signature": "8f1c7988",
@@ -10885,6 +11335,17 @@
       "evidence": "",
       "method": "ai"
     },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2090\u001f2026-06-20": {
+      "signature": "18bf6456",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Сообщение о выходных и поездке в Ростов Великий указывает на личную поездку и отдых.",
+      "evidence": "Выходные! Ростов Великий!",
+      "method": "ai"
+    },
     "safonovatatiana85\u001fhttps://vk.com/wall708643134_1209\u001f2026-06-19": {
       "signature": "afcfe769",
       "categories": [],
@@ -10894,6 +11355,17 @@
       "evidence": "",
       "method": "ai"
     },
+    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1208\u001f2026-06-19": {
+      "signature": "cee49644",
+      "categories": [
+        "event"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Светлана Викторовна участвовала в торжественном мероприятии, посвящённом социальным работникам, где вручила благодарности. Это подтверждает фактическое участие в общественном мероп",
+      "evidence": "Депутат Государственной Думы Светлана Викторовна приняла участие в торжественном мероприятии, посвящённом чествованию специалистов социальной сферы.",
+      "method": "ai"
+    },
     "nikolskayaav\u001fhttps://vk.com/wall712889803_2089\u001f2026-06-19": {
       "signature": "aee5f66d",
       "categories": [],
@@ -10901,6 +11373,15 @@
       "confidence": 0.9,
       "explanation": "Статья-инструкция о признаках нуждаемости в помощи, советы по действиям, ссылки на ресурсы социальной помощи; не отражает личную деятельность депутата, не относится к заседаниям, в",
       "evidence": "Как понять, что человеку нужна помощь?",
+      "method": "ai"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2082\u001f2026-06-18": {
+      "signature": "a333c460",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений ни одному из тематических действий депутата: отсутствует информация о заседаниях, встречах, обходах, контроле, приёмах, работе с обращениями, решении вопросов, пл",
+      "evidence": "",
       "method": "ai"
     },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_384\u001f2026-06-18": {
@@ -10926,6 +11407,35 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_542\u001f2026-06-18": {
+      "signature": "66b8a2ce",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение и анонс Московского выпускного бала, указывая дату, место и программу мероприятия.",
+      "evidence": "До Московского выпускного остаются считанные дни: он пройдёт в ночь с 26 на 27 июня.",
+      "method": "ai"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_540\u001f2026-06-18": {
+      "signature": "9e60c721",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата, кроме участия в открытии квиза как гостя. Нет информации о личном участии в организации, проведении или иных действиях.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_400\u001f2026-06-18": {
+      "signature": "d82219d1",
+      "categories": [],
+      "confidence": 0,
+      "explanation": "GigaChat отклонил запрос; ИИ-классификация не выполнена.",
+      "evidence": "",
+      "method": "blocked",
+      "request_version": 1
     },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_381\u001f2026-06-16": {
       "signature": "60ff5089",
@@ -10959,6 +11469,17 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "molchanovpavel\u001fhttps://vk.com/wall681822751_399\u001f2026-06-15": {
+      "signature": "4bde3580",
+      "categories": [
+        "meet"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "В тексте указано, что состоялась встреча с генеральным директором ГМЗ 'Царицыно' и специалистами, что подтверждает категорию 'meet'.",
+      "evidence": "Первый шаг к началу большой работы сделан. Прошла встреча с генеральным директором ГМЗ \"Царицыно\" Елизаветой Фокиной и специалистами.",
+      "method": "ai"
     },
     "baranchikova_natalia\u001fhttps://vk.com/wall708828941_378\u001f2026-06-13": {
       "signature": "1a5836d0",
@@ -11070,6 +11591,17 @@
       "evidence": "",
       "method": "metadata"
     },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2076\u001f2026-06-08": {
+      "signature": "99e034ba",
+      "categories": [
+        "result"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Прямо указано, что просьба жителей выполнена: лавочка установлена.",
+      "evidence": "Лавочка установлена.",
+      "method": "ai"
+    },
     "andreymordovin\u001fhttps://vk.com/wall4765626_4724\u001f2026-06-08": {
       "signature": "11903305",
       "categories": [
@@ -11090,6 +11622,15 @@
       "confidence": 1,
       "explanation": "Статья анонсирует будущий форум партии «Единая Россия», перечисляя темы и участников, однако не сообщает о состоявшемся мероприятии.",
       "evidence": "9 июня в Москве состоится итоговый отчётно-программный форум партии «Единая Россия» по Центральному федеральному округу.",
+      "method": "ai"
+    },
+    "sysoevala\u001fhttps://vk.com/wall709963598_524\u001f2026-06-03": {
+      "signature": "0281535c",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет указаний на депутатскую деятельность или личную активность автора; текст полностью посвящён школьному мероприятию.",
+      "evidence": "",
       "method": "ai"
     },
     "molchanovpavel\u001fhttps://vk.com/wall681822751_393\u001f2026-06-02": {
@@ -11123,6 +11664,17 @@
       "confidence": 1,
       "explanation": "Текст повторяет предыдущую публикацию, описывая личную прогулку депутата с семьёй и рабочую встречу.",
       "evidence": "Депутат Государственной Думы Российской Федерации, заместитель секретаря Московского городского регионального отделения партии «Единая Россия» Евгений Нифантьев провел День защиты детей с семьёй в Мос",
+      "method": "ai"
+    },
+    "nikolskayaav\u001fhttps://vk.com/wall712889803_2069\u001f2026-05-31": {
+      "signature": "142a06c1",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст описывает личную прогулку и посещение кафе, что относится к частной жизни депутата.",
+      "evidence": "",
       "method": "ai"
     },
     "molchanovpavel\u001fhttps://vk.com/wall681822751_391\u001f2026-05-31": {
@@ -11172,6 +11724,15 @@
       "evidence": "",
       "method": "metadata"
     },
+    "sysoevala\u001fhttps://vk.com/wall709963598_516\u001f2026-05-29": {
+      "signature": "dda0f367",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Это поздравительное сообщение выпускникам четвёртого класса, оно не связано с деятельностью депутата, работой с обращениями, встречами или другими официальными действиями.",
+      "evidence": "Желаем вам, наши дорогие ребята, отличных оценок, верных друзей и новых побед.",
+      "method": "ai"
+    },
     "molchanovpavel\u001fhttps://vk.com/wall681822751_390\u001f2026-05-29": {
       "signature": "ee0caba0",
       "categories": [],
@@ -11179,6 +11740,17 @@
       "confidence": 1,
       "explanation": "Публикация сообщает о предстоящем праздничном мероприятии в День защиты детей, указаны организаторы и программа развлечений.",
       "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_336\u001f2026-05-29": {
+      "signature": "f3f8164b",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение посетить мероприятие 'ЛЕТО В МОСКВЕ', описываются ожидаемые активности, но сам факт мероприятия еще не состоялся.",
+      "evidence": "Не пропустите самое главное событие! Открытие проекта ЛЕТО В МОСКВЕ!",
       "method": "ai"
     },
     "nata_sycheva\u001fhttps://vk.com/wall329365559_335\u001f2026-05-28": {
@@ -11201,6 +11773,17 @@
       "evidence": "Евгений Нифантьев принял участие в конференции местного отделения «Единой России» в Южном административном округе.",
       "method": "ai"
     },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_333\u001f2026-05-27": {
+      "signature": "2e9c8063",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение и уведомление о проведении предварительного голосования партии 'Единая Россия', указывая сроки, удобство и способы участия.",
+      "evidence": "",
+      "method": "ai"
+    },
     "nata_sycheva\u001fhttps://vk.com/wall329365559_332\u001f2026-05-25": {
       "signature": "e254c220",
       "categories": [],
@@ -11220,6 +11803,15 @@
       "evidence": "Евгений Нифантьев принял участие в форуме партии «Единая Россия» «Есть результат!»",
       "method": "ai"
     },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_330\u001f2026-05-22": {
+      "signature": "fa92944b",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Евгений Нифантьев участвовал в обсуждении на круглом столе, посвящённом развитию ИИ и беспилотных технологий, организованном партией 'Единая Россия'. Это фактическое участие в меро",
+      "evidence": "Депутат Государственной Думы Российской Федерации, заместитель секретаря Московского городского регионального отделения партии «Единая Россия» Евгений Нифантьев принял участие в обсуждении развития ис",
+      "method": "ai"
+    },
     "nata_sycheva\u001fhttps://vk.com/wall329365559_329\u001f2026-05-20": {
       "signature": "62911073",
       "categories": [],
@@ -11236,6 +11828,71 @@
       "confidence": 1,
       "explanation": "Депутат принял участие в фармацевтическом форуме, где обсуждали цифровую медицину. Это фактическое участие в мероприятии.",
       "evidence": "Депутат Государственной Думы Российской Федерации, заместитель секретаря Московского городского регионального отделения партии «Единая Россия» Евгений Нифантьев посетил фармацевтический форум Союза не",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_327\u001f2026-05-11": {
+      "signature": "793102f2",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст посвящён поздравлению участников фестиваля, что указывает на фактическое участие в культурном мероприятии.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_326\u001f2026-05-11": {
+      "signature": "167dfb36",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Публикация представляет собой поздравление ветеранов с праздником, что не входит ни в одну из рабочих категорий деятельности депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_325\u001f2026-05-10": {
+      "signature": "6ad07294",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет информации о действии или теме, связанной с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_324\u001f2026-05-10": {
+      "signature": "a022bb6c",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат принял участие в акции 'Синий платочек Победы', что подтверждается описанием участия в мероприятии.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_323\u001f2026-05-09": {
+      "signature": "7ca84134",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение жителей поучаствовать в патриотической акции, что указывает на категорию 'announcement'.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_322\u001f2026-05-09": {
+      "signature": "e9877221",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений ни одному из заданных типов активности: отсутствует информация о заседаниях, встречах, обходах, контроле работ, участии в мероприятиях, приёмах граждан, работе с ",
+      "evidence": "",
+      "method": "ai"
+    },
+    "nata_sycheva\u001fhttps://vk.com/wall329365559_321\u001f2026-05-08": {
+      "signature": "c8a94f6f",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Евгений Нифантьев посетил интеллектуальную игру 'Своя игра', что указывает на фактическое участие в мероприятии.",
+      "evidence": "",
       "method": "ai"
     },
     "andreymordovin\u001fhttps://vk.com/wall4765626_4719\u001f2026-04-03": {
@@ -11274,6 +11931,17 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "ms_zotova\u001fhttps://vk.com/wall837394_2448\u001f2026-01-15": {
+      "signature": "2f26045d",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение и объявление о предстоящих соревнованиях по лыжным гонкам, указаны дата, место и условия участия.",
+      "evidence": "",
+      "method": "ai"
     },
     "ms_zotova\u001fhttps://vk.com/wall837394_2447\u001f2025-08-18": {
       "signature": "e1990f04",
@@ -11315,6 +11983,28 @@
       "evidence": "",
       "method": "ai"
     },
+    "ms_zotova\u001fhttps://vk.com/wall837394_2445\u001f2025-04-20": {
+      "signature": "e316ebe6",
+      "categories": [
+        "information"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное уведомление о городском проекте 'Лето в Москве', описывает детали и преимущества проекта, не указывая на личную деятельность депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_387\u001f2025-04-17": {
+      "signature": "256461f6",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение и анонс предстоящих летних мероприятий в проекте 'Лето в Москве', без подтверждения факта участия или организации депутатом.",
+      "evidence": "С 1 июня 2025 года в рамках проекта во всех округах и районах столицы планируют ежедневно проводить благотворительные, культурные и спортивные мероприятия.",
+      "method": "ai"
+    },
     "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2687\u001f2025-04-16": {
       "signature": "35b19393",
       "categories": [],
@@ -11322,6 +12012,15 @@
       "confidence": 1,
       "explanation": "Статья носит новостной характер, анонсирует проект 'Лето в Москве', не содержит сведений о личном участии депутата.",
       "evidence": "",
+      "method": "ai"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_384\u001f2025-03-10": {
+      "signature": "3a244054",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат сообщает о своём участии в официальной церемонии награждения ветеранов юбилейными медалями, посвящённой исторической дате.",
+      "evidence": "Мне выпала большая честь принять участие в церемонии награждения Ветеранов юбилейными медалями!",
       "method": "ai"
     },
     "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_383\u001f2025-03-08": {
@@ -11333,12 +12032,108 @@
       "evidence": "",
       "method": "ai"
     },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_381\u001f2025-02-23": {
+      "signature": "09209797",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям, категориям или темам, связанным с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1148\u001f2025-01-28": {
+      "signature": "34f6b3db",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст касается ограничения соцсети и просьбы подписываться вместо добавления в друзья, не содержит информации о депутатской деятельности.",
+      "evidence": "В связи с ограничением ВК, я больше не могу добавлять друзей на свою личную страницу.",
+      "method": "ai"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2686\u001f2024-12-03": {
+      "signature": "9e917785",
+      "categories": [
+        "reception"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "В тексте указано, что депутат провёл приём жителей, что подтверждается словом 'провел прием'.",
+      "evidence": "Сегодня провел прием жителей Сабурово, приуроченный к 23-летию Единой России.",
+      "method": "ai"
+    },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_425\u001f2024-10-11": {
+      "signature": "5d651a58",
+      "categories": [
+        "meet"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст описывает состоявшуюся встречу с обсуждением городских проблем и шагов по их решению.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2685\u001f2024-09-27": {
+      "signature": "0efc163b",
+      "categories": [
+        "meet",
+        "result"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "В публикации подтверждается встреча с жителем и решение вопроса по безопасному проходу к школе, что указывает на категории 'meet' и 'result'.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_418\u001f2024-09-17": {
+      "signature": "018f521e",
+      "categories": [
+        "council"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст сообщает о состоявшемся заседании депутатов Даниловского района с перечислением обсужденных вопросов, что соответствует определению council.",
+      "evidence": "Прошло очередное заседание депутатов Даниловского района.",
+      "method": "ai"
+    },
     "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2684\u001f2024-09-08": {
       "signature": "d19320f2",
       "categories": [],
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Сообщение содержит общую информацию о выборах в МГД, не указывает на личное участие или действия депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2683\u001f2024-09-07": {
+      "signature": "5ace0e04",
+      "categories": [
+        "information"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст информирует жителей о процедуре и сроках голосования, а также о способах участия в выборах, не содержит сведений о личной деятельности депутата.",
+      "evidence": "В этом году выборы проходят с 6 по 8 сентября с 8:00 до 20:00.",
+      "method": "ai"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2681\u001f2024-09-07": {
+      "signature": "3002c210",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение и уведомление о проведении второго дня голосования по выборам депутатов в Мосгордуму, указывая даты, время и способы голосования.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2679\u001f2024-09-06": {
+      "signature": "6a978744",
+      "categories": [
+        "announcement"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой приглашение и уведомление о проведении выборов, описывает процесс и способы голосования, а также указывает даты и технические детали. Это типичная форма ан",
       "evidence": "",
       "method": "ai"
     },
@@ -11359,6 +12154,17 @@
       "evidence": "",
       "method": "metadata"
     },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_413\u001f2024-09-04": {
+      "signature": "1ae110bf",
+      "categories": [
+        "meet"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст описывает личную встречу депутата с жителями района Митино, где обсуждались вопросы благоустройства и ЖКХ.",
+      "evidence": "Вчера мы с командой вышли к жителям в район Митино.",
+      "method": "ai"
+    },
     "vgsultanov\u001fhttps://vk.com/wall733379690_412\u001f2024-09-01": {
       "signature": "6b6dc8e3",
       "categories": [
@@ -11368,6 +12174,24 @@
       "confidence": 1,
       "explanation": "Депутат сообщает о личной встрече с жителями Тушино, обсуждались конкретные проблемы, направлено обращение в управу.",
       "evidence": "Субботу вновь провел с жителями Тушино.",
+      "method": "ai"
+    },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_411\u001f2024-08-30": {
+      "signature": "20788689",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст посвящён дню рождения Алексея Нечаева, содержит поздравления и восхваление его достижений, не содержит информации о депутатской деятельности или личном участии автора.",
+      "evidence": "Сегодня день рождения у нашего главного слона — лидера «Новых людей» Алексея Нечаева.",
+      "method": "ai"
+    },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_409\u001f2024-08-30": {
+      "signature": "21cf9448",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений депутатских действий или тем, связанных с работой муниципалитета или взаимодействием с жителями.",
+      "evidence": "",
       "method": "ai"
     },
     "vgsultanov\u001fhttps://vk.com/wall733379690_407\u001f2024-08-30": {
@@ -11449,6 +12273,15 @@
       "evidence": "",
       "method": "metadata"
     },
+    "vgsultanov\u001fhttps://vk.com/wall733379690_352\u001f2024-08-15": {
+      "signature": "26809d36",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата: статья посвящена проблеме парка, опросу жителей и призыву присоединиться к инициативе, но не содержит сведений о личном участии, встречах, при",
+      "evidence": "",
+      "method": "ai"
+    },
     "vgsultanov\u001fhttps://vk.com/wall733379690_351\u001f2024-08-14": {
       "signature": "f465f46f",
       "categories": [],
@@ -11499,6 +12332,15 @@
       "evidence": "",
       "method": "ai"
     },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2672\u001f2024-06-09": {
+      "signature": "a0bfd8fc",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовал в бесплатной тренировке по йоге в рамках проекта 'Мой район', что подтверждает фактическое участие в общественном мероприятии.",
+      "evidence": "принял участие в бесплатной тренировке по йоге",
+      "method": "ai"
+    },
     "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2670\u001f2024-06-07": {
       "signature": "112b4c07",
       "categories": [],
@@ -11521,6 +12363,15 @@
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "В публикации говорится о поддержке кандидата на выборах, но нет прямого подтверждения личной активности депутата помимо поздравления.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2666\u001f2024-05-21": {
+      "signature": "5166f543",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовал в торжественном мероприятии, где передал флаг района, побывавший в космосе.",
       "evidence": "",
       "method": "ai"
     },
@@ -11548,6 +12399,17 @@
       "evidence": "",
       "method": "metadata"
     },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_378\u001f2024-05-18": {
+      "signature": "54d0b20a",
+      "categories": [
+        "information"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой информационное сообщение о подаче документов кандидатом и призыв к регистрации на предварительное голосование, без описания личной деятельности депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
     "trodionova2022\u001fhttps://vk.com/wall699982687_297\u001f2024-05-11": {
       "signature": "10454b3d",
       "categories": [],
@@ -11563,6 +12425,15 @@
       "explanation": "Текст не получен.",
       "evidence": "",
       "method": "metadata"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_296\u001f2024-05-09": {
+      "signature": "72855a40",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой поздравительное послание ко Дню Победы без упоминания каких-либо действий депутата или общественных мероприятий.",
+      "evidence": "",
+      "method": "ai"
     },
     "trodionova2022\u001fhttps://vk.com/wall699982687_295\u001f2024-05-07": {
       "signature": "dc1c9da8",
@@ -11611,12 +12482,39 @@
       "evidence": "",
       "method": "ai"
     },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_290\u001f2024-04-27": {
+      "signature": "df606f37",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат сообщает о своём участии в международной акции 'Диктант Победы', что является фактическим участием в общественном мероприятии.",
+      "evidence": "",
+      "method": "ai"
+    },
     "trodionova2022\u001fhttps://vk.com/wall699982687_289\u001f2024-03-15": {
       "signature": "3a93852b",
       "categories": [],
       "methodology_version": 1,
       "confidence": 0.6,
       "explanation": "Текст посвящен агитации и информированию о процессе выборов, без подтверждения личного участия депутата в избирательной кампании или иной деятельности.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_288\u001f2024-03-04": {
+      "signature": "00981541",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат принял участие в весеннем праздничном мероприятии, посвящённом 8 Марта, организованном Советом ветеранов и управой района.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_287\u001f2024-03-04": {
+      "signature": "b997b910",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст описывает состоявшееся праздничное мероприятие с участием Совета ветеранов, посвящённое подведению итогов работы и празднованию Международного женского дня.",
       "evidence": "",
       "method": "ai"
     },
@@ -11631,6 +12529,15 @@
       "evidence": "",
       "method": "ai"
     },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_285\u001f2024-02-15": {
+      "signature": "3085e54d",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата: мероприятие проведено сотрудниками полиции, депутат не упоминается среди организаторов или участников.",
+      "evidence": "",
+      "method": "ai"
+    },
     "trodionova2022\u001fhttps://vk.com/wall699982687_284\u001f2024-02-09": {
       "signature": "a34fda37",
       "categories": [
@@ -11639,6 +12546,24 @@
       "methodology_version": 1,
       "confidence": 0.6,
       "explanation": "Автор сообщает о регистрации в проекте и намерении участвовать, однако нет подтверждения фактических действий или личного вклада депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_283\u001f2024-01-17": {
+      "signature": "a4a2aac1",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "В тексте указано, что состоялся круглый стол с участием ветерана и представителя социальной службы, что подтверждает факт проведения мероприятия.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_282\u001f2023-12-27": {
+      "signature": "613f06b4",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат лично навестил ветерана, вручил подарок и поздравление, что является формой гуманитарной помощи.",
       "evidence": "",
       "method": "ai"
     },
@@ -11661,12 +12586,91 @@
       "evidence": "В рамках декады приемов граждан посвященной 22-летию создания партии Единая Россия провела прием жителей.",
       "method": "ai"
     },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_271\u001f2023-09-10": {
+      "signature": "abacd2e0",
+      "categories": [
+        "information"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст информирует жителей о продолжающемся голосовании, возможных способах и сроках голосования, без упоминания собственных действий депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_270\u001f2023-09-09": {
+      "signature": "d2ea1209",
+      "categories": [
+        "information"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст информирует жителей о проходящих выборах, способах голосования и приглашает прийти на избирательные участки.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_353\u001f2023-08-15": {
+      "signature": "5dac31f6",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст представляет собой общую информационную справку о значимости Москвы как центра высоких технологий, не содержит сведений о личном участии депутата или его деятельности.",
+      "evidence": "Москва – крупнейший центр высокотехнологичной промышленности в России! Это один из важнейших факторов социально-экономического развития столицы.",
+      "method": "ai"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_351\u001f2023-08-10": {
+      "signature": "8e65c325",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям депутата или муниципальным темам; публикация носит информативный характер о медицинских достижениях.",
+      "evidence": "Борьба с онкологическими заболеваниями является одним из приоритетов городской медицины, и поэтому важно ознакомить общественность с последними достижениями в этой области.",
+      "method": "ai"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_348\u001f2023-08-09": {
+      "signature": "d80c3a8f",
+      "categories": [
+        "meet",
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст сообщает о состоявшейся встрече в общественном штабе, где обсуждали реализацию проекта 'Питомцы в Москве', что подтверждает категорию meet.",
+      "evidence": "",
+      "method": "ai"
+    },
     "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_347\u001f2023-08-09": {
       "signature": "a1307dcf",
       "categories": [],
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Статья представляет собой информационное описание Московского урбанистического форума, его целей и ожидаемых мероприятий. Нет указаний на личное участие автора или какие-либо конкр",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_269\u001f2023-08-08": {
+      "signature": "d323ac86",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Публикация представляет собой информационное уведомление о дате праздника, без упоминания каких-либо действий или тем, связанных с деятельностью депутата.",
+      "evidence": "День государственного флага России - 22 августа",
+      "method": "ai"
+    },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_345\u001f2023-08-07": {
+      "signature": "8f5d196c",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений ни одному из действий или тем, связанных с деятельностью депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "trodionova2022\u001fhttps://vk.com/wall699982687_268\u001f2023-08-07": {
+      "signature": "3cf47969",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет признаков какой-либо деятельности депутата; публикация представляет собой анонс интересного контента по выставке, без личной вовлеченности.",
       "evidence": "",
       "method": "ai"
     },
@@ -11695,6 +12699,15 @@
       "evidence": "",
       "method": "metadata"
     },
+    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_340\u001f2023-05-18": {
+      "signature": "24f7549e",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений категориям: отсутствует описание действий депутата, встреч, приёмов, решений, планов, личной жизни или иных тематических действий.",
+      "evidence": "",
+      "method": "ai"
+    },
     "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_331\u001f2023-05-14": {
       "signature": "b78a5c6f",
       "categories": [],
@@ -11703,6 +12716,33 @@
       "evidence": "",
       "method": "metadata"
     },
+    "liudmila_zapl\u001fhttps://vk.com/wall708971152_235\u001f2023-04-28": {
+      "signature": "47ff6b97",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет информации, позволяющей отнести публикацию к какой-либо теме.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "liudmila_zapl\u001fhttps://vk.com/wall708971152_234\u001f2023-04-28": {
+      "signature": "1473e8e3",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет информации о деятельности депутата или иной теме.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "liudmila_zapl\u001fhttps://vk.com/wall708971152_233\u001f2023-04-28": {
+      "signature": "c4cfb5d3",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет признаков какой-либо из категорий: отсутствует информация о заседаниях, встречах, обходах, контроле работ, участии в мероприятиях, приёмах граждан, работе с обращениями, решени",
+      "evidence": "",
+      "method": "ai"
+    },
     "liudmila_zapl\u001fhttps://vk.com/wall708971152_232\u001f2023-04-28": {
       "signature": "afc936bb",
       "categories": [],
@@ -11710,6 +12750,15 @@
       "confidence": 1,
       "explanation": "Автор отправляет коллегам ссылку на новость об открытии Южного речного порта и просит опубликовать афишу праздника. Это служебное поручение, не отражающее личное участие автора в м",
       "evidence": "",
+      "method": "ai"
+    },
+    "liudmila_zapl\u001fhttps://vk.com/wall708971152_229\u001f2023-04-24": {
+      "signature": "8c38457b",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат сообщил о состоявшемся праздничном мероприятии во дворе, что указывает на категорию 'event'.",
+      "evidence": "Сегодня состоялся Празднмк двора по Каширскому шоссе 100.",
       "method": "ai"
     },
     "liudmila_zapl\u001fhttps://vk.com/wall708971152_228\u001f2023-04-01": {
@@ -11782,1084 +12831,6 @@
       "evidence": "",
       "method": "ai"
     },
-    "ms_zotova\u001fhttps://vk.com/wall837394_2416\u001f2022-10-18": {
-      "signature": "030e7b1d",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст описывает личную прогулку за грибами с сыном, переживания автора по поводу неудачной охоты и забавный случай с находкой гриба. Это типичная частная история отдыха.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ms_zotova\u001fhttps://vk.com/wall837394_2385\u001f2022-09-04": {
-      "signature": "df361c21",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовала в культурном мероприятии — «Диктанте Победы», что подтверждается описанием личного опыта и эмоций.",
-      "evidence": "В эти выходные в Детско-юношеском центре «Виктория» я приняла участие в  «Диктанте Победы».",
-      "method": "ai"
-    },
-    "ms_zotova\u001fhttps://vk.com/wall837394_2384\u001f2022-09-01": {
-      "signature": "ac92466e",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или категориям: описывается изменение взглядов депутата и сбор мнений жителей, но не указано, какие конкретные действия были предприняты.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "sagalovskaya\u001fhttps://vk.com/wall623536531_386\u001f2026-09-15": {
-      "signature": "42293140",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам, связанным с деятельностью муниципального депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "grigorievalv\u001fhttps://vk.com/wall671334115_815\u001f2026-09-15": {
-      "signature": "eb1a4ec0",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам из предложенного списка. Это информационная публикация о возможной инициативе, без описания личной деятельности депутата.",
-      "evidence": "Депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева рассказала об идее устава многоквартирного дома.",
-      "method": "ai"
-    },
-    "pkobtsev\u001fhttps://vk.com/wall579062692_343\u001f2026-09-15": {
-      "signature": "bf5626c6",
-      "categories": [],
-      "confidence": 0,
-      "explanation": "GigaChat отклонил запрос; ИИ-классификация не выполнена.",
-      "evidence": "",
-      "method": "blocked",
-      "request_version": 1
-    },
-    "e.korostilenko\u001fhttps://vk.com/wall710236608_788\u001f2026-09-14": {
-      "signature": "0540dc1f",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой общее утверждение о спорте в городе, не содержит информации о действии, теме или результате, относящихся к деятельности депутата.",
-      "evidence": "Спорт — норма жизни большого мегаполиса.",
-      "method": "ai"
-    },
-    "seregin1963\u001fhttps://vk.com/wall710315882_577\u001f2026-09-14": {
-      "signature": "ef2c9045",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационную справку о продукции московских промышленных предприятий и их востребованности в регионах, без упоминания действий депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "sagalovskaya\u001fhttps://vk.com/wall623536531_385\u001f2026-09-14": {
-      "signature": "c82bc62c",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам, связанным с деятельностью депутата. Это информационная фраза без привязки к личной активности.",
-      "evidence": "Уют вокруг дома создают сами жители — своим трудом и заботой.",
-      "method": "ai"
-    },
-    "sagalovskaya\u001fhttps://vk.com/wall623536531_384\u001f2026-09-14": {
-      "signature": "5d11ec85",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст сообщает о личном занятии спортом (пробежка) и хорошем настроении депутата, что относится к личной жизни.",
-      "evidence": "Суббота началась с 5 километров и отличного настроения.",
-      "method": "ai"
-    },
-    "elenanersesova\u001fhttps://vk.com/wall707817181_796\u001f2026-09-13": {
-      "signature": "e5b1bf78",
-      "categories": [
-        "inspect"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст сообщает о факте осмотра хода благоустройства спортивной площадки депутатом и жителями, что указывает на категорию inspect.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "dmitry_ark\u001fhttps://vk.com/wall708200369_428\u001f2026-09-13": {
-      "signature": "2633329e",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовала в спортивном мероприятии, что подтверждается фразой 'начала депутат Госдума' и ссылкой на источник.",
-      "evidence": "На старт — с хорошим настроением! Утро вместе с бегунами «C95 ЗИЛ» начала депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева.",
-      "method": "ai"
-    },
-    "dmitry_ark\u001fhttps://vk.com/wall708200369_427\u001f2026-09-13": {
-      "signature": "8712c7e0",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата, теме конкурса или иным категориям.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "dmitry_ark\u001fhttps://vk.com/wall708200369_426\u001f2026-09-13": {
-      "signature": "2496a056",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат встретился с жителями на ярком мероприятии ко Дню города, что указывает на фактическое участие в общественном мероприятии.",
-      "evidence": "На Юге Москвы проходят яркие мероприятия ко Дню города — от концертов до спортивных праздников. С жителями встретилась депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева.",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_348\u001f2026-09-13": {
-      "signature": "df290d8e",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата: просто информация о конкурсе и итогах.",
-      "evidence": "Благодаря конкурсу «Мой дом — моя Москва» даже небольшой участок у дома может стать любимым местом для жителей. Из 100 заявок 50 вышли в финал, а 9 проектов завоевали звание победителей.",
-      "method": "ai"
-    },
-    "elena_laplanche\u001fhttps://vk.com/wall708827390_1706\u001f2026-09-11": {
-      "signature": "6ba6cf8c",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам, связанным с деятельностью муниципального депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "sagalovskaya\u001fhttps://vk.com/wall623536531_382\u001f2026-09-11": {
-      "signature": "58579548",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат отметил праздник вместе с москвичами, участвуя в общественном мероприятии.",
-      "evidence": "День города продолжается на Юге Москвы — концерты, спорт и встречи объединяют жителей районов. Вместе с москвичами праздник отметила депутат Госдумы, член фракции «Единая Россия» Светлана Разворотнева",
-      "method": "ai"
-    },
-    "sagalovskaya\u001fhttps://vk.com/wall623536531_381\u001f2026-09-10": {
-      "signature": "6b870760",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет признаков какой-либо депутатской активности или действий; текст выражает частное мнение и благодарность за сервис.",
-      "evidence": "Каждый раз, когда еду в новых вагонах «Москва-2026», восхищаюсь — тихо, удобно, современно.",
-      "method": "ai"
-    },
-    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_993\u001f2026-09-09": {
-      "signature": "64e30409",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам из методики.",
-      "evidence": "Отличный колледж!",
-      "method": "ai"
-    },
-    "sagalovskaya\u001fhttps://vk.com/wall623536531_380\u001f2026-09-09": {
-      "signature": "4a1498d9",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам из предложенного списка; высказывание носит общий характер.",
-      "evidence": "Бизнес должен развиваться, но не за счёт комфорта жителей.",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_347\u001f2026-09-09": {
-      "signature": "bd898982",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждения личной инициативы или обсуждения депутатом муниципальных проблем коммерческих объектов в МКД; упоминается инициатива депутата ГД, но не муниципальная деятельность",
-      "evidence": "",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_346\u001f2026-09-07": {
-      "signature": "4432720b",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат посетил праздничные площадки ко Дню города, что указывает на фактическое участие в мероприятии.",
-      "evidence": "Депутат Государственной Думы РФ Светлана Викторовна Разворотнева, посетив площадки, подчеркнула, что Москва меняется к лучшему.",
-      "method": "ai"
-    },
-    "ykolova_elena_vasilevna\u001fhttps://vk.com/wall710729090_991\u001f2026-09-05": {
-      "signature": "77601a4f",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам из предложенного списка; высказывание носит оценочный характер.",
-      "evidence": "Достойная кандидатура, имя Н. Серебряникова известно многим жителям нашей страны.",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_344\u001f2026-09-05": {
-      "signature": "488aebb7",
-      "categories": [
-        "plan"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "В тексте говорится о планируемом улучшении транспортной инфраструктуры и ожидаемом решении, что указывает на категорию 'план'.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_343\u001f2026-09-05": {
-      "signature": "d1a68581",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям или темам из предложенного списка; публикация носит информативный характер, без описания личной активности депутата.",
-      "evidence": "В ходе экспертной дискуссии депутат Государственной Думы РФ Светлана Викторовна Разворотнева акцентировала внимание на важности системного подхода к развитию городской среды.",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_342\u001f2026-09-04": {
-      "signature": "b7fe57e2",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений ни одному из ключевых действий или тем: отсутствует информация о личном участии депутата, заседаниях Совета, встречах с избирателями, обходах, контроле работ, мер",
-      "evidence": "",
-      "method": "ai"
-    },
-    "annavolskaya\u001fhttps://vk.com/wall611229514_2249\u001f2026-09-02": {
-      "signature": "4b415086",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений участию депутата или его действиям; просто информационное сообщение о спортивном мероприятии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_341\u001f2026-09-02": {
-      "signature": "12dac38d",
-      "categories": [
-        "plan"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "В тексте говорится о проработке варианта обустройства пешеходного перехода, что указывает на будущие планы и намерения, а не на совершённое действие.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_340\u001f2026-08-30": {
-      "signature": "fda6e714",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовала в спортивном мероприятии, рассказывала о проекте, что указывает на фактическое присутствие и участие.",
-      "evidence": "Депутат Государственной Думы РФ Светлана Викторовна Разворотнева рассказала о возможностях проекта «Мой спортивный район».",
-      "method": "ai"
-    },
-    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3668\u001f2026-08-30": {
-      "signature": "dfe38e5a",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет признаков депутатской деятельности или обсуждения муниципальных тем; текст посвящён футбольному клубу и историческому событию.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_339\u001f2026-08-29": {
-      "signature": "46b2ab16",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовала в дискуссии, посвящённой Дню российского кино, что является фактическим участием в культурном мероприятии.",
-      "evidence": "Ко Дню российского кино была проведена дискуссия «В фокусе — молодые» —участие в мероприятие приняла депутат Государственной Думы РФ Светлана Викторовна Разворотнева.",
-      "method": "ai"
-    },
-    "svetlanakostyushina\u001fhttps://vk.com/wall708740266_338\u001f2026-08-27": {
-      "signature": "430e92f9",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям Светланы Разворотневой, кроме посещения обновленного корпуса школы. Это не относится ни к одной из рабочих категорий.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "aleks_moskalev\u001fhttps://vk.com/wall1186447_3659\u001f2026-08-24": {
-      "signature": "6cdd5ad4",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат сообщил о состоявшемся культурном мероприятии, где участвовали артисты двух стран, что подтверждает категорию 'участие в мероприятиях'.",
-      "evidence": "Вчера в Малом зале #ЦКИМеридиан прошел уникальный концерт \"Звуки традиций\".",
-      "method": "ai"
-    },
-    "elena_laplanche\u001fhttps://vk.com/wall708827390_1687\u001f2026-08-23": {
-      "signature": "b4c35878",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Пост посвящён личной теме — выращиванию вишнёвого дерева, упоминается срок '3 года моей вишенки', что указывает на частную историю и увлечение.",
-      "evidence": "🍒3 года моей вишенки 🍒",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2124\u001f2026-08-08": {
-      "signature": "d4b2dd3d",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Публикация состоит только из непечатаемых символов, отсутствует осмысленный текст.",
-      "evidence": "￼￼￼",
-      "method": "ai"
-    },
-    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1011\u001f2026-08-02": {
-      "signature": "1c09ac12",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат принял участие в открытии площадки 'Лето в Москве', что является фактическим участием в культурном мероприятии.",
-      "evidence": "Принял участие в мероприятии открытие площадки «Лето в Москве»",
-      "method": "ai"
-    },
-    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1008\u001f2026-07-29": {
-      "signature": "481a4461",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат посетил открытие молодёжного штаба и поддержал инициативы ребят, что указывает на фактическое участие в мероприятии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2114\u001f2026-07-27": {
-      "signature": "2b422770",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 0.9,
-      "explanation": "Пост выражает личную эмоцию и отношение к свободному времени, что указывает на категорию 'личные'.",
-      "evidence": "Время для себя ❤",
-      "method": "ai"
-    },
-    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1007\u001f2026-07-26": {
-      "signature": "f3ff075f",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат посетил завершающий фестиваль в рамках проекта, что указывает на фактическое участие в общественном мероприятии.",
-      "evidence": "Роман Юрьевич Романенко посетил заключительный в этом сезоне фестиваль в районе Северное Бутово.",
-      "method": "ai"
-    },
-    "sergey_kashlev\u001fhttps://vk.com/wall406379933_1005\u001f2026-07-24": {
-      "signature": "50d9e6e8",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение на будущее мероприятие — мастер-класс по плетению браслетов из бисера, что соответствует определению 'announcement'.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2106\u001f2026-07-19": {
-      "signature": "a539fb63",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Эмоциональный пост о выходных указывает на личную сферу отдыха и досуга.",
-      "evidence": "Выходные 🏡 🌺🌼🌤️",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2097\u001f2026-07-15": {
-      "signature": "69ac319e",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой объявление о вакансии социального работника, не связанное с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2095\u001f2026-07-07": {
-      "signature": "57dc6b49",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Публикация представляет собой поздравительное сообщение без упоминания каких-либо действий, встреч, решений или иных подтвержденных деятельностей депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1218\u001f2026-07-04": {
-      "signature": "3eb11082",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата: статья рассказывает о круглом столе, инициативе жителей по благоустройству и сложностях, без упоминания личной активности автора.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "molchanovpavel\u001fhttps://vk.com/wall681822751_404\u001f2026-07-01": {
-      "signature": "3b36aae8",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Поздравление выпускников колледжа не связано с деятельностью депутата, не содержит сведений о рабочих вопросах, встречах, приемах или иной официальной активности.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "molchanovpavel\u001fhttps://vk.com/wall681822751_403\u001f2026-06-30": {
-      "signature": "9b1a84a4",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений категориям: отсутствует описание личной инициативы, встреч, приёмов, решений, планов, гуманитарной помощи, информационных сообщений, личных тем или иных действий ",
-      "evidence": "",
-      "method": "ai"
-    },
-    "molchanovpavel\u001fhttps://vk.com/wall681822751_402\u001f2026-06-30": {
-      "signature": "a113b2b3",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений ни одному из действий или тем: отсутствует информация о заседании, встрече, обходе, контроле, приёме граждан, решении вопросов, личном участии, гуманитарной помощ",
-      "evidence": "",
-      "method": "ai"
-    },
-    "elena_laplanche\u001fhttps://vk.com/wall708827390_1665\u001f2026-06-29": {
-      "signature": "9c77c772",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Публикация представляет собой объявление о вакансии преподавателя по фортепиано, не связанное с деятельностью депутата.",
-      "evidence": "Открыта вакансия в Московская музыкальная школа  им. В.Я.Шебалина преподавателя по фортепиано!",
-      "method": "ai"
-    },
-    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1213\u001f2026-06-28": {
-      "signature": "3d043a95",
-      "categories": [
-        "event"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Светлана Разворотнева лично посетила выпускные мероприятия в нескольких школах, участвовала в торжественных церемониях и вручила благодарственные письма педагогам.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "sysoevala\u001fhttps://vk.com/wall709963598_548\u001f2026-06-26": {
-      "signature": "4a036156",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Публикация представляет собой поздравление выпускников школы, не содержит сведений о депутатской деятельности, встречах, приемах, решении вопросов или иных подтвержденных действиях",
-      "evidence": "",
-      "method": "ai"
-    },
-    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1212\u001f2026-06-23": {
-      "signature": "c3fe46a4",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовала в торжественном старте автопробега, связанном с памятными мероприятиями, что подтверждает категорию 'event'.",
-      "evidence": "депутат Государственной Думы Светлана Викторовна Разворотнева приняла участие в торжественном старте автопробега «Города-герои — города Героев».",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2090\u001f2026-06-20": {
-      "signature": "18bf6456",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Сообщение о выходных и поездке в Ростов Великий указывает на личную поездку и отдых.",
-      "evidence": "Выходные! Ростов Великий!",
-      "method": "ai"
-    },
-    "safonovatatiana85\u001fhttps://vk.com/wall708643134_1208\u001f2026-06-19": {
-      "signature": "cee49644",
-      "categories": [
-        "event"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Светлана Викторовна участвовала в торжественном мероприятии, посвящённом социальным работникам, где вручила благодарности. Это подтверждает фактическое участие в общественном мероп",
-      "evidence": "Депутат Государственной Думы Светлана Викторовна приняла участие в торжественном мероприятии, посвящённом чествованию специалистов социальной сферы.",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2082\u001f2026-06-18": {
-      "signature": "a333c460",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений ни одному из тематических действий депутата: отсутствует информация о заседаниях, встречах, обходах, контроле, приёмах, работе с обращениями, решении вопросов, пл",
-      "evidence": "",
-      "method": "ai"
-    },
-    "sysoevala\u001fhttps://vk.com/wall709963598_542\u001f2026-06-18": {
-      "signature": "66b8a2ce",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и анонс Московского выпускного бала, указывая дату, место и программу мероприятия.",
-      "evidence": "До Московского выпускного остаются считанные дни: он пройдёт в ночь с 26 на 27 июня.",
-      "method": "ai"
-    },
-    "sysoevala\u001fhttps://vk.com/wall709963598_540\u001f2026-06-18": {
-      "signature": "9e60c721",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата, кроме участия в открытии квиза как гостя. Нет информации о личном участии в организации, проведении или иных действиях.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "molchanovpavel\u001fhttps://vk.com/wall681822751_400\u001f2026-06-18": {
-      "signature": "d82219d1",
-      "categories": [],
-      "confidence": 0,
-      "explanation": "GigaChat отклонил запрос; ИИ-классификация не выполнена.",
-      "evidence": "",
-      "method": "blocked",
-      "request_version": 1
-    },
-    "molchanovpavel\u001fhttps://vk.com/wall681822751_399\u001f2026-06-15": {
-      "signature": "4bde3580",
-      "categories": [
-        "meet"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "В тексте указано, что состоялась встреча с генеральным директором ГМЗ 'Царицыно' и специалистами, что подтверждает категорию 'meet'.",
-      "evidence": "Первый шаг к началу большой работы сделан. Прошла встреча с генеральным директором ГМЗ \"Царицыно\" Елизаветой Фокиной и специалистами.",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2076\u001f2026-06-08": {
-      "signature": "99e034ba",
-      "categories": [
-        "result"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Прямо указано, что просьба жителей выполнена: лавочка установлена.",
-      "evidence": "Лавочка установлена.",
-      "method": "ai"
-    },
-    "sysoevala\u001fhttps://vk.com/wall709963598_524\u001f2026-06-03": {
-      "signature": "0281535c",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет указаний на депутатскую деятельность или личную активность автора; текст полностью посвящён школьному мероприятию.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nikolskayaav\u001fhttps://vk.com/wall712889803_2069\u001f2026-05-31": {
-      "signature": "142a06c1",
-      "categories": [
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст описывает личную прогулку и посещение кафе, что относится к частной жизни депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "sysoevala\u001fhttps://vk.com/wall709963598_516\u001f2026-05-29": {
-      "signature": "dda0f367",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Это поздравительное сообщение выпускникам четвёртого класса, оно не связано с деятельностью депутата, работой с обращениями, встречами или другими официальными действиями.",
-      "evidence": "Желаем вам, наши дорогие ребята, отличных оценок, верных друзей и новых побед.",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_336\u001f2026-05-29": {
-      "signature": "f3f8164b",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение посетить мероприятие 'ЛЕТО В МОСКВЕ', описываются ожидаемые активности, но сам факт мероприятия еще не состоялся.",
-      "evidence": "Не пропустите самое главное событие! Открытие проекта ЛЕТО В МОСКВЕ!",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_333\u001f2026-05-27": {
-      "signature": "2e9c8063",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и уведомление о проведении предварительного голосования партии 'Единая Россия', указывая сроки, удобство и способы участия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_330\u001f2026-05-22": {
-      "signature": "fa92944b",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Евгений Нифантьев участвовал в обсуждении на круглом столе, посвящённом развитию ИИ и беспилотных технологий, организованном партией 'Единая Россия'. Это фактическое участие в меро",
-      "evidence": "Депутат Государственной Думы Российской Федерации, заместитель секретаря Московского городского регионального отделения партии «Единая Россия» Евгений Нифантьев принял участие в обсуждении развития ис",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_327\u001f2026-05-11": {
-      "signature": "793102f2",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст посвящён поздравлению участников фестиваля, что указывает на фактическое участие в культурном мероприятии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_326\u001f2026-05-11": {
-      "signature": "167dfb36",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Публикация представляет собой поздравление ветеранов с праздником, что не входит ни в одну из рабочих категорий деятельности депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_325\u001f2026-05-10": {
-      "signature": "6ad07294",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет информации о действии или теме, связанной с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_324\u001f2026-05-10": {
-      "signature": "a022bb6c",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат принял участие в акции 'Синий платочек Победы', что подтверждается описанием участия в мероприятии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_323\u001f2026-05-09": {
-      "signature": "7ca84134",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение жителей поучаствовать в патриотической акции, что указывает на категорию 'announcement'.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_322\u001f2026-05-09": {
-      "signature": "e9877221",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений ни одному из заданных типов активности: отсутствует информация о заседаниях, встречах, обходах, контроле работ, участии в мероприятиях, приёмах граждан, работе с ",
-      "evidence": "",
-      "method": "ai"
-    },
-    "nata_sycheva\u001fhttps://vk.com/wall329365559_321\u001f2026-05-08": {
-      "signature": "c8a94f6f",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Евгений Нифантьев посетил интеллектуальную игру 'Своя игра', что указывает на фактическое участие в мероприятии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ms_zotova\u001fhttps://vk.com/wall837394_2448\u001f2026-01-15": {
-      "signature": "2f26045d",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и объявление о предстоящих соревнованиях по лыжным гонкам, указаны дата, место и условия участия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "ms_zotova\u001fhttps://vk.com/wall837394_2445\u001f2025-04-20": {
-      "signature": "e316ebe6",
-      "categories": [
-        "information"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное уведомление о городском проекте 'Лето в Москве', описывает детали и преимущества проекта, не указывая на личную деятельность депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_387\u001f2025-04-17": {
-      "signature": "256461f6",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и анонс предстоящих летних мероприятий в проекте 'Лето в Москве', без подтверждения факта участия или организации депутатом.",
-      "evidence": "С 1 июня 2025 года в рамках проекта во всех округах и районах столицы планируют ежедневно проводить благотворительные, культурные и спортивные мероприятия.",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_384\u001f2025-03-10": {
-      "signature": "3a244054",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в официальной церемонии награждения ветеранов юбилейными медалями, посвящённой исторической дате.",
-      "evidence": "Мне выпала большая честь принять участие в церемонии награждения Ветеранов юбилейными медалями!",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_381\u001f2025-02-23": {
-      "signature": "09209797",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям, категориям или темам, связанным с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "golovin_mikhail_sergeevich\u001fhttps://vk.com/wall173459266_1148\u001f2025-01-28": {
-      "signature": "34f6b3db",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст касается ограничения соцсети и просьбы подписываться вместо добавления в друзья, не содержит информации о депутатской деятельности.",
-      "evidence": "В связи с ограничением ВК, я больше не могу добавлять друзей на свою личную страницу.",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2686\u001f2024-12-03": {
-      "signature": "9e917785",
-      "categories": [
-        "reception"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "В тексте указано, что депутат провёл приём жителей, что подтверждается словом 'провел прием'.",
-      "evidence": "Сегодня провел прием жителей Сабурово, приуроченный к 23-летию Единой России.",
-      "method": "ai"
-    },
-    "vgsultanov\u001fhttps://vk.com/wall733379690_425\u001f2024-10-11": {
-      "signature": "5d651a58",
-      "categories": [
-        "meet"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст описывает состоявшуюся встречу с обсуждением городских проблем и шагов по их решению.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2685\u001f2024-09-27": {
-      "signature": "0efc163b",
-      "categories": [
-        "meet",
-        "result"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "В публикации подтверждается встреча с жителем и решение вопроса по безопасному проходу к школе, что указывает на категории 'meet' и 'result'.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vgsultanov\u001fhttps://vk.com/wall733379690_418\u001f2024-09-17": {
-      "signature": "018f521e",
-      "categories": [
-        "council"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст сообщает о состоявшемся заседании депутатов Даниловского района с перечислением обсужденных вопросов, что соответствует определению council.",
-      "evidence": "Прошло очередное заседание депутатов Даниловского района.",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2683\u001f2024-09-07": {
-      "signature": "5ace0e04",
-      "categories": [
-        "information"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст информирует жителей о процедуре и сроках голосования, а также о способах участия в выборах, не содержит сведений о личной деятельности депутата.",
-      "evidence": "В этом году выборы проходят с 6 по 8 сентября с 8:00 до 20:00.",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2681\u001f2024-09-07": {
-      "signature": "3002c210",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и уведомление о проведении второго дня голосования по выборам депутатов в Мосгордуму, указывая даты, время и способы голосования.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2679\u001f2024-09-06": {
-      "signature": "6a978744",
-      "categories": [
-        "announcement"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой приглашение и уведомление о проведении выборов, описывает процесс и способы голосования, а также указывает даты и технические детали. Это типичная форма ан",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vgsultanov\u001fhttps://vk.com/wall733379690_413\u001f2024-09-04": {
-      "signature": "1ae110bf",
-      "categories": [
-        "meet"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст описывает личную встречу депутата с жителями района Митино, где обсуждались вопросы благоустройства и ЖКХ.",
-      "evidence": "Вчера мы с командой вышли к жителям в район Митино.",
-      "method": "ai"
-    },
-    "vgsultanov\u001fhttps://vk.com/wall733379690_411\u001f2024-08-30": {
-      "signature": "20788689",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст посвящён дню рождения Алексея Нечаева, содержит поздравления и восхваление его достижений, не содержит информации о депутатской деятельности или личном участии автора.",
-      "evidence": "Сегодня день рождения у нашего главного слона — лидера «Новых людей» Алексея Нечаева.",
-      "method": "ai"
-    },
-    "vgsultanov\u001fhttps://vk.com/wall733379690_409\u001f2024-08-30": {
-      "signature": "21cf9448",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений депутатских действий или тем, связанных с работой муниципалитета или взаимодействием с жителями.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vgsultanov\u001fhttps://vk.com/wall733379690_352\u001f2024-08-15": {
-      "signature": "26809d36",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата: статья посвящена проблеме парка, опросу жителей и призыву присоединиться к инициативе, но не содержит сведений о личном участии, встречах, при",
-      "evidence": "",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2672\u001f2024-06-09": {
-      "signature": "a0bfd8fc",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовал в бесплатной тренировке по йоге в рамках проекта 'Мой район', что подтверждает фактическое участие в общественном мероприятии.",
-      "evidence": "принял участие в бесплатной тренировке по йоге",
-      "method": "ai"
-    },
-    "vyacheslav_komaha\u001fhttps://vk.com/wall175422197_2666\u001f2024-05-21": {
-      "signature": "5166f543",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат участвовал в торжественном мероприятии, где передал флаг района, побывавший в космосе.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_378\u001f2024-05-18": {
-      "signature": "54d0b20a",
-      "categories": [
-        "information"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой информационное сообщение о подаче документов кандидатом и призыв к регистрации на предварительное голосование, без описания личной деятельности депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_296\u001f2024-05-09": {
-      "signature": "72855a40",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой поздравительное послание ко Дню Победы без упоминания каких-либо действий депутата или общественных мероприятий.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_290\u001f2024-04-27": {
-      "signature": "df606f37",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат сообщает о своём участии в международной акции 'Диктант Победы', что является фактическим участием в общественном мероприятии.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_288\u001f2024-03-04": {
-      "signature": "00981541",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат принял участие в весеннем праздничном мероприятии, посвящённом 8 Марта, организованном Советом ветеранов и управой района.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_287\u001f2024-03-04": {
-      "signature": "b997b910",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст описывает состоявшееся праздничное мероприятие с участием Совета ветеранов, посвящённое подведению итогов работы и празднованию Международного женского дня.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_285\u001f2024-02-15": {
-      "signature": "3085e54d",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата: мероприятие проведено сотрудниками полиции, депутат не упоминается среди организаторов или участников.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_283\u001f2024-01-17": {
-      "signature": "a4a2aac1",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "В тексте указано, что состоялся круглый стол с участием ветерана и представителя социальной службы, что подтверждает факт проведения мероприятия.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_282\u001f2023-12-27": {
-      "signature": "613f06b4",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат лично навестил ветерана, вручил подарок и поздравление, что является формой гуманитарной помощи.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_271\u001f2023-09-10": {
-      "signature": "abacd2e0",
-      "categories": [
-        "information"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст информирует жителей о продолжающемся голосовании, возможных способах и сроках голосования, без упоминания собственных действий депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_270\u001f2023-09-09": {
-      "signature": "d2ea1209",
-      "categories": [
-        "information"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст информирует жителей о проходящих выборах, способах голосования и приглашает прийти на избирательные участки.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_353\u001f2023-08-15": {
-      "signature": "5dac31f6",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст представляет собой общую информационную справку о значимости Москвы как центра высоких технологий, не содержит сведений о личном участии депутата или его деятельности.",
-      "evidence": "Москва – крупнейший центр высокотехнологичной промышленности в России! Это один из важнейших факторов социально-экономического развития столицы.",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_351\u001f2023-08-10": {
-      "signature": "8e65c325",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений действиям депутата или муниципальным темам; публикация носит информативный характер о медицинских достижениях.",
-      "evidence": "Борьба с онкологическими заболеваниями является одним из приоритетов городской медицины, и поэтому важно ознакомить общественность с последними достижениями в этой области.",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_348\u001f2023-08-09": {
-      "signature": "d80c3a8f",
-      "categories": [
-        "meet",
-        "personal"
-      ],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Текст сообщает о состоявшейся встрече в общественном штабе, где обсуждали реализацию проекта 'Питомцы в Москве', что подтверждает категорию meet.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_269\u001f2023-08-08": {
-      "signature": "d323ac86",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Публикация представляет собой информационное уведомление о дате праздника, без упоминания каких-либо действий или тем, связанных с деятельностью депутата.",
-      "evidence": "День государственного флага России - 22 августа",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_345\u001f2023-08-07": {
-      "signature": "8f5d196c",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений ни одному из действий или тем, связанных с деятельностью депутата.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "trodionova2022\u001fhttps://vk.com/wall699982687_268\u001f2023-08-07": {
-      "signature": "3cf47969",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет признаков какой-либо деятельности депутата; публикация представляет собой анонс интересного контента по выставке, без личной вовлеченности.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "deputat_kaminskiy\u001fhttps://vk.com/wall709697888_340\u001f2023-05-18": {
-      "signature": "24f7549e",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет подтверждений категориям: отсутствует описание действий депутата, встреч, приёмов, решений, планов, личной жизни или иных тематических действий.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "liudmila_zapl\u001fhttps://vk.com/wall708971152_235\u001f2023-04-28": {
-      "signature": "47ff6b97",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет информации, позволяющей отнести публикацию к какой-либо теме.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "liudmila_zapl\u001fhttps://vk.com/wall708971152_234\u001f2023-04-28": {
-      "signature": "1473e8e3",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет информации о деятельности депутата или иной теме.",
-      "evidence": "",
-      "method": "ai"
-    },
-    "liudmila_zapl\u001fhttps://vk.com/wall708971152_233\u001f2023-04-28": {
-      "signature": "c4cfb5d3",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Нет признаков какой-либо из категорий: отсутствует информация о заседаниях, встречах, обходах, контроле работ, участии в мероприятиях, приёмах граждан, работе с обращениями, решени",
-      "evidence": "",
-      "method": "ai"
-    },
-    "liudmila_zapl\u001fhttps://vk.com/wall708971152_229\u001f2023-04-24": {
-      "signature": "8c38457b",
-      "categories": [],
-      "methodology_version": 1,
-      "confidence": 1,
-      "explanation": "Депутат сообщил о состоявшемся праздничном мероприятии во дворе, что указывает на категорию 'event'.",
-      "evidence": "Сегодня состоялся Празднмк двора по Каширскому шоссе 100.",
-      "method": "ai"
-    },
     "liudmila_zapl\u001fhttps://vk.com/wall708971152_217\u001f2022-12-27": {
       "signature": "1a267749",
       "categories": [],
@@ -12922,6 +12893,17 @@
       "methodology_version": 1,
       "confidence": 1,
       "explanation": "Текст представляет собой информационное уведомление жителей о реконструкции тоннеля метро и временных мерах компенсации, без указания на личную деятельность депутата.",
+      "evidence": "",
+      "method": "ai"
+    },
+    "ms_zotova\u001fhttps://vk.com/wall837394_2416\u001f2022-10-18": {
+      "signature": "030e7b1d",
+      "categories": [
+        "personal"
+      ],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Текст описывает личную прогулку за грибами с сыном, переживания автора по поводу неудачной охоты и забавный случай с находкой гриба. Это типичная частная история отдыха.",
       "evidence": "",
       "method": "ai"
     },
@@ -13028,6 +13010,24 @@
       "confidence": 1,
       "explanation": "Прямо указано, что состоялась встреча с участниками программы 'Московское долголетие', обсуждали социальные вопросы и медицинское обеспечение.",
       "evidence": "Вчера состоялась встреча с участниками программы «Московское долголетие» в центре социального обслуживания «Чертаново Южное».",
+      "method": "ai"
+    },
+    "ms_zotova\u001fhttps://vk.com/wall837394_2385\u001f2022-09-04": {
+      "signature": "df361c21",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Депутат участвовала в культурном мероприятии — «Диктанте Победы», что подтверждается описанием личного опыта и эмоций.",
+      "evidence": "В эти выходные в Детско-юношеском центре «Виктория» я приняла участие в  «Диктанте Победы».",
+      "method": "ai"
+    },
+    "ms_zotova\u001fhttps://vk.com/wall837394_2384\u001f2022-09-01": {
+      "signature": "ac92466e",
+      "categories": [],
+      "methodology_version": 1,
+      "confidence": 1,
+      "explanation": "Нет подтверждений действиям или категориям: описывается изменение взглядов депутата и сбор мнений жителей, но не указано, какие конкретные действия были предприняты.",
+      "evidence": "",
       "method": "ai"
     },
     "ms_zotova\u001fhttps://vk.com/wall837394_2383\u001f2022-08-30": {

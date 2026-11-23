@@ -10,6 +10,7 @@ on:
       - "scripts/classify-activity-ai.mjs"
       - "scripts/test-activity-taxonomy.mjs"
       - "activity-analysis-v129.js"
+      - "activity-category-policy-v1.js"
       - ".github/workflows/ai-classify-activity.yml"
 
 permissions:
@@ -63,6 +64,7 @@ jobs:
       - name: Verify analysis categories and browser script
         run: |
           node --check activity-analysis-v129.js
+          node --check activity-category-policy-v1.js
           node scripts/test-activity-taxonomy.mjs
       - name: Analyze available public texts
         env:
@@ -76,12 +78,19 @@ jobs:
           node scripts/classify-activity-ai.mjs
       - name: Publish analysis cache
         run: |
+          set -euo pipefail
           if git diff --quiet -- ai-analysis.json; then
             echo "No changes to AI cache"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp ai-analysis.json /tmp/ai-analysis.json
+          git restore --staged --worktree ai-analysis.json
+          git pull --ff-only origin main
+          cp /tmp/ai-analysis.json ai-analysis.json
           git add ai-analysis.json
-          git commit -m "Update AI activity classifications"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Update AI activity classifications"
+            git push origin HEAD:main
+          fi

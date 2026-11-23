@@ -88,12 +88,7 @@ function formatDate(date){const value=dateOnly(date);const m=/^(\d{4})-(\d{2})-(
 const hasText=r=>String(r.text||"").trim().length>0;
 function posts(){const list=rows();return (Array.isArray(list)?list:[]).filter(r=>r&&typeof r==="object")}
 function isRepost(r){
- if(r.is_repost===true||r.isRepost===true||r.is_repost===1||r.isRepost===1||r.repost===true)return true;
- if(Array.isArray(r.copy_history)&&r.copy_history.length>0)return true;
- if(Array.isArray(r.copyHistory)&&r.copyHistory.length>0)return true;
- if(r.repost_of||r.repostOf||r.repost_source||r.original_post_url||r.originalPostUrl)return true;
- if(["repost","shared"].includes(String(r.post_type||r.postType||r.type||"").toLowerCase()))return true;
- return /^\s*(?:\[(?:репост|repost)\]|(?:🔁\s*)?(?:репост|repost)\s*[:—-]|поделил(?:ся|ась)\s+(?:записью|публикацией)(?=\s|$|[.:—-])|запись\s+(?:со стены|сообщества)(?=\s|$|[.:—-]))/iu.test(String(r.text||""));
+ return Boolean(window.dmRepostDetection&&window.dmRepostDetection.isRepost(r));
 }
 function makePost(r,index){
  const ai=getAiResult(r);

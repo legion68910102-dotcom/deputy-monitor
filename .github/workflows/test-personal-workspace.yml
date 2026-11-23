@@ -1,0 +1,32 @@
+name: Verify isolated personal workspaces
+
+on:
+  push:
+    paths:
+      - index-v129.html
+      - personal-workspace-v130.js
+      - tests/test_personal_workspace.cjs
+      - .github/workflows/test-personal-workspace.yml
+  pull_request:
+    paths:
+      - index-v129.html
+      - personal-workspace-v130.js
+      - tests/test_personal_workspace.cjs
+      - .github/workflows/test-personal-workspace.yml
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    name: Test browser-only changes without any credentials or networks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        run: node --check personal-workspace-v130.js
+      - name: Validate per-device isolation and local backups
+        run: node --test tests/test_personal_workspace.cjs

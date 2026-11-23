@@ -1,5 +1,7 @@
 /** Server-side semantic classification. Key must only be used in GitHub Actions. */
 import fs from "node:fs";
+import {createRequire} from "node:module";
+const {isRepost}=createRequire(import.meta.url)("../repost-detection-v131.js");
 const MODEL=process.env.GIGACHAT_MODEL||"GigaChat-2-Pro";
 const AUTH_KEY=(process.env.GIGACHAT_AUTH_KEY||"").trim();
 const SCOPE=process.env.GIGACHAT_SCOPE||"GIGACHAT_API_PERS";
@@ -38,7 +40,7 @@ const system=[
 "appeal=работа с обращениями; result=описанный решённый вопрос, не обещание; plan=планы или обещания;",
 "personal=личная жизнь, семья, отдых, хобби; information=информационные справки, уведомления, разъяснения;",
 "announcement=приглашения, анонсы предстоящих событий; repost=перепубликация чужого поста.",
-"Количество репостов под публикацией НЕ доказывает, что автор сделал репост. Признак repost=true в метаданных доказывает перепубликацию.",
+"Количество репостов под публикацией НЕ доказывает, что автор сделал репост. Признак repost=true в метаданных доказывает перепубликацию. Если repost=true, обязательно добавь метку repost; тему оригинального текста можно отметить отдельно, но не приписывай действия исходного автора депутату.",
 "Отчёт о прошедшем событии не является анонсом, обещание решить вопрос не является результатом. Решение, принятое Советом депутатов, не означает, что проблема жителей уже решена.",
 "Если заседание Совета депутатов лишь запланировано, выбирай announcement, но НЕ council. Простое упоминание решения или состава Совета депутатов без описания состоявшегося заседания НЕ является council.",
 "Не путай заседание Совета депутатов с заседанием комиссии, партийным собранием, встречей депутатов с жителями, общественными слушаниями. Не добавляй meet или event только из-за самого заседания.",
@@ -50,7 +52,6 @@ const system=[
 function readJSON(file,empty){try{const raw=fs.readFileSync(file,"utf8").trim();return raw?JSON.parse(raw):empty}catch(e){if(e.code==="ENOENT")return empty;throw e}}
 function identity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function signature(r){let h=2166136261;for(const ch of identity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
-function isRepost(r){return r.is_repost===true||r.isRepost===true||r.is_repost===1||r.isRepost===1||r.repost===true||(Array.isArray(r.copy_history)&&r.copy_history.length>0)||(Array.isArray(r.copyHistory)&&r.copyHistory.length>0)||Boolean(r.repost_of||r.repostOf||r.repost_source||r.original_post_url||r.originalPostUrl)||["repost","shared"].includes(String(r.post_type||r.postType||r.type||"").toLowerCase())}
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function askAI(post){
  const body={model:MODEL,temperature:0,messages:[{role:"system",content:system},{role:"user",content:JSON.stringify({text:String(post.text||"").slice(0,8000),repost:isRepost(post),date:post.date})}],response_format:{type:"json_schema",schema,strict:true}};
@@ -106,7 +107,11 @@ async function main(){
   const id=identity(r),sig=signature(r);
   if(!String(r.text||"").trim()){
    result[id]={signature:sig,categories:isRepost(r)?["repost"]:[],confidence:isRepost(r)?1:0,explanation:isRepost(r)?"Подтверждено метаданными источника.":"Текст не получен.",evidence:"",method:"metadata"};
-  }else if(old[id]?.signature===sig&&old[id]?.method==="ai"&&previous.provider==="gigachat"&&previous.model===MODEL&&previous.taxonomy_version===TAXONOMY_VERSION){result[id]=old[id]}
+  }else if(old[id]?.signature===sig&&old[id]?.method==="ai"&&previous.provider==="gigachat"&&previous.model===MODEL&&previous.taxonomy_version===TAXONOMY_VERSION){
+   // A new VK API fetch can recover repost metadata without altering the text.
+   const prior=old[id],categories=Array.isArray(prior.categories)?prior.categories:[];
+   result[id]=isRepost(r)&&!categories.includes("repost")?{...prior,categories:[...categories,"repost"],explanation:(String(prior.explanation||"").slice(0,104)+"; подтверждён репост по метаданным VK.").slice(0,180)}:prior;
+  }
   else pending.push({id,sig,r});
  }
  // Prioritize posts about Council sessions during the taxonomy migration, without assuming their category.

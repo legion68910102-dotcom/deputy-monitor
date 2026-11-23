@@ -104,6 +104,36 @@ class VKCollectionTests(unittest.TestCase):
         self.assertEqual(report["roster_size"], 3)
         self.assertEqual(report["district_count"], 2)
 
+    def test_vk_repost_source_and_original_text_are_preserved(self):
+        original = {
+            "owner_id": -12345, "id": 78,
+            "text": "В Чертаново Центральном пройдут соревнования на коньках"
+        }
+        data = self.post(1, 40, "", copy_history=[original])
+        record = vk.normalize_post(data, "alpha")
+        self.assertTrue(record["is_repost"])
+        self.assertTrue(record["repost_text_from_source"])
+        self.assertEqual(record["repost_source_url"], "https://vk.com/wall-12345_78")
+        self.assertIn("соревнования на коньках", record["text"])
+
+        summary = vk.collect(self.root, "FAKE", max_profiles=1,
+                             fetch=self.fake(alpha={"response": {"items": [data]}}),
+                             pause=lambda _: None)
+        self.assertEqual(summary["new_posts"], 1)
+        saved = next(p for p in self.read("vk-posts.json")["posts"]
+                     if p.get("url") == "https://vk.com/wall1_40")
+        self.assertTrue(saved["is_repost"])
+        self.assertEqual(saved["repost_source_url"], "https://vk.com/wall-12345_78")
+        self.assertEqual(saved["text"], original["text"])
+
+    def test_share_counter_or_mention_does_not_prove_repost(self):
+        normal = self.post(1, 41, "Управа района сообщает о фестивале",
+                           reposts={"count": 99})
+        parsed = vk.normalize_post(normal, "alpha")
+        self.assertFalse(parsed["is_repost"])
+        self.assertNotIn("repost_source_url", parsed)
+        self.assertEqual(parsed["reposts"], 99)
+
     def test_dry_run_reads_realistic_responses_but_writes_nothing(self):
         before = {p: (self.root / p).read_bytes()
                   for p in ("vk-posts.json", "monitor-status.json")}

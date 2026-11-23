@@ -1,0 +1,55 @@
+name: Verify VK repost detection
+
+on:
+  push:
+    paths:
+      - "repost-detection-v131.js"
+      - "activity-analysis-v129.js"
+      - "personal-workspace-v130.js"
+      - "scripts/classify-activity-ai.mjs"
+      - "scripts/collect_vk.py"
+      - "scripts/import_vk_apify.py"
+      - "tests/test_repost_detection.cjs"
+      - "tests/test_collect_vk.py"
+      - ".github/workflows/test-repost-detection.yml"
+  pull_request:
+    paths:
+      - "repost-detection-v131.js"
+      - "activity-analysis-v129.js"
+      - "personal-workspace-v130.js"
+      - "scripts/classify-activity-ai.mjs"
+      - "scripts/collect_vk.py"
+      - "scripts/import_vk_apify.py"
+      - "tests/test_repost_detection.cjs"
+      - "tests/test_collect_vk.py"
+      - ".github/workflows/test-repost-detection.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  repost-tests:
+    name: Verify real reposts and no false positives
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check JavaScript syntax
+        run: |
+          node --check repost-detection-v131.js
+          node --check activity-analysis-v129.js
+          node --check personal-workspace-v130.js
+          node --check scripts/classify-activity-ai.mjs
+      - name: Test VK repost detection and personal correction
+        run: |
+          node --test tests/test_repost_detection.cjs tests/test_personal_workspace.cjs
+          node scripts/test-activity-taxonomy.mjs
+      - name: Check official VK importer against offline VK API mocks
+        run: |
+          python -m py_compile scripts/collect_vk.py scripts/import_vk_apify.py
+          python -m unittest discover -s tests -p 'test_collect_vk.py' -v

@@ -88,12 +88,7 @@ function formatDate(date){const value=dateOnly(date);const m=/^(\d{4})-(\d{2})-(
 const hasText=r=>String(r.text||"").trim().length>0;
 function posts(){const list=rows();return (Array.isArray(list)?list:[]).filter(r=>r&&typeof r==="object")}
 function isRepost(r){
- if(r.is_repost===true||r.isRepost===true||r.is_repost===1||r.isRepost===1||r.repost===true)return true;
- if(Array.isArray(r.copy_history)&&r.copy_history.length>0)return true;
- if(Array.isArray(r.copyHistory)&&r.copyHistory.length>0)return true;
- if(r.repost_of||r.repostOf||r.repost_source||r.original_post_url||r.originalPostUrl)return true;
- if(["repost","shared"].includes(String(r.post_type||r.postType||r.type||"").toLowerCase()))return true;
- return /^\s*(?:\[(?:репост|repost)\]|(?:🔁\s*)?(?:репост|repost)\s*[:—-]|поделил(?:ся|ась)\s+(?:записью|публикацией)(?=\s|$|[.:—-])|запись\s+(?:со стены|сообщества)(?=\s|$|[.:—-]))/iu.test(String(r.text||""));
+ return Boolean(window.dmRepostDetection&&window.dmRepostDetection.isRepost(r));
 }
 function makePost(r,index){
  const ai=getAiResult(r);
@@ -155,8 +150,15 @@ function render(manual=false){
     const aiHit=r._hits.find(hit=>hit.method==="ai");
     const aiNote=aiHit?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(aiHit.confidence||0)*100)+'% · '+esc(aiHit.explanation)+'</div>':"";
     const preview=(fullText||"Текст публикации не получен").replace(/\s+/g," ").slice(0,115);
-    return '<details class="activity-post" id="activity-post-'+r._id+'"><summary><span class="activity-post-date">'+esc(formatDate(r.date))+'</span> · '+esc(preview)+(preview.length>=115?"…":"")+'</summary><div class="activity-post-body"><div class="activity-post-tags">'+badge+'</div>'+aiNote+'<p class="activity-post-text">'+esc(fullText||"Текст публикации недоступен. Сведения о её содержании автоматически не получены.")+'</p>'+(url?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Открыть оригинал публикации ↗</a>':'<span class="small">Ссылка на оригинал отсутствует</span>')+'</div></details>';
+    const repostAction=!isRepost(r)&&window.dmPersonalWorkspace?'<button type="button" class="btn alt" data-activity-repost="'+r._id+'">🔁 Это репост (только у меня)</button>':"";
+    return '<details class="activity-post" id="activity-post-'+r._id+'"><summary><span class="activity-post-date">'+esc(formatDate(r.date))+'</span> · '+esc(preview)+(preview.length>=115?"…":"")+'</summary><div class="activity-post-body"><div class="activity-post-tags">'+badge+'</div>'+aiNote+'<p class="activity-post-text">'+esc(fullText||"Текст публикации недоступен. Сведения о её содержании автоматически не получены.")+'</p>'+(url?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Открыть оригинал публикации ↗</a>':'<span class="small">Ссылка на оригинал отсутствует</span>')+repostAction+'</div></details>';
    }).join("")||'<p class="small">Публикаций по выбранным параметрам нет. Это не означает отсутствие деятельности.</p>';
+   box.querySelectorAll("[data-activity-repost]").forEach(btn=>btn.addEventListener("click",()=>{
+    const chosen=selected.find(post=>post._id===Number(btn.dataset.activityRepost));
+    if(!chosen)return;
+    try{window.dmPersonalWorkspace.markRepost(chosen,true);render(true)}
+    catch(error){alert("Не удалось отметить репост: "+error.message)}
+   }));
    more.hidden=selected.length<=visibleLimit;
  }
  let reason="";

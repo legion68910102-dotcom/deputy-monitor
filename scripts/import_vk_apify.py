@@ -78,17 +78,54 @@ for person in chosen:
                 datetime.fromisoformat(stamp[:10])
             except ValueError:
                 continue
-            new.append({
+            # The number of users reposting a post is NOT a repost flag.
+            history = row.get("copy_history")
+            repost_object = row.get("repost")
+            is_repost = (row.get("is_repost") is True
+                         or row.get("isRepost") is True
+                         or repost_object is True
+                         or bool(history) and isinstance(history, list)
+                         or str(row.get("post_type") or "").lower() in ("copy", "repost", "shared")
+                         or isinstance(repost_object, dict) and any(
+                             repost_object.get(k) for k in ("url", "owner_id", "source_url")))
+            repost_source = next((
+                row.get(k) for k in ("repost_source_url", "original_post_url", "repostSourceUrl")
+                if isinstance(row.get(k), str) and row.get(k).startswith("https://vk.com/wall")
+            ), None)
+            original = history[0] if isinstance(history, list) and history and isinstance(history[0], dict) else {}
+            if not repost_source:
+                o, i = original.get("owner_id"), original.get("id")
+                if (isinstance(o, int) and not isinstance(o, bool)
+                        and isinstance(i, int) and not isinstance(i, bool)
+                        and o != 0 and i > 0):
+                    repost_source = f"https://vk.com/wall{o}_{i}"
+            if repost_source:
+                is_repost = True
+            post_row = {
                 "profile": handle, "date": stamp[:10], "url": url,
                 "text": row.get("text") or "",
                 "likes": row.get("likes"), "comments": row.get("comments_count"),
                 "reposts": row.get("reposts"), "views": row.get("views"),
                 "followers": (row.get("owner") or {}).get("followers_count")
-            })
+            }
+            if is_repost:
+                post_row["is_repost"] = True
+            if repost_source:
+                post_row["repost_source_url"] = repost_source
+            new.append(post_row)
         if not new:
             raise ValueError("No verified posts returned; absence of activity unproven")
         for row in new:
-            combined[row["profile"] + "|" + row["url"]] = row
+            key = row["profile"] + "|" + row["url"]
+            previous = combined.get(key, {})
+            merged = {**previous, **row}
+            if not row.get("text") and previous.get("text"):
+                merged["text"] = previous["text"]
+            if previous.get("is_repost") is True:
+                merged["is_repost"] = True
+            if previous.get("repost_source_url") and not row.get("repost_source_url"):
+                merged["repost_source_url"] = previous["repost_source_url"]
+            combined[key] = merged
         monitored.add(handle)
         counts[handle] = len(new)
         statuses[handle] = {"state": "posts_verified", "last_checked": now.isoformat(),

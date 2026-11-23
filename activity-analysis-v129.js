@@ -1,6 +1,7 @@
 /* Transparent Russian activity extraction; counts posts with evidence, not confirmed real-world events. */
 (function(){
 "use strict";
+const activityPolicy=window.dmActivityCategoryPolicy||null;
 const labels={council:"Заседания Совета депутатов",meet:"Личные встречи",walk:"Обходы территорий",inspect:"Приёмка и контроль работ",event:"Участие в мероприятиях",reception:"Приёмы граждан",appeal:"Работа с обращениями",result:"Решённые вопросы",plan:"Планы и обещания",personal:"Личные",information:"Информационные",announcement:"Публикации-анонсы",repost:"Репосты",uncategorized:"Без темы"};
 const rules={
 council:/(?:заседани[а-яё]*\s+(?:[а-яё-]+\s+){0,3}совет[а-яё]*\s+депутат[а-яё]*|совет[а-яё]*\s+депутат[а-яё]*[^.!?\n]{0,75}заседани[а-яё]*)/iu,
@@ -30,6 +31,7 @@ function extract(text){
   const heldCouncil=councilMention&&!uncertain;
   for(const [key,re] of Object.entries(rules)){
    if(key==="council"&&!heldCouncil)continue; // An announcement or cancelled session is not a held session.
+   if(key==="event"&&activityPolicy&&!activityPolicy.hasConfirmedEvent(t))continue; // A walk or generic participation is not a festive event.
    if(heldCouncil&&(key==="event"||(key==="meet"&&!residentMeeting.test(t))))continue;
    // «Обсудили» само по себе — не доказательство личной встречи.
    if(key==="meet"&&/обсудил[аи]?/iu.test(t)&&!residentMeeting.test(t)
@@ -37,7 +39,13 @@ function extract(text){
    if(re.test(t))hits.push({key,evidence:t.slice(0,300),certainty:uncertain?"requires_review":"possible"});
   }
  }
- return hits;
+ if(!activityPolicy)return hits;
+ const normalized=activityPolicy.normalizeCategories(hits.map(h=>h.key),text);
+ const verified=hits.filter(h=>normalized.includes(h.key));
+ for(const key of normalized){
+  if(!verified.some(hit=>hit.key===key))verified.push({key,evidence:String(text||"").slice(0,300),certainty:"possible",method:"policy"});
+ }
+ return verified;
 }
 function rows(){if(typeof window.dmActivityRows==="function"){try{return window.dmActivityRows()}catch(e){}}const map=new Map();for(const [storage,key] of [[sessionStorage,"dm_vk_posts"],[localStorage,"dm_posts"]]){try{for(const r of JSON.parse(storage.getItem(key)||"[]"))map.set(r.profile+"|"+r.url,r)}catch(e){}}return [...map.values()]}
 
@@ -94,7 +102,7 @@ function makePost(r,index){
  const ai=getAiResult(r);
  let hits;
  if(ai&&ai.method==="ai"){
-  hits=[...new Set(ai.categories)].filter(k=>k!=="uncategorized"&&Object.prototype.hasOwnProperty.call(labels,k)).map(k=>({
+  hits=[...new Set(activityPolicy?activityPolicy.normalizeCategories(ai.categories,r.text,{repost:isRepost(r)}):ai.categories)].filter(k=>k!=="uncategorized"&&Object.prototype.hasOwnProperty.call(labels,k)).map(k=>({
    key:k,evidence:String(ai.evidence||r.text||"").slice(0,300),
    explanation:String(ai.explanation||"").slice(0,180),
    confidence:Math.max(0,Math.min(1,Number(ai.confidence)||0)),

@@ -1,158 +1,493 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T16:06:29.024023+00:00",
+  "generated_at": "2026-11-23T16:16:38.130037+00:00",
   "source": "Official council websites via GitHub Actions",
   "districts": {
     "Бирюлёво Восточное": {
-      "source": "https://mrbv.ru/",
-      "checked_at": "2026-11-23T16:06:29.024033+00:00",
-      "status": "no_candidates",
-      "candidates": []
+      "source": "https://mrbv.ru/sovet/",
+      "checked_at": "2026-11-23T16:16:38.130050+00:00",
+      "status": "ok",
+      "candidates": [
+        {
+          "name": "Алейникова Юлия Владимировна",
+          "source": "https://mrbv.ru/sovet/alejnikova_yuliya_vladimirovna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/alejnikova_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Антонова Лариса Петровна",
+          "source": "https://mrbv.ru/sovet/antonova_larisa_petrovna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/antonova_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Голубева Елена Васильевна",
+          "source": "https://mrbv.ru/sovet/golubeva_elena_vasil_evna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/golubeva_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Ильясов Харис Нябиуллович",
+          "source": "https://mrbv.ru/sovet/il_yasov_haris_nyabiullovich/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/il_yasov_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Кутайсова Наталья Викторовна",
+          "source": "https://mrbv.ru/sovet/kutajsova_natal_ya_viktorovna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/kutajsova_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Молчанов Павел Викторович",
+          "source": "https://mrbv.ru/sovet/molchanov_pavel_viktorovich/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/molchanov_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Нерсесова Елена Валериевна",
+          "source": "https://mrbv.ru/sovet/nersesova_elena_valerievna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/nersesova_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Птицына Ксения Кирилловна",
+          "source": "https://mrbv.ru/sovet/pticyna_kseniya_kirillovna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/pticyna_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Рытов Сергей Владимирович",
+          "source": "https://mrbv.ru/sovet/rytov_sergej_vladimirovich/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/rytov_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        },
+        {
+          "name": "Сычева Наталья Владимировна",
+          "source": "https://mrbv.ru/sovet/sycheva_natal_ya_vladimirovna/",
+          "photo": "https://mrbv.ru/images/cms/thumbs/ecd18d7c6bcefa637702e4cc857b5f3e47d1962b/sycheva_43_67_5_80.jpg",
+          "page": "https://mrbv.ru/sovet/"
+        }
+      ],
+      "roster": [
+        {
+          "name": "Алейникова Юлия Владимировна",
+          "source": "https://mrbv.ru/sovet/alejnikova_yuliya_vladimirovna/"
+        },
+        {
+          "name": "Антонова Лариса Петровна",
+          "source": "https://mrbv.ru/sovet/antonova_larisa_petrovna/"
+        },
+        {
+          "name": "Голубева Елена Васильевна",
+          "source": "https://mrbv.ru/sovet/golubeva_elena_vasil_evna/"
+        },
+        {
+          "name": "Ильясов Харис Нябиуллович",
+          "source": "https://mrbv.ru/sovet/il_yasov_haris_nyabiullovich/"
+        },
+        {
+          "name": "Кутайсова Наталья Викторовна",
+          "source": "https://mrbv.ru/sovet/kutajsova_natal_ya_viktorovna/"
+        },
+        {
+          "name": "Молчанов Павел Викторович",
+          "source": "https://mrbv.ru/sovet/molchanov_pavel_viktorovich/"
+        },
+        {
+          "name": "Нерсесова Елена Валериевна",
+          "source": "https://mrbv.ru/sovet/nersesova_elena_valerievna/"
+        },
+        {
+          "name": "Птицына Ксения Кирилловна",
+          "source": "https://mrbv.ru/sovet/pticyna_kseniya_kirillovna/"
+        },
+        {
+          "name": "Рытов Сергей Владимирович",
+          "source": "https://mrbv.ru/sovet/rytov_sergej_vladimirovich/"
+        },
+        {
+          "name": "Сычева Наталья Владимировна",
+          "source": "https://mrbv.ru/sovet/sycheva_natal_ya_vladimirovna/"
+        }
+      ],
+      "pages_checked": 1
     },
     "Бирюлёво Западное": {
       "source": "https://www.m-bz.ru/",
-      "checked_at": "2026-11-23T16:06:29.947655+00:00",
+      "checked_at": "2026-11-23T16:16:39.040087+00:00",
       "status": "unavailable",
       "candidates": [],
+      "roster": [],
+      "pages_checked": 0,
       "error": "SSLError"
     },
     "Братеево": {
       "source": "https://mun-brateevo.ru/",
-      "checked_at": "2026-11-23T16:06:31.061768+00:00",
+      "checked_at": "2026-11-23T16:16:40.282854+00:00",
       "status": "unavailable",
       "candidates": [],
+      "roster": [],
+      "pages_checked": 0,
       "error": "SSLError"
     },
     "Даниловский": {
       "source": "https://danilovskoe.org/index.php/council-of-deputies",
-      "checked_at": "2026-11-23T16:06:31.607657+00:00",
-      "status": "no_candidates",
-      "candidates": []
+      "checked_at": "2026-11-23T16:16:40.937976+00:00",
+      "status": "names_only",
+      "candidates": [],
+      "roster": [
+        {
+          "name": "Аббасова Наталья Александровна",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-3/25-abbasova-natalya-aleksandrovna"
+        },
+        {
+          "name": "Аркусов Дмитрий Юрьевич",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-1/19-arkusov-dmitrij-yurevich"
+        },
+        {
+          "name": "Григорьева Людмила Васильевна",
+          "source": "https://danilovskoe.org/index.php/head-of-municipal-district"
+        },
+        {
+          "name": "Иванов Олег Игорьевич",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-2/22-ivanov-oleg-igorevich"
+        },
+        {
+          "name": "Кирьянова Людмила Николаевна",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-1/3-kiryanova-lyudmila-nikolaevna"
+        },
+        {
+          "name": "Левштанов Дмитрий Николаевич",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-1/20-levshtanov-dmitrij-nikolaevich"
+        },
+        {
+          "name": "Подольская Ольга Вячеславовна",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-2/14-podolskaya-olga-vyacheslavovna"
+        },
+        {
+          "name": "Родионова Татьяна Вячеславовна",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-3/16-rodionova-tatyana-vyacheslavovna"
+        },
+        {
+          "name": "Сагаловская Надежда Викторовна",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-2/23-sagalovskaya-nadezhda-viktorovna"
+        },
+        {
+          "name": "Ситников Иван Иванович",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-2/24-sitnikov-ivan-ivanovich"
+        },
+        {
+          "name": "Султанов Владислав Геннадьевич",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-3/26-sultanov-vladislav-gennadevich"
+        },
+        {
+          "name": "Фадеева Инна Геннадьевна",
+          "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-1/21-fadeeva-inna-gennadevna"
+        }
+      ],
+      "pages_checked": 5
     },
     "Донской": {
       "source": "https://mo-donskoy.ru/",
-      "checked_at": "2026-11-23T16:06:34.717621+00:00",
+      "checked_at": "2026-11-23T16:16:54.450070+00:00",
       "status": "unavailable",
       "candidates": [],
+      "roster": [],
+      "pages_checked": 0,
       "error": "SSLError"
     },
     "Зябликово": {
       "source": "https://mos-zyablikovo.ru/sovet-deputatov/",
-      "checked_at": "2026-11-23T16:06:35.305790+00:00",
+      "checked_at": "2026-11-23T16:16:55.356963+00:00",
       "status": "no_candidates",
-      "candidates": []
+      "candidates": [],
+      "roster": [],
+      "pages_checked": 1
     },
     "Москворечье-Сабурово": {
       "source": "https://mos-saburovo.ru/",
-      "checked_at": "2026-11-23T16:06:36.104062+00:00",
+      "checked_at": "2026-11-23T16:16:56.156932+00:00",
       "status": "unavailable",
       "candidates": [],
+      "roster": [],
+      "pages_checked": 0,
       "error": "SSLError"
     },
     "Нагатино-Садовники": {
       "source": "https://sovet.n-sadovniki.ru/",
-      "checked_at": "2026-11-23T16:06:36.725167+00:00",
+      "checked_at": "2026-11-23T16:16:56.737815+00:00",
       "status": "ok",
       "candidates": [
         {
           "name": "Каминский Юрий Викторович",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/27091143-c2bb-4045-b488-5b2d481b7f78.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/kaminskij_yurij_viktorovich/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/27091143-c2bb-4045-b488-5b2d481b7f78.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Михарева Наталья Борисовна",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_mihareva_45a5266_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/mihareva_natal_ya_borisovna/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_mihareva_45a5266_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Никольская Анджела Вадимовна",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_nikol_skaya_0c3a0422_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/nikol_skaya_andzhela_vadimovna/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_nikol_skaya_0c3a0422_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Сафонова Татьяна Владимировна",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_safonova_0c3a0405_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/safonova_tat_yana_vladimirovna/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_safonova_0c3a0405_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Сезёмов Андрей Владимирович",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_sezemov_45a5005_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/sezyomov_andrej_vladimirovich/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_sezemov_45a5005_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Тихомиров Алексей Александрович",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_tihomirov_45a5110_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/tihomirov_aleksej_aleksandrovich/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_tihomirov_45a5110_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Уваров Антон Анатольевич",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_uvarov_45a7844_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/uvarov_anton_anatol_evich/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_uvarov_45a7844_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         },
         {
           "name": "Чуганова Азиза Кабыльбековна",
-          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_chuganova_45a4969_copy.jpg",
           "source": "https://sovet.n-sadovniki.ru/all_deputies/chuganova_aziza_kabyl_bekovna/",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_chuganova_45a4969_copy.jpg",
           "page": "https://sovet.n-sadovniki.ru/"
         }
-      ]
+      ],
+      "roster": [
+        {
+          "name": "Каминский Юрий Викторович",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/kaminskij_yurij_viktorovich/"
+        },
+        {
+          "name": "Михарева Наталья Борисовна",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/mihareva_natal_ya_borisovna/"
+        },
+        {
+          "name": "Никольская Анджела Вадимовна",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/nikol_skaya_andzhela_vadimovna/"
+        },
+        {
+          "name": "Сафонова Татьяна Владимировна",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/safonova_tat_yana_vladimirovna/"
+        },
+        {
+          "name": "Сезёмов Андрей Владимирович",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/sezyomov_andrej_vladimirovich/"
+        },
+        {
+          "name": "Тихомиров Алексей Александрович",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/tihomirov_aleksej_aleksandrovich/"
+        },
+        {
+          "name": "Уваров Антон Анатольевич",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/uvarov_anton_anatol_evich/"
+        },
+        {
+          "name": "Чуганова Азиза Кабыльбековна",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/chuganova_aziza_kabyl_bekovna/"
+        }
+      ],
+      "pages_checked": 1
     },
     "Нагатинский Затон": {
       "source": "https://nzaton.ru/",
-      "checked_at": "2026-11-23T16:06:40.556237+00:00",
+      "checked_at": "2026-11-23T16:16:58.159790+00:00",
       "status": "unavailable",
       "candidates": [],
+      "roster": [],
+      "pages_checked": 0,
       "error": "SSLError"
     },
     "Нагорный": {
       "source": "https://monagornoe.ru/",
-      "checked_at": "2026-11-23T16:06:41.145211+00:00",
+      "checked_at": "2026-11-23T16:16:58.780306+00:00",
       "status": "no_candidates",
-      "candidates": []
+      "candidates": [],
+      "roster": [],
+      "pages_checked": 1
     },
     "Орехово-Борисово Северное": {
       "source": "https://mo-obs.ru/",
-      "checked_at": "2026-11-23T16:06:42.336242+00:00",
-      "status": "unavailable",
-      "candidates": [],
-      "error": "ReadTimeout"
+      "checked_at": "2026-11-23T16:16:59.847707+00:00",
+      "status": "ok",
+      "candidates": [
+        {
+          "name": "Баранчикова Наталья Алексеевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/baranchikova-natalya-alekseevna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/2_district/baranchikova.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Дмитриева Наталия Николаевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/dmitrieva-nataliya-nikolaevna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/1_district/dmitrieva.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Долгашова Галина Георгиевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/dolgashova-galina-georgievna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/3_district/dolgashova.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Ежкова Анна Александровна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/ezhkova-anna-aleksandrovna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/2_district/ezkovaphoto.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Заплатникова Людмила Викторовна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/zaplatnikova-lyudmila-viktorovna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/2_district/zaplatnikova.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Коннова Елена Львовна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/konnova-elena-lvovna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/1_district/konnova.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Кускова Надежда Юрьевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/kuskova-nadezhda-yurevna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/2_district/kuskovaphoto.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Лапланш Елена Львовна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/laplansh-elena-lvovna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/1_district/laplanshphoto.png",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Мордовин Андрей Юрьевич",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/mordovin-andrej",
+          "photo": "https://mo-obs.ru/img/deputats/districts/1_district/mordovin.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        },
+        {
+          "name": "Сысоева Людмила Анатольевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/syisoeva-lyudmila-anatolevna",
+          "photo": "https://mo-obs.ru/img/deputats/districts/1_district/sysoeva.jpg",
+          "page": "https://mo-obs.ru/sovet-deputatov/deputatyi/"
+        }
+      ],
+      "roster": [
+        {
+          "name": "Баранчикова Наталья Алексеевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/baranchikova-natalya-alekseevna"
+        },
+        {
+          "name": "Дмитриева Наталия Николаевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/dmitrieva-nataliya-nikolaevna"
+        },
+        {
+          "name": "Долгашова Галина Георгиевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/dolgashova-galina-georgievna"
+        },
+        {
+          "name": "Ежкова Анна Александровна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/ezhkova-anna-aleksandrovna"
+        },
+        {
+          "name": "Заплатникова Людмила Викторовна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/zaplatnikova-lyudmila-viktorovna"
+        },
+        {
+          "name": "Коннова Елена Львовна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/konnova-elena-lvovna"
+        },
+        {
+          "name": "Кускова Надежда Юрьевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/kuskova-nadezhda-yurevna"
+        },
+        {
+          "name": "Лапланш Елена Львовна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/laplansh-elena-lvovna"
+        },
+        {
+          "name": "Мордовин Андрей Юрьевич",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№1/mordovin-andrej"
+        },
+        {
+          "name": "Сысоева Людмила Анатольевна",
+          "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/izbiratelnyij-okrug-№2/syisoeva-lyudmila-anatolevna"
+        }
+      ],
+      "pages_checked": 5
     },
     "Орехово-Борисово Южное": {
       "source": "https://mo-obu.ru/",
-      "checked_at": "2026-11-23T16:06:53.141287+00:00",
+      "checked_at": "2026-11-23T16:17:08.507479+00:00",
       "status": "no_candidates",
-      "candidates": []
+      "candidates": [],
+      "roster": [],
+      "pages_checked": 5
     },
     "Царицыно": {
       "source": "https://mcaricino.ru/",
-      "checked_at": "2026-11-23T16:06:55.803045+00:00",
+      "checked_at": "2026-11-23T16:17:11.659455+00:00",
       "status": "no_candidates",
-      "candidates": []
+      "candidates": [],
+      "roster": [],
+      "pages_checked": 5
     },
     "Чертаново Северное": {
       "source": "https://ch-sever.ru/",
-      "checked_at": "2026-11-23T16:07:04.426734+00:00",
-      "status": "no_candidates",
-      "candidates": []
+      "checked_at": "2026-11-23T16:17:16.370600+00:00",
+      "status": "names_only",
+      "candidates": [],
+      "roster": [
+        {
+          "name": "День Крещения Руси",
+          "source": "https://ch-sever.ru/fotogalereya/den_kreweniya_rusi2025/"
+        },
+        {
+          "name": "Депутат Государственной Думы",
+          "source": "https://ch-sever.ru/deputaty/deputat_gosudarstvennoj_dumy/"
+        }
+      ],
+      "pages_checked": 4
     },
     "Чертаново Центральное": {
       "source": "https://chertanovocentr.ru/",
-      "checked_at": "2026-11-23T16:07:08.593297+00:00",
+      "checked_at": "2026-11-23T16:17:21.564966+00:00",
       "status": "no_candidates",
-      "candidates": []
+      "candidates": [],
+      "roster": [],
+      "pages_checked": 5
     },
     "Чертаново Южное": {
       "source": "https://vmo-chu.ru/",
-      "checked_at": "2026-11-23T16:07:12.030325+00:00",
-      "status": "no_candidates",
-      "candidates": []
+      "checked_at": "2026-11-23T16:17:25.272308+00:00",
+      "status": "names_only",
+      "candidates": [],
+      "roster": [
+        {
+          "name": "Анатолий Борисович Выборный",
+          "source": "https://vmo-chu.ru/deputaty_gosudarstvennoj_dumy_fs_rf/anatolij_borisovich_vybornyj/"
+        },
+        {
+          "name": "Роман Юрьевич Романенко",
+          "source": "https://vmo-chu.ru/deputaty_gosudarstvennoj_dumy_fs_rf/roman_yur_evich_romanenko/"
+        }
+      ],
+      "pages_checked": 3
     }
   }
 }

@@ -590,7 +590,7 @@ function editsFor(d){return districtEdits[d]||(districtEdits[d]={added:[],remove
 function saveDistrictEdits(){localStorage.setItem(districtEditsKey,JSON.stringify(districtEdits))}
 function districtManager(d,source){
  const e=editsFor(d),official=source||"";
- return '<div class="district-manage"><details class="manage-add"><summary>➕ Добавить депутата</summary><div class="manage-body"><p class="manage-note">Кнопка использует последнюю серверную проверку официального сайта через GitHub Actions, без прямого обращения с iPhone. Новые карточки с ФИО и фотографией добавляются только после вашего подтверждения и только в этом браузере.</p><button type="button" class="manage-button" data-add-check="'+esc(d)+'">🔄 Обновить депутатов с официального сайта</button><a href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">Официальный сайт совета ↗</a><div class="manage-note"><a href="https://github.com/legion68910102-dotcom/deputy-monitor/actions/workflows/collect-official-deputies.yml" target="_blank" rel="noopener noreferrer">Новая серверная проверка в GitHub Actions ↗</a></div><div class="manage-note" data-add-message="'+esc(d)+'"></div></div></details><details class="manage-remove"><summary>➖ Убрать депутата</summary><div class="manage-body"><p class="manage-note">Отметьте депутатов галочками и нажмите «Удалить выбранных». Изменение действует только в этом браузере.</p><div data-remove-choices="'+esc(d)+'"></div><button type="button" class="manage-button danger" data-remove-action="'+esc(d)+'" >Удалить выбранных</button><button type="button" class="manage-button" data-undo-district="'+esc(d)+'">↶ Отменить последнее действие</button><div class="manage-note" data-remove-message="'+esc(d)+'"></div></div></details></div>';
+ return '<div class="district-manage"><details class="manage-add"><summary>➕ Добавить депутата</summary><div class="manage-body"><p class="manage-note">Сравниваем состав депутатов на официальном сайте со списком в этом браузере. Показываем, сколько фамилий найдено и кто отсутствует. Карточки с фотографиями добавляются только после вашего подтверждения; изменения остаются на этом устройстве.</p><button type="button" class="manage-button" data-add-check="'+esc(d)+'">🔄 Обновить депутатов с официального сайта</button><a href="'+esc(official)+'" target="_blank" rel="noopener noreferrer">Официальный сайт совета ↗</a><div class="manage-note"><a href="https://github.com/legion68910102-dotcom/deputy-monitor/actions/workflows/collect-official-deputies.yml" target="_blank" rel="noopener noreferrer">Новая серверная проверка в GitHub Actions ↗</a></div><div class="manage-note" data-add-message="'+esc(d)+'"></div></div></details><details class="manage-remove"><summary>➖ Убрать депутата</summary><div class="manage-body"><p class="manage-note">Отметьте депутатов галочками и нажмите «Удалить выбранных». Изменение действует только в этом браузере.</p><div data-remove-choices="'+esc(d)+'"></div><button type="button" class="manage-button danger" data-remove-action="'+esc(d)+'" >Удалить выбранных</button><button type="button" class="manage-button" data-undo-district="'+esc(d)+'">↶ Отменить последнее действие</button><div class="manage-note" data-remove-message="'+esc(d)+'"></div></div></details></div>';
 }
 const deputyUndoKey="dm_undo_v115";let deputyUndo=null;try{deputyUndo=JSON.parse(localStorage.getItem(deputyUndoKey)||"null")}catch(e){}
 function rememberAction(d){deputyUndo={district:d,edits:JSON.parse(JSON.stringify(editsFor(d))),archive:JSON.parse(JSON.stringify(deputyArchive)),profiles:JSON.parse(JSON.stringify(deputyOfficialProfiles))};localStorage.setItem(deputyUndoKey,JSON.stringify(deputyUndo))}
@@ -1011,21 +1011,31 @@ window.addEventListener("load",function(){
      msg.textContent="При последней проверке сайт был недоступен ("+stamp+"). Старые данные не используются для добавления. Список не изменён.";
      return;
     }
-    if(district.status!=="ok"){
-     msg.textContent="Проверка от "+stamp+": новых подтверждаемых карточек с фото не найдено. Список не изменён.";
+    const known=new Set(getNames(d).map(norm));
+    const listed=(Array.isArray(district.roster)?district.roster:[]);
+    const rosterNames=[...new Set(listed.map(p=>String(p?.name||"").trim()).filter(Boolean))];
+    const alreadyListed=rosterNames.filter(name=>known.has(norm(name))).length;
+    const absentNames=rosterNames.filter(name=>!known.has(norm(name)));
+    if(district.status==="no_candidates"){
+     msg.textContent="Проверка от "+stamp+": сервер открыл сайт, но не смог распознать список депутатов. Это НЕ означает, что депутатов там нет. Откройте официальный список по ссылке выше; данные не изменены.";
      return;
     }
-    const known=new Set(getNames(d).map(norm));
-    const valid=(Array.isArray(district.candidates)?district.candidates:[])
+    const candidates=(Array.isArray(district.candidates)?district.candidates:[])
      .filter(p=>p&&typeof p.name==="string"&&typeof p.photo==="string"&&typeof p.source==="string")
      .filter(p=>/^[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+\s+[А-ЯЁ][а-яё-]+$/.test(p.name.trim()))
-     .filter(p=>/^https:\/\//.test(p.photo)&&/^https:\/\//.test(p.source))
-     .filter(p=>!known.has(norm(p.name)));
-    if(!valid.length){
-     msg.textContent="Проверка от "+stamp+": новых подходящих карточек нет. Действующий список не изменён.";
+     .filter(p=>/^https:\/\//.test(p.photo)&&/^https:\/\//.test(p.source));
+    const valid=candidates.filter(p=>!known.has(norm(p.name)));
+    if(district.status==="names_only"||!valid.length){
+     msg.textContent="Проверка от "+stamp+": на официальном сайте распознано "+rosterNames.length+" депутатов; уже есть в вашем списке "+alreadyListed+"; отсутствуют "+absentNames.length+
+      (absentNames.length?": "+absentNames.slice(0,5).join(", ")+(absentNames.length>5?" и другие":""):"")+
+      ". Новых карточек с подтверждёнными фотографиями для добавления нет. Список не изменён.";
      return;
     }
-    if(!confirm("Проверка от "+stamp+": найдено "+valid.length+" возможных новых карточек на сайте совета. Добавить их только в этом браузере? После добавления проверьте ФИО и фотографии по источникам.")){
+    if(district.status!=="ok"){
+     msg.textContent="Проверка от "+stamp+": результат сайта не подтверждён. Список не изменён.";
+     return;
+    }
+    if(!confirm("На официальном сайте распознано "+rosterNames.length+" депутатов (из них "+alreadyListed+" уже в вашем списке). Найдено "+valid.length+" возможных карточек с фото для добавления: "+valid.map(p=>p.name).slice(0,8).join(", ")+". Добавить только в этом браузере? Проверьте ФИО и фото по источнику.")){
      msg.textContent="Добавление отменено. Список не изменён.";
      return;
     }
@@ -1041,7 +1051,7 @@ window.addEventListener("load",function(){
     refreshDistrict(d,"add");
     const group=[...document.querySelectorAll("#profiles .district-group")].find(x=>x.dataset.district===d);
     const note=group?.querySelector("[data-add-message]");
-    if(note)note.textContent="Добавлено "+valid.length+" карточек (проверка "+stamp+"). Изменения только в этом браузере; обязательно сверьте депутатов с официальным источником.";
+    if(note)note.textContent="На официальном сайте распознано "+rosterNames.length+" депутатов. Добавлено "+valid.length+" отсутствовавших карточек с фото (проверка "+stamp+"). Изменения только в этом браузере; проверьте карточки и фотографии по источнику.";
    }catch(err){
     msg.textContent="Не удалось прочитать опубликованный отчёт GitHub Pages: "+err.message+". Список не изменён. Попробуйте обновить страницу позже.";
    }finally{add.disabled=false}

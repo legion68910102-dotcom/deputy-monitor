@@ -53,3 +53,17 @@ test("all core sections and historical district list remain intact",()=>{
  for(const d of expected)assert.ok(page.includes(d),"District missing: "+d);
  assert.match(page,/const districts=\[/);
 });
+
+test("every coat has a corresponding original image URL as a resilient fallback",()=>{
+ const coats=load();
+ for(const name of expected){
+  const thumb=coats.url(name),original=coats.original(name);
+  assert.ok(original);
+  assert.equal(original,thumb.replace("/thumb/","/").replace(/\/120px-[^/]+$/,""));
+ }
+ assert.equal(coats.original("Несуществующий район"),"");
+ assert.match(page,/data-coat-original=/);
+ assert.match(page,/img\.dataset\.coatOriginal/);
+ assert.match(page,/img\.src=original/);
+ assert.match(page,/else img\.hidden=true/);
+});

@@ -37,9 +37,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp official-deputy-candidates.json /tmp/official-deputy-candidates.json
+          git restore --staged --worktree official-deputy-candidates.json
+          git pull --ff-only origin main
+          cp /tmp/official-deputy-candidates.json official-deputy-candidates.json
           git add official-deputy-candidates.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh public official deputy review candidates"
-            git pull --rebase origin main
             git push origin HEAD:main
           fi

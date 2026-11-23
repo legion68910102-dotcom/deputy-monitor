@@ -487,6 +487,38 @@ main > #activity-analysis > details.ranking-native > summary:focus-visible,
 main > #sources > details.ranking-native > summary:focus-visible,
 main > #method > details.ranking-native > summary:focus-visible,
 main > #deputy-archive > details.ranking-native > summary:focus-visible{outline:3px solid #4b9363!important;outline-offset:2px!important}
+</style><style id="deputy-lavender-v135">
+/* Only individual deputy tabs get lavender. Birthdays retain their green priority. */
+#profiles .deputy-tile:not(.birthday-today)>details>summary{
+ background:#f0e9fa!important;
+ color:#392951!important;
+ border:1px solid #dacbed!important;
+ border-radius:14px;
+ transition:background-color .15s ease;
+}
+#profiles .deputy-tile:not(.birthday-today)>details[open]>summary{
+ background:#e6daf6!important;
+ border-color:#c9b7e6!important;
+}
+#profiles .deputy-tile:not(.birthday-today)>details>summary:hover{
+ background:#e6daf6!important;
+}
+#profiles .deputy-tile:not(.birthday-today)>details>summary:focus-visible{
+ outline:3px solid #8565b6!important;
+ outline-offset:-3px!important;
+}
+#profiles .deputy-tile:not(.birthday-today) .deputy-name{
+ color:#473165!important;
+}
+/* The existing birthday-today rule stays bright green, including on hover/open.
+   Normal lavender selectors above explicitly exclude birthdays. */
+#profiles .deputy-tile.birthday-today>details>summary,
+#profiles .deputy-tile.birthday-today>details[open]>summary,
+#profiles .deputy-tile.birthday-today>details>summary:hover{
+ background:#dcfce7!important;
+ border:2px solid #16a34a!important;
+ color:#14532d!important;
+}
 </style></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p id="okrug-hero-intro">Справочник муниципальных депутатов 16 районов ЮАО и мониторинг доступных открытых публикаций. Данные о действующем составе и активности требуют проверки.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div><figure id="okrug-branding-panel" class="okrug-branding-panel" aria-label="Символика административного округа">
 <img id="okrug-emblem-image" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/UAO_district_of_Moscow_coa.png" alt="Гербовая эмблема Южного административного округа Москвы" width="600" height="440" decoding="async" fetchpriority="high" referrerpolicy="no-referrer">

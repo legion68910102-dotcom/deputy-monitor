@@ -1,22 +1,24 @@
-name: Verify district emblems and light grey mobile tabs
+name: Verify district emblems and mobile accordion palette
 on:
   push:
     paths:
       - "index-v129.html"
       - "district-coats-uao-v133.js"
       - "tests/test_district_coats.cjs"
+      - "tests/test_deputy_tab_colors.cjs"
       - ".github/workflows/test-district-coats.yml"
   pull_request:
     paths:
       - "index-v129.html"
       - "district-coats-uao-v133.js"
       - "tests/test_district_coats.cjs"
+      - "tests/test_deputy_tab_colors.cjs"
       - ".github/workflows/test-district-coats.yml"
 permissions:
   contents: read
 jobs:
   district-tabs:
-    name: All 16 verified district emblems and grey mobile tabs
+    name: District crests, main colors and birthday-safe deputy tabs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,4 +30,5 @@ jobs:
       - name: Offline verification
         run: |
           node --test tests/test_district_coats.cjs
+          node --test tests/test_deputy_tab_colors.cjs
           node --test tests/test_okrug_branding.cjs

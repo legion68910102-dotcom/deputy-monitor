@@ -22,6 +22,10 @@ function sanitizePatch(p){
   if(k!=="text"&&k!=="date"&&v!==""&&(!/^\d{1,10}$/.test(v)||Number(v)>1000000000))throw Error("Числовые поля должны быть неотрицательными");
   clean[k]=v;
  }
+ if(Object.prototype.hasOwnProperty.call(p,"is_repost")){
+  if(p.is_repost!==true)throw Error("Метка репоста должна быть подтверждена");
+  clean.is_repost=true;
+ }
  return clean;
 }
 function applyPosts(rows){
@@ -33,7 +37,14 @@ function applyPosts(rows){
 }
 function setEdit(row,patch){
  var id=identity(row);if(!id)throw Error("Публикация должна иметь профиль и ссылку");
- var st=read();st.edited[id]=sanitizePatch(patch);write(st);
+ var st=read();st.edited[id]=Object.assign({},sanitizePatch(st.edited[id]||{}),sanitizePatch(patch));write(st);
+}
+function markRepost(row,marked){
+ var id=identity(row);if(!id)throw Error("Публикация должна иметь профиль и ссылку");
+ var st=read(),change=sanitizePatch(st.edited[id]||{});
+ if(marked)change.is_repost=true;else delete change.is_repost;
+ if(Object.keys(change).length)st.edited[id]=change;else delete st.edited[id];
+ write(st);
 }
 function hide(row){var id=identity(row);if(!id)throw Error("Невозможно скрыть запись без ссылки");var st=read();if(!st.hidden.includes(id))st.hidden.push(id);write(st)}
 function unhide(id){var st=read();st.hidden=st.hidden.filter(x=>x!==id);write(st)}
@@ -62,7 +73,7 @@ function restoreBackup(json){
  }
 }
 function resetLocal(){for(var k of KEYS)localStorage.removeItem(k)}
-window.dmPersonalWorkspace={applyPosts:applyPosts,setEdit:setEdit,hide:hide,unhide:unhide,clearEdit:clearEdit,read:read,backup:backup,restoreBackup:restoreBackup,resetLocal:resetLocal,identity:identity};
+window.dmPersonalWorkspace={applyPosts:applyPosts,setEdit:setEdit,hide:hide,unhide:unhide,clearEdit:clearEdit,markRepost:markRepost,read:read,backup:backup,restoreBackup:restoreBackup,resetLocal:resetLocal,identity:identity};
 function download(text,filename){
  var blob=new Blob([text],{type:"application/json;charset=utf-8"}),link=document.createElement("a"),url=URL.createObjectURL(blob);
  link.href=url;link.download=filename;document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(url)},60000);
@@ -110,6 +121,10 @@ function mounted(){
   if(isHidden){btn.onclick=function(){unhide(identity(row));location.reload()}}
   else{
    btn.onclick=function(){selected=row;var id=identity(row),patch=read().edited[id]||{},current=Object.assign({},row,patch);$("workspace-edit-date").value=String(current.date||"").slice(0,10);$("workspace-edit-text").value=String(current.text||"");$("workspace-edit-likes").value=String(current.likes===null||current.likes===undefined?"":current.likes);$("workspace-editor").hidden=false;$("workspace-editor").scrollIntoView({behavior:"smooth",block:"nearest"})};
+   var stored=read().edited[identity(row)]||{},manualRepost=stored.is_repost===true;
+   var sourceRepost=!manualRepost&&window.dmRepostDetection&&window.dmRepostDetection.isRepost(row);
+   if(!sourceRepost){var repostBtn=node("button",manualRepost?"↩️ Снять мою метку репоста":"🔁 Это репост");repostBtn.type="button";repostBtn.onclick=function(){try{markRepost(row,!manualRepost);location.reload()}catch(e){$("workspace-status").textContent=e.message}};item.appendChild(repostBtn)}
+   else item.appendChild(node("p","🔁 Репост определён автоматически по источнику."));
    var hiddenBtn=node("button","🚫 Скрыть только у меня");hiddenBtn.type="button";hiddenBtn.onclick=function(){if(confirm("Скрыть публикацию только в вашем браузере?")){try{hide(row);location.reload()}catch(e){$("workspace-status").textContent=e.message}}};item.appendChild(hiddenBtn);
   }
   container.appendChild(item);

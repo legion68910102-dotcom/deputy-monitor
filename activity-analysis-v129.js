@@ -2,7 +2,7 @@
 (function(){
 "use strict";
 const activityPolicy=window.dmActivityCategoryPolicy||null;
-const labels={council:"Заседания Совета депутатов",meet:"Личные встречи",walk:"Обходы территорий",inspect:"Приёмка и контроль работ",event:"Участие в мероприятиях",reception:"Приёмы граждан",appeal:"Работа с обращениями",result:"Решённые вопросы",plan:"Планы и обещания",personal:"Личные",information:"Информационные",announcement:"Публикации-анонсы",repost:"Репосты",uncategorized:"Без темы"};
+const labels={council:"Заседания Совета депутатов",meet:"Личные встречи",walk:"Обходы территорий",inspect:"Приёмка и контроль работ",event:"Участие в мероприятиях",humanitarian:"Гуманитарная помощь",reception:"Приёмы граждан",appeal:"Работа с обращениями",result:"Решённые вопросы",plan:"Планы и обещания",personal:"Личные",information:"Информационные",announcement:"Публикации-анонсы",repost:"Репосты",uncategorized:"Без темы"};
 const rules={
 council:/(?:заседани[а-яё]*\s+(?:[а-яё-]+\s+){0,3}совет[а-яё]*\s+депутат[а-яё]*|совет[а-яё]*\s+депутат[а-яё]*[^.!?\n]{0,75}заседани[а-яё]*)/iu,
 meet:/(?:^|[^а-яёa-z0-9_])(?:встретил(?:ся|ась|ись)|встреч[аиуеой]|пообщал(?:ся|ась|ись)|обсудил[аи]?)(?=$|[^а-яёa-z0-9_])/iu,
@@ -64,7 +64,7 @@ function rosterName(profile){
  return entry?.name||names[value]||value;
 }
 
-const icons={council:"🏛️",meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
+const icons={council:"🏛️",meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",humanitarian:"🤲",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
 let manualRuns=0,activeCategory=null,visibleLimit=60;
 let aiDataset=null,aiMessage="Загрузка ИИ…";
 function aiIdentity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
@@ -81,7 +81,7 @@ async function loadAiDataset(){
   const data=await response.json();
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
   aiDataset=data;
-  if(data.taxonomy_version!==2)aiMessage="ИИ обновляет классификацию по 14 категориям. Пока показываются предварительные правила.";
+  if(data.taxonomy_version!==2)aiMessage="ИИ обновляет классификацию по 15 категориям. Пока показываются предварительные правила.";
   else if(data.status==="ready")aiMessage="Классификация GigaChat доступна. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="partial")aiMessage="ИИ обработал часть публикаций, остальные — по правилам. Категория заседаний Совета депутатов будет пополняться по мере переанализа. Последнее обновление: "+String(data.generated_at||"нет даты")+".";
   else if(data.status==="no_posts")aiMessage="Обработка ИИ настроена, но общей ленте пока нет текстов публикаций.";

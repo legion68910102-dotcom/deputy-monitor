@@ -26,6 +26,23 @@ const samples=[
  {name:"future concert is an announcement",text:"Завтра состоится праздничный концерт, приглашаем жителей.",yes:["announcement"],no:["event"]},
  {name:"birthday greeting is not an event",text:"Поздравляю жителей с праздником!",yes:[],no:["event"]},
  {name:"walk then concert can be both",text:"Сегодня провел обход территории района. Вечером посетил праздничный концерт.",yes:["walk","event"],no:[]},
+ {name:"district cleanup",text:"Сегодня принял участие в районном субботнике. Вместе с жителями убрали мусор.",yes:["event"],no:["walk"]},
+ {name:"organized district cleanup",text:"Провели субботник рядом со школой.",yes:["event"],no:["walk"]},
+ {name:"future cleanup announcement",text:"Завтра приглашаю всех на субботник.",yes:["announcement"],no:["event"]},
+ {name:"head of district administration rounds",text:"Сегодня принял участие в обходе главы управы.",yes:["walk"],no:["event"]},
+ {name:"joint district administration walk",text:"Сегодня вместе с главой управы провели обход дворов.",yes:["walk"],no:["event"]},
+ {name:"capital repairs progress inspection",text:"Проверил ход капитального ремонта дома.",yes:["inspect"],no:["event"]},
+ {name:"inspection of apartment major renovation",text:"Осмотрел ход капремонта многоквартирного дома.",yes:["inspect"],no:["event"]},
+ {name:"strolled in a park",text:"Сегодня прогулялся в парке.",yes:["personal"],no:["event"]},
+ {name:"traveled to a different city",text:"Съездил в другой город на выходные.",yes:["personal"],no:["event"]},
+ {name:"personal museum visit",text:"Посетил музей с семьёй.",yes:["personal"],no:["event"]},
+ {name:"personal temple visit",text:"Вчера побывал в храме.",yes:["personal"],no:["event"]},
+ {name:"barbecue",text:"С друзьями поехали на шашлыки.",yes:["personal"],no:["event"]},
+ {name:"visit to dacha",text:"Съездил на дачу на выходные.",yes:["personal"],no:["event"]},
+ {name:"harvest",text:"Собрал урожай на даче.",yes:["personal"],no:["event"]},
+ {name:"pets",text:"Мой кот снова шкодит.",yes:["personal"],no:["event"]},
+ {name:"children",text:"Наши дети подрастают так быстро.",yes:["personal"],no:["event"]},
+ {name:"official childcare issue isn't personal",text:"Провёл встречу с жителями по вопросам строительства детского сада.",yes:["meet"],no:["personal","event"]},
 ];
 for(const sample of samples){
  const keys=[...new Set(sandbox.__testExtract(sample.text).map(x=>x.key))];
@@ -40,6 +57,11 @@ const aiCorrections=[
  {name:"AI called a greeting an event",text:"Поздравляю жителей с праздником.",input:["event"],expect:[]},
  {name:"AI missed a documented festive concert",text:"Вчера посетил праздничный концерт.",input:[],expect:["event"]},
  {name:"AI called a future forum an event",text:"Завтра состоится форум депутатов.",input:["event","announcement"],expect:["announcement"]},
+ {name:"AI missed district cleanup",text:"Принял участие в субботнике.",input:[],expect:["event"]},
+ {name:"AI put administration round in events",text:"Сегодня принял участие в обходе главы управы.",input:["event"],expect:["walk"]},
+ {name:"AI missed capital renovation",text:"Проверил ход капитального ремонта.",input:[],expect:["inspect"]},
+ {name:"AI missed my pets",text:"Моя собака радуется первому снегу.",input:[],expect:["personal"]},
+ {name:"AI missed travel",text:"Посетил музей с семьёй.",input:[],expect:["personal"]},
 ];
 for(const sample of aiCorrections){
  const actual=policy.normalizeCategories(sample.input,sample.text);

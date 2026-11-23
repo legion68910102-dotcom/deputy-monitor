@@ -26,8 +26,8 @@ test("every real Wikimedia Commons image path has a valid and matching MD5 prefi
  const coats=load(),urls=coats.districts.map(d=>coats.url(d));
  assert.equal(new Set(urls).size,16);
  for(const url of urls){
-  assert.match(url,/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[a-f0-9]\/[a-f0-9]{2}\/[^?#]+\/96px-/);
-  const m=/\/thumb\/([a-f0-9])\/([a-f0-9]{2})\/([^/]+)\/96px-(.+)$/.exec(url);
+  assert.match(url,/^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/thumb\/[a-f0-9]\/[a-f0-9]{2}\/[^?#]+\/120px-/);
+  const m=/\/thumb\/([a-f0-9])\/([a-f0-9]{2})\/([^/]+)\/120px-(.+)$/.exec(url);
   assert.ok(m,url);
   assert.equal(m[3],m[4],"thumb image name must match uploaded file name");
   const filename=decodeURIComponent(m[3]);

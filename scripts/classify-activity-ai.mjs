@@ -4,6 +4,7 @@ import {createRequire} from "node:module";
 const require=createRequire(import.meta.url);
 const {isRepost}=require("../repost-detection-v131.js");
 const eventPolicy=require("../activity-category-policy-v1.js");
+const {batchSchema,decodeBatch}=require("./activity-batch-helper.cjs");
 const MODEL=process.env.GIGACHAT_MODEL||"GigaChat-2-Pro";
 const AUTH_KEY=(process.env.GIGACHAT_AUTH_KEY||"").trim();
 const SCOPE=process.env.GIGACHAT_SCOPE||"GIGACHAT_API_PERS";
@@ -28,7 +29,9 @@ async function getAccessToken(){
  accessTokenExpires=Date.now()+25*60*1000;
  return accessToken;
 }
-const LIMIT=Math.min(100,Math.max(1,Number(process.env.AI_POST_LIMIT)||60));
+const LIMIT=Math.min(1600,Math.max(1,Number(process.env.AI_POST_LIMIT)||1000));
+const BATCH_SIZE=Math.min(6,Math.max(1,Number(process.env.AI_BATCH_SIZE)||5));
+const MAX_RUN_MS=55*60*1000; // Finish and publish safely before GitHub job timeout.
 const TAXONOMY_VERSION=2;
 const approvedTaxonomy=JSON.parse(fs.readFileSync(new URL("../activity-taxonomy-approved-v1.json",import.meta.url),"utf8"));
 const METHODOLOGY_VERSION=approvedTaxonomy.version;
@@ -90,6 +93,57 @@ async function askAI(post){
   return {categories,methodology_version:METHODOLOGY_VERSION,confidence:Math.max(0,Math.min(1,Number(parsed.confidence)||0)),explanation:String(parsed.explanation||"").slice(0,180),evidence:text.includes(quote)?quote:"",method:"ai"};
  }
  throw Error("Retries exhausted");
+}
+// Group five independent publication texts into one GigaChat request.
+// No parallel API calls: personal GigaChat accounts are limited to one stream.
+async function askBatchAI(posts){
+ if(posts.length===1)return [await askAI(posts[0])];
+ const options={
+  categorySet:categoriesSet,
+  normalize:eventPolicy.normalizeCategories,
+  isRepost,methodologyVersion:METHODOLOGY_VERSION
+ };
+ const input=posts.map((p,index)=>({
+  index,date:p.date||"",repost:isRepost(p),text:String(p.text||"").slice(0,8000)
+ }));
+ const body={
+  model:MODEL,temperature:0,max_tokens:2600,
+  messages:[
+   {role:"system",content:system+"\nВАЖНО: Обработай КАЖДУЮ публикацию массива posts ОТДЕЛЬНО. Верни объект results с ровно одним элементом для каждого index, сохраняя исходные индексы от 0 до "+(posts.length-1)+". Не смешивай тексты, доказательства, авторов и категории разных публикаций. У каждой записи самостоятельные categories, confidence, explanation и дословный evidence. Нельзя пропускать посты."},
+   {role:"user",content:JSON.stringify({posts:input})}
+  ],
+  response_format:{type:"json_schema",schema:batchSchema(CATEGORIES),strict:true}
+ };
+ for(let attempt=0;attempt<3;attempt++){
+  try{
+   const response=await fetch(CHAT_URL,{
+    method:"POST",
+    headers:{"Authorization":"Bearer "+await getAccessToken(),"Content-Type":"application/json"},
+    body:JSON.stringify(body),signal:AbortSignal.timeout(80000)
+   });
+   if(response.status===401){
+    accessToken="";accessTokenExpires=0;
+    if(attempt<2){await sleep(1200);continue}
+   }
+   if(!response.ok){
+    const info=(await response.text()).slice(0,160);
+    if([429,500,502,503,504].includes(response.status)&&attempt<2){
+     await sleep(3500*(attempt+1));continue;
+    }
+    throw Error("Batch API HTTP "+response.status+": "+info);
+   }
+   const payload=await response.json();
+   if(payload.choices?.[0]?.finish_reason==="length")
+    throw Error("Batch response was truncated");
+   const raw=payload.choices?.[0]?.message?.content;
+   if(typeof raw!=="string")throw Error("Batch response has no content");
+   return decodeBatch(JSON.parse(raw),posts,options);
+  }catch(e){
+   if(attempt===2)throw e;
+   await sleep(1500*(attempt+1));
+  }
+ }
+ throw Error("Batch retries exhausted");
 }
 async function main(){
  if(!AUTH_KEY){console.log("GIGACHAT_AUTH_KEY not set. No API calls; existing data unchanged.");return}
@@ -163,18 +217,46 @@ async function main(){
  const focusHint=/(?:субботник|обход|глав[а-яё]*\s+управ|капремонт|капитальн[а-яё]*\s+ремонт|гуманитар|дет[а-яё]*|дач[а-яё]*|музе[а-яё]*|форум|съезд)/iu;
  pending.sort((a,b)=>Number(Boolean(b.review))-Number(Boolean(a.review))
    ||Number(focusHint.test(String(b.r.text||"")))-Number(focusHint.test(String(a.r.text||""))));
- let completed=0,failures=0;
- for(const item of pending.slice(0,LIMIT)){
-  try{result[item.id]={signature:item.sig,...await askAI(item.r)};completed++}
-  catch(e){failures++;console.error("Unable to classify a publication:",String(e.message||e).slice(0,220));if(failures>=5)break}
-  await sleep(200);
+ let completed=0,failures=0,batches=0,batchedPosts=0,fallbacks=0;
+ const startedAt=Date.now();
+ let batchEnabled=BATCH_SIZE>1;
+ const scope=pending.slice(0,LIMIT);
+ for(let start=0;start<scope.length;start+=BATCH_SIZE){
+  if(Date.now()-startedAt>=MAX_RUN_MS){
+   console.log("Time budget reached; saving all completed classification work.");
+   break;
+  }
+  const group=scope.slice(start,start+BATCH_SIZE);
+  if(batchEnabled&&group.length>1){
+   try{
+    const classified=await askBatchAI(group.map(item=>item.r));
+    for(let j=0;j<group.length;j++){
+     result[group[j].id]={signature:group[j].sig,...classified[j]};
+    }
+    completed+=group.length;batchedPosts+=group.length;batches++;
+    if(completed%50<group.length)console.log("Batch progress:",completed,"/",scope.length);
+    continue;
+   }catch(e){
+    fallbacks++;
+    console.error("Batch classification failed; retrying posts individually:",String(e.message||e).slice(0,200));
+    // An unsupported batch schema is not worth retrying for each remaining group.
+    if(/HTTP 400|HTTP 422|schema|Invalid or duplicate|Incomplete GigaChat batch response/i.test(String(e.message||e)))batchEnabled=false;
+   }
+  }
+  for(const item of group){
+   if(Date.now()-startedAt>=MAX_RUN_MS)break;
+   try{result[item.id]={signature:item.sig,...await askAI(item.r)};completed++}
+   catch(e){failures++;console.error("Unable to classify a publication:",String(e.message||e).slice(0,220));if(failures>=5)break}
+  }
+  if(failures>=5)break;
  }
+ console.log("Request batching:",{batchSize:BATCH_SIZE,groups:batches,postsBatched:batchedPosts,individualFallbacks:fallbacks});
  const left=pending.filter(item=>result[item.id]?.methodology_version!==METHODOLOGY_VERSION).length;
  const approvedCount=Object.values(result).filter(r=>r.method==="ai"&&r.methodology_version===METHODOLOGY_VERSION).length;
  const legacyCount=Object.values(result).filter(r=>r.method==="ai"&&r.methodology_version!==METHODOLOGY_VERSION).length;
  const output={schema_version:1,taxonomy_version:TAXONOMY_VERSION,methodology_version:METHODOLOGY_VERSION,methodology_id:approvedTaxonomy.methodology_id,policy_version:eventPolicy.version,provider:"gigachat",status:source.length===0?"no_posts":left?"partial":"ready",generated_at:new Date().toISOString(),model:MODEL,source:"vk-posts.json",total_posts:source.length,classified_posts:approvedCount,legacy_classified_posts:legacyCount,pending_posts:left,posts:result};
  fs.writeFileSync("ai-analysis.json",JSON.stringify(output,null,2)+"\n");
- console.log("AI classifications:",{status:output.status,total:source.length,new:completed,pending:left,failures});
+ console.log("AI classifications:",{status:output.status,total:source.length,new:completed,pending:left,failures,batches});
  if(failures>0&&completed===0&&source.length>0)process.exitCode=1;
 }
 await main();

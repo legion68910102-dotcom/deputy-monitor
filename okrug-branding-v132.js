@@ -42,10 +42,9 @@
    const config=selectConfig();
    const img=document.getElementById("okrug-emblem-image");
    const fallback=document.getElementById("okrug-emblem-fallback");
-   const caption=document.getElementById("okrug-emblem-caption");
    const intro=document.getElementById("okrug-hero-intro");
    const panel=document.getElementById("okrug-branding-panel");
-   if(!img||!caption||!panel)return;
+   if(!img||!panel)return;
    panel.dataset.okrug=config.code;
    img.alt="Гербовая эмблема: "+config.fullName;
    img.src=config.emblemUrl;
@@ -54,7 +53,6 @@
      if(fallback){fallback.hidden=false;fallback.textContent=config.abbreviation}
    };
    img.onload=function(){img.hidden=false;if(fallback)fallback.hidden=true};
-   caption.textContent=config.fullName;
    if(intro){
      intro.textContent=config.districtsCount
       ?"Справочник муниципальных депутатов "+config.districtsCount+" районов "+config.abbreviation+" и мониторинг доступных открытых публикаций. Данные о действующем составе и активности требуют проверки."

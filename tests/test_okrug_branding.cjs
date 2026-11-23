@@ -7,7 +7,7 @@ const page=fs.readFileSync("index-v129.html","utf8");
 const code=fs.readFileSync("okrug-branding-v132.js","utf8");
 function load(config){
  const elems={};
- for(const id of ["okrug-emblem-image","okrug-emblem-fallback","okrug-emblem-caption","okrug-hero-intro","okrug-branding-panel"])
+ for(const id of ["okrug-emblem-image","okrug-emblem-fallback","okrug-hero-intro","okrug-branding-panel"])
    elems[id]={dataset:{},hidden:false,textContent:"",src:"",alt:""};
  const document={readyState:"loading",title:"",getElementById(id){return elems[id]??null},addEventListener(event,callback){if(event==="DOMContentLoaded")this.boot=callback}};
  const window={};if(config!==undefined)window.deputyMonitorOkrugConfig=config;
@@ -28,7 +28,6 @@ test("UAO default branding shows actual emblem and 16 districts",()=>{
  const {elements,document}=load();
  assert.equal(elements["okrug-emblem-image"].src,"https://upload.wikimedia.org/wikipedia/commons/8/8d/UAO_district_of_Moscow_coa.png");
  assert.match(elements["okrug-emblem-image"].alt,/Южный административный округ Москвы/);
- assert.equal(elements["okrug-emblem-caption"].textContent,"Южный административный округ Москвы");
  assert.match(elements["okrug-hero-intro"].textContent,/16 районов ЮАО/);
  assert.equal(elements["okrug-branding-panel"].dataset.okrug,"uao");
  assert.match(document.title,/ЮАО/);
@@ -38,7 +37,6 @@ test("future tenant config automatically swaps emblem, title and intro",()=>{
  const {elements,document,window}=load(another);
  assert.equal(window.deputyMonitorBranding.selectConfig().code,"sao");
  assert.equal(elements["okrug-emblem-image"].src,another.emblemUrl);
- assert.equal(elements["okrug-emblem-caption"].textContent,another.fullName);
  assert.match(elements["okrug-hero-intro"].textContent,/16 районов САО/);
  assert.equal(elements["okrug-branding-panel"].dataset.okrug,"sao");
  assert.match(document.title,/САО/);
@@ -56,4 +54,16 @@ test("image fetch failures show district abbreviation, never a broken image",()=
  assert.equal(elements["okrug-emblem-image"].hidden,true);
  assert.equal(elements["okrug-emblem-fallback"].hidden,false);
  assert.equal(elements["okrug-emblem-fallback"].textContent,"ЮАО");
+});
+
+test("full-width image uses all header space without any separate district caption",()=>{
+ const panel=/\<style id="okrug-branding-v132">([\s\S]*?)<\/style>/.exec(page);
+ assert.ok(panel,"missing branding styles");
+ assert.match(panel[1],/#okrug-branding-panel\{[^}]*width:100%;max-width:none;/);
+ assert.match(panel[1],/#okrug-emblem-image\{[^}]*width:100%;max-width:none;height:auto;max-height:none;object-fit:contain;/);
+ assert.doesNotMatch(page,/<figcaption[^>]*okrug-emblem-caption/);
+ assert.doesNotMatch(code,/getElementById\("okrug-emblem-caption"\)/);
+ // Accessible alt remains even though the visible caption is gone.
+ const {elements}=load();
+ assert.match(elements["okrug-emblem-image"].alt,/Южный административный округ Москвы/);
 });

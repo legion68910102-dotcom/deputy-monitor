@@ -26,7 +26,7 @@ function sanitizePatch(p){
 }
 function applyPosts(rows){
  var st=read(),hidden=new Set(st.hidden.filter(x=>typeof x==="string"));
- return (Array.isArray(rows)?rows:[]).filter(row=>{var id=identity(row);return row&&!id||!hidden.has(id)}).map(row=>{
+ return (Array.isArray(rows)?rows:[]).filter(function(row){if(!row)return false;var id=identity(row);return !id||!hidden.has(id)}).map(row=>{
   var id=identity(row),patch=id?st.edited[id]:null;
   return obj(patch)?Object.assign({},row,sanitizePatch(patch),{_personal_edit:true}):row;
  });

@@ -8,6 +8,8 @@ on:
     paths:
       - "vk-posts.json"
       - "scripts/classify-activity-ai.mjs"
+      - "scripts/activity-batch-helper.cjs"
+      - "scripts/test-activity-batching.mjs"
       - "scripts/test-activity-taxonomy.mjs"
       - "activity-analysis-v129.js"
       - "activity-category-policy-v1.js"
@@ -24,6 +26,7 @@ concurrency:
 jobs:
   classify:
     runs-on: ubuntu-latest
+    timeout-minutes: 85
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -66,6 +69,8 @@ jobs:
         run: |
           node --check activity-analysis-v129.js
           node --check activity-category-policy-v1.js
+          node --check scripts/activity-batch-helper.cjs
+          node scripts/test-activity-batching.mjs
           node -e 'const t=require("./activity-taxonomy-approved-v1.json"); if(t.categories.length!==15||t.categories.reduce((n,c)=>n+c.phrases.length,0)<230)process.exit(1); console.log("Approved taxonomy categories: "+t.categories.length)'
           node scripts/test-activity-taxonomy.mjs
       - name: Analyze available public texts
@@ -74,7 +79,8 @@ jobs:
           GIGACHAT_MODEL: "GigaChat-2-Pro"
           GIGACHAT_SCOPE: "GIGACHAT_API_PERS"
           GIGACHAT_SMOKE_TEST: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
-          AI_POST_LIMIT: "100"
+          AI_POST_LIMIT: "1200"
+          AI_BATCH_SIZE: "5"
         run: |
           node --check scripts/classify-activity-ai.mjs
           node scripts/classify-activity-ai.mjs

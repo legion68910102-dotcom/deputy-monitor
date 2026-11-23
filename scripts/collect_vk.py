@@ -116,13 +116,29 @@ def normalize_post(post: object, handle: str) -> dict | None:
     except (OverflowError, OSError, ValueError):
         return None
     url = f"https://vk.com/wall{owner}_{post_id}"
+    history = post.get("copy_history")
+    original = history[0] if isinstance(history, list) and history and isinstance(history[0], dict) else {}
+    is_repost = bool(history) or post.get("post_type") == "copy"
     text = post.get("text")
-    is_repost = bool(post.get("copy_history")) or post.get("post_type") == "copy"
+    text = text if isinstance(text, str) else ""
+    # VK places the reposted author's text inside copy_history, not in post.text.
+    # Use it for content classification while keeping explicit repost provenance.
+    original_text = original.get("text")
+    from_original = is_repost and not text.strip() and isinstance(original_text, str) and bool(original_text.strip())
+    if from_original:
+        text = original_text
     record = {
         "profile": handle, "url": url, "date": date,
-        "text": text if isinstance(text, str) else "",
+        "text": text,
         "source": "vk_api", "is_repost": is_repost,
     }
+    if from_original:
+        record["repost_text_from_source"] = True
+    original_owner, original_id = original.get("owner_id"), original.get("id")
+    if (isinstance(original_owner, int) and not isinstance(original_owner, bool)
+            and isinstance(original_id, int) and not isinstance(original_id, bool)
+            and original_owner != 0 and original_id > 0):
+        record["repost_source_url"] = f"https://vk.com/wall{original_owner}_{original_id}"
     for field in ("likes", "comments", "reposts", "views"):
         value = count_value(post, field)
         if value is not None:
@@ -141,6 +157,9 @@ def merge_record(old: dict, fresh: dict) -> dict:
     if not merged.get("text"):
         merged["text"] = fresh.get("text", "")
     merged["is_repost"] = bool(old.get("is_repost")) or fresh.get("is_repost", False)
+    for field in ("repost_source_url", "repost_text_from_source"):
+        if fresh.get(field):
+            merged[field] = fresh[field]
     sources = old.get("sources")
     if not isinstance(sources, list):
         sources = [old["source"]] if isinstance(old.get("source"), str) else []

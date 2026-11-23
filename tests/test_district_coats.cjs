@@ -35,7 +35,7 @@ test("every real Wikimedia Commons image path has a valid and matching MD5 prefi
   assert.equal(m[2][0],m[1]);
  }
 });
-test("district tabs are light grey, source named before the district, and iPhone size adapts",()=>{
+test("district tabs show the correct emblems and iPhone size adapts",()=>{
  assert.match(page,/id="district-coats-v133"/);
  assert.match(page,/#profiles details\.district-group>summary\{background:#eff1f4!important;/);
  assert.match(page,/#profiles details\.district-group\[open\]>summary\{background:#e5e9ee!important;/);
@@ -66,4 +66,27 @@ test("every coat has a corresponding original image URL as a resilient fallback"
  assert.match(page,/img\.dataset\.coatOriginal/);
  assert.match(page,/img\.src=original/);
  assert.match(page,/else img\.hidden=true/);
+});
+
+test("primary navigation is pale green while the sixteen district tabs are darker grey",()=>{
+ const palette=/<style id="uao-accordion-palette-v134">([\s\S]*?)<\/style>/.exec(page);
+ assert.ok(palette,"missing latest tab palette");
+ const css=palette[1];
+ assert.ok(page.indexOf('id="uao-accordion-palette-v134"')>page.indexOf('id="district-coats-v133"'),"palette must override the old district grey");
+ assert.match(css,/#profiles details\.district-group>summary\{background:#cbd3dd!important;/);
+ assert.match(css,/#profiles details\.district-group\[open\]>summary\{background:#b8c4d0!important;/);
+ assert.match(css,/#profiles details\.district-group>summary:hover\{background:#b8c4d0!important;/);
+ assert.match(css,/#profiles details\.district-group>summary:focus-visible/);
+ for(const id of ["overview","deputies","activity","report","ranking","activity-analysis","sources","method","deputy-archive"]){
+  const klass=id==="activity"?"activity-excel-fold":"ranking-native";
+  const sel="main > #"+id+" > details."+klass+" > summary";
+  assert.ok(css.includes(sel),"green main tab missing: "+id);
+  assert.ok(css.includes("main > #"+id+" > details."+klass+"[open] > summary"),"green expanded tab missing: "+id);
+ }
+ assert.match(css,/background:#e2f3e5!important/);
+ assert.match(css,/background:#d1ebd8!important/);
+ assert.match(css,/color:#20412c!important/);
+ assert.match(css,/border-color:#b8dbc3!important/);
+ assert.doesNotMatch(css,/#profiles\s+\.deputy-tile/);
+ assert.doesNotMatch(css,/#activity-analysis\s+\.activity-post/);
 });

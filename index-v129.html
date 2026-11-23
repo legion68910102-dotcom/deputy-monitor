@@ -906,7 +906,8 @@ function initRanking(){
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initRanking,{once:true});else initRanking();
 })();
 
-</script><script id="activity-directory-v123">window.dmActivityDirectory=Object.fromEntries(Object.entries(directoryDeputies).map(([district,info])=>{const edits=typeof editsFor==="function"?editsFor(district):{added:[],removed:[]};const removed=new Set(edits.removed||[]);return [district,[...(info.names||[]),...(edits.added||[])].filter(name=>!removed.has(name))]}));</script><script src="./activity-analysis-v129.js" defer></script>
+</script><script id="activity-directory-v123">window.dmActivityDirectory=Object.fromEntries(Object.entries(directoryDeputies).map(([district,info])=>{const edits=typeof editsFor==="function"?editsFor(district):{added:[],removed:[]};const removed=new Set(edits.removed||[]);return [district,[...(info.names||[]),...(edits.added||[])].filter(name=>!removed.has(name))]}));</script><script src="./activity-category-policy-v1.js" defer></script>
+<script src="./activity-analysis-v129.js" defer></script>
 
 <script>
 /* Keep the report selector alphabetized even if a browser reuses an older report.js. */

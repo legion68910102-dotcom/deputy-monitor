@@ -208,13 +208,28 @@ def main():
         "source": "Official council websites via GitHub Actions",
         "districts": {},
     }
+    def recent_success(iso):
+        try:
+            last = dt.datetime.fromisoformat(iso or "")
+            if last.tzinfo is None:
+                last = last.replace(tzinfo=dt.timezone.utc)
+            age = dt.datetime.now(dt.timezone.utc) - last
+            return dt.timedelta(0) <= age <= dt.timedelta(days=7)
+        except (ValueError, TypeError):
+            return False
+
     for district, url in SOURCES.items():
         value = scan(district, url)
-        if value["status"] == "unavailable" and old.get(district, {}).get("status") == "ok":
-            value["status"] = "stale"
-            value["candidates"] = old[district].get("candidates", [])
-            value["roster"] = old[district].get("roster", [])
-            value["last_success_at"] = old[district].get("checked_at")
+        previous = old.get(district, {})
+        prior_success = previous.get("last_success_at") or (
+            previous.get("checked_at") if previous.get("status") in ("ok", "names_only") else None
+        )
+        if value["status"] == "unavailable" and recent_success(prior_success):
+            if previous.get("candidates") or previous.get("roster"):
+                value["status"] = "stale"
+                value["candidates"] = previous.get("candidates", [])
+                value["roster"] = previous.get("roster", [])
+                value["last_success_at"] = prior_success
         result["districts"][district] = value
         print(district, value["status"], len(value["candidates"]))
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -222,7 +237,9 @@ def main():
     # Only source-linked, named candidates with photos are auto-published.
     shared = {"schema_version": 1, "generated_at": result["generated_at"], "districts": {}}
     for district, info in result["districts"].items():
-        if info["status"] != "ok":
+        if not (info["status"] == "ok" or (
+            info["status"] == "stale" and recent_success(info.get("last_success_at"))
+        )):
             continue
         cards = []
         for p in info.get("candidates", []):

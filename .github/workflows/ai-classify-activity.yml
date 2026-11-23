@@ -3,7 +3,7 @@ name: AI classification of deputy publications
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 5,17 * * *"
+    - cron: "17 * * * *"
   push:
     paths:
       - "vk-posts.json"
@@ -74,7 +74,7 @@ jobs:
           GIGACHAT_MODEL: "GigaChat-2-Pro"
           GIGACHAT_SCOPE: "GIGACHAT_API_PERS"
           GIGACHAT_SMOKE_TEST: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
-          AI_POST_LIMIT: "60"
+          AI_POST_LIMIT: "100"
         run: |
           node --check scripts/classify-activity-ai.mjs
           node scripts/classify-activity-ai.mjs

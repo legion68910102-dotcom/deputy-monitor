@@ -77,7 +77,6 @@ function readJSON(file,empty){try{const raw=fs.readFileSync(file,"utf8").trim();
 function identity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function signature(r){let h=2166136261;for(const ch of identity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 // Some GigaChat versions wrap structured JSON in fences or surrounding text.
 function parseClassificationJSON(content){
  if(typeof content!=="string")throw Error("No model text content");

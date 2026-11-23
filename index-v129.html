@@ -1078,10 +1078,10 @@ window.addEventListener("load",function(){
       e.removed=e.removed.filter(n=>norm(n)!==key);
       restoredCount++;
      }
-     if(!existing.has(key)&&!wasRemoved){
+     if(!existing.has(key)){
       if(!(directoryDeputies[d]?.names||[]).some(n=>norm(n)===key)&&!(e.added||[]).some(n=>norm(n)===key))
        e.added.push(p.name);
-      addedCount++;
+      if(!wasRemoved)addedCount++;
      }
      // The authoritative name and source, not a guessed VK handle, are shared
      // with reports/rankings when the page rebuilds its roster on reload.

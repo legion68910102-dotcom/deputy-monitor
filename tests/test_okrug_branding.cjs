@@ -27,7 +27,7 @@ test("top duplicated navigation is removed; all content sections remain intact",
 test("UAO default branding shows actual emblem and 16 districts",()=>{
  const {elements,document}=load();
  assert.equal(elements["okrug-emblem-image"].src,"https://upload.wikimedia.org/wikipedia/commons/8/8d/UAO_district_of_Moscow_coa.png");
- assert.match(elements["okrug-emblem-image"].alt,/Южного административного округа Москвы/);
+ assert.match(elements["okrug-emblem-image"].alt,/Южный административный округ Москвы/);
  assert.equal(elements["okrug-emblem-caption"].textContent,"Южный административный округ Москвы");
  assert.match(elements["okrug-hero-intro"].textContent,/16 районов ЮАО/);
  assert.equal(elements["okrug-branding-panel"].dataset.okrug,"uao");

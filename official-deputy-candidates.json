@@ -1,6 +1,158 @@
 {
   "schema_version": 1,
-  "generated_at": null,
+  "generated_at": "2026-11-23T16:06:29.024023+00:00",
   "source": "Official council websites via GitHub Actions",
-  "districts": {}
+  "districts": {
+    "Бирюлёво Восточное": {
+      "source": "https://mrbv.ru/",
+      "checked_at": "2026-11-23T16:06:29.024033+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Бирюлёво Западное": {
+      "source": "https://www.m-bz.ru/",
+      "checked_at": "2026-11-23T16:06:29.947655+00:00",
+      "status": "unavailable",
+      "candidates": [],
+      "error": "SSLError"
+    },
+    "Братеево": {
+      "source": "https://mun-brateevo.ru/",
+      "checked_at": "2026-11-23T16:06:31.061768+00:00",
+      "status": "unavailable",
+      "candidates": [],
+      "error": "SSLError"
+    },
+    "Даниловский": {
+      "source": "https://danilovskoe.org/index.php/council-of-deputies",
+      "checked_at": "2026-11-23T16:06:31.607657+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Донской": {
+      "source": "https://mo-donskoy.ru/",
+      "checked_at": "2026-11-23T16:06:34.717621+00:00",
+      "status": "unavailable",
+      "candidates": [],
+      "error": "SSLError"
+    },
+    "Зябликово": {
+      "source": "https://mos-zyablikovo.ru/sovet-deputatov/",
+      "checked_at": "2026-11-23T16:06:35.305790+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Москворечье-Сабурово": {
+      "source": "https://mos-saburovo.ru/",
+      "checked_at": "2026-11-23T16:06:36.104062+00:00",
+      "status": "unavailable",
+      "candidates": [],
+      "error": "SSLError"
+    },
+    "Нагатино-Садовники": {
+      "source": "https://sovet.n-sadovniki.ru/",
+      "checked_at": "2026-11-23T16:06:36.725167+00:00",
+      "status": "ok",
+      "candidates": [
+        {
+          "name": "Каминский Юрий Викторович",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/27091143-c2bb-4045-b488-5b2d481b7f78.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/kaminskij_yurij_viktorovich/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Михарева Наталья Борисовна",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_mihareva_45a5266_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/mihareva_natal_ya_borisovna/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Никольская Анджела Вадимовна",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_nikol_skaya_0c3a0422_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/nikol_skaya_andzhela_vadimovna/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Сафонова Татьяна Владимировна",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_safonova_0c3a0405_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/safonova_tat_yana_vladimirovna/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Сезёмов Андрей Владимирович",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_sezemov_45a5005_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/sezyomov_andrej_vladimirovich/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Тихомиров Алексей Александрович",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad1_tihomirov_45a5110_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/tihomirov_aleksej_aleksandrovich/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Уваров Антон Анатольевич",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_uvarov_45a7844_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/uvarov_anton_anatol_evich/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        },
+        {
+          "name": "Чуганова Азиза Кабыльбековна",
+          "photo": "https://sovet.n-sadovniki.ru/files/sadovn/img/2022/nagsad2_chuganova_45a4969_copy.jpg",
+          "source": "https://sovet.n-sadovniki.ru/all_deputies/chuganova_aziza_kabyl_bekovna/",
+          "page": "https://sovet.n-sadovniki.ru/"
+        }
+      ]
+    },
+    "Нагатинский Затон": {
+      "source": "https://nzaton.ru/",
+      "checked_at": "2026-11-23T16:06:40.556237+00:00",
+      "status": "unavailable",
+      "candidates": [],
+      "error": "SSLError"
+    },
+    "Нагорный": {
+      "source": "https://monagornoe.ru/",
+      "checked_at": "2026-11-23T16:06:41.145211+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Орехово-Борисово Северное": {
+      "source": "https://mo-obs.ru/",
+      "checked_at": "2026-11-23T16:06:42.336242+00:00",
+      "status": "unavailable",
+      "candidates": [],
+      "error": "ReadTimeout"
+    },
+    "Орехово-Борисово Южное": {
+      "source": "https://mo-obu.ru/",
+      "checked_at": "2026-11-23T16:06:53.141287+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Царицыно": {
+      "source": "https://mcaricino.ru/",
+      "checked_at": "2026-11-23T16:06:55.803045+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Чертаново Северное": {
+      "source": "https://ch-sever.ru/",
+      "checked_at": "2026-11-23T16:07:04.426734+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Чертаново Центральное": {
+      "source": "https://chertanovocentr.ru/",
+      "checked_at": "2026-11-23T16:07:08.593297+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    },
+    "Чертаново Южное": {
+      "source": "https://vmo-chu.ru/",
+      "checked_at": "2026-11-23T16:07:12.030325+00:00",
+      "status": "no_candidates",
+      "candidates": []
+    }
+  }
 }

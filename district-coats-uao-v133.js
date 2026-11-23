@@ -24,10 +24,18 @@
   "Чертаново Центральное":["ff","Coat of Arms of Chertanovo Center (municipality in Moscow).png"],
   "Чертаново Южное":["d5","Coat of Arms of Chertanovo South (municipality in Moscow).png"]
  });
- function url(district){
-  if(!Object.prototype.hasOwnProperty.call(files,district))return "";
+ function path(district){
+  if(!Object.prototype.hasOwnProperty.call(files,district))return null;
   const [hash,filename]=files[district],stem=encodeURIComponent(filename.replaceAll(" ","_"));
-  return "https://upload.wikimedia.org/wikipedia/commons/thumb/"+hash[0]+"/"+hash+"/"+stem+"/120px-"+stem;
+  return {hash,stem};
  }
- root.dmDistrictCoats=Object.freeze({url:url,districts:Object.freeze(Object.keys(files)),source:"https://commons.wikimedia.org/wiki/Category:Coats_of_arms_of_municipal_divisions_of_Moscow"});
+ function url(district){
+  const part=path(district);if(!part)return "";
+  return "https://upload.wikimedia.org/wikipedia/commons/thumb/"+part.hash[0]+"/"+part.hash+"/"+part.stem+"/120px-"+part.stem;
+ }
+ function original(district){
+  const part=path(district);if(!part)return "";
+  return "https://upload.wikimedia.org/wikipedia/commons/"+part.hash[0]+"/"+part.hash+"/"+part.stem;
+ }
+ root.dmDistrictCoats=Object.freeze({url:url,original:original,districts:Object.freeze(Object.keys(files)),source:"https://commons.wikimedia.org/wiki/Category:Coats_of_arms_of_municipal_divisions_of_Moscow"});
 })(typeof window!=="undefined"?window:globalThis);

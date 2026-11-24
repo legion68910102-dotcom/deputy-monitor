@@ -74,7 +74,10 @@ function getAiResult(r){
  const item=aiDataset.posts?.[aiIdentity(r)];
  return item?.signature===aiSignature(r)&&Array.isArray(item.categories)?item:null;
 }
+let aiRefreshBusy=false,aiLastRefreshAt=0;
 async function loadAiDataset(){
+ if(aiRefreshBusy||Date.now()-aiLastRefreshAt<45*1000)return;
+ aiRefreshBusy=true;aiLastRefreshAt=Date.now();
  try{
   const response=await fetch("./ai-analysis.json?t="+Date.now(),{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
@@ -92,7 +95,8 @@ async function loadAiDataset(){
   }
   else if(data.status==="ready"||data.status==="partial")aiMessage="ИИ доступен, но ранее созданные результаты постепенно уточняются по новой утверждённой методике из 15 категорий.";
   else aiMessage="ИИ ещё не подключён. Для новых классификаций нужен GigaChat в GitHub Actions; пока используются правила.";
- }catch(e){aiMessage="Результаты ИИ недоступны; работают правила."}
+ }catch(e){aiMessage=aiDataset?"Не удалось проверить обновление ИИ; показаны последние проверенные результаты.":"Результаты ИИ недоступны; работают правила."}
+ finally{aiRefreshBusy=false}
  render(false);
 }
 
@@ -212,7 +216,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(!target){visibleLimit=Number.MAX_SAFE_INTEGER;render();target=document.getElementById(id)}
   if(target){target.open=true;target.scrollIntoView({behavior:"smooth",block:"center"})}
  });
- document.addEventListener("dm-publications-updated",()=>render(false));
+ document.addEventListener("dm-publications-updated",()=>{render(false);loadAiDataset()});
  loadAiDataset();
  render(false);
 });

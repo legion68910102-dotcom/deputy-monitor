@@ -294,6 +294,17 @@ def collect(root: Path, token: str, *, start_at: int = 0,
     return summary
 
 
+def verify_pilot(summary: dict) -> bool:
+    """A dry run must complete its selected sample and reach at least one wall."""
+    selected = summary.get("selected_profiles", 0)
+    return (
+        not summary.get("stopped_reason")
+        and selected > 0
+        and summary.get("attempted_profiles") == selected
+        and summary.get("successful_profiles", 0) > 0
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-profiles", type=int, default=None,
@@ -312,6 +323,8 @@ def main() -> None:
     summary = collect(root, token, max_profiles=args.max_profiles,
                       start_at=args.start_at, dry_run=args.dry_run)
     print("VK public wall collection:", json.dumps(summary, ensure_ascii=False))
+    if args.dry_run and not verify_pilot(summary):
+        raise SystemExit("VK pilot failed: incomplete sample, API error, or no accessible walls")
 
 
 if __name__ == "__main__":

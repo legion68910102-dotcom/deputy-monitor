@@ -6,7 +6,7 @@
   "policy_version": 3,
   "provider": "gigachat",
   "status": "partial",
-  "generated_at": "2026-11-24T03:12:17.715Z",
+  "generated_at": "2026-11-24T04:22:16.375Z",
   "model": "GigaChat-2-Pro",
   "source": "vk-posts.json",
   "total_posts": 1420,

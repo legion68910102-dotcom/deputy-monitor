@@ -103,6 +103,21 @@ jobs:
           git add ai-analysis.json
           if ! git diff --cached --quiet; then
             git commit -m "Update AI activity classifications"
-            git push origin HEAD:main
-            gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+            for attempt in 1 2 3 4; do
+              if git push origin HEAD:main; then
+                gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+                exit 0
+              fi
+              echo "Remote branch changed; safely rebasing AI cache ($attempt/4)"
+              # If another AI run changed the same analysis cache, stop instead
+              # of silently overwriting someone else's committed classifications.
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::AI cache conflict: no forced overwrite; next scheduled run will retry"
+                exit 1
+              fi
+              sleep $((attempt * 2))
+            done
+            echo "::error::Could not publish AI cache after four attempts"
+            exit 1
           fi

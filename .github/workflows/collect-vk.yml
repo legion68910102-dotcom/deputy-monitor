@@ -22,6 +22,8 @@ on:
     paths:
       - 'scripts/collect_vk.py'
       - 'tests/test_collect_vk.py'
+      - 'tests/test_verify_vk_collection.py'
+      - 'scripts/verify_vk_collection.py'
       - 'tests/test_vk_monitor_freshness.cjs'
       - 'vk-monitor-freshness-v1.js'
       - 'index-v129.html'
@@ -48,7 +50,7 @@ jobs:
       - name: Python syntax and deterministic VK mocks
         run: |
           python -m py_compile scripts/collect_vk.py
-          python -m unittest discover -s tests -p 'test_collect_vk.py' -v
+          python -m unittest discover -s tests -p 'test_*vk*.py' -v
           node --check vk-monitor-freshness-v1.js
           node tests/test_vk_monitor_freshness.cjs
 
@@ -126,3 +128,6 @@ jobs:
             echo "Dispatching downstream workflow $workflow"
             gh workflow run "$workflow" --repo "$GITHUB_REPOSITORY" --ref main
           done
+      - name: Validate public VK walls were actually checked
+        if: ${{ github.event_name == 'schedule' || inputs.mode == 'full' }}
+        run: python scripts/verify_vk_collection.py

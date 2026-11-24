@@ -1,0 +1,42 @@
+name: Check Apify connection (no scraping)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-apify-connection.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Validate Apify token using read-only account limits API
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          import urllib.request
+          import urllib.error
+          token = os.environ.get("APIFY_TOKEN", "").strip()
+          if not token:
+              raise SystemExit("APIFY_TOKEN is missing")
+          req = urllib.request.Request(
+              "https://api.apify.com/v2/users/me/limits",
+              headers={"Authorization": "Bearer " + token},
+              method="GET"
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=20) as response:
+                  print("Apify read-only authentication: HTTP", response.status)
+                  if response.status != 200:
+                      raise SystemExit(1)
+          except urllib.error.HTTPError as error:
+              raise SystemExit("Apify authentication/limits check HTTP " + str(error.code))
+          except (urllib.error.URLError, TimeoutError):
+              raise SystemExit("Apify connection unavailable")
+          print("No Actor started; no VK requests; no account response or token logged.")
+          PY

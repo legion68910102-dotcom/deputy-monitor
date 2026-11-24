@@ -56,7 +56,7 @@ def api_wall_get(handle: str, token: str) -> dict:
         "filter": "owner", "v": API_VERSION, "access_token": token
     }).encode("utf-8")
     req = urllib.request.Request(
-        "https://api.vk.com/method/wall.get",
+        "https://api.vk.ru/method/wall.get",
         data=params, method="POST",
         headers={"Content-Type": "application/x-www-form-urlencoded",
                  "User-Agent": "DeputyMonitor/1.0"}

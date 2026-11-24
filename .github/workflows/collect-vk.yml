@@ -54,9 +54,9 @@ jobs:
   collect:
     name: Pilot or full official VK API collection
     needs: offline-tests
-    if: >-
-      ${{ (github.event_name == 'workflow_dispatch' && inputs.mode != 'test') ||
-          (github.event_name == 'schedule' && vars.VK_COLLECTION_ENABLED == 'true') }}
+    # User enabled automatic monitoring: scheduled collection must run and
+    # fail visibly when VK_TOKEN is absent, never show a green 'tests only' run.
+    if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode != 'test') }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -73,7 +73,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "$VK_TOKEN" ]; then
-            echo "::error::VK_TOKEN is missing. No VK requests were made."
+            echo "::error::VK_TOKEN is missing in GitHub Actions Secrets. Automatic VK monitoring is NOT active; configure this secret to enable it. No VK requests were made."
             exit 1
           fi
           if [ "$VK_MODE" = full ]; then

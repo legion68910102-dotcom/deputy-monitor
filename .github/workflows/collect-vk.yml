@@ -53,6 +53,18 @@ jobs:
           python -m unittest discover -s tests -p 'test_*vk*.py' -v
           node --check vk-monitor-freshness-v1.js
           node tests/test_vk_monitor_freshness.cjs
+      - name: Report VK credential readiness without exposing secrets
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        shell: bash
+        run: |
+          if [ -n "$VK_TOKEN" ]; then
+            echo "VK_TOKEN repository secret is configured (actual wall.get access not yet verified)."
+            echo "VK credential: present; permission check requires pilot/full collection." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::warning::VK_TOKEN repository secret is NOT configured. Real VK collection is blocked."
+            echo "VK credential: missing; scheduled live collection will fail until the owner configures VK_TOKEN." >> "$GITHUB_STEP_SUMMARY"
+          fi
 
   collect:
     name: Pilot or full official VK API collection

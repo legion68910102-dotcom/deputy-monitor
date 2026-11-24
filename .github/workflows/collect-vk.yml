@@ -30,6 +30,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: official-vk-public-posts
@@ -104,6 +105,8 @@ jobs:
           fi
       - name: Commit verified public VK data without force-push
         if: ${{ (github.event_name == 'schedule') || (inputs.mode == 'full') }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
@@ -117,3 +120,9 @@ jobs:
           git commit -m "Update official VK API public posts and coverage"
           git pull --rebase origin main
           git push origin HEAD:main
+          # Actions commits do not fire normal push workflows. Dispatch explicitly
+          # so posts, AI categories, downloadable reports and Pages stay in sync.
+          for workflow in ai-classify-activity.yml build-excel-report.yml pages.yml; do
+            echo "Dispatching downstream workflow $workflow"
+            gh workflow run "$workflow" --repo "$GITHUB_REPOSITORY" --ref main
+          done

@@ -1,0 +1,14 @@
+const assert=require("node:assert/strict");
+const {summarize,STALE_AFTER_MS}=require("../vk-monitor-freshness-v1.js");
+const now=Date.parse("2026-11-24T16:00:00Z");
+const profiles={one:{status:"success",checked_at:new Date(now-5000).toISOString()},two:{status:"checked_unavailable",checked_at:new Date(now-5000).toISOString()}};
+assert.equal(summarize({profiles:{one:{status:"needs_token"},two:{status:"needs_token"}},roster_size:2},{posts:[]},now).state,"not-configured");
+const ok={profiles,roster_size:2,generated_at:new Date(now-5000).toISOString(),vk_api_last_run:{successful_profiles:1}};
+const posts={posts:[{profile:"one"}],vk_api_last_checked_at:new Date(now-5000).toISOString(),vk_api_last_run:{successful_profiles:1}};
+const current=summarize(ok,posts,now);
+assert.equal(current.state,"current");
+assert.equal(current.checked,2);assert.equal(current.successful,1);assert.equal(current.unavailable,1);
+assert.equal(summarize({...ok,roster_size:3},posts,now).state,"partial");
+assert.equal(summarize(ok,{...posts,vk_api_last_checked_at:new Date(now-STALE_AFTER_MS-1000).toISOString()},now).state,"stale");
+assert.equal(summarize(ok,{...posts,vk_api_last_run:{stopped_reason:"auth_error"}},now).state,"failed");
+console.log("VK freshness tests passed");

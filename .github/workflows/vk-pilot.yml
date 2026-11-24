@@ -1,8 +1,8 @@
 name: Test free VK collection (one profile)
+# Legacy single-profile diagnostic is manual only. Real automatic collection
+# is .github/workflows/collect-vk.yml (159 profiles, twice daily).
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '23 6 * * *'
 permissions:
   contents: read
 jobs:

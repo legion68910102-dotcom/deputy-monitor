@@ -24,7 +24,7 @@
   const dateLabel=Number.isFinite(stamp)?new Date(stamp).toLocaleString("ru-RU",{timeZone:"Europe/Moscow",dateStyle:"short",timeStyle:"short"})+" МСК":"нет данных";
   const base={checked,successful,unavailable,needToken,total,postsCount,age,lastChecked,dateLabel};
   if(!Number.isFinite(stamp))return {...base,state:"not-configured",headline:"VK: автоматический сбор ещё не запускался",
-   message:"Сохранённые публикации доступны, но новых проверок VK API нет. Необходимы VK_TOKEN и включение VK_COLLECTION_ENABLED."};
+   message:"Сохранённые публикации доступны, но новых проверок VK API нет. Нужен действующий секрет VK_TOKEN в GitHub Actions; расписание уже включено."};
   if(summary&&summary.stopped_reason)return {...base,state:"failed",headline:"VK: сбор остановлен",
    message:"Последняя попытка: "+dateLabel+". Причина: "+String(summary.stopped_reason)+". Ранее полученные записи сохранены."};
   if(age>STALE_AFTER_MS)return {...base,state:"stale",headline:"VK: опубликованные данные устарели",

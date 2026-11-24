@@ -560,13 +560,21 @@ main > #deputy-archive > details.ranking-native > summary:focus-visible{outline:
  outline:3px solid #304d87!important;
  outline-offset:3px!important;
 }
+.vk-sync-banner{max-width:1180px;margin:16px auto 18px;padding:14px 18px;border:1px solid #d9e6d9;border-radius:14px;background:#edf7ee;color:#254638;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;box-shadow:0 3px 14px rgba(25,55,30,.04)}
+.vk-sync-banner strong{display:block;font-size:14px;margin-bottom:3px}
+.vk-sync-banner .vk-sync-details{font-size:12px;line-height:1.45}
+.vk-sync-banner[data-state="stale"],.vk-sync-banner[data-state="not-configured"],.vk-sync-banner[data-state="failed"]{background:#fff7e4;border-color:#e9dfb9;color:#705521}
+.vk-sync-banner[data-state="partial"]{background:#eef2fb;border-color:#d9dff0}
+.vk-sync-banner .vk-sync-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.vk-sync-banner .vk-sync-controls button{white-space:nowrap}
+@media(max-width:700px){.vk-sync-banner{margin:12px 12px 16px;padding:12px}}
 </style></head>
 <body><header><div class="shell"><div class="top"><div class="brand"><span class="brandmark">◈</span>ЦПД <span style="font-weight:400;color:#a7b7d3">/ аналитика</span></div><div class="topright">Муниципальный мониторинг</div></div><div class="hero"><div class="eyebrow">Публичная коммуникация • VK</div><h1>Цифровой профиль<br>депутата</h1><p id="okrug-hero-intro">Справочник муниципальных депутатов 16 районов ЮАО и мониторинг доступных открытых публикаций. Данные о действующем составе и активности требуют проверки.</p><div class="pill"><span class="dot"></span>Пилотная версия · ежедневный сбор ожидает доступа VK API</div></div><figure id="okrug-branding-panel" class="okrug-branding-panel" aria-label="Символика административного округа">
 <img id="okrug-emblem-image" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/UAO_district_of_Moscow_coa.png" alt="Гербовая эмблема Южного административного округа Москвы" width="600" height="440" decoding="async" fetchpriority="high" referrerpolicy="no-referrer">
 <div id="okrug-emblem-fallback" class="okrug-emblem-fallback" role="img" aria-label="Округ" hidden>ЮАО</div>
 </figure></div></header>
-<main><section id="overview" class="overview-independent"><details class="ranking-native"><summary>📊 Обзор мониторинга <span aria-hidden="true">⌄</span></summary><div class="ranking-native-body"><p class="small">159 записей · 16 районов ЮАО</p><div class="kpis"><div class="kpi"><div class="label">Депутатов в справочнике</div><div class="value">159</div><div class="hint">Состав требует актуализации</div></div><div class="kpi"><div class="label">Публикаций в данных</div><div class="value" id="total">0</div><div class="hint">VK API и локальный CSV</div></div><div class="kpi"><div class="label">Попыток VK API</div><div class="value" id="checked">—</div><div class="hint">Проверки доступности VK</div></div><div class="kpi"><div class="label">Получено через API</div><div class="value" id="api-count">—</div><div class="hint">Не считать за ноль</div></div></div><div class="panel"><div class="notice"><span class="notice-icon">ⓘ</span><div><strong>Данные требуют подтверждения.</strong> Проверка доступности страницы VK не означает, что её публикации получены. Пустые показатели не означают отсутствие работы депутата. Импорт CSV хранится только на вашем устройстве.</div></div></div></div></details></section>
-<section id="deputies" class="deputies-independent"><details class="ranking-native"><summary>👤 Профили депутатов <span class="deputies-fold-arrow" aria-hidden="true">⌄</span></summary><div class="ranking-native-body"><p class="small" id="filter-label">Все 159 профилей · 16 районов</p><div class="toolbar" style="margin-bottom:13px"><input class="search" id="search" type="search" placeholder="Поиск по фамилии и имени…" aria-label="Поиск депутата по фамилии и имени"><button class="btn alt" id="refresh-monitor">↻ Обновить статусы</button></div><p class="small">Справочный список депутатов всех 16 районов ЮАО. Состав сверяйте по официальным сайтам советов: справочник может не учитывать досрочное прекращение полномочий. Для всех 159 депутатов добавлены VK-ссылки с источниками; актуальность страниц проверяется отдельно.</p><div id="profiles" class="districts"></div></div></details></section>
+<main><div class="vk-sync-banner" id="vk-sync-banner" data-state="loading" role="status" aria-live="polite"><div><strong id="vk-sync-heading">🔄 Проверяем опубликованные данные VK</strong><span class="vk-sync-details" id="vk-sync-details">На каждом открытии загружаем свежий опубликованный снимок; запрос к VK выполняет только защищённый серверный сбор.</span></div><div class="vk-sync-controls"><button class="btn alt" id="vk-sync-reload" type="button">↻ Обновить данные</button></div></div><section id="overview" class="overview-independent"><details class="ranking-native"><summary>📊 Обзор мониторинга <span aria-hidden="true">⌄</span></summary><div class="ranking-native-body"><p class="small">159 записей · 16 районов ЮАО</p><div class="kpis"><div class="kpi"><div class="label">Депутатов в справочнике</div><div class="value">159</div><div class="hint">Состав требует актуализации</div></div><div class="kpi"><div class="label">Публикаций в данных</div><div class="value" id="total">0</div><div class="hint">VK API и локальный CSV</div></div><div class="kpi"><div class="label">Попыток VK API</div><div class="value" id="checked">—</div><div class="hint">Проверки доступности VK</div></div><div class="kpi"><div class="label">Получено через API</div><div class="value" id="api-count">—</div><div class="hint">Не считать за ноль</div></div></div><div class="panel"><div class="notice"><span class="notice-icon">ⓘ</span><div><strong>Данные требуют подтверждения.</strong> Проверка доступности страницы VK не означает, что её публикации получены. Пустые показатели не означают отсутствие работы депутата. Импорт CSV хранится только на вашем устройстве.</div></div></div></div></details></section>
+<section id="deputies" class="deputies-independent"><details class="ranking-native"><summary>👤 Профили депутатов <span class="deputies-fold-arrow" aria-hidden="true">⌄</span></summary><div class="ranking-native-body"><p class="small" id="filter-label">Все 159 профилей · 16 районов</p><div class="toolbar" style="margin-bottom:13px"><input class="search" id="search" type="search" placeholder="Поиск по фамилии и имени…" aria-label="Поиск депутата по фамилии и имени"><button class="btn alt" id="refresh-monitor">↻ Проверить опубликованные данные</button></div><p class="small">Справочный список депутатов всех 16 районов ЮАО. Состав сверяйте по официальным сайтам советов: справочник может не учитывать досрочное прекращение полномочий. Для всех 159 депутатов добавлены VK-ссылки с источниками; актуальность страниц проверяется отдельно.</p><div id="profiles" class="districts"></div></div></details></section>
 <section id="activity"><details class="activity-excel-fold"><summary>📰 Лента публикаций <span class="activity-fold-arrow" aria-hidden="true">⌄</span></summary><div class="activity-excel-content"><p class="small">Подтверждённый VK API и локальный CSV · Таблица с горизонтальной прокруткой</p><div class="activity-date-filters" style="display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:12px 0 16px"><label style="display:grid;gap:5px;font-weight:600">Дата начала<input id="activity-date-from" type="date" aria-label="Дата начала публикаций" style="padding:10px;border:1px solid #cbd5e1;border-radius:9px"></label><label style="display:grid;gap:5px;font-weight:600">Дата окончания<input id="activity-date-to" type="date" aria-label="Дата окончания публикаций" style="padding:10px;border:1px solid #cbd5e1;border-radius:9px"></label><label style="display:grid;gap:5px;font-weight:600">Поиск по ФИО<input id="activity-person-search" type="search" placeholder="Фамилия, имя или отчество" aria-label="Поиск депутата по ФИО" style="padding:10px;border:1px solid #cbd5e1;border-radius:9px;min-width:220px"></label><button id="activity-date-reset" type="button" style="padding:10px 14px;border:1px solid #cbd5e1;border-radius:9px;background:white">Все даты</button></div><p id="activity-date-count" class="small" aria-live="polite"></p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px"><button id="activity-copy-links" type="button" style="padding:10px 14px;border:1px solid #cbd5e1;border-radius:9px;background:#fff">Скопировать ссылки</button><button id="activity-export-links" type="button" style="padding:10px 14px;border:1px solid #cbd5e1;border-radius:9px;background:#fff">Скачать ссылки CSV</button></div><p id="activity-links-status" class="small" aria-live="polite"></p><div class="panel"><div class="tablewrap activity-excel-scroll"><table class="activity-excel-table"><thead><tr><th>Дата</th><th>Депутат</th><th>Публикация</th><th>Лайки</th><th>Источник</th></tr></thead><tbody id="posts"></tbody></table></div></div></div></details></section>
 <section id="report" class="ranking-independent"><details class="ranking-native"><summary>📑 Отчёты и таблицы <span aria-hidden="true">⌄</span></summary><div class="ranking-native-body"><div class="panel"><p class="small">Выберите депутата и период для просмотра на экране. Кнопка Excel скачивает готовый проверенный файл XLSX непосредственно с сайта, без сборки на телефоне. В нём все 159 депутатов, в том числе без данных; файл формируется из опубликованной базы сайта.</p><div class="report-fields"><label>Сортировка отчёта<select id="report-sort"><option value="district">По районам А–Я, затем по депутатам А–Я</option><option value="name">По депутатам А–Я</option></select></label><label>Депутат<select id="report-person"><option value="all">Все депутаты (159)</option></select></label><label>Дата начала<input id="report-from" type="date"></label><label>Дата окончания<input id="report-to" type="date"></label></div><div class="toolbar" style="margin-top:15px"><button class="btn" id="report-preview">👁 Просмотр на экране</button><a class="btn" id="report-download" href="./Deputies_YUAO_Report.xlsx" download="Deputies_YUAO_Report.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">↓ Скачать таблицу Excel</a></div><p id="report-status" class="small" role="status"></p><div id="report-preview-area" class="tablewrap" style="display:none;margin-top:14px"></div><p class="small">Просмотр на экране учитывает выбранный период и локально импортированные публикации. Скачиваемый Excel — общий снимок опубликованной базы, он не включает данные, добавленные только в этом браузере, и не фильтруется по выбранным датам. В Excel-файле три листа: «Сводка», «Публикации» и «Без данных». Файл предназначен для Excel, Numbers и других программ, поддерживающих XLSX.</p></div></div></details></section><section id="ranking" class="ranking-independent"><details class="ranking-native"><summary>🏆 Рейтинг депутатов ЮАО <span aria-hidden="true">⌄</span></summary><div class="ranking-native-body"><p class="small">По данным отчёта Excel · 159 депутатов</p><div class="panel"><p class="small">Рейтинг по загруженным публикациям VK за выбранный период. Можно сравнить количество публикаций, лайков, комментариев, репостов и просмотров. Это рейтинг наблюдаемой публичной активности, <b>не оценка качества депутатской работы</b>. Excel скачивается готовым файлом с сайта и настроен для печати на A4; в нём рейтинг по количеству публикаций из опубликованной базы, без учёта локальных данных и выбранных на экране фильтров. Отсутствие данных не означает отсутствие деятельности.</p><div class="report-fields"><label>Показатель<select id="ranking-metric"><option value="posts">Количество публикаций</option><option value="likes">Лайки</option><option value="comments">Комментарии</option><option value="reposts">Репосты</option><option value="views">Просмотры</option></select></label><label>Дата начала<input id="ranking-from" type="date"></label><label>Дата окончания<input id="ranking-to" type="date"></label></div><div class="toolbar" style="margin-top:12px"><label><input type="checkbox" id="ranking-show-unverified" checked> Показывать всех 159 депутатов, включая тех, по кому нет данных</label><button class="btn" id="ranking-refresh">↻ Обновить рейтинг</button><a class="btn" href="./Deputies_YUAO_Ranking.xlsx" download="Deputies_YUAO_Ranking.xlsx" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">↓ Скачать рейтинг Excel</a><button class="btn alt" id="ranking-print" type="button" onclick="window.print()">🖨 Распечатать рейтинг</button></div><div id="ranking-groups" class="ranking-groups" aria-label="Цветовые категории рейтинга"></div><p id="ranking-summary" class="small" role="status">Загрузка данных…</p><div class="tablewrap"><table><thead><tr><th>Место</th><th>Район</th><th>Депутат</th><th>Значение</th><th>Данные</th></tr></thead><tbody id="ranking-body"></tbody></table></div></div></div></details></section>
 
@@ -579,6 +587,7 @@ main > #deputy-archive > details.ranking-native > summary:focus-visible{outline:
 <script src="./repost-detection-v131.js"></script>
 <script src="./personal-workspace-v130.js?ui=removed-20261123"></script>
 <script src="./official-deputy-snapshot.js"></script>
+<script src="./vk-monitor-freshness-v1.js?rev=20261124"></script>
 <script>
 let handles=["natalia_shabasheva","shmakova_os","ekaterina.tyutyunnikova","aabulatov","vidutinaov","tishkovaea","elena.rubtsovanazarova","nuykinakv"];
 let names={"natalia_shabasheva":"Наталья Шабашева","shmakova_os":"О. С. Шмакова","ekaterina.tyutyunnikova":"Екатерина Тютюнникова","aabulatov":"А. А. Булатов","vidutinaov":"О. В. Видутина","tishkovaea":"Е. А. Тишкова","elena.rubtsovanazarova":"Елена Рубцова-Назарова","nuykinakv":"К. В. Нуйкина"};
@@ -684,7 +693,9 @@ const feedDeputyName=h=>{const p=window.deputyRoster?.find(p=>p.handle===h);retu
 const el=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const num=x=>x===undefined||x===null||String(x).trim()===""?null:Number.isFinite(Number(x))?Number(x):null;
-let monitor=null,apiRows=[],rows=[];try{let data=JSON.parse(localStorage.getItem("dm_posts")||"[]");if(Array.isArray(data))rows=data}catch(e){}
+let monitor=null,apiRows=[],rows=[];
+try{const cached=JSON.parse(sessionStorage.getItem("dm_vk_posts")||"[]");if(Array.isArray(cached))apiRows=cached}catch(e){}
+try{let data=JSON.parse(localStorage.getItem("dm_posts")||"[]");if(Array.isArray(data))rows=data}catch(e){}
 function allRows(){const m=new Map();for(const r of apiRows)m.set(r.profile+"|"+r.url,r);for(const r of rows)m.set(r.profile+"|"+r.url,r);const list=[...m.values()];return window.dmPersonalWorkspace?window.dmPersonalWorkspace.applyPosts(list):list}
 function render(){
 const combined=allRows();
@@ -742,17 +753,86 @@ window.activitySelectedLinks=feedLinks;
 if(dateCount)dateCount.textContent="Депутатов в выборке: "+feedPeople.length+" из "+feedRoster.length+" · Публикаций: "+feedPeople.reduce((n,p)=>n+(feedPosts.get(p.handle||"")||[]).length,0)+" · Ссылок: "+feedLinks.length;
 el("posts").innerHTML=feedRows.join("")||'<tr><td colspan="5">Справочник депутатов не загружен</td></tr>';
 }
-async function refreshMonitor(){try{try{const ar=await fetch("./vk-avatars.json?ts="+Date.now(),{cache:"no-store"});if(ar.ok){const aj=await ar.json();vkAvatars=aj.profiles||{}}}catch(e){}const r=await fetch("./monitor-status.json?ts="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);monitor=await r.json();try{const pr=await fetch("./vk-posts.json?ts="+Date.now(),{cache:"no-store"});if(pr.ok){const j=await pr.json();apiRows=Array.isArray(j.posts)?j.posts:[];try{sessionStorage.setItem("dm_vk_posts",JSON.stringify(apiRows))}catch(e){}}}catch(e){}const a=Object.values(monitor.profiles||{}),n=a.filter(x=>x.checked_at&&x.status!=="needs_token").length,success=a.filter(x=>x.status==="success").length;el("checked").textContent=n;el("api-count").textContent=success;el("monitor-summary").textContent="Попыток чтения VK API: "+n+" из "+a.length+". Последний отчёт: "+(monitor.generated_at?new Date(monitor.generated_at).toLocaleString("ru-RU"):"ещё не проводилось")+". Публикации из VK API: "+apiRows.length+". Без подтверждённого доступа данные не добавляются.";render()}catch(e){el("monitor-summary").textContent="Статусы пока недоступны: "+e.message}}
+// GitHub Pages is read-only. These requests reload the published snapshot;
+// only the credential-protected GitHub Actions job can query VK itself.
+let dmLastVisitRefresh=0,dmMonitorPromise=null,dmPublishedVersion="",dmLastPostsSnapshot=null;
+async function dmFetchPublishedJSON(filename){
+ const response=await fetch("./"+filename+"?ts="+Date.now(),{cache:"no-store",credentials:"omit"});
+ if(!response.ok)throw Error(filename+": HTTP "+response.status);
+ return response.json();
+}
+function dmShowVkStatus(posts,error){
+ const banner=el("vk-sync-banner"),heading=el("vk-sync-heading"),details=el("vk-sync-details");
+ const info=window.dmVkFreshness?.summarize(monitor,posts)||null;
+ if(info){
+  el("checked").textContent=info.checked;
+  el("api-count").textContent=info.successful;
+ }
+ const title=info?.headline||"VK: сведения о сборе недоступны";
+ const message=info?.message||"Состояние серверного сбора не подтверждено.";
+ banner.dataset.state=error?"failed":(info?.state||"failed");
+ heading.textContent=(error?"⚠️ ":"🔄 ")+title;
+ details.textContent=(error?"Не удалось проверить все опубликованные файлы: "+error+". Показаны последние доступные данные. ":"")+
+  message+" В базе: "+apiRows.length+" публикаций (включая ранее импортированные)."+
+  " Повторная загрузка страницы проверяет опубликованный снимок, но сама не вызывает VK API.";
+ el("monitor-summary").textContent=details.textContent;
+}
+async function refreshMonitor(options){
+ const manual=Boolean(options?.manual);
+ if(dmMonitorPromise)return dmMonitorPromise;
+ // Avoid bursts when the mobile browser fires focus, pageshow and visibilitychange together.
+ if(!manual&&Date.now()-dmLastVisitRefresh<60*1000)return;
+ dmLastVisitRefresh=Date.now();
+ const manualButtons=[el("vk-sync-reload"),el("refresh-monitor")].filter(Boolean);
+ for(const b of manualButtons)b.disabled=true;
+ const banner=el("vk-sync-banner");
+ banner.dataset.state="loading";
+ el("vk-sync-heading").textContent="🔄 Проверяем опубликованные данные VK…";
+ dmMonitorPromise=(async()=>{
+  const [statusResult,postsResult,avatarResult]=await Promise.allSettled([
+   dmFetchPublishedJSON("monitor-status.json"),
+   dmFetchPublishedJSON("vk-posts.json"),
+   dmFetchPublishedJSON("vk-avatars.json")
+  ]);
+  let issue="",changed=false;
+  if(statusResult.status==="fulfilled"&&statusResult.value?.profiles){
+   monitor=statusResult.value;
+  }else issue="monitor-status.json недоступен";
+  if(postsResult.status==="fulfilled"&&Array.isArray(postsResult.value?.posts)){
+   const data=postsResult.value,version=String(data.generated_at||"")+"|"+String(data.vk_api_last_checked_at||"")+"|"+data.posts.length;
+   if(version!==dmPublishedVersion){apiRows=data.posts;dmPublishedVersion=version;changed=true}
+   dmLastPostsSnapshot=data;
+   try{sessionStorage.setItem("dm_vk_posts",JSON.stringify(apiRows))}catch(e){}
+  }else issue+=(issue?"; ":"")+"vk-posts.json недоступен";
+  if(avatarResult.status==="fulfilled"&&avatarResult.value?.profiles){
+   const freshAvatars=avatarResult.value.profiles;
+   if(JSON.stringify(freshAvatars)!==JSON.stringify(vkAvatars)){vkAvatars=freshAvatars;changed=true}
+  }
+  dmShowVkStatus(dmLastPostsSnapshot,issue);
+  if(changed||statusResult.status==="fulfilled")render();
+  return !issue;
+ })().catch(error=>{dmShowVkStatus(dmLastPostsSnapshot,String(error.message||error));return false})
+ .finally(()=>{dmMonitorPromise=null;for(const b of manualButtons)b.disabled=false});
+ return dmMonitorPromise;
+}
+
 function csv(s){let lines=[],line=[],v="",q=false;for(let i=0;i<s.length;i++){let c=s[i];if(q){if(c==='"'&&s[i+1]==='"'){v+='"';i++}else if(c==='"')q=false;else v+=c}else if(c==='"')q=true;else if(c===','){line.push(v);v=""}else if(c==='\n'){line.push(v.replace(/\r$/,""));lines.push(line);line=[];v=""}else v+=c}if(v||line.length){line.push(v);lines.push(line)}return lines}
 el("file").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let data=csv((await f.text()).replace(/^\uFEFF/,"")),head=(data.shift()||[]).map(s=>s.trim().toLowerCase());if(!head.includes("profile")||!head.includes("date"))throw Error("Нужны колонки profile и date");let imported=data.filter(x=>x.some(y=>y.trim())).map(a=>Object.fromEntries(head.map((k,i)=>[k,(a[i]||"").trim()])));if(imported.some(r=>!handles.includes(r.profile)||!/^\d{4}-\d{2}-\d{2}/.test(r.date)))throw Error("Проверьте названия профилей и даты");rows=imported;localStorage.setItem("dm_posts",JSON.stringify(rows));el("status").textContent="Загружено: "+rows.length;render()}catch(err){el("status").textContent="Ошибка: "+err.message}e.target.value=""};
 el("clear").onclick=()=>{if(confirm("Удалить локальные данные?")){rows=[];localStorage.removeItem("dm_posts");render()}};
 el("sample").onclick=()=>{let blob=new Blob(["profile,date,url,text,likes,comments,reposts,views,followers\n"],{type:"text/csv;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="deputy-monitor-template.csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
 el("export").onclick=()=>{if(!rows.length){el("status").textContent="Нет загруженных публикаций для экспорта";return}const cols=["profile","date","url","text","likes","comments","reposts","views","followers"],quote=v=>'"'+String(v??"").replace(/"/g,'""')+'"',content="\uFEFF"+cols.join(",")+"\r\n"+rows.map(r=>cols.map(c=>quote(r[c])).join(",")).join("\r\n")+"\r\n",blob=new Blob([content],{type:"text/csv;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="deputy-monitor-export.csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);el("status").textContent="Экспортировано публикаций: "+rows.length};
 const postSelect=el("post-person");handles.forEach(h=>{let o=document.createElement("option");o.value=h;o.textContent=displayName(h);postSelect.appendChild(o)});const now=new Date();el("post-date").value=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");el("post-add").onclick=()=>{let profile=postSelect.value,date=el("post-date").value,url=el("post-url").value.trim(),description=el("post-text").value.trim(),likes=el("post-likes").value.trim();try{const u=new URL(url);if(u.protocol!=="https:"||!["vk.com","www.vk.com","vk.ru","www.vk.ru","m.vk.com"].includes(u.hostname))throw Error("Укажите ссылку на публикацию VK");if(!date||!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error("Выберите дату");if(!description)throw Error("Добавьте текст или краткое описание");if(likes&&(!/^\d+$/.test(likes)||Number(likes)>1000000000))throw Error("Проверьте число лайков");if(rows.some(r=>r.profile===profile&&r.url===url))throw Error("Эта ссылка уже сохранена для депутата");rows.push({profile,date,url,text:description,likes,comments:"",reposts:"",views:"",followers:""});localStorage.setItem("dm_posts",JSON.stringify(rows));el("post-add-status").textContent="Публикация сохранена в этом браузере. Можно сформировать отчёт.";el("post-url").value="";el("post-text").value="";el("post-likes").value="";render()}catch(e){el("post-add-status").textContent="Ошибка: "+e.message}};
-el("search").oninput=render;el("refresh-monitor").onclick=refreshMonitor;["activity-date-from","activity-date-to","activity-person-search"].forEach(id=>{const input=el(id);if(input){input.addEventListener("change",render);if(id==="activity-person-search")input.addEventListener("input",render)}});el("activity-date-reset")?.addEventListener("click",()=>{el("activity-date-from").value="";el("activity-date-to").value="";render()});function selectedLinksText(){return (window.activitySelectedLinks||[]).map(r=>r.name+" | "+r.date+" | "+r.url).join("\n")}
+el("search").oninput=render;
+el("refresh-monitor").onclick=()=>refreshMonitor({manual:true});
+el("vk-sync-reload").onclick=()=>refreshMonitor({manual:true});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)refreshMonitor()});
+window.addEventListener("focus",()=>{if(!document.hidden)refreshMonitor()});
+window.addEventListener("online",()=>refreshMonitor());
+window.addEventListener("pageshow",e=>{if(e.persisted)refreshMonitor()});
+setInterval(()=>{if(!document.hidden)refreshMonitor()},10*60*1000);["activity-date-from","activity-date-to","activity-person-search"].forEach(id=>{const input=el(id);if(input){input.addEventListener("change",render);if(id==="activity-person-search")input.addEventListener("input",render)}});el("activity-date-reset")?.addEventListener("click",()=>{el("activity-date-from").value="";el("activity-date-to").value="";render()});function selectedLinksText(){return (window.activitySelectedLinks||[]).map(r=>r.name+" | "+r.date+" | "+r.url).join("\n")}
 el("activity-copy-links")?.addEventListener("click",async()=>{const value=selectedLinksText(),status=el("activity-links-status");if(!value){status.textContent="В выбранном периоде ссылок нет";return}try{await navigator.clipboard.writeText(value);status.textContent="Скопировано ссылок: "+window.activitySelectedLinks.length}catch(e){status.textContent="Не удалось скопировать автоматически. Используйте скачивание CSV."}});
 el("activity-export-links")?.addEventListener("click",()=>{const links=window.activitySelectedLinks||[],status=el("activity-links-status");if(!links.length){status.textContent="В выбранном периоде ссылок нет";return}const q=v=>'"'+String(v??"").replace(/"/g,'""')+'"';const csv="\uFEFFФИО;Дата;Ссылка\r\n"+links.map(r=>[r.name,r.date,r.url].map(q).join(";")).join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="deputy-publication-links.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent="CSV подготовлен: "+links.length+" ссылок"});
-render();refreshMonitor();
+render();refreshMonitor({manual:true});
 </script><script id="report-inline-v87" defer>
 /* Offline XLSX generator: no external libraries, no network calls. */
 (function(){
@@ -822,7 +902,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  sel.querySelector('option[value="all"]').textContent="Все депутаты ("+roster.length+")";
  for(const h of ordered){const o=document.createElement("option");o.value=h;o.textContent=names[h]||h;sel.appendChild(o)}
  const today=new Date(),iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
- $("report-from").value="2026-01-01";$("report-to").value="2026-11-21";
+ $("report-from").value="2026-01-01";$("report-to").value=iso(today);
  const status=$("report-status");
  $("report-preview").addEventListener("click",()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}refreshReportPosts().then(()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}})});
  // Excel is a direct static file link; no client-side XLSX generation is required.
@@ -898,7 +978,7 @@ function draw(){
 function initRanking(){
  const from=$("ranking-from"),to=$("ranking-to");if(!from||!to)return;
  from.value="2026-01-01";
- to.value="2026-11-21";
+ to.value=new Date().toLocaleDateString("sv-SE",{timeZone:"Europe/Moscow"});
  for(const id of ["ranking-from","ranking-to","ranking-metric","ranking-show-unverified"])$(id).addEventListener("change",draw);
  $("ranking-refresh").addEventListener("click",async()=>{await fetchPosts();draw()});
  draw();fetchPosts().then(draw);

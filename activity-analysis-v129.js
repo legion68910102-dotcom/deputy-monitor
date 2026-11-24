@@ -101,7 +101,7 @@ async function loadAiDataset(){
 }
 
 function safeUrl(url){const raw=String(url||"").trim();if(!/^https?:\/\//i.test(raw))return "";try{const u=new URL(raw);return u.protocol==="https:"||u.protocol==="http:"?u.href:""}catch(e){return ""}}
-function dateOnly(date){return String(date||"").slice(0,10)}
+function dateOnly(date){return window.dmDateFilter.day(date)}
 function formatDate(date){const value=dateOnly(date);const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(value);return m?m[3]+"."+m[2]+"."+m[1]:value||"Дата не указана"}
 const hasText=r=>String(r.text||"").trim().length>0;
 function posts(){const list=rows();return (Array.isArray(list)?list:[]).filter(r=>r&&typeof r==="object")}
@@ -129,7 +129,7 @@ function render(manual=false){
  const end=document.getElementById("activity-to").value;
  if(who==="all")activeCategory=null;
  const all=posts();
- const filtered=all.filter(r=>(who==="all"||normalizeName(rosterName(r.profile))===normalizeName(who)||normalizeName(r.profile)===normalizeName(who))&&(!start||dateOnly(r.date)>=start)&&(!end||dateOnly(r.date)<=end))
+ const filtered=all.filter(r=>(who==="all"||normalizeName(rosterName(r.profile))===normalizeName(who)||normalizeName(r.profile)===normalizeName(who))&&window.dmDateFilter.includes(r.date,start,end))
   .map(makePost).sort((a,b)=>dateOnly(b.date).localeCompare(dateOnly(a.date))||a._id-b._id);
  const usable=filtered.filter(hasText);
  const aiCount=filtered.filter(r=>r._aiUsed).length;
@@ -190,7 +190,7 @@ function render(manual=false){
  else reason="Категории предварительные, это упоминания в текстах, а не подтверждённые мероприятия. «Без темы» означает отсутствие распознанной темы или текста. «Репосты» определяются по признакам перепубликации, не по числу репостов.";
  if(manual)manualRuns++;
  const stamp=new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
- document.getElementById("activity-summary").textContent=(manual?"Проверка №"+manualRuns+" выполнена в ":"Анализ обновлён в ")+stamp+". Публикаций в ленте: "+all.length+"; для выбранного депутата и периода: "+filtered.length+"; с текстом: "+usable.length+"; с ИИ: "+aiCount+"; признаков: "+results.length+". "+reason+(matchedResults.length>150?" В таблице показаны первые 150 совпадений.":"");
+ document.getElementById("activity-summary").textContent=window.dmDateFilter.label(start,end)+" "+(manual?"Проверка №"+manualRuns+" выполнена в ":"Анализ обновлён в ")+stamp+". Публикаций в ленте: "+all.length+"; для выбранного депутата и периода: "+filtered.length+"; с текстом: "+usable.length+"; с ИИ: "+aiCount+"; признаков: "+results.length+". "+reason+(matchedResults.length>150?" В таблице показаны первые 150 совпадений.":"");
 }
 document.addEventListener("DOMContentLoaded",()=>{
  const sel=document.getElementById("activity-person");if(!sel)return;
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  document.getElementById("activity-to").value="";
  document.getElementById("activity-run").addEventListener("click",()=>render(true));
  sel.addEventListener("change",()=>{activeCategory=null;visibleLimit=60;render()});
- for(const id of ["activity-from","activity-to"])document.getElementById(id).addEventListener("change",()=>{visibleLimit=60;render()});
+ for(const id of ["activity-from","activity-to"])for(const event of ["input","change"])document.getElementById(id).addEventListener(event,()=>{visibleLimit=60;render()});
  document.getElementById("activity-cards").addEventListener("click",event=>{
   const b=event.target.closest("[data-activity-category]");
   if(!b||sel.value==="all")return;

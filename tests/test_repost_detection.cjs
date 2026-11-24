@@ -62,3 +62,34 @@ test("repost correction cannot mutate source or hidden user data",()=>{
  win.dmPersonalWorkspace.hide(row);
  assert.equal(win.dmPersonalWorkspace.applyPosts([row]).length,0);
 });
+
+test("publication date filters include both boundaries and reject reversed ranges",()=>{
+ const dates=require("../date-filter-v1.js");
+ const all=["2026-11-20","2026-11-21","2026-11-22","2026-11-23","","2026-02-30"];
+ assert.deepEqual(all.filter(d=>dates.includes(d,"2026-11-21","2026-11-22")),["2026-11-21","2026-11-22"]);
+ assert.deepEqual(all.filter(d=>dates.includes(d,"2026-11-22","2026-11-22")),["2026-11-22"]);
+ assert.deepEqual(all.filter(d=>dates.includes(d,"2026-11-23","2026-11-21")),[]);
+ assert.equal(dates.includes("","", "2026-11-22"),false);
+ assert.equal(dates.includes("2026-11-22T23:59:59+03:00","2026-11-22","2026-11-22"),true);
+ assert.equal(dates.day("2024-02-29"),"2024-02-29");
+ assert.equal(dates.day("2026-02-29"),"");
+ assert.equal(dates.nameMatches("Семёнов Дмитрий Витальевич","дмитрий семенов"),true);
+ assert.equal(dates.nameMatches("Иванов Иван Иванович","Петров"),false);
+});
+test("both live HTML versions use shared date filters, and filtered export is offline",()=>{
+ for(const path of ["index.html","index-v129.html"]){
+  const html=fs.readFileSync(path,"utf8");
+  assert.match(html,/date-filter-v1\.js/);
+  assert.match(html,/dmDateFilter\.includes\(post\.date,activityFrom,activityTo\)/);
+  assert.match(html,/dmDateFilter\.includes\(r\.date,a,b\)/);
+  assert.match(html,/dmDateFilter\.includes\(p\.date,from,to\)/);
+  assert.match(html,/id="report-filtered-download"/);
+  assert.match(html,/blob=workbook\(summary,posts,missing\)/);
+  for(const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)){
+   if(!/\bsrc\s*=/.test(match[1]))new vm.Script(match[2],{filename:path});
+  }
+ }
+ for(const path of ["activity-analysis.js","activity-analysis-v129.js"]){
+  const code=fs.readFileSync(path,"utf8");assert.match(code,/dmDateFilter\.includes\(r\.date,start,end\)/);new vm.Script(code,{filename:path});
+ }
+});

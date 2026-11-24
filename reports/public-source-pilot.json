@@ -1,0 +1,823 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-11-24",
+  "scope": "Manual public source discovery, no paid API, no bypass; not a full post collection",
+  "vk_archive": {
+    "posts": 1420,
+    "profiles": 70
+  },
+  "queue_size": 89,
+  "pilot_vk_attempts": 5,
+  "public_telegram_channels_found": 4,
+  "telegram_feeds_read": 3,
+  "notes": [
+    "Links in historical directory are candidates, not proof of current identity or office.",
+    "Summaries are paraphrases, not original post texts; publication date is null when unavailable.",
+    "Third-party reports must not count as personal posts. No additions to vk-posts.json, AI cache or ranking."
+  ],
+  "profiles": [
+    {
+      "name": "Бойков Алексей Александрович",
+      "district": "Бирюлёво Западное",
+      "handle": "a.a.boikov",
+      "vk_url": "https://vk.com/a.a.boikov",
+      "roster_source": "https://asafov.ru/person/bojkov-aleksej-aleksandrovich",
+      "vk_status": "web_tool_could_not_open",
+      "telegram": {
+        "url": "https://t.me/school2001director",
+        "kind": "professional_public_channel",
+        "status": "public_feed_read",
+        "preview": "https://t.me/s/school2001director"
+      },
+      "examples": [
+        {
+          "url": "https://t.me/school2001director/523",
+          "kind": "own_channel_post",
+          "summary": "Поздравление с Днём народного единства от директора школы; не подтверждает депутатское мероприятие.",
+          "published_date": null
+        }
+      ],
+      "additional": [
+        {
+          "url": "https://ideputat.er.ru/user/127467",
+          "kind": "deputy_portal",
+          "status": "indexed_but_open_timeout"
+        }
+      ]
+    },
+    {
+      "name": "Конарев Илья Сергеевич",
+      "district": "Бирюлёво Западное",
+      "handle": "iskonarev",
+      "vk_url": "https://vk.com/iskonarev",
+      "roster_source": "https://asafov.ru/person/konarev-ilya-sergeevich",
+      "vk_status": "web_tool_could_not_open",
+      "telegram": {
+        "url": "https://t.me/iskonarev",
+        "kind": "contact_not_public_channel",
+        "status": "no_public_feed"
+      },
+      "additional": [
+        {
+          "url": "https://max.ru/id7726075457_gos/AaCkfbz4PL4",
+          "kind": "municipal_third_party_report",
+          "summary": "Сообщение округа о встрече депутата со студентами и обсуждении работы с обращениями."
+        }
+      ]
+    },
+    {
+      "name": "Леликова Елена Сергеевна",
+      "district": "Бирюлёво Западное",
+      "handle": "elenasergeevnalelikiva",
+      "vk_url": "https://vk.com/elenasergeevnalelikiva",
+      "roster_source": "https://asafov.ru/person/lelikova-elena-sergeevna",
+      "vk_status": "web_tool_could_not_open",
+      "telegram": {
+        "url": "https://t.me/LelikovaES",
+        "kind": "personal_public_channel",
+        "status": "public_feed_read",
+        "preview": "https://t.me/s/LelikovaES"
+      },
+      "examples": [
+        {
+          "url": "https://t.me/LelikovaES/592",
+          "kind": "own_channel_post",
+          "summary": "Сообщение о встрече с общественными организациями совместно с Ириной Тереховой.",
+          "published_date": null,
+          "period_note": "Исторический контекст 2022 года; дата поста не подтверждена."
+        }
+      ],
+      "additional": [
+        {
+          "url": "https://www.amom.ru/news/2026/11/elena-lelikova-prinyala-uchastie-v-obxode-rajona.html",
+          "kind": "municipal_third_party_report",
+          "summary": "Сообщение об участии в обходе района."
+        }
+      ]
+    },
+    {
+      "name": "Терехова Ирина Юрьевна",
+      "district": "Бирюлёво Западное",
+      "handle": "irina_terekhova1969",
+      "vk_url": "https://vk.com/irina_terekhova1969",
+      "roster_source": "https://asafov.ru/person/terehova-irina-yurevna",
+      "vk_status": "web_tool_could_not_open",
+      "telegram": {
+        "url": "https://t.me/irina_terekhova0507",
+        "kind": "personal_public_channel",
+        "status": "public_feed_read",
+        "preview": "https://t.me/s/irina_terekhova0507"
+      },
+      "examples": [
+        {
+          "url": "https://t.me/irina_terekhova0507/1253",
+          "kind": "own_channel_post",
+          "summary": "Сообщение об осмотре дворов и обсуждении вопросов жителей.",
+          "event_date": "2026-03-14",
+          "published_date": null
+        }
+      ],
+      "additional": [
+        {
+          "url": "https://amom.ru/news/2026/10/deputat-irina-terexova-prinyala-uchastie-v-obxode-territorii-rajona.html",
+          "kind": "municipal_third_party_report",
+          "published_date": "2026-10-27",
+          "summary": "Сообщение об обходе территории района."
+        }
+      ]
+    },
+    {
+      "name": "Бурых Ярослав Юрьевич",
+      "district": "Бирюлёво Западное",
+      "handle": "yaroslavburykh",
+      "vk_url": "https://vk.com/yaroslavburykh",
+      "roster_source": "https://asafov.ru/person/buryh-yaroslav-yurevich",
+      "vk_status": "web_tool_could_not_open",
+      "telegram": {
+        "url": "https://t.me/yaroslavburykh",
+        "kind": "personal_public_channel",
+        "status": "channel_identity_linked_feed_not_yet_read"
+      },
+      "additional": [
+        {
+          "url": "https://gazeta-obozrenie-birulevo-zapadnoe.ru/2026/05/06/158455/",
+          "kind": "district_news_third_party_report",
+          "published_date": "2026-05-06",
+          "summary": "Районная газета сообщила о личном приёме граждан."
+        }
+      ]
+    },
+    {
+      "name": "Виноградова Елена Геннадьевна",
+      "district": "Бирюлёво Западное",
+      "handle": "smallraisin",
+      "vk_url": "https://vk.com/smallraisin",
+      "roster_source": "https://asafov.ru/person/vinogradova-elena-gennadevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Жабина Татьяна Викторовна",
+      "district": "Бирюлёво Западное",
+      "handle": "tatyanajabina",
+      "vk_url": "https://vk.com/tatyanajabina",
+      "roster_source": "https://asafov.ru/person/zhabina-tatyana-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Мартанова Юлия Валентиновна",
+      "district": "Бирюлёво Западное",
+      "handle": "juliamartanova",
+      "vk_url": "https://vk.com/juliamartanova",
+      "roster_source": "https://asafov.ru/person/martanova-yuliya-valentinovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Орехов Александр Валентинович",
+      "district": "Бирюлёво Западное",
+      "handle": "orehov_aleksandr",
+      "vk_url": "https://vk.com/orehov_aleksandr",
+      "roster_source": "https://asafov.ru/person/orehov-aleksandr-valentinovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Чинилина Ирина Викторовна",
+      "district": "Братеево",
+      "handle": "chinilina975",
+      "vk_url": "https://vk.com/chinilina975",
+      "roster_source": "https://asafov.ru/person/chinilina-irina-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Ильяшенко Александр Викторович",
+      "district": "Братеево",
+      "handle": "ilyashenko_aleksandr",
+      "vk_url": "https://vk.com/ilyashenko_aleksandr",
+      "roster_source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Иванов Олег Игорьевич",
+      "district": "Даниловский",
+      "handle": "ivanov_oi10",
+      "vk_url": "https://vk.com/ivanov_oi10",
+      "roster_source": "https://asafov.ru/person/ivanov-oleg-igorevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Ситников Иван Иванович",
+      "district": "Даниловский",
+      "handle": "sitnikov_danilovskiy",
+      "vk_url": "https://vk.com/sitnikov_danilovskiy",
+      "roster_source": "https://asafov.ru/person/sitnikov-ivan-ivanovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Анисимова Светлана Геннадьевна",
+      "district": "Зябликово",
+      "handle": "anisim_svet",
+      "vk_url": "https://vk.com/anisim_svet",
+      "roster_source": "https://moscow.er.ru/media/documents/September2022/0W6RT2sxbyWuXFCYlRJ6.pdf",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Пушкин Павел Павлович",
+      "district": "Зябликово",
+      "handle": "pushkinpp",
+      "vk_url": "https://vk.com/pushkinpp",
+      "roster_source": "https://asafov.ru/person/pushkin-pavel-pavlovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Рафальская Ирина Владимировна",
+      "district": "Зябликово",
+      "handle": "rafalskayairina",
+      "vk_url": "https://vk.com/rafalskayairina",
+      "roster_source": "https://asafov.ru/person/rafalskaya-irina-vladimirovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Тиханова Альбина Викторовна",
+      "district": "Зябликово",
+      "handle": "tikhanovaalbina",
+      "vk_url": "https://vk.com/tikhanovaalbina",
+      "roster_source": "https://asafov.ru/person/tihanova-albina-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Харитонова Алия Гафурджановна",
+      "district": "Зябликово",
+      "handle": "haritonova_aliya",
+      "vk_url": "https://vk.com/haritonova_aliya",
+      "roster_source": "https://asafov.ru/person/haritonova-aliya-gafurdzhanovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Воропаева Алла Викторовна",
+      "district": "Зябликово",
+      "handle": "allavoropaeva",
+      "vk_url": "https://vk.com/allavoropaeva",
+      "roster_source": "https://asafov.ru/person/voropaeva-alla-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Каляев Александр Вячеславович",
+      "district": "Зябликово",
+      "handle": "kalyaev84",
+      "vk_url": "https://vk.com/kalyaev84",
+      "roster_source": "https://asafov.ru/person/kalyaev-aleksandr-vyacheslavovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Рябева Евгения Николаевна",
+      "district": "Зябликово",
+      "handle": "ryabevaen",
+      "vk_url": "https://vk.com/ryabevaen",
+      "roster_source": "https://asafov.ru/person/ryabeva-evgeniya-nikolaevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Семёнов Дмитрий Витальевич",
+      "district": "Зябликово",
+      "handle": "semenovdmitry80",
+      "vk_url": "https://vk.com/semenovdmitry80",
+      "roster_source": "https://asafov.ru/person/semenov-dmitrij-vitalevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Шлякова Елена Николаевна",
+      "district": "Зябликово",
+      "handle": "elenashlyakova",
+      "vk_url": "https://vk.com/elenashlyakova",
+      "roster_source": "https://asafov.ru/person/shlyakova-elena-nikolaevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Алленов Андрей Михайлович",
+      "district": "Москворечье-Сабурово",
+      "handle": "allenov__andrey",
+      "vk_url": "https://vk.com/allenov__andrey",
+      "roster_source": "https://asafov.ru/person/allenov-andrej-mihajlovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Кондрашов Артем Вячеславович",
+      "district": "Москворечье-Сабурово",
+      "handle": "av_kondrashov",
+      "vk_url": "https://vk.com/av_kondrashov",
+      "roster_source": "https://asafov.ru/person/kondrashov-artem-vyacheslavovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Кондратьева Екатерина Вадимовна",
+      "district": "Москворечье-Сабурово",
+      "handle": "kondratevaekaterina88",
+      "vk_url": "https://vk.com/kondratevaekaterina88",
+      "roster_source": "https://asafov.ru/person/kondrateva-ekaterina-vadimovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Кудинова Марина Феликсовна",
+      "district": "Москворечье-Сабурово",
+      "handle": "kudinovamarina",
+      "vk_url": "https://vk.com/kudinovamarina",
+      "roster_source": "https://asafov.ru/person/kudinova-marina-feliksovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Горбунов Станислав Игоревич",
+      "district": "Нагатинский Затон",
+      "handle": "gorbunovsi",
+      "vk_url": "https://vk.com/gorbunovsi",
+      "roster_source": "https://asafov.ru/person/gorbunov-stanislav-igorevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Коршунова Наталья Евгеньевна",
+      "district": "Нагатинский Затон",
+      "handle": "korshunovane",
+      "vk_url": "https://vk.com/korshunovane",
+      "roster_source": "https://asafov.ru/person/korshunova-natalya-evgenevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Кундыль Татьяна Евгеньевна",
+      "district": "Нагатинский Затон",
+      "handle": "kundyltatyana",
+      "vk_url": "https://vk.com/kundyltatyana",
+      "roster_source": "https://asafov.ru/person/kundyl-tatyana-evgenevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Рузина Лидия Владимировна",
+      "district": "Нагатинский Затон",
+      "handle": "l.ruzina",
+      "vk_url": "https://vk.com/l.ruzina",
+      "roster_source": "https://asafov.ru/person/ruzina-lidiya-vladimirovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Балыков Дмитрий Евгеньевич",
+      "district": "Нагатинский Затон",
+      "handle": "balykovde",
+      "vk_url": "https://vk.com/balykovde",
+      "roster_source": "https://asafov.ru/person/balykov-dmitrij-evgenevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Башлыкова Мария Николаевна",
+      "district": "Нагатинский Затон",
+      "handle": "bashlykova.mari",
+      "vk_url": "https://vk.com/bashlykova.mari",
+      "roster_source": "https://asafov.ru/person/bashlykova-mariya-nikolaevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Быкова Юлия Валерьевна",
+      "district": "Нагатинский Затон",
+      "handle": "julia_byckova",
+      "vk_url": "https://vk.com/julia_byckova",
+      "roster_source": "https://asafov.ru/person/bykova-yuliya-valerevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Винокуров Роман Евгеньевич",
+      "district": "Нагатинский Затон",
+      "handle": "romanvinokurov",
+      "vk_url": "https://vk.com/romanvinokurov",
+      "roster_source": "https://asafov.ru/person/vinokurov-roman-evgenevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Горемыкин Михаил Юрьевич",
+      "district": "Нагатинский Затон",
+      "handle": "goremykinmy",
+      "vk_url": "https://vk.com/goremykinmy",
+      "roster_source": "https://asafov.ru/person/goremykin-mihail-yurevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Введенская Инна Васильевна",
+      "district": "Нагорный",
+      "handle": "vvedenskaya_i",
+      "vk_url": "https://vk.com/vvedenskaya_i",
+      "roster_source": "https://asafov.ru/person/vvedenskaya-inna-vasilevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Виноградова Елена Михайловна",
+      "district": "Нагорный",
+      "handle": "vinogradova_len",
+      "vk_url": "https://vk.com/vinogradova_len",
+      "roster_source": "https://asafov.ru/person/vinogradova-elena-mihajlovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Кульнев Дмитрий Владимирович",
+      "district": "Нагорный",
+      "handle": "dkulnev",
+      "vk_url": "https://vk.com/dkulnev",
+      "roster_source": "https://asafov.ru/person/kulnev-dmitrij-vladimirovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Рыгин Алексей Борисович",
+      "district": "Нагорный",
+      "handle": "rygin",
+      "vk_url": "https://vk.com/rygin",
+      "roster_source": "https://asafov.ru/person/rygin-aleksej-borisovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Шутов Павел Викторович",
+      "district": "Нагорный",
+      "handle": "pavel_v_shutov",
+      "vk_url": "https://vk.com/pavel_v_shutov",
+      "roster_source": "https://asafov.ru/person/shutov-pavel-viktorovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Бурова Екатерина Николаевна",
+      "district": "Нагорный",
+      "handle": "kostina1920",
+      "vk_url": "https://vk.com/kostina1920",
+      "roster_source": "https://asafov.ru/person/burova-ekaterina-nikolaevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Горн Виктор Викторович",
+      "district": "Нагорный",
+      "handle": "viktorgorn",
+      "vk_url": "https://vk.com/viktorgorn",
+      "roster_source": "https://asafov.ru/person/gorn-viktor-viktorovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Новикова Юлия Ивановна",
+      "district": "Нагорный",
+      "handle": "id666378177",
+      "vk_url": "https://vk.com/id666378177",
+      "roster_source": "https://asafov.ru/person/novikova-yuliya-ivanovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Тарасенко Ольга Вячеславовна",
+      "district": "Нагорный",
+      "handle": "o.v.tarasenko",
+      "vk_url": "https://vk.com/o.v.tarasenko",
+      "roster_source": "https://asafov.ru/person/tarasenko-olga-vyacheslavovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Филиппова Татьяна Викторовна",
+      "district": "Нагорный",
+      "handle": "tatyana_filippova20",
+      "vk_url": "https://vk.com/tatyana_filippova20",
+      "roster_source": "https://asafov.ru/person/filippova-tatyana-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Дмитриева Наталия Николаевна",
+      "district": "Орехово-Борисово Северное",
+      "handle": "dmitrieva_n_n",
+      "vk_url": "https://vk.com/dmitrieva_n_n",
+      "roster_source": "https://asafov.ru/person/dmitrieva-nataliya-nikolaevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Коннова Елена Львовна",
+      "district": "Орехово-Борисово Северное",
+      "handle": "elena__konnova",
+      "vk_url": "https://vk.com/elena__konnova",
+      "roster_source": "https://asafov.ru/person/konnova-elena-lvovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Глотова Ирина Борисовна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "ib.glotova",
+      "vk_url": "https://vk.com/ib.glotova",
+      "roster_source": "https://asafov.ru/person/glotova-irina-borisovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Демченков Максим Леонидович",
+      "district": "Орехово-Борисово Южное",
+      "handle": "demchenkov_ml",
+      "vk_url": "https://vk.com/demchenkov_ml",
+      "roster_source": "https://asafov.ru/person/demchenkov-maksim-leonidovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Нефедова Светлана Юрьевна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "svetlana_rodnik",
+      "vk_url": "https://vk.com/svetlana_rodnik",
+      "roster_source": "https://asafov.ru/person/nefedova-svetlana-yurevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Новосельская Людмила Александровна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "novoselskayala",
+      "vk_url": "https://vk.com/novoselskayala",
+      "roster_source": "https://asafov.ru/person/novoselskaya-lyudmila-aleksandrovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Ткач Ирина Петровна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "tkachip",
+      "vk_url": "https://vk.com/tkachip",
+      "roster_source": "https://asafov.ru/person/tkach-irina-petrovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Донская Татьяна Викторовна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "tatiyana_donskaya",
+      "vk_url": "https://vk.com/tatiyana_donskaya",
+      "roster_source": "https://asafov.ru/person/donskaya-tatyana-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Золкина Ирина Вячеславовна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "i.v.zolkina",
+      "vk_url": "https://vk.com/i.v.zolkina",
+      "roster_source": "https://asafov.ru/person/zolkina-irina-vyacheslavovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Комиссарова Альбина Анатольевна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "albinakomissarova2022",
+      "vk_url": "https://vk.com/albinakomissarova2022",
+      "roster_source": "https://asafov.ru/person/komissarova-albina-anatolevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Овчинникова Светлана Юрьевна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "sovchinnikova79",
+      "vk_url": "https://vk.com/sovchinnikova79",
+      "roster_source": "https://asafov.ru/person/ovchinnikova-svetlana-yurevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Яшкин Андрей Петрович",
+      "district": "Орехово-Борисово Южное",
+      "handle": "ap.yashkin",
+      "vk_url": "https://vk.com/ap.yashkin",
+      "roster_source": "https://asafov.ru/person/yashkin-andrej-petrovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Нуйкина Карина Вячеславовна",
+      "district": "Царицыно",
+      "handle": "nuykinakv",
+      "vk_url": "https://vk.com/nuykinakv",
+      "roster_source": "https://asafov.ru/person/nujkina-karina-vyacheslavovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Гаврилина Мария Сергеевна",
+      "district": "Царицыно",
+      "handle": "gavrilinams",
+      "vk_url": "https://vk.com/gavrilinams",
+      "roster_source": "https://asafov.ru/person/gavrilina-mariya-sergeevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Шабашева Наталья Викторовна",
+      "district": "Царицыно",
+      "handle": "natalia_shabasheva",
+      "vk_url": "https://vk.com/natalia_shabasheva",
+      "roster_source": "https://asafov.ru/person/shabasheva-natalya-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Абрамова Елена Ивановна",
+      "district": "Чертаново Северное",
+      "handle": "abramovaei_chs",
+      "vk_url": "https://vk.com/abramovaei_chs",
+      "roster_source": "https://asafov.ru/person/abramova-elena-ivanovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Горбачёв Антон Сергеевич",
+      "district": "Чертаново Северное",
+      "handle": "antongorbachev",
+      "vk_url": "https://vk.com/antongorbachev",
+      "roster_source": "https://asafov.ru/person/gorbachyov-anton-sergeevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Курапов Пётр Геннадьевич",
+      "district": "Чертаново Северное",
+      "handle": "petr.kurapov",
+      "vk_url": "https://vk.com/petr.kurapov",
+      "roster_source": "https://asafov.ru/person/kurapov-petr-gennadevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Морозова Ирина Викторовна",
+      "district": "Чертаново Северное",
+      "handle": "i_v_morozova",
+      "vk_url": "https://vk.com/i_v_morozova",
+      "roster_source": "https://asafov.ru/person/morozova-irina-viktorovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Смирнов Валерий Николаевич",
+      "district": "Чертаново Северное",
+      "handle": "smirnovvalerii",
+      "vk_url": "https://vk.com/smirnovvalerii",
+      "roster_source": "https://asafov.ru/person/smirnov-valerij-nikolaevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Андреева Светлана Александровна",
+      "district": "Чертаново Северное",
+      "handle": "andreevasvetlanaaleksandrovna",
+      "vk_url": "https://vk.com/andreevasvetlanaaleksandrovna",
+      "roster_source": "https://asafov.ru/person/andreeva-svetlana-aleksandrovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Лукоянов Алексей Александрович",
+      "district": "Чертаново Северное",
+      "handle": "lukoyanov_chs",
+      "vk_url": "https://vk.com/lukoyanov_chs",
+      "roster_source": "https://asafov.ru/person/lukoyanov-aleksej-aleksandrovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Морозов Максим Александрович",
+      "district": "Чертаново Северное",
+      "handle": "maxsimmorozov",
+      "vk_url": "https://vk.com/maxsimmorozov",
+      "roster_source": "https://asafov.ru/person/morozov-maksim-aleksandrovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Ряхмятуллина Алла Рафековна",
+      "district": "Чертаново Северное",
+      "handle": "riakhmiatullina",
+      "vk_url": "https://vk.com/riakhmiatullina",
+      "roster_source": "https://asafov.ru/person/ryahmyatullina-alla-rafekovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Тозик Александр Михайлович",
+      "district": "Чертаново Северное",
+      "handle": "tozikam",
+      "vk_url": "https://vk.com/tozikam",
+      "roster_source": "https://asafov.ru/person/tozik-aleksandr-mihajlovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Коношенко Богдан Александрович",
+      "district": "Чертаново Центральное",
+      "handle": "bogdan.konoshenko",
+      "vk_url": "https://vk.com/bogdan.konoshenko",
+      "roster_source": "https://moscow.er.ru/media/documents/September2022/0W6RT2sxbyWuXFCYlRJ6.pdf",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Ларионова Евгения Иосифовна",
+      "district": "Чертаново Центральное",
+      "handle": "eilarionova_556",
+      "vk_url": "https://vk.com/eilarionova_556",
+      "roster_source": "https://asafov.ru/person/larionova-evgeniya-iosifovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Полозов Сергей Андреевич",
+      "district": "Чертаново Центральное",
+      "handle": "polozovs",
+      "vk_url": "https://vk.com/polozovs",
+      "roster_source": "https://asafov.ru/person/polozov-sergej-andreevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Родина Ирина Алексеевна",
+      "district": "Чертаново Центральное",
+      "handle": "i_rodina",
+      "vk_url": "https://vk.com/i_rodina",
+      "roster_source": "https://asafov.ru/person/rodina-irina-alekseevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Смитиенко Степан Борисович",
+      "district": "Чертаново Центральное",
+      "handle": "smitsb",
+      "vk_url": "https://vk.com/smitsb",
+      "roster_source": "https://asafov.ru/person/smitienko-stepan",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Мелешин Василий Владимирович",
+      "district": "Чертаново Центральное",
+      "handle": "vasiliy_meleshin",
+      "vk_url": "https://vk.com/vasiliy_meleshin",
+      "roster_source": "https://asafov.ru/person/meleshin-vasilij-vladimirovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Миронов Дмитрий Павлович",
+      "district": "Чертаново Центральное",
+      "handle": "mironovdp",
+      "vk_url": "https://vk.com/mironovdp",
+      "roster_source": "https://asafov.ru/person/mironov-dmitrij-pavlovich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Репкина Елена Владимировна",
+      "district": "Чертаново Центральное",
+      "handle": "repkinae",
+      "vk_url": "https://vk.com/repkinae",
+      "roster_source": "https://asafov.ru/person/repkina-elena-vladimirovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Рыбакова Евгения Валентиновна",
+      "district": "Чертаново Центральное",
+      "handle": "rybakovaev_1582",
+      "vk_url": "https://vk.com/rybakovaev_1582",
+      "roster_source": "https://asafov.ru/person/rybakova-evgeniya-valentinovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Шиндряева Наталья Николаевна",
+      "district": "Чертаново Центральное",
+      "handle": "n_shindryayeva",
+      "vk_url": "https://vk.com/n_shindryayeva",
+      "roster_source": "https://asafov.ru/person/shindryaeva-natalya-nikolaevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Кураш Ирина Анатольевна",
+      "district": "Чертаново Южное",
+      "handle": "ikurash1",
+      "vk_url": "https://vk.com/ikurash1",
+      "roster_source": "https://asafov.ru/person/kurash-irina-anatolevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Новиков Александр Анатольевич",
+      "district": "Чертаново Южное",
+      "handle": "alexandr_novikov_chu",
+      "vk_url": "https://vk.com/alexandr_novikov_chu",
+      "roster_source": "https://asafov.ru/person/novikov-aleksandr-anatolevich",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Птушкина Наталья Александровна",
+      "district": "Чертаново Южное",
+      "handle": "n.ptushkina56",
+      "vk_url": "https://vk.com/n.ptushkina56",
+      "roster_source": "https://asafov.ru/person/ptushkina-natalya-aleksandrovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Бордовская Ольга Геннадьевна",
+      "district": "Чертаново Южное",
+      "handle": "bordovskaya_og",
+      "vk_url": "https://vk.com/bordovskaya_og",
+      "roster_source": "https://asafov.ru/person/bordovskaya-olga-gennadevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Гунина Екатерина Алексеевна",
+      "district": "Чертаново Южное",
+      "handle": "gunina_ea",
+      "vk_url": "https://vk.com/gunina_ea",
+      "roster_source": "https://asafov.ru/person/gunina-ekaterina-alekseevna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Леонова Наталья Александровна",
+      "district": "Чертаново Южное",
+      "handle": "nleonovannnn",
+      "vk_url": "https://vk.com/nleonovannnn",
+      "roster_source": "https://asafov.ru/person/leonova-natalya-aleksandrovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Маркова Татьяна Владимировна",
+      "district": "Чертаново Южное",
+      "handle": "markova_tat_vl",
+      "vk_url": "https://vk.com/markova_tat_vl",
+      "roster_source": "https://asafov.ru/person/markova-tatyana-vladimirovna",
+      "vk_status": "not_checked_in_pilot"
+    },
+    {
+      "name": "Смирнова Елена Владимировна",
+      "district": "Чертаново Южное",
+      "handle": "smirnovaev1",
+      "vk_url": "https://vk.com/smirnovaev1",
+      "roster_source": "https://asafov.ru/person/smirnova-elena-vladimirovna",
+      "vk_status": "not_checked_in_pilot"
+    }
+  ]
+}

@@ -1,13 +1,21 @@
 name: Build downloadable Excel report
 on:
+  # Scheduled rebuild is necessary: pushes made with GITHUB_TOKEN do not trigger
+  # downstream push workflows, including after VK collection updates vk-posts.json.
+  schedule:
+    - cron: '20 8,20 * * *'
   push:
     branches: [main]
     paths:
-      - 'index.html'
+      - 'deputies.json'
+      - 'index-v129.html'
       - 'vk-posts.json'
       - 'build_excel_report.py'
       - '.github/workflows/build-excel-report.yml'
   workflow_dispatch:
+concurrency:
+  group: deputy-monitor-excel-reports
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
@@ -22,10 +30,18 @@ jobs:
       - run: python build_excel_report.py
       - name: Commit generated report if changed
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Deputies_YUAO_Report.xlsx Deputies_YUAO_Ranking.xlsx
           if ! git diff --cached --quiet; then
             git commit -m "Update validated downloadable Excel report"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              echo "Concurrent GitHub update; retrying report publication ($i/3)"
+              sleep $((i * 3))
+            done
+            echo "::error::Could not publish the report after three attempts"
+            exit 1
           fi

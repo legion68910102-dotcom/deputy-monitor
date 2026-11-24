@@ -1,19 +1,16 @@
 {
   "schema_version": 1,
   "checked_date": "2026-11-24",
-  "scope": "Manual public source discovery, no paid API, no bypass; not a full post collection",
+  "scope": "VK only; free public-source verification without paid API or bypass; Telegram, MAX and third-party activity sources deferred",
   "vk_archive": {
     "posts": 1420,
     "profiles": 70
   },
   "queue_size": 89,
   "pilot_vk_attempts": 5,
-  "public_telegram_channels_found": 4,
-  "telegram_feeds_read": 3,
   "notes": [
-    "Links in historical directory are candidates, not proof of current identity or office.",
-    "Summaries are paraphrases, not original post texts; publication date is null when unavailable.",
-    "Third-party reports must not count as personal posts. No additions to vk-posts.json, AI cache or ranking."
+    "VK URLs in the historical directory are candidates, not proof of current identity or office.",
+    "No additions to vk-posts.json, analysis cache or ranking. Telegram and MAX discoveries are retained only in Git history and excluded from the active monitoring queue."
   ],
   "profiles": [
     {
@@ -22,28 +19,7 @@
       "handle": "a.a.boikov",
       "vk_url": "https://vk.com/a.a.boikov",
       "roster_source": "https://asafov.ru/person/bojkov-aleksej-aleksandrovich",
-      "vk_status": "web_tool_could_not_open",
-      "telegram": {
-        "url": "https://t.me/school2001director",
-        "kind": "professional_public_channel",
-        "status": "public_feed_read",
-        "preview": "https://t.me/s/school2001director"
-      },
-      "examples": [
-        {
-          "url": "https://t.me/school2001director/523",
-          "kind": "own_channel_post",
-          "summary": "Поздравление с Днём народного единства от директора школы; не подтверждает депутатское мероприятие.",
-          "published_date": null
-        }
-      ],
-      "additional": [
-        {
-          "url": "https://ideputat.er.ru/user/127467",
-          "kind": "deputy_portal",
-          "status": "indexed_but_open_timeout"
-        }
-      ]
+      "vk_status": "web_tool_could_not_open"
     },
     {
       "name": "Конарев Илья Сергеевич",
@@ -51,19 +27,7 @@
       "handle": "iskonarev",
       "vk_url": "https://vk.com/iskonarev",
       "roster_source": "https://asafov.ru/person/konarev-ilya-sergeevich",
-      "vk_status": "web_tool_could_not_open",
-      "telegram": {
-        "url": "https://t.me/iskonarev",
-        "kind": "contact_not_public_channel",
-        "status": "no_public_feed"
-      },
-      "additional": [
-        {
-          "url": "https://max.ru/id7726075457_gos/AaCkfbz4PL4",
-          "kind": "municipal_third_party_report",
-          "summary": "Сообщение округа о встрече депутата со студентами и обсуждении работы с обращениями."
-        }
-      ]
+      "vk_status": "web_tool_could_not_open"
     },
     {
       "name": "Леликова Елена Сергеевна",
@@ -71,29 +35,7 @@
       "handle": "elenasergeevnalelikiva",
       "vk_url": "https://vk.com/elenasergeevnalelikiva",
       "roster_source": "https://asafov.ru/person/lelikova-elena-sergeevna",
-      "vk_status": "web_tool_could_not_open",
-      "telegram": {
-        "url": "https://t.me/LelikovaES",
-        "kind": "personal_public_channel",
-        "status": "public_feed_read",
-        "preview": "https://t.me/s/LelikovaES"
-      },
-      "examples": [
-        {
-          "url": "https://t.me/LelikovaES/592",
-          "kind": "own_channel_post",
-          "summary": "Сообщение о встрече с общественными организациями совместно с Ириной Тереховой.",
-          "published_date": null,
-          "period_note": "Исторический контекст 2022 года; дата поста не подтверждена."
-        }
-      ],
-      "additional": [
-        {
-          "url": "https://www.amom.ru/news/2026/11/elena-lelikova-prinyala-uchastie-v-obxode-rajona.html",
-          "kind": "municipal_third_party_report",
-          "summary": "Сообщение об участии в обходе района."
-        }
-      ]
+      "vk_status": "web_tool_could_not_open"
     },
     {
       "name": "Терехова Ирина Юрьевна",
@@ -101,30 +43,7 @@
       "handle": "irina_terekhova1969",
       "vk_url": "https://vk.com/irina_terekhova1969",
       "roster_source": "https://asafov.ru/person/terehova-irina-yurevna",
-      "vk_status": "web_tool_could_not_open",
-      "telegram": {
-        "url": "https://t.me/irina_terekhova0507",
-        "kind": "personal_public_channel",
-        "status": "public_feed_read",
-        "preview": "https://t.me/s/irina_terekhova0507"
-      },
-      "examples": [
-        {
-          "url": "https://t.me/irina_terekhova0507/1253",
-          "kind": "own_channel_post",
-          "summary": "Сообщение об осмотре дворов и обсуждении вопросов жителей.",
-          "event_date": "2026-03-14",
-          "published_date": null
-        }
-      ],
-      "additional": [
-        {
-          "url": "https://amom.ru/news/2026/10/deputat-irina-terexova-prinyala-uchastie-v-obxode-territorii-rajona.html",
-          "kind": "municipal_third_party_report",
-          "published_date": "2026-10-27",
-          "summary": "Сообщение об обходе территории района."
-        }
-      ]
+      "vk_status": "web_tool_could_not_open"
     },
     {
       "name": "Бурых Ярослав Юрьевич",
@@ -132,20 +51,7 @@
       "handle": "yaroslavburykh",
       "vk_url": "https://vk.com/yaroslavburykh",
       "roster_source": "https://asafov.ru/person/buryh-yaroslav-yurevich",
-      "vk_status": "web_tool_could_not_open",
-      "telegram": {
-        "url": "https://t.me/yaroslavburykh",
-        "kind": "personal_public_channel",
-        "status": "channel_identity_linked_feed_not_yet_read"
-      },
-      "additional": [
-        {
-          "url": "https://gazeta-obozrenie-birulevo-zapadnoe.ru/2026/05/06/158455/",
-          "kind": "district_news_third_party_report",
-          "published_date": "2026-05-06",
-          "summary": "Районная газета сообщила о личном приёме граждан."
-        }
-      ]
+      "vk_status": "web_tool_could_not_open"
     },
     {
       "name": "Виноградова Елена Геннадьевна",

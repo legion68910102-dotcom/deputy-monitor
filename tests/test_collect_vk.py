@@ -145,6 +145,30 @@ class VKCollectionTests(unittest.TestCase):
         for p, raw in before.items():
             self.assertEqual((self.root / p).read_bytes(), raw)
 
+    def test_pilot_accepts_completed_sample_with_accessible_wall(self):
+        summary = vk.collect(self.root, "FAKE", dry_run=True,
+                             fetch=self.fake(alpha={"error": {"error_code": 15}}),
+                             pause=lambda _: None)
+        self.assertTrue(vk.verify_pilot(summary))
+
+    def test_pilot_rejects_invalid_token(self):
+        summary = vk.collect(self.root, "FAKE", dry_run=True,
+                             fetch=self.fake(alpha={"error": {"error_code": 5}}),
+                             pause=lambda _: None)
+        self.assertFalse(vk.verify_pilot(summary))
+
+    def test_pilot_rejects_all_private_walls(self):
+        error = {"error": {"error_code": 15}}
+        summary = vk.collect(self.root, "FAKE", dry_run=True,
+                             fetch=self.fake(alpha=error, beta=error, gamma=error),
+                             pause=lambda _: None)
+        self.assertFalse(vk.verify_pilot(summary))
+
+    def test_pilot_rejects_incomplete_sample_even_with_success(self):
+        summary = {"selected_profiles": 5, "attempted_profiles": 2,
+                   "successful_profiles": 1, "stopped_reason": None}
+        self.assertFalse(vk.verify_pilot(summary))
+
     def test_missing_token_and_corrupted_database_never_overwrite_files(self):
         original = (self.root / "vk-posts.json").read_bytes()
         with self.assertRaises(ValueError):

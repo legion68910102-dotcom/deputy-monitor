@@ -1,14 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T07:56:07.136225+00:00",
-  "source": "Official VK API; no inferred metrics",
+  "generated_at": "2026-11-24T19:43:50.877792+00:00",
+  "source": "Official VK API (public wall.get only)",
   "roster_size": 159,
   "district_count": 16,
   "profiles": {
     "ilyasov_kn": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-24T19:43:50.877792+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_5"
     },
     "molchanovpavel": {
       "status": "needs_token",
@@ -799,6 +800,22 @@
       "status": "needs_token",
       "checked_at": null,
       "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+    }
+  },
+  "vk_api_last_run": {
+    "roster_size": 159,
+    "district_count": 16,
+    "selected_profiles": 159,
+    "attempted_profiles": 1,
+    "successful_profiles": 0,
+    "failed_profiles": 1,
+    "new_posts": 0,
+    "updated_posts": 0,
+    "retained_posts": 1420,
+    "stopped_reason": "auth_error",
+    "dry_run": false,
+    "error_counts": {
+      "vk_api_error_5": 1
     }
   }
 }

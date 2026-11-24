@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T10:37:34.828709+00:00",
+  "generated_at": "2026-11-24T19:43:50.877792+00:00",
   "source": "Apify VK Posts Scraper; incremental 159-profile monitoring",
   "posts": [
     {
@@ -16500,5 +16500,22 @@
       "elena_laplanche": "HTTP 403"
     },
     "max_items_per_profile": 20
+  },
+  "vk_api_last_checked_at": "2026-11-24T19:43:50.877792+00:00",
+  "vk_api_last_run": {
+    "roster_size": 159,
+    "district_count": 16,
+    "selected_profiles": 159,
+    "attempted_profiles": 1,
+    "successful_profiles": 0,
+    "failed_profiles": 1,
+    "new_posts": 0,
+    "updated_posts": 0,
+    "retained_posts": 1420,
+    "stopped_reason": "auth_error",
+    "dry_run": false,
+    "error_counts": {
+      "vk_api_error_5": 1
+    }
   }
 }

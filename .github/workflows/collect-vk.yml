@@ -17,11 +17,15 @@ on:
         type: string
         default: 'NO'
   schedule:
-    - cron: '47 6 * * *'
+    - cron: '47 6,18 * * *'
   push:
     paths:
       - 'scripts/collect_vk.py'
       - 'tests/test_collect_vk.py'
+      - 'tests/test_vk_monitor_freshness.cjs'
+      - 'vk-monitor-freshness-v1.js'
+      - 'index-v129.html'
+      - 'deputies.json'
       - '.github/workflows/collect-vk.yml'
 
 permissions:
@@ -44,6 +48,8 @@ jobs:
         run: |
           python -m py_compile scripts/collect_vk.py
           python -m unittest discover -s tests -p 'test_collect_vk.py' -v
+          node --check vk-monitor-freshness-v1.js
+          node tests/test_vk_monitor_freshness.cjs
 
   collect:
     name: Pilot or full official VK API collection

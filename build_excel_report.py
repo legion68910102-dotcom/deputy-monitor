@@ -10,19 +10,19 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parent
-html = (ROOT / "index.html").read_text(encoding="utf-8")
-def extract(name):
-    match = re.search(r"const\s+" + re.escape(name) + r"\s*=\s*", html)
-    if not match:
-        raise ValueError("Missing JS data: " + name)
-    return json.JSONDecoder().raw_decode(html[match.end():])[0]
-
-districts = extract("directoryDeputies")
-profiles = extract("verifiedPersonalVK")
-roster = [(district, name, profiles.get(name, {})) for district, group in districts.items() for name in group["names"]]
+# Always use the same current roster as the VK collector and site monitor.
+# index.html is a historical landing page and must not determine Excel coverage.
+roster_source = json.loads((ROOT / "deputies.json").read_text(encoding="utf-8"))
+people = roster_source.get("deputies", [])
+if not isinstance(people, list) or len(people) != 159:
+    raise ValueError("Expected 159 deputy profiles in deputies.json")
+if any(not isinstance(p, dict) or not all(p.get(k) for k in ("district", "name", "handle")) for p in people):
+    raise ValueError("Incomplete deputy record in current roster")
+roster = [(p["district"], p["name"], {"handle": p["handle"], "source": p.get("source", "")})
+          for p in people]
+if len({p[2]["handle"] for p in roster}) != len(roster):
+    raise ValueError("Duplicate VK handle in current roster")
 roster.sort(key=lambda x: (x[0].casefold(), x[1].casefold()))
-if len(roster) < 150:
-    raise ValueError("Unexpectedly short deputy roster")
 
 posts_file = ROOT / "vk-posts.json"
 try:
@@ -44,6 +44,12 @@ wm = wb.create_sheet("Без данных")
 ws.append(["№", "Район", "Депутат", "Публикаций", "Лайки", "Комментарии", "Репосты", "Просмотры", "Статус", "VK", "Источник"])
 wp.append(["Дата", "Район", "Депутат", "Профиль VK", "Текст", "Ссылка", "Лайки", "Комментарии", "Репосты", "Просмотры"])
 wm.append(["№", "Район", "Депутат", "Статус", "VK", "Источник"])
+def excel_safe_text(value: object) -> str:
+    text = str(value or "")
+    # VK posts are untrusted input: prevent Excel interpreting =... as a formula.
+    return "'" + text if text.startswith("=") else text
+
+
 for idx, (district, name, p) in enumerate(roster, 1):
     handle = p.get("handle", "")
     vk = "https://vk.com/" + handle if handle else ""
@@ -54,7 +60,7 @@ for idx, (district, name, p) in enumerate(roster, 1):
     if not entries:
         wm.append([idx, district, name, status, vk, p.get("source", "")])
     for post in entries:
-        wp.append([str(post.get("date", ""))[:10], district, name, handle, str(post.get("text", ""))[:32000], str(post.get("url", "")), post.get("likes"), post.get("comments"), post.get("reposts"), post.get("views")])
+        wp.append([str(post.get("date", ""))[:10], district, name, handle, excel_safe_text(post.get("text", ""))[:32000], str(post.get("url", "")), post.get("likes"), post.get("comments"), post.get("reposts"), post.get("views")])
 
 for sheet in wb:
     sheet.freeze_panes = "A2"

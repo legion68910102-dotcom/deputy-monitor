@@ -49,14 +49,16 @@ def roster_handles(root: Path) -> tuple[list[str], int]:
 
 
 def api_wall_get(handle: str, token: str) -> dict:
+    # VK API accepts access_token as a form parameter. Keep it in the
+    # HTTPS POST body, never in the URL, query string or diagnostic logs.
     params = urllib.parse.urlencode({
         "domain": handle, "count": 100, "offset": 0,
-        "filter": "owner", "v": API_VERSION
-    })
-    # The bearer token must never appear in a query string, URL or log.
+        "filter": "owner", "v": API_VERSION, "access_token": token
+    }).encode("utf-8")
     req = urllib.request.Request(
-        "https://api.vk.com/method/wall.get?" + params,
-        headers={"Authorization": "Bearer " + token,
+        "https://api.vk.com/method/wall.get",
+        data=params, method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded",
                  "User-Agent": "DeputyMonitor/1.0"}
     )
     with urllib.request.urlopen(req, timeout=25) as resp:

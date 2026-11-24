@@ -1,59 +1,26 @@
-name: Monitor VK posts (159 deputies)
+name: Monitor VK posts (Apify disabled - zero-cost policy)
 on:
   workflow_dispatch:
     inputs:
       confirm_paid_api:
-        description: 'Type YES to authorize paid Apify API requests; default does not run'
-        required: true
+        description: 'Legacy field; paid requests are disabled regardless of value'
+        required: false
         default: 'NO'
         type: string
       batch_index:
-        description: 'Batch 0-15; leave empty for daily rotation'
+        description: 'Legacy field; ignored'
         required: false
         type: string
-concurrency:
-  group: vk-posts-import
-  cancel-in-progress: false
+  push:
+    paths:
+      - '.github/workflows/import-vk-apify.yml'
+permissions:
+  contents: read
 jobs:
-  import:
+  zero-cost:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
-    permissions:
-      contents: write
+    timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Check VK importer configuration
-        id: config
-        env:
-          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+      - name: Enforce zero-cost policy
         run: |
-          if [ "${{ inputs.confirm_paid_api }}" != "YES" ]; then
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::Apify disabled to preserve free tier; no requests made."
-          elif [ -n "$APIFY_TOKEN" ]; then
-            echo "configured=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::APIFY_TOKEN is missing. Existing VK data preserved; configure repository secret to enable imports."
-          fi
-      - name: Fetch recent public VK posts
-        if: steps.config.outputs.configured == 'true'
-        env:
-          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
-          VK_BATCH_INDEX: ${{ inputs.batch_index }}
-          VK_FULL_SWEEP: 'false'
-        run: python scripts/import_vk_apify.py
-      - name: Commit verified results
-        if: steps.config.outputs.configured == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add vk-posts.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update verified VK posts and coverage for 159-profile monitor"
-            git pull --rebase -X theirs origin main
-            git push
-          fi
+          echo "::notice::Apify collection is disabled in zero-cost mode. No credentials read, no Actor started, no data changes."

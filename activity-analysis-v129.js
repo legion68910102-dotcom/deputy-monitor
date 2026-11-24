@@ -66,7 +66,7 @@ function rosterName(profile){
 
 const icons={council:"🏛️",meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",humanitarian:"🤲",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
 let manualRuns=0,activeCategory=null,visibleLimit=60;
-let aiDataset=null,aiMessage="Загрузка ИИ…";
+let aiDataset=null,aiMessage="Бесплатный анализ: локальные правила. Загрузка архива ИИ…";
 function aiIdentity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function aiSignature(r){let h=2166136261;for(const ch of aiIdentity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
 function getAiResult(r){
@@ -84,17 +84,17 @@ async function loadAiDataset(){
   const data=await response.json();
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
   aiDataset=data;
-  if(data.taxonomy_version!==2)aiMessage="ИИ обновляет классификацию по 15 категориям. Пока показываются предварительные правила.";
+  if(data.taxonomy_version!==2)aiMessage="Бесплатный режим: используются предварительные правила по 15 категориям; архив ИИ не соответствует версии методики.";
   else if(data.status==="no_posts")aiMessage="Методика из 15 категорий утверждена, но текстов общей ленты пока нет.";
   else if(data.methodology_version===1){
    const done=Number(data.classified_posts)||0,waiting=Number(data.pending_posts)||0,prior=Number(data.legacy_classified_posts)||0;
-   aiMessage="GigaChat анализирует публикации по утверждённой методике: 15 категорий, 239 тезисов. Заново обработано: "+done+
+   aiMessage="Бесплатный режим: новые тексты анализируются локально; сохранён архив GigaChat по 15 категориям. Ранее обработано ИИ: "+done+
     "; ожидают переанализа: "+waiting+(prior?"; результаты прежней методики (предварительно): "+prior:"")+
     (Number(data.blocked_posts)>0?"; отклонены фильтром GigaChat и требуют отдельной проверки: "+Number(data.blocked_posts):"")+
     ". Обновление: "+String(data.generated_at||"нет даты")+".";
   }
-  else if(data.status==="ready"||data.status==="partial")aiMessage="ИИ доступен, но ранее созданные результаты постепенно уточняются по новой утверждённой методике из 15 категорий.";
-  else aiMessage="ИИ ещё не подключён. Для новых классификаций нужен GigaChat в GitHub Actions; пока используются правила.";
+  else if(data.status==="ready"||data.status==="partial")aiMessage="Бесплатный режим: сохранённые результаты ИИ и локальные правила по 15 категориям.";
+  else aiMessage="Бесплатный режим: используются локальные правила, без запросов GigaChat.";
  }catch(e){aiMessage=aiDataset?"Не удалось проверить обновление ИИ; показаны последние проверенные результаты.":"Результаты ИИ недоступны; работают правила."}
  finally{aiRefreshBusy=false}
  render(false);

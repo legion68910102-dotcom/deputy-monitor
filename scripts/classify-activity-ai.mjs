@@ -180,6 +180,7 @@ async function askBatchAI(posts){
  throw Error("Batch retries exhausted");
 }
 async function main(){
+ if(process.env.DEPUTY_MONITOR_ALLOW_BILLABLE_AI!=="YES"){console.log("Zero-cost policy: GigaChat disabled; no API calls or cache changes.");return}
  if(!AUTH_KEY){console.log("GIGACHAT_AUTH_KEY not set. No API calls; existing data unchanged.");return}
  if(!["GIGACHAT_API_PERS","GIGACHAT_API_B2B","GIGACHAT_API_CORP"].includes(SCOPE))throw Error("Invalid GIGACHAT_SCOPE");
  const data=readJSON("vk-posts.json",{posts:[]});

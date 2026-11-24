@@ -11,6 +11,9 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
+# A deliberate code review is required to lift this project-wide cost guard.
+raise SystemExit("Apify collection disabled by zero-cost project policy; no requests made")
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 manifest = json.loads((ROOT / "vk-profiles.json").read_text(encoding="utf-8"))
 profiles = manifest["profiles"]

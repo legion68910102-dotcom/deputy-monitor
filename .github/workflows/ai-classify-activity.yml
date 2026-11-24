@@ -1,9 +1,6 @@
-name: AI classification of deputy publications
-
+name: Activity classification (zero-cost local rules)
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 * * * *"
   push:
     paths:
       - "vk-posts.json"
@@ -15,109 +12,24 @@ on:
       - "activity-category-policy-v1.js"
       - "activity-taxonomy-approved-v1.json"
       - ".github/workflows/ai-classify-activity.yml"
-
 permissions:
-  contents: write
-  actions: write
-
-concurrency:
-  group: ai-deputy-publications
-  cancel-in-progress: false
-
+  contents: read
 jobs:
-  classify:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 85
+    timeout-minutes: 5
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Configure verified GigaChat trust certificate
-        env:
-          GIGACHAT_CA_PEM: ${{ secrets.GIGACHAT_CA_PEM }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          cert="$RUNNER_TEMP/gigachat-root-ca.pem"
-          if [ -n "$GIGACHAT_CA_PEM" ]; then
-            printf '%s\n' "$GIGACHAT_CA_PEM" > "$cert"
-          else
-            # Official Russian trusted root certificate. Pin the fingerprint
-            # because its distribution URL can require an initially untrusted CA.
-            curl --fail --silent --show-error --location --insecure --retry 2 \
-              --max-time 25 "https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt" -o "$cert"
-          fi
-          expected="D26D2D0231B7C39F92CC738512BA54103519E4405D68B5BD703E9788CA8ECF31"
-          actual="$(openssl x509 -in "$cert" -noout -sha256 -fingerprint | cut -d= -f2 | tr -d ':' | tr '[:lower:]' '[:upper:]')"
-          if [ "$actual" != "$expected" ]; then
-            echo "::error::GigaChat root certificate fingerprint mismatch; no TLS trust changes made."
-            exit 1
-          fi
-          echo "NODE_EXTRA_CA_CERTS=$cert" >> "$GITHUB_ENV"
-          echo "Verified Russian Trusted Root CA for Node.js only (TLS verification remains enabled)."
-      - name: Check GigaChat authorization key
-        env:
-          GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
-        run: |
-          if [ -z "$GIGACHAT_AUTH_KEY" ]; then
-            echo "::error::GitHub Actions secret GIGACHAT_AUTH_KEY is not configured. Add it in Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-      - name: Verify analysis categories and browser script
+      - name: Test local classification without paid API
         run: |
           node --check activity-analysis-v129.js
           node --check activity-category-policy-v1.js
-          node --check scripts/activity-batch-helper.cjs
-          node scripts/test-activity-batching.mjs
-          node -e 'const t=require("./activity-taxonomy-approved-v1.json"); if(t.categories.length!==15||t.categories.reduce((n,c)=>n+c.phrases.length,0)<230)process.exit(1); console.log("Approved taxonomy categories: "+t.categories.length)'
-          node scripts/test-activity-taxonomy.mjs
-      - name: Analyze available public texts
-        env:
-          GIGACHAT_AUTH_KEY: ${{ secrets.GIGACHAT_AUTH_KEY }}
-          GIGACHAT_MODEL: "GigaChat-2-Pro"
-          GIGACHAT_SCOPE: "GIGACHAT_API_PERS"
-          GIGACHAT_SMOKE_TEST: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
-          AI_POST_LIMIT: "1200"
-          AI_BATCH_SIZE: "5"
-        run: |
           node --check scripts/classify-activity-ai.mjs
-          node scripts/classify-activity-ai.mjs
-      - name: Publish analysis cache
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          if git diff --quiet -- ai-analysis.json; then
-            echo "No changes to AI cache"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          cp ai-analysis.json /tmp/ai-analysis.json
-          git restore --staged --worktree ai-analysis.json
-          git pull --ff-only origin main
-          cp /tmp/ai-analysis.json ai-analysis.json
-          git add ai-analysis.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update AI activity classifications"
-            for attempt in 1 2 3 4; do
-              if git push origin HEAD:main; then
-                gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
-                exit 0
-              fi
-              echo "Remote branch changed; safely rebasing AI cache ($attempt/4)"
-              # If another AI run changed the same analysis cache, stop instead
-              # of silently overwriting someone else's committed classifications.
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                echo "::error::AI cache conflict: no forced overwrite; next scheduled run will retry"
-                exit 1
-              fi
-              sleep $((attempt * 2))
-            done
-            echo "::error::Could not publish AI cache after four attempts"
-            exit 1
-          fi
+          node scripts/test-activity-batching.mjs
+          node -e 'const t=require("./activity-taxonomy-approved-v1.json"); if(t.categories.length!==15||t.categories.reduce((n,c)=>n+c.phrases.length,0)<230)process.exit(1)'
+          node scripts/test-activity-taxonomy.mjs
+          node --test tests/test_repost_detection.cjs
+          echo "Zero-cost mode: local rules in browser; historical AI cache retained; no GigaChat requests."

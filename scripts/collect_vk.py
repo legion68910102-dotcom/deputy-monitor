@@ -218,6 +218,7 @@ def collect(root: Path, token: str, *, start_at: int = 0,
     consecutive_failures = 0
     aborted = None
     attempted = 0
+    error_counts = {}
 
     for handle in chosen:
         if attempted:
@@ -226,6 +227,7 @@ def collect(root: Path, token: str, *, start_at: int = 0,
         items, error, fatal = read_wall(handle, token, fetch, pause)
         if error is not None:
             failed += 1
+            error_counts[error] = error_counts.get(error, 0) + 1
             # A private wall (VK error 15) is not an API outage; keep checking others.
             consecutive_failures = 0 if error == "vk_api_error_15" else consecutive_failures + 1
             statuses[handle] = {
@@ -271,6 +273,7 @@ def collect(root: Path, token: str, *, start_at: int = 0,
         "new_posts": inserted, "updated_posts": updated,
         "retained_posts": len(records), "stopped_reason": aborted,
         "dry_run": dry_run,
+        "error_counts": error_counts,
     }
 
     if not dry_run:

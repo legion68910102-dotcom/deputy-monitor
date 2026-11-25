@@ -92,6 +92,42 @@ jobs:
                 await el.evaluate(e=>e.open=true);
                 await page.waitForTimeout(1500);
                 console.log('SECTION',section,JSON.stringify({errors,rows:await el.locator('tbody tr').count()}));
+                if(section==='activity'){
+                  const result=await page.evaluate(()=>{
+                    const tbody=document.getElementById('posts');
+                    const initial=tbody.rows.length,linkCount=window.activitySelectedLinks.length;
+                    const expectedLinks=allRows().filter(p=>/^https:\/\//i.test(String(p.url||""))&&window.dmDateFilter.includes(p.date,document.getElementById('activity-date-from').value,document.getElementById('activity-date-to').value)).length;
+                    const profileNode=document.querySelector('#profiles .district-group');
+                    const next=document.getElementById('activity-feed-next'),prev=document.getElementById('activity-feed-prev');
+                    next.click();const second=tbody.rows.length;
+                    next.click();const third=tbody.rows.length;
+                    next.click();const nextPage=tbody.rows.length,offset=dmFeedState.start;
+                    prev.click();const previousPage=tbody.rows.length;
+                    const linksUnchanged=linkCount===window.activitySelectedLinks.length;
+                    const search=document.getElementById('activity-person-search');
+                    const person=window.deputyRoster.find(p=>p.handle&&allRows().some(r=>r.profile===p.handle));
+                    search.value=person.name;search.dispatchEvent(new Event('change'));
+                    const filtered=window.activitySelectedLinks.every(p=>p.name===person.name)&&window.activitySelectedLinks.length>0;
+                    const from=document.getElementById('activity-date-from'),to=document.getElementById('activity-date-to');
+                    const date=window.activitySelectedLinks[0].date.slice(0,10);
+                    from.value=date;to.value=date;from.dispatchEvent(new Event('change'));
+                    const dateFiltered=window.activitySelectedLinks.length>0&&window.activitySelectedLinks.every(p=>p.date.slice(0,10)===date);
+                    search.value='';document.getElementById('activity-date-reset').click();
+                    return {initial,second,third,nextPage,offset,previousPage,linkCount,expectedLinks,linksUnchanged,filtered,dateFiltered,profilesUnchanged:profileNode===document.querySelector('#profiles .district-group')};
+                  });
+                  console.log('FEED_PAGING',engine.name(),path,JSON.stringify(result));
+                  assert.equal(result.initial,50);
+                  assert.equal(result.second,100);
+                  assert.equal(result.third,150);
+                  assert.equal(result.nextPage,50);
+                  assert.equal(result.offset,150);
+                  assert.equal(result.previousPage,50);
+                  assert.equal(result.linkCount,result.expectedLinks);
+                  assert.equal(result.linksUnchanged,true);
+                  assert.equal(result.filtered,true);
+                  assert.equal(result.dateFiltered,true);
+                  assert.equal(result.profilesUnchanged,true);
+                }
                 await el.evaluate(e=>e.open=false);
               }
               assert.deepEqual(errors,[]);

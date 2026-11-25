@@ -1,0 +1,16 @@
+name: Inspect saved VK owner IDs (offline)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-vk-owner-ids.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - run: python scripts/audit_vk_owner_ids.py

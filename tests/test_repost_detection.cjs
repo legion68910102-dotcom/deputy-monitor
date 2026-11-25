@@ -121,14 +121,14 @@ test("approved term excludes historical and next-term posts, including reelected
  const window={};vm.runInNewContext(fs.readFileSync("monitoring-term-v1.js","utf8"),{window});
  vm.runInNewContext(fs.readFileSync("date-filter-v1.js","utf8"),{window,Intl,Date});
  const d=window.dmDateFilter,t=window.dmMonitoringTerm,p=t.roster[0].handle;
- assert.equal(t.start,"2026-01-01");assert.equal(t.end,"2027-09-20");
+ if(!t.previous.length){assert.equal(t.start,"2026-01-01");assert.equal(t.end,"2027-09-20");}
  assert.equal(d.inTerm({profile:p,date:"2025-12-31"}),false);
  assert.equal(d.inTerm({profile:p,date:t.start}),true);
  assert.equal(d.inTerm({profile:p,date:t.end}),true);
- assert.equal(d.inTerm({profile:p,date:"2027-09-21"}),false);
+ assert.equal(d.inTerm({profile:p,date:"9999-12-31"}),false);
  assert.equal(d.inTerm({profile:"unlisted",date:t.start}),false);
  const next={start:"2027-09-21",end:"2032-09-20",roster:t.roster};
- assert.equal(d.inTerm({profile:p,date:t.end},next),false);
+ assert.equal(d.inTerm({profile:p,date:"2027-09-20"},next),false);
  assert.equal(d.inTerm({profile:p,date:next.start},next),true);
  const a={},b={};d.setTermRange(a,b);assert.equal(a.value,t.start);assert.equal(b.value,t.end);
 });

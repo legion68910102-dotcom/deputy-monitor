@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - 'deputies.json'
+      - 'monitoring-term-v1.js'
+      - 'scripts/monitoring_term.py'
       - 'index-v129.html'
       - 'vk-posts.json'
       - 'build_excel_report.py'

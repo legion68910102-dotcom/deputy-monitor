@@ -320,8 +320,13 @@ def main() -> None:
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
     handles, _ = roster_handles(root)
-    if len(handles) != 159:
-        raise SystemExit("Safety check failed: expected exactly 159 distinct VK handles")
+    from monitoring_term import load_term
+    term = load_term(root)
+    if set(handles) != {p["handle"] for p in term["roster"]}:
+        raise SystemExit("Approved term and roster disagree; no requests made")
+    today = dt.datetime.now(MOSCOW).date().isoformat()
+    if not term["start"] <= today <= term["end"]:
+        raise SystemExit("Outside approved monitoring term; awaiting confirmed roster update; no VK requests made")
     token = os.environ.get("VK_TOKEN", "").strip()
     if not token:
         raise SystemExit("VK_TOKEN missing; no API requests or file changes")

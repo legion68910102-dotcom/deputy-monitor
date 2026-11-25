@@ -1,0 +1,73 @@
+name: Browser smoke test for approved v129
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/browser-smoke-v129.yml'
+      - 'index.html'
+      - 'index-v129.html'
+      - 'activity-analysis-v129.js'
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test runner
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Verify actual browser startup against saved public snapshot
+        run: |
+          set -euo pipefail
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/deputy-http.log 2>&1 &
+          trap 'kill $! 2>/dev/null || true' EXIT
+          node --input-type=module <<'JS'
+          import { chromium, devices } from 'playwright';
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const archive=JSON.parse(fs.readFileSync('vk-posts.json','utf8'));
+          const term=JSON.parse(fs.readFileSync('monitoring-term-v1.js','utf8').split('window.dmMonitoringTerm = ')[1].trim().replace(/;$/,''));
+          const handles=new Set(term.roster.map(p=>p.handle));
+          const expected=archive.posts.filter(p=>handles.has(p.profile)&&String(p.date).slice(0,10)>=term.start&&String(p.date).slice(0,10)<=term.end).length;
+          const browser=await chromium.launch({headless:true});
+          try{
+            for(const path of ['index.html','index-v129.html']){
+              const context=await browser.newContext({...devices['iPhone 13'],isMobile:true});
+              const page=await context.newPage();
+              const errors=[], failures=[];
+              page.on('pageerror',e=>errors.push(e.message));
+              page.on('requestfailed',r=>{if(r.url().startsWith('http://127.0.0.1:8765/'))failures.push(r.url().split('/').pop()+': '+r.failure()?.errorText)});
+              await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:8765/')?r.continue():r.abort());
+              const started=Date.now();
+              await page.goto('http://127.0.0.1:8765/'+path,{waitUntil:'domcontentloaded',timeout:30000});
+              try{
+                await page.waitForFunction(()=>Number(document.getElementById('total')?.textContent)>0,{},{timeout:40000});
+              }catch(e){
+                console.log('STARTUP_TIMEOUT',path,JSON.stringify({errors,failures,banner:await page.locator('#vk-sync-heading').textContent().catch(()=>null)}));
+                throw e;
+              }
+              const state=await page.evaluate(()=>({roster:window.deputyRoster?.length,total:document.getElementById('total')?.textContent,checked:document.getElementById('checked')?.textContent,banner:document.getElementById('vk-sync-heading')?.textContent,archive:document.getElementById('deputy-archive-list')?.textContent?.includes('Ильяшенко')}));
+              console.log('BROWSER_STARTUP',path,JSON.stringify({elapsed_ms:Date.now()-started,expected,...state,errors,failures}));
+              assert.equal(state.roster,term.roster.length);
+              assert.equal(Number(state.total),expected);
+              assert.equal(state.archive,true);
+              assert.deepEqual(errors,[]);
+              for(const section of ['activity','report','ranking','activity-analysis']){
+                const el=page.locator('#'+section+' > details');
+                await el.evaluate(e=>e.open=true);
+                await page.waitForTimeout(1500);
+                console.log('SECTION',section,JSON.stringify({errors,rows:await el.locator('tbody tr').count()}));
+                await el.evaluate(e=>e.open=false);
+              }
+              assert.deepEqual(errors,[]);
+              await context.close();
+            }
+          }finally{await browser.close()}
+          JS

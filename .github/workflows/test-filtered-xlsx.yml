@@ -1,0 +1,123 @@
+name: Verify filtered XLSX downloads
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['index.html', 'index-v129.html', '.github/workflows/test-filtered-xlsx.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test tools
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium webkit
+          python -m pip install openpyxl==3.1.5
+      - name: Download actual reports in Chromium and WebKit
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/xlsx-test
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/xlsx-http.log 2>&1 &
+          trap 'kill $! 2>/dev/null || true' EXIT
+          node --input-type=module <<'JS'
+          import {chromium,webkit,devices} from 'playwright';
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const cases=[];
+          for(const engine of [chromium,webkit]){
+            const browser=await engine.launch();
+            try{
+              const context=await browser.newContext({...devices['iPhone 13'],acceptDownloads:true});
+              const page=await context.newPage();
+              const errors=[];
+              page.on('pageerror',e=>errors.push(e.message));
+              await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:8765/')?r.continue():r.abort());
+              await page.addInitScript(()=>{Object.defineProperty(navigator,'canShare',{configurable:true,value:()=>false})});
+              await page.goto('http://127.0.0.1:8765/index-v129.html',{waitUntil:'domcontentloaded'});
+              await page.waitForFunction(()=>Number(document.getElementById('total')?.textContent)>0,{},{timeout:45000});
+              await page.locator('#report > details').evaluate(e=>e.open=true);
+              const full=await page.evaluate(()=>({start:window.dmMonitoringTerm.start,end:window.dmMonitoringTerm.end,person:allRows()[0].profile,date:String(allRows()[0].date).slice(0,10)}));
+              for(const kind of ['full','person-day','empty']){
+                const expected=await page.evaluate(({kind,full})=>{
+                  const person=document.getElementById('report-person'),from=document.getElementById('report-from'),to=document.getElementById('report-to');
+                  person.value=kind==='full'?'all':full.person;
+                  from.value=kind==='full'?full.start:kind==='empty'?full.end:full.date;
+                  to.value=kind==='full'||kind==='empty'?full.end:full.date;
+                  const rows=allRows().filter(r=>(person.value==='all'||r.profile===person.value)&&window.dmDateFilter.includes(r.date,from.value,to.value));
+                  return {rows:rows.length,people:kind==='full'?window.deputyRoster.length:1,person:person.value,from:from.value,to:to.value};
+                },{kind,full});
+                const event=page.waitForEvent('download',{timeout:60000});
+                await page.locator('#report-filtered-download').click();
+                const download=await event;
+                assert.match(download.suggestedFilename(),/\.xlsx$/);
+                assert.equal(await download.failure(),null);
+                const file='/tmp/xlsx-test/'+engine.name()+'-'+kind+'.xlsx';
+                await download.saveAs(file);
+                cases.push({file,...expected});
+                console.log('XLSX_DOWNLOAD',engine.name(),kind,fs.statSync(file).size,expected.rows);
+              }
+              // Capture the native-share payload without sending it anywhere.
+              await page.evaluate(()=>{
+                Object.defineProperty(navigator,'canShare',{configurable:true,value:()=>true});
+                Object.defineProperty(navigator,'share',{configurable:true,value:async({files})=>{
+                  const f=files[0];window.dmTestSharedFile={name:f.name,type:f.type,bytes:Array.from(new Uint8Array(await f.arrayBuffer()))};
+                }});
+                Object.defineProperty(navigator,'userAgent',{configurable:true,value:'iPhone'});
+              });
+              const expected=await page.evaluate(({person,date})=>{
+                document.getElementById('report-person').value=person;
+                document.getElementById('report-from').value=date;document.getElementById('report-to').value=date;
+                return {rows:allRows().filter(r=>r.profile===person&&window.dmDateFilter.includes(r.date,date,date)).length,people:1,person,from:date,to:date};
+              },full);
+              await page.locator('#report-filtered-download').click();
+              await page.waitForFunction(()=>window.dmTestSharedFile);
+              const shared=await page.evaluate(()=>window.dmTestSharedFile);
+              assert.match(shared.name,/\.xlsx$/);
+              assert.equal(shared.type,'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+              const file='/tmp/xlsx-test/'+engine.name()+'-shared.xlsx';
+              fs.writeFileSync(file,Buffer.from(shared.bytes));
+              cases.push({file,...expected});
+              assert.deepEqual(errors,[]);
+              await context.close();
+            }finally{await browser.close()}
+          }
+          fs.writeFileSync('/tmp/xlsx-test/manifest.json',JSON.stringify(cases));
+          JS
+      - name: Validate downloaded ZIP, XML and workbook contents
+        run: |
+          python - <<'PY'
+          import json, zipfile, xml.etree.ElementTree as ET
+          from openpyxl import load_workbook
+          for case in json.load(open('/tmp/xlsx-test/manifest.json')):
+              p=case['file']
+              with zipfile.ZipFile(p) as z:
+                  assert z.testzip() is None
+                  assert {'xl/styles.xml','xl/sharedStrings.xml','xl/workbook.xml'} <= set(z.namelist())
+                  for name in z.namelist():
+                      if name.endswith(('.xml','.rels')): ET.fromstring(z.read(name))
+              w=load_workbook(p,read_only=True,data_only=False)
+              assert w.sheetnames==['Сводка','Публикации','Без данных']
+              summary=list(w['Сводка'].values)
+              posts=list(w['Публикации'].values)
+              assert len(summary)==case['people']+1,(p,len(summary),case)
+              assert len(posts)==case['rows']+1,(p,len(posts),case)
+              for r in summary[1:]:
+                  assert r[3]==case['from'] and r[4]==case['to']
+              for r in posts[1:]:
+                  assert case['from']<=str(r[0])[:10]<=case['to']
+                  if case['person']!='all': assert r[2]==case['person']
+              for row in w['Публикации'].iter_rows(min_row=2):
+                  assert row[3].data_type!='f'
+              w.close()
+              print('XLSX_VALID',p,'deputies',case['people'],'posts',case['rows'])
+          PY

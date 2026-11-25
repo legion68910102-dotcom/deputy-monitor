@@ -1033,20 +1033,60 @@ const names={"natalia_shabasheva":"Наталья Шабашева","shmakova_os
 const roster=Array.isArray(window.deputyRoster)?window.deputyRoster:[];
 for(const p of roster){if(p.name)names[p.handle||("roster:"+p.district+":"+p.name)]=p.name;}
 const handles=[...new Set(roster.length?roster.map(p=>p.handle||("roster:"+p.district+":"+p.name)):Object.keys(names))],encoder=new TextEncoder();
-const xml=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&apos;"}[c])).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,"");
-function cell(value,col,row){let ref=colName(col)+row;if(typeof value==="number"&&Number.isFinite(value))return '<c r="'+ref+'"><v>'+value+'</v></c>';return '<c r="'+ref+'" t="inlineStr"><is><t xml:space="preserve">'+xml(value)+'</t></is></c>'}
+// OOXML: standard workbook parts, shared strings and explicit default styles.
+const excelText=value=>String(value??"").slice(0,32767).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\ufffe\uffff]|[\ud800-\udfff]/gu,"");
+const xml=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&apos;"}[c])).replace(/\r/g,"&#13;");
 function colName(n){let s="";for(n++;n;n=Math.floor((n-1)/26))s=String.fromCharCode(65+(n-1)%26)+s;return s}
-function sheet(data){return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"/></sheetViews><sheetFormatPr defaultRowHeight="16"/><sheetData>'+data.map((line,i)=>'<row r="'+(i+1)+'">'+line.map((v,j)=>cell(v,j,i+1)).join("")+'</row>').join("")+'</sheetData><autoFilter ref="A1:'+colName(Math.max(0,(data[0]||[]).length-1))+data.length+'"/></worksheet>'}
-const U16=n=>[n&255,(n>>>8)&255],U32=n=>[n&255,(n>>>8)&255,(n>>>16)&255,(n>>>24)&255];
 const crcTable=Array.from({length:256},(_,n)=>{for(let i=0;i<8;i++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0});
 function crc32(b){let c=0xffffffff;for(let i=0;i<b.length;i++)c=crcTable[(c^b[i])&255]^(c>>>8);return(c^0xffffffff)>>>0}
-function zip(files){let local=[],central=[],offset=0;for(const [name,content] of files){const n=encoder.encode(name),b=encoder.encode(content),crc=crc32(b),h=new Uint8Array([...U32(0x04034b50),...U16(20),...U16(0),...U16(0),...U16(0),...U16(0),...U32(crc),...U32(b.length),...U32(b.length),...U16(n.length),...U16(0),...n]),d=new Uint8Array([...U32(0x02014b50),...U16(20),...U16(20),...U16(0),...U16(0),...U16(0),...U16(0),...U32(crc),...U32(b.length),...U32(b.length),...U16(n.length),...U16(0),...U16(0),...U16(0),...U16(0),...U32(0),...U32(offset),...n]);local.push(h,b);central.push(d);offset+=h.length+b.length}const centralSize=central.reduce((s,b)=>s+b.length,0),end=new Uint8Array([...U32(0x06054b50),...U16(0),...U16(0),...U16(files.length),...U16(files.length),...U32(centralSize),...U32(offset),...U16(0)]);return new Blob([...local,...central,end],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"})}
-function workbook(summary,posts,missing){const ns='http://schemas.openxmlformats.org/spreadsheetml/2006/main';return zip([
-['[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet3.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>'],
-['_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
-['xl/workbook.xml','<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="'+ns+'" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Сводка" sheetId="1" r:id="rId1"/><sheet name="Публикации" sheetId="2" r:id="rId2"/><sheet name="Без данных" sheetId="3" r:id="rId3"/></sheets></workbook>'],
-['xl/_rels/workbook.xml.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet3.xml"/></Relationships>'],
-['xl/worksheets/sheet1.xml',sheet(summary)],['xl/worksheets/sheet2.xml',sheet(posts)],['xl/worksheets/sheet3.xml',sheet(missing)]])}
+function zip(files){
+ const local=[],central=[];let offset=0;
+ for(const [name,content] of files){
+  const n=encoder.encode(name),b=encoder.encode(content),crc=crc32(b);
+  if(b.length>0xffffffff||offset>0xffffffff)throw Error("Файл слишком большой для обычного XLSX");
+  const h=new Uint8Array(30+n.length),d=new Uint8Array(46+n.length);
+  const hv=new DataView(h.buffer),dv=new DataView(d.buffer);
+  const u16=(v,o,x)=>v.setUint16(o,x,true),u32=(v,o,x)=>v.setUint32(o,x,true);
+  u32(hv,0,0x04034b50);u16(hv,4,20);u16(hv,6,0x0800);u16(hv,12,0x21);
+  u32(hv,14,crc);u32(hv,18,b.length);u32(hv,22,b.length);u16(hv,26,n.length);h.set(n,30);
+  u32(dv,0,0x02014b50);u16(dv,4,20);u16(dv,6,20);u16(dv,8,0x0800);u16(dv,14,0x21);
+  u32(dv,16,crc);u32(dv,20,b.length);u32(dv,24,b.length);u16(dv,28,n.length);u32(dv,42,offset);d.set(n,46);
+  local.push(h,b);central.push(d);offset+=h.length+b.length;
+ }
+ const centralSize=central.reduce((sum,b)=>sum+b.length,0),e=new Uint8Array(22),ev=new DataView(e.buffer);
+ if(offset+centralSize>0xffffffff||files.length>65535)throw Error("Файл слишком большой для обычного XLSX");
+ ev.setUint32(0,0x06054b50,true);ev.setUint16(8,files.length,true);ev.setUint16(10,files.length,true);ev.setUint32(12,centralSize,true);ev.setUint32(16,offset,true);
+ return new Blob([...local,...central,e],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+}
+function workbook(summary,posts,missing){
+ const ns="http://schemas.openxmlformats.org/spreadsheetml/2006/main",rel="http://schemas.openxmlformats.org/officeDocument/2006/relationships",pkg="http://schemas.openxmlformats.org/package/2006/relationships",ct="http://schemas.openxmlformats.org/package/2006/content-types",mime="application/vnd.openxmlformats-officedocument.spreadsheetml.",decl='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+ const strings=[],ids=new Map();let stringCount=0;
+ function cell(value,col,row){
+  const ref=colName(col)+row;
+  if(typeof value==="number"&&Number.isFinite(value))return '<c r="'+ref+'" t="n"><v>'+value+'</v></c>';
+  const text=excelText(value);
+  if(!ids.has(text)){ids.set(text,strings.length);strings.push(text)}
+  stringCount++;
+  return '<c r="'+ref+'" t="s"><v>'+ids.get(text)+'</v></c>';
+ }
+ function sheet(data){
+  const cols=Math.max(1,(data[0]||[]).length),range="A1:"+colName(cols-1)+Math.max(1,data.length);
+  if(data.length>1048576||cols>16384)throw Error("Превышен размер листа Excel");
+  return decl+'<worksheet xmlns="'+ns+'"><dimension ref="'+range+'"/><sheetViews><sheetView workbookViewId="0"/></sheetViews><sheetFormatPr defaultRowHeight="15"/><sheetData>'+data.map((line,i)=>'<row r="'+(i+1)+'">'+line.map((value,j)=>cell(value,j,i+1)).join("")+'</row>').join("")+'</sheetData><autoFilter ref="'+range+'"/></worksheet>';
+ }
+ const sheets=[sheet(summary),sheet(posts),sheet(missing)];
+ const types=[["/xl/workbook.xml","sheet.main+xml"],["/xl/styles.xml","styles+xml"],["/xl/sharedStrings.xml","sharedStrings+xml"],...sheets.map((_,i)=>["/xl/worksheets/sheet"+(i+1)+".xml","worksheet+xml"])];
+ const styles=decl+'<styleSheet xmlns="'+ns+'"><fonts count="1"><font><sz val="11"/><name val="Calibri"/><family val="2"/></font></fonts><fills count="2"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill></fills><borders count="1"><border><left/><right/><top/><bottom/><diagonal/></border></borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>';
+ const sst=decl+'<sst xmlns="'+ns+'" count="'+stringCount+'" uniqueCount="'+strings.length+'">'+strings.map(text=>'<si><t xml:space="preserve">'+xml(text)+'</t></si>').join("")+'</sst>';
+ const relationships=(entries)=>decl+'<Relationships xmlns="'+pkg+'">'+entries.map(([id,type,target])=>'<Relationship Id="'+id+'" Type="'+rel+'/'+type+'" Target="'+target+'"/>').join("")+'</Relationships>';
+ return zip([
+  ["[Content_Types].xml",decl+'<Types xmlns="'+ct+'"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/>'+types.map(([part,type])=>'<Override PartName="'+part+'" ContentType="'+mime+type+'"/>').join("")+'</Types>'],
+  ["_rels/.rels",relationships([["rId1","officeDocument","xl/workbook.xml"]])],
+  ["xl/workbook.xml",decl+'<workbook xmlns="'+ns+'" xmlns:r="'+rel+'"><bookViews><workbookView activeTab="0"/></bookViews><sheets><sheet name="Сводка" sheetId="1" r:id="rId1"/><sheet name="Публикации" sheetId="2" r:id="rId2"/><sheet name="Без данных" sheetId="3" r:id="rId3"/></sheets></workbook>'],
+  ["xl/_rels/workbook.xml.rels",relationships([["rId1","worksheet","worksheets/sheet1.xml"],["rId2","worksheet","worksheets/sheet2.xml"],["rId3","worksheet","worksheets/sheet3.xml"],["rId4","styles","styles.xml"],["rId5","sharedStrings","sharedStrings.xml"]])],
+  ["xl/styles.xml",styles],["xl/sharedStrings.xml",sst],...sheets.map((content,i)=>["xl/worksheets/sheet"+(i+1)+".xml",content])
+ ]);
+}
 function getRows(){if(typeof window.dmActivityRows==="function")return window.dmActivityRows();try{let local=JSON.parse(localStorage.getItem("dm_posts")||"[]"),remote=JSON.parse(sessionStorage.getItem("dm_vk_posts")||"[]");const map=new Map();for(const r of Array.isArray(remote)?remote:[])map.set(r.profile+"|"+r.url,r);for(const r of Array.isArray(local)?local:[])map.set(r.profile+"|"+r.url,r);const list=[...map.values()];return window.dmPersonalWorkspace?window.dmPersonalWorkspace.applyPosts(list):list}catch(e){return []}}
 function metric(rows,key){let vals=rows.map(r=>r[key]).filter(v=>v!==undefined&&v!==null&&String(v).trim()!==""&&Number.isFinite(Number(v))).map(Number);return vals.length?vals.reduce((a,b)=>a+b,0):"Нет данных"}
 const rosterByKey=new Map(roster.map(p=>[p.handle||("roster:"+p.district+":"+p.name),p]));
@@ -1086,7 +1126,22 @@ function buildExcel(){const summary=summaryRows(),rows=selectedRows();const post
 blob=workbook(summary,posts,missing);
 return {blob,count:summary.length-1,missing:missing.length-1};
 }
-function run(){const result=buildExcel(),filename="Deputies_YUAO_Filtered_"+($("report-from").value||"all")+"_"+($("report-to").value||"all")+".xlsx",status=$("report-status");const file=new File([result.blob],filename,{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});const ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);if(ios&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){status.textContent="Выберите «Сохранить в Файлы» или Excel/Numbers в системном меню.";navigator.share({files:[file],title:"Отчёт по депутатам ЮАО"}).catch(e=>{if(e.name!=="AbortError"){saveBlob(result.blob,filename);status.textContent="Системное меню недоступно. Файл отправлен в загрузки браузера."}else status.textContent="Сохранение отменено."});return}saveBlob(result.blob,filename);status.textContent="Файл Excel сформирован: "+result.count+" депутатов. Откройте его в Excel, Numbers или другой программе для XLSX."}
+function run(){
+ const status=$("report-status");
+ if(!dmLastPostsSnapshot&&!apiRows.length&&!rows.length){status.textContent="Дождитесь загрузки публикаций VK и повторите выгрузку.";return}
+ const result=buildExcel(),filename="Deputies_YUAO_Filtered_"+($("report-from").value||"all")+"_"+($("report-to").value||"all")+".xlsx";
+ if(result.blob.size<512||result.blob.type!=="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")throw Error("Не удалось сформировать книгу XLSX");
+ const ios=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+ if(ios&&navigator.share&&navigator.canShare&&typeof File==="function"){
+  const file=new File([result.blob],filename,{type:result.blob.type});
+  let canShare=false;try{canShare=navigator.canShare({files:[file]})}catch(e){}
+  if(canShare){
+   status.textContent="Выберите «Сохранить в Файлы» или Excel/Numbers в системном меню.";
+   navigator.share({files:[file]}).catch(e=>{if(e.name!=="AbortError"){saveBlob(result.blob,filename);status.textContent="Файл XLSX отправлен в загрузки браузера."}else status.textContent="Сохранение отменено."});return;
+  }
+ }
+ saveBlob(result.blob,filename);status.textContent="Файл Excel сформирован: "+result.count+" депутатов. Откройте скачанный .xlsx в Excel или Numbers.";
+}
 async function shareExcel(){const result=buildExcel(),file=new File([result.blob],"Депутаты_ЮАО_отчёт.xlsx",{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){try{await navigator.share({files:[file],title:"Отчёт по депутатам ЮАО"});$("report-status").textContent="Файл передан в меню iPhone. Выберите «Сохранить в Файлы» или Excel/Numbers.";return}catch(e){if(e.name==="AbortError"){$("report-status").textContent="Сохранение отменено.";return}}}saveBlob(result.blob,file.name);$("report-status").textContent="Попытка скачивания Excel. Если Safari блокирует загрузку, используйте CSV или HTML."}
 async function refreshReportPosts(){if(typeof refreshMonitor==="function"){await refreshMonitor();return}try{const response=await fetch("./vk-posts.json?t="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);const data=await response.json();if(Array.isArray(data.posts)){sessionStorage.setItem("dm_vk_posts",JSON.stringify(data.posts));if(Array.isArray(data.monitored_profiles))sessionStorage.setItem("dm_vk_monitoring",JSON.stringify(data.monitored_profiles))}}catch(e){console.warn("VK posts refresh unavailable",e)}}
 document.addEventListener("DOMContentLoaded",()=>{

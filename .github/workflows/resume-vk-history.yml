@@ -1,0 +1,67 @@
+name: Resume VK history (bounded free-quota batches)
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_free_quota:
+        description: Type YES to enable bounded history batches using confirmed free quota
+        required: true
+        type: string
+  schedule:
+    - cron: '15 12 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/backfill_vk_queue.py'
+      - 'tests/test_vk_history_queue.py'
+      - '.github/workflows/resume-vk-history.yml'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m unittest discover -s tests -p test_vk_history_queue.py -v
+  collect:
+    needs: check
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.confirm_free_quota == 'YES'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm previously enabled queue or manual approval
+        id: gate
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path("vk-history-progress.json")
+          active=os.environ["EVENT"]=="workflow_dispatch" or (p.exists() and json.loads(p.read_text()).get("enabled") is True)
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f: f.write("active="+str(active).lower()+"\n")
+          PY
+      - name: Process at most 50 public wall requests
+        if: steps.gate.outputs.active == 'true'
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/backfill_vk_queue.py --budget 50
+      - name: Commit checkpoint and publish retained history
+        if: steps.gate.outputs.active == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vk-posts.json vk-history-progress.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Resume bounded VK history and save checkpoints"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            gh workflow run build-excel-report.yml --repo "$GITHUB_REPOSITORY" --ref main
+          fi

@@ -20,3 +20,5 @@ jobs:
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
         run: python scripts/collect_vk.py --max-profiles 5 --dry-run
+
+# Verify five public walls after successful service-key validation.

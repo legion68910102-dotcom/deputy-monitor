@@ -1,802 +1,961 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T08:36:20.504924+00:00",
+  "generated_at": "2026-11-25T08:41:19.728329+00:00",
   "roster_size": 159,
   "profiles": {
     "ilyasov_kn": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ilyasov_kn"
+      "source": "https://vk.com/ilyasov_kn",
+      "error": "ValueError"
     },
     "molchanovpavel": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/molchanovpavel"
+      "source": "https://vk.com/molchanovpavel",
+      "error": "ValueError"
     },
     "elenanersesova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elenanersesova"
+      "source": "https://vk.com/elenanersesova",
+      "error": "ValueError"
     },
     "ptitsynakk": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ptitsynakk"
+      "source": "https://vk.com/ptitsynakk",
+      "error": "ValueError"
     },
     "nata_sycheva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/nata_sycheva"
+      "source": "https://vk.com/nata_sycheva",
+      "error": "ValueError"
     },
     "aleinikovayv": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/aleinikovayv"
+      "source": "https://vk.com/aleinikovayv",
+      "error": "ValueError"
     },
     "antonovalp1": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/antonovalp1"
+      "source": "https://vk.com/antonovalp1",
+      "error": "ValueError"
     },
     "golubevaev947": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/golubevaev947"
+      "source": "https://vk.com/golubevaev947",
+      "error": "ValueError"
     },
     "kutaysovanv": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kutaysovanv"
+      "source": "https://vk.com/kutaysovanv",
+      "error": "ValueError"
     },
     "rytovsergey": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/rytovsergey"
+      "source": "https://vk.com/rytovsergey",
+      "error": "ValueError"
     },
     "a.a.boikov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/a.a.boikov"
+      "source": "https://vk.com/a.a.boikov",
+      "error": "ValueError"
     },
     "e.aleksander88": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/e.aleksander88"
+      "source": "https://vk.com/e.aleksander88",
+      "error": "ValueError"
     },
     "iskonarev": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/iskonarev"
+      "source": "https://vk.com/iskonarev",
+      "error": "ValueError"
     },
     "elenasergeevnalelikiva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elenasergeevnalelikiva"
+      "source": "https://vk.com/elenasergeevnalelikiva",
+      "error": "ValueError"
     },
     "irina_terekhova1969": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/irina_terekhova1969"
+      "source": "https://vk.com/irina_terekhova1969",
+      "error": "ValueError"
     },
     "yaroslavburykh": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/yaroslavburykh"
+      "source": "https://vk.com/yaroslavburykh",
+      "error": "ValueError"
     },
     "smallraisin": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/smallraisin"
+      "source": "https://vk.com/smallraisin",
+      "error": "ValueError"
     },
     "tatyanajabina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tatyanajabina"
+      "source": "https://vk.com/tatyanajabina",
+      "error": "ValueError"
     },
     "juliamartanova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/juliamartanova"
+      "source": "https://vk.com/juliamartanova",
+      "error": "ValueError"
     },
     "orehov_aleksandr": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/orehov_aleksandr"
+      "source": "https://vk.com/orehov_aleksandr",
+      "error": "ValueError"
     },
     "olga_belousova1998": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/olga_belousova1998"
+      "source": "https://vk.com/olga_belousova1998",
+      "error": "ValueError"
     },
     "gontsova71": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/gontsova71"
+      "source": "https://vk.com/gontsova71",
+      "error": "ValueError"
     },
     "e.korostilenko": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/e.korostilenko"
+      "source": "https://vk.com/e.korostilenko",
+      "error": "ValueError"
     },
     "ykolova_elena_vasilevna": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ykolova_elena_vasilevna"
+      "source": "https://vk.com/ykolova_elena_vasilevna",
+      "error": "ValueError"
     },
     "chinilina975": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/chinilina975"
+      "source": "https://vk.com/chinilina975",
+      "error": "ValueError"
     },
     "vlasenkoau": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vlasenkoau"
+      "source": "https://vk.com/vlasenkoau",
+      "error": "ValueError"
     },
     "dmitry_volkov77": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/dmitry_volkov77"
+      "source": "https://vk.com/dmitry_volkov77",
+      "error": "ValueError"
     },
     "annavolskaya": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/annavolskaya"
+      "source": "https://vk.com/annavolskaya",
+      "error": "ValueError"
     },
     "ilyashenko_aleksandr": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ilyashenko_aleksandr"
+      "source": "https://vk.com/ilyashenko_aleksandr",
+      "error": "ValueError"
     },
     "seregin1963": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/seregin1963"
+      "source": "https://vk.com/seregin1963",
+      "error": "ValueError"
     },
     "dmitry_ark": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/dmitry_ark"
+      "source": "https://vk.com/dmitry_ark",
+      "error": "ValueError"
     },
     "kiryanova_ln": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kiryanova_ln"
+      "source": "https://vk.com/kiryanova_ln",
+      "error": "ValueError"
     },
     "levshtanov86": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/levshtanov86"
+      "source": "https://vk.com/levshtanov86",
+      "error": "ValueError"
     },
     "ifadeeva2022": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ifadeeva2022"
+      "source": "https://vk.com/ifadeeva2022",
+      "error": "ValueError"
     },
     "ivanov_oi10": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ivanov_oi10"
+      "source": "https://vk.com/ivanov_oi10",
+      "error": "ValueError"
     },
     "olga_podolskay": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/olga_podolskay"
+      "source": "https://vk.com/olga_podolskay",
+      "error": "ValueError"
     },
     "sagalovskaya": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/sagalovskaya"
+      "source": "https://vk.com/sagalovskaya",
+      "error": "ValueError"
     },
     "sitnikov_danilovskiy": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/sitnikov_danilovskiy"
+      "source": "https://vk.com/sitnikov_danilovskiy",
+      "error": "ValueError"
     },
     "vgsultanov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vgsultanov"
+      "source": "https://vk.com/vgsultanov",
+      "error": "ValueError"
     },
     "natalia.abbasova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/natalia.abbasova"
+      "source": "https://vk.com/natalia.abbasova",
+      "error": "ValueError"
     },
     "grigorievalv": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/grigorievalv"
+      "source": "https://vk.com/grigorievalv",
+      "error": "ValueError"
     },
     "trodionova2022": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/trodionova2022"
+      "source": "https://vk.com/trodionova2022",
+      "error": "ValueError"
     },
     "graskinss": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/graskinss"
+      "source": "https://vk.com/graskinss",
+      "error": "ValueError"
     },
     "galinazaykovskaya": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/galinazaykovskaya"
+      "source": "https://vk.com/galinazaykovskaya",
+      "error": "ValueError"
     },
     "pkobtsev": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/pkobtsev"
+      "source": "https://vk.com/pkobtsev",
+      "error": "ValueError"
     },
     "ln_skorlupkina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ln_skorlupkina"
+      "source": "https://vk.com/ln_skorlupkina",
+      "error": "ValueError"
     },
     "elena_fursova1": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elena_fursova1"
+      "source": "https://vk.com/elena_fursova1",
+      "error": "ValueError"
     },
     "tkabanova2022": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tkabanova2022"
+      "source": "https://vk.com/tkabanova2022",
+      "error": "ValueError"
     },
     "svetlanakostyushina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/svetlanakostyushina"
+      "source": "https://vk.com/svetlanakostyushina",
+      "error": "ValueError"
     },
     "rezkovvlad": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/rezkovvlad"
+      "source": "https://vk.com/rezkovvlad",
+      "error": "ValueError"
     },
     "yulia_sedacheva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/yulia_sedacheva"
+      "source": "https://vk.com/yulia_sedacheva",
+      "error": "ValueError"
     },
     "elina_sherstyuk": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elina_sherstyuk"
+      "source": "https://vk.com/elina_sherstyuk",
+      "error": "ValueError"
     },
     "anisim_svet": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/anisim_svet"
+      "source": "https://vk.com/anisim_svet",
+      "error": "ValueError"
     },
     "pushkinpp": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/pushkinpp"
+      "source": "https://vk.com/pushkinpp",
+      "error": "ValueError"
     },
     "rafalskayairina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/rafalskayairina"
+      "source": "https://vk.com/rafalskayairina",
+      "error": "ValueError"
     },
     "tikhanovaalbina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tikhanovaalbina"
+      "source": "https://vk.com/tikhanovaalbina",
+      "error": "ValueError"
     },
     "haritonova_aliya": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/haritonova_aliya"
+      "source": "https://vk.com/haritonova_aliya",
+      "error": "ValueError"
     },
     "allavoropaeva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/allavoropaeva"
+      "source": "https://vk.com/allavoropaeva",
+      "error": "ValueError"
     },
     "kalyaev84": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kalyaev84"
+      "source": "https://vk.com/kalyaev84",
+      "error": "ValueError"
     },
     "ryabevaen": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ryabevaen"
+      "source": "https://vk.com/ryabevaen",
+      "error": "ValueError"
     },
     "semenovdmitry80": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/semenovdmitry80"
+      "source": "https://vk.com/semenovdmitry80",
+      "error": "ValueError"
     },
     "elenashlyakova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elenashlyakova"
+      "source": "https://vk.com/elenashlyakova",
+      "error": "ValueError"
     },
     "allenov__andrey": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/allenov__andrey"
+      "source": "https://vk.com/allenov__andrey",
+      "error": "ValueError"
     },
     "andrianov001": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/andrianov001"
+      "source": "https://vk.com/andrianov001",
+      "error": "ValueError"
     },
     "nvzausaeva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/nvzausaeva"
+      "source": "https://vk.com/nvzausaeva",
+      "error": "ValueError"
     },
     "av_kondrashov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/av_kondrashov"
+      "source": "https://vk.com/av_kondrashov",
+      "error": "ValueError"
     },
     "aleks_moskalev": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/aleks_moskalev"
+      "source": "https://vk.com/aleks_moskalev",
+      "error": "ValueError"
     },
     "andrey.abertasov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/andrey.abertasov"
+      "source": "https://vk.com/andrey.abertasov",
+      "error": "ValueError"
     },
     "vyacheslav_komaha": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vyacheslav_komaha"
+      "source": "https://vk.com/vyacheslav_komaha",
+      "error": "ValueError"
     },
     "kondratevaekaterina88": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kondratevaekaterina88"
+      "source": "https://vk.com/kondratevaekaterina88",
+      "error": "ValueError"
     },
     "kudinovamarina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kudinovamarina"
+      "source": "https://vk.com/kudinovamarina",
+      "error": "ValueError"
     },
     "anatoli_viktorovich_potiomkin": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/anatoli_viktorovich_potiomkin"
+      "source": "https://vk.com/anatoli_viktorovich_potiomkin",
+      "error": "ValueError"
     },
     "deputat_kaminskiy": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/deputat_kaminskiy"
+      "source": "https://vk.com/deputat_kaminskiy",
+      "error": "ValueError"
     },
     "natalyamikhareva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/natalyamikhareva"
+      "source": "https://vk.com/natalyamikhareva",
+      "error": "ValueError"
     },
     "safonovatatiana85": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/safonovatatiana85"
+      "source": "https://vk.com/safonovatatiana85",
+      "error": "ValueError"
     },
     "tikhomirovalexey": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tikhomirovalexey"
+      "source": "https://vk.com/tikhomirovalexey",
+      "error": "ValueError"
     },
     "nikolskayaav": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/nikolskayaav"
+      "source": "https://vk.com/nikolskayaav",
+      "error": "ValueError"
     },
     "andrey.sezemov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/andrey.sezemov"
+      "source": "https://vk.com/andrey.sezemov",
+      "error": "ValueError"
     },
     "antonuvarov90": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/antonuvarov90"
+      "source": "https://vk.com/antonuvarov90",
+      "error": "ValueError"
     },
     "azizakabulovnachuganova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/azizakabulovnachuganova"
+      "source": "https://vk.com/azizakabulovnachuganova",
+      "error": "ValueError"
     },
     "golovin_mikhail_sergeevich": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/golovin_mikhail_sergeevich"
+      "source": "https://vk.com/golovin_mikhail_sergeevich",
+      "error": "ValueError"
     },
     "gorbunovsi": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/gorbunovsi"
+      "source": "https://vk.com/gorbunovsi",
+      "error": "ValueError"
     },
     "korshunovane": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/korshunovane"
+      "source": "https://vk.com/korshunovane",
+      "error": "ValueError"
     },
     "kundyltatyana": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kundyltatyana"
+      "source": "https://vk.com/kundyltatyana",
+      "error": "ValueError"
     },
     "l.ruzina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/l.ruzina"
+      "source": "https://vk.com/l.ruzina",
+      "error": "ValueError"
     },
     "balykovde": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/balykovde"
+      "source": "https://vk.com/balykovde",
+      "error": "ValueError"
     },
     "bashlykova.mari": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/bashlykova.mari"
+      "source": "https://vk.com/bashlykova.mari",
+      "error": "ValueError"
     },
     "julia_byckova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/julia_byckova"
+      "source": "https://vk.com/julia_byckova",
+      "error": "ValueError"
     },
     "romanvinokurov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/romanvinokurov"
+      "source": "https://vk.com/romanvinokurov",
+      "error": "ValueError"
     },
     "goremykinmy": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/goremykinmy"
+      "source": "https://vk.com/goremykinmy",
+      "error": "ValueError"
     },
     "vvedenskaya_i": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vvedenskaya_i"
+      "source": "https://vk.com/vvedenskaya_i",
+      "error": "ValueError"
     },
     "vinogradova_len": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vinogradova_len"
+      "source": "https://vk.com/vinogradova_len",
+      "error": "ValueError"
     },
     "dkulnev": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/dkulnev"
+      "source": "https://vk.com/dkulnev",
+      "error": "ValueError"
     },
     "rygin": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/rygin"
+      "source": "https://vk.com/rygin",
+      "error": "ValueError"
     },
     "pavel_v_shutov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/pavel_v_shutov"
+      "source": "https://vk.com/pavel_v_shutov",
+      "error": "ValueError"
     },
     "kostina1920": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/kostina1920"
+      "source": "https://vk.com/kostina1920",
+      "error": "ValueError"
     },
     "viktorgorn": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/viktorgorn"
+      "source": "https://vk.com/viktorgorn",
+      "error": "ValueError"
     },
     "id666378177": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/id666378177"
+      "source": "https://vk.com/id666378177",
+      "error": "ValueError"
     },
     "o.v.tarasenko": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/o.v.tarasenko"
+      "source": "https://vk.com/o.v.tarasenko",
+      "error": "ValueError"
     },
     "tatyana_filippova20": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tatyana_filippova20"
+      "source": "https://vk.com/tatyana_filippova20",
+      "error": "ValueError"
     },
     "dmitrieva_n_n": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/dmitrieva_n_n"
+      "source": "https://vk.com/dmitrieva_n_n",
+      "error": "ValueError"
     },
     "elena__konnova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elena__konnova"
+      "source": "https://vk.com/elena__konnova",
+      "error": "ValueError"
     },
     "elena_laplanche": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elena_laplanche"
+      "source": "https://vk.com/elena_laplanche",
+      "error": "ValueError"
     },
     "andreymordovin": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/andreymordovin"
+      "source": "https://vk.com/andreymordovin",
+      "error": "ValueError"
     },
     "baranchikova_natalia": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/baranchikova_natalia"
+      "source": "https://vk.com/baranchikova_natalia",
+      "error": "ValueError"
     },
     "galinadolgashova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/galinadolgashova"
+      "source": "https://vk.com/galinadolgashova",
+      "error": "ValueError"
     },
     "anna_ezhkova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/anna_ezhkova"
+      "source": "https://vk.com/anna_ezhkova",
+      "error": "ValueError"
     },
     "liudmila_zapl": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/liudmila_zapl"
+      "source": "https://vk.com/liudmila_zapl",
+      "error": "ValueError"
     },
     "nadezhda_kuskova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/nadezhda_kuskova"
+      "source": "https://vk.com/nadezhda_kuskova",
+      "error": "ValueError"
     },
     "sysoevala": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/sysoevala"
+      "source": "https://vk.com/sysoevala",
+      "error": "ValueError"
     },
     "ib.glotova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ib.glotova"
+      "source": "https://vk.com/ib.glotova",
+      "error": "ValueError"
     },
     "demchenkov_ml": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/demchenkov_ml"
+      "source": "https://vk.com/demchenkov_ml",
+      "error": "ValueError"
     },
     "svetlana_rodnik": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/svetlana_rodnik"
+      "source": "https://vk.com/svetlana_rodnik",
+      "error": "ValueError"
     },
     "novoselskayala": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/novoselskayala"
+      "source": "https://vk.com/novoselskayala",
+      "error": "ValueError"
     },
     "tkachip": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tkachip"
+      "source": "https://vk.com/tkachip",
+      "error": "ValueError"
     },
     "tatiyana_donskaya": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tatiyana_donskaya"
+      "source": "https://vk.com/tatiyana_donskaya",
+      "error": "ValueError"
     },
     "i.v.zolkina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/i.v.zolkina"
+      "source": "https://vk.com/i.v.zolkina",
+      "error": "ValueError"
     },
     "albinakomissarova2022": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/albinakomissarova2022"
+      "source": "https://vk.com/albinakomissarova2022",
+      "error": "ValueError"
     },
     "sovchinnikova79": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/sovchinnikova79"
+      "source": "https://vk.com/sovchinnikova79",
+      "error": "ValueError"
     },
     "ap.yashkin": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ap.yashkin"
+      "source": "https://vk.com/ap.yashkin",
+      "error": "ValueError"
     },
     "aabulatov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/aabulatov"
+      "source": "https://vk.com/aabulatov",
+      "error": "ValueError"
     },
     "vidutinaov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vidutinaov"
+      "source": "https://vk.com/vidutinaov",
+      "error": "ValueError"
     },
     "nuykinakv": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/nuykinakv"
+      "source": "https://vk.com/nuykinakv",
+      "error": "ValueError"
     },
     "elena.rubtsovanazarova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/elena.rubtsovanazarova"
+      "source": "https://vk.com/elena.rubtsovanazarova",
+      "error": "ValueError"
     },
     "tishkovaea": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tishkovaea"
+      "source": "https://vk.com/tishkovaea",
+      "error": "ValueError"
     },
     "gavrilinams": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/gavrilinams"
+      "source": "https://vk.com/gavrilinams",
+      "error": "ValueError"
     },
     "ekaterina.tyutyunnikova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ekaterina.tyutyunnikova"
+      "source": "https://vk.com/ekaterina.tyutyunnikova",
+      "error": "ValueError"
     },
     "natalia_shabasheva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/natalia_shabasheva"
+      "source": "https://vk.com/natalia_shabasheva",
+      "error": "ValueError"
     },
     "shmakova_os": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/shmakova_os"
+      "source": "https://vk.com/shmakova_os",
+      "error": "ValueError"
     },
     "abramovaei_chs": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/abramovaei_chs"
+      "source": "https://vk.com/abramovaei_chs",
+      "error": "ValueError"
     },
     "antongorbachev": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/antongorbachev"
+      "source": "https://vk.com/antongorbachev",
+      "error": "ValueError"
     },
     "petr.kurapov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/petr.kurapov"
+      "source": "https://vk.com/petr.kurapov",
+      "error": "ValueError"
     },
     "i_v_morozova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/i_v_morozova"
+      "source": "https://vk.com/i_v_morozova",
+      "error": "ValueError"
     },
     "smirnovvalerii": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/smirnovvalerii"
+      "source": "https://vk.com/smirnovvalerii",
+      "error": "ValueError"
     },
     "andreevasvetlanaaleksandrovna": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/andreevasvetlanaaleksandrovna"
+      "source": "https://vk.com/andreevasvetlanaaleksandrovna",
+      "error": "ValueError"
     },
     "lukoyanov_chs": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/lukoyanov_chs"
+      "source": "https://vk.com/lukoyanov_chs",
+      "error": "ValueError"
     },
     "maxsimmorozov": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/maxsimmorozov"
+      "source": "https://vk.com/maxsimmorozov",
+      "error": "ValueError"
     },
     "riakhmiatullina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/riakhmiatullina"
+      "source": "https://vk.com/riakhmiatullina",
+      "error": "ValueError"
     },
     "tozikam": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/tozikam"
+      "source": "https://vk.com/tozikam",
+      "error": "ValueError"
     },
     "bogdan.konoshenko": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/bogdan.konoshenko"
+      "source": "https://vk.com/bogdan.konoshenko",
+      "error": "ValueError"
     },
     "eilarionova_556": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/eilarionova_556"
+      "source": "https://vk.com/eilarionova_556",
+      "error": "ValueError"
     },
     "polozovs": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/polozovs"
+      "source": "https://vk.com/polozovs",
+      "error": "ValueError"
     },
     "i_rodina": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/i_rodina"
+      "source": "https://vk.com/i_rodina",
+      "error": "ValueError"
     },
     "smitsb": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/smitsb"
+      "source": "https://vk.com/smitsb",
+      "error": "ValueError"
     },
     "vasiliy_meleshin": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/vasiliy_meleshin"
+      "source": "https://vk.com/vasiliy_meleshin",
+      "error": "ValueError"
     },
     "mironovdp": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/mironovdp"
+      "source": "https://vk.com/mironovdp",
+      "error": "ValueError"
     },
     "repkinae": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/repkinae"
+      "source": "https://vk.com/repkinae",
+      "error": "ValueError"
     },
     "rybakovaev_1582": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/rybakovaev_1582"
+      "source": "https://vk.com/rybakovaev_1582",
+      "error": "ValueError"
     },
     "n_shindryayeva": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/n_shindryayeva"
+      "source": "https://vk.com/n_shindryayeva",
+      "error": "ValueError"
     },
     "ms_zotova": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ms_zotova"
+      "source": "https://vk.com/ms_zotova",
+      "error": "ValueError"
     },
     "sergey_kashlev": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/sergey_kashlev"
+      "source": "https://vk.com/sergey_kashlev",
+      "error": "ValueError"
     },
     "ikurash1": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/ikurash1"
+      "source": "https://vk.com/ikurash1",
+      "error": "ValueError"
     },
     "alexandr_novikov_chu": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/alexandr_novikov_chu"
+      "source": "https://vk.com/alexandr_novikov_chu",
+      "error": "ValueError"
     },
     "n.ptushkina56": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/n.ptushkina56"
+      "source": "https://vk.com/n.ptushkina56",
+      "error": "ValueError"
     },
     "bordovskaya_og": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/bordovskaya_og"
+      "source": "https://vk.com/bordovskaya_og",
+      "error": "ValueError"
     },
     "gunina_ea": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/gunina_ea"
+      "source": "https://vk.com/gunina_ea",
+      "error": "ValueError"
     },
     "nleonovannnn": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/nleonovannnn"
+      "source": "https://vk.com/nleonovannnn",
+      "error": "ValueError"
     },
     "markova_tat_vl": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/markova_tat_vl"
+      "source": "https://vk.com/markova_tat_vl",
+      "error": "ValueError"
     },
     "smirnovaev1": {
-      "status": "needs_token",
+      "status": "api_error",
       "photo": null,
-      "source": "https://vk.com/smirnovaev1"
+      "source": "https://vk.com/smirnovaev1",
+      "error": "ValueError"
     }
   }
 }

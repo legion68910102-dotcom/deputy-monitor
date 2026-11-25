@@ -1,0 +1,32 @@
+name: Retry unavailable public VK walls (bounded)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/retry-vk-public-walls.yml'
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline retry tests
+        run: python scripts/retry_vk_public_walls.py --self-test
+      - name: Recheck existing public addresses (28 calls maximum)
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/retry_vk_public_walls.py
+      - name: Upload diagnostic metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vk-public-wall-retry
+          path: ${{ runner.temp }}/vk-recovery-result.json
+          if-no-files-found: ignore
+          retention-days: 7

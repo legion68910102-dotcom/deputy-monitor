@@ -14,14 +14,14 @@ function lookup(index,name,district,handle){
 function renderStatus(r){
  const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
  const link=(url,label)=>typeof url==="string"&&/^https:\/\/[^ ]+$/.test(url)?'<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+' ↗</a>':"";
- const labels={list_match:"Совпадает с опубликованным списком",review_required:"Требует проверки",discrepancy:"Обнаружено расхождение"};
+ const labels={list_match:"Указан в официальном источнике",review_required:"Требует проверки",discrepancy:"Обнаружено расхождение"};
  const state=r&&Object.prototype.hasOwnProperty.call(labels,r.status)?r.status:"unknown";
  const date=r&&/^\d{4}-\d{2}-\d{2}$/.test(r.reviewed_date)?r.reviewed_date.split("-").reverse().join("."):"";
  const colors={list_match:["#eef8f1","#20643d"],review_required:["#f4f5f8","#48566b"],discrepancy:["#fff4db","#795400"],unknown:["#f4f5f8","#48566b"]};
  const [bg,fg]=colors[state];
  const heading=labels[state]||"Сведения о сверке отсутствуют";
- const note=state==="list_match"?"Совпадение имени не является юридическим подтверждением действующих полномочий.":state==="review_required"?"Список не подтверждён; это не означает прекращение полномочий.":state==="discrepancy"?"Нужна дополнительная проверка; рейтинг и архив не изменены.":"";
- return '<div class="mandate-review" style="margin:10px 0;padding:12px;border-radius:10px;background:'+bg+';color:'+fg+';font-size:13px;line-height:1.45;overflow-wrap:anywhere"><div style="font-weight:700">Сверка состава совета</div><div style="font-weight:600;margin-top:4px">'+esc(heading)+'</div>'+(date?'<div>Дата сверки: '+esc(date)+'</div>':"")+(r?.note?'<div style="margin-top:5px">'+esc(r.note)+'</div>':"")+(note?'<div style="margin-top:5px">'+esc(note)+'</div>':"")+(r?.source?'<div style="margin-top:6px">'+link(r.source,"Официальный сайт / список для сверки")+'</div>':"")+(Array.isArray(r?.evidence)?r.evidence.map((url,i)=>'<div>'+link(url,"Дополнительный источник "+(i+1))+'</div>').join(""):"")+'</div>';
+ const note=state==="list_match"?"Упоминание в источнике не подтверждает непрерывность полномочий на текущую дату.":state==="review_required"?"Список не подтверждён; это не означает прекращение полномочий.":state==="discrepancy"?"Нужна дополнительная проверка; рейтинг и архив не изменены.":"";
+ return '<div class="mandate-review" style="margin:10px 0;padding:12px;border-radius:10px;background:'+bg+';color:'+fg+';font-size:13px;line-height:1.45;overflow-wrap:anywhere"><div style="font-weight:700">Сверка состава совета</div><div style="font-weight:600;margin-top:4px">'+esc(heading)+'</div>'+(date?'<div>Дата сверки: '+esc(date)+'</div>':"")+(r?.note?'<div style="margin-top:5px">'+esc(r.note)+'</div>':"")+(note?'<div style="margin-top:5px">'+esc(note)+'</div>':"")+(r?.source?'<div style="margin-top:6px">'+link(r.source,"Источник сверки")+'</div>':"")+(Array.isArray(r?.evidence)?r.evidence.map((url,i)=>'<div>'+link(url,"Дополнительный источник "+(i+1))+'</div>').join(""):"")+'</div>';
 }
 const rows=[
   {
@@ -529,7 +529,8 @@ const rows=[
     "reviewed_date": "2026-11-25",
     "note": "Назван в опубликованном районным изданием графике отчётов, утверждённом Советом 22.09.2026; первичный протокол подтверждает статус на 24.09.2024.",
     "evidence": [
-      "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+      "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf",
+      "https://gazeta-nashe-moskvoreche-saburovo.ru/kontakty/"
     ]
   },
   {
@@ -557,7 +558,8 @@ const rows=[
     "reviewed_date": "2026-11-25",
     "note": "Назван в графике отчётов; первичный протокол подтверждает статус на 24.09.2024.",
     "evidence": [
-      "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+      "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf",
+      "https://gazeta-nashe-moskvoreche-saburovo.ru/kontakty/"
     ]
   },
   {
@@ -693,9 +695,13 @@ const rows=[
     "district": "Нагатинский Затон",
     "handle": "korshunovane",
     "status": "list_match",
-    "source": "https://www.mosgorizbirkom.ru/documents/41426/CustomDocument_41426.pdf",
+    "source": "https://gazeta-nagatinsky-zaton.ru/2026/06/01/140471/",
     "reviewed_date": "2026-11-25",
-    "note": "Указана в официальном списке Мосгоризбиркома; дата документа не установлена."
+    "note": "Районное издание префектуры ЮАО сообщает об участии в обходе 30.05.2026 как депутата; более ранний официальный список Мосгоризбиркома подтверждает ФИО.",
+    "evidence": [
+      "https://www.mosgorizbirkom.ru/documents/41426/CustomDocument_41426.pdf",
+      "https://gazeta-nagatinsky-zaton.ru/kontakty/"
+    ]
   },
   {
     "name": "Кундыль Татьяна Евгеньевна",

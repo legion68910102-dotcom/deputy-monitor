@@ -104,7 +104,8 @@
       "source": "https://gazeta-nashe-moskvoreche-saburovo.ru/2026/10/02/149558/",
       "source_date": "2026-10-02",
       "note": "Назван в опубликованном районным изданием графике отчётов, утверждённом Советом 22.09.2026; первичный протокол подтверждает статус на 24.09.2024.",
-      "additional_source": "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+      "additional_source": "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf",
+      "publisher_source": "https://gazeta-nashe-moskvoreche-saburovo.ru/kontakty/"
     },
     {
       "name": "Кондрашов Артем Вячеславович",
@@ -115,7 +116,8 @@
       "source": "https://gazeta-nashe-moskvoreche-saburovo.ru/2026/10/02/149558/",
       "source_date": "2026-10-02",
       "note": "Назван в графике отчётов; первичный протокол подтверждает статус на 24.09.2024.",
-      "additional_source": "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+      "additional_source": "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf",
+      "publisher_source": "https://gazeta-nashe-moskvoreche-saburovo.ru/kontakty/"
     },
     {
       "name": "Коршунова Наталья Евгеньевна",
@@ -123,9 +125,11 @@
       "handle": "korshunovane",
       "status": "retain",
       "vk_error": "vk_api_error_100",
-      "source": "https://www.mosgorizbirkom.ru/documents/41426/CustomDocument_41426.pdf",
-      "source_date": null,
-      "note": "Указана в официальном списке Мосгоризбиркома; дата документа не установлена."
+      "source": "https://gazeta-nagatinsky-zaton.ru/2026/06/01/140471/",
+      "source_date": "2026-06-01",
+      "note": "Районное издание префектуры ЮАО сообщает об участии в обходе 30.05.2026 как депутата; более ранний официальный список Мосгоризбиркома подтверждает ФИО.",
+      "additional_source": "https://www.mosgorizbirkom.ru/documents/41426/CustomDocument_41426.pdf",
+      "publisher_source": "https://gazeta-nagatinsky-zaton.ru/kontakty/"
     },
     {
       "name": "Бурова Екатерина Николаевна",

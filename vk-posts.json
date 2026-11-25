@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T19:43:50.877792+00:00",
+  "generated_at": "2026-11-25T08:08:51.181611+00:00",
   "source": "Apify VK Posts Scraper; incremental 159-profile monitoring",
   "posts": [
     {
@@ -16501,7 +16501,7 @@
     },
     "max_items_per_profile": 20
   },
-  "vk_api_last_checked_at": "2026-11-24T19:43:50.877792+00:00",
+  "vk_api_last_checked_at": "2026-11-25T08:08:51.181611+00:00",
   "vk_api_last_run": {
     "roster_size": 159,
     "district_count": 16,

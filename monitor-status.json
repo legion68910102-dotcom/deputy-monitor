@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T19:43:50.877792+00:00",
+  "generated_at": "2026-11-25T08:08:51.181611+00:00",
   "source": "Official VK API (public wall.get only)",
   "roster_size": 159,
   "district_count": 16,
   "profiles": {
     "ilyasov_kn": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-24T19:43:50.877792+00:00",
+      "checked_at": "2026-11-25T08:08:51.181611+00:00",
       "posts_count": null,
       "reason": "vk_api_error_5"
     },

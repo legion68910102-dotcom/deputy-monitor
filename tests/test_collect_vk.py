@@ -248,7 +248,7 @@ class VKCollectionTests(unittest.TestCase):
         handles, districts = vk.roster_handles(ROOT)
         self.assertEqual(len(handles), 158)
         self.assertEqual(len(set(handles)), 158)
-        self.assertNotIn('ilyashenko_alexandr', handles)
+        self.assertNotIn('ilyashenko_aleksandr', handles)
         self.assertEqual(districts, 16)
 
 

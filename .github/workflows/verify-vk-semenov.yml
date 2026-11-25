@@ -1,0 +1,22 @@
+name: Verify official VK link for Semenov
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-vk-semenov.yml'
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: One public wall request using official linked numeric ID
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/probe_vk_semenov.py

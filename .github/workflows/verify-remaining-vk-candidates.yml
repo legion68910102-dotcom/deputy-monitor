@@ -1,0 +1,84 @@
+name: Verify remaining public VK profile candidates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-remaining-vk-candidates.yml']
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Bounded official VK API checks
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.parse, urllib.request
+          token = os.environ.get("VK_TOKEN", "").strip()
+          if not token:
+              raise SystemExit("Missing VK_TOKEN")
+          candidates = [
+              ("anisim_svet", 666985163, "Светлана", "Анисимова"),
+              ("kostina1920", 10930023, "Екатерина", "Бурова"),
+          ]
+          others = ["a.a.boikov", "allenov__andrey", "andreevasvetlanaaleksandrovna",
+                    "av_kondrashov", "chinilina975", "elena__konnova", "iskonarev",
+                    "nuykinakv", "repkinae", "yaroslavburykh"]
+          stop = {5, 6, 8, 9, 27, 28, 29, 111, 1051}
+          calls = 0
+          def call(method, **params):
+              global calls
+              if calls >= 14:
+                  raise SystemExit("Request budget reached")
+              if calls:
+                  time.sleep(0.8)
+              calls += 1
+              body = urllib.parse.urlencode(dict(params, v="5.199", access_token=token)).encode()
+              req = urllib.request.Request("https://api.vk.ru/method/" + method, data=body,
+                    headers={"Content-Type": "application/x-www-form-urlencoded", "User-Agent": "DeputyMonitor/1.0"})
+              try:
+                  with urllib.request.urlopen(req, timeout=12) as r:
+                      data = json.load(r)
+              except Exception:
+                  raise SystemExit("Network or response error") from None
+              code = data.get("error", {}).get("error_code")
+              if code in stop:
+                  raise SystemExit("Stopped on VK API error " + str(code))
+              return data.get("response"), code
+          def emit(handle, **fields):
+              print(json.dumps(dict(handle=handle, **fields), ensure_ascii=False), flush=True)
+          for h, uid, first, last in candidates:
+              response, code = call("users.get", user_ids=uid, fields="screen_name")
+              if code or not isinstance(response, list) or len(response) != 1:
+                  emit(h, result="metadata_unavailable", code=code)
+                  continue
+              u = response[0]
+              if u.get("id") != uid or u.get("first_name", "").casefold() != first.casefold() or u.get("last_name", "").casefold() != last.casefold():
+                  emit(h, result="identity_not_confirmed")
+                  continue
+              if u.get("deactivated") or u.get("is_closed") is not False:
+                  emit(h, result="not_confirmed_public")
+                  continue
+              response, code = call("wall.get", owner_id=uid, count=1, filter="owner")
+              if code:
+                  emit(h, result="wall_error", code=code)
+              elif isinstance(response, dict) and isinstance(response.get("items"), list) and response["items"] and all(p.get("owner_id")==uid for p in response["items"]):
+                  emit(h, result="verified_public_wall", public_id=uid)
+              else:
+                  emit(h, result="no_verified_wall_items")
+          for h in others:
+              response, code = call("users.get", user_ids=h, fields="screen_name")
+              if code or not isinstance(response, list) or len(response) != 1:
+                  emit(h, result="metadata_unavailable", code=code)
+                  continue
+              u = response[0]
+              emit(h, result="deactivated" if u.get("deactivated") else "closed" if u.get("is_closed") is True else "open_metadata" if u.get("is_closed") is False else "privacy_unknown")
+          print("Requests:", calls)
+          PY

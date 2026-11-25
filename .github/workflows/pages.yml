@@ -32,7 +32,23 @@ jobs:
             fi
           done
           cmp index.html index-v129.html
-          echo "Approved v129 HTML verified; data updates are allowed."
+          check_file() {
+            local file="$1" expected_hash="$2" actual_hash
+            actual_hash="$(git hash-object "$file")"
+            if [ "$actual_hash" != "$expected_hash" ]; then
+              echo "::error file=$file::Approved v129 module changed. Explicit owner approval is required."
+              exit 1
+            fi
+          }
+          check_file 'date-filter-v1.js' '1ebccde051822136793b55250186fad7b0642262'
+          check_file 'okrug-branding-v132.js' '9cf28cfab88d1e21147900de4b28827232047455'
+          check_file 'district-coats-uao-v133.js' '944b561ec2d003c16cc565032239111b5962243c'
+          check_file 'repost-detection-v131.js' 'a01dc38bb43a00d525ab7d7dae9423d0b785a305'
+          check_file 'personal-workspace-v130.js' 'd843287cd52f4c5e31289b1e1146d962edc68f0c'
+          check_file 'vk-monitor-freshness-v1.js' '21dbf40032597464082f1a71faa9b633498691bf'
+          check_file 'activity-category-policy-v1.js' '0ed758d112607b0d3e618a5c8eb7c0ea7b9a895e'
+          check_file 'activity-analysis-v129.js' 'f1554af3c1ee7f561486eabd9017480d8966ec32'
+          echo "Approved v129 HTML and eight static modules verified; data updates are allowed."
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

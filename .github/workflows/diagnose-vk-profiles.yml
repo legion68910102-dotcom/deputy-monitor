@@ -1,0 +1,32 @@
+name: Diagnose unavailable VK profiles (bounded read-only)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-vk-profiles.yml'
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline checks
+        run: python scripts/diagnose_vk_profiles.py --self-test
+      - name: Check unavailable profiles via official public API (44 requests maximum)
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/diagnose_vk_profiles.py
+      - name: Upload sanitized diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vk-profile-diagnosis
+          path: ${{ runner.temp }}/vk-profile-diagnosis.json
+          if-no-files-found: ignore
+          retention-days: 7

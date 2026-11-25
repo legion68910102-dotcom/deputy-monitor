@@ -1,0 +1,24 @@
+name: Audit VK coverage and unresolved addresses
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-vk-history.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit archive and check public address resolution only
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/audit_vk_history.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vk-history-audit
+          path: reports/vk-history-audit.json
+          retention-days: 7

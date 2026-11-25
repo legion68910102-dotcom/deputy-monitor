@@ -1,0 +1,56 @@
+name: Capture one redacted VK API error for support
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/vk-support-http-example.yml']
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Capture one normal wall.get response with credentials redacted
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os, json, urllib.request, urllib.parse, urllib.error
+          token = os.environ.get("VK_TOKEN", "").strip()
+          if not token:
+              raise SystemExit("Missing VK_TOKEN")
+          url = "https://api.vk.ru/method/wall.get"
+          params = {"domain":"a.a.boikov","count":100,"offset":0,"filter":"owner","v":"5.199"}
+          headers = {"Content-Type":"application/x-www-form-urlencoded","User-Agent":"DeputyMonitor/1.0"}
+          request = urllib.request.Request(url, data=urllib.parse.urlencode(dict(params,access_token=token)).encode(), headers=headers, method="POST")
+          def sanitize(obj):
+              if isinstance(obj,dict):
+                  if str(obj.get("key","")).lower() in {"access_token","client_secret","token","sig","authorization"}:
+                      return {k:("[REDACTED]" if k=="value" else sanitize(v)) for k,v in obj.items()}
+                  return {k:("[REDACTED]" if k.lower() in {"access_token","client_secret","token","sig","authorization","captcha_sid","captcha_img","redirect_uri"} else sanitize(v)) for k,v in obj.items()}
+              if isinstance(obj,list):
+                  return [sanitize(x) for x in obj]
+              if isinstance(obj,str):
+                  return obj.replace(token,"[REDACTED]").replace(urllib.parse.quote(token,safe=""),"[REDACTED]")
+              return obj
+          print("REQUEST POST "+url)
+          print("BODY "+urllib.parse.urlencode(dict(params,access_token="[REDACTED]")))
+          try:
+              with urllib.request.urlopen(request,timeout=25) as response:
+                  status=response.status
+                  payload=json.load(response)
+          except urllib.error.HTTPError as exc:
+              print("HTTP_STATUS",exc.code)
+              raise SystemExit("HTTP failure; response not logged") from None
+          except Exception:
+              raise SystemExit("Network or JSON failure") from None
+          print("HTTP_STATUS",status)
+          if isinstance(payload,dict) and isinstance(payload.get("error"),dict):
+              print("SUPPORT_RESPONSE "+json.dumps(sanitize(payload),ensure_ascii=False))
+          else:
+              print("No API error; response content intentionally omitted")
+          PY

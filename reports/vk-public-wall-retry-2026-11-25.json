@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-25T10:42:19.692485+00:00",
+  "targets": 16,
+  "requests": 22,
+  "request_limit": 28,
+  "stopped_reason": null,
+  "profiles": [
+    {
+      "handle": "anisim_svet",
+      "prior": 100,
+      "result": "wall_error",
+      "detail": 100,
+      "resolution": "address_not_resolved"
+    },
+    {
+      "handle": "korshunovane",
+      "prior": 100,
+      "result": "wall_error",
+      "detail": 100,
+      "resolution": "address_not_resolved"
+    },
+    {
+      "handle": "kostina1920",
+      "prior": 100,
+      "result": "wall_error",
+      "detail": 100,
+      "resolution": "address_not_resolved"
+    },
+    {
+      "handle": "semenovdmitry80",
+      "prior": 100,
+      "result": "wall_error",
+      "detail": 100,
+      "resolution": "address_not_resolved"
+    },
+    {
+      "handle": "sitnikov_danilovskiy",
+      "prior": 100,
+      "result": "wall_error",
+      "detail": 100,
+      "resolution": "address_not_resolved"
+    },
+    {
+      "handle": "sovchinnikova79",
+      "prior": 100,
+      "result": "wall_error",
+      "detail": 100,
+      "resolution": "address_not_resolved"
+    },
+    {
+      "handle": "a.a.boikov",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "allenov__andrey",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "andreevasvetlanaaleksandrovna",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "av_kondrashov",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "chinilina975",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "elena__konnova",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "iskonarev",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "nuykinakv",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    },
+    {
+      "handle": "repkinae",
+      "prior": 30,
+      "result": "wall_error",
+      "detail": 30
+    },
+    {
+      "handle": "yaroslavburykh",
+      "prior": 15,
+      "result": "wall_error",
+      "detail": 15
+    }
+  ],
+  "source": "Official VK API v5.199; one normal public wall retry for each existing handle; users.get for error 100; no post content collected.",
+  "workflow_run": "https://github.com/legion68910102-dotcom/deputy-monitor/actions/runs/45597412965",
+  "restored_profiles": 0
+}

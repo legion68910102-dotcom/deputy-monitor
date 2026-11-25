@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "reviewed_date": "2026-11-25",
+  "scope": "17 previously unavailable VK profiles",
+  "method": "Only municipal/government sources and institutional municipal reporting; a listing or dated report is not proof of uninterrupted mandate; VK access is independent.",
+  "results": [
+    {
+      "name": "Бойков Алексей Александрович",
+      "district": "Бирюлёво Западное",
+      "handle": "a.a.boikov",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://www.amom.ru/news/2026/06/deputat-aleksej-bojkov-pozdravil-s-professionalnyim-prazdnikom-soczialnyix-rabotnikov.html",
+      "source_date": "2026-06",
+      "note": "Совет муниципальных образований назвал депутатом."
+    },
+    {
+      "name": "Конарев Илья Сергеевич",
+      "district": "Бирюлёво Западное",
+      "handle": "iskonarev",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://www.amom.ru/news/2026/09/deputat-ilya-konarev-razobral-so-studentami-praktiku-vzaimodejstviya-s-vlastyu.html",
+      "source_date": "2026-09-16",
+      "note": "Сообщение муниципального округа на сайте Совета муниципальных образований."
+    },
+    {
+      "name": "Бурых Ярослав Юрьевич",
+      "district": "Бирюлёво Западное",
+      "handle": "yaroslavburykh",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://amom.ru/news/2026/11/deputatyi-biryulevo-zapadnoe-prisoedinilis-k-akczii.html",
+      "source_date": "2026-11-04",
+      "note": "Совет муниципальных образований назвал депутатом."
+    },
+    {
+      "name": "Чинилина Ирина Викторовна",
+      "district": "Братеево",
+      "handle": "chinilina975",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://www.mun-brateevo.ru/priem-naselenyia.html",
+      "source_date": null,
+      "note": "Указана в графике приёма Совета."
+    },
+    {
+      "name": "Ильяшенко Александр Викторович",
+      "district": "Братеево",
+      "handle": "ilyashenko_aleksandr",
+      "status": "archived",
+      "reason": "В повестке заседания 14.02.2023, опубликованной районным СМИ префектуры ЮАО, указано досрочное прекращение полномочий в связи со смертью. Официальный отчёт Совета за 2024 год перечисляет девять депутатов без Ильяшенко. Точный номер решения и дата вступления в силу не установлены.",
+      "sources": [
+        {
+          "url": "https://www.mun-brateevo.ru/4751-otchet-deputatov-za-2024-g.html",
+          "type": "official_council_report"
+        },
+        {
+          "url": "https://gazeta-brateevo.ru/2023/02/14/99386/",
+          "type": "prefecture_founded_media_agenda"
+        },
+        {
+          "url": "https://gazeta-brateevo.ru/kontakty/",
+          "type": "publisher_verification"
+        }
+      ]
+    },
+    {
+      "name": "Ситников Иван Иванович",
+      "district": "Даниловский",
+      "handle": "sitnikov_danilovskiy",
+      "status": "retain",
+      "vk_error": "vk_api_error_100",
+      "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-2/24-sitnikov-ivan-ivanovich",
+      "source_date": null,
+      "note": "Именная карточка Совета."
+    },
+    {
+      "name": "Анисимова Светлана Геннадьевна",
+      "district": "Зябликово",
+      "handle": "anisim_svet",
+      "status": "retain",
+      "vk_error": "vk_api_error_100",
+      "source": "https://www.mos-zyablikovo.ru/sovet-deputatov/",
+      "source_date": null,
+      "note": "Указана в списке Совета; новый адрес VK не подтверждён официальным источником."
+    },
+    {
+      "name": "Семёнов Дмитрий Витальевич",
+      "district": "Зябликово",
+      "handle": "semenovdmitry80",
+      "status": "retain",
+      "vk_error": "vk_api_error_100",
+      "source": "https://www.mos-zyablikovo.ru/sovet-deputatov/",
+      "source_date": null,
+      "note": "Указан в списке Совета."
+    },
+    {
+      "name": "Алленов Андрей Михайлович",
+      "district": "Москворечье-Сабурово",
+      "handle": "allenov__andrey",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://gazeta-nashe-moskvoreche-saburovo.ru/2026/10/02/149558/",
+      "source_date": "2026-10-02",
+      "note": "Назван в опубликованном районным изданием графике отчётов, утверждённом Советом 22.09.2026; первичный протокол подтверждает статус на 24.09.2024.",
+      "additional_source": "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+    },
+    {
+      "name": "Кондрашов Артем Вячеславович",
+      "district": "Москворечье-Сабурово",
+      "handle": "av_kondrashov",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://gazeta-nashe-moskvoreche-saburovo.ru/2026/10/02/149558/",
+      "source_date": "2026-10-02",
+      "note": "Назван в графике отчётов; первичный протокол подтверждает статус на 24.09.2024.",
+      "additional_source": "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+    },
+    {
+      "name": "Коршунова Наталья Евгеньевна",
+      "district": "Нагатинский Затон",
+      "handle": "korshunovane",
+      "status": "retain",
+      "vk_error": "vk_api_error_100",
+      "source": "https://www.mosgorizbirkom.ru/documents/41426/CustomDocument_41426.pdf",
+      "source_date": null,
+      "note": "Указана в официальном списке Мосгоризбиркома; дата документа не установлена."
+    },
+    {
+      "name": "Бурова Екатерина Николаевна",
+      "district": "Нагорный",
+      "handle": "kostina1920",
+      "status": "retain",
+      "vk_error": "vk_api_error_100",
+      "source": "https://sovet.monagornoe.ru/grafik_priema_deputatov/",
+      "source_date": "2025-12-16",
+      "note": "График приёма на 2026 год."
+    },
+    {
+      "name": "Коннова Елена Львовна",
+      "district": "Орехово-Борисово Северное",
+      "handle": "elena__konnova",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/",
+      "source_date": null,
+      "note": "Указана в списке Совета."
+    },
+    {
+      "name": "Овчинникова Светлана Юрьевна",
+      "district": "Орехово-Борисово Южное",
+      "handle": "sovchinnikova79",
+      "status": "retain",
+      "vk_error": "vk_api_error_100",
+      "source": "https://mo-obu.ru/grafik-priema-deputatov-orehovo-borisovo-juzhnoe/",
+      "source_date": null,
+      "note": "Указана в графике приёма Совета."
+    },
+    {
+      "name": "Нуйкина Карина Вячеславовна",
+      "district": "Царицыно",
+      "handle": "nuykinakv",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://www.mcaricino.ru/munitsipalnoe-sobranie/komissii-soveta-deputatov/",
+      "source_date": null,
+      "note": "Указана в составе комиссии Совета."
+    },
+    {
+      "name": "Андреева Светлана Александровна",
+      "district": "Чертаново Северное",
+      "handle": "andreevasvetlanaaleksandrovna",
+      "status": "retain",
+      "vk_error": "vk_api_error_15",
+      "source": "https://sovet.ch-sever.ru/resheniya_soveta_deputatov1/23259_chs010360_ob_utverzhdenii_grafika_lichnogo_priema_izbiratelej_deputatami_soveta_deputatov_vnutrigorodskogo_municipalnogo_o/",
+      "source_date": null,
+      "note": "Решение № ЧС-01-03-60, график IV квартала 2026 года."
+    },
+    {
+      "name": "Репкина Елена Владимировна",
+      "district": "Чертаново Центральное",
+      "handle": "repkinae",
+      "status": "retain",
+      "vk_error": "vk_api_error_30",
+      "source": "https://sovet.chertanovocentr.ru/grafik_prima_naseleniya/",
+      "source_date": null,
+      "note": "Указана в графике приёма Совета, содержащем сведения за 2026 год."
+    }
+  ]
+}

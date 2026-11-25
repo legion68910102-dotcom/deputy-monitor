@@ -360,9 +360,21 @@
     "archive_posts": 14203,
     "history_complete": 1,
     "history_pending": 141,
+    "history_blocked": 16,
+    "stopped_reason": null,
+    "roster_size": 158,
+    "roster_reconciled_on": "2026-11-25"
+  },
+  "enabled": true,
+  "previous_roster_last_run": {
+    "requests": 50,
+    "new_posts": 1,
+    "updated_posts": 3894,
+    "archive_posts": 14203,
+    "history_complete": 1,
+    "history_pending": 141,
     "history_blocked": 17,
     "stopped_reason": null,
     "roster_size": 159
-  },
-  "enabled": true
+  }
 }

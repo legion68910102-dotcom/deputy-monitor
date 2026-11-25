@@ -1,7 +1,7 @@
 {
   "version": 1,
   "description": "VK profiles sourced from the site directory; ownership and current accessibility require verification",
-  "total": 159,
+  "total": 158,
   "profiles": [
     {
       "name": "Булатов Александр Александрович",
@@ -142,11 +142,6 @@
       "name": "Вольская Анна Львовна",
       "handle": "annavolskaya",
       "source": "https://asafov.ru/person/volskaya-anna-lvovna"
-    },
-    {
-      "name": "Ильяшенко Александр Викторович",
-      "handle": "ilyashenko_aleksandr",
-      "source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich"
     },
     {
       "name": "Серегин Александр Викторович",

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated_at": "2026-11-25T09:55:35.296705+00:00",
   "source": "Official VK API (public wall.get only)",
-  "roster_size": 159,
+  "roster_size": 158,
   "district_count": 16,
   "profiles": {
     "ilyasov_kn": {
@@ -196,12 +196,6 @@
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
-    },
-    "ilyashenko_aleksandr": {
-      "status": "checked_unavailable",
-      "checked_at": "2026-11-25T09:55:35.296705+00:00",
-      "posts_count": null,
-      "reason": "vk_api_error_100"
     },
     "seregin1963": {
       "status": "success",
@@ -1102,7 +1096,7 @@
       "history_coverage": "latest_page_only"
     }
   },
-  "vk_api_last_run": {
+  "previous_roster_vk_api_last_run": {
     "roster_size": 159,
     "district_count": 16,
     "selected_profiles": 159,

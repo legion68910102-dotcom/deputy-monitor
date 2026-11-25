@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "name": "Ильяшенко Александр Викторович",
+      "district": "Братеево",
+      "handle": "ilyashenko_aleksandr",
+      "status": "former",
+      "reason": "Смерть",
+      "reason_detail": "В повестке заседания 14.02.2023, опубликованной районным СМИ префектуры ЮАО, указано досрочное прекращение полномочий в связи со смертью. Официальный отчёт Совета за 2024 год перечисляет девять депутатов без Ильяшенко. Точный номер решения и дата вступления в силу не установлены.",
+      "decision_date": null,
+      "decision_number": null,
+      "reported_agenda_date": "2023-02-14",
+      "reviewed_date": "2026-11-25",
+      "sources": [
+        {
+          "url": "https://www.mun-brateevo.ru/4751-otchet-deputatov-za-2024-g.html",
+          "type": "official_council_report"
+        },
+        {
+          "url": "https://gazeta-brateevo.ru/2023/02/14/99386/",
+          "type": "prefecture_founded_media_agenda"
+        },
+        {
+          "url": "https://gazeta-brateevo.ru/kontakty/",
+          "type": "publisher_verification"
+        }
+      ],
+      "legacy_record": {
+        "name": "Ильяшенко Александр Викторович",
+        "district": "Братеево",
+        "handle": "ilyashenko_aleksandr",
+        "source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich",
+        "birth_date": "1968-06-10",
+        "birth_source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich",
+        "birth_status": "source_linked_review_pending",
+        "birth_last_checked": "2026-11-21",
+        "workplace": "Государственное бюджетное общеобразовательное учреждение \"Школа № 998\", директор",
+        "workplace_source": "https://asafov.ru/person/ilyashenko-aleksandr-viktorovich",
+        "workplace_status": "source_linked_review_pending",
+        "workplace_checked_at": "2026-11-21"
+      },
+      "legacy_monitor_status": {
+        "status": "checked_unavailable",
+        "checked_at": "2026-11-25T09:55:35.296705+00:00",
+        "posts_count": null,
+        "reason": "vk_api_error_100"
+      }
+    }
+  ]
+}

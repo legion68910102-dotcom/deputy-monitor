@@ -108,9 +108,10 @@ const rows=[
     "name": "Бойков Алексей Александрович",
     "district": "Бирюлёво Западное",
     "handle": "a.a.boikov",
-    "status": "review_required",
-    "source": "https://www.m-bz.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://www.amom.ru/news/2026/06/deputat-aleksej-bojkov-pozdravil-s-professionalnyim-prazdnikom-soczialnyix-rabotnikov.html",
+    "reviewed_date": "2026-11-25",
+    "note": "Совет муниципальных образований назвал депутатом."
   },
   {
     "name": "Есин Александр Борисович",
@@ -124,9 +125,10 @@ const rows=[
     "name": "Конарев Илья Сергеевич",
     "district": "Бирюлёво Западное",
     "handle": "iskonarev",
-    "status": "review_required",
-    "source": "https://www.m-bz.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://www.amom.ru/news/2026/09/deputat-ilya-konarev-razobral-so-studentami-praktiku-vzaimodejstviya-s-vlastyu.html",
+    "reviewed_date": "2026-11-25",
+    "note": "Сообщение муниципального округа на сайте Совета муниципальных образований."
   },
   {
     "name": "Леликова Елена Сергеевна",
@@ -148,9 +150,10 @@ const rows=[
     "name": "Бурых Ярослав Юрьевич",
     "district": "Бирюлёво Западное",
     "handle": "yaroslavburykh",
-    "status": "review_required",
-    "source": "https://www.m-bz.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://amom.ru/news/2026/11/deputatyi-biryulevo-zapadnoe-prisoedinilis-k-akczii.html",
+    "reviewed_date": "2026-11-25",
+    "note": "Совет муниципальных образований назвал депутатом."
   },
   {
     "name": "Виноградова Елена Геннадьевна",
@@ -220,9 +223,10 @@ const rows=[
     "name": "Чинилина Ирина Викторовна",
     "district": "Братеево",
     "handle": "chinilina975",
-    "status": "review_required",
-    "source": "https://www.mun-brateevo.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://www.mun-brateevo.ru/priem-naselenyia.html",
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в графике приёма Совета."
   },
   {
     "name": "Власенко Антон Юрьевич",
@@ -247,19 +251,6 @@ const rows=[
     "status": "review_required",
     "source": "https://www.mun-brateevo.ru/",
     "reviewed_date": "2026-11-25"
-  },
-  {
-    "name": "Ильяшенко Александр Викторович",
-    "district": "Братеево",
-    "handle": "ilyashenko_aleksandr",
-    "status": "discrepancy",
-    "source": "https://www.mun-brateevo.ru/",
-    "reviewed_date": "2026-11-25",
-    "note": "Есть сведения о смерти и рассмотрении вопроса о досрочном прекращении полномочий в 2023 году. Решение Совета пока не найдено.",
-    "evidence": [
-      "https://gazeta-brateevo.ru/2023/02/14/99386/",
-      "https://votegd.com/people/1781-ilyashenko-aleksandr/"
-    ]
   },
   {
     "name": "Серегин Александр Викторович",
@@ -330,8 +321,9 @@ const rows=[
     "district": "Даниловский",
     "handle": "sitnikov_danilovskiy",
     "status": "list_match",
-    "source": "https://danilovskoe.org/index.php/council-of-deputies",
-    "reviewed_date": "2026-11-25"
+    "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-2/24-sitnikov-ivan-ivanovich",
+    "reviewed_date": "2026-11-25",
+    "note": "Именная карточка Совета."
   },
   {
     "name": "Султанов Владислав Геннадьевич",
@@ -451,7 +443,8 @@ const rows=[
     "handle": "anisim_svet",
     "status": "list_match",
     "source": "https://www.mos-zyablikovo.ru/sovet-deputatov/",
-    "reviewed_date": "2026-11-25"
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в списке Совета; новый адрес VK не подтверждён официальным источником."
   },
   {
     "name": "Пушкин Павел Павлович",
@@ -516,7 +509,8 @@ const rows=[
     "handle": "semenovdmitry80",
     "status": "list_match",
     "source": "https://www.mos-zyablikovo.ru/sovet-deputatov/",
-    "reviewed_date": "2026-11-25"
+    "reviewed_date": "2026-11-25",
+    "note": "Указан в списке Совета."
   },
   {
     "name": "Шлякова Елена Николаевна",
@@ -530,9 +524,13 @@ const rows=[
     "name": "Алленов Андрей Михайлович",
     "district": "Москворечье-Сабурово",
     "handle": "allenov__andrey",
-    "status": "review_required",
-    "source": "https://mos-saburovo.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://gazeta-nashe-moskvoreche-saburovo.ru/2026/10/02/149558/",
+    "reviewed_date": "2026-11-25",
+    "note": "Назван в опубликованном районным изданием графике отчётов, утверждённом Советом 22.09.2026; первичный протокол подтверждает статус на 24.09.2024.",
+    "evidence": [
+      "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+    ]
   },
   {
     "name": "Андрианов Михаил Владимирович",
@@ -554,9 +552,13 @@ const rows=[
     "name": "Кондрашов Артем Вячеславович",
     "district": "Москворечье-Сабурово",
     "handle": "av_kondrashov",
-    "status": "review_required",
-    "source": "https://mos-saburovo.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://gazeta-nashe-moskvoreche-saburovo.ru/2026/10/02/149558/",
+    "reviewed_date": "2026-11-25",
+    "note": "Назван в графике отчётов; первичный протокол подтверждает статус на 24.09.2024.",
+    "evidence": [
+      "https://parking.mos.ru/upload/iblock/995/brc4vxkyl81hr9vluy32o2ic8i8fr11r.pdf"
+    ]
   },
   {
     "name": "Москалев Александр Евгеньевич",
@@ -690,9 +692,10 @@ const rows=[
     "name": "Коршунова Наталья Евгеньевна",
     "district": "Нагатинский Затон",
     "handle": "korshunovane",
-    "status": "review_required",
-    "source": "https://nzaton.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://www.mosgorizbirkom.ru/documents/41426/CustomDocument_41426.pdf",
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в официальном списке Мосгоризбиркома; дата документа не установлена."
   },
   {
     "name": "Кундыль Татьяна Евгеньевна",
@@ -802,7 +805,7 @@ const rows=[
     "status": "list_match",
     "source": "https://sovet.monagornoe.ru/grafik_priema_deputatov/",
     "reviewed_date": "2026-11-25",
-    "note": "Совпадение с графиком приёма, не с решением о полномочиях."
+    "note": "График приёма на 2026 год."
   },
   {
     "name": "Горн Виктор Викторович",
@@ -853,8 +856,9 @@ const rows=[
     "district": "Орехово-Борисово Северное",
     "handle": "elena__konnova",
     "status": "list_match",
-    "source": "https://mo-obs.ru/",
-    "reviewed_date": "2026-11-25"
+    "source": "https://mo-obs.ru/sovet-deputatov/deputatyi/",
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в списке Совета."
   },
   {
     "name": "Лапланш Елена Львовна",
@@ -989,8 +993,9 @@ const rows=[
     "district": "Орехово-Борисово Южное",
     "handle": "sovchinnikova79",
     "status": "list_match",
-    "source": "https://mo-obu.ru/deputaty/",
-    "reviewed_date": "2026-11-25"
+    "source": "https://mo-obu.ru/grafik-priema-deputatov-orehovo-borisovo-juzhnoe/",
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в графике приёма Совета."
   },
   {
     "name": "Яшкин Андрей Петрович",
@@ -1020,9 +1025,10 @@ const rows=[
     "name": "Нуйкина Карина Вячеславовна",
     "district": "Царицыно",
     "handle": "nuykinakv",
-    "status": "review_required",
+    "status": "list_match",
     "source": "https://www.mcaricino.ru/munitsipalnoe-sobranie/komissii-soveta-deputatov/",
-    "reviewed_date": "2026-11-25"
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в составе комиссии Совета."
   },
   {
     "name": "Назарова Елена Андреевна",
@@ -1117,8 +1123,9 @@ const rows=[
     "district": "Чертаново Северное",
     "handle": "andreevasvetlanaaleksandrovna",
     "status": "list_match",
-    "source": "https://sovet.ch-sever.ru/",
-    "reviewed_date": "2026-11-25"
+    "source": "https://sovet.ch-sever.ru/resheniya_soveta_deputatov1/23259_chs010360_ob_utverzhdenii_grafika_lichnogo_priema_izbiratelej_deputatami_soveta_deputatov_vnutrigorodskogo_municipalnogo_o/",
+    "reviewed_date": "2026-11-25",
+    "note": "Решение № ЧС-01-03-60, график IV квартала 2026 года."
   },
   {
     "name": "Лукоянов Алексей Александрович",
@@ -1212,9 +1219,10 @@ const rows=[
     "name": "Репкина Елена Владимировна",
     "district": "Чертаново Центральное",
     "handle": "repkinae",
-    "status": "review_required",
-    "source": "https://sovet.chertanovocentr.ru/",
-    "reviewed_date": "2026-11-25"
+    "status": "list_match",
+    "source": "https://sovet.chertanovocentr.ru/grafik_prima_naseleniya/",
+    "reviewed_date": "2026-11-25",
+    "note": "Указана в графике приёма Совета, содержащем сведения за 2026 год."
   },
   {
     "name": "Рыбакова Евгения Валентиновна",

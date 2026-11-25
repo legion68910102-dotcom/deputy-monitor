@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "reviewed_date": "2026-11-25",
+  "basis": "Official listings cache and manual review of accessible official pages; exact name match does not independently establish ongoing mandate. No directory edits.",
+  "roster_count": 159,
+  "matched": 88,
+  "districts": [
+    {
+      "district": "Бирюлёво Восточное",
+      "roster_count": 10,
+      "matched": 10,
+      "status": "list_matches",
+      "source": "https://mrbv.ru/sovet/"
+    },
+    {
+      "district": "Бирюлёво Западное",
+      "roster_count": 10,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://www.m-bz.ru/"
+    },
+    {
+      "district": "Братеево",
+      "roster_count": 10,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://www.mun-brateevo.ru/",
+      "note": "Смерть Ильяшенко А.В. и рассмотрение досрочного прекращения полномочий подтверждаются публикациями; решение Совета необходимо найти.",
+      "evidence": [
+        "https://gazeta-brateevo.ru/2023/02/14/99386/",
+        "https://votegd.com/people/1781-ilyashenko-aleksandr/"
+      ]
+    },
+    {
+      "district": "Даниловский",
+      "roster_count": 12,
+      "matched": 12,
+      "status": "list_matches",
+      "source": "https://danilovskoe.org/index.php/council-of-deputies"
+    },
+    {
+      "district": "Донской",
+      "roster_count": 10,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://sovet.mo-donskoy.ru/page/deputaty_sd_mo_donskoy1.html"
+    },
+    {
+      "district": "Зябликово",
+      "roster_count": 10,
+      "matched": 9,
+      "status": "partial_match",
+      "source": "https://www.mos-zyablikovo.ru/sovet-deputatov/",
+      "note": "Официальный список содержит Чеканову Евгению Николаевну вместо Рябевой; установить, смена фамилии или другой человек."
+    },
+    {
+      "district": "Москворечье-Сабурово",
+      "roster_count": 10,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://mos-saburovo.ru/"
+    },
+    {
+      "district": "Нагатино-Садовники",
+      "roster_count": 8,
+      "matched": 8,
+      "status": "list_matches",
+      "source": "https://sovet.n-sadovniki.ru/"
+    },
+    {
+      "district": "Нагатинский Затон",
+      "roster_count": 10,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://nzaton.ru/"
+    },
+    {
+      "district": "Нагорный",
+      "roster_count": 10,
+      "matched": 9,
+      "status": "partial_match",
+      "source": "https://sovet.monagornoe.ru/grafik_priema_deputatov/",
+      "note": "В графике на 2026 год девять депутатов; отсутствие в графике не подтверждает прекращение полномочий."
+    },
+    {
+      "district": "Орехово-Борисово Северное",
+      "roster_count": 10,
+      "matched": 10,
+      "status": "list_matches",
+      "source": "https://mo-obs.ru/"
+    },
+    {
+      "district": "Орехово-Борисово Южное",
+      "roster_count": 10,
+      "matched": 10,
+      "status": "list_matches",
+      "source": "https://mo-obu.ru/deputaty/"
+    },
+    {
+      "district": "Царицыно",
+      "roster_count": 9,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://www.mcaricino.ru/munitsipalnoe-sobranie/komissii-soveta-deputatov/"
+    },
+    {
+      "district": "Чертаново Северное",
+      "roster_count": 10,
+      "matched": 10,
+      "status": "list_matches",
+      "source": "https://sovet.ch-sever.ru/"
+    },
+    {
+      "district": "Чертаново Центральное",
+      "roster_count": 10,
+      "matched": 0,
+      "status": "review_required",
+      "source": "https://sovet.chertanovocentr.ru/"
+    },
+    {
+      "district": "Чертаново Южное",
+      "roster_count": 10,
+      "matched": 10,
+      "status": "list_matches",
+      "source": "https://sovet.vmo-chu.ru/"
+    }
+  ]
+}

@@ -60,6 +60,33 @@ jobs:
               assert.equal(Number(state.total),expected);
               assert.equal(state.archive,true);
               assert.deepEqual(errors,[]);
+              const birthdayTest=await page.evaluate(()=>{
+                const group=document.querySelector('#profiles .district-group');
+                const district=group.dataset.district;
+                const members=dmDistrictBirthdayNames.get(district);
+                const backup=members.map(n=>[n,Object.hasOwn(deputyBio,n),deputyBio[n]]);
+                const today=window.dmDateFilter.today();
+                const other=today.slice(5)==='01-01'?'01-02':'01-01';
+                try{
+                  for(const name of members)deputyBio[name]={...deputyBio[name],birth:'1980-'+other};
+                  deputyBio[members[0]].birth='1980-'+today.slice(5);
+                  render();
+                  const badge=()=>[...document.querySelectorAll('#profiles .district-group')].find(e=>e.dataset.district===district).querySelector(':scope > summary > .district-birthday');
+                  const visible=!badge().hidden&&getComputedStyle(badge()).display!=='none'&&!badge().closest('details').open;
+                  document.getElementById('search').value='no-matching-person-test';
+                  render();
+                  const visibleDuringSearch=!badge().hidden;
+                  deputyBio[members[0]].birth='1980-'+other;
+                  render();
+                  const hidden=badge().hidden&&getComputedStyle(badge()).display==='none';
+                  return {visible,visibleDuringSearch,hidden};
+                }finally{
+                  for(const [name,had,value] of backup){if(had)deputyBio[name]=value;else delete deputyBio[name]}
+                  document.getElementById('search').value='';render();
+                }
+              });
+              console.log('DISTRICT_BIRTHDAY',engine.name(),path,JSON.stringify(birthdayTest));
+              assert.deepEqual(birthdayTest,{visible:true,visibleDuringSearch:true,hidden:true});
               for(const section of ['activity','report','ranking','activity-analysis']){
                 const el=page.locator('#'+section+' > details');
                 await el.evaluate(e=>e.open=true);

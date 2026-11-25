@@ -13,9 +13,13 @@ ROOT = Path(__file__).resolve().parent
 # Always use the same current roster as the VK collector and site monitor.
 # index.html is a historical landing page and must not determine Excel coverage.
 roster_source = json.loads((ROOT / "deputies.json").read_text(encoding="utf-8"))
+from scripts.monitoring_term import load_term, post_in_term
+term = load_term(ROOT)
 people = roster_source.get("deputies", [])
-if not isinstance(people, list) or len(people) != 159:
-    raise ValueError("Expected 159 deputy profiles in deputies.json")
+if not isinstance(people, list) or not people:
+    raise ValueError("Missing approved deputy roster")
+if {(p["handle"],p["name"],p["district"]) for p in people} != {(p["handle"],p["name"],p["district"]) for p in term["roster"]}:
+    raise ValueError("Roster and monitoring term do not match; publish them together")
 if any(not isinstance(p, dict) or not all(p.get(k) for k in ("district", "name", "handle")) for p in people):
     raise ValueError("Incomplete deputy record in current roster")
 roster = [(p["district"], p["name"], {"handle": p["handle"], "source": p.get("source", "")})
@@ -30,7 +34,7 @@ try:
     posts = source.get("posts", []) if isinstance(source, dict) else []
 except (ValueError, OSError):
     posts = []
-posts = posts if isinstance(posts, list) else []
+posts = [p for p in posts if post_in_term(p, term)] if isinstance(posts, list) else []
 by_profile = defaultdict(list)
 for post in posts:
     if isinstance(post, dict) and post.get("profile"):
@@ -39,6 +43,7 @@ for post in posts:
 wb = Workbook()
 ws = wb.active
 ws.title = "Сводка"
+wb.properties.title = "Мониторинг: " + term["start"] + " — " + term["end"]
 wp = wb.create_sheet("Публикации")
 wm = wb.create_sheet("Без данных")
 ws.append(["№", "Район", "Депутат", "Публикаций", "Лайки", "Комментарии", "Репосты", "Просмотры", "Статус", "VK", "Источник"])

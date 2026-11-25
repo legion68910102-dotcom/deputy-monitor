@@ -100,8 +100,8 @@ test("all dates and all archived records are accessible; legacy activity initial
  assert.equal(records.filter(p=>dates.includes(p.date,"","")).length,records.length);
  for(const path of ["index.html","index-v129.html"]){
   const html=fs.readFileSync(path,"utf8");
-  assert.match(html,/\$\("report-from"\)\.value="";\$\("report-to"\)\.value="";/);
-  assert.match(html,/from\.value="";\s*to\.value="";/);
+  assert.ok(html.includes('setTermRange($("report-from"),$("report-to"))'));
+  assert.ok(html.includes("setTermRange(from,to)"));
   assert.match(html,/id="activity-results-more"/);
   assert.match(html,/id="archive-coverage"/);
   assert.match(html,/id="report-all-dates"/);
@@ -115,4 +115,20 @@ test("all dates and all archived records are accessible; legacy activity initial
  for(const path of ["activity-analysis.js","activity-analysis-v129.js"]){
   const script=fs.readFileSync(path,"utf8");assert.match(script,/slice\(0,resultLimit\)/);assert.match(script,/resultLimit\+=150/);
  }
+});
+
+test("approved term excludes historical and next-term posts, including reelected deputies",()=>{
+ const window={};vm.runInNewContext(fs.readFileSync("monitoring-term-v1.js","utf8"),{window});
+ vm.runInNewContext(fs.readFileSync("date-filter-v1.js","utf8"),{window,Intl,Date});
+ const d=window.dmDateFilter,t=window.dmMonitoringTerm,p=t.roster[0].handle;
+ assert.equal(t.start,"2026-01-01");assert.equal(t.end,"2027-09-20");
+ assert.equal(d.inTerm({profile:p,date:"2025-12-31"}),false);
+ assert.equal(d.inTerm({profile:p,date:t.start}),true);
+ assert.equal(d.inTerm({profile:p,date:t.end}),true);
+ assert.equal(d.inTerm({profile:p,date:"2027-09-21"}),false);
+ assert.equal(d.inTerm({profile:"unlisted",date:t.start}),false);
+ const next={start:"2027-09-21",end:"2032-09-20",roster:t.roster};
+ assert.equal(d.inTerm({profile:p,date:t.end},next),false);
+ assert.equal(d.inTerm({profile:p,date:next.start},next),true);
+ const a={},b={};d.setTermRange(a,b);assert.equal(a.value,t.start);assert.equal(b.value,t.end);
 });

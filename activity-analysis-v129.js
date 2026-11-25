@@ -195,10 +195,9 @@ function render(manual=false){
 document.addEventListener("DOMContentLoaded",()=>{
  const sel=document.getElementById("activity-person");if(!sel)return;
  for(const person of directoryOptions()){const o=document.createElement("option");o.value=person.name;o.textContent=person.name+" — "+person.district;sel.appendChild(o)}
- document.getElementById("activity-from").value="";
- document.getElementById("activity-to").value="";
+ window.dmDateFilter.setTermRange(document.getElementById("activity-from"),document.getElementById("activity-to"));
  document.getElementById("activity-run").addEventListener("click",()=>render(true));
- document.getElementById("analysis-all-dates").addEventListener("click",()=>{document.getElementById("activity-from").value="";document.getElementById("activity-to").value="";visibleLimit=60;resultLimit=150;render()});
+ document.getElementById("analysis-all-dates").addEventListener("click",()=>{window.dmDateFilter.setTermRange(document.getElementById("activity-from"),document.getElementById("activity-to"));visibleLimit=60;resultLimit=150;render()});
  document.getElementById("activity-results-more").addEventListener("click",()=>{resultLimit+=150;render()});
  sel.addEventListener("change",()=>{activeCategory=null;visibleLimit=60;resultLimit=150;render()});
  for(const id of ["activity-from","activity-to"])for(const event of ["input","change"])document.getElementById(id).addEventListener(event,()=>{visibleLimit=60;resultLimit=150;render()});

@@ -1,9 +1,9 @@
 /* Shared, offline, inclusive calendar-date filter (Moscow publication dates). */
 (function(root,factory){
- const api=factory();
+ const api=factory(root);
  if(typeof module==="object"&&module.exports)module.exports=api;
  if(root)root.dmDateFilter=api;
-})(typeof window!=="undefined"?window:null,function(){
+})(typeof window!=="undefined"?window:null,function(root){
  "use strict";
  function day(value){
   const m=/^(\d{4})-(\d{2})-(\d{2})(?:$|[T ])/.exec(String(value??"").trim());
@@ -22,5 +22,9 @@
  function today(){const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Moscow",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));return p.year+"-"+p.month+"-"+p.day}
  function label(from="",to=""){return !valid(from,to)?"Ошибка: дата начала позже даты окончания или дата некорректна.":from||to?"Период: "+(from||"без ограничения начала")+" — "+(to||"без ограничения окончания")+".":"Период: все даты."}
  function nameMatches(name,query){const norm=x=>String(x??"").toLocaleLowerCase("ru-RU").replace(/ё/g,"е").trim().replace(/\s+/g," ");const n=norm(name);return norm(query).split(" ").filter(Boolean).every(t=>n.includes(t))}
- return {day,valid,includes,today,label,nameMatches};
+ function term(){return root?.dmMonitoringTerm||null}
+ function inTerm(post,config=term()){return Boolean(config&&post&&config.roster.some(p=>p.handle===post.profile)&&day(post.date)&&includes(post.date,config.start,config.end))}
+ function setTermRange(a,b){const t=term();if(!t)return;for(const input of [a,b]){input.min=t.start;input.max=t.end}a.value=t.start;b.value=t.end}
+ function scopeLabel(){const t=term();return t?"Период мониторинга: "+t.start+" — "+t.end+" включительно. ":""}
+ return {day,valid,includes,today,label,nameMatches,term,inTerm,setTermRange,scopeLabel};
 });

@@ -244,10 +244,11 @@ class VKCollectionTests(unittest.TestCase):
         self.assertEqual(second["new_posts"], 0)
         self.assertEqual(second["updated_posts"], 0)
 
-    def test_all_159_profiles_in_production_roster(self):
+    def test_all_current_profiles_in_production_roster(self):
         handles, districts = vk.roster_handles(ROOT)
-        self.assertEqual(len(handles), 159)
-        self.assertEqual(len(set(handles)), 159)
+        self.assertEqual(len(handles), 158)
+        self.assertEqual(len(set(handles)), 158)
+        self.assertNotIn('ilyashenko_alexandr', handles)
         self.assertEqual(districts, 16)
 
 

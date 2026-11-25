@@ -747,7 +747,7 @@ const deputyPostSummary=handle=>{
 };
 window.dmActivityRows=allRows;
 document.dispatchEvent(new Event("dm-publications-updated"));
-el("total").textContent=combined.length;
+el("total").textContent=(!dmLastPostsSnapshot&&!apiRows.length&&!rows.length)?"—":combined.length;
 el("term-roster-size").textContent=window.deputyRoster.length;
 for(const id of ["profile-roster-count","ranking-roster-count"]){const node=el(id);if(node)node.textContent=window.deputyRoster.length;}
 const publishedKeys=new Set(apiRows.map(r=>r.profile+"|"+r.url));
@@ -822,6 +822,62 @@ if(feedOffset<feedRows.length)setTimeout(appendFeedBatch,0);
 // GitHub Pages is read-only. These requests reload the published snapshot;
 // only the credential-protected GitHub Actions job can query VK itself.
 let dmLastVisitRefresh=0,dmMonitorPromise=null,dmPublishedVersion="",dmLastPostsSnapshot=null;
+let dmNetworkPostsReady=false;
+const dmSnapshotVersion=data=>String(data.generated_at||"")+"|"+String(data.vk_api_last_checked_at||"")+"|"+data.posts.length;
+function dmOpenSnapshotDB(){
+ return new Promise((resolve,reject)=>{
+  if(!window.indexedDB){reject(Error("IndexedDB unavailable"));return}
+  const req=indexedDB.open("deputy-monitor-public-snapshot",1);
+  req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains("snapshots"))req.result.createObjectStore("snapshots")};
+  req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);req.onblocked=()=>reject(Error("Snapshot cache blocked"));
+ });
+}
+async function dmReadSnapshot(){
+ let db;
+ try{
+  db=await dmOpenSnapshotDB();
+  return await new Promise((resolve,reject)=>{
+   const req=db.transaction("snapshots","readonly").objectStore("snapshots").get("vk-posts");
+   req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);
+  });
+ }finally{db?.close()}
+}
+async function dmWriteSnapshot(data){
+ let db;
+ try{
+  db=await dmOpenSnapshotDB();
+  await new Promise((resolve,reject)=>{
+   const tx=db.transaction("snapshots","readwrite");
+   tx.objectStore("snapshots").put(data,"vk-posts");
+   tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);
+  });
+ }catch(e){console.warn("Published archive cache unavailable")}finally{db?.close()}
+}
+function dmUseSnapshot(data){
+ if(!data||!Array.isArray(data.posts))throw Error("Некорректный архив VK");
+ const version=dmSnapshotVersion(data);
+ const changed=version!==dmPublishedVersion;
+ if(changed){apiRows=data.posts;dmPublishedVersion=version}
+ dmLastPostsSnapshot=data;
+ return changed;
+}
+function dmLoadingStatus(){
+ const info=window.dmVkFreshness?.summarize(monitor,dmLastPostsSnapshot);
+ if(monitor&&info){el("checked").textContent=info.checked;el("api-count").textContent=info.successful}
+ el("vk-sync-banner").dataset.state="loading";
+ el("vk-sync-heading").textContent=dmLastPostsSnapshot?"🔄 Проверяем обновления VK":"🔄 Загружаем архив публикаций VK…";
+ el("vk-sync-details").textContent=dmLastPostsSnapshot?"Показан последний сохранённый снимок. Проверяется наличие новых данных.":"Справочник и статусы доступны независимо. Публикации появятся после загрузки архива.";
+ el("monitor-summary").textContent=el("vk-sync-details").textContent;
+}
+async function dmRestoreSnapshot(){
+ try{
+  const data=await dmReadSnapshot();
+  if(!dmNetworkPostsReady&&!dmLastPostsSnapshot&&Array.isArray(data?.posts)){
+   dmUseSnapshot(data);render();
+   if(dmMonitorPromise)dmLoadingStatus();else dmShowVkStatus(data,"Показана сохранённая копия; обновление архива недоступно");
+  }
+ }catch(e){console.warn("Published archive cache read unavailable")}
+}
 async function dmFetchPublishedJSON(filename){
  const controller=new AbortController();
  const timer=setTimeout(()=>controller.abort(),filename==="vk-posts.json"?90000:20000);
@@ -857,31 +913,28 @@ async function refreshMonitor(options){
  for(const b of manualButtons)b.disabled=true;
  const banner=el("vk-sync-banner");
  banner.dataset.state="loading";
- el("vk-sync-heading").textContent="🔄 Проверяем опубликованные данные VK…";
+ dmLoadingStatus();
  dmMonitorPromise=(async()=>{
-  const [statusResult,postsResult,avatarResult]=await Promise.allSettled([
-   dmFetchPublishedJSON("monitor-status.json"),
-   dmFetchPublishedJSON("vk-posts.json"),
-   dmFetchPublishedJSON("vk-avatars.json")
-  ]);
-  let issue="",changed=false;
-  if(statusResult.status==="fulfilled"&&statusResult.value?.profiles){
-   monitor=statusResult.value;
-    try{sessionStorage.setItem("dm_vk_monitoring",JSON.stringify(Object.keys(monitor.profiles).filter(h=>monitor.profiles[h]?.status==="success")))}catch(e){}
-  }else issue="monitor-status.json недоступен";
-  if(postsResult.status==="fulfilled"&&Array.isArray(postsResult.value?.posts)){
-   const data=postsResult.value,version=String(data.generated_at||"")+"|"+String(data.vk_api_last_checked_at||"")+"|"+data.posts.length;
-   if(version!==dmPublishedVersion){apiRows=data.posts;dmPublishedVersion=version;changed=true}
-   dmLastPostsSnapshot=data;
-   // Large snapshots exceed mobile Web Storage quotas; keep the full archive in memory and HTTP cache.
-   if(apiRows.length<=1000){try{sessionStorage.setItem("dm_vk_posts",JSON.stringify(apiRows))}catch(e){}}
-  }else issue+=(issue?"; ":"")+"vk-posts.json недоступен";
-  if(avatarResult.status==="fulfilled"&&avatarResult.value?.profiles){
-   const freshAvatars=avatarResult.value.profiles;
-   if(JSON.stringify(freshAvatars)!==JSON.stringify(vkAvatars)){vkAvatars=freshAvatars;changed=true}
-  }
+  const issues=[];
+  const statusTask=dmFetchPublishedJSON("monitor-status.json").then(data=>{
+   if(!data?.profiles)throw Error("Некорректный статус");
+   monitor=data;
+   try{sessionStorage.setItem("dm_vk_monitoring",JSON.stringify(Object.keys(monitor.profiles).filter(h=>monitor.profiles[h]?.status==="success")))}catch(e){}
+   render();dmLoadingStatus();
+  }).catch(e=>issues.push("monitor-status.json: "+String(e.message||e)));
+  const postsTask=dmFetchPublishedJSON("vk-posts.json").then(data=>{
+   const changed=dmUseSnapshot(data);dmNetworkPostsReady=true;
+   if(changed)render();
+   dmLoadingStatus();
+   void dmWriteSnapshot(data);
+  }).catch(e=>issues.push("vk-posts.json: "+String(e.message||e)));
+  const avatarTask=dmFetchPublishedJSON("vk-avatars.json").then(data=>{
+   if(!data?.profiles)throw Error("Некорректные фотографии");
+   if(JSON.stringify(data.profiles)!==JSON.stringify(vkAvatars)){vkAvatars=data.profiles;render()}
+  }).catch(e=>issues.push("vk-avatars.json: "+String(e.message||e)));
+  await Promise.allSettled([statusTask,postsTask,avatarTask]);
+  const issue=issues.join("; ");
   dmShowVkStatus(dmLastPostsSnapshot,issue);
-  if(changed||statusResult.status==="fulfilled")render();
   return !issue;
  })().catch(error=>{dmShowVkStatus(dmLastPostsSnapshot,String(error.message||error));return false})
  .finally(()=>{dmMonitorPromise=null;for(const b of manualButtons)b.disabled=false});
@@ -905,7 +958,7 @@ setInterval(()=>{if(!document.hidden)refreshMonitor()},10*60*1000);["activity-da
 el("activity-copy-links")?.addEventListener("click",async()=>{const value=selectedLinksText(),status=el("activity-links-status");if(!value){status.textContent="В выбранном периоде ссылок нет";return}try{await navigator.clipboard.writeText(value);status.textContent="Скопировано ссылок: "+window.activitySelectedLinks.length}catch(e){status.textContent="Не удалось скопировать автоматически. Используйте скачивание CSV."}});
 el("activity-export-links")?.addEventListener("click",()=>{const links=window.activitySelectedLinks||[],status=el("activity-links-status");if(!links.length){status.textContent="В выбранном периоде ссылок нет";return}const q=v=>'"'+String(v??"").replace(/"/g,'""')+'"';const csv="\uFEFFФИО;Дата;Ссылка\r\n"+links.map(r=>[r.name,r.date,r.url].map(q).join(";")).join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="deputy-publication-links.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent="CSV подготовлен: "+links.length+" ссылок"});
 document.querySelector("#activity > details")?.addEventListener("toggle",()=>{if(document.querySelector("#activity > details")?.open)render();else dmFeedRenderGeneration++;});
-window.dmDateFilter.setTermRange(el("activity-date-from"),el("activity-date-to"));render();refreshMonitor({manual:true});
+window.dmDateFilter.setTermRange(el("activity-date-from"),el("activity-date-to"));render();void dmRestoreSnapshot();refreshMonitor({manual:true});
 </script><script id="report-inline-v87" defer>
 /* Offline XLSX generator: no external libraries, no network calls. */
 (function(){

@@ -22,21 +22,22 @@ jobs:
       - name: Install browser test runner
         run: |
           npm install --no-save --no-package-lock playwright
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps chromium webkit
       - name: Verify actual browser startup against saved public snapshot
         run: |
           set -euo pipefail
           python -m http.server 8765 --bind 127.0.0.1 >/tmp/deputy-http.log 2>&1 &
           trap 'kill $! 2>/dev/null || true' EXIT
           node --input-type=module <<'JS'
-          import { chromium, devices } from 'playwright';
+          import { chromium, webkit, devices } from 'playwright';
           import fs from 'node:fs';
           import assert from 'node:assert/strict';
           const archive=JSON.parse(fs.readFileSync('vk-posts.json','utf8'));
           const term=JSON.parse(fs.readFileSync('monitoring-term-v1.js','utf8').split('window.dmMonitoringTerm = ')[1].trim().replace(/;$/,''));
           const handles=new Set(term.roster.map(p=>p.handle));
           const expected=archive.posts.filter(p=>handles.has(p.profile)&&String(p.date).slice(0,10)>=term.start&&String(p.date).slice(0,10)<=term.end).length;
-          const browser=await chromium.launch({headless:true});
+          for(const engine of [chromium,webkit]){
+            const browser=await engine.launch({headless:true});
           try{
             for(const path of ['index.html','index-v129.html']){
               const context=await browser.newContext({...devices['iPhone 13'],isMobile:true});
@@ -67,7 +68,19 @@ jobs:
                 await el.evaluate(e=>e.open=false);
               }
               assert.deepEqual(errors,[]);
+              // Wait for IndexedDB to commit the complete public archive, then simulate a slow/failed archive fetch.
+              await page.waitForFunction(()=>new Promise(resolve=>{
+                const q=indexedDB.open('deputy-monitor-public-snapshot',1);
+                q.onerror=()=>resolve(false);
+                q.onsuccess=()=>{const db=q.result;try{const r=db.transaction('snapshots').objectStore('snapshots').get('vk-posts');r.onsuccess=()=>{resolve(Array.isArray(r.result?.posts)&&r.result.posts.length>0);db.close()};r.onerror=()=>{db.close();resolve(false)}}catch(e){db.close();resolve(false)}};
+              }),{},{timeout:20000});
+              await page.route('**/vk-posts.json',r=>r.abort());
+              await page.reload({waitUntil:'domcontentloaded',timeout:30000});
+              await page.waitForFunction(n=>Number(document.getElementById('total')?.textContent)===n,expected,{timeout:20000});
+              console.log('CACHE_RELOAD',engine.name(),path,JSON.stringify({total:await page.locator('#total').textContent(),errors}));
+              assert.deepEqual(errors,[]);
               await context.close();
             }
           }finally{await browser.close()}
+          }
           JS

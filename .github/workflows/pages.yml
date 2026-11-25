@@ -19,6 +19,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Verify approved v129 interface before publishing
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected=7f9cc85db3ee9b2fcaa642e986a4842529fd0466
+          for file in index.html index-v129.html; do
+            actual="$(git hash-object "$file")"
+            if [ "$actual" != "$expected" ]; then
+              echo "::error file=$file::Approved v129 interface changed. Explicit owner approval and an intentional baseline update are required."
+              exit 1
+            fi
+          done
+          cmp index.html index-v129.html
+          echo "Approved v129 HTML verified; data updates are allowed."
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

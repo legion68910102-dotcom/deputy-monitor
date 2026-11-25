@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          expected=98e7f7a12babda82751b3de5b8124fec7017dced
+          expected=c4177de783ebcb9b40e72768e294835ded86cce9
           for file in index.html index-v129.html; do
             actual="$(git hash-object "$file")"
             if [ "$actual" != "$expected" ]; then

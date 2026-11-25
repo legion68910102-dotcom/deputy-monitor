@@ -351,19 +351,23 @@
       "last_attempt": "2026-11-25T10:16:57.466024+00:00",
       "pages_read": 1,
       "anchor": "3113975_680"
+    },
+    "semenovdmitry80": {
+      "state": "pending",
+      "offset": 0
     }
   },
   "last_run": {
     "requests": 50,
     "new_posts": 1,
     "updated_posts": 3894,
-    "archive_posts": 14203,
+    "archive_posts": 14303,
     "history_complete": 1,
-    "history_pending": 141,
-    "history_blocked": 16,
+    "history_pending": 142,
+    "history_blocked": 15,
     "stopped_reason": null,
     "roster_size": 158,
-    "roster_reconciled_on": "2026-11-25"
+    "roster_reconciled_on": "2026-11-25T10:46:41.502296+00:00"
   },
   "enabled": true,
   "previous_roster_last_run": {

@@ -413,10 +413,12 @@
       "history_coverage": "latest_page_only"
     },
     "semenovdmitry80": {
-      "status": "checked_unavailable",
-      "checked_at": "2026-11-25T09:55:35.296705+00:00",
-      "posts_count": null,
-      "reason": "vk_api_error_100"
+      "status": "success",
+      "checked_at": "2026-11-25T10:46:41.502296+00:00",
+      "posts_count": 100,
+      "reason": "Публичная стена получена по подтверждённому числовому VK ID.",
+      "history_coverage": "latest_page_only",
+      "verified_public_id": 708608893
     },
     "elenashlyakova": {
       "status": "success",

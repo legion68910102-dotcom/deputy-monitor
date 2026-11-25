@@ -1,821 +1,1127 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:08:51.181611+00:00",
+  "generated_at": "2026-11-25T09:55:35.296705+00:00",
   "source": "Official VK API (public wall.get only)",
   "roster_size": 159,
   "district_count": 16,
   "profiles": {
     "ilyasov_kn": {
-      "status": "checked_unavailable",
-      "checked_at": "2026-11-25T08:08:51.181611+00:00",
-      "posts_count": null,
-      "reason": "vk_api_error_5"
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "molchanovpavel": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "elenanersesova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ptitsynakk": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "nata_sycheva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "aleinikovayv": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "antonovalp1": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "golubevaev947": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "kutaysovanv": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "rytovsergey": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "a.a.boikov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "e.aleksander88": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "iskonarev": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "elenasergeevnalelikiva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "irina_terekhova1969": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "yaroslavburykh": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "smallraisin": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tatyanajabina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "juliamartanova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "orehov_aleksandr": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "olga_belousova1998": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "gontsova71": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "e.korostilenko": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ykolova_elena_vasilevna": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "chinilina975": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "vlasenkoau": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "dmitry_volkov77": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "annavolskaya": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ilyashenko_aleksandr": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "seregin1963": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "dmitry_ark": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "kiryanova_ln": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "levshtanov86": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ifadeeva2022": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ivanov_oi10": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "olga_podolskay": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "sagalovskaya": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "sitnikov_danilovskiy": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "vgsultanov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "natalia.abbasova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "grigorievalv": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "trodionova2022": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "graskinss": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "galinazaykovskaya": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "pkobtsev": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ln_skorlupkina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "elena_fursova1": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tkabanova2022": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "svetlanakostyushina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "rezkovvlad": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "yulia_sedacheva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "elina_sherstyuk": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "anisim_svet": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "pushkinpp": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "rafalskayairina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tikhanovaalbina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "haritonova_aliya": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "allavoropaeva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "kalyaev84": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ryabevaen": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "semenovdmitry80": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "elenashlyakova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "allenov__andrey": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "andrianov001": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "nvzausaeva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "av_kondrashov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "aleks_moskalev": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "andrey.abertasov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "vyacheslav_komaha": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "kondratevaekaterina88": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "kudinovamarina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "anatoli_viktorovich_potiomkin": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "deputat_kaminskiy": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "natalyamikhareva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "safonovatatiana85": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tikhomirovalexey": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "nikolskayaav": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "andrey.sezemov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "antonuvarov90": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "azizakabulovnachuganova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "golovin_mikhail_sergeevich": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "gorbunovsi": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "korshunovane": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "kundyltatyana": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "l.ruzina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "balykovde": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "bashlykova.mari": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "julia_byckova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "romanvinokurov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "goremykinmy": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "vvedenskaya_i": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "vinogradova_len": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "dkulnev": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "rygin": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "pavel_v_shutov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "kostina1920": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "viktorgorn": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "id666378177": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "o.v.tarasenko": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tatyana_filippova20": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "dmitrieva_n_n": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "elena__konnova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "elena_laplanche": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "andreymordovin": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "baranchikova_natalia": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "galinadolgashova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "anna_ezhkova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "liudmila_zapl": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "nadezhda_kuskova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "sysoevala": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ib.glotova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "demchenkov_ml": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "svetlana_rodnik": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "novoselskayala": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tkachip": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tatiyana_donskaya": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "i.v.zolkina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "albinakomissarova2022": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "sovchinnikova79": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_100"
     },
     "ap.yashkin": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "aabulatov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "vidutinaov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "nuykinakv": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "elena.rubtsovanazarova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tishkovaea": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "gavrilinams": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ekaterina.tyutyunnikova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "natalia_shabasheva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "shmakova_os": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "abramovaei_chs": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 99,
+      "reason": "Получено записей из VK API: 99. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "antongorbachev": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "petr.kurapov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "i_v_morozova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "smirnovvalerii": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "andreevasvetlanaaleksandrovna": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_15"
     },
     "lukoyanov_chs": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "maxsimmorozov": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "riakhmiatullina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "tozikam": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "bogdan.konoshenko": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "eilarionova_556": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "polozovs": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "i_rodina": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "smitsb": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "vasiliy_meleshin": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "mironovdp": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "repkinae": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "checked_unavailable",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": null,
+      "reason": "vk_api_error_30"
     },
     "rybakovaev_1582": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "n_shindryayeva": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ms_zotova": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "sergey_kashlev": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "ikurash1": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "alexandr_novikov_chu": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "n.ptushkina56": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "bordovskaya_og": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "gunina_ea": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "nleonovannnn": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "markova_tat_vl": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     },
     "smirnovaev1": {
-      "status": "needs_token",
-      "checked_at": null,
-      "reason": "VK API недоступен: ключ не настроен. Публикации не собирались."
+      "status": "success",
+      "checked_at": "2026-11-25T09:55:35.296705+00:00",
+      "posts_count": 100,
+      "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
+      "history_coverage": "latest_page_only"
     }
   },
   "vk_api_last_run": {
     "roster_size": 159,
     "district_count": 16,
     "selected_profiles": 159,
-    "attempted_profiles": 1,
-    "successful_profiles": 0,
-    "failed_profiles": 1,
-    "new_posts": 0,
-    "updated_posts": 0,
-    "retained_posts": 1420,
-    "stopped_reason": "auth_error",
+    "attempted_profiles": 159,
+    "successful_profiles": 142,
+    "failed_profiles": 17,
+    "new_posts": 12782,
+    "updated_posts": 1417,
+    "retained_posts": 14202,
+    "stopped_reason": null,
     "dry_run": false,
     "error_counts": {
-      "vk_api_error_5": 1
-    }
+      "vk_api_error_15": 9,
+      "vk_api_error_100": 7,
+      "vk_api_error_30": 1
+    },
+    "history_start": null,
+    "history_complete_profiles": 0,
+    "history_partial_profiles": 0,
+    "unattempted_profiles": 0
   }
 }

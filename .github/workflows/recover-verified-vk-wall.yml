@@ -1,0 +1,40 @@
+name: Recover verified public VK wall
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/recover-verified-vk-wall.yml'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline collector tests
+        run: python -m unittest discover -s tests -p 'test_collect_vk.py' -v
+      - name: Collect one verified public wall
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/recover_verified_vk_wall.py
+      - name: Save recovery and resume historical queue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vk-posts.json monitor-status.json vk-history-progress.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Save verified public VK recovery"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            gh workflow run build-excel-report.yml --repo "$GITHUB_REPOSITORY" --ref main
+            gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+          fi

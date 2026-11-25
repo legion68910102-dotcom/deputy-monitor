@@ -274,3 +274,21 @@ class VKHistoryTests(unittest.TestCase):
         self.assertEqual(result[1],"vk_api_error_5")
         self.assertTrue(result[2])
         self.assertFalse(result[3])
+
+class VerifiedVKAddressTests(unittest.TestCase):
+    def test_verified_numeric_address_preserves_archive_key(self):
+        from unittest.mock import patch, MagicMock
+        import urllib.parse
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.read.return_value = json.dumps({"response":{"items":[{"owner_id":708608893,"id":1,"date":1795000000}]}}).encode()
+        with patch.object(vk.urllib.request, "urlopen", return_value=response) as request:
+            payload = vk.api_wall_get("semenovdmitry80", "TEST")
+            form = urllib.parse.parse_qs(request.call_args.args[0].data.decode())
+            self.assertEqual(form["domain"], ["708608893"])
+            row = vk.normalize_post(payload["response"]["items"][0], "semenovdmitry80")
+            self.assertEqual(row["profile"], "semenovdmitry80")
+        response.read.return_value = json.dumps({"response":{"items":[{"owner_id":123}]}}).encode()
+        with patch.object(vk.urllib.request, "urlopen", return_value=response):
+            with self.assertRaises(ValueError):
+                vk.api_wall_get("semenovdmitry80", "TEST")

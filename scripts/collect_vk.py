@@ -48,11 +48,15 @@ def roster_handles(root: Path) -> tuple[list[str], int]:
     return handles, districts
 
 
+# Verified public account references; retain stable archive keys when a screen name changes.
+# Source: https://www.amom.ru/news/2026/11/dmitrij-semyonov-prisoedinilsya-k-obxodu-rajona-zyablikovo.html
+VK_PUBLIC_IDS = {"semenovdmitry80": 708608893}
+
 def api_wall_get(handle: str, token: str, offset: int = 0) -> dict:
     # VK API accepts access_token as a form parameter. Keep it in the
     # HTTPS POST body, never in the URL, query string or diagnostic logs.
     params = urllib.parse.urlencode({
-        "domain": handle, "count": 100, "offset": offset,
+        "domain": VK_PUBLIC_IDS.get(handle, handle), "count": 100, "offset": offset,
         "filter": "owner", "v": API_VERSION, "access_token": token
     }).encode("utf-8")
     req = urllib.request.Request(
@@ -62,7 +66,14 @@ def api_wall_get(handle: str, token: str, offset: int = 0) -> dict:
                  "User-Agent": "DeputyMonitor/1.0"}
     )
     with urllib.request.urlopen(req, timeout=25) as resp:
-        return json.load(resp)
+        payload = json.load(resp)
+    expected = VK_PUBLIC_IDS.get(handle)
+    if expected is not None and isinstance(payload, dict) and "error" not in payload:
+        result = payload.get("response")
+        items = result.get("items") if isinstance(result, dict) else None
+        if not isinstance(items, list) or any(not isinstance(p, dict) or p.get("owner_id") != expected for p in items):
+            raise ValueError("Verified VK owner mismatch")
+    return payload
 
 
 def read_wall(handle: str, token: str, fetch, pause) -> tuple[list | None, str | None, bool]:

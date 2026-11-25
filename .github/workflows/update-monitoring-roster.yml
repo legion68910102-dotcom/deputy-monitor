@@ -1,0 +1,38 @@
+name: Update verified roster within current term
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: Type YES after verifying full imports/current-term-deputies.json
+        required: true
+        type: string
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main' && inputs.confirm == 'YES'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python scripts/update_monitoring_roster.py --roster imports/current-term-deputies.json
+          python scripts/update_monitoring_roster.py --roster imports/current-term-deputies.json --apply
+          python -m pip install openpyxl==3.1.5
+          python build_excel_report.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deputies.json monitoring-term-v1.js monitor-status.json Deputies_YUAO_Report.xlsx Deputies_YUAO_Ranking.xlsx
+          if ! git diff --cached --quiet; then
+            git commit -m "Update confirmed deputy roster without resetting monitoring dates"
+            git push origin HEAD:main
+          fi
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main

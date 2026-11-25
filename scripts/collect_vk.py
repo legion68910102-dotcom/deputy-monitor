@@ -48,11 +48,11 @@ def roster_handles(root: Path) -> tuple[list[str], int]:
     return handles, districts
 
 
-def api_wall_get(handle: str, token: str) -> dict:
+def api_wall_get(handle: str, token: str, offset: int = 0) -> dict:
     # VK API accepts access_token as a form parameter. Keep it in the
     # HTTPS POST body, never in the URL, query string or diagnostic logs.
     params = urllib.parse.urlencode({
-        "domain": handle, "count": 100, "offset": 0,
+        "domain": handle, "count": 100, "offset": offset,
         "filter": "owner", "v": API_VERSION, "access_token": token
     }).encode("utf-8")
     req = urllib.request.Request(
@@ -95,6 +95,40 @@ def read_wall(handle: str, token: str, fetch, pause) -> tuple[list | None, str |
                 continue
             return None, "network_" + type(exc).__name__, False
     return None, "retry_limit", False
+
+
+def read_history(handle, token, fetch, pause, start, max_pages):
+    """Read bounded pages; never call a capped history complete."""
+    items = []
+    seen = set()
+    for page in range(max_pages):
+        if page:
+            pause(0.45)
+        batch, error, fatal = read_wall(handle, token,
+            lambda h, t: fetch(h, t, page * 100), pause)
+        if error:
+            return items, error, fatal, False
+        if not batch:
+            return items, None, False, True
+        new = []
+        for post in batch:
+            if not isinstance(post, dict):
+                continue
+            key = (post.get("owner_id"), post.get("id"))
+            if key not in seen:
+                seen.add(key)
+                new.append(post)
+        items.extend(new)
+        if len(batch) < 100:
+            return items, None, False, True
+        if not new:
+            return items, "pagination_repeated_page", False, False
+        # Ignore pinned entries when deciding whether the dated wall reaches the start.
+        dated = [normalize_post(p, handle) for p in new if not p.get("is_pinned")]
+        dates = [p["date"] for p in dated if p]
+        if dates and min(dates) < start:
+            return items, None, False, True
+    return items, None, False, False
 
 
 def count_value(post: dict, field: str) -> int | None:
@@ -190,7 +224,7 @@ def write_json_atomic(path: Path, data: dict) -> None:
 
 def collect(root: Path, token: str, *, start_at: int = 0,
             max_profiles: int | None = None, dry_run: bool = False,
-            fetch=api_wall_get, pause=time.sleep) -> dict:
+            fetch=api_wall_get, pause=time.sleep, history_start=None, max_pages=1) -> dict:
     if not token:
         raise ValueError("VK_TOKEN missing; no requests or file changes")
     handles, district_count = roster_handles(root)
@@ -221,14 +255,22 @@ def collect(root: Path, token: str, *, start_at: int = 0,
     aborted = None
     attempted = 0
     error_counts = {}
+    history_complete = 0
+    history_partial = 0
 
     for handle in chosen:
         if attempted:
             pause(0.45)  # Gentle rate limit between wall.get calls.
         attempted += 1
-        items, error, fatal = read_wall(handle, token, fetch, pause)
+        complete = None
+        if history_start:
+            items, error, fatal, complete = read_history(handle, token, fetch, pause, history_start, max_pages)
+        else:
+            items, error, fatal = read_wall(handle, token, fetch, pause)
         if error is not None:
             failed += 1
+            if history_start:
+                history_partial += 1
             error_counts[error] = error_counts.get(error, 0) + 1
             # A private wall (VK error 15) is not an API outage; keep checking others.
             consecutive_failures = 0 if error == "vk_api_error_15" else consecutive_failures + 1
@@ -262,11 +304,15 @@ def collect(root: Path, token: str, *, start_at: int = 0,
                 records.append(fresh)
                 inserted += 1
         succeeded += 1
+        if history_start:
+            history_complete += int(bool(complete))
+            history_partial += int(not complete)
         statuses[handle] = {
             "status": "success", "checked_at": checked_at,
             "posts_count": accepted,
             "reason": "Получено записей из VK API: " + str(accepted) +
-                      ". Пустой ответ не доказывает отсутствие деятельности."
+                      ". Пустой ответ не доказывает отсутствие деятельности.",
+            "history_coverage": ("reached_start_or_end_of_wall" if complete else "page_limit") if history_start else "latest_page_only"
         }
     summary = {
         "roster_size": len(handles), "district_count": district_count,
@@ -276,6 +322,10 @@ def collect(root: Path, token: str, *, start_at: int = 0,
         "retained_posts": len(records), "stopped_reason": aborted,
         "dry_run": dry_run,
         "error_counts": error_counts,
+        "history_start": history_start,
+        "history_complete_profiles": history_complete,
+        "history_partial_profiles": history_partial,
+        "unattempted_profiles": len(chosen) - attempted,
     }
 
     if not dry_run:
@@ -315,6 +365,8 @@ def main() -> None:
     parser.add_argument("--max-profiles", type=int, default=None,
                         help="Only the selected number of profiles (for a pilot)")
     parser.add_argument("--start-at", type=int, default=0)
+    parser.add_argument("--history", action="store_true", help="Bounded history backfill; explicit quota approval required")
+    parser.add_argument("--max-pages", type=int, default=1)
     parser.add_argument("--dry-run", action="store_true",
                         help="Query VK, print totals, do not write files")
     args = parser.parse_args()
@@ -330,8 +382,11 @@ def main() -> None:
     token = os.environ.get("VK_TOKEN", "").strip()
     if not token:
         raise SystemExit("VK_TOKEN missing; no API requests or file changes")
+    if args.history and (args.max_profiles is None or not 1 <= args.max_profiles <= 10 or not 1 <= args.max_pages <= 10):
+        raise SystemExit("History pilot requires 1–10 profiles and 1–10 pages/profile")
     summary = collect(root, token, max_profiles=args.max_profiles,
-                      start_at=args.start_at, dry_run=args.dry_run)
+                      start_at=args.start_at, dry_run=args.dry_run,
+                      history_start=term["start"] if args.history else None, max_pages=args.max_pages)
     print("VK public wall collection:", json.dumps(summary, ensure_ascii=False))
     if args.dry_run and not verify_pilot(summary):
         raise SystemExit("VK pilot failed: incomplete sample, API error, or no accessible walls")

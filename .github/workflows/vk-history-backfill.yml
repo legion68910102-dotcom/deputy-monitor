@@ -1,0 +1,57 @@
+name: VK history backfill (bounded, official API only)
+on:
+  workflow_dispatch:
+    inputs:
+      start_at:
+        description: First profile index, zero-based
+        type: number
+        default: 0
+      profiles:
+        description: Number of profiles (1–10)
+        type: number
+        default: 5
+      pages:
+        description: Maximum pages per profile (1–10)
+        type: number
+        default: 3
+      confirm_free_quota:
+        description: Type YES only after confirming sufficient free official VK API quota
+        type: string
+        required: true
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  backfill:
+    if: github.ref == 'refs/heads/main' && inputs.confirm_free_quota == 'YES'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate and backfill a bounded batch
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          START: ${{ inputs.start_at }}
+          PROFILES: ${{ inputs.profiles }}
+          PAGES: ${{ inputs.pages }}
+        run: |
+          python -m unittest discover -s tests -p 'test_*vk*.py' -v
+          python scripts/collect_vk.py --history --start-at "$START" --max-profiles "$PROFILES" --max-pages "$PAGES"
+      - name: Publish retained records and explicit coverage
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vk-posts.json monitor-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Backfill bounded official VK history"
+            git push origin HEAD:main
+            gh workflow run build-excel-report.yml --repo "$GITHUB_REPOSITORY" --ref main
+            gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+          fi

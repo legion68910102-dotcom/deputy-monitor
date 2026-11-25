@@ -1,9 +1,9 @@
-name: Collect public VK posts (official API; 159 profiles)
+name: Collect public VK posts (official API; current roster)
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'test = offline only; pilot = read 5 VK walls without saving; full = collect all 159'
+        description: 'test = offline only; pilot = read 5 VK walls without saving; full = collect the current roster'
         required: true
         type: choice
         options:

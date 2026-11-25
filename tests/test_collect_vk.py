@@ -253,3 +253,23 @@ class VKCollectionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+class VKHistoryTests(unittest.TestCase):
+    def test_page_limit_is_not_complete(self):
+        calls=[]
+        def fetch(h,t,offset):
+            calls.append(offset)
+            return {"response":{"items":[{"owner_id":1,"id":offset+i+1,"date":1795000000} for i in range(100)]}}
+        items,error,fatal,complete=vk.read_history("a","FAKE",fetch,lambda _:None,"2026-01-01",2)
+        self.assertEqual(calls,[0,100])
+        self.assertEqual(len(items),200)
+        self.assertFalse(complete)
+        self.assertIsNone(error)
+    def test_short_page_completes(self):
+        result=vk.read_history("a","FAKE",lambda h,t,o:{"response":{"items":[]}},lambda _:None,"2026-01-01",3)
+        self.assertTrue(result[3])
+    def test_auth_error_stops(self):
+        result=vk.read_history("a","FAKE",lambda h,t,o:{"error":{"error_code":5}},lambda _:None,"2026-01-01",3)
+        self.assertEqual(result[1],"vk_api_error_5")
+        self.assertTrue(result[2])
+        self.assertFalse(result[3])

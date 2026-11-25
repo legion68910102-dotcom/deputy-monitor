@@ -1,0 +1,21 @@
+name: Diagnose official VK access (one read-only request)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-vk-access.yml'
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check diagnostic redaction offline
+        run: python -m unittest discover -s tests -p test_vk_access_diagnosis.py -v
+      - name: Diagnose token and public wall permission
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: python scripts/diagnose_vk_access.py

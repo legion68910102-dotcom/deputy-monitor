@@ -725,6 +725,7 @@ let monitor=null,apiRows=[],rows=[];
 try{const cached=JSON.parse(sessionStorage.getItem("dm_vk_posts")||"[]");if(Array.isArray(cached))apiRows=cached}catch(e){}
 try{let data=JSON.parse(localStorage.getItem("dm_posts")||"[]");if(Array.isArray(data))rows=data}catch(e){}
 function allRows(){const m=new Map();for(const r of apiRows)m.set(r.profile+"|"+r.url,r);for(const r of rows)m.set(r.profile+"|"+r.url,r);const list=[...m.values()];return (window.dmPersonalWorkspace?window.dmPersonalWorkspace.applyPosts(list):list).filter(p=>window.dmDateFilter.inTerm(p))}
+let dmFeedRenderGeneration=0;
 function render(){
 const combined=allRows();
 // Summaries include only posts present in the published database or this browser.
@@ -778,6 +779,8 @@ el('profiles').querySelectorAll('[data-photo-save]').forEach(btn=>btn.addEventLi
 el('profiles').querySelectorAll('[data-photo-reset]').forEach(btn=>btn.addEventListener('click',()=>{delete deputyPhotos[btn.dataset.photoReset];try{localStorage.setItem('dm_deputy_photos',JSON.stringify(deputyPhotos));render()}catch(e){alert(e.message)}}));
 el('profiles').querySelectorAll('[data-bio-save]').forEach(btn=>btn.addEventListener('click',()=>{const name=btn.dataset.bioSave,container=btn.closest('.bio-card'),birth=container.querySelector('[data-bio-birth]').value,work=container.querySelector('[data-bio-work]').value.trim(),source=container.querySelector('[data-bio-source]').value.trim();if(source&&!source.startsWith("https://")){alert("Укажите ссылку на источник, начинающуюся с https://");return}deputyBio[name]={birth,work,source};localStorage.setItem('dm_deputy_bio',JSON.stringify(deputyBio));render()}));
 el('profiles').querySelectorAll('select[data-assign]').forEach(sel=>sel.addEventListener('change',()=>{if(sel.value)districtMap[sel.dataset.assign]=sel.value;else delete districtMap[sel.dataset.assign];saveDistricts();render()}));
+const feedGeneration=++dmFeedRenderGeneration;
+if(!document.querySelector("#activity > details")?.open)return;
 const feedRoster=Array.isArray(window.deputyRoster)?window.deputyRoster:[];
 const feedPosts=new Map();
 const activityFrom=el("activity-date-from")?.value||"";
@@ -805,15 +808,28 @@ for(const person of feedPeople){
 }
 window.activitySelectedLinks=feedLinks;
 if(dateCount)dateCount.textContent=window.dmDateFilter.label(activityFrom,activityTo)+" Депутатов в выборке: "+feedPeople.length+" из "+feedRoster.length+" · Публикаций: "+feedPeople.reduce((n,p)=>n+(feedPosts.get(p.handle||"")||[]).length,0)+" · Ссылок: "+feedLinks.length;
-el("posts").innerHTML=feedRows.join("")||'<tr><td colspan="5">Справочник депутатов не загружен</td></tr>';
+const tbody=el("posts");
+tbody.innerHTML=feedRows.slice(0,300).join("")||'<tr><td colspan="5">Справочник депутатов не загружен</td></tr>';
+let feedOffset=300;
+function appendFeedBatch(){
+ if(feedGeneration!==dmFeedRenderGeneration||!document.querySelector("#activity > details")?.open)return;
+ tbody.insertAdjacentHTML("beforeend",feedRows.slice(feedOffset,feedOffset+300).join(""));
+ feedOffset+=300;
+ if(feedOffset<feedRows.length)setTimeout(appendFeedBatch,0);
+}
+if(feedOffset<feedRows.length)setTimeout(appendFeedBatch,0);
 }
 // GitHub Pages is read-only. These requests reload the published snapshot;
 // only the credential-protected GitHub Actions job can query VK itself.
 let dmLastVisitRefresh=0,dmMonitorPromise=null,dmPublishedVersion="",dmLastPostsSnapshot=null;
 async function dmFetchPublishedJSON(filename){
- const response=await fetch("./"+filename+"?ts="+Date.now(),{cache:"no-store",credentials:"omit"});
- if(!response.ok)throw Error(filename+": HTTP "+response.status);
- return response.json();
+ const controller=new AbortController();
+ const timer=setTimeout(()=>controller.abort(),filename==="vk-posts.json"?90000:20000);
+ try{
+  const response=await fetch("./"+filename,{cache:"no-cache",credentials:"omit",signal:controller.signal});
+  if(!response.ok)throw Error(filename+": HTTP "+response.status);
+  return await response.json();
+ }finally{clearTimeout(timer)}
 }
 function dmShowVkStatus(posts,error){
  const banner=el("vk-sync-banner"),heading=el("vk-sync-heading"),details=el("vk-sync-details");
@@ -851,12 +867,14 @@ async function refreshMonitor(options){
   let issue="",changed=false;
   if(statusResult.status==="fulfilled"&&statusResult.value?.profiles){
    monitor=statusResult.value;
+    try{sessionStorage.setItem("dm_vk_monitoring",JSON.stringify(Object.keys(monitor.profiles).filter(h=>monitor.profiles[h]?.status==="success")))}catch(e){}
   }else issue="monitor-status.json недоступен";
   if(postsResult.status==="fulfilled"&&Array.isArray(postsResult.value?.posts)){
    const data=postsResult.value,version=String(data.generated_at||"")+"|"+String(data.vk_api_last_checked_at||"")+"|"+data.posts.length;
    if(version!==dmPublishedVersion){apiRows=data.posts;dmPublishedVersion=version;changed=true}
    dmLastPostsSnapshot=data;
-   try{sessionStorage.setItem("dm_vk_posts",JSON.stringify(apiRows))}catch(e){}
+   // Large snapshots exceed mobile Web Storage quotas; keep the full archive in memory and HTTP cache.
+   if(apiRows.length<=1000){try{sessionStorage.setItem("dm_vk_posts",JSON.stringify(apiRows))}catch(e){}}
   }else issue+=(issue?"; ":"")+"vk-posts.json недоступен";
   if(avatarResult.status==="fulfilled"&&avatarResult.value?.profiles){
    const freshAvatars=avatarResult.value.profiles;
@@ -886,6 +904,7 @@ window.addEventListener("pageshow",e=>{if(e.persisted)refreshMonitor()});
 setInterval(()=>{if(!document.hidden)refreshMonitor()},10*60*1000);["activity-date-from","activity-date-to","activity-person-search"].forEach(id=>{const input=el(id);if(input){input.addEventListener("change",render);input.addEventListener("input",render)}});el("activity-date-reset")?.addEventListener("click",()=>{window.dmDateFilter.setTermRange(el("activity-date-from"),el("activity-date-to"));render()});function selectedLinksText(){return (window.activitySelectedLinks||[]).map(r=>r.name+" | "+r.date+" | "+r.url).join("\n")}
 el("activity-copy-links")?.addEventListener("click",async()=>{const value=selectedLinksText(),status=el("activity-links-status");if(!value){status.textContent="В выбранном периоде ссылок нет";return}try{await navigator.clipboard.writeText(value);status.textContent="Скопировано ссылок: "+window.activitySelectedLinks.length}catch(e){status.textContent="Не удалось скопировать автоматически. Используйте скачивание CSV."}});
 el("activity-export-links")?.addEventListener("click",()=>{const links=window.activitySelectedLinks||[],status=el("activity-links-status");if(!links.length){status.textContent="В выбранном периоде ссылок нет";return}const q=v=>'"'+String(v??"").replace(/"/g,'""')+'"';const csv="\uFEFFФИО;Дата;Ссылка\r\n"+links.map(r=>[r.name,r.date,r.url].map(q).join(";")).join("\r\n");const url=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="deputy-publication-links.csv";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent="CSV подготовлен: "+links.length+" ссылок"});
+document.querySelector("#activity > details")?.addEventListener("toggle",()=>{if(document.querySelector("#activity > details")?.open)render();else dmFeedRenderGeneration++;});
 window.dmDateFilter.setTermRange(el("activity-date-from"),el("activity-date-to"));render();refreshMonitor({manual:true});
 </script><script id="report-inline-v87" defer>
 /* Offline XLSX generator: no external libraries, no network calls. */
@@ -927,6 +946,7 @@ const saveBlob=(blob,filename)=>{const url=URL.createObjectURL(blob),a=document.
 function csvReport(){const data=summaryRows(),csv="\uFEFF"+data.map(row=>row.map(v=>'"'+String(v??"").replace(/"/g,'""')+'"').join(";")).join("\r\n")+"\r\n";saveBlob(new Blob([csv],{type:"text/csv;charset=utf-8"}),"Депутаты_ЮАО_отчёт.csv");$("report-status").textContent="CSV сформирован: "+(data.length-1)+" депутатов. На iPhone откройте скачанный файл через «Файлы» → Excel или Numbers."}
 function htmlReport(){const data=summaryRows(),missing=missingRows(data);const table=rows=>'<table><thead><tr>'+rows[0].map(v=>'<th>'+escHtml(v)+'</th>').join("")+'</tr></thead><tbody>'+rows.slice(1).map(row=>'<tr>'+row.map(v=>'<td>'+escHtml(v)+'</td>').join("")+'</tr>').join("")+'</tbody></table>';const html='<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Отчёт по депутатам ЮАО</title><style>body{font:15px system-ui,sans-serif;margin:20px;color:#17243b}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid #cbd5e1;padding:8px;text-align:left}th{background:#e8efff}tr:nth-child(even){background:#f6f8fc}h1,h2{color:#1b376c}.wrap{overflow:auto}p{line-height:1.5}</style><h1>Отчёт по депутатам ЮАО</h1><p>Всего: '+(data.length-1)+'. Без данных за период: '+(missing.length-1)+'. Отсутствие сведений в выборке не означает отсутствие работы.</p><h2>Все депутаты</h2><div class="wrap">'+table(data)+'</div><h2>Без данных за период</h2><div class="wrap">'+table(missing)+'</div></html>';saveBlob(new Blob([html],{type:"text/html;charset=utf-8"}),"Депутаты_ЮАО_отчёт.html");$("report-status").textContent="HTML-таблица скачана. Откройте её в браузере или через приложение «Файлы»."}
 function preview(){
+ if(!document.querySelector("#report > details")?.open)return;
  const data=summaryRows(),posts=selectedRows(),area=$("report-preview-area");
  const grouped=new Map();
  for(const p of posts){const a=grouped.get(p.profile)||[];a.push(p);grouped.set(p.profile,a)}
@@ -958,6 +978,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  const today=new Date(),iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
  window.dmDateFilter.setTermRange($("report-from"),$("report-to"));
  const status=$("report-status");
+ document.querySelector("#report > details")?.addEventListener("toggle",()=>{if(document.querySelector("#report > details")?.open){try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message}}});
  $("report-preview").addEventListener("click",()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message;$("report-preview-area").innerHTML="";$("report-preview-area").style.display="none"}refreshReportPosts().then(()=>{try{preview()}catch(e){status.textContent="Ошибка просмотра: "+e.message;$("report-preview-area").innerHTML="";$("report-preview-area").style.display="none"}})});
  // The general snapshot stays available; filtered export uses the offline workbook generator.
  $("report-filtered-download").addEventListener("click",()=>{try{run()}catch(e){status.textContent="Ошибка Excel: "+e.message}});
@@ -1047,7 +1068,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 })();
 
 </script><script id="activity-directory-v123">window.dmActivityDirectory=Object.fromEntries([...new Set(window.deputyRoster.map(p=>p.district))].map(d=>[d,window.deputyRoster.filter(p=>p.district===d).map(p=>p.name)]));</script><script src="./activity-category-policy-v1.js?methodology=approved15-v1" defer></script>
-<script src="./activity-analysis-v129.js?methodology=approved15-v1-term1" defer></script>
+<script src="./activity-analysis-v129.js?methodology=approved15-v1-term1-perf2" defer></script>
 
 <script>
 /* Keep the report selector alphabetized even if a browser reuses an older report.js. */

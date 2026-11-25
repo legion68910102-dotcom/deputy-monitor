@@ -76,6 +76,7 @@ function getAiResult(r){
 }
 let aiRefreshBusy=false,aiLastRefreshAt=0;
 async function loadAiDataset(){
+ if(!document.querySelector("#activity-analysis > details")?.open)return;
  if(aiRefreshBusy||Date.now()-aiLastRefreshAt<45*1000)return;
  aiRefreshBusy=true;aiLastRefreshAt=Date.now();
  try{
@@ -124,6 +125,7 @@ function makePost(r,index){
 }
 function inCategory(post,key){return key==="uncategorized"?post._hits.length===0:post._hits.some(hit=>hit.key===key)}
 function render(manual=false){
+ if(!document.querySelector("#activity-analysis > details")?.open)return;
  const who=document.getElementById("activity-person").value;
  const start=document.getElementById("activity-from").value;
  const end=document.getElementById("activity-to").value;
@@ -217,6 +219,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   if(!target){visibleLimit=Number.MAX_SAFE_INTEGER;render();target=document.getElementById(id)}
   if(target){target.open=true;target.scrollIntoView({behavior:"smooth",block:"center"})}
  });
+ document.querySelector("#activity-analysis > details")?.addEventListener("toggle",()=>{if(document.querySelector("#activity-analysis > details")?.open){render(false);loadAiDataset()}});
  document.addEventListener("dm-publications-updated",()=>{render(false);loadAiDataset()});
  loadAiDataset();
  render(false);

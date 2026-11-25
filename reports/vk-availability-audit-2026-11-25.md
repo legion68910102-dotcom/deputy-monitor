@@ -16,7 +16,7 @@ The preceding successful recovery of semenovdmitry80 is not part of the fifteen 
 | nuykinakv | 15 | Open account metadata, wall access denied |
 | yaroslavburykh | 15 | Open account metadata, wall access denied |
 | repkinae | 30 | Closed account; do not request its wall |
-| anisim_svet | 100 | Candidate numeric ID failed identity check; alternate address under verification |
+| anisim_svet | 100 | Candidate numeric ID failed identity check; alternate address also failed identity check |
 | kostina1920 | 100 | Candidate numeric ID failed identity check |
 | korshunovane | 100 | No confirmed replacement |
 | sitnikov_danilovskiy | 100 | Public directory repeats old address |
@@ -27,7 +27,7 @@ Open account metadata does not establish that a wall is public or accessible to 
 Sources for address candidates (not publication inputs):
 - https://gazeta-novosti-zyablikovo.ru/2026/07/16/155821/ — numeric candidate did not pass API identity check.
 - https://gazeta-na-varshavke-nagorny.ru/2026/04/01/134548/ — numeric candidate did not pass API identity check.
-- https://asafov.ru/person/anisimova-svetlana — alternate address, checked separately in https://github.com/legion68910102-dotcom/deputy-monitor/actions/runs/45599593927.
+- https://asafov.ru/person/anisimova-svetlana — alternate address failed identity check in https://github.com/legion68910102-dotcom/deputy-monitor/actions/runs/45599593927.
 - https://asafov.ru/person/burova-ekaterina-nikolaevna
 - https://asafov.ru/person/sitnikov-ivan-ivanovich
 - https://asafov.ru/person/ovchinnikova-svetlana-yurevna

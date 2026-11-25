@@ -19,3 +19,5 @@ jobs:
         env:
           VK_TOKEN: ${{ secrets.VK_TOKEN }}
         run: python scripts/diagnose_vk_access.py
+
+# Fresh diagnostic after owner rotated VK_TOKEN.

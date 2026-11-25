@@ -1,0 +1,63 @@
+# Evidence: https://asafov.ru/person/anisimova-svetlana
+# Prior diagnostics: https://github.com/legion68910102-dotcom/deputy-monitor/actions/runs/45599373388
+# Nine other accounts have open metadata but wall.get previously denied access.
+# No repeat requests for those nine or the confirmed closed profile.
+name: Verify alternative public VK address
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-alternative-vk-address.yml']
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Confirm alternate public account and normal wall access
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.request, urllib.parse
+          token = os.environ.get("VK_TOKEN", "").strip()
+          if not token:
+              raise SystemExit("Missing VK_TOKEN")
+          def call(method, **params):
+              body = urllib.parse.urlencode(dict(params, v="5.199", access_token=token)).encode()
+              req = urllib.request.Request("https://api.vk.ru/method/"+method, data=body,
+                  headers={"Content-Type":"application/x-www-form-urlencoded","User-Agent":"DeputyMonitor/1.0"})
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      payload = json.load(response)
+              except Exception:
+                  raise SystemExit("Network or invalid response") from None
+              error = payload.get("error", {}).get("error_code")
+              if error is not None:
+                  print("VK API error", error)
+                  raise SystemExit(0 if error in {15,30,100,113} else 1)
+              return payload.get("response")
+          result = call("users.get", user_ids="anisimova_svetlanaa", fields="screen_name")
+          if not isinstance(result,list) or len(result)!=1:
+              print("Address not resolved")
+              raise SystemExit(0)
+          u=result[0]
+          if u.get("first_name","").casefold()!="светлана" or u.get("last_name","").casefold()!="анисимова":
+              print("Identity not confirmed")
+              raise SystemExit(0)
+          if u.get("deactivated") or u.get("is_closed") is not False or type(u.get("id")) is not int or u["id"]<=0:
+              print("Public profile not confirmed")
+              raise SystemExit(0)
+          time.sleep(1)
+          uid=u["id"]
+          wall=call("wall.get", owner_id=uid, count=1, filter="owner")
+          items=wall.get("items") if isinstance(wall,dict) else None
+          if isinstance(items,list) and items and all(p.get("owner_id")==uid for p in items):
+              print(json.dumps({"handle":"anisim_svet","public_id":uid,"result":"verified_public_wall"}))
+          else:
+              print("No verified wall items")
+          PY

@@ -139,5 +139,7 @@ wb.save(target)
 check = load_workbook(target, read_only=True)
 assert check.sheetnames == ["Сводка", "Публикации", "Без данных"]
 assert check["Сводка"].max_row == len(roster) + 1
+assert check["Публикации"].max_row == len(posts) + 1, "Publication rows missing from Excel"
+assert check["Без данных"].max_row == sum(not by_profile.get(p[2]["handle"]) for p in roster) + 1
 check.close()
 print(f"Validated {target.name}: {len(roster)} deputies, {len(posts)} source posts")

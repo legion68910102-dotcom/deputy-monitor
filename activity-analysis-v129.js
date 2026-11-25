@@ -65,7 +65,7 @@ function rosterName(profile){
 }
 
 const icons={council:"🏛️",meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",humanitarian:"🤲",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
-let manualRuns=0,activeCategory=null,visibleLimit=60;
+let manualRuns=0,activeCategory=null,visibleLimit=60,resultLimit=150;
 let aiDataset=null,aiMessage="Бесплатный анализ: локальные правила. Загрузка архива ИИ…";
 function aiIdentity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function aiSignature(r){let h=2166136261;for(const ch of aiIdentity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
@@ -146,8 +146,9 @@ function render(manual=false){
  const matchedResults=activeCategory==="uncategorized"
   ? selected.map(r=>({key:"uncategorized",certainty:"uncategorized",evidence:hasText(r)?String(r.text).trim().slice(0,300):"Текст публикации не получен",profile:r.profile,url:r.url,date:r.date,_id:r._id,_hasText:hasText(r)}))
   : activeCategory?results.filter(x=>x.key===activeCategory):results;
- const resultHTML=matchedResults.slice(0,150).map(r=>'<tr><td>'+esc(formatDate(r.date))+'</td><td>'+esc(rosterName(r.profile))+'</td><td>'+esc(labels[r.key])+'</td><td>'+esc(r.certainty==="uncategorized"?(r._hasText?"Тема не определена":"Нет текста"):r.certainty==="ai"?"ИИ · предварительно":r.certainty==="ai_review"?"ИИ · проверить":r.certainty==="possible"?"По правилам":"Требует проверки")+'</td><td>'+esc(r.evidence)+(r.explanation?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(r.confidence||0)*100)+'% · '+esc(r.explanation)+'</div>':'')+'</td><td>'+(safeUrl(r.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(safeUrl(r.url))+'">Источник ↗</a>':"Нет ссылки")+(personal?' <button type="button" class="activity-open-post" data-activity-open="'+r._id+'">Публикация ↓</button>':"")+'</td></tr>').join("");
+ const resultHTML=matchedResults.slice(0,resultLimit).map(r=>'<tr><td>'+esc(formatDate(r.date))+'</td><td>'+esc(rosterName(r.profile))+'</td><td>'+esc(labels[r.key])+'</td><td>'+esc(r.certainty==="uncategorized"?(r._hasText?"Тема не определена":"Нет текста"):r.certainty==="ai"?"ИИ · предварительно":r.certainty==="ai_review"?"ИИ · проверить":r.certainty==="possible"?"По правилам":"Требует проверки")+'</td><td>'+esc(r.evidence)+(r.explanation?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(r.confidence||0)*100)+'% · '+esc(r.explanation)+'</div>':'')+'</td><td>'+(safeUrl(r.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(safeUrl(r.url))+'">Источник ↗</a>':"Нет ссылки")+(personal?' <button type="button" class="activity-open-post" data-activity-open="'+r._id+'">Публикация ↓</button>':"")+'</td></tr>').join("");
  document.getElementById("activity-results").innerHTML=resultHTML||'<tr><td colspan="6" class="empty">Подходящих фраз нет. Это не означает отсутствие депутатской деятельности.</td></tr>';
+ const resultMore=document.getElementById("activity-results-more");if(resultMore){resultMore.hidden=matchedResults.length<=resultLimit;resultMore.textContent="Показать ещё строки ("+Math.max(0,matchedResults.length-resultLimit)+")"}
  const selectedLabel=activeCategory?labels[activeCategory]:"Все категории";
  const selectedInfo=document.getElementById("activity-selected-category");
  selectedInfo.textContent=personal?("Выбрано: "+selectedLabel+". Публикаций в категории: "+selected.length+"."):"Выберите одного депутата, чтобы включить фильтры категорий и просмотреть публикации.";
@@ -190,7 +191,7 @@ function render(manual=false){
  else reason="Категории предварительные, это упоминания в текстах, а не подтверждённые мероприятия. «Без темы» означает отсутствие распознанной темы или текста. «Репосты» определяются по признакам перепубликации, не по числу репостов.";
  if(manual)manualRuns++;
  const stamp=new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
- document.getElementById("activity-summary").textContent=window.dmDateFilter.label(start,end)+" "+(manual?"Проверка №"+manualRuns+" выполнена в ":"Анализ обновлён в ")+stamp+". Публикаций в ленте: "+all.length+"; для выбранного депутата и периода: "+filtered.length+"; с текстом: "+usable.length+"; с ИИ: "+aiCount+"; признаков: "+results.length+". "+reason+(matchedResults.length>150?" В таблице показаны первые 150 совпадений.":"");
+ document.getElementById("activity-summary").textContent=window.dmDateFilter.label(start,end)+" "+(manual?"Проверка №"+manualRuns+" выполнена в ":"Анализ обновлён в ")+stamp+". Публикаций в ленте: "+all.length+"; для выбранного депутата и периода: "+filtered.length+"; с текстом: "+usable.length+"; с ИИ: "+aiCount+"; признаков: "+results.length+". "+reason+(" В таблице: "+Math.min(matchedResults.length,resultLimit)+" из "+matchedResults.length+" совпадений.");
 }
 document.addEventListener("DOMContentLoaded",()=>{
  const sel=document.getElementById("activity-person");if(!sel)return;
@@ -198,15 +199,17 @@ document.addEventListener("DOMContentLoaded",()=>{
  document.getElementById("activity-from").value="";
  document.getElementById("activity-to").value="";
  document.getElementById("activity-run").addEventListener("click",()=>render(true));
- sel.addEventListener("change",()=>{activeCategory=null;visibleLimit=60;render()});
- for(const id of ["activity-from","activity-to"])for(const event of ["input","change"])document.getElementById(id).addEventListener(event,()=>{visibleLimit=60;render()});
+ document.getElementById("analysis-all-dates").addEventListener("click",()=>{document.getElementById("activity-from").value="";document.getElementById("activity-to").value="";visibleLimit=60;resultLimit=150;render()});
+ document.getElementById("activity-results-more").addEventListener("click",()=>{resultLimit+=150;render()});
+ sel.addEventListener("change",()=>{activeCategory=null;visibleLimit=60;resultLimit=150;render()});
+ for(const id of ["activity-from","activity-to"])for(const event of ["input","change"])document.getElementById(id).addEventListener(event,()=>{visibleLimit=60;resultLimit=150;render()});
  document.getElementById("activity-cards").addEventListener("click",event=>{
   const b=event.target.closest("[data-activity-category]");
   if(!b||sel.value==="all")return;
   activeCategory=activeCategory===b.dataset.activityCategory?null:b.dataset.activityCategory;
-  visibleLimit=60;render();
+  visibleLimit=60;resultLimit=150;render();
  });
- document.getElementById("activity-category-reset").addEventListener("click",()=>{activeCategory=null;visibleLimit=60;render()});
+ document.getElementById("activity-category-reset").addEventListener("click",()=>{activeCategory=null;visibleLimit=60;resultLimit=150;render()});
  document.getElementById("activity-post-more").addEventListener("click",()=>{visibleLimit+=60;render()});
  document.getElementById("activity-results").addEventListener("click",event=>{
   const b=event.target.closest("[data-activity-open]");

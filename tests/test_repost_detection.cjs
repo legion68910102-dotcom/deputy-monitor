@@ -93,3 +93,26 @@ test("both live HTML versions use shared date filters, and filtered export is of
   const code=fs.readFileSync(path,"utf8");assert.match(code,/dmDateFilter\.includes\(r\.date,start,end\)/);new vm.Script(code,{filename:path});
  }
 });
+
+test("all dates and all archived records are accessible; legacy activity initializes",()=>{
+ const dates=require("../date-filter-v1.js");
+ const records=JSON.parse(fs.readFileSync("vk-posts.json","utf8")).posts;
+ assert.equal(records.filter(p=>dates.includes(p.date,"","")).length,records.length);
+ for(const path of ["index.html","index-v129.html"]){
+  const html=fs.readFileSync(path,"utf8");
+  assert.match(html,/\$\("report-from"\)\.value="";\$\("report-to"\)\.value="";/);
+  assert.match(html,/from\.value="";\s*to\.value="";/);
+  assert.match(html,/id="activity-results-more"/);
+  assert.match(html,/id="archive-coverage"/);
+  assert.match(html,/id="report-all-dates"/);
+  assert.match(html,/id="ranking-all-dates"/);
+ }
+ const code=fs.readFileSync("activity-analysis.js","utf8");
+ const callbacks=[];
+ const win={deputyRoster:[{handle:"a",name:"Иванов Иван"}],dmDateFilter:dates,dmActivityRows:()=>[]};
+ vm.runInNewContext(code,{window:win,document:{addEventListener:(n,f)=>callbacks.push(f)}});
+ assert.equal(callbacks.length,1);
+ for(const path of ["activity-analysis.js","activity-analysis-v129.js"]){
+  const script=fs.readFileSync(path,"utf8");assert.match(script,/slice\(0,resultLimit\)/);assert.match(script,/resultLimit\+=150/);
+ }
+});

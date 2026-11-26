@@ -48,7 +48,7 @@ jobs:
           check_file 'vk-monitor-freshness-v1.js' '21dbf40032597464082f1a71faa9b633498691bf'
           check_file 'activity-category-policy-v1.js' '0ed758d112607b0d3e618a5c8eb7c0ea7b9a895e'
           check_file 'activity-analysis-v129.js' 'f9cd4cd1aa7bbb6e0652c3114b9ac8db793835c6'
-          check_file 'activity-analysis-worker-v1.js' '9a84e678c1e64a745064790d2f98effb6b4054bb'
+          check_file 'activity-analysis-worker-v1.js' '975c49cc5470056967e64c4ac584c236141aaad6'
           echo "Approved v129 HTML and nine static modules verified; data updates are allowed."
       - name: Configure Pages
         uses: actions/configure-pages@v5

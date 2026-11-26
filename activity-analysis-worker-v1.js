@@ -1,6 +1,7 @@
 "use strict";
+const window=self;
 importScripts("./activity-category-policy-v1.js","./repost-detection-v131.js");
-const window=self,activityPolicy=self.dmActivityCategoryPolicy||null;
+const activityPolicy=self.dmActivityCategoryPolicy||null;
 let aiDataset=null;
 const rosterName=p=>p;
 const labels={council:"Заседания Совета депутатов",meet:"Личные встречи",walk:"Обходы территорий",inspect:"Приёмка и контроль работ",event:"Участие в мероприятиях",humanitarian:"Гуманитарная помощь",reception:"Приёмы граждан",appeal:"Работа с обращениями",result:"Решённые вопросы",plan:"Планы и обещания",personal:"Личные",information:"Информационные",announcement:"Публикации-анонсы",repost:"Репосты",uncategorized:"Без темы"};

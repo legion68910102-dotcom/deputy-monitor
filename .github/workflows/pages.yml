@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          expected=32eadb420b8222e6484b155d9db7ef26d807cce4
+          expected=84e77c8aef49d1518ee3d07d5eb3be7b63f3fbcb
           for file in index.html index-v129.html; do
             actual="$(git hash-object "$file")"
             if [ "$actual" != "$expected" ]; then
@@ -47,8 +47,9 @@ jobs:
           check_file 'personal-workspace-v130.js' 'd843287cd52f4c5e31289b1e1146d962edc68f0c'
           check_file 'vk-monitor-freshness-v1.js' '21dbf40032597464082f1a71faa9b633498691bf'
           check_file 'activity-category-policy-v1.js' '0ed758d112607b0d3e618a5c8eb7c0ea7b9a895e'
-          check_file 'activity-analysis-v129.js' 'f1554af3c1ee7f561486eabd9017480d8966ec32'
-          echo "Approved v129 HTML and eight static modules verified; data updates are allowed."
+          check_file 'activity-analysis-v129.js' 'f9cd4cd1aa7bbb6e0652c3114b9ac8db793835c6'
+          check_file 'activity-analysis-worker-v1.js' '9a84e678c1e64a745064790d2f98effb6b4054bb'
+          echo "Approved v129 HTML and nine static modules verified; data updates are allowed."
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

@@ -58,14 +58,17 @@ function directoryOptions(){
 }
 const names={"natalia_shabasheva":"Наталья Шабашева","shmakova_os":"О. С. Шмакова","ekaterina.tyutyunnikova":"Екатерина Тютюнникова","aabulatov":"А. А. Булатов","vidutinaov":"О. В. Видутина","tishkovaea":"Е. А. Тишкова","elena.rubtsovanazarova":"Елена Рубцова-Назарова","nuykinakv":"К. В. Нуйкина"};
 function normalizeName(s){return String(s||"").toLocaleLowerCase("ru-RU").replace(/ё/g,"е").replace(/\s+/g," ").trim()}
+let rosterIndex=new Map();
+function indexRoster(){rosterIndex=new Map();for(const p of window.deputyRoster||[]){if(p.handle)rosterIndex.set(p.handle,p);rosterIndex.set(normalizeName(p.name),p)}}
+indexRoster();
 function rosterName(profile){
  const value=String(profile||"").trim();
- const entry=(Array.isArray(window.deputyRoster)?window.deputyRoster:[]).find(p=>p.handle===value||normalizeName(p.name)===normalizeName(value));
+ const entry=rosterIndex.get(value)||rosterIndex.get(normalizeName(value));
  return entry?.name||names[value]||value;
 }
 
 const icons={council:"🏛️",meet:"🤝",walk:"🚶",inspect:"🛠️",event:"🎉",humanitarian:"🤲",reception:"🗣️",appeal:"📨",result:"✅",plan:"📅",personal:"👤",information:"ℹ️",announcement:"📣",repost:"🔁",uncategorized:"🏷️"};
-let manualRuns=0,activeCategory=null,visibleLimit=60,resultLimit=150;
+let manualRuns=0,activeCategory=null,visibleLimit=60,resultLimit=150,postOffset=0,resultOffset=0;
 let aiDataset=null,aiMessage="Бесплатный анализ: локальные правила. Загрузка архива ИИ…";
 function aiIdentity(r){return [r.profile??"",r.url??"",r.date??""].map(String).join("\u001f")}
 function aiSignature(r){let h=2166136261;for(const ch of aiIdentity(r)+"\u001f"+String(r.text??""))h=Math.imul(h^ch.codePointAt(0),16777619)>>>0;return h.toString(16).padStart(8,"0")}
@@ -80,11 +83,11 @@ async function loadAiDataset(){
  if(aiRefreshBusy||Date.now()-aiLastRefreshAt<45*1000)return;
  aiRefreshBusy=true;aiLastRefreshAt=Date.now();
  try{
-  const response=await fetch("./ai-analysis.json?t="+Date.now(),{cache:"no-store"});
+  const response=await fetch("./ai-analysis.json",{cache:"no-cache"});
   if(!response.ok)throw Error("HTTP "+response.status);
   const data=await response.json();
   if(!data||typeof data.posts!=="object")throw Error("неверный формат");
-  aiDataset=data;
+  aiDataset=data;analysisEpoch++;analysisCache.clear();
   if(data.taxonomy_version!==2)aiMessage="Бесплатный режим: используются предварительные правила по 15 категориям; архив ИИ не соответствует версии методики.";
   else if(data.status==="no_posts")aiMessage="Методика из 15 категорий утверждена, но текстов общей ленты пока нет.";
   else if(data.methodology_version===1){
@@ -124,21 +127,82 @@ function makePost(r,index){
  return {...r,_id:index,_hits:hits,_name:rosterName(r.profile),_aiUsed:Boolean(ai&&ai.method==="ai")};
 }
 function inCategory(post,key){return key==="uncategorized"?post._hits.length===0:post._hits.some(hit=>hit.key===key)}
+let analysisEpoch=0,analysisCache=new Map(),sourceRows=null,analysisWorker=null,workerEpoch=-1,workerSeq=0,renderTicket=0,renderTimer=0,renderBusy=false,pendingManual=false;
+const isOpen=()=>Boolean(document.querySelector("#activity-analysis > details")?.open);
+const yieldUI=()=>new Promise(resolve=>setTimeout(resolve,0));
+function workerCall(payload){
+ return new Promise((resolve,reject)=>{
+  if(!analysisWorker){analysisWorker=new Worker("./activity-analysis-worker-v1.js?rev=20261126");workerEpoch=-1}
+  const w=analysisWorker,id=++workerSeq;
+  let timer;
+  const finish=(error,value)=>{clearTimeout(timer);w.removeEventListener("message",message);w.removeEventListener("error",failed);if(error){w.terminate();if(analysisWorker===w){analysisWorker=null;workerEpoch=-1}reject(error)}else resolve(value)};
+  const message=e=>{if(e.data.id!==id)return;finish(e.data.error?Error(e.data.error):null,e.data)};
+  const failed=e=>finish(Error(e.message||"Фоновый анализ недоступен"));
+  w.addEventListener("message",message);w.addEventListener("error",failed);
+  timer=setTimeout(()=>finish(Error("Превышено время фонового анализа")),30000);
+  w.postMessage({...payload,id});
+ });
+}
+function cacheKey(r){return aiIdentity(r)}
+async function classify(list,ticket){
+ const epoch=analysisEpoch;
+ if(typeof Worker!=="function")throw Error("Браузер не поддерживает фоновый анализ. Откройте приложение в современном Chrome, Edge или Safari.");
+ for(let offset=0;offset<list.length;offset+=80){
+  if(ticket!==renderTicket||!isOpen())return null;
+  const batch=list.slice(offset,offset+80),missing=[];
+  for(const r of batch){
+   const key=cacheKey(r),text=String(r.text||""),repost=isRepost(r),old=analysisCache.get(key);
+   if(!old||old.text!==text||old.repost!==repost)missing.push({r,key,text,repost});
+  }
+  if(missing.length){
+   if(workerEpoch!==epoch||!analysisWorker){await workerCall({kind:"dataset",data:aiDataset});workerEpoch=epoch}
+   const reply=await workerCall({kind:"classify",items:missing.map(x=>({profile:x.r.profile,url:x.r.url,date:x.r.date,text:x.text,is_repost:x.repost}))});
+   if(epoch!==analysisEpoch)return null;
+   missing.forEach((x,j)=>analysisCache.set(x.key,{text:x.text,repost:x.repost,...reply.results[j]}));
+  }
+  if(offset%400===0&&ticket===renderTicket)document.getElementById("activity-ai-status").textContent="🤖 Подготовка анализа: "+Math.min(offset+batch.length,list.length)+" из "+list.length+" публикаций";
+  await yieldUI();
+ }
+ if(ticket!==renderTicket||!isOpen()||epoch!==analysisEpoch)return null;
+ return list.map((r,index)=>{const result=analysisCache.get(cacheKey(r));return {...r,_id:index,_hits:result.hits,_aiUsed:result.aiUsed,_name:rosterName(r.profile)}});
+}
 function render(manual=false){
- if(!document.querySelector("#activity-analysis > details")?.open)return;
- const who=document.getElementById("activity-person").value;
- const start=document.getElementById("activity-from").value;
- const end=document.getElementById("activity-to").value;
- if(who==="all")activeCategory=null;
- const all=posts();
- const filtered=all.filter(r=>(who==="all"||normalizeName(rosterName(r.profile))===normalizeName(who)||normalizeName(r.profile)===normalizeName(who))&&window.dmDateFilter.includes(r.date,start,end))
-  .map(makePost).sort((a,b)=>dateOnly(b.date).localeCompare(dateOnly(a.date))||a._id-b._id);
+ if(!isOpen())return;
+ pendingManual=pendingManual||manual;
+ renderTicket++;
+ clearTimeout(renderTimer);
+ renderTimer=setTimeout(runRender,70);
+}
+async function runRender(){
+ if(renderBusy||!isOpen())return;
+ renderBusy=true;
+ const ticket=renderTicket,manual=pendingManual;
+ try{
+  const who=document.getElementById("activity-person").value,start=document.getElementById("activity-from").value,end=document.getElementById("activity-to").value;
+  if(who==="all")activeCategory=null;
+  if(!sourceRows){sourceRows=posts();indexRoster()}
+  const all=sourceRows,whoKey=normalizeName(who);
+  const selection=all.filter(r=>(who==="all"||normalizeName(rosterName(r.profile))===whoKey||normalizeName(r.profile)===whoKey)&&window.dmDateFilter.includes(r.date,start,end));
+  const filtered=await classify(selection,ticket);
+  if(!filtered||ticket!==renderTicket||!isOpen())return;
+  filtered.sort((a,b)=>dateOnly(b.date).localeCompare(dateOnly(a.date))||a._id-b._id);
+  paint(manual,who,start,end,all,filtered);
+  pendingManual=false;
+ }catch(error){
+  if(ticket===renderTicket&&isOpen())document.getElementById("activity-ai-status").textContent="⚠️ "+String(error.message||error)+". Нажмите «Анализ» для повторной попытки.";
+ }finally{
+  renderBusy=false;
+  if(ticket!==renderTicket&&isOpen()){clearTimeout(renderTimer);renderTimer=setTimeout(runRender,0)}
+ }
+}
+function paint(manual,who,start,end,all,filtered){
  const usable=filtered.filter(hasText);
  const aiCount=filtered.filter(r=>r._aiUsed).length;
  const results=[];
  for(const r of filtered)for(const hit of r._hits)results.push({...hit,profile:r.profile,url:r.url,date:r.date,_id:r._id});
  const counts={};
- for(const key of Object.keys(labels))counts[key]=filtered.filter(r=>inCategory(r,key)).length;
+ for(const key of Object.keys(labels))counts[key]=0;
+ for(const r of filtered){const keys=new Set(r._hits.map(h=>h.key));if(!keys.size)counts.uncategorized++;else for(const k of keys)if(k in counts)counts[k]++}
  const personal=who!=="all";
  document.getElementById("activity-cards").innerHTML=Object.entries(labels).map(([key,label])=>{
   const content='<span class="activity-cat-icon" aria-hidden="true">'+icons[key]+'</span><span class="label">'+esc(label)+'</span><span class="value">'+counts[key]+'</span><span class="hint">'+(personal?'Нажмите для просмотра':'Выберите одного депутата')+'</span>';
@@ -147,9 +211,11 @@ function render(manual=false){
  const selected=activeCategory?filtered.filter(r=>inCategory(r,activeCategory)):filtered;
  const noTopic=selected.filter(r=>!r._hits.length).map(r=>({key:"uncategorized",certainty:"uncategorized",evidence:hasText(r)?String(r.text).trim().slice(0,300):"Текст публикации не получен",profile:r.profile,url:r.url,date:r.date,_id:r._id,_hasText:hasText(r)}));
  const matchedResults=activeCategory==="uncategorized"?noTopic:activeCategory?results.filter(x=>x.key===activeCategory):[...results,...noTopic].sort((a,b)=>dateOnly(b.date).localeCompare(dateOnly(a.date)));
- const resultHTML=matchedResults.slice(0,resultLimit).map(r=>'<tr><td>'+esc(formatDate(r.date))+'</td><td>'+esc(rosterName(r.profile))+'</td><td>'+esc(labels[r.key])+'</td><td>'+esc(r.certainty==="uncategorized"?(r._hasText?"Тема не определена":"Нет текста"):r.certainty==="ai"?"ИИ · предварительно":r.certainty==="ai_review"?"ИИ · проверить":r.certainty==="possible"?"По правилам":"Требует проверки")+'</td><td>'+esc(r.evidence)+(r.explanation?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(r.confidence||0)*100)+'% · '+esc(r.explanation)+'</div>':'')+'</td><td>'+(safeUrl(r.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(safeUrl(r.url))+'">Источник ↗</a>':"Нет ссылки")+(personal?' <button type="button" class="activity-open-post" data-activity-open="'+r._id+'">Публикация ↓</button>':"")+'</td></tr>').join("");
+ resultOffset=Math.min(resultOffset,Math.max(0,Math.floor((matchedResults.length-1)/resultLimit)*resultLimit));
+ const resultHTML=matchedResults.slice(resultOffset,resultOffset+resultLimit).map(r=>'<tr><td>'+esc(formatDate(r.date))+'</td><td>'+esc(rosterName(r.profile))+'</td><td>'+esc(labels[r.key])+'</td><td>'+esc(r.certainty==="uncategorized"?(r._hasText?"Тема не определена":"Нет текста"):r.certainty==="ai"?"ИИ · предварительно":r.certainty==="ai_review"?"ИИ · проверить":r.certainty==="possible"?"По правилам":"Требует проверки")+'</td><td>'+esc(r.evidence)+(r.explanation?'<div class="activity-ai-explanation">🤖 ИИ · уверенность '+Math.round(Number(r.confidence||0)*100)+'% · '+esc(r.explanation)+'</div>':'')+'</td><td>'+(safeUrl(r.url)?'<a target="_blank" rel="noopener noreferrer" href="'+esc(safeUrl(r.url))+'">Источник ↗</a>':"Нет ссылки")+(personal?' <button type="button" class="activity-open-post" data-activity-open="'+r._id+'">Публикация ↓</button>':"")+'</td></tr>').join("");
  document.getElementById("activity-results").innerHTML=resultHTML||'<tr><td colspan="6" class="empty">Подходящих фраз нет. Это не означает отсутствие депутатской деятельности.</td></tr>';
- const resultMore=document.getElementById("activity-results-more");if(resultMore){resultMore.hidden=matchedResults.length<=resultLimit;resultMore.textContent="Показать ещё строки ("+Math.max(0,matchedResults.length-resultLimit)+")"}
+ const resultMore=document.getElementById("activity-results-more");if(resultMore){resultMore.hidden=matchedResults.length<=resultOffset+resultLimit;resultMore.textContent="Следующие строки ("+Math.max(0,matchedResults.length-resultOffset-resultLimit)+")"}
+ document.getElementById("activity-results-prev").hidden=resultOffset===0;
  const selectedLabel=activeCategory?labels[activeCategory]:"Все категории";
  const selectedInfo=document.getElementById("activity-selected-category");
  selectedInfo.textContent=personal?("Выбрано: "+selectedLabel+". Публикаций в категории: "+selected.length+"."):"Выберите одного депутата, чтобы включить фильтры категорий и просмотреть публикации.";
@@ -161,8 +227,9 @@ function render(manual=false){
    box.innerHTML='<p class="small">Выберите одного депутата выше, чтобы открыть его публикации по категориям.</p>';
    count.textContent="";more.hidden=true;
  }else{
-   count.textContent="Найдено публикаций: "+selected.length+" · Категория: "+selectedLabel+(selected.length>visibleLimit?" · показаны первые "+visibleLimit:"");
-   box.innerHTML=selected.slice(0,visibleLimit).map(r=>{
+   postOffset=Math.min(postOffset,Math.max(0,Math.floor((selected.length-1)/visibleLimit)*visibleLimit));
+   count.textContent="Найдено публикаций: "+selected.length+" · Категория: "+selectedLabel+(selected.length>visibleLimit?" · строки "+(postOffset+1)+"–"+Math.min(selected.length,postOffset+visibleLimit):"");
+   box.innerHTML=selected.slice(postOffset,postOffset+visibleLimit).map(r=>{
     const url=safeUrl(r.url);
     const fullText=String(r.text||"").trim();
     const hits=Array.from(new Set(r._hits.map(h=>h.key)));
@@ -176,11 +243,15 @@ function render(manual=false){
    box.querySelectorAll("[data-activity-repost]").forEach(btn=>btn.addEventListener("click",()=>{
     const chosen=selected.find(post=>post._id===Number(btn.dataset.activityRepost));
     if(!chosen)return;
-    try{window.dmPersonalWorkspace.markRepost(chosen,true);render(true)}
+    try{window.dmPersonalWorkspace.markRepost(chosen,true);sourceRows=null;render(true)}
     catch(error){alert("Не удалось отметить репост: "+error.message)}
    }));
-   more.hidden=selected.length<=visibleLimit;
+   more.hidden=selected.length<=postOffset+visibleLimit;
+   more.textContent="Следующие публикации ("+Math.max(0,selected.length-postOffset-visibleLimit)+")";
  }
+ document.getElementById("activity-post-prev").hidden=!personal||postOffset===0;
+ if(openPostId!==null){const target=document.getElementById("activity-post-"+openPostId);if(target){target.open=true;target.scrollIntoView({behavior:"smooth",block:"center"})}openPostId=null}
+ lastSelected=selected;
  let reason="";
  const allTexts=all.filter(hasText).length;
  document.getElementById("activity-ai-status").textContent="🤖 "+aiMessage+" В выбранном наборе: обработано ИИ — "+aiCount+", по правилам — "+(filtered.length-aiCount)+".";
@@ -192,35 +263,38 @@ function render(manual=false){
  else reason="Категории предварительные, это упоминания в текстах, а не подтверждённые мероприятия. «Без темы» означает отсутствие распознанной темы или текста. «Репосты» определяются по признакам перепубликации, не по числу репостов.";
  if(manual)manualRuns++;
  const stamp=new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit",second:"2-digit"});
- document.getElementById("activity-summary").textContent=window.dmDateFilter.label(start,end)+" "+(manual?"Проверка №"+manualRuns+" выполнена в ":"Анализ обновлён в ")+stamp+". Публикаций в ленте: "+all.length+"; для выбранного депутата и периода: "+filtered.length+"; с текстом: "+usable.length+"; с ИИ: "+aiCount+"; признаков: "+results.length+". "+reason+(" В таблице: "+Math.min(matchedResults.length,resultLimit)+" из "+matchedResults.length+" совпадений.");
+ document.getElementById("activity-summary").textContent=window.dmDateFilter.label(start,end)+" "+(manual?"Проверка №"+manualRuns+" выполнена в ":"Анализ обновлён в ")+stamp+". Публикаций в ленте: "+all.length+"; для выбранного депутата и периода: "+filtered.length+"; с текстом: "+usable.length+"; с ИИ: "+aiCount+"; признаков: "+results.length+". "+reason+(" В таблице: "+(matchedResults.length?resultOffset+1:0)+"–"+Math.min(matchedResults.length,resultOffset+resultLimit)+" из "+matchedResults.length+" совпадений.");
 }
+let openPostId=null,lastSelected=[];
+function resetPages(){postOffset=0;resultOffset=0;openPostId=null}
 document.addEventListener("DOMContentLoaded",()=>{
  const sel=document.getElementById("activity-person");if(!sel)return;
+ for(const [id,nextId,handler] of [["activity-results-prev","activity-results-more",()=>{resultOffset=Math.max(0,resultOffset-resultLimit);render()}],["activity-post-prev","activity-post-more",()=>{postOffset=Math.max(0,postOffset-visibleLimit);render()}]]){const next=document.getElementById(nextId),prev=document.createElement("button");prev.id=id;prev.type="button";prev.className=next.className;prev.textContent="Предыдущие";prev.hidden=true;next.before(prev);prev.addEventListener("click",handler)}
  for(const person of directoryOptions()){const o=document.createElement("option");o.value=person.name;o.textContent=person.name+" — "+person.district;sel.appendChild(o)}
  window.dmDateFilter.setTermRange(document.getElementById("activity-from"),document.getElementById("activity-to"));
  document.getElementById("activity-run").addEventListener("click",()=>render(true));
- document.getElementById("analysis-all-dates").addEventListener("click",()=>{window.dmDateFilter.setTermRange(document.getElementById("activity-from"),document.getElementById("activity-to"));visibleLimit=60;resultLimit=150;render()});
- document.getElementById("activity-results-more").addEventListener("click",()=>{resultLimit+=150;render()});
- sel.addEventListener("change",()=>{activeCategory=null;visibleLimit=60;resultLimit=150;render()});
- for(const id of ["activity-from","activity-to"])for(const event of ["input","change"])document.getElementById(id).addEventListener(event,()=>{visibleLimit=60;resultLimit=150;render()});
+ document.getElementById("analysis-all-dates").addEventListener("click",()=>{window.dmDateFilter.setTermRange(document.getElementById("activity-from"),document.getElementById("activity-to"));resetPages();render()});
+ document.getElementById("activity-results-more").addEventListener("click",()=>{resultOffset+=resultLimit;render()});
+ sel.addEventListener("change",()=>{activeCategory=null;resetPages();render()});
+ for(const id of ["activity-from","activity-to"])for(const event of ["input","change"])document.getElementById(id).addEventListener(event,()=>{resetPages();render()});
  document.getElementById("activity-cards").addEventListener("click",event=>{
   const b=event.target.closest("[data-activity-category]");
   if(!b||sel.value==="all")return;
   activeCategory=activeCategory===b.dataset.activityCategory?null:b.dataset.activityCategory;
-  visibleLimit=60;resultLimit=150;render();
+  resetPages();render();
  });
- document.getElementById("activity-category-reset").addEventListener("click",()=>{activeCategory=null;visibleLimit=60;resultLimit=150;render()});
- document.getElementById("activity-post-more").addEventListener("click",()=>{visibleLimit+=60;render()});
+ document.getElementById("activity-category-reset").addEventListener("click",()=>{activeCategory=null;resetPages();render()});
+ document.getElementById("activity-post-more").addEventListener("click",()=>{postOffset+=visibleLimit;render()});
  document.getElementById("activity-results").addEventListener("click",event=>{
   const b=event.target.closest("[data-activity-open]");
   if(!b)return;
   const id="activity-post-"+b.dataset.activityOpen;
   let target=document.getElementById(id);
-  if(!target){visibleLimit=Number.MAX_SAFE_INTEGER;render();target=document.getElementById(id)}
+  if(!target){const index=lastSelected.findIndex(p=>p._id===Number(b.dataset.activityOpen));if(index>=0){postOffset=Math.floor(index/visibleLimit)*visibleLimit;openPostId=Number(b.dataset.activityOpen);render()}return}
   if(target){target.open=true;target.scrollIntoView({behavior:"smooth",block:"center"})}
  });
- document.querySelector("#activity-analysis > details")?.addEventListener("toggle",()=>{if(document.querySelector("#activity-analysis > details")?.open){render(false);loadAiDataset()}});
- document.addEventListener("dm-publications-updated",()=>{render(false);loadAiDataset()});
+ document.querySelector("#activity-analysis > details")?.addEventListener("toggle",()=>{if(isOpen()){render(false);loadAiDataset()}else{renderTicket++;clearTimeout(renderTimer);pendingManual=false}});
+ document.addEventListener("dm-publications-updated",()=>{sourceRows=null;render(false);loadAiDataset()});
  loadAiDataset();
  render(false);
 });

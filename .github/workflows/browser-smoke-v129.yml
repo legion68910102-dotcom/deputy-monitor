@@ -8,6 +8,7 @@ on:
       - 'index.html'
       - 'index-v129.html'
       - 'activity-analysis-v129.js'
+      - 'activity-analysis-worker-v1.js'
 permissions:
   contents: read
 jobs:
@@ -90,7 +91,8 @@ jobs:
               for(const section of ['activity','report','ranking','activity-analysis']){
                 const el=page.locator('#'+section+' > details');
                 await el.evaluate(e=>e.open=true);
-                await page.waitForTimeout(1500);
+                if(section==='activity-analysis')await page.waitForFunction(()=>document.getElementById('activity-summary').textContent.includes('Анализ обновлён'),{},{timeout:120000});
+                else await page.waitForTimeout(1500);
                 console.log('SECTION',section,JSON.stringify({errors,rows:await el.locator('tbody tr').count()}));
                 if(section==='activity'){
                   const result=await page.evaluate(()=>{
@@ -127,6 +129,21 @@ jobs:
                   assert.equal(result.filtered,true);
                   assert.equal(result.dateFiltered,true);
                   assert.equal(result.profilesUnchanged,true);
+                }
+                if(section==='activity-analysis'){
+                  const initial=await page.locator('#activity-results tr').count();
+                  assert.ok(initial<=150&&initial>0);
+                  const person=await page.evaluate(()=>window.deputyRoster.find(p=>p.handle&&allRows().some(r=>r.profile===p.handle)).name);
+                  await page.locator('#activity-person').selectOption(person);
+                  await page.waitForFunction(()=>document.getElementById('activity-cards').querySelectorAll('button').length===15,{},{timeout:120000});
+                  for(let k=0;k<3;k++){
+                    const category=page.locator('#activity-cards button').nth(k);
+                    await category.click();
+                    await page.waitForFunction(key=>document.querySelector('#activity-cards button.is-active')?.dataset.activityCategory===key,await category.getAttribute('data-activity-category'),{timeout:30000});
+                    assert.ok(await page.locator('#activity-results tr').count()<=150);
+                    assert.ok(await page.locator('#activity-posts details').count()<=60);
+                  }
+                  console.log('ANALYSIS_INTERACTION',engine.name(),path,JSON.stringify({initial,errors}));
                 }
                 await el.evaluate(e=>e.open=false);
               }

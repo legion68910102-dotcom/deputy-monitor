@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          expected=a473cc4cf9b770da1b3009bfb35ae40217486644
+          expected=5cda7288a440a531e8d415403a5875f93c86dad1
           for file in index.html index-v129.html; do
             actual="$(git hash-object "$file")"
             if [ "$actual" != "$expected" ]; then
@@ -49,7 +49,7 @@ jobs:
           check_file 'activity-category-policy-v1.js' '0ed758d112607b0d3e618a5c8eb7c0ea7b9a895e'
           check_file 'activity-analysis-v129.js' 'f9cd4cd1aa7bbb6e0652c3114b9ac8db793835c6'
           check_file 'activity-analysis-worker-v1.js' '975c49cc5470056967e64c4ac584c236141aaad6'
-          check_file 'official-deputy-contacts-v1.js' '1956be2187d447942b0ad08a7604260a703c5d92'
+          check_file 'official-deputy-contacts-v1.js' '3510a493977f57f942a282f7d1d766f3b4212dd9'
           echo "Approved v129 HTML and ten static modules verified; data updates are allowed."
       - name: Configure Pages
         uses: actions/configure-pages@v5

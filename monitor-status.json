@@ -1,1097 +1,1097 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T08:07:38.908052+00:00",
+  "generated_at": "2026-11-26T19:45:21.881783+00:00",
   "source": "Official VK API (public wall.get only)",
   "roster_size": 158,
   "district_count": 16,
   "profiles": {
     "ilyasov_kn": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "molchanovpavel": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "elenanersesova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ptitsynakk": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "nata_sycheva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "aleinikovayv": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "antonovalp1": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "golubevaev947": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "kutaysovanv": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "rytovsergey": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "a.a.boikov": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "e.aleksander88": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "iskonarev": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "elenasergeevnalelikiva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "irina_terekhova1969": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "yaroslavburykh": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "smallraisin": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tatyanajabina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "juliamartanova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "orehov_aleksandr": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "olga_belousova1998": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "gontsova71": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "e.korostilenko": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ykolova_elena_vasilevna": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "chinilina975": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "vlasenkoau": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "dmitry_volkov77": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "annavolskaya": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "seregin1963": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "dmitry_ark": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "kiryanova_ln": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "levshtanov86": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ifadeeva2022": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ivanov_oi10": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "olga_podolskay": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "sagalovskaya": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "sitnikov_danilovskiy": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_100"
     },
     "vgsultanov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "natalia.abbasova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "grigorievalv": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "trodionova2022": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "graskinss": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "galinazaykovskaya": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "pkobtsev": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ln_skorlupkina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "elena_fursova1": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tkabanova2022": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "svetlanakostyushina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "rezkovvlad": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "yulia_sedacheva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "elina_sherstyuk": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "anisim_svet": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_100"
     },
     "pushkinpp": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "rafalskayairina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tikhanovaalbina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "haritonova_aliya": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "allavoropaeva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "kalyaev84": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ryabevaen": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "semenovdmitry80": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "elenashlyakova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "allenov__andrey": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "andrianov001": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "nvzausaeva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "av_kondrashov": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "aleks_moskalev": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "andrey.abertasov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "vyacheslav_komaha": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "kondratevaekaterina88": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "kudinovamarina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "anatoli_viktorovich_potiomkin": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "deputat_kaminskiy": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "natalyamikhareva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "safonovatatiana85": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tikhomirovalexey": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "nikolskayaav": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "andrey.sezemov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "antonuvarov90": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "azizakabulovnachuganova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "golovin_mikhail_sergeevich": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "gorbunovsi": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "korshunovane": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_100"
     },
     "kundyltatyana": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "l.ruzina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "balykovde": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "bashlykova.mari": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "julia_byckova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "romanvinokurov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "goremykinmy": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "vvedenskaya_i": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "vinogradova_len": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "dkulnev": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "rygin": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "pavel_v_shutov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "kostina1920": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_100"
     },
     "viktorgorn": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "id666378177": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "o.v.tarasenko": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tatyana_filippova20": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "dmitrieva_n_n": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "elena__konnova": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "elena_laplanche": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "andreymordovin": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "baranchikova_natalia": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "galinadolgashova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "anna_ezhkova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "liudmila_zapl": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "nadezhda_kuskova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "sysoevala": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ib.glotova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "demchenkov_ml": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "svetlana_rodnik": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "novoselskayala": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tkachip": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tatiyana_donskaya": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "i.v.zolkina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "albinakomissarova2022": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "sovchinnikova79": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_100"
     },
     "ap.yashkin": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "aabulatov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "vidutinaov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "nuykinakv": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "elena.rubtsovanazarova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tishkovaea": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "gavrilinams": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ekaterina.tyutyunnikova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "natalia_shabasheva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "shmakova_os": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "abramovaei_chs": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 99,
       "reason": "Получено записей из VK API: 99. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "antongorbachev": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "petr.kurapov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "i_v_morozova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "smirnovvalerii": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "andreevasvetlanaaleksandrovna": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_15"
     },
     "lukoyanov_chs": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "maxsimmorozov": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "riakhmiatullina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "tozikam": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "bogdan.konoshenko": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "eilarionova_556": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "polozovs": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "i_rodina": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "smitsb": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "vasiliy_meleshin": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "mironovdp": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "repkinae": {
       "status": "checked_unavailable",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": null,
       "reason": "vk_api_error_30"
     },
     "rybakovaev_1582": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "n_shindryayeva": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ms_zotova": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "sergey_kashlev": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "ikurash1": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "alexandr_novikov_chu": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "n.ptushkina56": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "bordovskaya_og": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "gunina_ea": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "nleonovannnn": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "markova_tat_vl": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
     },
     "smirnovaev1": {
       "status": "success",
-      "checked_at": "2026-11-26T08:07:38.908052+00:00",
+      "checked_at": "2026-11-26T19:45:21.881783+00:00",
       "posts_count": 100,
       "reason": "Получено записей из VK API: 100. Пустой ответ не доказывает отсутствие деятельности.",
       "history_coverage": "latest_page_only"
@@ -1126,9 +1126,9 @@
     "attempted_profiles": 158,
     "successful_profiles": 143,
     "failed_profiles": 15,
-    "new_posts": 40,
-    "updated_posts": 1107,
-    "retained_posts": 14467,
+    "new_posts": 48,
+    "updated_posts": 1979,
+    "retained_posts": 14883,
     "stopped_reason": null,
     "dry_run": false,
     "error_counts": {

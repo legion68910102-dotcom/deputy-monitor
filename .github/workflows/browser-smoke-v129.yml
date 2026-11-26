@@ -60,6 +60,14 @@ jobs:
               assert.equal(state.roster,term.roster.length);
               assert.equal(Number(state.total),expected);
               assert.equal(state.archive,true);
+              const contacts=await page.evaluate(()=>{
+                const groups=[...document.querySelectorAll('#profiles .district-group')];
+                return {districts:groups.length,contacts:groups.filter(g=>g.querySelectorAll(':scope > .deputy-contact a[href^="tel:"]').length===1).length,insideCards:document.querySelectorAll('#profiles .deputy-tile .deputy-contact').length};
+              });
+              console.log('DISTRICT_RECEPTION',engine.name(),path,JSON.stringify(contacts));
+              assert.equal(contacts.districts,16);
+              assert.equal(contacts.contacts,16);
+              assert.equal(contacts.insideCards,0);
               assert.deepEqual(errors,[]);
               const birthdayTest=await page.evaluate(()=>{
                 const group=document.querySelector('#profiles .district-group');

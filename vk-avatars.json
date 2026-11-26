@@ -1,961 +1,797 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:41:19.728329+00:00",
-  "roster_size": 159,
+  "generated_at": "2026-11-26T08:38:23.402431+00:00",
+  "roster_size": 158,
   "profiles": {
     "ilyasov_kn": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ilyasov_kn",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/g5pTcP9YJGEqXzrTqMWqFjkIX58AqRfDjKJ1ll2lPhKoN43dD5wXA6jskq1lBVG9NfnA6CgLWadHxLR1A4Y738no.jpg?quality=95&crop=199,0,1024,1024&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ilyasov_kn"
     },
     "molchanovpavel": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/molchanovpavel",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-25.userapi.com/s/v1/ig2/A06hzO-UwCDr32ShK4u-v_q-Jqe1M76pwh_1X86pTO3-bri-CA0znfdWopQtuHiXuaKGgECJlYraqlfj2tahisOA.jpg?quality=95&crop=36,36,593,593&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/molchanovpavel"
     },
     "elenanersesova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elenanersesova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig2/pXDbFSVnGZjKSv7nxW0Pj7-Ye-9WEWCOTYO5MlQoYVxaFQBNLBxPApOoE2CHYc26ytahpr4rwiJeAv1JTTn_qHZL.jpg?quality=95&crop=146,417,323,323&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/elenanersesova"
     },
     "ptitsynakk": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ptitsynakk",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-19.userapi.com/s/v1/ig2/AZwQrwEwA87I82F05gKAapI113sEJYw-jzOyzLriDWNw59LY8oDkbPN9tTRpJvpoxu7roOhWNckhjltRLKVPivGy.jpg?quality=95&crop=1,52,851,851&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ptitsynakk"
     },
     "nata_sycheva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/nata_sycheva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-22.userapi.com/s/v1/ig2/4k08M4L9kBCYh-5pJnCerahahPk5S2J30nGUxoX9PqIn5sK7ddpVev1zwIld5f1LEsmv4gwDQBujtiaNo56mxAWH.jpg?quality=95&crop=0,0,1271,1271&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/nata_sycheva"
     },
     "aleinikovayv": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/aleinikovayv",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/YaX9FBQA2tPZrMuz4lZxd4kSjIrl-FOeDNQ54p40bv4OxrDyPW4X-r6scURZHdbkQGFga-2GTtZ54NuuFHlFB1mC.jpg?quality=95&crop=167,209,1111,1111&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/aleinikovayv"
     },
     "antonovalp1": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/antonovalp1",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/SNvYUnsYiywlXQeHcHZqpdHDf22PXhm94TYDGMoaYMJWkMcZWaT2yvt8_WBTDpy-qlRnKIPaYDtfrhvl3AWK_8ZZ.jpg?quality=95&crop=384,439,1122,1122&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/antonovalp1"
     },
     "golubevaev947": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/golubevaev947",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/kk3v92vXU17ejalQmU8n9L-B5kkj-VaykoVYL4hj4qdZCecf_g-J4okusiagZjD05HPJKRhJ_y4oVPUby1OHT0jY.jpg?quality=95&crop=0,0,1224,1224&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/golubevaev947"
     },
     "kutaysovanv": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/kutaysovanv",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-27.userapi.com/s/v1/ig2/Pvt1oLBM3MTkZesxFdTHXfZxeVerOOGUCPmQQz03dj2DJVYllFAxSI10NHVd8P84Df4Zq9u1rbVjtt-Ril28FQQD.jpg?quality=95&crop=21,268,635,635&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/kutaysovanv"
     },
     "rytovsergey": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/rytovsergey",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-25.userapi.com/s/v1/ig2/HNjd5RH9R01eZ-Q-SLhTCV0kJv0FbMxjAswyeHgecJXkm00k4nGCm-gYn5ngWoWmI3r7ln87M7M7n-nJkhMPbF2f.jpg?quality=95&crop=227,0,1200,1200&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/rytovsergey"
     },
     "a.a.boikov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/a.a.boikov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-15.userapi.com/s/v1/ig1/2JqRw6E16H8Xj2rhZzNzPsO7eWB2z-17C7kKU8Ac1wl5nE8e0Q_JZ-XCSZVksVsx-471GA.jpg?quality=96&crop=208,0,1672,1672&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/a.a.boikov"
     },
     "e.aleksander88": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/e.aleksander88",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-20.userapi.com/s/v1/ig2/jzX3haolUQA4X8jeLOeuhOvHiGAA--xmQ0DN1SE_yUL7NUaUEy3ZnOgr2iKGsNwvTSfjFlE_g9APw8z86eyGTaCr.jpg?quality=95&crop=91,0,539,539&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/e.aleksander88"
     },
     "iskonarev": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/iskonarev",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-96.userapi.com/s/v1/ig2/Accyc16POhOGqA7b0wTbRI9PBtzhbpPKYQQ_J16We7OgaaMTe9R27c_nSY0BdjZDkAP5uo8HRQCBH6Tz-T8m0Zu6.jpg?quality=95&crop=103,178,377,377&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/iskonarev"
     },
     "elenasergeevnalelikiva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elenasergeevnalelikiva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/fyXCyNXV_SW-Lof_eIDKI4PW1O8BFyYFKMkITijCf1BMRu21LrVru88amnk10V1KeGjmQUbI4RyO2lLuHoYnye--.jpg?quality=95&crop=118,59,319,319&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/elenasergeevnalelikiva"
     },
     "irina_terekhova1969": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/irina_terekhova1969",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/biH1OvmWzKgrixo8fr731xi76OCrxaLXnm-aVtMjJgTYWkuOwkHRDfjPMsBBSqnzeDiqaI1-bjwWFC1_Hh6KDOh6.jpg?quality=95&crop=0,0,828,828&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/irina_terekhova1969"
     },
     "yaroslavburykh": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/yaroslavburykh",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/1dN1jspITyoknj97O3a_jz10u0dtoePyBCUVx4cG1wnBQ2QvFof_gmxyenzjJn_OTx0do1_LpnGfr0xEjYTGvDXg.jpg?quality=95&crop=50,43,873,873&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/yaroslavburykh"
     },
     "smallraisin": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/smallraisin",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-22.userapi.com/s/v1/ig2/gO-YyBKWHsi41pvJQ2W45JGKJl3TDiUlmOtC2BibV73CCl9NEh4iMT25AYMVvW5MTPeK89AGf9v46_U19WyzAEFr.jpg?quality=95&crop=8,454,1698,1698&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/smallraisin"
     },
     "tatyanajabina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tatyanajabina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-89.userapi.com/s/v1/ig2/BvT2WhWNK0sc54ZqGiXMcv4qcdqWsiOzhUqctfCWcGJc0ulpWu_pAGXlpFmmQ_03KVaOeqbKbdX9E3QX2HpoQPiW.jpg?quality=95&crop=37,84,672,672&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/tatyanajabina"
     },
     "juliamartanova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/juliamartanova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-83.userapi.com/s/v1/ig2/OO82GCg2yIiP1TIZXCWdD9uSwXcMvN7SJHPf4w1KfQtUrmwQaK6dZqaqXeOf6p6lUB-Nk6c4yGli1FTvVww8kobK.jpg?quality=95&crop=316,344,1088,1088&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/juliamartanova"
     },
     "orehov_aleksandr": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/orehov_aleksandr",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-47.userapi.com/s/v1/ig2/iqn4I9eSzATcN3X66iA_H__b92KkWoIMWk0lsBMOoguiBPb_tBkY-Nds1fCJkyz47Qcljk6q5EohhXNrrPMYimrS.jpg?quality=95&crop=160,389,833,833&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/orehov_aleksandr"
     },
     "olga_belousova1998": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/olga_belousova1998",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-39.userapi.com/s/v1/ig2/huPKJXh-B6LRA6bV7mVJ7oaC089sPAb63rMiLsJeE5f6AWHuhQfMagf-4S4WMARU4T4q977gB91mR8xLuVSCtoT4.jpg?quality=95&crop=0,109,848,848&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/olga_belousova1998"
     },
     "gontsova71": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/gontsova71",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-49.userapi.com/s/v1/ig2/7TlT3m0i1SlKzLzIRQgXl_gdiviprTzYgo2FqR6owJ2YntGHgBIr6JG5opTD_LwN9khwwfBYhgr6cnaQp8ojcata.jpg?quality=95&crop=0,16,539,539&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/gontsova71"
     },
     "e.korostilenko": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/e.korostilenko",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-21.userapi.com/s/v1/ig2/HCs_a304Y_2zVrf0mKQiE64rbbWoKGDasJy6p8pX_nYqKBP0B5dUX0-muyvfiAqG-rsycEUYd6y_8A8PA_gQXF13.jpg?quality=95&crop=263,246,1426,1426&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/e.korostilenko"
     },
     "ykolova_elena_vasilevna": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ykolova_elena_vasilevna",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-24.userapi.com/s/v1/ig2/8QoKEfJ2Qwc7uWPE6YzO1nmRzI-KcJfgQvPptRS8S25wTjVGnFa-FDrCJGW2q1p1F1H2l_vld5XQx4n9FBMLt_DV.jpg?quality=95&crop=126,166,776,776&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ykolova_elena_vasilevna"
     },
     "chinilina975": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/chinilina975",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/m8yfe04dBwJIr2zXeQ2G4jzMde4x6DCP7fO0KhE74wX0wqXf_cXDATMazL76-1ijr_5SvrER49vn0_yghwIt_atr.jpg?quality=96&crop=144,144,1152,1152&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/chinilina975"
     },
     "vlasenkoau": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vlasenkoau",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-39.userapi.com/s/v1/ig2/V3S-iOk47c6wh0CDq9094yLB92QFht2CsaJk3X9cuBr8XLA2DJ2Ktmk1jtM-8mT4awtBqU9jkEkf8gbzLyMiYYHL.jpg?quality=95&crop=266,128,547,547&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/vlasenkoau"
     },
     "dmitry_volkov77": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/dmitry_volkov77",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-56.userapi.com/s/v1/ig2/-nCpie0MC3qBmcs_9-9KCcUd3kF2KwwQwzcegWj4T8OiOdJWU7TsZCoc4GJnnuGYAq5LIQDlwIkKKQYH72aoFxic.jpg?quality=96&crop=144,144,1152,1152&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/dmitry_volkov77"
     },
     "annavolskaya": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/annavolskaya",
-      "error": "ValueError"
-    },
-    "ilyashenko_aleksandr": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ilyashenko_aleksandr",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-51.userapi.com/s/v1/ig2/IyQCPek9YkydkjwOPAwataTn7NlrRyH1xajUMq3_rK0K2_9K2eSt5_fbS21pU6idqboddu5SWGWiZkyZco0dqfOC.jpg?quality=95&crop=0,0,1156,1156&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/annavolskaya"
     },
     "seregin1963": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/seregin1963",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-83.userapi.com/s/v1/ig2/G8WwFQH0iZCoLZjHyTdNuK2ac-rdjfeo5RxTvTljz96CznJf8lG5veB_TgTxKEcacQN0f5NrDCC9T1Pz_-fSkMxM.jpg?quality=95&crop=2,14,969,969&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/seregin1963"
     },
     "dmitry_ark": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/dmitry_ark",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/QzMG3wHZ6y2Y5eifZvwj_d1BrOmTlCxVKvqKON43lC7is5v5wgbpDem2PSKDdL8BiFTGzR-Uc9gy5W_Mx2d-zxD3.jpg?quality=95&crop=26,70,1024,1024&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/dmitry_ark"
     },
     "kiryanova_ln": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/kiryanova_ln",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/7kqgw8CeZf82HwouU-yGRNPiabG0hnd58Yv5YbGTx8Jm9ISCKc0p739fPjCvCOGW0_xInV8sKm50xkoro-zfG_uB.jpg?quality=96&crop=393,167,892,892&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/kiryanova_ln"
     },
     "levshtanov86": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/levshtanov86",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-24.userapi.com/s/v1/ig2/qaOwjb9m_zWCBfidZ1JYMJ3IYavO4IfkLuvBVVhAT0q7T2Gv9bX55R12beYBB7kzGeqmdVLNQ6HuqMvjdMMjsaxr.jpg?quality=95&crop=202,64,286,286&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/levshtanov86"
     },
     "ifadeeva2022": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ifadeeva2022",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-28.userapi.com/s/v1/ig2/JtvvEiUzreP3MnLH4Yx2ExmJYKs7pJildwSBnRx5yV7IXLox1Eklc4aoVWrog0rjMgcdicopUiqkbEhyC82MK2z9.jpg?quality=95&crop=212,391,755,755&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ifadeeva2022"
     },
     "ivanov_oi10": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ivanov_oi10",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-96.userapi.com/s/v1/ig2/EWQepQxjWM7fdkt8EmjX6gJjMC12a7PGLLPssQzVk2roWSKW2jcycIjDV5PyjvICI9sYP8R2xql_TJKD1-K0YYwj.jpg?quality=95&crop=1,1,639,639&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/ivanov_oi10"
     },
     "olga_podolskay": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/olga_podolskay",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-63.userapi.com/s/v1/ig2/CXTsaEfKjBxeOpsb_hu1zwX-hnDvhG-7w_CzJTLL765Txg-qRW6NGMynoAKrzZ1QIaNQ_7OUcE-wPTovBrd2yBb6.jpg?quality=95&crop=2,200,1078,1078&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/olga_podolskay"
     },
     "sagalovskaya": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/sagalovskaya",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-28.userapi.com/s/v1/ig2/Nq1AT_IauJAUGVwSkNJDYcCTxgKByAX2Ooi0oAVhFdNDoy992CFADvXG5uu___vg5RDs_5gZ6sBce9eYH2gEoUN6.jpg?quality=96&crop=63,63,507,507&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/sagalovskaya"
     },
     "sitnikov_danilovskiy": {
-      "status": "api_error",
+      "status": "unavailable",
       "photo": null,
-      "source": "https://vk.com/sitnikov_danilovskiy",
-      "error": "ValueError"
+      "source": "https://vk.com/sitnikov_danilovskiy"
     },
     "vgsultanov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vgsultanov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/l2NoDeIvDloK3aUFM4b9ovNFJtIZYly_ZdVsvQ99XdNIJRwsu0MCRQLdlT1byoGbbEvcU7tUn9v7y6Nzd6XObuHl.jpg?quality=95&crop=344,20,544,544&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/vgsultanov"
     },
     "natalia.abbasova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/natalia.abbasova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-87.userapi.com/s/v1/ig2/A2M8s1R-m-HQDmBpmKXcOTdI7KeOY1iG2lSvYXiW1Oo-lu-WUc_bJTyJhGcWO79y-SBjRbKPBhO1JgW2ACeM9a6H.jpg?quality=95&crop=292,72,499,499&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/natalia.abbasova"
     },
     "grigorievalv": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/grigorievalv",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/lWV3xQImhSPQW0cFKEhPQR3ab1nphtyvNfdRYag--GXYvkduKNE7mJ0u5AxiC-sVNPCfrFTGf0jT3AlytTZZfylE.jpg?quality=95&crop=216,582,692,692&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/grigorievalv"
     },
     "trodionova2022": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/trodionova2022",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/tAWmmD6U2aV4D_4u_PIoVhT5tJgA7-Vcke7Ugj1SbSQujnoPdx0ctko6RxAjQX7Tx88zSnU1nllV2QLbpX8uu4uh.jpg?quality=95&crop=270,690,538,538&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/trodionova2022"
     },
     "graskinss": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/graskinss",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/Cwncx19qAmSd7CqDCwTSLtT_Y_HcqV5w31tqPB6N06rb9P-3p2zbIak9j-2QsuHQPo1bUwV5lpGQhDuTm9ARFhMy.jpg?quality=95&crop=273,38,1007,1007&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/graskinss"
     },
     "galinazaykovskaya": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/galinazaykovskaya",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-56.userapi.com/s/v1/ig2/3w6KSC1wynyrslMMzxULjD6MYZ8WdP2inbJ3LspUdlm3gDdIBe1lwvTgRCey-0_8VutkR2pqpL3MTMYvzFw6jHTO.jpg?quality=95&crop=52,75,594,594&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/galinazaykovskaya"
     },
     "pkobtsev": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/pkobtsev",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/dnmbQmR-N07KiQSHqtUzoxP0v4VFb7YOX3H6WxGrsI5RTjEA6CUJNBBMEPMkarPZeXBy-NYuOpF5aALWJjmdtRyL.jpg?quality=95&crop=57,0,686,686&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/pkobtsev"
     },
     "ln_skorlupkina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ln_skorlupkina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-85.userapi.com/s/v1/ig2/BrwieFI2NqjB57hUDjY-ljwKcy30awHLAWAFUCI4C8dqmNE8K7H_wRXkJGUT8nqnxpUMvWQRVFkyApiIlR9a8EAX.jpg?quality=96&crop=85,85,681,681&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/ln_skorlupkina"
     },
     "elena_fursova1": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elena_fursova1",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-85.userapi.com/s/v1/ig2/hbUdaaY6z5oxkDaIYohnJplkWyWyLPhzMgWTiw2tr0EzTyp0Wtub1H6ofIDp4TYJIFKdyXc9w1AbXM2fecRVpcTD.jpg?quality=95&crop=122,0,415,415&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/elena_fursova1"
     },
     "tkabanova2022": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tkabanova2022",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-85.userapi.com/s/v1/ig2/TC31HPXd4wyR_J7eJVHflL3FMckX13QLeAe1V_wFzRBXgi6cUTGq6o51651n83zcXFEmICMI1ad_f4j-y5ZYCXxK.jpg?quality=95&crop=53,0,918,918&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/tkabanova2022"
     },
     "svetlanakostyushina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/svetlanakostyushina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/NR16xOLhx_GtJhoxE8koFvoFquRsaqf77URbPOyX3kvNB7JqbnPLsXN5RZMAbB-vHNXsh-y4MiBQZUZKwn_o4TID.jpg?quality=95&crop=262,306,568,568&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/svetlanakostyushina"
     },
     "rezkovvlad": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/rezkovvlad",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-84.userapi.com/s/v1/ig2/v8oOp00HPAAxdOVpngt5FXMREImSBiKJuMzs-ytTb_6iiIw_7yaRZSkDlY9CXhKD2iAwFxmPIYs_JxnnBVNcVE13.jpg?quality=95&crop=0,0,1704,1704&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/rezkovvlad"
     },
     "yulia_sedacheva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/yulia_sedacheva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-83.userapi.com/s/v1/ig2/lDnckGsp4UoZSVSAGFxXI7SyYKFxlUnRtv0mAK1pBJLVcmJg2HIoTQ6pUdSgFlT3vEvX-NiaiQN59htXpmyko12r.jpg?quality=95&crop=267,215,516,516&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/yulia_sedacheva"
     },
     "elina_sherstyuk": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elina_sherstyuk",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/b3KbZ87h4oF4LX4En4hjuBjr741kF6FJs2nRe13OlA9ufB0i9sIDmvuqnxi4Ecny64YJ5SnLyeATPSZYDwdcMi4b.jpg?quality=95&crop=0,421,2081,2081&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/elina_sherstyuk"
     },
     "anisim_svet": {
-      "status": "api_error",
+      "status": "unavailable",
       "photo": null,
-      "source": "https://vk.com/anisim_svet",
-      "error": "ValueError"
+      "source": "https://vk.com/anisim_svet"
     },
     "pushkinpp": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/pushkinpp",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/PglHMxNYwkhqXfthujNbgAVPB_NHClpQaEqjslAmS4nnbKASLi2zMv5kxhGLv6divfauUixQ39jgRIbF5-RCtw3h.jpg?quality=95&crop=109,39,328,328&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/pushkinpp"
     },
     "rafalskayairina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/rafalskayairina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/QxYw6UK9-xUujGBqjIJQD--J6NsF3VnU6vigj0HsS8GZpHLYI96N-J7hjmvcm2cIhJ5H69oq9A8tRa0PTFKdZOoU.jpg?quality=95&crop=210,299,831,831&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/rafalskayairina"
     },
     "tikhanovaalbina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tikhanovaalbina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/UMmc27I-cpvzLsueWn3EzGE1NNzvk2RKTu_t6NwO8ANhqsuBTZjMVBmQKrjmDZ5met_XjXNc1WV3RjmLThrsgm9q.jpg?quality=95&crop=395,56,730,730&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/tikhanovaalbina"
     },
     "haritonova_aliya": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/haritonova_aliya",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-55.userapi.com/s/v1/ig2/jjQlwE4TGm8yBs6FJQmc8yedmvt8fg_sPk4oWR-keHn63l17-37Dm1-PnWMPjYhRWdPlMsRqOhxzbebbijwzJm60.jpg?quality=95&crop=2,0,866,866&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/haritonova_aliya"
     },
     "allavoropaeva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/allavoropaeva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/-XxVZkbcAPvgIshleAD-VgTmw4TszfGR1Mz2vRN15bDz2vIxY9zz91eE9JxyA6u62eLwDOA_jhk_2uFkm9utMGNz.jpg?quality=95&crop=0,0,997,997&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/allavoropaeva"
     },
     "kalyaev84": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/kalyaev84",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-48.userapi.com/s/v1/ig2/xYKG9qHyZEMwjr6qZBGo2InReGTNgIlPBKsyS1M4LYuY1phADixdWIxzoJE3hlKx_tIRNGCfJde3TbTVxJIKbXzwt9lL7Q.jpg?quality=95&crop=476,16,493,493&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/kalyaev84"
     },
     "ryabevaen": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ryabevaen",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-96.userapi.com/s/v1/ig2/WhF6s-hU3ZVYA1smnSGr0_H5-ugLvuoRyZ18dADaoVqmwfdyG0UcOHHylNL64yNSjfiUKB4w6RaMjR585o3sgu2d.jpg?quality=95&crop=34,196,1042,1042&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ryabevaen"
     },
     "semenovdmitry80": {
-      "status": "api_error",
+      "status": "unavailable",
       "photo": null,
-      "source": "https://vk.com/semenovdmitry80",
-      "error": "ValueError"
+      "source": "https://vk.com/semenovdmitry80"
     },
     "elenashlyakova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elenashlyakova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-28.userapi.com/s/v1/ig2/e7rOlPxHLED9BKRhpR7XPAKK4SPxRu1RJkTcEfV6ZugYyjtSeOzVi9hZzrhTq5I_ykovuUhe04Bg10kLllsoQCfF.jpg?quality=95&crop=0,13,662,662&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/elenashlyakova"
     },
     "allenov__andrey": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/allenov__andrey",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-56.userapi.com/s/v1/ig1/BRFEtqWwrLVaO2MXWY6hgR70Sa_Bm0BWj_tSVOkBMB8CVUenCGygTKrNQqoOxwjXDr7YutoG.jpg?quality=96&crop=1,11,210,210&as=32x32,48x48,72x72,108x108,160x160&ava=1&cs=200x200",
+      "source": "https://vk.com/allenov__andrey"
     },
     "andrianov001": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/andrianov001",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig2/HlcDLPxbkHFEFem-71WPRcN-V8G3jAHK8uswHGxv-Oc-mHVv7kFdR7FzegS1cIEa_ORjzMaUA_f3uW5hpTNVH0T8.jpg?quality=95&crop=435,0,1107,1107&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/andrianov001"
     },
     "nvzausaeva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/nvzausaeva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/xl9zSvAnPRIZJ8QzLp9HsmdV0HzMif4YLCtp2cWuFKKRhTQJXdne8mYJXib4wnLI0SNhLqYj_INyKWfrNSeJ8sHX.jpg?quality=95&crop=98,280,792,792&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/nvzausaeva"
     },
     "av_kondrashov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/av_kondrashov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-56.userapi.com/s/v1/ig2/NkK1bzsdzM1NsfRDZRIno7dVRqeAopEB-Z0RrOFjbqa8x6mza64CfjWR6ZKkVx_6G_n_5JscFTf9Rj40T5XgXGs4.jpg?quality=95&crop=1,626,1080,1080&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/av_kondrashov"
     },
     "aleks_moskalev": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/aleks_moskalev",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-16.userapi.com/s/v1/ig2/LIseur9xk8zC-gWIj4Y6QUpMXjYG1az-MI0dmarWu6hiGWWVVDg1OBsk7-DnvmnxJEDHU7IHLRoXcp_Zxi5-haVh.jpg?quality=95&crop=181,1,717,717&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/aleks_moskalev"
     },
     "andrey.abertasov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/andrey.abertasov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-83.userapi.com/s/v1/ig2/y0FERUQZGjWSrY8uLkRULGPmUXxqq6_rrFkTAxdqDHjqScOfa-qNTGJ0JaVmiO-EeTUJveqHsWPzZv1gDsV4bchq.jpg?quality=95&crop=166,111,319,319&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/andrey.abertasov"
     },
     "vyacheslav_komaha": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vyacheslav_komaha",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-19.userapi.com/s/v1/ig2/ap7fgaIgmTF2B3klq7F61adyJWTq5vheKX6E1JBo1-rhkGlApRiY9QwsD8kwz-2U3oJmGFQlAqGAOdT9kpg-9Ga2.jpg?quality=95&crop=0,51,788,788&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/vyacheslav_komaha"
     },
     "kondratevaekaterina88": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/kondratevaekaterina88",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-47.userapi.com/s/v1/ig2/8YTuNFWlKSDnUKQu0mHxPkYGICcCkHL6I_u-Z6zLMRmKFH0xhD7rTD-Lb3XK6hsdeQmxmtQRUJdxTIRxnVeX3Q8E.jpg?quality=95&crop=0,357,1707,1707&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/kondratevaekaterina88"
     },
     "kudinovamarina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/kudinovamarina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-51.userapi.com/s/v1/ig2/QtUGVwOLO312u94mAWnmDhTe8NzT6d4CtMluu0au-zFzBirUKCHGwu1PS1q_1-kH-SgO1-RlN5-UiPmPhT113P7D.jpg?quality=95&crop=315,785,1207,1207&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/kudinovamarina"
     },
     "anatoli_viktorovich_potiomkin": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/anatoli_viktorovich_potiomkin",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/b3ooJewzt-UiyFdViIupuucMhzfXGFbjkRPNrqZCkAL9Jwx68cUnVbOb0NTD7SAvvceK9SgbR25tP1GLSwPrG_xt.jpg?quality=95&crop=135,0,224,224&as=32x32,48x48,72x72,108x108,160x160&ava=1&cs=200x200",
+      "source": "https://vk.com/anatoli_viktorovich_potiomkin"
     },
     "deputat_kaminskiy": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/deputat_kaminskiy",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-27.userapi.com/s/v1/ig2/cBXVm5-lg7bg1US0mgPK1VuSNYs5-qmL7vRRqd0Js-vCNTDhM3F4AWVcztnNt4VV5k9Jl3okFSzzE_UdOO52Luyc.jpg?quality=95&crop=29,190,1025,1025&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/deputat_kaminskiy"
     },
     "natalyamikhareva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/natalyamikhareva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/4NhfAZ879BJac4-QibVNTuOZiBlQ4K_zSy6iGWHEaCYa3m3AYVKMTJUQd4zVCc2Ao399TrgECXJpzAZvG7tY1oUe.jpg?quality=95&crop=321,1,1277,1277&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/natalyamikhareva"
     },
     "safonovatatiana85": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/safonovatatiana85",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-22.userapi.com/s/v1/ig2/rzO-u5jJAOuoGomac-oOzC8-AEegUuqCHPFOW86QAtybC-aPnMZoFDzZuugls86MmaUOMCxEpygwcUuB63LMSabD.jpg?quality=95&crop=206,78,614,614&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/safonovatatiana85"
     },
     "tikhomirovalexey": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tikhomirovalexey",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-96.userapi.com/s/v1/ig2/q7_WO47t323H6LwoVd-2XFWxAluM4_k9zR3rSeoHdDPXvEuCu5Nd2MIc1gionGko0WXUoYXueL_cGMNQAPbNatvt.jpg?quality=95&crop=1,259,1402,1402&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/tikhomirovalexey"
     },
     "nikolskayaav": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/nikolskayaav",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-26.userapi.com/s/v1/ig2/cnoK2N5P_rqpyzrX82FWRJKuwul6-FhusLpOEaE8dicpoVpe9ZP2_DVA0RnEakKRp5Td2Qapq36DJAkcvwovf24C.jpg?quality=95&crop=26,297,912,912&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/nikolskayaav"
     },
     "andrey.sezemov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/andrey.sezemov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-20.userapi.com/s/v1/ig2/DdsTs7bsreAxVg9crg_DZesTZ44sSSrX2gKvWF8q11LfPEMmBXz1IWn92Wj10Ozlibs88Y6M84PgEsZmu-mkMWL4.jpg?quality=95&crop=388,72,1744,1744&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/andrey.sezemov"
     },
     "antonuvarov90": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/antonuvarov90",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-83.userapi.com/s/v1/ig2/Eaesq8Epxq1NJOxCr8fISCNV5hO9hLqYuWJ48vs31984tCZyautTJdD2L3SUbkFORzvHrkvJiyP89yPR2issh9dJ.jpg?quality=95&crop=632,216,1488,1488&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/antonuvarov90"
     },
     "azizakabulovnachuganova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/azizakabulovnachuganova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-47.userapi.com/s/v1/ig2/6AA5QUoxzyA3QmIVbhZILs2XvJyyquQ4966npihVah1U0rD61mFAbNNMj_AhVC5cvdwWsz5tB9mSnJZQzQaDJjkC.jpg?quality=95&crop=0,0,1000,1000&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/azizakabulovnachuganova"
     },
     "golovin_mikhail_sergeevich": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/golovin_mikhail_sergeevich",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/LepuaCwUyTTZawj7ovQEUMT_gLSTRutnbq3Z4cz5VbjGDROyaPkz_1gojmVrdNhklnq81YYnwOK9EbewhrOqheln.jpg?quality=95&crop=3,0,1249,1249&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/golovin_mikhail_sergeevich"
     },
     "gorbunovsi": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/gorbunovsi",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/CB06NQduaqT1hhDFro_lPU0A97LY5dDXXCKa937SUev1PCnT-OmxTMr4ary34jePK0i_1VqemVjoE7-tRucI_gHy.jpg?quality=95&crop=51,9,521,521&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/gorbunovsi"
     },
     "korshunovane": {
-      "status": "api_error",
+      "status": "unavailable",
       "photo": null,
-      "source": "https://vk.com/korshunovane",
-      "error": "ValueError"
+      "source": "https://vk.com/korshunovane"
     },
     "kundyltatyana": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/kundyltatyana",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-83.userapi.com/s/v1/ig2/uMAPl9jcI8KNRZZzWL5jIR6j5OhCf6WsO7C3I6TrI_WSn7yUxccIHrtCFI5fZxkr7tAOijClPSTN0cHDzyrNhJ_8.jpg?quality=95&crop=0,1,1199,1199&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/kundyltatyana"
     },
     "l.ruzina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/l.ruzina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-94.userapi.com/s/v1/ig2/HZCpvNQ6rzjf3qPFs7reSISipcyZiGWFWhKn-rmTJTC8YFi_evAw-P3PDzDE689Lh_6L2vUchlIAm-4-ol4RtRJc.jpg?quality=95&crop=0,69,713,713&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/l.ruzina"
     },
     "balykovde": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/balykovde",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-24.userapi.com/s/v1/ig2/EwjEeScYVfEWWt4Q6uZ4ZfsnWyLjU-eOy166fPRly6JVFUyil-qD6UbUBmmCjW8xieoogzKTE-a8ZbOB3AlFJDFv.jpg?quality=95&crop=145,1,2077,2077&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/balykovde"
     },
     "bashlykova.mari": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/bashlykova.mari",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-55.userapi.com/s/v1/ig2/BF2k1J-G0rtbbtfgpesZyA4SibFp2LJK8FM5Ac8mfVBY8z7fpUDxx53v4S66zldkRDuj6C3Cq37jflzLtZOTkp-q.jpg?quality=95&crop=269,1,1666,1666&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/bashlykova.mari"
     },
     "julia_byckova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/julia_byckova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-22.userapi.com/s/v1/ig2/WykbTK9AGLj7Dlxm3soAwfN_uPHOULvdcVyDasYkpWB890LGxFYgpdTfXstgA3TdlKcc5ki0-_VupdX85yFaYWif.jpg?quality=95&crop=178,0,617,617&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/julia_byckova"
     },
     "romanvinokurov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/romanvinokurov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-47.userapi.com/s/v1/ig2/o0gh9arKOZEF-zfGlZf22RfZDhV0nnnLMv4zd24jDE2I-YjYUUj7ANeuQluEMzmn0GMM0LM6HwwF6cokzFyWiFyc.jpg?quality=95&crop=9,0,539,539&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/romanvinokurov"
     },
     "goremykinmy": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/goremykinmy",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig2/2dbTZ7WJGocgT66VJ2z7Noe90G-Sk1Zfj6FIqcnC4zsdtSyCoiMmgW50PNlqryZS0s750j0VCZh97TMs7PSgo8is.jpg?quality=95&crop=173,0,528,528&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/goremykinmy"
     },
     "vvedenskaya_i": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vvedenskaya_i",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-27.userapi.com/s/v1/ig2/5-EOwawVv2X_GETV6LxOJjD52R9gIfycWFhF-r0hqSANl0TnU-qPUd6QBmcvYfESbgFlcKW1S25hwnYdLTZU0Gdq.jpg?quality=95&crop=188,276,658,658&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/vvedenskaya_i"
     },
     "vinogradova_len": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vinogradova_len",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig2/Ht-7Ti3myAmru0Nye6O9_BL5fFpdZDRT4I4fA5cN_vCuO_FOU-cgxFvOoXt-Rj38-nSz2WKBkkUdVnKzt7DmIq7j.jpg?quality=95&crop=0,115,850,850&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/vinogradova_len"
     },
     "dkulnev": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/dkulnev",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/bK22lxssiDYp73kRAxBFF6kpcbinPibm5cqdfz_Njid6Vaqfmka2ay8AQjVzVqvmEpV-BG7zrdCb1ElQ0UkDhutG.jpg?quality=95&crop=442,295,937,937&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/dkulnev"
     },
     "rygin": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/rygin",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/BymSseAReDghp2e7d5uMv3K9F-qv8APTW6cdv5yQIH6ODKmAiUgAdCrDpEWmvfnbNNDFFJUz7nJurVS3iaCd2IlC.jpg?quality=95&crop=443,157,1343,1343&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/rygin"
     },
     "pavel_v_shutov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/pavel_v_shutov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-85.userapi.com/s/v1/ig2/FC_FO7vZuMdgyMRt6MIn6eXvVrvEfue3ldpbTq2j8ZWW8wljAmakyrhc1TwFSVD_012zCVREttx7AaZwDj2132tq.jpg?quality=96&crop=64,64,512,512&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/pavel_v_shutov"
     },
     "kostina1920": {
-      "status": "api_error",
+      "status": "unavailable",
       "photo": null,
-      "source": "https://vk.com/kostina1920",
-      "error": "ValueError"
+      "source": "https://vk.com/kostina1920"
     },
     "viktorgorn": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/viktorgorn",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-82.userapi.com/s/v1/ig2/Ov39A-Exby5YdMoHunBDImwIOG6ZISdW7DjsR7b_v01aSBfhjWRJLojwfvqeKeBhaefN8hf4fb66-XKXyLyrR0rpX7d_Mg.jpg?quality=95&crop=1,36,795,795&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/viktorgorn"
     },
     "id666378177": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/id666378177",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/GAPwewoSZvYQjuY5eEQTb3IKTB_B9Jy1YutcNlA9zyFq9Qqucg7O6ENQJjjuy_JLgAUD_CHqyLQy-tZzp-CpcKCA.jpg?quality=95&crop=192,35,775,775&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/id666378177"
     },
     "o.v.tarasenko": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/o.v.tarasenko",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-94.userapi.com/s/v1/ig2/xm-azt3hxsBoTgDMTJNGejeB2L9ee_JZkJg_DOeVDtZJ_pXtx0BGAxHku-JXz6LLBPNmcvBZY2UxoxUhnw9GGjFa.jpg?quality=95&crop=327,37,993,993&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/o.v.tarasenko"
     },
     "tatyana_filippova20": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tatyana_filippova20",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-83.userapi.com/s/v1/ig2/va-Om4rCZObsq5OJ9TXlK3Uvf4TIhSTxTBlZA6stOvcNIUWVjf1QmC6mVwDj3LEiTFNacGHEZbASFydK_ElLJFqh.jpg?quality=95&crop=204,138,495,495&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/tatyana_filippova20"
     },
     "dmitrieva_n_n": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/dmitrieva_n_n",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-89.userapi.com/s/v1/ig2/4z5sOQVVPCR9J__8h2YrYK3McRtluJI5RE9kqRKbBy9pUnc2ze8EvT4D3l01UrLC22S7MOqY_u6tMCjrvDnu4K3Q.jpg?quality=95&crop=42,280,654,654&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/dmitrieva_n_n"
     },
     "elena__konnova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elena__konnova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig1/VRYq0o06ib9nVyCydZp13zkvOR76NpURqwJGBB4TJfVwLPsRaYQdg0XcRqHvZ9r3S0V5on36.jpg?quality=96&crop=0,101,1193,1193&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/elena__konnova"
     },
     "elena_laplanche": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elena_laplanche",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-47.userapi.com/s/v1/ig2/uaxHgKpNkk1K09gPmKxhjomBJLFeYGQZB-vVEWMUKkiRRZodv5SXVVe9NOPX0579wqrw3QxbS_fNroC86Q7RaYBJ.jpg?quality=95&crop=57,65,1553,1553&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/elena_laplanche"
     },
     "andreymordovin": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/andreymordovin",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/BSzu1S_kkm3WlAC_pIVae5SUCCaGOBJ3-2UwbQIq13wqJaiaw0eUeRInOFE8SbzrTtB-zzsrBmjrNswcXoMlWhfD.jpg?quality=96&crop=300,335,731,731&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/andreymordovin"
     },
     "baranchikova_natalia": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/baranchikova_natalia",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-70.userapi.com/s/v1/ig2/CjPcSseX7RzfiYePrPhPFkt9pY-0gE9-XEl5Kn5b1OeySY-kYf_eNWXhFDJfanZVFE4hdAJzgwX38ClP_hy6ak6E.jpg?quality=95&crop=80,240,1370,1370&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/baranchikova_natalia"
     },
     "galinadolgashova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/galinadolgashova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-67.userapi.com/s/v1/ig2/s9quFoitOoxWNH2RHoNuUdZmAK-vRqP_nmcM1GQRX0HhpFGtczj5wbnyzveaDpvMbI2TGfSSO4I4ppqUwt8xL096.jpg?quality=95&crop=1,271,1919,1919&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/galinadolgashova"
     },
     "anna_ezhkova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/anna_ezhkova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-49.userapi.com/s/v1/ig2/pDshZ3SNf63Es2UEQX8IjHnEHITugFnYEBijsZdRLpg20SmhrimLwcL6CJ7l2anLWj_vix-hbicmuCL4VRClZOl1.jpg?quality=95&crop=0,205,750,750&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/anna_ezhkova"
     },
     "liudmila_zapl": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/liudmila_zapl",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-26.userapi.com/s/v1/ig2/4XUfs0-ADFa7L46IAFioL6mrqcs9VFolrW9CphSuds11jGFy5oPQ8NlCSNCX3DNblYMI--1Nyk57HpWgMhVI48Mr.jpg?quality=96&crop=217,216,1728,1728&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/liudmila_zapl"
     },
     "nadezhda_kuskova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/nadezhda_kuskova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/mZar6qM4g1Pvl2NpGXHy6LVAC6X1WxG1fX0tdF0Lru5FyiZT5Vvjep9QNi4fNf9WIu3b6m-kUuI5GnpkIG98f6Qh.jpg?quality=96&crop=20,40,200,200&as=32x32,48x48,72x72,108x108,160x160&ava=1&cs=200x200",
+      "source": "https://vk.com/nadezhda_kuskova"
     },
     "sysoevala": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/sysoevala",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-22.userapi.com/s/v1/ig2/BgduRn0bmB7f_bXHrKXIIu_KukifCxKCmE-XLg30TEexLL8B-vmPWk1Rya5ulVueJzwcoCV7_vUWonQQXeH3yAof.jpg?quality=96&crop=79,93,416,416&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/sysoevala"
     },
     "ib.glotova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ib.glotova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-24.userapi.com/s/v1/ig2/powsohG6tOLNcqQrDxsq74dMMmEII-jSDG9YtxK--M0Le-hf01uAzvynBNa5k1ckIiSZP8J-8ZBAaY8Ki7XU1trm.jpg?quality=95&crop=233,317,410,410&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/ib.glotova"
     },
     "demchenkov_ml": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/demchenkov_ml",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-55.userapi.com/s/v1/ig2/pNeZV1PXLdbqH1JVOtNL2Rd_mHpk5rtghBD54ua1pBglc1J8aGA3UFCLl0Lbmw0Tgo5GiAstwVtmmOeLsk2K83Z0.jpg?quality=95&crop=1435,868,454,454&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/demchenkov_ml"
     },
     "svetlana_rodnik": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/svetlana_rodnik",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-55.userapi.com/s/v1/ig2/UpwQn1sVTGrvbYZ7XamWoFQ7zH5WlRpDZ7r9J9YzvLNDGUwRuHq-YJQMxvqnLScubCRuW5wDltgt4tXY1NnsuXbf.jpg?quality=95&crop=141,46,277,277&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/svetlana_rodnik"
     },
     "novoselskayala": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/novoselskayala",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-55.userapi.com/s/v1/ig2/aIiqwwXLSJwQk5SM_hRdAfDtFmFASryXoZJAe9EPwgxkxcXWSfeGJFn5c_TgkxXsMMdKXPWPrvCrjLVjj6gcfUAt.jpg?quality=95&crop=0,0,1040,1040&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/novoselskayala"
     },
     "tkachip": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tkachip",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-94.userapi.com/s/v1/ig2/_luUtzYDg-QDbGUrRn51rxkzOtElVUnI27awTMeEGG2w1o5Jii3XvV8NCxWpK_g5XS-k8BYlmaRqHE8FcfKY20ZE.jpg?quality=95&crop=0,0,1000,1000&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/tkachip"
     },
     "tatiyana_donskaya": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tatiyana_donskaya",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-52.userapi.com/s/v1/ig2/3jjQz0H9tvUxHlpxeCK-Jla8vQTtvFLQfCsloRSTlP9zA0Zd07VBXGygoGEopz-7veDq59CQhMJnRRvssSovmP8YJBL1mQ.jpg?quality=95&crop=361,123,1160,1160&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/tatiyana_donskaya"
     },
     "i.v.zolkina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/i.v.zolkina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-72.userapi.com/s/v1/ig2/83hozYaNosXi_N3HKyCymBHTn-Vs2WgLcRucEJJlHgVVSHCjLzp8eEkOAIXwLArUhZNEAQQlPwmXTV01h54mdl2a.jpg?quality=95&crop=0,0,1192,1192&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/i.v.zolkina"
     },
     "albinakomissarova2022": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/albinakomissarova2022",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/v2sKnYwo1b48gbVOWCLCfrp5D7Ew8K9pDCHmwQQLpIrSwsEMVn1TuVuNzQiwKAmWiDZOFUwE2khPeZW7Uub8Fd9M.jpg?quality=95&crop=0,0,646,646&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/albinakomissarova2022"
     },
     "sovchinnikova79": {
-      "status": "api_error",
+      "status": "unavailable",
       "photo": null,
-      "source": "https://vk.com/sovchinnikova79",
-      "error": "ValueError"
+      "source": "https://vk.com/sovchinnikova79"
     },
     "ap.yashkin": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ap.yashkin",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/LYxfHQ0-VLexqC-RwsB3_2ilPuuZRoMuKB0ysTWh9Z0NrH9CbjkOBYBeAPqg7WjP3bxRSrg_GG-KpHmm38hW5r-k.jpg?quality=95&crop=17,15,883,883&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ap.yashkin"
     },
     "aabulatov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/aabulatov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/BiGI1ln_pO5oLMMwH--ncxCecCWEnmtAzZJblepZYY6wRr63kG9ONzMSvZNLusSEcegVjnozAw9ESVfQgy0ZH-WI.jpg?quality=95&crop=1,1,959,959&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/aabulatov"
     },
     "vidutinaov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vidutinaov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-88.userapi.com/s/v1/ig2/Yw-Hc94yjHsEjHJASvSm2vqYTESVJhE_tmNuLqiebAZ8ulT_hGeOWmDWGokIs4j_Jv4apzAZK8sk2nbZzqGGzXTT.jpg?quality=95&crop=459,270,853,853&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/vidutinaov"
     },
     "nuykinakv": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/nuykinakv",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/CdNpmFlArVMcMrs28HEtJUcWRVf-NMZ_8Ug6QX_0Gb-oaNptaNSqSDxLFX_0Q8STx6OLuiSImHZFEhMtP3k_3TiA.jpg?quality=95&crop=242,888,955,955&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/nuykinakv"
     },
     "elena.rubtsovanazarova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/elena.rubtsovanazarova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/rSaGVvZUKxYMfER68ELAVQ6D9qRNFAyQFe3bV9bMe-07UQZ4rwQo-RynDWjFvOCVNmmK1NF7KZ1zTcGi6JNujHi-.jpg?quality=96&crop=7,0,1155,1155&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/elena.rubtsovanazarova"
     },
     "tishkovaea": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tishkovaea",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-21.userapi.com/s/v1/ig2/ZGC2wYkHkq86HotoJ3F9ilQyegiKiBWi7fAnMAoOxiB2XOCsUN__QWPZXcXEslojErFYC7FD6YPmF5rpK6JvWzZ0.jpg?quality=95&crop=58,0,954,954&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/tishkovaea"
     },
     "gavrilinams": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/gavrilinams",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-83.userapi.com/s/v1/ig2/BeUoLOK_BXzWg8a7AjtokFj07US9Hez1Gw9f4j2wne3KM6N5rFMwocwuvxlQKV9lsRjfPe7jIlg8HVOj2t87g6SQ.jpg?quality=95&crop=155,0,805,805&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/gavrilinams"
     },
     "ekaterina.tyutyunnikova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ekaterina.tyutyunnikova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-19.userapi.com/s/v1/ig2/yFb5i9MyM9wXiOl5d8pkFZ0GSo-7b5fWPosdWZ1pgiZLo0q1ZAdPW7zCDT3kElBZZo94bBKV7LlFhb6LCFRD3KNP.jpg?quality=95&crop=378,383,1207,1207&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/ekaterina.tyutyunnikova"
     },
     "natalia_shabasheva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/natalia_shabasheva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/ZtNqFBjP4TE3OLLJac5nUnWvOg6aDVNQrOVmH52Uxq-BhIq_3gtHDocylu4d8KyM3Sl4q3prIB_qu4CQyNZo7Neg.jpg?quality=95&crop=71,168,1757,1757&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/natalia_shabasheva"
     },
     "shmakova_os": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/shmakova_os",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-96.userapi.com/s/v1/ig2/BgbrW_nLhfBzl2l4HOBjjNVA6BnO06ZbD5wuH7Wf9AxFzokYA7ZD2DUreuXsM03Caw5r82KMytSETn9CeP_sq_cJ.jpg?quality=95&crop=69,47,424,424&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/shmakova_os"
     },
     "abramovaei_chs": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/abramovaei_chs",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/vLwDr54PJl7gHRhxAYgw-D_sskR089duNHJFlBQbRGoo1VIe35ZLs_bOX_WvSTGBk8Kkgami0a62_CociCAzDt8U.jpg?quality=96&crop=71,163,1298,1298&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/abramovaei_chs"
     },
     "antongorbachev": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/antongorbachev",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-55.userapi.com/s/v1/ig2/V8h5utrg8PGUCqawiO4puuG0foIObktsEETMb2r32A-KktefGQzAQgMgGTJUqLbwLRobk0mxW1avG08XG0--v-Pw.jpg?quality=95&crop=0,0,866,866&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/antongorbachev"
     },
     "petr.kurapov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/petr.kurapov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-57.userapi.com/s/v1/ig2/_dD_iFazpl69sdjLRuy0V5wf_msxfGNXyk-ySattYoH9FtOp8VdFSXR88Q9KHJ8C3TKzdMMjGmu5dSkCnupu-93b.jpg?quality=95&crop=464,20,776,776&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/petr.kurapov"
     },
     "i_v_morozova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/i_v_morozova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-89.userapi.com/s/v1/ig2/t1pCpk4kdUtHLYldBNgKuMGZ6QTuOFfuPTr5c4MKOo5gHgoOM0I96HUoN6JEZaUZDUSOeXVv9_Ew18xttnZh-Tpd.jpg?quality=95&crop=3,1,1073,1073&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/i_v_morozova"
     },
     "smirnovvalerii": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/smirnovvalerii",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-28.userapi.com/s/v1/ig2/nc1AMcHzL9X3vhWA769KgY-S0LST0sH7ECvtvbu_fOoITPQ4vkewXnqU4dCsh0PBophMQjO3TE5HhyraWxXpiKFm.jpg?quality=95&crop=214,125,517,517&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480&ava=1&cs=200x200",
+      "source": "https://vk.com/smirnovvalerii"
     },
     "andreevasvetlanaaleksandrovna": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/andreevasvetlanaaleksandrovna",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-19.userapi.com/s/v1/ig2/OU7tQX8s6fOoWzAqLpkP2n0w7Noos_z9bsq9OeT5v21J2zfGCz4lNtDO5kaJwq6T6obks_If3CaPeubyYBbT94cj.jpg?quality=95&crop=104,130,546,546&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/andreevasvetlanaaleksandrovna"
     },
     "lukoyanov_chs": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/lukoyanov_chs",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-62.userapi.com/s/v1/ig2/OyauOnYVkcrYcGyC-6TJD-FtHuVBUwaMAPReVV4MTUT0_Vz-KY3wC2qjelFzEyeXBpYGE60Ssx6c_ws59XtbxxmD.jpg?quality=95&crop=0,0,1000,1000&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/lukoyanov_chs"
     },
     "maxsimmorozov": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/maxsimmorozov",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-85.userapi.com/s/v1/ig2/004_8Pj4Q3dONDGOAJglb1D0Mzg4TkfUYUBREy87pjOPxh4lV1LB7mbaPvJmreWUumY24_-nX_sWgHfipotHc21j.jpg?quality=95&crop=111,111,949,949&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/maxsimmorozov"
     },
     "riakhmiatullina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/riakhmiatullina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-89.userapi.com/s/v1/ig2/iUyI9Gy8Y_xBOJTTx7_My0Ged-mlGDLbdK_hWVZpBX-NnnkmCijCK6z4TCSidCzDSX8MqILH0w1V85-8MyShW4fX.jpg?quality=95&crop=0,166,743,743&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/riakhmiatullina"
     },
     "tozikam": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/tozikam",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig1/LMd4huN9GopA4UrYdfxg_I7us2DUlgd-aGIINNzGzCXJ4ypjqugQkChkSL_tTwnrTSdW_c1X.jpg?quality=96&crop=771,211,1012,1012&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/tozikam"
     },
     "bogdan.konoshenko": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/bogdan.konoshenko",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig2/lwTr0lHl1FaaFtCyU32EgBZTpkMk1tkevVG30JzTuy0FIAI3Y3tbUEPBv-hRQmgXbvRcMtAk_dGfE4U5slLL2cT9.jpg?quality=95&crop=161,260,1216,1216&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080&ava=1&cs=200x200",
+      "source": "https://vk.com/bogdan.konoshenko"
     },
     "eilarionova_556": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/eilarionova_556",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-23.userapi.com/s/v1/ig2/xQW9wR_8ZU8ApvZ8F_W12InhTk3dPMBkhuG5NN3NpLeciO07XKlGbv3ovVd2FGKISrLEE9D8u4uEBjLyTWyrvHkm.jpg?quality=95&crop=0,74,617,617&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/eilarionova_556"
     },
     "polozovs": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/polozovs",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-89.userapi.com/s/v1/ig2/0fdHCUO8bimk3v1DSqqR7WJ06RzXp--6SBNwE1MJA9JDUctRy3RV96xis7KYiTzk3pihoTlwsr0Etc7gxhv6LvLJ.jpg?quality=95&crop=283,251,1073,1073&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/polozovs"
     },
     "i_rodina": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/i_rodina",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-85.userapi.com/s/v1/ig2/jBGcwZRk68ZY1T5KbDmG1Mg5evuPW-8dZjA2Euz_GVHOuO-Nq42Tk9Yp4psGujsuOIMkmqJ9XbsSbOBqadtlcNBP.jpg?quality=95&crop=40,4,296,296&as=32x32,48x48,72x72,108x108,160x160,240x240&ava=1&cs=200x200",
+      "source": "https://vk.com/i_rodina"
     },
     "smitsb": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/smitsb",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-63.userapi.com/s/v1/ig1/oBpU9oyaYSNW0SElfXcK6xgKBdT1AP3-NLNq2Dak-7YlYnWhUbPA1qordCuoRAtsFAWZq3vV.jpg?quality=96&crop=145,0,479,479&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360&ava=1&cs=200x200",
+      "source": "https://vk.com/smitsb"
     },
     "vasiliy_meleshin": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/vasiliy_meleshin",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-40.userapi.com/s/v1/ig2/dALdu1rbAlZd-HMQsWLnI4LToNwMfqGiq18MR5W6_0zCguG7EmuT2JZwahaVTD-H7sDOZo67gVt8qel0FtqBaa1E.jpg?quality=95&crop=294,527,1073,1073&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/vasiliy_meleshin"
     },
     "mironovdp": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/mironovdp",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-96.userapi.com/s/v1/ig2/05CuLzBfg_uVFB78-p_ySXBqgZh2eXBrpUeqUD1zx60OMPBaT5ZyAudqh7SwZue9s50vGpuaW6UPAJacLlrLZij5.jpg?quality=95&crop=64,213,686,686&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&ava=1&cs=200x200",
+      "source": "https://vk.com/mironovdp"
     },
     "repkinae": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/repkinae",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/3erssuJZAXW9ibpjp5B8fm0qcL8PLu-Xwu6XHiELhCrpiHGpDOr8DH4Qh1O0S0qm_owwjYNn1vIPGXI4hwWfj5HX.jpg?quality=95&crop=268,394,755,755&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/repkinae"
     },
     "rybakovaev_1582": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/rybakovaev_1582",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-95.userapi.com/s/v1/ig2/gmWGK3NCfOgXh_lxdGKIeVC6rDUqOqx0yLJb79C1qtNpipF_s4M6e8nTbCi6nBE5LIc4c-z6WkrCA18p43FstCGT.jpg?quality=95&crop=206,73,622,622&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/rybakovaev_1582"
     },
     "n_shindryayeva": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/n_shindryayeva",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/Zl4CwAcdzXK7jx4e0I59dy1exWnqfJb92-zOKNzooOJUUyKO5pq6DGLgFpxkT-roETozth2vaMh4hyNxpZRNPR-Y.jpg?quality=95&crop=78,58,834,834&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/n_shindryayeva"
     },
     "ms_zotova": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ms_zotova",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-26.userapi.com/s/v1/ig1/0z0o1kB13FnN6IpayoAxRQnIlUz24tLPYL_DwKCw5UX2gTncSRFxxoItQG8qvqPbEv2YM7J2.jpg?quality=96&crop=212,0,720,720&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ms_zotova"
     },
     "sergey_kashlev": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/sergey_kashlev",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/t10A2qq7mshAubn9W4_W1WAppdQRABg6JCfI8Gzg0TyjsuA0rtJkEsG_08CE5fzca_rEpKajKm_H2nPqGXF6hXrj.jpg?quality=96&crop=0,269,1620,1620&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/sergey_kashlev"
     },
     "ikurash1": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/ikurash1",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/iNnaFUw2tiCMaoVTBspSQbSjPAy0TSjarSNG2Rkj_GtMvNXuLnrqjAshAzK_7dYA4ExCX4Kaz1VB4WPcRtARlsfq.jpg?quality=95&crop=103,1,895,895&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/ikurash1"
     },
     "alexandr_novikov_chu": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/alexandr_novikov_chu",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-86.userapi.com/s/v1/ig2/gwoZf1h41yYwFxpp6ndug-4MEK7ZmF7fGqsjIysElhSgmVeR5_HHVJZwe76pzgLWmh5f4G2xTMLWD33_4X5Ry90J.jpg?quality=95&crop=156,89,1408,1408&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/alexandr_novikov_chu"
     },
     "n.ptushkina56": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/n.ptushkina56",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-29.userapi.com/s/v1/ig2/8hqSbOOdheikJKyqIr-dDMSA6uHQHOvqjXeBdlRZrKpdT6HVT0d60PNFUudAs6Kpz6ZD7qrHmR0ytQbptuZRDwza.jpg?quality=95&crop=642,747,971,971&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/n.ptushkina56"
     },
     "bordovskaya_og": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/bordovskaya_og",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-19.userapi.com/s/v1/ig2/pZfkwply5OZ2LJ53sGneOw1LctZGzlq6UOKP4A6e9syjTqnWuPtTM1l1oXR_jpkzzkF_TegT0GirJFkYpOS6nsDf.jpg?quality=95&crop=0,124,1708,1708&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440&ava=1&cs=200x200",
+      "source": "https://vk.com/bordovskaya_og"
     },
     "gunina_ea": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/gunina_ea",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-30.userapi.com/s/v1/ig2/iCacnRKT5Sv_v3wjcyNnWSvMFe2UHy9kcvmsSl93uJ7841dKPhelcbMiFnA7d1ezl8bxljK19frIpRSdtd-KEPZu.jpg?quality=95&crop=183,99,550,550&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540&ava=1&cs=200x200",
+      "source": "https://vk.com/gunina_ea"
     },
     "nleonovannnn": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/nleonovannnn",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-20.userapi.com/s/v1/ig2/FZ3cUeeFoGZfGCBhKNOld2WC0yZPI_5l7mE6Sv71ntOvZu7ZBE0eZ0e19nsd0XPDWBm6BbeNXd7UQR_UG8D6KZ1t.jpg?quality=95&crop=0,0,832,832&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/nleonovannnn"
     },
     "markova_tat_vl": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/markova_tat_vl",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun1-84.userapi.com/s/v1/ig2/l1eZNtbuVDa7ESn37CkRJSC8BpfBGHrTItUf49PH-Rf_MddjOKtnAoBAXKu1uOgRhv3Q6O9GX7HEdrwg1Wj2r9Ye.jpg?quality=95&crop=273,42,1347,1347&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280&ava=1&cs=200x200",
+      "source": "https://vk.com/markova_tat_vl"
     },
     "smirnovaev1": {
-      "status": "api_error",
-      "photo": null,
-      "source": "https://vk.com/smirnovaev1",
-      "error": "ValueError"
+      "status": "success",
+      "photo": "https://sun9-7.userapi.com/s/v1/ig2/FZejS88ns2dGhC7YtnaRn-lZoQnT_YTwCUOWgHqns4kp8p6XSK79ErqKrfTDoNMrRzRbVjFnsGo7wwNaMrjF-qI4.jpg?quality=95&crop=0,0,1000,1000&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=200x200",
+      "source": "https://vk.com/smirnovaev1"
     }
   }
 }

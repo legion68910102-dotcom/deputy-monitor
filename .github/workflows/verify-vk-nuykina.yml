@@ -36,12 +36,17 @@ jobs:
               return data.get("response"), data.get("error", {}).get("error_code")
           def emit(**fields):
               print("NUYKINA_PROBE " + json.dumps(fields, ensure_ascii=False), flush=True)
-          for label, target in [("provided_id",str(uid)), ("stored_handle","nuykinakv")]:
-              users, code = call("users.get", user_ids=target, fields="screen_name")
-              if code or not isinstance(users,list) or len(users)!=1:
-                  emit(source=label,result="metadata_unavailable",code=code)
+          # Both references resolved to the same ID in the preceding metadata-only diagnostic.
+          # One standard public wall request, no storage, no fallback on access denial.
+          wall,code=call("wall.get", owner_id=uid, count=1, filter="owner")
+          if code is not None:
+              emit(result="wall_error", code=code, public_id=uid)
+          else:
+              items=wall.get("items") if isinstance(wall,dict) else None
+              if isinstance(items,list) and items and all(isinstance(p,dict) and p.get("owner_id")==uid for p in items):
+                  emit(result="wall_read_ok", public_id=uid, count=len(items))
+              elif isinstance(items,list) and not items:
+                  emit(result="empty_wall_response", public_id=uid)
               else:
-                  u=users[0]
-                  emit(source=label, result="metadata", id=u.get("id"), first_name_matches=u.get("first_name","").casefold()=="карина", last_name_matches=u.get("last_name","").casefold()=="нуйкина", is_closed=u.get("is_closed"), deactivated=bool(u.get("deactivated")))
-              time.sleep(1)
+                  emit(result="unexpected_or_mismatched_response")
           PY

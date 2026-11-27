@@ -1,0 +1,195 @@
+name: Record mobile tour with slow narration and table swipes
+on:
+  push:
+    branches: [presentation-media]
+    paths: ['.github/workflows/record-slow-tour.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install recording and narration tools
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+          python -m pip install --disable-pip-version-check torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install --disable-pip-version-check numpy omegaconf imageio-ffmpeg
+          curl -fL --retry 2 -o silero.pt https://models.silero.ai/models/tts/ru/v5_5_ru.pt
+      - name: Record actual interface and one Tsaritsyno deputy
+        run: |
+          set -euo pipefail
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/deputy-tour-http.log 2>&1 &
+          trap 'kill $! 2>/dev/null || true' EXIT
+          cat > real-tour.mjs <<'JS'
+          import { chromium } from 'playwright';
+          import fs from 'node:fs';
+          import {performance} from 'node:perf_hooks';
+          const browser=await chromium.launch({headless:true});
+          const context=await browser.newContext({viewport:{width:430,height:932},deviceScaleFactor:1,isMobile:true,hasTouch:true,locale:"ru-RU",timezoneId:"Europe/Moscow",recordVideo:{dir:"record",size:{width:430,height:932}}});
+          const clock=performance.now();
+          const page=await context.newPage();
+          const marks=[], opened=[];
+          const sleep=ms=>page.waitForTimeout(ms);
+          const stamp=(key,text)=>{marks.push({key,text,time:(performance.now()-clock)/1000});console.log("SCENE",key,marks.at(-1).time.toFixed(2),true)};
+          const errors=[];
+          page.on("pageerror",e=>errors.push(e.message));
+          await page.goto("http://127.0.0.1:8765/index.html",{waitUntil:"domcontentloaded",timeout:40000});
+          await page.waitForFunction(()=>Number(document.getElementById("total")?.textContent)>0&&document.querySelectorAll("#profiles .district-group").length===16,{},{timeout:90000});
+          await page.waitForTimeout(1000);
+          await page.evaluate(()=>{
+            const e=document.createElement("div");e.id="demo-touch-indicator";
+            Object.assign(e.style,{position:"fixed",width:"34px",height:"34px",border:"3px solid #fff",borderRadius:"50%",background:"#16834d99",boxShadow:"0 0 0 2px #175d43",zIndex:"2147483647",pointerEvents:"none",display:"none",transform:"translate(-50%,-50%)",transition:"opacity .12s"});document.body.append(e);
+          });
+          async function scroll(loc,align="start"){
+            await loc.evaluate((e,a)=>e.scrollIntoView({block:a,behavior:"instant"}),align);
+            await sleep(120);
+          }
+          async function tap(loc,hold=180){
+            await scroll(loc,"center");
+            const b=await loc.boundingBox();if(!b)throw Error("No target bounds");
+            const x=b.x+b.width/2,y=b.y+Math.min(b.height/2,24);
+            await page.evaluate(({x,y})=>{let e=document.getElementById("demo-touch-indicator");e.style.left=x+"px";e.style.top=y+"px";e.style.display="block";e.style.opacity="1";},{x,y});
+            await sleep(100);
+            await page.touchscreen.tap(x,y);
+            await sleep(hold);
+            await page.evaluate(()=>{let e=document.getElementById("demo-touch-indicator");if(e)e.style.display="none";});
+          }
+          async function swipeTable(selector,label){
+            const loc=page.locator(selector).first();
+            if(!await loc.count()||!await loc.isVisible()){console.log("TABLE_MISSING",label);return false;}
+            await scroll(loc,"center");
+            const dim=await loc.evaluate(e=>({w:e.clientWidth,sw:e.scrollWidth,h:e.clientHeight}));
+            if(dim.sw-dim.w<20){console.log("TABLE_NO_OVERFLOW",label,JSON.stringify(dim));return false;}
+            const b=await loc.boundingBox();
+            const top=Math.max(0,b.y),bottom=Math.min(932,b.y+b.height);
+            const x1=Math.min(409,b.x+b.width-34),x2=Math.max(22,b.x+34),y=(top+bottom)/2;
+            const max=dim.sw-dim.w;
+            await loc.evaluate(e=>e.scrollLeft=0);
+            await sleep(900);
+            async function drag(from,to,start,target){
+              await loc.evaluate(async(e,{from,to,y,start,target})=>{
+                const dot=document.getElementById("demo-touch-indicator");
+                dot.style.display="block";dot.style.opacity="1";dot.style.top=y+"px";
+                const began=performance.now();
+                await new Promise(resolve=>{function frame(now){const t=Math.min(1,(now-began)/1450);const k=t*t*(3-2*t);e.scrollLeft=start+(target-start)*k;dot.style.left=(from+(to-from)*k)+"px";if(t<1)requestAnimationFrame(frame);else resolve();}requestAnimationFrame(frame);});
+                dot.style.display="none";
+              },{from,to,y,start,target});
+              await sleep(850);
+            }
+            await drag(x1,x2,0,Math.round(max/2));
+            await drag(x1,x2,Math.round(max/2),max);
+            const right=await loc.evaluate(e=>e.scrollLeft);
+            await sleep(500);
+            await drag(x2,x1,max,0);
+            const left=await loc.evaluate(e=>e.scrollLeft);
+            console.log("TABLE_SWIPE",label,JSON.stringify({right,left,max}));
+            if(right<20||left>5)throw Error("Table did not actually scroll: "+label);
+            return true;
+          }
+          async function open(loc){if(!await loc.evaluate(e=>e.open)){await tap(loc.locator(":scope > summary"));if(!await loc.evaluate(e=>e.open))throw Error("Did not open details");}}
+          async function close(loc){if(await loc.evaluate(e=>e.open)){await tap(loc.locator(":scope > summary"),60);if(await loc.evaluate(e=>e.open))throw Error("Did not close details");}}
+          const section=id=>page.locator("#"+id+" > details");
+          const note=async(key,hold)=>{const s=marks.at(-1);const elapsed=performance.now()/1000-clock/1000-s.time;await sleep(Math.max(100,hold*1000-elapsed*1000));};
+          try{
+          await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+          stamp("intro","Представляем цифровой профиль депутата. Перед вами настоящая рабочая версия приложения Юго-восточного, точнее Южного административного округа Москвы. Покажем, как пользоваться системой на экране телефона.".replace("Юго-восточного, точнее Южного","Южного"));
+          await note("intro",11);
+          stamp("overview","Открываем обзор мониторинга. Здесь видны число депутатов, объём сохранённых публикаций и результаты проверки ВКонтакте. Если данные недоступны, это не означает, что депутат не работает.");
+          await open(section("overview"));await scroll(section("overview").locator(":scope > summary"));await sleep(6000);await page.locator("#total").scrollIntoViewIfNeeded();await note("overview",12);await close(section("overview"));
+          stamp("profiles","Теперь открываем профили депутатов. В справочнике представлены все шестнадцать районов Южного округа. Для примера выберем Царицыно.");
+          await open(section("deputies"));await scroll(section("deputies").locator(":scope > summary"));await sleep(2200);
+          const groups=page.locator("#profiles .district-group");const group=page.locator('#profiles .district-group[data-district="Царицыно"]');
+          if(await group.count()!==1)throw Error("Tsaritsyno district missing");
+          await scroll(group.locator(":scope > summary"),"center");await sleep(1000);await note("profiles",8);
+          stamp("district","Открываем район Царицыно. Здесь есть список депутатов, телефон приёмной Совета депутатов и ссылки на официальные источники. Теперь выберем одного депутата и посмотрим его карточку.");
+          await open(group);await scroll(group.locator(":scope > summary"));await sleep(2000);
+          const cards=group.locator(".people > .deputy-tile > details");if(!await cards.count())throw Error("No deputy cards");
+          await scroll(cards.first().locator(":scope > summary"),"center");await note("district",12);
+          stamp("card","В карточке депутата отображаются доступные биографические сведения, фотография и статистика публикаций. Можно проверить статус источника и перейти к оригинальной странице. Все остальные карточки открываются точно так же.");
+          const card=cards.first();const name=await card.locator(":scope > summary .deputy-name").textContent();await open(card);await scroll(card.locator(":scope > summary"));await sleep(3500);
+          await page.evaluate(()=>window.scrollBy({top:330,behavior:"smooth"}));await sleep(2500);opened.push({district:"Царицыно",name:name?.trim()});await note("card",13);await close(card);
+          stamp("manage","В этом же разделе находятся инструменты управления составом. Можно проверить актуальность списка на официальном сайте, добавить нового депутата или перенести выбывшего в архив. Во время демонстрации ничего не меняем.");
+          for(const cls of [".manage-add",".manage-remove"]){const m=group.locator(cls).first();if(await m.count()&&await m.isVisible()){await open(m);await scroll(m.locator(":scope > summary"));await sleep(2300);await close(m);}}
+          await note("manage",12);await close(group);await close(section("deputies"));
+          stamp("feed","Открываем ленту публикаций. Выбираем период и можем найти записи по фамилии депутата. Видим сохранённые публикации, доступные показатели и ссылки на оригинальные записи. Сдвигаем таблицу влево, чтобы увидеть остальные столбцы, и возвращаемся обратно.");
+          await open(section("activity"));await scroll(section("activity").locator(":scope > summary"));await sleep(4000);
+          const firstPerson=await page.evaluate(()=>{const rs=allRows();return (window.deputyRoster.find(p=>p.district==="Царицыно"&&p.handle&&rs.some(r=>r.profile===p.handle))||window.deputyRoster.find(p=>p.handle&&rs.some(r=>r.profile===p.handle))).name;});
+          const search=page.locator("#activity-person-search");await scroll(search,"center");await search.fill(firstPerson);await search.dispatchEvent("change");await sleep(2000);
+          const firstRow=page.locator("#posts tr").first();if(await firstRow.count()){await scroll(firstRow);await sleep(900);if(!await swipeTable("#activity .activity-excel-scroll","feed"))throw Error("Feed swipe unavailable");}
+          await search.fill("");await search.dispatchEvent("change");await note("feed",12);await close(section("activity"));
+          stamp("report","В отчётах выбираем депутата и период. Нажимаем просмотр на экране. Прокручиваем таблицу в обе стороны, чтобы просмотреть все столбцы. Можно скачать таблицу за выбранный период или общий отчёт по округу.");
+          await open(section("report"));await scroll(section("report").locator(":scope > summary"));await sleep(2500);const rep=page.locator("#report-person");await scroll(rep,"center");
+          const options=await rep.locator("option").evaluateAll(es=>es.map(e=>({value:e.value,text:e.textContent})));const chosen=options.find(o=>o.text?.includes(firstPerson))||options[1];if(chosen)await rep.selectOption(chosen.value);
+          await sleep(1000);await tap(page.locator("#report-preview"));await sleep(3500);
+          const reportArea=page.locator("#report-preview-area");if(await reportArea.isVisible()){await scroll(reportArea);await sleep(1000);if(!await swipeTable("#report-preview-area .report-excel-grid","report"))throw Error("Report swipe unavailable");}
+          await note("report",11);await close(section("report"));
+          stamp("ranking","Следующая вкладка — рейтинг депутатов. Выбираем показатель: число публикаций, лайки, комментарии, репосты или просмотры. Прокручиваем таблицу по горизонтали. Рейтинг характеризует только наблюдаемую публичную активность.");
+          await open(section("ranking"));await scroll(section("ranking").locator(":scope > summary"));await sleep(3000);const metric=page.locator("#ranking-metric");await scroll(metric,"center");await metric.selectOption("likes");await sleep(1200);await tap(page.locator("#ranking-refresh"));await sleep(2500);const rankRow=page.locator("#ranking tbody tr").first();if(await rankRow.count()&&await rankRow.isVisible()){await scroll(rankRow);await sleep(900);if(!await swipeTable("#ranking .tablewrap","ranking"))throw Error("Ranking swipe unavailable");}await note("ranking",12);await close(section("ranking"));
+          stamp("analysis","Анализ деятельности по текстам. Здесь используются пятнадцать утверждённых категорий. Выбираем депутата и открываем конкретную категорию, чтобы увидеть основания классификации и публикации. Анализ не заменяет проверку фактов.");
+          await open(section("activity-analysis"));await scroll(section("activity-analysis").locator(":scope > summary"));await sleep(2500);
+          try{await page.locator("#activity-person").selectOption(firstPerson,{timeout:5000});await page.waitForFunction(()=>document.querySelectorAll("#activity-cards button").length===15,{},{timeout:12000});await sleep(500);await scroll(page.locator("#activity-cards"));await sleep(3500);const cats=page.locator("#activity-cards button");if(await cats.count()){await tap(cats.first());await sleep(2200);await swipeTable("#activity-analysis .tablewrap","analysis");const posts=page.locator("#activity-posts details").first();if(await posts.count()&&await posts.isVisible()){await open(posts);await scroll(posts.locator(":scope > summary"));await sleep(5000);}}}catch(e){console.log("ANALYSIS_NOTE",String(e));}
+          await note("analysis",15);await close(section("activity-analysis"));
+          stamp("method","Методика оценки показывает критерии работы с обращениями, регулярности, полезности, обратной связи, качества и открытости. Итоговая оценка не рассчитывается без подтверждённой полноты данных.");
+          await open(section("method"));await scroll(section("method").locator(":scope > summary"));await note("method",13);await close(section("method"));
+          stamp("archive","Последний раздел — архив депутатов. Здесь сохраняется история выбывших депутатов. Мы не удаляем сведения о прошлых составах и не изменяем данные во время демонстрации.");
+          await open(section("deputy-archive"));await scroll(section("deputy-archive").locator(":scope > summary"));await sleep(3000);const arc=page.locator("#deputy-archive-list");if(await arc.isVisible()){await scroll(arc);await sleep(3500);}await note("archive",11);await close(section("deputy-archive"));
+          stamp("end","Цифровой профиль депутата объединяет справочник, публикации, отчёты и аналитику в одном приложении. Вы увидели настоящую работу интерфейса. Спасибо за внимание. Правообладателем приложения является Булатов Александр Александрович.");
+          await page.evaluate(()=>window.scrollTo({top:0,behavior:"smooth"}));await note("end",20);
+          marks.push({key:"finish",time:(performance.now()-clock)/1000,text:""});
+          console.log("COVERAGE",JSON.stringify({opened:opened.length,unique:new Set(opened.map(x=>x.name)).size,groups:await groups.count(),errors}));
+          if(opened.length!==1||opened[0].district!=="Царицыно")throw Error("Expected one demonstration card");
+          fs.writeFileSync("timeline.json",JSON.stringify({marks,opened,errors},null,2));
+          }finally{const video=page.video();await context.close();await video.saveAs("screen.webm");await browser.close();}
+          
+          JS
+          node real-tour.mjs
+      - name: Generate synchronized Russian male narration
+        run: |
+          python - <<'PY'
+          import json,wave,subprocess,pathlib,imageio_ffmpeg,torch
+          ff=imageio_ffmpeg.get_ffmpeg_exe()
+          def run(*a): subprocess.run([ff,"-hide_banner","-loglevel","error","-y",*a],check=True)
+          torch.set_num_threads(2)
+          model=torch.package.PackageImporter("silero.pt").load_pickle("tts_models","model")
+          model.to(torch.device("cpu"))
+          data=json.load(open("timeline.json"))
+          marks=data["marks"]
+          videos=[];audios=[];total=0
+          for i,(a,b) in enumerate(zip(marks,marks[1:])):
+              length=b["time"]-a["time"]
+              raw=f"raw{i:02}.wav"
+              sound=model.apply_tts(text=a["text"],speaker="eugene",sample_rate=48000,put_accent=True,put_yo=True)
+              with wave.open(raw,"wb") as w:
+                  w.setnchannels(1);w.setsampwidth(2);w.setframerate(48000);w.writeframes((sound.clamp(-1,1)*32767).short().numpy().tobytes())
+              clean=f"speech{i:02}.wav"
+              run("-i",raw,"-af","atempo=0.8,apad=pad_dur=0.25","-c:a","pcm_s16le",clean)
+              with wave.open(clean,"rb") as w: duration=w.getnframes()/w.getframerate()
+              assert duration>2
+              seg=f"scene{i:02}.mp4"
+              run("-ss",str(a["time"]),"-t",str(length),"-i","screen.webm","-an","-vf",f"setpts={duration/length:.9f}*PTS,fps=25,tpad=stop_mode=clone:stop_duration=0.5","-t",str(duration),"-c:v","libx264","-preset","veryfast","-crf","23","-pix_fmt","yuv420p",seg)
+              videos.append("file '"+seg+"'\n");audios.append("file '"+clean+"'\n");total+=duration
+              print("SOUND",a["key"],round(duration,2),flush=True)
+          pathlib.Path("videos.txt").write_text("".join(videos));pathlib.Path("audios.txt").write_text("".join(audios))
+          run("-f","concat","-safe","0","-i","videos.txt","-c","copy","visual.mp4")
+          run("-f","concat","-safe","0","-i","audios.txt","-c","copy","continuous.wav")
+          run("-i","visual.mp4","-i","continuous.wav","-map","0:v:0","-map","1:a:0","-c:v","copy","-af","loudnorm=I=-16:TP=-2:LRA=7","-c:a","aac","-b:a","160k","-ar","48000","-movflags","+faststart","deputy-monitor-slow-tour.mp4")
+          run("-i","deputy-monitor-slow-tour.mp4","-f","null","-")
+          print("VERIFIED",pathlib.Path("deputy-monitor-slow-tour.mp4").stat().st_size,"duration",total,"one card",data["opened"],"closing",marks[-2]["text"],flush=True)
+          PY
+      - name: Publish video only, leave main untouched
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create presentation-slow-tour-v6 deputy-monitor-slow-tour.mp4 timeline.json --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest=false --title 'Цифровой профиль депутата — версия 6.0' --notes 'Запись настоящего интерфейса в мобильном формате. Один район Царицыно и одна карточка депутата. Голос Silero Eugene, темп 80 процентов. Горизонтальная прокрутка таблиц. Финальная фраза о правообладателе по указанию автора. Рабочий интерфейс и данные не изменены.'

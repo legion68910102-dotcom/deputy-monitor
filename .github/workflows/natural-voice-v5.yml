@@ -1,0 +1,111 @@
+name: Revoice compact tour with natural Russian speech
+on:
+  push:
+    branches: [presentation-media]
+    paths: ['.github/workflows/natural-voice-v5.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  revoice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch verified compact tour and install voice tools
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check edge-tts imageio-ffmpeg
+          base=https://github.com/legion68910102-dotcom/deputy-monitor/releases/download/presentation-compact-tour-v4
+          curl -fL --retry 2 -o original.mp4 "$base/deputy-monitor-compact-tour.mp4"
+          curl -fL --retry 2 -o timeline.json "$base/timeline.json"
+          test "$(wc -c < original.mp4)" -eq 5863984
+      - name: Natural narration and continuous soundtrack
+        run: |
+          python - <<'PY'
+          import asyncio,json,os,pathlib,re,subprocess,wave
+          import edge_tts,imageio_ffmpeg
+          ff=imageio_ffmpeg.get_ffmpeg_exe()
+          def run(*a): subprocess.run([ff,"-hide_banner","-loglevel","error","-y",*a],check=True)
+          marks=json.load(open("timeline.json"))["marks"][:-1]
+          # The compact version uses scene durations equal to its speech duration + 0.38.
+          # Values verified against the actual completed v4 run's logged speech durations.
+          old_speech=[11.22,10.46,7.43,10.84,13.24,13.56,10.87,8.2,12.04,15.13,12.82,11.51,10.69]
+          assert len(marks)==len(old_speech)
+          texts=[
+          "Перед вами цифровой профиль депутата. Это приложение для мониторинга публичной деятельности муниципальных депутатов Южного округа Москвы. Давайте посмотрим, как оно работает.",
+          "Начнём с обзора мониторинга. Здесь можно увидеть число депутатов, объём сохранённых публикаций и результаты проверки ВКонтакте. Если по кому-то нет данных, это ещё не означает, что депутат не работает.",
+          "Теперь перейдём к профилям депутатов. В справочнике представлены все шестнадцать районов Южного округа. Для примера выберем Царицыно.",
+          "Открываем район. Перед нами список депутатов, телефон приёмной Совета депутатов и ссылки на официальные источники. Выберем одну карточку и посмотрим, что в ней находится.",
+          "Здесь есть фотография, биографические сведения и доступная статистика публикаций. Можно проверить статус источника и перейти к оригинальной странице. Таким же образом открывается карточка любого другого депутата.",
+          "В этом разделе есть и инструменты управления составом. Можно проверить список на официальном сайте, добавить нового депутата или перенести выбывшего в архив. Сейчас мы ничего не меняем.",
+          "Дальше — лента публикаций. Выбираем нужный период, ищем депутата по фамилии и смотрим его записи. В ленте доступны тексты, показатели и ссылки на оригинальные публикации.",
+          "В разделе отчётов выбираем депутата и период, открываем предварительный просмотр. Результат можно скачать в виде таблицы. Общий отчёт по округу доступен отдельно.",
+          "Следующий раздел — рейтинг. Здесь можно сравнить количество публикаций, лайков, комментариев, репостов и просмотров. Это показатели публичной активности, а не оценка всей депутатской работы.",
+          "Переходим к анализу деятельности по текстам. Здесь предусмотрены пятнадцать утверждённых категорий. Выбираем депутата и нужную категорию, чтобы увидеть публикации и основания их классификации. Результаты помогают ориентироваться в информации, но требуют проверки.",
+          "Методика оценки описывает критерии работы с обращениями, регулярности публикаций, полезности, обратной связи, качества материалов и открытости. Итоговая оценка не рассчитывается, пока нет подтверждённой полноты данных.",
+          "И наконец — архив депутатов. В нём сохраняются сведения о тех, кто выбыл из состава. Так мы сохраняем историю и можем обратиться к ней при необходимости.",
+          "Цифровой профиль депутата объединяет справочник, публикации, отчёты и аналитику в одном приложении. Вы увидели его настоящий интерфейс и основные возможности. Спасибо за внимание."
+          ]
+          async def edge():
+              for i,t in enumerate(texts):
+                  for attempt in range(2):
+                      try:
+                          await asyncio.wait_for(edge_tts.Communicate(t,"ru-RU-DmitryNeural",rate="-4%",pitch="-2Hz").save(f"voice{i:02}.mp3"),timeout=35)
+                          if os.path.getsize(f"voice{i:02}.mp3")<10000: raise ValueError("Short audio")
+                          break
+                      except Exception:
+                          if attempt: raise
+                  run("-i",f"voice{i:02}.mp3","-ar","48000","-ac","1","-c:a","pcm_s16le",f"voice{i:02}.wav")
+                  print("VOICE",i+1,flush=True)
+          engine="Microsoft Dmitry Neural"
+          try: asyncio.run(edge())
+          except Exception as e:
+              print("Cloud speech unavailable:",repr(e),flush=True)
+              # Local neural speech backup, distinct from the rejected Piper voice.
+              engine="Silero Eugene"
+              subprocess.run(["python","-m","pip","install","--disable-pip-version-check","torch","--index-url","https://download.pytorch.org/whl/cpu"],check=True)
+              subprocess.run(["python","-m","pip","install","--disable-pip-version-check","numpy","omegaconf"],check=True)
+              import torch
+              torch.set_num_threads(2)
+              torch.hub.download_url_to_file("https://models.silero.ai/models/tts/ru/v5_5_ru.pt","silero.pt")
+              model=torch.package.PackageImporter("silero.pt").load_pickle("tts_models","model")
+              model.to(torch.device("cpu"))
+              for i,t in enumerate(texts):
+                  a=model.apply_tts(text=t,speaker="eugene",sample_rate=48000,put_accent=True,put_yo=True)
+                  with wave.open(f"voice{i:02}.wav","wb") as w:
+                      w.setnchannels(1);w.setsampwidth(2);w.setframerate(48000);w.writeframes((a.clamp(-1,1)*32767).short().numpy().tobytes())
+                  print("VOICE",i+1,flush=True)
+          cursor=0
+          videos=[]; audios=[]
+          for i,old in enumerate(old_speech):
+              source_duration=old+0.38
+              raw=f"voice{i:02}.wav"
+              # Retain natural within-paragraph pauses. Trim only excessive endpoint silence;
+              # then insert one short pause and use continuous PCM for final audio.
+              clean=f"clean{i:02}.wav"
+              run("-i",raw,"-af","silenceremove=start_periods=1:start_duration=0.04:start_threshold=-52dB:start_silence=0.06,areverse,silenceremove=start_periods=1:start_duration=0.08:start_threshold=-52dB:start_silence=0.08,areverse,apad=pad_dur=0.22","-ar","48000","-ac","1","-c:a","pcm_s16le",clean)
+              with wave.open(clean,"rb") as w: duration=w.getnframes()/w.getframerate()
+              assert duration>2
+              seg=f"scene{i:02}.mp4"
+              run("-ss",str(cursor),"-t",str(source_duration),"-i","original.mp4","-an","-vf",f"setpts={duration/source_duration:.9f}*PTS,fps=25,tpad=stop_mode=clone:stop_duration=0.25","-t",str(duration),"-c:v","libx264","-preset","veryfast","-crf","23","-pix_fmt","yuv420p",seg)
+              cursor+=source_duration
+              videos.append("file '"+seg+"'\n")
+              audios.append("file '"+clean+"'\n")
+              print("SCENE",i+1,"duration",round(duration,3),flush=True)
+          pathlib.Path("videos.txt").write_text("".join(videos))
+          pathlib.Path("audios.txt").write_text("".join(audios))
+          run("-f","concat","-safe","0","-i","videos.txt","-c","copy","visual.mp4")
+          run("-f","concat","-safe","0","-i","audios.txt","-c","copy","continuous.wav")
+          run("-i","visual.mp4","-i","continuous.wav","-map","0:v:0","-map","1:a:0","-c:v","copy","-af","loudnorm=I=-16:TP=-2:LRA=7","-c:a","aac","-b:a","160k","-ar","48000","-movflags","+faststart","deputy-monitor-natural-voice.mp4")
+          run("-i","deputy-monitor-natural-voice.mp4","-f","null","-")
+          pathlib.Path("voice-engine.txt").write_text(engine+"\n")
+          print("VERIFIED",engine,pathlib.Path("deputy-monitor-natural-voice.mp4").stat().st_size,flush=True)
+          PY
+      - name: Publish media only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create presentation-natural-voice-v5 deputy-monitor-natural-voice.mp4 voice-engine.txt --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest=false --title 'Цифровой профиль депутата — естественная озвучка' --notes "Русский мужской голос: $(cat voice-engine.txt). Настоящий интерфейс предыдущего короткого обзора, связная звуковая дорожка. Рабочее приложение не менялось."

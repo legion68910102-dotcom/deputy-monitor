@@ -1,0 +1,176 @@
+name: Record real mobile interface with narration
+on:
+  push:
+    branches: [presentation-media]
+    paths: ['.github/workflows/record-real-tour.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install recording and narration tools
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+          python -m pip install --disable-pip-version-check piper-tts imageio-ffmpeg
+          base=https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/ru/ru_RU/ruslan/medium
+          curl -fL --retry 2 -o voice.onnx "$base/ru_RU-ruslan-medium.onnx"
+          curl -fL --retry 2 -o voice.onnx.json "$base/ru_RU-ruslan-medium.onnx.json"
+      - name: Record actual interface and all deputy cards
+        run: |
+          set -euo pipefail
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/deputy-tour-http.log 2>&1 &
+          trap 'kill $! 2>/dev/null || true' EXIT
+          cat > real-tour.mjs <<'JS'
+          import { chromium } from 'playwright';
+          import fs from 'node:fs';
+          import {performance} from 'node:perf_hooks';
+          const browser=await chromium.launch({headless:true});
+          const context=await browser.newContext({viewport:{width:430,height:932},deviceScaleFactor:1,isMobile:true,hasTouch:true,locale:"ru-RU",timezoneId:"Europe/Moscow",recordVideo:{dir:"record",size:{width:430,height:932}}});
+          const clock=performance.now();
+          const page=await context.newPage();
+          const marks=[], opened=[];
+          const sleep=ms=>page.waitForTimeout(ms);
+          const stamp=(key,text)=>{marks.push({key,text,time:(performance.now()-clock)/1000});console.log("SCENE",key,marks.at(-1).time.toFixed(2),true)};
+          const errors=[];
+          page.on("pageerror",e=>errors.push(e.message));
+          await page.goto("http://127.0.0.1:8765/index.html",{waitUntil:"domcontentloaded",timeout:40000});
+          await page.waitForFunction(()=>Number(document.getElementById("total")?.textContent)>0&&document.querySelectorAll("#profiles .district-group").length===16,{},{timeout:90000});
+          await page.waitForTimeout(1000);
+          await page.evaluate(()=>{
+            const e=document.createElement("div");e.id="demo-touch-indicator";
+            Object.assign(e.style,{position:"fixed",width:"34px",height:"34px",border:"3px solid #fff",borderRadius:"50%",background:"#16834d99",boxShadow:"0 0 0 2px #175d43",zIndex:"2147483647",pointerEvents:"none",display:"none",transform:"translate(-50%,-50%)",transition:"opacity .12s"});document.body.append(e);
+          });
+          async function scroll(loc,align="start"){
+            await loc.evaluate((e,a)=>e.scrollIntoView({block:a,behavior:"instant"}),align);
+            await sleep(120);
+          }
+          async function tap(loc,hold=180){
+            await scroll(loc,"center");
+            const b=await loc.boundingBox();if(!b)throw Error("No target bounds");
+            const x=b.x+b.width/2,y=b.y+Math.min(b.height/2,24);
+            await page.evaluate(({x,y})=>{let e=document.getElementById("demo-touch-indicator");e.style.left=x+"px";e.style.top=y+"px";e.style.display="block";e.style.opacity="1";},{x,y});
+            await sleep(100);
+            await page.touchscreen.tap(x,y);
+            await sleep(hold);
+            await page.evaluate(()=>{let e=document.getElementById("demo-touch-indicator");if(e)e.style.display="none";});
+          }
+          async function open(loc){if(!await loc.evaluate(e=>e.open)){await tap(loc.locator(":scope > summary"));if(!await loc.evaluate(e=>e.open))throw Error("Did not open details");}}
+          async function close(loc){if(await loc.evaluate(e=>e.open)){await tap(loc.locator(":scope > summary"),60);if(await loc.evaluate(e=>e.open))throw Error("Did not close details");}}
+          const section=id=>page.locator("#"+id+" > details");
+          const note=async(key,hold)=>{const s=marks.at(-1);const elapsed=performance.now()/1000-clock/1000-s.time;await sleep(Math.max(100,hold*1000-elapsed*1000));};
+          try{
+          await page.evaluate(()=>window.scrollTo({top:0,behavior:"instant"}));
+          stamp("intro","Представляем цифровой профиль депутата. Перед вами настоящая рабочая версия приложения Юго-восточного, точнее Южного административного округа Москвы. Покажем, как пользоваться системой на экране телефона.".replace("Юго-восточного, точнее Южного","Южного"));
+          await note("intro",14);
+          stamp("overview","Открываем обзор мониторинга. Здесь видны число депутатов, объём сохранённых публикаций и результаты проверки ВКонтакте. Если данные недоступны, это не означает, что депутат не работает.");
+          await open(section("overview"));await scroll(section("overview").locator(":scope > summary"));await sleep(6000);await page.locator("#total").scrollIntoViewIfNeeded();await note("overview",17);await close(section("overview"));
+          stamp("profiles","Переходим к профилям депутатов. Здесь находятся шестнадцать районов Южного округа. Раскрываем район, смотрим телефон приёмной и список депутатов. Сейчас последовательно откроем каждую карточку.");
+          await open(section("deputies"));await scroll(section("deputies").locator(":scope > summary"));await sleep(6000);await scroll(page.locator("#profiles .district-group").first());await note("profiles",17);
+          const groups=page.locator("#profiles .district-group");
+          for(let d=0;d<await groups.count();d++){
+            const group=groups.nth(d),district=await group.getAttribute("data-district");
+            stamp("district"+d,d===0?"Начинаем с района "+district+". В открытой карточке видны сведения о депутате и доступные данные мониторинга. Далее просматриваем все карточки района.": "Район "+district+". Открываем карточки депутатов.");
+            await open(group);await scroll(group.locator(":scope > summary"));await sleep(d===0?2400:1300);
+            const cards=group.locator(".people > .deputy-tile > details");
+            const count=await cards.count();
+            for(let j=0;j<count;j++){
+              const card=cards.nth(j);
+              const name=await card.locator(":scope > summary .deputy-name").textContent().catch(()=>card.locator(":scope > summary").textContent());
+              await open(card);
+              await scroll(card.locator(":scope > summary"));
+              await sleep(d===0&&j<3?2200:680);
+              if(d===0&&j===0){await page.evaluate(()=>window.scrollBy({top:370,behavior:"smooth"}));await sleep(2300);}
+              opened.push({district,name:name?.trim()});
+              await close(card);
+            }
+            if(d===0){
+              for(const cls of [".manage-add",".manage-remove"]){
+                const m=group.locator(cls).first();
+                if(await m.count()&&await m.isVisible()){await open(m);await sleep(1700);await close(m);}
+              }
+            }
+            await close(group);
+            console.log("DISTRICT",district,count);
+          }
+          await close(section("deputies"));
+          stamp("feed","Открываем ленту публикаций. Выбираем период и можем найти записи по фамилии депутата. Видим сохранённые публикации, доступные показатели и ссылки на оригинальные записи.");
+          await open(section("activity"));await scroll(section("activity").locator(":scope > summary"));await sleep(4000);
+          const firstPerson=await page.evaluate(()=>window.deputyRoster.find(p=>p.handle&&allRows().some(r=>r.profile===p.handle)).name);
+          const search=page.locator("#activity-person-search");await scroll(search,"center");await search.fill(firstPerson);await search.dispatchEvent("change");await sleep(2000);
+          const firstRow=page.locator("#posts tr").first();if(await firstRow.count()){await scroll(firstRow);await sleep(5500);}
+          await search.fill("");await search.dispatchEvent("change");await note("feed",20);await close(section("activity"));
+          stamp("report","В отчётах выбираем депутата и период. Нажимаем просмотр на экране. Можно скачать таблицу за выбранный период или общий отчёт по округу.");
+          await open(section("report"));await scroll(section("report").locator(":scope > summary"));await sleep(2500);const rep=page.locator("#report-person");await scroll(rep,"center");
+          const options=await rep.locator("option").evaluateAll(es=>es.map(e=>({value:e.value,text:e.textContent})));const chosen=options.find(o=>o.text?.includes(firstPerson))||options[1];if(chosen)await rep.selectOption(chosen.value);
+          await sleep(1000);await tap(page.locator("#report-preview"));await sleep(3500);
+          const reportArea=page.locator("#report-preview-area");if(await reportArea.isVisible()){await scroll(reportArea);await sleep(3500);}
+          await note("report",18);await close(section("report"));
+          stamp("ranking","Следующая вкладка — рейтинг депутатов. Выбираем показатель: число публикаций, лайки, комментарии, репосты или просмотры. Рейтинг характеризует только наблюдаемую публичную активность.");
+          await open(section("ranking"));await scroll(section("ranking").locator(":scope > summary"));await sleep(3000);const metric=page.locator("#ranking-metric");await scroll(metric,"center");await metric.selectOption("likes");await sleep(1200);await tap(page.locator("#ranking-refresh"));await sleep(2500);const rankRow=page.locator("#ranking tbody tr").first();if(await rankRow.count()&&await rankRow.isVisible()){await scroll(rankRow);await sleep(5000);}await note("ranking",18);await close(section("ranking"));
+          stamp("analysis","Анализ деятельности по текстам. Здесь используются пятнадцать утверждённых категорий. Выбираем депутата и открываем конкретную категорию, чтобы увидеть основания классификации и публикации. Анализ не заменяет проверку фактов.");
+          await open(section("activity-analysis"));await scroll(section("activity-analysis").locator(":scope > summary"));await sleep(2500);
+          try{await page.waitForFunction(()=>document.querySelectorAll("#activity-cards button").length===15,{},{timeout:90000});await page.locator("#activity-person").selectOption(firstPerson);await sleep(1200);await scroll(page.locator("#activity-cards"));await sleep(3500);const cats=page.locator("#activity-cards button");if(await cats.count()){await tap(cats.first());await sleep(2200);const posts=page.locator("#activity-posts details").first();if(await posts.count()&&await posts.isVisible()){await open(posts);await scroll(posts.locator(":scope > summary"));await sleep(5000);}}}catch(e){console.log("ANALYSIS_NOTE",String(e));}
+          await note("analysis",22);await close(section("activity-analysis"));
+          stamp("method","Методика оценки показывает критерии работы с обращениями, регулярности, полезности, обратной связи, качества и открытости. Итоговая оценка не рассчитывается без подтверждённой полноты данных.");
+          await open(section("method"));await scroll(section("method").locator(":scope > summary"));await note("method",15);await close(section("method"));
+          stamp("archive","Последний раздел — архив депутатов. Здесь сохраняется история выбывших депутатов. Мы не удаляем сведения о прошлых составах и не изменяем данные во время демонстрации.");
+          await open(section("deputy-archive"));await scroll(section("deputy-archive").locator(":scope > summary"));await sleep(3000);const arc=page.locator("#deputy-archive-list");if(await arc.isVisible()){await scroll(arc);await sleep(3500);}await note("archive",15);await close(section("deputy-archive"));
+          stamp("end","Цифровой профиль депутата объединяет справочник, публикации, отчёты и аналитику в одном приложении. Вы увидели настоящую работу интерфейса. Спасибо за внимание.");
+          await page.evaluate(()=>window.scrollTo({top:0,behavior:"smooth"}));await note("end",12);
+          marks.push({key:"finish",time:(performance.now()-clock)/1000,text:""});
+          console.log("COVERAGE",JSON.stringify({opened:opened.length,unique:new Set(opened.map(x=>x.name)).size,groups:await groups.count(),errors}));
+          if(opened.length<158||new Set(opened.map(x=>x.name)).size<158)throw Error("Not all current deputy cards opened");
+          fs.writeFileSync("timeline.json",JSON.stringify({marks,opened,errors},null,2));
+          }finally{const video=page.video();await context.close();await video.saveAs("screen.webm");await browser.close();}
+          
+          JS
+          node real-tour.mjs
+      - name: Generate synchronized Russian male narration
+        run: |
+          python - <<'PY'
+          import json,wave,subprocess,pathlib,math,imageio_ffmpeg
+          from piper import PiperVoice,SynthesisConfig
+          ff=imageio_ffmpeg.get_ffmpeg_exe()
+          def run(*a): subprocess.run([ff,"-hide_banner","-loglevel","error","-y",*a],check=True)
+          voice=PiperVoice.load("voice.onnx")
+          marks=json.load(open("timeline.json"))["marks"]
+          config=SynthesisConfig(length_scale=1.10)
+          first=marks[0]["time"]
+          files=[]
+          for i,(a,b) in enumerate(zip(marks,marks[1:])):
+              length=b["time"]-a["time"]
+              wav=f"voice{i:02}.wav"
+              with wave.open(wav,"wb") as w: voice.synthesize_wav(a["text"],w,syn_config=config)
+              with wave.open(wav,"rb") as w: seconds=w.getnframes()/w.getframerate()
+              speed=max(1,seconds/max(1,length-0.25))
+              if speed>2: raise RuntimeError(f"Too short scene {a['key']}: {seconds} in {length}")
+              target=f"part{i:02}.wav"
+              run("-i",wav,"-af",f"atempo={speed:.6f},apad,loudnorm=I=-16:TP=-2:LRA=7","-t",str(length),"-ar","48000","-ac","1","-c:a","pcm_s16le",target)
+              files.append("file '"+target+"'\n")
+              print("SOUND",a["key"],round(length,2),round(seconds,2),flush=True)
+          pathlib.Path("audio-parts.txt").write_text("".join(files))
+          run("-f","concat","-safe","0","-i","audio-parts.txt","-c","copy","narration.wav")
+          length=marks[-1]["time"]-first
+          run("-ss",str(first),"-i","screen.webm","-i","narration.wav","-t",str(length),"-map","0:v:0","-map","1:a:0","-c:v","libx264","-preset","veryfast","-crf","23","-pix_fmt","yuv420p","-c:a","aac","-b:a","96k","-movflags","+faststart","deputy-monitor-real-tour.mp4")
+          run("-i","deputy-monitor-real-tour.mp4","-f","null","-")
+          print("VERIFIED",pathlib.Path("deputy-monitor-real-tour.mp4").stat().st_size,"duration",length,flush=True)
+          
+          PY
+      - name: Publish video only, leave main untouched
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create presentation-real-tour-v3 deputy-monitor-real-tour.mp4 timeline.json --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest=false --title 'Цифровой профиль депутата — реальный обзор' --notes 'Запись настоящего интерфейса в мобильном формате. Все районы и карточки депутатов. Русский мужской нейросетевой голос Руслан. Рабочий интерфейс и данные не изменены.'

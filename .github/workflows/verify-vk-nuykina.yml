@@ -1,0 +1,61 @@
+name: Verify public VK address for Nuykina
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-vk-nuykina.yml']
+permissions:
+  contents: read
+concurrency:
+  group: official-vk-public-posts
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify public identity and one normal wall request
+        env:
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.parse, urllib.request
+          token = os.environ.get("VK_TOKEN", "").strip()
+          if not token:
+              raise SystemExit("Missing VK_TOKEN")
+          uid = 710263262
+          def call(method, **params):
+              body = urllib.parse.urlencode(dict(params, v="5.199", access_token=token)).encode()
+              req = urllib.request.Request("https://api.vk.ru/method/"+method, data=body,
+                  headers={"Content-Type":"application/x-www-form-urlencoded","User-Agent":"DeputyMonitor/1.0"})
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      data = json.load(response)
+              except Exception:
+                  raise SystemExit("Network or invalid response") from None
+              return data.get("response"), data.get("error", {}).get("error_code")
+          def emit(**fields):
+              print("NUYKINA_PROBE " + json.dumps(fields, ensure_ascii=False), flush=True)
+          users, code = call("users.get", user_ids=str(uid)+",nuykinakv", fields="screen_name")
+          if code or not isinstance(users,list):
+              emit(result="metadata_unavailable", code=code)
+              raise SystemExit(0)
+          matches = [u for u in users if u.get("id")==uid and u.get("first_name","").casefold()=="карина" and u.get("last_name","").casefold()=="нуйкина"]
+          if not matches or any(u.get("id") != uid for u in users):
+              emit(result="identity_not_confirmed")
+              raise SystemExit(0)
+          u=matches[0]
+          if u.get("deactivated") or u.get("is_closed") is not False:
+              emit(result="not_confirmed_public")
+              raise SystemExit(0)
+          time.sleep(1)
+          wall,code=call("wall.get", owner_id=uid, count=1, filter="owner")
+          if code:
+              emit(result="wall_error", code=code, public_id=uid)
+              raise SystemExit(0)
+          items=wall.get("items") if isinstance(wall,dict) else None
+          if isinstance(items,list) and items and all(p.get("owner_id")==uid for p in items):
+              emit(result="verified_public_wall", public_id=uid, count=len(items))
+          else:
+              emit(result="no_verified_wall_items", public_id=uid)
+          PY

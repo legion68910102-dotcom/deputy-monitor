@@ -1,0 +1,77 @@
+name: Rebuild presentation with neural Russian narration
+on:
+  push:
+    branches: [presentation-media]
+    paths: ['.github/workflows/presentation-neural-voice.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install local neural speech and media encoder
+        run: python -m pip install --disable-pip-version-check piper-tts imageio-ffmpeg
+      - name: Fetch Russian male voice and original video
+        run: |
+          set -euo pipefail
+          base=https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/ru/ru_RU/ruslan/medium
+          curl -fL --retry 2 -o voice.onnx "$base/ru_RU-ruslan-medium.onnx"
+          curl -fL --retry 2 -o voice.onnx.json "$base/ru_RU-ruslan-medium.onnx.json"
+          curl -fL --retry 2 -o original.mp4 'https://deputy-monitor-presentation.floot.app/_cdn/static/3e490200-3094-439c-af41-40145d6dcbe5-presentation.mp4'
+          test "$(wc -c < original.mp4)" -eq 10375844
+      - name: Synthesize and synchronize twelve scenes
+        run: |
+          python - <<'PY'
+          import wave, subprocess, pathlib, imageio_ffmpeg
+          from piper import PiperVoice, SynthesisConfig
+          voice=PiperVoice.load("voice.onnx")
+          config=SynthesisConfig(length_scale=1.12)
+          ff=imageio_ffmpeg.get_ffmpeg_exe()
+          def run(*args):
+              subprocess.run([ff,"-hide_banner","-loglevel","error","-y",*args],check=True)
+          durations=[14.36,21.16,21.28,16.08,16,18.4,21.76,20.32,19.64,19.6,19.56,21.36]
+          narr=[
+            "Представляем приложение «Цифровой профиль депутата». Это единая система мониторинга публичной деятельности муниципальных депутатов Южного административного округа Москвы. Справочник, публикации, аналитика и отчёты собраны в одном месте.",
+            "Первый раздел — обзор мониторинга. Здесь видны количество депутатов, публикации и результаты проверки ВКонтакте. На двадцать седьмое ноября в справочнике сто пятьдесят восемь депутатов. Сто сорок три профиля успешно прочитаны. По пятнадцати остаются ошибки. Отсутствие данных не означает отсутствие работы депутата.",
+            "Раздел профилей позволяет выбрать район и открыть карточку депутата. В карточке — фотография, биографические сведения, ссылки на источники и публикации. Во вкладке района указан телефон приёмной Совета депутатов, если он подтверждён. Сведения необходимо сверять с официальными источниками.",
+            "Лента публикаций объединяет сохранённые записи ВКонтакте. Можно найти депутата по фамилии и выбрать период. В таблице отображаются текст публикации, доступные показатели и ссылка на первоисточник. Ссылки можно скопировать или выгрузить.",
+            "Отчёты и таблицы. Выберите одного депутата или весь округ, задайте даты и просмотрите результат. Таблицу можно скачать. В ней три листа: сводка, публикации и профили без данных. Общий отчёт за период созыва доступен отдельно.",
+            "Рейтинг депутатов показывает публичную активность. Сравнить можно количество публикаций, лайков, комментариев, репостов и просмотров. Рейтинг можно скачать или распечатать. Эти показатели не являются оценкой качества депутатской работы.",
+            "Анализ деятельности по текстам. Публикации распределяются по пятнадцати утверждённым категориям. В их числе заседания Совета депутатов, встречи с жителями, обходы территорий, приёмка работ, приёмы граждан, работа с обращениями и гуманитарная помощь. Личные записи, анонсы и репосты учитываются отдельно.",
+            "В подробной аналитике можно выбрать категорию, изучить подтверждающие фразы и перейти к оригинальной публикации. Если готового результата искусственного интеллекта нет, используются предварительные правила. Классификация текста сама по себе не доказывает личное участие депутата или исполнение работы.",
+            "Источники и обновление. Здесь показаны дата проверки и доступность ВКонтакте. Серверный сбор запускается по расписанию. При открытии приложения загружается опубликованная база. Также можно добавить публикацию вручную или импортировать таблицу на своём устройстве.",
+            "Методика оценки включает шесть направлений. Работа с обращениями — двадцать пять процентов. Регулярность, темы и полезность, обратная связь, качество материалов, открытость и отчётность — по пятнадцать процентов. Без подтверждённой полноты данных итоговая оценка не рассчитывается.",
+            "Архив сохраняет сведения о выбывших депутатах. Предусмотрены добавление и исключение записей, а также проверка обновлений справочника. Изменения состава подтверждаются официальными источниками. Некоторые ручные операции сохраняются только в браузере.",
+            "Цифровой профиль депутата объединяет мониторинг, аналитику и отчётность. Сегодня система охватывает Южный административный округ Москвы. В дальнейшем предусмотрены адаптация для других округов и разграничение прав доступа. Цель проекта — удобная работа с проверяемой информацией."
+          ]
+          cursor=0
+          files=[]
+          for i,(old,words) in enumerate(zip(durations,narr)):
+              stem=f"scene{i:02d}"
+              run("-ss",str(cursor+old/2),"-i","original.mp4","-frames:v","1",stem+".png")
+              cursor+=old
+              with wave.open(stem+".wav","wb") as w:
+                  voice.synthesize_wav(words,w,syn_config=config)
+              with wave.open(stem+".wav","rb") as w:
+                  assert w.getnframes()>w.getframerate()
+                  seconds=w.getnframes()/w.getframerate()
+              run("-loop","1","-framerate","25","-i",stem+".png","-i",stem+".wav","-af","apad=pad_dur=0.8,loudnorm=I=-16:TP=-2:LRA=7","-t",str(seconds+0.8),"-c:v","libx264","-preset","veryfast","-tune","stillimage","-crf","25","-pix_fmt","yuv420p","-c:a","aac","-b:a","96k","-ar","48000","-ac","1","-movflags","+faststart",stem+".mp4")
+              files.append("file '"+stem+".mp4'\n")
+              print("Scene",i+1,round(seconds,2),flush=True)
+          pathlib.Path("scenes.txt").write_text("".join(files))
+          run("-f","concat","-safe","0","-i","scenes.txt","-c","copy","-movflags","+faststart","presentation-clear.mp4")
+          run("-i","presentation-clear.mp4","-f","null","-")
+          print("Verified complete audio and video decode",pathlib.Path("presentation-clear.mp4").stat().st_size)
+          PY
+          zip -q presentation-clear.zip presentation-clear.mp4
+          unzip -t presentation-clear.zip
+      - name: Publish new media release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create presentation-neural-voice-v2 presentation-clear.mp4 presentation-clear.zip --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest=false --title 'Видеопрезентация — новая мужская озвучка' --notes 'Нейросетевой русский голос Piper Ruslan, более спокойный темп. Те же 12 слайдов, новая синхронизация. Отдельная публикация медиафайлов, не изменение приложения.'

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T08:35:59.106763+00:00",
+  "generated_at": "2026-11-27T08:35:17.754830+00:00",
   "source": "Official council websites via GitHub Actions",
   "districts": {
     "Бирюлёво Восточное": {
       "source": "https://mrbv.ru/sovet/",
-      "checked_at": "2026-11-26T08:35:59.106782+00:00",
+      "checked_at": "2026-11-27T08:35:17.754846+00:00",
       "status": "stale",
       "candidates": [
         {
@@ -117,7 +117,7 @@
     },
     "Бирюлёво Западное": {
       "source": "https://www.m-bz.ru/",
-      "checked_at": "2026-11-26T08:36:09.590339+00:00",
+      "checked_at": "2026-11-27T08:35:28.225767+00:00",
       "status": "unavailable",
       "candidates": [],
       "roster": [],
@@ -126,7 +126,7 @@
     },
     "Братеево": {
       "source": "https://mun-brateevo.ru/",
-      "checked_at": "2026-11-26T08:36:11.096016+00:00",
+      "checked_at": "2026-11-27T08:35:29.637570+00:00",
       "status": "unavailable",
       "candidates": [],
       "roster": [],
@@ -135,8 +135,8 @@
     },
     "Даниловский": {
       "source": "https://danilovskoe.org/index.php/council-of-deputies",
-      "checked_at": "2026-11-26T08:36:11.935944+00:00",
-      "status": "names_only",
+      "checked_at": "2026-11-27T08:35:30.420070+00:00",
+      "status": "stale",
       "candidates": [],
       "roster": [
         {
@@ -188,11 +188,13 @@
           "source": "https://danilovskoe.org/index.php/council-of-deputies/deputies-schedule-of-admission/district-1/21-fadeeva-inna-gennadevna"
         }
       ],
-      "pages_checked": 5
+      "pages_checked": 0,
+      "error": "ReadTimeout",
+      "last_success_at": "2026-11-26T08:36:11.935944+00:00"
     },
     "Донской": {
       "source": "https://mo-donskoy.ru/",
-      "checked_at": "2026-11-26T08:36:15.828250+00:00",
+      "checked_at": "2026-11-27T08:35:41.016287+00:00",
       "status": "unavailable",
       "candidates": [],
       "roster": [],
@@ -201,7 +203,7 @@
     },
     "Зябликово": {
       "source": "https://mos-zyablikovo.ru/sovet-deputatov/",
-      "checked_at": "2026-11-26T08:36:16.960678+00:00",
+      "checked_at": "2026-11-27T08:35:42.094460+00:00",
       "status": "no_candidates",
       "candidates": [],
       "roster": [],
@@ -209,7 +211,7 @@
     },
     "Москворечье-Сабурово": {
       "source": "https://mos-saburovo.ru/",
-      "checked_at": "2026-11-26T08:36:17.907389+00:00",
+      "checked_at": "2026-11-27T08:35:43.532484+00:00",
       "status": "unavailable",
       "candidates": [],
       "roster": [],
@@ -218,7 +220,7 @@
     },
     "Нагатино-Садовники": {
       "source": "https://sovet.n-sadovniki.ru/",
-      "checked_at": "2026-11-26T08:36:18.737450+00:00",
+      "checked_at": "2026-11-27T08:35:44.321902+00:00",
       "status": "ok",
       "candidates": [
         {
@@ -308,7 +310,7 @@
     },
     "Нагатинский Затон": {
       "source": "https://nzaton.ru/",
-      "checked_at": "2026-11-26T08:36:20.839712+00:00",
+      "checked_at": "2026-11-27T08:35:45.578801+00:00",
       "status": "unavailable",
       "candidates": [],
       "roster": [],
@@ -317,7 +319,7 @@
     },
     "Нагорный": {
       "source": "https://monagornoe.ru/",
-      "checked_at": "2026-11-26T08:36:21.604591+00:00",
+      "checked_at": "2026-11-27T08:35:46.410983+00:00",
       "status": "no_candidates",
       "candidates": [],
       "roster": [],
@@ -325,7 +327,7 @@
     },
     "Орехово-Борисово Северное": {
       "source": "https://mo-obs.ru/",
-      "checked_at": "2026-11-26T08:36:22.740214+00:00",
+      "checked_at": "2026-11-27T08:35:47.716104+00:00",
       "status": "ok",
       "candidates": [
         {
@@ -435,15 +437,15 @@
     },
     "Орехово-Борисово Южное": {
       "source": "https://mo-obu.ru/",
-      "checked_at": "2026-11-26T08:36:28.196200+00:00",
+      "checked_at": "2026-11-27T08:35:56.017699+00:00",
       "status": "no_candidates",
       "candidates": [],
       "roster": [],
-      "pages_checked": 5
+      "pages_checked": 4
     },
     "Царицыно": {
       "source": "https://mcaricino.ru/",
-      "checked_at": "2026-11-26T08:36:33.680541+00:00",
+      "checked_at": "2026-11-27T08:35:59.254370+00:00",
       "status": "no_candidates",
       "candidates": [],
       "roster": [],
@@ -451,7 +453,7 @@
     },
     "Чертаново Северное": {
       "source": "https://ch-sever.ru/",
-      "checked_at": "2026-11-26T08:36:38.984694+00:00",
+      "checked_at": "2026-11-27T08:36:04.953585+00:00",
       "status": "names_only",
       "candidates": [],
       "roster": [
@@ -468,7 +470,7 @@
     },
     "Чертаново Центральное": {
       "source": "https://chertanovocentr.ru/",
-      "checked_at": "2026-11-26T08:36:44.858261+00:00",
+      "checked_at": "2026-11-27T08:36:10.446522+00:00",
       "status": "no_candidates",
       "candidates": [],
       "roster": [],
@@ -476,7 +478,7 @@
     },
     "Чертаново Южное": {
       "source": "https://vmo-chu.ru/",
-      "checked_at": "2026-11-26T08:36:50.048965+00:00",
+      "checked_at": "2026-11-27T08:36:14.353135+00:00",
       "status": "names_only",
       "candidates": [],
       "roster": [

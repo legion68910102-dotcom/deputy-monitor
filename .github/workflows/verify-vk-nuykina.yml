@@ -36,26 +36,12 @@ jobs:
               return data.get("response"), data.get("error", {}).get("error_code")
           def emit(**fields):
               print("NUYKINA_PROBE " + json.dumps(fields, ensure_ascii=False), flush=True)
-          users, code = call("users.get", user_ids=str(uid)+",nuykinakv", fields="screen_name")
-          if code or not isinstance(users,list):
-              emit(result="metadata_unavailable", code=code)
-              raise SystemExit(0)
-          matches = [u for u in users if u.get("id")==uid and u.get("first_name","").casefold()=="карина" and u.get("last_name","").casefold()=="нуйкина"]
-          if not matches or any(u.get("id") != uid for u in users):
-              emit(result="identity_not_confirmed")
-              raise SystemExit(0)
-          u=matches[0]
-          if u.get("deactivated") or u.get("is_closed") is not False:
-              emit(result="not_confirmed_public")
-              raise SystemExit(0)
-          time.sleep(1)
-          wall,code=call("wall.get", owner_id=uid, count=1, filter="owner")
-          if code:
-              emit(result="wall_error", code=code, public_id=uid)
-              raise SystemExit(0)
-          items=wall.get("items") if isinstance(wall,dict) else None
-          if isinstance(items,list) and items and all(p.get("owner_id")==uid for p in items):
-              emit(result="verified_public_wall", public_id=uid, count=len(items))
-          else:
-              emit(result="no_verified_wall_items", public_id=uid)
+          for label, target in [("provided_id",str(uid)), ("stored_handle","nuykinakv")]:
+              users, code = call("users.get", user_ids=target, fields="screen_name")
+              if code or not isinstance(users,list) or len(users)!=1:
+                  emit(source=label,result="metadata_unavailable",code=code)
+              else:
+                  u=users[0]
+                  emit(source=label, result="metadata", id=u.get("id"), first_name_matches=u.get("first_name","").casefold()=="карина", last_name_matches=u.get("last_name","").casefold()=="нуйкина", is_closed=u.get("is_closed"), deactivated=bool(u.get("deactivated")))
+              time.sleep(1)
           PY

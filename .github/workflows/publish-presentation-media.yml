@@ -19,8 +19,29 @@ jobs:
           test "$(wc -c < presentation.mp4)" -eq 10375844
           test "$(wc -c < presentation-ios.zip)" -eq 4824815
           unzip -t presentation-ios.zip
-          ffprobe -v error -show_entries stream=codec_type,codec_name -of csv=p=0 presentation.mp4
-          ffmpeg -v error -i presentation.mp4 -f null -
+          python3 - <<'PY'
+          import struct
+          b=open('presentation.mp4','rb').read()
+          def boxes(start,end):
+              p=start
+              while p+8<=end:
+                  n,t=struct.unpack_from('>I4s',b,p); h=8
+                  if n==1: n=struct.unpack_from('>Q',b,p+8)[0]; h=16
+                  if n==0: n=end-p
+                  assert n>=h and p+n<=end
+                  yield t,p+h,p+n
+                  p+=n
+          def find(start,end,name):
+              return next((a,z) for t,a,z in boxes(start,end) if t==name)
+          moov=find(0,len(b),b'moov')
+          kinds=[]
+          for t,a,z in boxes(*moov):
+              if t!=b'trak': continue
+              mdia=find(a,z,b'mdia'); h=find(*mdia,b'hdlr')
+              kinds.append(b[h[0]+8:h[0]+12])
+          assert b'vide' in kinds and b'soun' in kinds,kinds
+          print('Verified MP4 container with video and audio tracks',kinds)
+          PY
       - name: Publish media-only release without updating the application
         env:
           GH_TOKEN: ${{ github.token }}

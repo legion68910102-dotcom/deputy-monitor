@@ -1,0 +1,29 @@
+name: Publish separate presentation media
+on:
+  push:
+    branches: [presentation-media]
+    paths: ['.github/workflows/publish-presentation-media.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch and verify the already public presentation
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 2 --max-time 90 -o presentation.mp4 'https://deputy-monitor-presentation.floot.app/_cdn/static/3e490200-3094-439c-af41-40145d6dcbe5-presentation.mp4'
+          curl --fail --location --retry 2 --max-time 90 -o presentation-ios.zip 'https://deputy-monitor-presentation.floot.app/_cdn/static/dc67b71b-ce64-4247-a9c1-5e8d59bc5c86-presentation-ios.zip'
+          test "$(wc -c < presentation.mp4)" -eq 10375844
+          test "$(wc -c < presentation-ios.zip)" -eq 4824815
+          unzip -t presentation-ios.zip
+          ffprobe -v error -show_entries stream=codec_type,codec_name -of csv=p=0 presentation.mp4
+          ffmpeg -v error -i presentation.mp4 -f null -
+      - name: Publish media-only release without updating the application
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release create presentation-video-2026-11-27 presentation.mp4 presentation-ios.zip --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "Видеопрезентация — Цифровой профиль депутата" --notes "Отдельные медиафайлы презентации с русской мужской озвучкой. Не выпуск приложения и не изменение его интерфейса." --latest=false

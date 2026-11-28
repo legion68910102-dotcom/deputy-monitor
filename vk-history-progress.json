@@ -410,10 +410,10 @@
     },
     "andrey.abertasov": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:31.155728+00:00",
-      "pages_read": 1,
-      "anchor": "455808255_500"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:12:59.456286+00:00",
+      "pages_read": 2,
+      "anchor": "455808255_415"
     },
     "vyacheslav_komaha": {
       "state": "complete",
@@ -423,25 +423,25 @@
       "anchor": null
     },
     "kondratevaekaterina88": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:38.555623+00:00",
-      "pages_read": 1,
-      "anchor": "194514_7898"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:13:02.865410+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "kudinovamarina": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:41.358729+00:00",
-      "pages_read": 1,
-      "anchor": "507750103_180"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:05.909359+00:00",
+      "pages_read": 2,
+      "anchor": "507750103_97"
     },
     "anatoli_viktorovich_potiomkin": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:44.873606+00:00",
-      "pages_read": 1,
-      "anchor": "707496242_543"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:09.334064+00:00",
+      "pages_read": 2,
+      "anchor": "707496242_469"
     },
     "deputat_kaminskiy": {
       "state": "complete",
@@ -452,129 +452,129 @@
     },
     "natalyamikhareva": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:51.500452+00:00",
-      "pages_read": 1,
-      "anchor": "709054480_988"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:12.940952+00:00",
+      "pages_read": 2,
+      "anchor": "709054480_908"
     },
     "safonovatatiana85": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:55.743457+00:00",
-      "pages_read": 1,
-      "anchor": "708643134_1116"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:13:16.462582+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "tikhomirovalexey": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:36:58.279465+00:00",
-      "pages_read": 1,
-      "anchor": "272805045_1867"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:19.624455+00:00",
+      "pages_read": 2,
+      "anchor": "272805045_1633"
     },
     "nikolskayaav": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:01.324591+00:00",
-      "pages_read": 1,
-      "anchor": "712889803_1932"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:13:23.578281+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "andrey.sezemov": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:05.038178+00:00",
-      "pages_read": 1,
-      "anchor": "701986008_664"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:26.732634+00:00",
+      "pages_read": 2,
+      "anchor": "701986008_577"
     },
     "antonuvarov90": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:08.414709+00:00",
-      "pages_read": 1,
-      "anchor": "555917695_171"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:13:30.210037+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "azizakabulovnachuganova": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:11.795426+00:00",
-      "pages_read": 1,
-      "anchor": "206244317_957"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:33.630404+00:00",
+      "pages_read": 2,
+      "anchor": "206244317_876"
     },
     "golovin_mikhail_sergeevich": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:14.517401+00:00",
-      "pages_read": 1,
-      "anchor": "173459266_1298"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:36.928147+00:00",
+      "pages_read": 2,
+      "anchor": "173459266_1181"
     },
     "gorbunovsi": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:18.572841+00:00",
-      "pages_read": 1,
-      "anchor": "1863197_10175"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:41.398786+00:00",
+      "pages_read": 2,
+      "anchor": "1863197_10081"
     },
     "kundyltatyana": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:22.587508+00:00",
-      "pages_read": 1,
-      "anchor": "707802169_855"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:13:45.621702+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "l.ruzina": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:25.419325+00:00",
-      "pages_read": 1,
-      "anchor": "492270648_2960"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:49.238515+00:00",
+      "pages_read": 2,
+      "anchor": "492270648_2885"
     },
     "balykovde": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:31.570748+00:00",
-      "pages_read": 1,
-      "anchor": "709655011_269"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:13:53.202343+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "bashlykova.mari": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:34.315437+00:00",
-      "pages_read": 1,
-      "anchor": "3233729_8775"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:13:56.355933+00:00",
+      "pages_read": 2,
+      "anchor": "3233729_8635"
     },
     "julia_byckova": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:38.326756+00:00",
-      "pages_read": 1,
-      "anchor": "709693969_202"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:00.875876+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "romanvinokurov": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:41.316674+00:00",
-      "pages_read": 1,
-      "anchor": "2886272_4286"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:04.487394+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "goremykinmy": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:44.769413+00:00",
-      "pages_read": 1,
-      "anchor": "711712325_3677"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:08.033510+00:00",
+      "pages_read": 2,
+      "anchor": "711712325_3601"
     },
     "vvedenskaya_i": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:48.779425+00:00",
-      "pages_read": 1,
-      "anchor": "712112574_560"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:11.793110+00:00",
+      "pages_read": 2,
+      "anchor": "712112574_477"
     },
     "vinogradova_len": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:51.598265+00:00",
-      "pages_read": 1,
-      "anchor": "261236479_543"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:14.578030+00:00",
+      "pages_read": 2,
+      "anchor": "261236479_454"
     },
     "dkulnev": {
       "state": "complete",
@@ -584,116 +584,116 @@
       "anchor": null
     },
     "rygin": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:37:57.329443+00:00",
-      "pages_read": 1,
-      "anchor": "3456623_5151"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:17.371246+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "pavel_v_shutov": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:00.851136+00:00",
-      "pages_read": 1,
-      "anchor": "711771758_901"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:20.793392+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "viktorgorn": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:04.516661+00:00",
-      "pages_read": 1,
-      "anchor": "708831253_1213"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:24.769176+00:00",
+      "pages_read": 2,
+      "anchor": "708831253_1106"
     },
     "id666378177": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:07.592957+00:00",
-      "pages_read": 1,
-      "anchor": "666378177_1382"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:27.590009+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "o.v.tarasenko": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:10.826784+00:00",
-      "pages_read": 1,
-      "anchor": "61673638_2491"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:32.209656+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "tatyana_filippova20": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:14.280574+00:00",
-      "pages_read": 1,
-      "anchor": "516688454_1347"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:35.880387+00:00",
+      "pages_read": 2,
+      "anchor": "516688454_1257"
     },
     "dmitrieva_n_n": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:17.160818+00:00",
-      "pages_read": 1,
-      "anchor": "677951580_491"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:38.539116+00:00",
+      "pages_read": 2,
+      "anchor": "677951580_403"
     },
     "elena_laplanche": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:19.792320+00:00",
-      "pages_read": 1,
-      "anchor": "708827390_1449"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:41.340257+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "andreymordovin": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:23.162408+00:00",
-      "pages_read": 1,
-      "anchor": "4765626_4601"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:44.850733+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "baranchikova_natalia": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:27.907643+00:00",
-      "pages_read": 1,
-      "anchor": "708828941_268"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:47.597729+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "galinadolgashova": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:31.165746+00:00",
-      "pages_read": 1,
-      "anchor": "638282157_1461"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:14:51.189670+00:00",
+      "pages_read": 2,
+      "anchor": "638282157_1367"
     },
     "anna_ezhkova": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:34.066436+00:00",
-      "pages_read": 1,
-      "anchor": "162151344_310"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:55.350142+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "liudmila_zapl": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:37.489252+00:00",
-      "pages_read": 1,
-      "anchor": "708971152_54"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:14:58.527026+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "nadezhda_kuskova": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:40.704639+00:00",
-      "pages_read": 1,
-      "anchor": "710102837_1019"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:01.237406+00:00",
+      "pages_read": 2,
+      "anchor": "710102837_939"
     },
     "sysoevala": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:43.155185+00:00",
-      "pages_read": 1,
-      "anchor": "709963598_375"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:15:04.222449+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "ib.glotova": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-25T13:38:46.446233+00:00",
-      "pages_read": 1,
-      "anchor": "708843237_696"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:07.099856+00:00",
+      "pages_read": 2,
+      "anchor": "708843237_583"
     },
     "demchenkov_ml": {
       "state": "complete",
@@ -704,87 +704,87 @@
     },
     "svetlana_rodnik": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:05.862031+00:00",
-      "pages_read": 1,
-      "anchor": "457358469_1358"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:10.194204+00:00",
+      "pages_read": 2,
+      "anchor": "457358469_1283"
     },
     "novoselskayala": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:08.676812+00:00",
-      "pages_read": 1,
-      "anchor": "707181530_1093"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:12.881446+00:00",
+      "pages_read": 2,
+      "anchor": "707181530_966"
     },
     "tkachip": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:13.118455+00:00",
-      "pages_read": 1,
-      "anchor": "355508701_581"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:17.057212+00:00",
+      "pages_read": 2,
+      "anchor": "355508701_502"
     },
     "tatiyana_donskaya": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:16.705836+00:00",
-      "pages_read": 1,
-      "anchor": "21481368_6003"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:20.082614+00:00",
+      "pages_read": 2,
+      "anchor": "21481368_5863"
     },
     "i.v.zolkina": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:20.216593+00:00",
-      "pages_read": 1,
-      "anchor": "627257172_1187"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:24.605245+00:00",
+      "pages_read": 2,
+      "anchor": "627257172_871"
     },
     "albinakomissarova2022": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:23.741239+00:00",
-      "pages_read": 1,
-      "anchor": "670967634_630"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:27.825735+00:00",
+      "pages_read": 2,
+      "anchor": "670967634_556"
     },
     "ap.yashkin": {
-      "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:27.143738+00:00",
-      "pages_read": 1,
-      "anchor": "503890156_606"
+      "state": "complete",
+      "offset": 0,
+      "last_attempt": "2026-11-28T13:15:30.481282+00:00",
+      "pages_read": 2,
+      "anchor": null
     },
     "aabulatov": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:31.443111+00:00",
-      "pages_read": 1,
-      "anchor": "352446434_1579"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:33.358740+00:00",
+      "pages_read": 2,
+      "anchor": "352446434_1505"
     },
     "vidutinaov": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:35.117091+00:00",
-      "pages_read": 1,
-      "anchor": "5848362_843"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:36.547853+00:00",
+      "pages_read": 2,
+      "anchor": "5848362_758"
     },
     "elena.rubtsovanazarova": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:38.057016+00:00",
-      "pages_read": 1,
-      "anchor": "711997762_808"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:39.691062+00:00",
+      "pages_read": 2,
+      "anchor": "711997762_703"
     },
     "tishkovaea": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:41.412680+00:00",
-      "pages_read": 1,
-      "anchor": "451321637_1010"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:43.089915+00:00",
+      "pages_read": 2,
+      "anchor": "451321637_937"
     },
     "gavrilinams": {
       "state": "pending",
-      "offset": 75,
-      "last_attempt": "2026-11-26T13:34:44.739509+00:00",
-      "pages_read": 1,
-      "anchor": "4693702_7177"
+      "offset": 150,
+      "last_attempt": "2026-11-28T13:15:46.069915+00:00",
+      "pages_read": 2,
+      "anchor": "4693702_7088"
     },
     "ekaterina.tyutyunnikova": {
       "state": "pending",
@@ -1006,11 +1006,11 @@
   },
   "last_run": {
     "requests": 50,
-    "new_posts": 2532,
-    "updated_posts": 21,
-    "archive_posts": 17427,
-    "history_complete": 12,
-    "history_pending": 131,
+    "new_posts": 1634,
+    "updated_posts": 33,
+    "archive_posts": 19133,
+    "history_complete": 31,
+    "history_pending": 112,
     "history_blocked": 15,
     "stopped_reason": null,
     "roster_size": 158
